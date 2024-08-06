@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"nodes":[{"fields":{"slug":"/첫-번째-게시글-테스트/"},"frontmatter":{"title":"첫 번째 게시글 테스트","date":"2024-08-06T11:03:27.000Z","image":{"publicURL":"/static/43f12e609771f0c40845cbce35b659a8/resume.png"},"draft":false,"tags":["테스트"]}}]}}}
+{"data":{"allMarkdownRemark":{"nodes":[{"fields":{"slug":"/첫-번째-게시글-테스트/"},"frontmatter":{"title":"첫 번째 게시글 테스트","date":"2024-08-06T11:03:27.000Z","image":{"publicURL":"/static/43f12e609771f0c40845cbce35b659a8/resume.png"},"draft":true,"tags":["테스트"]}}]}}}
