@@ -30,78 +30,78 @@
       />
     </span></p>
 <p>이제 아래의 코드를 작성해 보았다.</p>
-<div class="markdown-wrapper"><pre class="grvsc-container dark-default-dark" data-language="" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">package me.sungbin.calculator.controller;</span></span>
+<div class="markdown-wrapper"><pre class="grvsc-container dark-default-dark" data-language="java" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">package</span><span class="mtk1"> me.sungbin.calculator.controller;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.web.bind.annotation.PostMapping;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.web.bind.annotation.RequestMapping;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.web.bind.annotation.RequestParam;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.web.bind.annotation.RestController;</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.web.bind.annotation.PostMapping;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.web.bind.annotation.RequestMapping;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.web.bind.annotation.RequestParam;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.web.bind.annotation.RestController;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">/**</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @author : rovert</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @packageName : me.sungbin.calculator.controller</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @fileName : CalculatorController</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @date : 3/22/24</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @description :</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * ===========================================================</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * DATE 			AUTHOR			 NOTE</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * -----------------------------------------------------------</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * 3/22/24       rovert         최초 생성</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> */</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">/**</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * </span><span class="mtk4">@author</span><span class="mtk3"> : rovert</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @packageName : me.sungbin.calculator.controller</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @fileName : CalculatorController</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @date : 3/22/24</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @description :</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * ===========================================================</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * DATE 			AUTHOR			 NOTE</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * -----------------------------------------------------------</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * 3/22/24       rovert         최초 생성</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> */</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">@RestController</span></span>
-<span class="grvsc-line"><span class="grvsc-source">@RequestMapping(&quot;/api/cal&quot;)</span></span>
-<span class="grvsc-line"><span class="grvsc-source">public class CalculatorController {</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">@</span><span class="mtk10">RestController</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">@</span><span class="mtk10">RequestMapping</span><span class="mtk1">(</span><span class="mtk8">&quot;/api/cal&quot;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">public</span><span class="mtk1"> </span><span class="mtk4">class</span><span class="mtk1"> </span><span class="mtk10">CalculatorController</span><span class="mtk1"> {</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">    @PostMapping(&quot;/add&quot;)</span></span>
-<span class="grvsc-line"><span class="grvsc-source">    public int add(@RequestParam int num1, @RequestParam int num2) {</span></span>
-<span class="grvsc-line"><span class="grvsc-source">        return num1 + num2;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">    }</span></span>
-<span class="grvsc-line"><span class="grvsc-source">}</span></span></code></pre></div>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    @</span><span class="mtk10">PostMapping</span><span class="mtk1">(</span><span class="mtk8">&quot;/add&quot;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk4">public</span><span class="mtk1"> </span><span class="mtk10">int</span><span class="mtk1"> </span><span class="mtk11">add</span><span class="mtk1">(@</span><span class="mtk10">RequestParam</span><span class="mtk1"> </span><span class="mtk10">int</span><span class="mtk1"> </span><span class="mtk12">num1</span><span class="mtk1">, @</span><span class="mtk10">RequestParam</span><span class="mtk1"> </span><span class="mtk10">int</span><span class="mtk1"> </span><span class="mtk12">num2</span><span class="mtk1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk15">return</span><span class="mtk1"> num1 + num2;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre></div>
 <p>그리고 테스트 코드를 아래와 같이 작성하여 테스트를 실행해 보자.</p>
-<div class="markdown-wrapper"><pre class="grvsc-container dark-default-dark" data-language="" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">package me.sungbin.calculator.controller;</span></span>
+<div class="markdown-wrapper"><pre class="grvsc-container dark-default-dark" data-language="java" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">package</span><span class="mtk1"> me.sungbin.calculator.controller;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.junit.jupiter.api.DisplayName;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.junit.jupiter.api.Test;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.beans.factory.annotation.Autowired;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.boot.test.context.SpringBootTest;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import org.springframework.test.web.servlet.MockMvc;</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.junit.jupiter.api.DisplayName;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.junit.jupiter.api.Test;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.beans.factory.annotation.Autowired;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.boot.test.context.SpringBootTest;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> org.springframework.test.web.servlet.MockMvc;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">import static org.junit.jupiter.api.Assertions.*;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;</span></span>
-<span class="grvsc-line"><span class="grvsc-source">import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> </span><span class="mtk4">static</span><span class="mtk1"> org.junit.jupiter.api.Assertions.*;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> </span><span class="mtk4">static</span><span class="mtk1"> org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> </span><span class="mtk4">static</span><span class="mtk1"> org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">import</span><span class="mtk1"> </span><span class="mtk4">static</span><span class="mtk1"> org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">/**</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @author : rovert</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @packageName : me.sungbin.calculator.controller</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @fileName : CalculatorControllerTest</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @date : 3/22/24</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * @description :</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * ===========================================================</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * DATE 			AUTHOR			 NOTE</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * -----------------------------------------------------------</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> * 3/22/24       rovert         최초 생성</span></span>
-<span class="grvsc-line"><span class="grvsc-source"> */</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">/**</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * </span><span class="mtk4">@author</span><span class="mtk3"> : rovert</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @packageName : me.sungbin.calculator.controller</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @fileName : CalculatorControllerTest</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @date : 3/22/24</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * @description :</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * ===========================================================</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * DATE 			AUTHOR			 NOTE</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * -----------------------------------------------------------</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> * 3/22/24       rovert         최초 생성</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3"> */</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">@SpringBootTest</span></span>
-<span class="grvsc-line"><span class="grvsc-source">@AutoConfigureMockMvc</span></span>
-<span class="grvsc-line"><span class="grvsc-source">class CalculatorControllerTest {</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">@</span><span class="mtk10">SpringBootTest</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">@</span><span class="mtk10">AutoConfigureMockMvc</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">class</span><span class="mtk1"> </span><span class="mtk10">CalculatorControllerTest</span><span class="mtk1"> {</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">    @Autowired</span></span>
-<span class="grvsc-line"><span class="grvsc-source">    private MockMvc mockMvc;</span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    @</span><span class="mtk10">Autowired</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk4">private</span><span class="mtk1"> </span><span class="mtk10">MockMvc</span><span class="mtk1"> </span><span class="mtk12">mockMvc</span><span class="mtk1">;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source">    @Test</span></span>
-<span class="grvsc-line"><span class="grvsc-source">    @DisplayName(&quot;덧셈 기능 테스트&quot;)</span></span>
-<span class="grvsc-line"><span class="grvsc-source">    void add_two_numbers() throws Exception {</span></span>
-<span class="grvsc-line"><span class="grvsc-source">        this.mockMvc.perform(post(&quot;/api/cal/add&quot;)</span></span>
-<span class="grvsc-line"><span class="grvsc-source">                        .param(&quot;num1&quot;, &quot;2&quot;)</span></span>
-<span class="grvsc-line"><span class="grvsc-source">                        .param(&quot;num2&quot;, &quot;3&quot;))</span></span>
-<span class="grvsc-line"><span class="grvsc-source">                .andDo(print())</span></span>
-<span class="grvsc-line"><span class="grvsc-source">                .andExpect(status().isOk());</span></span>
-<span class="grvsc-line"><span class="grvsc-source">    }</span></span>
-<span class="grvsc-line"><span class="grvsc-source">}</span></span></code></pre></div>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    @</span><span class="mtk10">Test</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    @</span><span class="mtk10">DisplayName</span><span class="mtk1">(</span><span class="mtk8">&quot;덧셈 기능 테스트&quot;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk10">void</span><span class="mtk1"> </span><span class="mtk11">add_two_numbers</span><span class="mtk1">() </span><span class="mtk4">throws</span><span class="mtk1"> </span><span class="mtk10">Exception</span><span class="mtk1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk4">this</span><span class="mtk1">.</span><span class="mtk12">mockMvc</span><span class="mtk1">.</span><span class="mtk11">perform</span><span class="mtk1">(</span><span class="mtk11">post</span><span class="mtk1">(</span><span class="mtk8">&quot;/api/cal/add&quot;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">                        .</span><span class="mtk11">param</span><span class="mtk1">(</span><span class="mtk8">&quot;num1&quot;</span><span class="mtk1">, </span><span class="mtk8">&quot;2&quot;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">                        .</span><span class="mtk11">param</span><span class="mtk1">(</span><span class="mtk8">&quot;num2&quot;</span><span class="mtk1">, </span><span class="mtk8">&quot;3&quot;</span><span class="mtk1">))</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">                .</span><span class="mtk11">andDo</span><span class="mtk1">(</span><span class="mtk11">print</span><span class="mtk1">())</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">                .</span><span class="mtk11">andExpect</span><span class="mtk1">(</span><span class="mtk11">status</span><span class="mtk1">().</span><span class="mtk11">isOk</span><span class="mtk1">());</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre></div>
 <p>그리고 실행을 하면 당연히 success가 떨어져야 하지만 아래와 같은 에러가 발생한다.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -318,6 +318,14 @@
     background-color: #1E1E1E;
     color: #D4D4D4;
   }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk3 { color: #6A9955; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
   .dark-default-dark .grvsc-line-highlighted::before {
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
