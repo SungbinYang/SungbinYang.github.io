@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 13 Aug 2024 01:01:31 GMT</lastBuildDate><item><title><![CDATA[블로그 이관 및 회고]]></title><description><![CDATA[드디어 블로그를 이관해보려고 합니다! 😊 블로그 이관 이유? 현재 나는 velog, tistory…]]></description><link>https://sungbin.kr/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EA%B4%80-%EB%B0%8F-%ED%9A%8C%EA%B3%A0/</link><guid isPermaLink="false">https://sungbin.kr/블로그-이관-및-회고/</guid><pubDate>Tue, 06 Aug 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEzElEQVQ4ywXB61dSBwAA8Psf7Pu2U2frcdaO85EvFNJCHj4oXB7zNQtrZGpJQUrpOrNcKaaWWk6Sh4rARDEBicsbBIX7AC4gYYGQhGVa2VptfdzvByw7dYgL9EBGL2T0uPUYYnY5Qcm0cHZ2UquWSaUCoXD0z7GhFac+iDm96FIAc/mxFQy1Qy4QgF2GjfByImyP+cEXqxbMIl2YFaYcxhUXU9nNdT+kpFJKjzMbziwuqj582Pn098tk1P0qhsXjEdhtBnyoGXZotX8NxGG5a1GgFdxSyvk/pmWRSERWUz2RgC8oKCTkZmm0qi8fk+P8wdITdMFA23oYhdxmwI9auB3XOi/Xrrtl0jEeZJi2GpV4QmEFjdzaUEE7SkhPz8jOyzOZdMmQqYxW+tWe9JpycgjWwZANQCGQ1drYxqSBgg6dbCiKLoALE8VEclUp8erZcnx21rEiUju7aXnZspMMS4ev0Yuyx++0JGJByG0BUMjQwKg9id+vHmgMrSjDywrt3HhORhYJl3GalvfNt3tw+bjz1WSbWbu7+yYRxcKoPr4ejEVXEdgCIJCxs5N7jn5UP9Eb9FoDsMGiV9afPtNwpo5zoa6Mdry2ppJ7odJkUAdDPh8GYQEUQZxul83tMgEIYn/7ZuO/z+9evd54/34r4IcwzP1ILLJaDduvIpsvn79OPn+7He/t7yOXlOUVknIKSIWUMhKFqlBMAl7f8uePOzqj8XI7t/t2j9WoDgSgwXu8GZlg1WsNhXyhkPdF/CmHy9373cEWxqnh35vO1tD3HTgkkwsBzL/yNAixWpsfT3SfIv408mB4603CqR61qx5CT/jP1rBELLi7vX6H11NbUzE31qUcabvBpKempcvlYsDncyY2wrKh6zwmvp6Wxm1jb26u+9xGtXKqq+vGdhy1gQre3T4vbPGtLHKuXiSXlJIoFAIhb35OAmB+V2wNC0M68WB7dXWF1aRZW8NiUcztsvXf67epRTLh/a6u31aWNJBtfqi/i0YvI1NJubgc5ZwEWF2F42E0FvZ++rz7z8ftd++SkecBv9exFoKf+e1X2JdEj+47DAp4BQzCeqdJwWD8kp2Ti8/PfTwvBUCDqm+w78HI3e7bN9s6OpsvswWiR5FIIBiEEcjq9Tg8iB11GwTC0RYWi3e3xwjOKuR85vlfNZpZQCKbwBccqTxBPpSSmpKZW0YtYja17GzFErHQ1mYkFvFFwnDcr+VwWPtTs4+fLHfqxahVkJKeNjklAOSKaRKxoKKYkHE4s4hKPVdJuXDp0pd/t7xOpVk3F4/6gm71OjLfeeN6biGxprbSrOj1mKTsRsbkBB+YkooJuMw6elFJCaWyumr/odSLVziIdYbXTOxln1r1mCIu5Qt49tp1TkZ+AeN01aKwY6qnhUrASSQCQPNkXjDyh2FmWCocamo8Ryk61tPbjTiNYzcZ4z1NSyr+mlO2Ac+0t7Ey84/U1/zM76wa45YfPLBvWioG/AF46YlM3NvqsqgcdsPVVua9gTsvk1HEoVpaeOA1Cf3WiYhrhsNu+Xrvwfycw7cbCm/V5n2/d49kWgggiM1m1YIaqdMOoqjTZFBbrVqPx+GB9BhqRt16yGXwwiatVskfH5VOj4PzIlApEgkf2pd0/wPQ4smZ3V+pqAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/1cc49a7a61d843cdc95319531c69a69f/2bef9/01.png&quot;
+        srcset=&quot;/static/1cc49a7a61d843cdc95319531c69a69f/6f3f2/01.png 256w,
+/static/1cc49a7a61d843cdc95319531c69a69f/01e7c/01.png 512w,
+/static/1cc49a7a61d843cdc95319531c69a69f/2bef9/01.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;드디어 블로그를 이관해보려고 합니다! 😊&lt;/p&gt;
+&lt;h2&gt;블로그 이관 이유?&lt;/h2&gt;
+&lt;p&gt;현재 나는 velog, tistory등 여러 블로그를 왔다 갔다 하면서 운영을 해왔습니다. 떠돌아 다니면서 운영해본 느낌으로 아래와 같습니다.&lt;/p&gt;
+&lt;h3&gt;티스토리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;카카오에서 운영 중인 블로그 플랫폼입니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;티스토리는 블로그 운영에 필요한 기능을 제공하면서도 사용도 간편하며 광고도 붙일 수 있는 최적의 플랫폼입니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;블로그의 디자인 수정도 쉽게 할 수 있지만 스킨이 아주 많지는 않지만 HTML, CSS 지식이 있다면 내 마음대로 커스터마이징을 할 수 있습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;velog&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;velog는 개발 블로그 플랫폼입니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;시리즈 기능이 있어서 동일 주제 글들을 정렬해서 볼 수 있으며, 최근에는 팔로우 기능도 생겨서 점점 플랫폼이 커져가는것 같습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;하지만 최근들어 500에러가 많이 발생해서 개인적으로 포스팅에 불편함이 있었으며, 내 마음대로 플랫폼을 수정하기 힘들었습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;네이버 블로그&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;커스터마이징이 매우 힘듭니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;네이버 검색 유입에는 강력합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Github Blog&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GitHub Pages는 GitHub에서 제공하는 정적 웹 호스팅 서비스입니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;무료로 이용이 가능하며, 최근들어 많은 개발자분들이 이용을 합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;다양한 스킨들을 내 마음대로 커스터마이징을 할 수 있으며 Github가 오류가 나지 않는 이상 내가 잘 운영만 잘하면 됩니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;처음에는 velog를 사용하게 되었다. 일단 블로그를 만드는게 목적이였기에 사용하게 되었다. 하지만 점점 운영을 해오면서&lt;/p&gt;
+&lt;p&gt;나만의 블로그를 운영해보고 싶다는 생각이 들었습니다. (또한 에러로 인한 고생이 조금 했다.) 그래서 티스토리로 옮기게 되었습니다.&lt;/p&gt;
+&lt;p&gt;하지만 어느순간 티스토리를 운영하면서 느낀 점은 기본 UI들이 내가 보기엔 딱딱해보였다. 또한 최근들어 티스토리 접속 오류들도 간간이 보였습니다.&lt;/p&gt;
+&lt;p&gt;또한 &lt;a href=&quot;https://notice.tistory.com/2664&quot;&gt;티스토리 OPEN API 종료&lt;/a&gt;소식으로 다른 티스토리 운영하시는 분들도 이관하게 되는 것을 보게 되었습니다.&lt;/p&gt;
+&lt;p&gt;물론 나는 이런 API들을 잘 사용하지 않아서 별로 상관은 없었지만 내가 직접 플랫폼에 의존하지 않은 나만의 블로그를 만들어보고 싶다는 생각이 점차 들기 시작했습니다.&lt;/p&gt;
+&lt;p&gt;그래서 Github Blog를 이용해보기로 하였습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 설정이 매우 어려웠다는 것은 안 비밀!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;새로운 블로그 이관&lt;/h2&gt;
+&lt;p&gt;Github Blog로 이관을 하면서 가장 중요한 것은 테마였습니다. 내가 일일이 만들어도 되지만 너무 많은 시간이 소요될것 같다는 생각이 들었고 다른 분들의 테마들을 보기로 하였습니다.&lt;/p&gt;
+&lt;p&gt;대부분 지킬(Jekyll)을 사용하여 블로그를 만든다고 하였지만 문제는 루비로 만들어진다는 것였습니다. 여기서 고민을 되었습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;루비는 내가 모르는데 과연 괜찮을까?&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그래서 조금 더 찾아본 결과 Gatsby(가츠비)라는것을 알게 되었습니다. Gatsby는 React와 GraphQL 기반으로 동작하는 정적 사이트 생성기입니다.&lt;/p&gt;
+&lt;p&gt;그래서 React는 어느정도 조금 손 볼 수 있다는 생각이 들었고 Gatsby를 선택하게 되었습니다. 그리고 Gatsby로 된 github io를 찾아보던 중&lt;/p&gt;
+&lt;p&gt;아는 분의 블로그 테마가 조금 탐 났습니다. 그래서 그 분의 테마를 사용하려고 한번 보니, 그 분도 다른 분의 테마를 사용하신 것을 알게 되었습니다.&lt;/p&gt;
+&lt;h2&gt;vallista-land&lt;/h2&gt;
+&lt;p&gt;해당 블로그는 &lt;strong&gt;우아한형제들에 재직중이신 마광휘님&lt;/strong&gt;이 만드신 오픈소스 블로그 &lt;a href=&quot;https://github.com/Vallista/vallista-land&quot;&gt;Vallista/vallista-land&lt;/a&gt;를 활용하여 만들어졌습니다.&lt;/p&gt;
+&lt;p&gt;먼저 해당 프로젝트를 사용하기 전에 &lt;a href=&quot;https://vallista.kr/%EB%B8%94%EB%A1%9C%EA%B7%B8-v3-%EA%B0%9C%ED%8E%B8/#%EB%B8%94%EB%A1%9C%EA%B7%B8-V3&quot;&gt;마광휘님의 블로그 소개 글&lt;/a&gt;을 확인하게 되었습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;한번 블로그 글을 클릭하셔서 보시면, 이 블로그의 기반의 프로젝트의 특징에 대해 잘 알수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그 후에 여러 검색을 해보면서 lerna + yarn workspace 기반으로 모노레포를 구성에 대해 조금은 자세히 알게 되었습니다.&lt;/p&gt;
+&lt;p&gt;하지만 조금 걸리는 것이 LICENSE 문제였습니다. 아무런 라이센스 고지가 없어서 SNS를 통하여 마광휘님께 여쭤보셨더니, &lt;strong&gt;마구 사용하셔도 된다&lt;/strong&gt;는 답변을 얻게 되었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 278px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 114.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAADoElEQVQ4y6WU209cVRSHj/ZuqKnR1GJrb3R6oVAplFqJthZraIzps8/+FWp9sBUGaBsGmBvMDIMUaGt88sknjMFKx/IwPECcpJAYSuwYYJj7TJkz+zN71mCmwPjiSX7Z++xzzrf3+q11lkHJpRT/+zLWw3J5+OJnaB6GTx+IPrkPV+/DR6PF+wdw7Xu4PCzvfTgM7w2Cc7IEaOZlfLQAW6xwph8a/WBxw6VBqPPBrg5Z0x83fQcnXVDRDsbXRd0sAzS+gW1W2GoFoxW2tsF2K7zUKpvpe+NbeKVT1vT85TZ5d3PgTdhzW/Sq1i2o6ITdt6GiA/bcgTe6YIcVXrsDu2/B9nYBbwD+Ni+nuOCHqyNwzA3VfXDOB7U+OOGEj+/B+0PQNABnfdA0CBanRLYR+BS2tEGVHY444F0/HOiG0y446QaLAyp7oLpf4Pu64eIQVNrAuLEJ8OE87NDm+wRQ74P9NjjjgdN9cMwJhx1gcclGRx2S7bdsZZKiT6gNvjICjV45zXEXnPcLRKvlHpz1wt4usaN5BN7sKgP8dV7M1yc8ZIcPhuDiXWgZhXoPnHJDZTc0DMDBXmjwQ50XdpZLig55WzucG5CQLwwKvGUEjjuhaUhCP+GGmn6xRNelhpevwxuSkPNFaE0fNPnh7R4p6Np+ONUHVQ551uCDAz1lgBNP5eja7EO9cNAuvtV4igAP1BX/okY9H4Bal/xFmwJ1yDs7oN4LVU7xUSdF/2b7bGLBOx4pJx2qDlknZr/tP4DaQw2s9Qj0sF3CP2qXNQ3RYeuNtNdHnMWyWUuKUgozr9uNIrCgMFoVVb0Ki1Ox16Zo8Cpe71ZUOxW7OhXGlwrjuhYy6sZwvXhCta4Jmgq++kVq6/KItKy11nVlFJpHpYxKdemuWGHX7Sufz6OVTCaJxeMk4zFyqRiJeIznmRTpZJxUMkEmnSSl54kYKvd8rYsWta7BZrNZQqEQwWCQ3x8/5uHEIyYnJ3nyZJaxsTHGx8cJBqcIBAKEQn+QSCTImabglCo0Zy2dB+OnH3/ANPNMT08zMzNTGGdnZ1lcXGR5eZlnz8KsRCLEY1HC4TCLSytEo3FyuRysA2oZn392rfBgamqqAJubmysoEokUpEPPmhDNQjqZJLqyQCK+RD6v/gW+EPLf4b8kGabJmp96vrq6SiaTJZtOsZRWzMcUZs7kz4CT6PxEEZbfCNxsl9JL+6uTktaJyWbJRJfJZVIl4b4I/Ad93t9rOVxjqwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/19cb05f30a0f7a084b42711c377f42fd/4e29d/image.png&quot;
+        srcset=&quot;/static/19cb05f30a0f7a084b42711c377f42fd/6f3f2/image.png 256w,
+/static/19cb05f30a0f7a084b42711c377f42fd/4e29d/image.png 278w&quot;
+        sizes=&quot;(max-width: 278px) 100vw, 278px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;회고&lt;/h2&gt;
+&lt;p&gt;이제까지 블로그를 거의 유령 블로그로 운영하게 되었습니다. 또한 거의 공부한 내용을 정리하는 식으로 운영을 해왔는데 별로 도움이 되지 않은 것 같습니다. 공부한 내용은 내 개인 노션에 정리를 하겠다 다짐하고 나의 일상적인 내용, 회고, 기술적인 지식 공유거리, 트러블슈팅등을 한번 공유해봐야겠습니다.&lt;/p&gt;
+&lt;p&gt;그럼 앞으로 새로운 블로그 잘 부탁드립니다! 🎉🎉🎉&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Spring Boot 3.2.x 더 이상 바이트코드를 구문 분석하여 매개변수 이름을 추론하려고 시도하지 않습니다.]]></title><description><![CDATA[트러블 슈팅 나는 '인프런 스터디 클럽'을 진행하면서 하나의 트러블슈팅을 맞이하여 블로그 글로 작성해보려고 합니다. 과제를 진행하면서 Spring Boot 3.2.x…]]></description><link>https://sungbin.kr/Spring-Boot-3.2.x-%EB%8D%94-%EC%9D%B4%EC%83%81-%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C%EB%A5%BC-%EA%B5%AC%EB%AC%B8-%EB%B6%84%EC%84%9D%ED%95%98%EC%97%AC-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98-%EC%9D%B4%EB%A6%84%EC%9D%84-%EC%B6%94%EB%A1%A0%ED%95%98%EB%A0%A4%EA%B3%A0-%EC%8B%9C%EB%8F%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4/</link><guid isPermaLink="false">https://sungbin.kr/Spring-Boot-3.2.x-더-이상-바이트코드를-구문-분석하여-매개변수-이름을-추론하려고-시도하지-않습니다/</guid><pubDate>Fri, 22 Mar 2024 16:43:27 GMT</pubDate><content:encoded>&lt;h2&gt;트러블 슈팅&lt;/h2&gt;
+&lt;p&gt;나는 &apos;&lt;strong&gt;인프런 스터디 클럽&lt;/strong&gt;&apos;을 진행하면서 하나의 트러블슈팅을 맞이하여 블로그 글로 작성해보려고 합니다. 과제를 진행하면서 &lt;strong&gt;Spring Boot 3.2.x&lt;/strong&gt; 버전과 관련한 이슈를 발견하였고 이 이슈를 예제를 통하여 재현해보려고 한다.&lt;/p&gt;
+&lt;h3&gt;본론&lt;/h3&gt;
+&lt;p&gt;현재 나는 &lt;strong&gt;Java 21 + Spring Boot 3.2.4&lt;/strong&gt; 버전을 이용하여 인텔리제이 IDE를 이용하여 계산기 API를 만들어볼려고 한다. 현재 예제는 덧셈 API만 작성해 보았다. 또한 설정은 아래와 같이 진행해 주었다. 인텔리제이의 &lt;strong&gt;Build, Execution, Deployment &gt; Build Tools &gt; Gradle&lt;/strong&gt;로 들어가서 빌드 부분을 gradle에서 인텔리제이로 변경해준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🙋🏻 왜 변경해 주나요?&lt;br&gt;
+일단 gradle보다 인텔리제이로 빌드와 run, test부분을 변경해 주면 실제로 동작속도가 gradle에 비해 훨씬 빠르다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 73.828125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACU0lEQVQ4y11U2XKjQAzkM+L44hiOYbjMba6QOI5dSXYf9v//pbckDIn90CWGKrVaas1oYZhByBi6oWCYASw7RpR0jCTtER865OUryvqEMG4Yrl/C8wt4fglXFghUjSA4wlMlNFNEEHaM7V5ivbWx3ghObvsLx6wYmZTIuUDaw5UTEUVHFgiDBnHUQQYVtM3Og24l2OxcrJ4NrJ5NVMcTXk9/UFRvEG7GSQRLxDCsABaLmIQQDBFibyg4MoNmWDF0M8LTSsfTas8q48OArr8y2u6D1XbDFW3/gaY9Iz60E5IpRknLI3BlDo1a3ek+KyPS9VYgjHsM4ydeCK9fHMe3b/5HSIsRKjwuCKKGI41B2xsBDJEw6c5Q2O48ntswfiHNX+AHFVRYT4lMUHOi4+VL5O/bWfPDBnX7CRV18FQN1y9QNxeMp38oizO68oziZg65TUXK6o3jZMzk9uw4t0wqyRTCemMvlUlddXxnc0gZtRZER8bc7jS7H2hEoFsRyBya4XbnLNWkKlE37+iHK7rhgqY749jeg9QWN8WUp9HezerYlI24I6RdpDVKswHSK+C5GWwRQd4WW6pqARPO6zLhkbBCVZ9QN2ckcYdEdQi8Ep4VIfTru1aXlqdlnvBI6KuK26E5CSeF46RwnRSKFdU3M6pfWBTqP4v9i5Bi21+RFyNcmcGVB+imgili0JV9hHAO0J7XJmaQys3WviOkx8APaniSXC/ZfUokAnpI6DpOMYLjptBCVcH2smVB54Wd8XieXxkqklcXHPIT0uIdWXlG9/IX/wG7ccuPJmVK/gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/c5e9cf2640f40a4104ca3585d94e5bbe/2bef9/reference01.png&quot;
+        srcset=&quot;/static/c5e9cf2640f40a4104ca3585d94e5bbe/6f3f2/reference01.png 256w,
+/static/c5e9cf2640f40a4104ca3585d94e5bbe/01e7c/reference01.png 512w,
+/static/c5e9cf2640f40a4104ca3585d94e5bbe/2bef9/reference01.png 1024w,
+/static/c5e9cf2640f40a4104ca3585d94e5bbe/21b4d/reference01.png 1280w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이제 아래의 코드를 작성해 보았다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.calculator.controller;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.web.bind.annotation.PostMapping;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.web.bind.annotation.RequestMapping;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.web.bind.annotation.RequestParam;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.web.bind.annotation.RestController;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;@author&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt; : rovert&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @packageName : me.sungbin.calculator.controller&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @fileName : CalculatorController&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @date : 3/22/24&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @description :&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * ===========================================================&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * DATE 			AUTHOR			 NOTE&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * -----------------------------------------------------------&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * 3/22/24       rovert         최초 생성&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;RestController&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;RequestMapping&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;/api/cal&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;CalculatorController&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;PostMapping&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;/add&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;RequestParam&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, @&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;RequestParam&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; num1 + num2;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그리고 테스트 코드를 아래와 같이 작성하여 테스트를 실행해 보자.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.calculator.controller;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.junit.jupiter.api.DisplayName;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.junit.jupiter.api.Test;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.beans.factory.annotation.Autowired;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.boot.test.context.SpringBootTest;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.test.web.servlet.MockMvc;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.junit.jupiter.api.Assertions.*;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;@author&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt; : rovert&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @packageName : me.sungbin.calculator.controller&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @fileName : CalculatorControllerTest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @date : 3/22/24&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * @description :&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * ===========================================================&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * DATE 			AUTHOR			 NOTE&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * -----------------------------------------------------------&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; * 3/22/24       rovert         최초 생성&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;SpringBootTest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;AutoConfigureMockMvc&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;CalculatorControllerTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Autowired&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;MockMvc&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;덧셈 기능 테스트&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add_two_numbers&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;throws&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;/api/cal/add&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                        .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;num1&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                        .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;num2&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;3&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andDo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isOk&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그리고 실행을 하면 당연히 success가 떨어져야 하지만 아래와 같은 에러가 발생한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.890625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABKElEQVQoz43SS27CMBSF4SwAOiQ8xLs4dpwEEscO5Y06qShVF9Cy/2X8VQII1AFi8Okey/aVfGXvePjl6/PE4fDD8Xhis/1GSIMMLTJ0l/qIIyirdgTK4LlsxyxZE8YLsviNRM9ReoEK5wTSEkj3BItUjonI8KTOGYxjJsGUccMyrBX0Xub06gXduntar1YgBgbP93s0m3381gAtDEbOCYWr6H/1YQ4KpMzxWu0hlc4IqQxRVBBpRxxd3OeLcv965pYLVOhuDdudEZPAnIesykFf6pNkWBCWDcsnN/wufrPPq0gJlEXIvHKfr+uKtNVPKJ1zjlC2uu8JmaJ0XpmmK5JsQ2r3GLsjni6ZZWuyfFuZzlZEyZIkXTIz76T5B0m2JHM7XL5H64I/jojykFt2dGgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/13905f427f597c83ced83fa2d3e5c686/2bef9/reference02.png&quot;
+        srcset=&quot;/static/13905f427f597c83ced83fa2d3e5c686/6f3f2/reference02.png 256w,
+/static/13905f427f597c83ced83fa2d3e5c686/01e7c/reference02.png 512w,
+/static/13905f427f597c83ced83fa2d3e5c686/2bef9/reference02.png 1024w,
+/static/13905f427f597c83ced83fa2d3e5c686/21b4d/reference02.png 1280w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;대체 이유가 무엇일까? 당연히 @RequestParam 어노테이션에 name속성을 생략해도 자동으로 변수명과 매칭시켜서 매핑시켜 주었는데 지금 파라미터 이름을 알 수 없다는 에러가 발생한다. 그래서 한번 스프링 공식문서를 확인해 보았다. 그리고 원인을 알 수 있었다. 공식문서에는 아래와 같이 이야기하고 있었다. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 916px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 15.625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsElEQVQI12WOyW6DMBRF2VIShSrLTspgnm2MwSZTUQJSuoqUVf//X04kR111cXSHxdXN3j/XWNchpkFbn1hvNcX8lbxY8DIryYsy+aeW5LO//J/s7WNFFw9p1Hc7mrbH+YCSGlu3iLZslUZVFm3qRCWWSgxiakQ7Ku3YKMN8sST7WimO3xecj5yGidv9l+FyJcQD7e6MCiPSnVF+wO5/0HFE4oSEEd1PqW/CkX5/SicekZRWEuKkeT0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/1281c295c3c53e36f06db6e008365730/59822/reference03.png&quot;
+        srcset=&quot;/static/1281c295c3c53e36f06db6e008365730/6f3f2/reference03.png 256w,
+/static/1281c295c3c53e36f06db6e008365730/01e7c/reference03.png 512w,
+/static/1281c295c3c53e36f06db6e008365730/59822/reference03.png 916w&quot;
+        sizes=&quot;(max-width: 916px) 100vw, 916px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Spring Boot 3.2에서 사용되는 Spring Framework 버전은 더 이상 &lt;br&gt;
+바이트코드를 구문 분석하여 매개변수 이름을 추론하려고 시도하지 않습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 사실을 알고 해결책을 한번 찾아보았고 아래와 같은 해결책을 알 수 있었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1. 이름을 명시한다. 즉, &lt;strong&gt;@RequestParam&lt;/strong&gt;의 어노테이션에 name속성을 전부 주는 것이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;정말 단순한 방법이고, 예제와 같이 API가 많지 않다면 이렇게 하는 것이 더 효율적일 수 있지만, 만약 실무처럼 수많은 API가 존재하는 경우 이것을 전부 name속성을 줄려고 한다면 야근 당첨일 것이다. 🥲🥲🥲&lt;/p&gt;
+&lt;p&gt;그럼 다음 해결책을 확인해 보았다. 그 해결책은 아래와 같다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2. 컴파일 시점에 -parameters 옵션 적용&lt;/p&gt;
+&lt;p&gt;* IntelliJ IDEA에서 File -&gt; Settings를 연다. (Mac은 IntelliJ IDEA -&gt; Settings)&lt;br&gt;
+*  Build, Execution, Deployment → Compiler → Java Compiler로 이동한다.&lt;br&gt;
+*  Additional command line parameters라는 항목에 다음을 추가한다.&lt;br&gt;
+-parameters&lt;br&gt;
+* out 폴더를 삭제하고 다시 실행한다. 꼭 out 폴더를 삭제해야 다시 컴파일이 일어난다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 경우가 매우 좋아 보여 한번 적용해 보려고 하였지만 나의 경우는 잘 작동되지는 않았다. 그래서 다른 해결책을 찾은 결과 아래와 같은 결과를 찾을 수 있었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;인텔리제이의 세팅에  Build, Execution, Deployment &gt; Build Tools &gt; Gradle &lt;br&gt;
+을 들어가서 아래 세팅처럼 Gradle로 변경한다. 초기세팅은 Gradle이다. 나처럼 IntelliJ로 변경한 사람만 적용하면 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.21875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACaElEQVQ4y22T2ZKbMBRE+YvEO2ZHYl/E7jEe2+M4U3nL/39Kp+4FnElVHk5dXIZWS93SwjiH6cXQjxJHM2QMM0QQNYjTHmHcQdXvyMsz/w6iFlHSwfVLeELxDGQNGTTwpIJmWBEsO8J272GztfF9pWO1NpDmA/rhgbq9olAjixTlGUk6ICvOcH0Fz1dw/BJR0CKKOvhBBW138KGbMbZ7F6uNgdVax7eVjiTrcb58ou3u7MKZsZwERyOAaZORmKFnwvFyaEcrwcEI2NnCemPClxW64YGuv6Pt76/Z9jeGFoySFnHSIU47nmJxuNcFVusjw4JbE65QGE5PvI1PnMdPdjvxE6fzE6q5QoYNn+lfGmgHI+Qtk+hel+yOhMO4RX/6gUJdIMN6/rhBEE54ooTjFdNxeMULTYQd6u4JGfXwZA3bzeGKElkx4vrxG3X1ga68oqhGTpoCyoo3qOqCnMMpWZwSJzRydjhK7PYudgePgyGXtpvxy3SWlHRZXSCCenI5O5Uz9N6CttnZoGB0I5pDOWC7s+C4Oa+4CPanB/rTB8+6fUfd3dB0N/6P3JbVyD3VNluLK8O1mUOhHpLDSVBxsQnaqhQVhKjg2Ak8N+UFCUqYt7y4Iv4rKBSa9oamvyNNBsSiRRIMcI0Y0k4n8Tkc3vJSl6+1WQTpNtDKFAZ9ZNkpHGeChPi6ieoLL4f/QsKLQ4LqU6oRrk9OUuiGhGHFoGtLmPO03RTamq+bMac7PU8p57NgyaWlhD2/gAim3pl2AnMWXabjZdDCuXtfy7mcCYktxZ3OSL3OihYo6gfS4oKMeqpu6E+/8AdEM8ixyrzBcwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/32b62d3a96ba0b90d120e65408cb9109/2bef9/reference04.png&quot;
+        srcset=&quot;/static/32b62d3a96ba0b90d120e65408cb9109/6f3f2/reference04.png 256w,
+/static/32b62d3a96ba0b90d120e65408cb9109/01e7c/reference04.png 512w,
+/static/32b62d3a96ba0b90d120e65408cb9109/2bef9/reference04.png 1024w,
+/static/32b62d3a96ba0b90d120e65408cb9109/21b4d/reference04.png 1280w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 다시 적용해 보면 아래와 같이 테스트가 성공하는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.546875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA50lEQVQoz5WR206DQBRF+YuCD7YQFZgZroUBCsX0QcT4AV7+/z+WmUmItNFGH1bOw5mzs/cep6xOzNMbr/Mn0/M7L/MHupm4D/dEQv+duCaWDY5INFXxSJb0RKojy3uK/YhKeyLREMb1v3D8QHAXZmx9gR9I0mIgzQeE6s4cXBNZ9kpqnI27ZePeYqbr7ciLI4d+oihHHqLKshxdw7yJhcbxbny+CRCqYRhn2sMTeXm0JFl/JvqzwwqVDStBb4fr+ai0s4K1PtkupWpt2b+5XEeW5lMWQRPXTJm01p3pcYm7ProUvtx/Acnp1e62JwTJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/779f86d791cc3208d06a6afa83f75b81/2bef9/reference05.png&quot;
+        srcset=&quot;/static/779f86d791cc3208d06a6afa83f75b81/6f3f2/reference05.png 256w,
+/static/779f86d791cc3208d06a6afa83f75b81/01e7c/reference05.png 512w,
+/static/779f86d791cc3208d06a6afa83f75b81/2bef9/reference05.png 1024w,
+/static/779f86d791cc3208d06a6afa83f75b81/21b4d/reference05.png 1280w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;후기&lt;/h3&gt;
+&lt;p&gt;이 트러블 슈팅은 &lt;strong&gt;@RequestParam&lt;/strong&gt;만 해당되는 것이 아니며, &lt;strong&gt;@PathVariable, @Autowired, @ConfigurationProperties에&lt;/strong&gt; 동일하게 발생한다. 그러면 왜 스프링 쪽에서 이렇게 변경한 것일까? 이 부분이 궁금해지기 시작했다. 이 부분은 한번 알아보고 다음 포스트에 남겨보도록 노력해 보겠다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 참조&lt;br&gt;
+&lt;a href=&quot;https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.2-Release-Notes&quot; title=&quot;스프링 깃헙 문서&quot;&gt;https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.2-Release-Notes&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk3 { color: #6A9955; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[라떼 개발자]]></title><description><![CDATA[⚠️ 본 포스트는 순수히 저의 생각을 정리한 것이므로 오해의 소지가 없으시길 바랍니다. 라떼 개발자 (feat…]]></description><link>https://sungbin.kr/%EB%9D%BC%EB%96%BC-%EA%B0%9C%EB%B0%9C%EC%9E%90/</link><guid isPermaLink="false">https://sungbin.kr/라떼-개발자/</guid><pubDate>Sat, 24 Feb 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTUlEQVQ4y42Uz0syQRjH/Wu6eAkvEv4Jnjx4EMSDeApEFBYUQ0MR/LGOIWZuux3StcMiqXgQURJXEZagDS26aiiiuUoUaaIz70sL8b7bhn5v88x8nl/zzCiQnCCEaAcptp6AX9oVns1mg8FAEASe5x8fHz8+PhBC6/V6C7zZbBBC3W7XaDQCAGiaJggiHo/3ej3ZWqSRN5sNSZIURc3nc3EJIcRxvNlsfnuXgcUNjuPC4XClUikUCi8vL/1+H0I4Go1CoZCElIEbjYbZbOZ5vlQqOZ1Ol8sFAHA4HKenp9PpVJK8FL66utJqtc/Pz+/v709PTzzPZ7NZk8mk0+km48kWGACAYVi1WgUAIITa7fb19XWtVjMajd1uV1K2QjIYs9nMZrM9PDysVqtgMFgsFhFC0WiUoqifDZdpWCQSSaVSw+FQtNfr9WQyeXJyIgjCr2mLent7u7+/t1gsVqsVwzCfz6fX6zOZzGQy+Tlq0rQ7nU4kEiFJMpul9/f3PR5PKBQyGAzHx8er1Uo+smhaLBZ+v18QhOVyeXFxoVQqzWYzQRBnZ2cMw6TTafmGiaZWq8UwDMuybrfb6/VqNBq73X54eKjT6QKBQCwWE+f8O/h/cLlczufz5+fn8/nc5XLt7e0dHBxQFHV5eQkASCQSYhfl4Xw+n8vlaJqeTqd2u12j0ajV6mKxWL+pkySJ43i/3/8Vvru7u729ZVn28/Oz1+upVKqjoyOGYeLxOMdxLMuOx2MZWFavr6/L5WLXn0R0+e9lQAjXX/r5pP7CfwDgaw51shbwjgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/2dfc185ed8d2323eb80f27848cc2528b/2bef9/01.png&quot;
+        srcset=&quot;/static/2dfc185ed8d2323eb80f27848cc2528b/6f3f2/01.png 256w,
+/static/2dfc185ed8d2323eb80f27848cc2528b/01e7c/01.png 512w,
+/static/2dfc185ed8d2323eb80f27848cc2528b/2bef9/01.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 본 포스트는 순수히 저의 생각을 정리한 것이므로 오해의 소지가 없으시길 바랍니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;라떼 개발자 (feat. 인프런 워밍업 스터디 클럽)&lt;/h3&gt;
+&lt;p&gt;우리는 가끔씩 다른 분들이 아래와 같은 말씀을 들은 경험이 있을 수도 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;라떼는 말이야~ 너 나이 때 이런 이런 것도 했어!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;나도 최근에 이런 경험을 했다. 나는 인프런에서 주최하는 &lt;strong&gt;인프런 워밍업 스터디 클럽&lt;/strong&gt;을 참여하게 되었다. 부트캠프 대상자로 신청을 받았지만 직장인인 나도 참여를 하고 싶어서 신청을 고민을 하고 &lt;a href=&quot;https://www.youtube.com/watch?v=u0hoYYYjd_k&quot; title=&quot;&amp;#x27;개발바닥 유튜브 라방&amp;#x27;&quot;&gt;&apos;개발바닥 유튜브 라방&apos;&lt;/a&gt;에서 향로님께 이에 관련한 질문을 드렸다. 다행히도 신청을 해도 상관없으시다는 말에 진짜 환호성을 질렀다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.015625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAE/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABKRPbHLGSf//EABoQAAIDAQEAAAAAAAAAAAAAAAABAgMSEyL/2gAIAQEAAQUCqSIUqU+mSsx7P//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABkQAQACAwAAAAAAAAAAAAAAAAERIQACEP/aAAgBAQAGPwKzIKchLOabS28//8QAGxABAQADAAMAAAAAAAAAAAAAAREAITFBUWH/2gAIAQEAAT8hXbPpywKbHwfMlL6RjiR083ib4chnTFq3bn//2gAMAwEAAgADAAAAEAvP/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EIyP/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qp//EABwQAQEAAgMBAQAAAAAAAAAAAAERAEEhMYFR8f/aAAgBAQABPxAB2EkUvxzkkkmk5Bu0yYJEBKe4fICfZ+Yy5vUNbe3nFV3GrvP/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/a67edb5275f844ac97f1b0fe79c45d56/36dd4/reference.jpg&quot;
+        srcset=&quot;/static/a67edb5275f844ac97f1b0fe79c45d56/e4a55/reference.jpg 256w,
+/static/a67edb5275f844ac97f1b0fe79c45d56/36dd4/reference.jpg 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 이번주 월요일부터 스터디 클럽 일정에 따라 진행하게 되었다. 하지만 직장인인 나에게 정말 힘든 일정이었다. 퇴근을 하고 해당 강의를 듣고 미션도 진행하고, 정말 중도에 포기하고 싶은 생각이 0.1ms 정도 들었다. 그러던 중에 유튜브에서 현재 월드 스타인 손흥민 선수의 아버지이신 손웅정 선생님께서 하신 말씀의 영상을 보게 되었다. 손웅정 선생님께서는 아이들을 가르치실 때 이런 말씀을 하셨습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;세계의 벽 절대 안 높아! 할 수 있어! 남자는 자신감! 일단 붙어봐야 될 거 아니야! 저질러보고! 깨지고! 박고! 가슴만 뛰는 게 축구선수가 아니라 가슴이랑 내가 같이 뛰어야 돼!!!&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;손웅정 선생님 말씀처럼 조금 나태해진 저를 **&apos;인프런 워밍업 클럽 스터디&apos;**를 통하여 한번 저질러 보고 미션이나 강의를 들으면서 한번 깨져도 보고 가슴만 뛰는 게 아닌 가슴과 열정과 제 학습곡선이 같이 뛰었으면 하는 바람으로 열심히 해보겠다는 마음을 가지고 다시 강의와 미션을 시작하게 되었다.&lt;/p&gt;
+&lt;p&gt;그리고 벌써 &lt;strong&gt;&apos;인프런 워밍업 클럽 스터디&apos;를&lt;/strong&gt; 시작한 지 1주 차가 마무리되었다. 강의와 미션을 수행하면서 날밤도 세보고 하나하나 주제를 깊게 파면서 학습곡선도 증가를 하게 된 것 같았다. 또한 여러 트러블 슈팅을 맞이하게 되었고 이것을 하나하나 클리어해 나갔다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🛠 트러블 슈팅의 대표적 예&lt;br&gt;
+개발바닥 1사로에서 공유를 했던 경험이 있지만, Spring Boot 3.2에서 사용되는 Spring Framework 버전은 더 이상 &lt;br&gt;
+바이트코드를 구문 분석하여 매개변수 이름을 추론하려고 시도하지 않는다고 한다.&lt;/p&gt;
+&lt;p&gt;따라서 @RequestParam과 같은 어노테이션에 name 속성을 추가해 명시를 하던가, 빌드 툴을 IntelliJ에서 gradle로 변경을 하여 해결해 갔다. 자세한 내용은 따른 포스트로 다뤄보겠다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그러면서 해결해 나간 이슈들을 아는 지인분들께 공유드리면 살짝 자랑 아닌 자랑을 했다. 하지만 그 지인분들 중 한 분은 아래와 같이 말씀하셨다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;라떼는 말이이에요~ 성빈님 나이 때 ~까지 했는데 겨우 이 정도 이슈해결로는 어디 명함도 못 내밀었죠 ㅋㅋㅋ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;처음에 내 생각은 아래와 같이 생각을 하였다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;꼰x&quot;인가? 라떼 소리는 군 생활할 때나 들어봤는데...&lt;br&gt;
+아니지.. 내가 아직 별거 아닌 걸로 잘난 척했나 보구나.. 진짜 그 사람 입장에선 별게 아닐 텐데..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그러면서 잠시 낙담을 했다. 그런던 중 &apos;낭만닥터 김사부&apos;라는 드라마에서 한 명언을 보게 되었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;누군가에게도 라떼의 시절이 존재한다. 이 라떼의 시절이 없다면 현재의 모습이 없을 거니까..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 말을 듣고 울림이 컸다. 맞는 말이다. 누군가에게 다 라떼의 시절은 존재한다. 유명한 개발자분들, CTO분들도 다 라떼의 시절은 존재하기 마련이기 때문이다. 그 라떼가 없다면 현재 그분들도 이렇게 있을 수가 없을 테니 말이다. 그러면서 나도 생각을 했다. 스터디 클럽을 진행하면서 마주하는 에러, 이해하기 힘든 개념들, 실무에서 마주하는 버그들 이런 것을 하나하나 해결해 가는 그 하루하루가, 위의 이슈를 해결했던 그 하루가 나의 라떼중에 하루가 될테니 말이다.&lt;/p&gt;
+&lt;p&gt;이렇게 꾸준히 하루하루 공부하고 깨지고 해결해가는 하나의 라떼를 쌓기 위해 나중에 나만의 라떼를 완성하기 위해 더욱 열심히 해볼 계획이다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[2023년 주니어 개발자 회고록]]></title><description><![CDATA[0. 서론 2023년 매우 많은 이벤트들이 있던 한 해입니다. 이번 한 해의 마무리 겸, 새로운 기술 블로그의 첫 포스트로 올 한 해의 일들을 정리해 보고자 합니다. 이 포스트에 분류는 회사, 블로그, 콘퍼런스,반성할 점, 2024목표 총…]]></description><link>https://sungbin.kr/2023%EB%85%84-%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/2023년-주니어-개발자-회고록/</guid><pubDate>Tue, 26 Dec 2023 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEzElEQVQ4ywXB61dSBwAA8Psf7Pu2U2frcdaO85EvFNJCHj4oXB7zNQtrZGpJQUrpOrNcKaaWWk6Sh4rARDEBicsbBIX7AC4gYYGQhGVa2VptfdzvByw7dYgL9EBGL2T0uPUYYnY5Qcm0cHZ2UquWSaUCoXD0z7GhFac+iDm96FIAc/mxFQy1Qy4QgF2GjfByImyP+cEXqxbMIl2YFaYcxhUXU9nNdT+kpFJKjzMbziwuqj582Pn098tk1P0qhsXjEdhtBnyoGXZotX8NxGG5a1GgFdxSyvk/pmWRSERWUz2RgC8oKCTkZmm0qi8fk+P8wdITdMFA23oYhdxmwI9auB3XOi/Xrrtl0jEeZJi2GpV4QmEFjdzaUEE7SkhPz8jOyzOZdMmQqYxW+tWe9JpycgjWwZANQCGQ1drYxqSBgg6dbCiKLoALE8VEclUp8erZcnx21rEiUju7aXnZspMMS4ev0Yuyx++0JGJByG0BUMjQwKg9id+vHmgMrSjDywrt3HhORhYJl3GalvfNt3tw+bjz1WSbWbu7+yYRxcKoPr4ejEVXEdgCIJCxs5N7jn5UP9Eb9FoDsMGiV9afPtNwpo5zoa6Mdry2ppJ7odJkUAdDPh8GYQEUQZxul83tMgEIYn/7ZuO/z+9evd54/34r4IcwzP1ILLJaDduvIpsvn79OPn+7He/t7yOXlOUVknIKSIWUMhKFqlBMAl7f8uePOzqj8XI7t/t2j9WoDgSgwXu8GZlg1WsNhXyhkPdF/CmHy9373cEWxqnh35vO1tD3HTgkkwsBzL/yNAixWpsfT3SfIv408mB4603CqR61qx5CT/jP1rBELLi7vX6H11NbUzE31qUcabvBpKempcvlYsDncyY2wrKh6zwmvp6Wxm1jb26u+9xGtXKqq+vGdhy1gQre3T4vbPGtLHKuXiSXlJIoFAIhb35OAmB+V2wNC0M68WB7dXWF1aRZW8NiUcztsvXf67epRTLh/a6u31aWNJBtfqi/i0YvI1NJubgc5ZwEWF2F42E0FvZ++rz7z8ftd++SkecBv9exFoKf+e1X2JdEj+47DAp4BQzCeqdJwWD8kp2Ti8/PfTwvBUCDqm+w78HI3e7bN9s6OpsvswWiR5FIIBiEEcjq9Tg8iB11GwTC0RYWi3e3xwjOKuR85vlfNZpZQCKbwBccqTxBPpSSmpKZW0YtYja17GzFErHQ1mYkFvFFwnDcr+VwWPtTs4+fLHfqxahVkJKeNjklAOSKaRKxoKKYkHE4s4hKPVdJuXDp0pd/t7xOpVk3F4/6gm71OjLfeeN6biGxprbSrOj1mKTsRsbkBB+YkooJuMw6elFJCaWyumr/odSLVziIdYbXTOxln1r1mCIu5Qt49tp1TkZ+AeN01aKwY6qnhUrASSQCQPNkXjDyh2FmWCocamo8Ryk61tPbjTiNYzcZ4z1NSyr+mlO2Ac+0t7Ey84/U1/zM76wa45YfPLBvWioG/AF46YlM3NvqsqgcdsPVVua9gTsvk1HEoVpaeOA1Cf3WiYhrhsNu+Xrvwfycw7cbCm/V5n2/d49kWgggiM1m1YIaqdMOoqjTZFBbrVqPx+GB9BhqRt16yGXwwiatVskfH5VOj4PzIlApEgkf2pd0/wPQ4smZ3V+pqAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/1cc49a7a61d843cdc95319531c69a69f/2bef9/01.png&quot;
+        srcset=&quot;/static/1cc49a7a61d843cdc95319531c69a69f/6f3f2/01.png 256w,
+/static/1cc49a7a61d843cdc95319531c69a69f/01e7c/01.png 512w,
+/static/1cc49a7a61d843cdc95319531c69a69f/2bef9/01.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;0. 서론&lt;/h2&gt;
+&lt;p&gt;2023년 매우 많은 이벤트들이 있던 한 해입니다.&lt;br&gt;
+이번 한 해의 마무리 겸, 새로운 기술 블로그의 첫 포스트로 올 한 해의 일들을 정리해 보고자 합니다.&lt;br&gt;
+이 포스트에 분류는 회사, 블로그, 콘퍼런스,반성할 점, 2024목표 총 5개의 분류로 작성되었습니다.&lt;/p&gt;
+&lt;h2&gt;1. 회사 📚&lt;/h2&gt;
+&lt;p&gt;이 포스트를 쓸려고 할 때 잠시 고민을 해보았습니다. &quot;&lt;strong&gt;올 한 해에 무슨 이벤트들이 있었을까?&lt;/strong&gt;&quot;&lt;br&gt;
+처음에는 별일이 없어 보여서 무슨 내용을 써야 할까 기억을 돌이켜보니, 나름 많은 이벤트들이 있었습니다.&lt;/p&gt;
+&lt;h3&gt;1-1. 기존 코드 리팩토링&lt;/h3&gt;
+&lt;p&gt;우리 팀의 개발 프로세스에 대해 잠깐 설명을 드리자면 다음과 같습니다.&lt;br&gt;
+1. 기존에 만들어둔 공통 템플릿을 가져옵니다.&lt;br&gt;
+2. 템플릿을 각 기관의 프로젝트에 맞게 수정을 진행합니다.&lt;br&gt;
+3. 이후, 추가적인 기능 요청 건에 대하여 개발을 진행합니다.&lt;br&gt;
+4. 배포(납품) 합니다.&lt;br&gt;
+이제까지는 아무런 생각 없이 이 프로세스에 대해 개발을 진행하였습니다.&lt;br&gt;
+하지만, 어느 순간 의문사항이 들어서 아래와 같이 팀장님께 질문을 하였습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q. 팀장님. 우리가 가져오는 공통 템플릿은 언제 최초로 만들어졌나요?&lt;/p&gt;
+&lt;p&gt;A. 제가 입사하기 전에 만들어졌을걸요? 그런데 안 건드시는 게 좋으실 거세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;여기서 나는 조금 의문사항을 가졌습니다. 기존 템플릿 코드를 보니, javascript 코드도 지금 현재 서비스 종료를 한 Internet Explore에 대비한 코드들로 조금 난잡해져 있었고, 공통된 코드들이 여러 파일에 많이 분포되어 있었습니다. 또한 너무 많은 이미지들의 사용으로 페이지가 로드가 될 때 렌더링 속도 또한 저하되는 사실을 발견하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;이러한 이유를 팀장님께 말씀을 드리고 리팩토링 계획을 제안하였습니다. 팀장님도 제 의견에 동의를 해주셨고 저는 기존 템플릿에 대한 리팩토링 작업에 들어가게 되었습니다.&lt;/p&gt;
+&lt;h4&gt;1-1-1. 반복된 코드 없애기&lt;/h4&gt;
+&lt;p&gt;제가 먼저 해야 할 작업으로 반복된 코드를 하나의 파일에 모아두는 작업을 하였습니다. 구체적인 사항은 자세히 말씀을 드릴 수는 없지만, 예시로 말씀을 드리자면 쿠키를 적용하고, 적용한 쿠키를 가져오는 부분이 각각 파일마다 비즈니스 로직이 직접 작성되어 있던 부분을 하나의 모듈로 묶어서 적용시켰습니다.&lt;/p&gt;
+&lt;h4&gt;1-1-2. 이미지 최소화&lt;/h4&gt;
+&lt;p&gt;렌더링 속도의 저해요인이 각 이미지들의 큰 용량들 때문이었습니다. 그래서 디자인팀에게 이미지들의 용량을 줄여줄 수는 없을지 제안을 하였고 최대한 이미지 용량들을 줄였지만, 여전히 큰 용량들이었고 렌더링 속도에는 크게 영향을 끼치지 못했습니다. 그래서 생각해낸 방법이 &quot;꼭 필요한 이미지들만 적용하고 그 외에는 css를 이용하여 우리가 만들자!&quot;라는 방법이었습니다. 그래서 진짜 필요한 이미지들을 제외한 이미지들(ex. 단순 버튼 이미지)을 HTML 태그들을 생성 후, css로 되자 하여 대체를 하였습니다.&lt;/p&gt;
+&lt;p&gt;이를 통해 우리는 그래서 &lt;strong&gt;렌더링 속도를 기존 대비 50% 빠르게&lt;/strong&gt; 해두었습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;LightHouse 지표로 설명을 해드리고 싶지만, 회사 보안으로 보여드리지 못하는 점 죄송합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;1-2. 실시간 자막 변경&lt;/h3&gt;
+&lt;p&gt;우리는 기존에 실시간 자막을 vtt나 srt를 이용하여 영상에 자막을 커스텀 하게 제공하였습니다. 하지만, 이 방법은 각 서버에 vtt나 srt를 지원해 주지 않는 WAS에는 도입이 힘들어 실시간 자막을 적용하고 싶어도 할 수 없었습니다. 이에 저는 여러 방법들을 알아보고, javascript의 timeupdate 이벤트를 이용하여 js 파일만으로 실시간 자막을 제공하는 방식으로 수정하게 되었습니다. 이를 통하여 실시간 자막을 모든 프로젝트에 도입을 할 수 있게 되었습니다.&lt;/p&gt;
+&lt;h3&gt;1-3. 사내 회의실 예약 시스템 개발&lt;/h3&gt;
+&lt;p&gt;2023년 들어오면서 전반적인 회사들이 안 좋아지는 소식을 듣게 되었습니다. 이 소식은 저희 회사도 예외사항이 아니었습니다. 그래서 저희 회사에 최대한 비용을 아낄 요소들은 아끼자는 말이 나오게 되었습니다. 그래서 저는 고민을 하게 되었고, &quot;외부 솔루션을 이용하는 회의실 예약 시스템을 제가 개발해 보자.&quot;라는 생각을 하게 되었습니다. 그리고 현재 개발을 완료하게 되었고 &lt;strong&gt;연간 솔****루션 비용으로 60만 원씩&lt;/strong&gt; &lt;strong&gt;나가는 비용을 절약&lt;/strong&gt;하게 되었습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;자세한 내용은, 회사와 이야기를 한 후 허가가 있다면 간략한 내용을 적어보겠습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;1-4. 사내 백오피스 통합로그인 모듈 개발&lt;/h3&gt;
+&lt;p&gt;회의실 예약 시스템을 만들고 우리 팀장님께서 주신 추가 의견이 우리의 백오피스를 통합로그인으로 만들자는 의견을 주셨습니다.&lt;/p&gt;
+&lt;p&gt;그래서 저는 다시 고민을 하게 되었습니다. 왜냐하면 일단, 각 프로젝트들은 docker로 띄워져 있어서 도메인이 다르다는 점이였습니다. 그래서 chat gpt에게 의견을 구해보았습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAlUlEQVQI102MSRaCMBBEuZPg8CAMIUMnGFAgT73/QcrXjQsXtajq37+41Q6DTtDjjLoh1IrQdhGNInT9hEYFiWrjLwFtN0mY543ZshpwKnsUo1kQYoanHRQznF+lUzh6vL+Q5g8oZPiww9MmDN+MfQrHdxYfQvuQ0dEmIhbwA3d+YMGU3rJZtx7CP1abBZerQXXWIvwCSj9th/VpvbgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/995a4dbbce62436dd9ec528920860b08/2bef9/reference01.png&quot;
+        srcset=&quot;/static/995a4dbbce62436dd9ec528920860b08/6f3f2/reference01.png 256w,
+/static/995a4dbbce62436dd9ec528920860b08/01e7c/reference01.png 512w,
+/static/995a4dbbce62436dd9ec528920860b08/2bef9/reference01.png 1024w,
+/static/995a4dbbce62436dd9ec528920860b08/21b4d/reference01.png 1280w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;뭐 일단, OAuth2로 인증서버를 따로 두 자는 의견을 받았지만, 받아들일 수 없었습니다. 왜냐하면 아직 제가 OAuth2에 대해 익숙하지 않고 다른 프로젝트를 서버단까지 건들기에는 부담이 컸기 때문입니다. 또한 인증모듈을 분리시키기엔 시간적인 여유가 많이 없었습니다. 그래서 생각을 해보고 팀장님과 팀원들 분과 회의를 거친 뒤에 나온 결론은 다음과 같습니다.&lt;/p&gt;
+&lt;p&gt;1. 일단, 로그인 ui 부분은 회의실 예약 시스템 폼으로 통일하자.&lt;br&gt;
+2. 로그인 api는 회의실 예약 시스템으로 사용하자.&lt;br&gt;
+3. 통합로그인 api를 따로 만들어두자.&lt;/p&gt;
+&lt;p&gt;위의 의견을 자세히 풀어보면, 다른 프로젝트들은 로그인 부분이 다행히도 없어서, ui 통일은 다른 클라이언트 코드에 링크를 넣어두는 것으로 해결이 가능했습니다. 다음으로, 회의실 예약 시스템 로그인 페이지로 들어가면 access token을 생성하여 클라이언트에게 응답을 내주고, 클라이언트는 로컬 스토리지에 저장시킵니다. 그리고 추가적으로 응답으로 내려주는 access token을 내부 ip를 키로 하여 redis에 저장시킵니다. 이후 다른 프로젝트 root 페이지에 접속 시, redis에 ip를 키로 하는 access token이 있으면 access token을 가져와서 로그인을 시키는 로직으로 변경하게 되었습니다.&lt;/p&gt;
+&lt;h2&gt;2. 블로그 💻&lt;/h2&gt;
+&lt;p&gt;기존의 나는 블로그의 작성을 생활화하지 않았고, 점점 적는 게 귀찮다는 나태함으로 미루고 있었고 결국 유령 블로그가 되었습니다.&lt;br&gt;
+그리고 12월이 되고 나서야 다른 개발자들의 회고록이 점점 나오게 되었고, 다시 한번 이 나태함을 걷고 학습하고 글을 써보자는 생각이 들게 되었습니다. 그래서 기존 velog로 작성한 유령 블로그를 이어갈려고 하였지만, 가끔 velog의 서버 장애 이슈로 velog에서 대중적인 티스토리 블로그로 이관하게 되었습니다.&lt;/p&gt;
+&lt;h2&gt;3. 콘퍼런스 🏛&lt;/h2&gt;
+&lt;p&gt;작년까지만 해도 개발자 콘퍼런스 가는 것은 나와는 먼 아기였던 것 같았습니다. 하지만 올해는 운이 좋게도 3번의 기회가 생겨서 개발자 콘퍼런스를 갈 수 있게 되었습니다.&lt;/p&gt;
+&lt;h3&gt;3-1. 인프콘 2023&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABAADAQX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABOkWsdkVhN/OQJmVf/8QAHhAAAgEEAwEAAAAAAAAAAAAAAQIDAAQRIRITIjH/2gAIAQEAAQUCDbCk1N5beew4UalO0K8S5WpPttVv6j//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAABBAIDAAAAAAAAAAAAAAAAAREhMQIiQVFx/9oACAEBAAY/AiBn4NldRiTJSei7oUy8JP/EAB4QAQACAwACAwAAAAAAAAAAAAEAESExcUFhUYGh/9oACAEBAAE/ISwoH4mlfsAeT0jamFRxOdyeEb9yxY2BXJn7N0imtZcRP2TKjqFWkUa1P//aAAwDAQACAAMAAAAQwzMN/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAEDAQE/EKq4j//EABcRAQEBAQAAAAAAAAAAAAAAAAABEUH/2gAIAQIBAT8QxI61/8QAHRABAQACAgMBAAAAAAAAAAAAAREAITFBUWGxkf/aAAgBAQABPxBNQNKJh/Oduh9xFhQtWNdYPMZC+t+TLROtRCk5xjXJ91yJEA04S38MIHXYU7tx+Is7tUs+Ywa9M0bVNPscstgKNBwZ/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/3f0c0ccee723905435edb7e9fddf4e99/72e01/reference02.jpg&quot;
+        srcset=&quot;/static/3f0c0ccee723905435edb7e9fddf4e99/e4a55/reference02.jpg 256w,
+/static/3f0c0ccee723905435edb7e9fddf4e99/36dd4/reference02.jpg 512w,
+/static/3f0c0ccee723905435edb7e9fddf4e99/72e01/reference02.jpg 1024w,
+/static/3f0c0ccee723905435edb7e9fddf4e99/47311/reference02.jpg 1080w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;올해에도 인프콘을 주최한다는 소식에 얼른 신청을 하였지만, 결과는 처참하게 떨어지게 되었습니다.&lt;/p&gt;
+&lt;p&gt;하지만 운이 좋게도 아는 지인분이 양도를 해주셨고 즐겁게 인프콘을 가게 되었습니다.&lt;/p&gt;
+&lt;p&gt;처음 개발자 컨퍼런스를 가는 만큼 마음도 들떴고 듣고싶던 발표세션도 체크를 하면서 기다리게 되었습니다. 그러면서 여러 발표세션을 듣고 아는 지인분들도 만나면서 정말 뜻 깊은 시간이자 반성을 하게 되는 시간이 되었습니다. 일단 제가 영상에서만 보던 동욱님, 토비님, 영한님을 실제 뵐수 있어서 좋았지만 강연을 들으면서 제가 그 동안 많은 학습을 게을리 했고 많은 부분이 부족하다는 점을 느끼게 되었습니다.&lt;/p&gt;
+&lt;p&gt;또한, 해당 세션들에 대해 공유할 부분을 정리해서 팀원분들과 의견을 공유하게 되는 계기가 되었습니다.&lt;/p&gt;
+&lt;h3&gt;3-2. 유스콘 2023&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDAgT/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHC6oEzEKoMwnEkaR//xAAcEAACAgIDAAAAAAAAAAAAAAAAAgESAxEhIjL/2gAIAQEAAQUCoxU7kPxOSojO8baBsssiV1obxB//xAAYEQEBAAMAAAAAAAAAAAAAAAAAEQESIf/aAAgBAwEBPwHbLqK//8QAFxEBAQEBAAAAAAAAAAAAAAAAABEBIf/aAAgBAgEBPwGOLiP/xAAaEAACAwEBAAAAAAAAAAAAAAAAARAhMRED/9oACAEBAAY/AsMaNZVjzp1+gng0y1Dj/8QAHBABAAMAAwEBAAAAAAAAAAAAAQARIUFhcTFR/9oACAEBAAE/IWjbnkGaInQPMhOlOoWLgp1M+NriBAscNfZVB7FzzcB+QkPif//aAAwDAQACAAMAAAAQjz2B/8QAGBEBAQADAAAAAAAAAAAAAAAAAQARIWH/2gAIAQMBAT8Q4QozKC0v/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPxDMgc2Ebvt//8QAIBABAAIDAAAHAAAAAAAAAAAAAQARITFBUWFxgaGx0f/aAAgBAQABPxAPEVf6iPohmUFonxfSDryFdFPeVhyIunD5zGZWUCaRY+oueSFSqLAZ1Cq/Qa5G8QChmpmVyz//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;reference&quot;
+        title=&quot;reference&quot;
+        src=&quot;/static/a060edd9cdf97717faa9e91b1dfc14ee/72e01/reference03.jpg&quot;
+        srcset=&quot;/static/a060edd9cdf97717faa9e91b1dfc14ee/e4a55/reference03.jpg 256w,
+/static/a060edd9cdf97717faa9e91b1dfc14ee/36dd4/reference03.jpg 512w,
+/static/a060edd9cdf97717faa9e91b1dfc14ee/72e01/reference03.jpg 1024w,
+/static/a060edd9cdf97717faa9e91b1dfc14ee/47311/reference03.jpg 1080w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;운이 더욱 좋게도 유스콘 또한 바로 당첨되게 되었습니다. 인프콘보다는 규모가 작았지만 확실히 핸즈 온 실습 강연과 동기부여 세션을 통해 많은 지식들을 알게 되었습니다. 특히, &apos;SSE&apos; 핸즈 온 세션과 &apos;react-hook-form&apos; 세션에서 SSE라는 개념과 react hook form을 처음 접하게 되었고, 이 개념을 바로 다음 출근 날에 팀원분들과 공유 후에 백오피스 프로젝트 중 하나인 &apos;회의실 예약 시스템&apos;에 적용을 시켰습니다.&lt;/p&gt;
+&lt;h3&gt;3-3. Chat-gpt 강연&lt;/h3&gt;
+&lt;p&gt;chat-gpt가 언론에도 많이 유명한 강세를 타던 시점에 저희 회사에도 chat-gpt에 관심을 가지게 되었고, 회사 차원에서 외부 chat-gpt 강연을 듣게 되었습니다. 물론, 대상이 개발자에 대한 대상은 아니었기에 조금은 아쉬운 부분을 가진 상태에서 강연을 들었지만, 충분히 많은 도움이 되는 시간이었던 것 같습니다. 일단 프롬프트 작성법부터 시작해서, 유료 사용자에 한해서 custom instructions 부분을 통한 chat-gpt 응답 커스텀 화?를 시킬 수 있었고, 이미지 생성 등 다양한 플러그인에 대해서도 접할 수 있는 좋은 기회이자 시간이었고 이 강연을 통하여 사내 팀원분들과도 똑똑하게 chat-gpt를 이용하게 되는 계기가 된 것 같습니다.&lt;/p&gt;
+&lt;h2&gt;4. 반성할 점&lt;/h2&gt;
+&lt;h3&gt;4-1. 개인공부&lt;/h3&gt;
+&lt;p&gt;개인 공부에 있어서는 정말 많이 반성해야 할점이 많습니다. 올해 초만 해도 &quot;1일 1커밋을 목표로 해보자&quot;라는 목표를 두었지만, 피곤하다는 핑계, 회사에서 힘들었다는 핑계로 공부를 많이 미루곤 했습니다. 회사에서 열심히 했으니 성장했다는 말도 안 되는 핑곗거리로공부를 너무 게으르게 하게 된 점에 많은 반성을 하게 되며, 다시 한번 목표를 다 잡아서 공부를 해봐야겠다는 다짐을 해야 할 것 같습니다. 또한 추가적으로 앞서 서두에서 설명드렸던 블로그도 유령 블로그로 만들지 않고 꾸준히 주기적으로 작성해야겠다는 다짐을 해야겠습니다.&lt;/p&gt;
+&lt;h3&gt;4-2. 운동&lt;/h3&gt;
+&lt;p&gt;분명 올해 초에 헬스장 1년권을 신청했지만 1달에 몇 번 못 간 게 너무 반성하게 되는 점입니다. 퇴근 후 피곤하다는 핑계, 주말에는 휴식 좀 해야 한다는 핑계가 너무 앞섰던 것 같습니다. 이를 반성하고 2024년에는 꾸준히 운동도 해서 건강과 체력을 기르는 습관을 만들어야겠습니다.&lt;/p&gt;
+&lt;h2&gt;5. 2024 목표&lt;/h2&gt;
+&lt;h3&gt;5-1. 더 나은 환경으로 만들기.&lt;/h3&gt;
+&lt;p&gt;내년에는 좀 더 나은 환경을 만들어가자는 것입니다. 더 나은 환경이라고 하자면 이직도 있겠지만, &quot;&lt;strong&gt;현재 팀원분들과 같이 고민과 성장을 통해  회사에 조금 더 기여를 할 수 있는 부분을 찾자&lt;/strong&gt;&quot;라는 목표를 두고 제 자신도 이에 맞게 실천하고 노력하는 삶을 살아야겠다 다짐합니다.&lt;/p&gt;
+&lt;h3&gt;5-2. 블로그&lt;/h3&gt;
+&lt;p&gt;블로그를 유령 블로그가 아닌 활성화된 블로그를 만들어서, 제 경험과 지식을 다른 분들께 공유할 수 있는 open api와 같은 블로그가 되게 만들어 갈 예정입니다. 많은 관심 부탁드립니다.&lt;/p&gt;
+&lt;h2&gt;마무리&lt;/h2&gt;
+&lt;p&gt;그럼 이상으로 2023 주니어 개발자 회고를 마치겠습니다. 여기까지 읽어주셔서 감사합니다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item></channel></rss>
