@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 13 Aug 2024 06:05:41 GMT</lastBuildDate><item><title><![CDATA[블로그 이관 및 회고]]></title><description><![CDATA[드디어 블로그를 이관해보려고 합니다! 😊 블로그 이관 이유? 현재 나는 velog, tistory…]]></description><link>https://sungbin.kr/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EA%B4%80-%EB%B0%8F-%ED%9A%8C%EA%B3%A0/</link><guid isPermaLink="false">https://sungbin.kr/블로그-이관-및-회고/</guid><pubDate>Tue, 06 Aug 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Aug 2024 01:21:26 GMT</lastBuildDate><item><title><![CDATA[블로그 이관 및 회고]]></title><description><![CDATA[드디어 블로그를 이관해보려고 합니다! 😊 블로그 이관 이유? 현재 나는 velog, tistory…]]></description><link>https://sungbin.kr/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EA%B4%80-%EB%B0%8F-%ED%9A%8C%EA%B3%A0/</link><guid isPermaLink="false">https://sungbin.kr/블로그-이관-및-회고/</guid><pubDate>Tue, 06 Aug 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -618,6 +618,174 @@
 &lt;/blockquote&gt;
 &lt;p&gt;이 말을 듣고 울림이 컸다. 맞는 말이다. 누군가에게 다 라떼의 시절은 존재한다. 유명한 개발자분들, CTO분들도 다 라떼의 시절은 존재하기 마련이기 때문이다. 그 라떼가 없다면 현재 그분들도 이렇게 있을 수가 없을 테니 말이다. 그러면서 나도 생각을 했다. 스터디 클럽을 진행하면서 마주하는 에러, 이해하기 힘든 개념들, 실무에서 마주하는 버그들 이런 것을 하나하나 해결해 가는 그 하루하루가, 위의 이슈를 해결했던 그 하루가 나의 라떼중에 하루가 될테니 말이다.&lt;/p&gt;
 &lt;p&gt;이렇게 꾸준히 하루하루 공부하고 깨지고 해결해가는 하나의 라떼를 쌓기 위해 나중에 나만의 라떼를 완성하기 위해 더욱 열심히 해볼 계획이다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 출사표 및 OT 후기]]></title><description><![CDATA[출사표 및 OT…]]></description><link>https://sungbin.kr/%5B%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD%5D-%EC%B6%9C%EC%82%AC%ED%91%9C-%EB%B0%8F-OT-%ED%9B%84%EA%B8%B0/</link><guid isPermaLink="false">https://sungbin.kr/[인프런-워밍업-스터디-클럽]-출사표-및-OT-후기/</guid><pubDate>Mon, 19 Feb 2024 10:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBAv/EABUBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAHqVDRXaYf/xAAZEAEAAgMAAAAAAAAAAAAAAAABAAIDERL/2gAIAQEAAQUCUrKZFV3K26ycBbc//8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8Bh//EABcRAQADAAAAAAAAAAAAAAAAAAEQESH/2gAIAQIBAT8BbdGP/8QAHBAAAQQDAQAAAAAAAAAAAAAAAgABEBEhUWHB/9oACAEBAAY/AnK78jKcdIelH//EABsQAAICAwEAAAAAAAAAAAAAAAERACExQWGB/9oACAEBAAE/IbCaG6hLHnIQmTMKjQa4BrKheuzgCf/aAAwDAQACAAMAAAAQWx//xAAYEQEBAQEBAAAAAAAAAAAAAAABEQAxIf/aAAgBAwEBPxAYR6ycz61d/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQARMSH/2gAIAQIBAT8QsYDYcKCf/8QAHRABAQABBAMAAAAAAAAAAAAAAREAITFBUYGh0f/aAAgBAQABPxDUeKA7Ticee8PBF3SV3hwUCoBcdpE0bsD76ycnUCtPDHUwHUuf/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/263b6ebbb58f33a741aafa04cf3563f1/72e01/01.jpg&quot;
+        srcset=&quot;/static/263b6ebbb58f33a741aafa04cf3563f1/e4a55/01.jpg 256w,
+/static/263b6ebbb58f33a741aafa04cf3563f1/36dd4/01.jpg 512w,
+/static/263b6ebbb58f33a741aafa04cf3563f1/72e01/01.jpg 1024w,
+/static/263b6ebbb58f33a741aafa04cf3563f1/e5166/01.jpg 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;출사표 및 OT 후기&lt;/h1&gt;
+&lt;h2&gt;출사표&lt;/h2&gt;
+&lt;p&gt;현재 월드 스타인 손흥민 선수의 아버지인 손웅정 선생님께서 하신 말씀으로 글을 시작하려고 합니다. 손웅정 선생님께서는 아이들을 가르치실 때 이런 말씀을 하셨습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;세계의 벽 절대 안 높아! 할수 있어! 남자는 자신감! 일단 붙어봐야될거아니야! 저질러보고! 깨지고! 박고! 가슴만 뛰는게 축구선수가 아니라 가슴이랑 내가 같이뛰어야돼!!!&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;나는 현재 작은 중소기업의 웹 프론트엔드 업무를 맡고 있는 개발자입니다. 하지만 저의 원래 꿈은 웹 백엔드 개발자였습니다. 대학교 교수님 추천으로 이 회사에 입사하게 되었고 백엔드 업무를 맡기신다고 말씀하여 입사확정을 받았지만 정작 백엔드 팀은 존재하지 않았고 프론트 업무를 맡게 되었습니다. 이에 백엔드로 이직을 염두해두며 업무시간에는 프론트 기술들을 프로젝트에 적용하며 프론트 기술 적응을 해두었으며 집에 와서는 백엔드 공부를 계속 하였습니다. 그게 어느덧 3년이라는 시간이 흐르고 점점 제 자신에게 지칠 무렵, 인프런 배너에서 엄청난 것을 보게 되었습니다! 😲&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 415px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.015625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADdElEQVQ4yyWS/U/UdQDHP3Icta5lTzQUEMd9j3vgjuOAkwyCNgJJRhQwU7GVWj70g4vJXKAZJEUZbm4MLSyXoPRgGp5Fqwju2933npCHi0b+UBuOhUZkS1K5cXxf7ewveO39er1FefBPKvwzlIfmKPfNUDo2z5Yfpmg5009TTz+NfX5sPtArYPVBth8kL6wJLDEwC+5FHxML19j7C2R4VURleIHCrj7K3u2kYH8bJef87AzM8dpZmYbPZRrPe3C658nyRHBenMLx9TSZ3igpcpTmKzC04OPSrasc/i0GUxG2MCzf0caDQvBCTRUnfwzzZBhWhGDdd7+zp6GJxtZ2Gg93cPr9Y7x84nskP1hGIb25m12dLsomwOSJYvKCsAQgvf8vqj/4iqNTSxSOgTQQweCeJ//LSZ7eWMGGrc/xbF01RUX5GI69x6pvJlntGib10Kcktp5FHwKjZwlzbLLRq5Lpg4IJSPOoSDI87HqLu3tL0H20iYTTuWiO2xENekSnjfiLeWgHndzbvwXLJSgKg9W7hDMEFgVElk/FHASzovJYjDTwD/ecr0XTYya+w0Tc8yloXkpDe9yOpnYl2kNWltXczwOftGD3Qp4/ymoP2AZuYPIuIRxBsLmm2aD8zZ35rll0PdVoPjZwl/sJRGICcVVJaPZKLJN0JFxYi+aCnqTBLixDYFciNF6OUuu+hl6OIoweSFpfROkz63jcv0huENJcgyTk24iz6og/aETbZCS+Khlth534fXp0rXtI981j9EO+/C+VoYU7oSQPCGMANp0ZIufIORwjkK0sYvGBeRAeau9FdNsRu5IRmxMRnWncd6SZrKwdGMtfIVuJ4AhAqqzi9KsUD6sIq1clJwTOUXAoUQxyFLNnESkI29/wU7a7jhW2dB51FPFU/TaktlNk1L2JYeMBTHIEewBqwrDtZ6gZVxF2r4ozCNnjYA+CcRSsI7E482zcfIJ3Sk5RX9FF/YsujuZ2UH1ARn8FcsKwygPNlyN88et1KkdVasZBxAqnfjhC5sFuigdmMbz9GWu3vkrwj5tYfVGMrquYvr1OqvsG1pM/YRq6zcq2PoqV20gKNE/eomVsjmRZJSN2bPMQaEsLkCpT2Ll9N48s19HX2037zP9uCmJeg5ChQOEw5AVBrFnPvv2vMx2FPPkmaQpkKioWReU/tH2l5SpfFgAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;참조 이미지&quot;
+        title=&quot;참조 이미지&quot;
+        src=&quot;/static/0643d322033a8d288477a29cacd784ac/73926/reference01.png&quot;
+        srcset=&quot;/static/0643d322033a8d288477a29cacd784ac/6f3f2/reference01.png 256w,
+/static/0643d322033a8d288477a29cacd784ac/73926/reference01.png 415w&quot;
+        sizes=&quot;(max-width: 415px) 100vw, 415px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;워밍업 클럽이라는 말에 신청을 바로 하려 하였지만 상세소개 글에 걸리는 부분이 있었습니다. 🧐&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 665px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 23.4375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABD0lEQVQY02WMSU/CUBSFHyCBjdIWJIQtGxfF1hoIiAyBwP9PdClTJwq6RIkF85l3CRtdnJw7nO+oxXJNvElYrX3CKCYIY3G9+0HIJknY7t4Jwgg/COSm9yjeiGtW//S833+ilqu1QDqgH8l2dw4FoZTO5wtWfsTy7YWP6JXv9IfD4Ys0TTkej+IXnU4nVKPRwPM8HMfBdV2azSbdbpfpdMpkMmE2m8k8Gg3pP/cYDAcM+kPubUeYC2fbtuSVUoq/0qXj8Zh2u02r1aLT6Yieej0eXA/78Q5V/M+VSqVzYT6fJ5vNyrFQKFCtVimXy5imiWEYWJZFpVKhVqthmRbG7TXFmysyKiNcLpcTtl6v8wu1XuZJtHf5JwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;참조 이미지&quot;
+        title=&quot;참조 이미지&quot;
+        src=&quot;/static/3606a3d82bd316658527c5be1e40ecab/5f4af/reference02.png&quot;
+        srcset=&quot;/static/3606a3d82bd316658527c5be1e40ecab/6f3f2/reference02.png 256w,
+/static/3606a3d82bd316658527c5be1e40ecab/01e7c/reference02.png 512w,
+/static/3606a3d82bd316658527c5be1e40ecab/5f4af/reference02.png 665w&quot;
+        sizes=&quot;(max-width: 665px) 100vw, 665px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&apos;&lt;strong&gt;부트 캠프 참가자&lt;/strong&gt;&apos;라는 말에 이것을 신청해도 되는지 엄청 고민을 하였습니다. 그런던 어느날 &lt;a href=&quot;https://www.youtube.com/watch?v=u0hoYYYjd_k&quot;&gt;&apos;&lt;strong&gt;개발바닥&lt;/strong&gt;&apos; 유튜브 라방&lt;/a&gt; 을 보게 되었다. 마침 향로님이 계셔서 조심스레 여쭤보았고 직장인도 신청해도 된다는 말씀을 남겨주셨습니다! 나는 환호성을 외쳤고 바로 신청을 하게 되었습니다. 😆&lt;/p&gt;
+&lt;p&gt;서두에 손웅정 선생님 말씀처럼 조금 나태해진 저를 &apos;&lt;strong&gt;인프런 워밍업 클럽 스터디&lt;/strong&gt;&apos;를 통하여 한번 저질러 보고 미션이나 강의를 들으면서 한번 깨저도 보고 가슴만 뛰는게 아닌 가슴과 제 학습곡선이 같이 뛰었으면 하는 바램으로 열심히 해보겠습니다.&lt;/p&gt;
+&lt;h2&gt;OT 후기&lt;/h2&gt;
+&lt;p&gt;전 날 &apos;&lt;strong&gt;인프런 워밍업 스터디 클럽&lt;/strong&gt;&apos;의 커뮤니티를 가입하게 되었고 당일 온라인 라이브로 OT를 진행하게 되었습니다. 간단한 일정과 방법을 코치님이 말씀을 주셨고 간단한 자바의 역사에 대해 알려주시고 간단한 질문을 받은 뒤, 라이브는 종료되었습니다.&lt;/p&gt;
+&lt;p&gt;여기서 나는 일정이 빡빡하다는 것을 알고 평일에는 직장에 소모되다 보니 과제를 미리미리 해보자는 마음을 갖게 되었고 오늘 OT 들은 자바부터 상세히 파보기 시작했습니다. 그러면서 여러 자료를 찾다가 다른 러너분들과 공유되고 싶다는 글을 찾게 되었습니다. 이렇게 첫 시작으로 지금 마음가짐으로 끝까지 완주해서 우수러너까지 노려봤으면 좋겠습니다. 다들 응원 부탁드립니다. 🥳&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
