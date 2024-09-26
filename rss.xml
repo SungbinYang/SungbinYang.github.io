@@ -1,4 +1,170 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Aug 2024 03:02:35 GMT</lastBuildDate><item><title><![CDATA[내가 개발자 커리어를 시작한 이유]]></title><description><![CDATA[서사 안녕하세요, 개발자 양성빈(Robert)입니다. 어느덧 202…]]></description><link>https://sungbin.kr/%EB%82%B4%EA%B0%80-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%BB%A4%EB%A6%AC%EC%96%B4%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%9C-%EC%9D%B4%EC%9C%A0/</link><guid isPermaLink="false">https://sungbin.kr/내가-개발자-커리어를-시작한-이유/</guid><pubDate>Wed, 14 Aug 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Sep 2024 12:55:07 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 0기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%5B%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD%5D-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/[인프런-워밍업-스터디-클럽]-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Thu, 26 Sep 2024 10:05:27 GMT</pubDate><content:encoded>&lt;!-- ![banner](./assets/01.png) --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며 0기때보다 더 나은 활동을 해보자고 다짐하며 이 글을 써내려간다.&lt;/p&gt;
+&lt;h2&gt;강의 소개&lt;/h2&gt;
+&lt;p&gt;처음 이 강의를 듣기 전, 나는 아래와 같이 생각했다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🤔 읽기 좋은 코드가 과연 무엇일까? 읽기 좋은 코드는 왜 필요할까?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;해당 물음을 가지고 강의를 듣기 시작하였다.&lt;/p&gt;
+&lt;p&gt;우리는 코드를 작성(쓰기)보단 읽는데 시간을 더 많이 투자한다. 기존 코드에 내 코드를 추가하기 위해 내가 과거에 작성한 코드 혹은 다른 동료분들이 작성한 코드를 읽는다고 해보자. 하지만 이해가 안된다면 다시금 읽게 될 것이다. 그리고 많은 시간 끝에 이해라는 경지에 도달하거나 절망이라는 경지에 도달할 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 567px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.46875000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQP/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGny1EtCwf/xAAZEAEBAAMBAAAAAAAAAAAAAAACAQAEEhH/2gAIAQEAAQUCbswu9BRHYs4VXmtLx//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAIDAQEAAAAAAAAAAAAAAAAhAQIRMWH/2gAIAQEABj8Ct4Q+mxOmY7DecRKxn//EABsQAQADAAMBAAAAAAAAAAAAAAEAESExQXFR/9oACAEBAAE/IRLVSzGPufriVpiZtPJnyJNkSAuXRfhP/9oADAMBAAIAAwAAABBwz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQEAAwACAwAAAAAAAAAAAAERACExQVFhcfD/2gAIAQEAAT8QOImrZaG7qbwoMuTZa5m3BShJ8Y9Ogi0RcXxgLfZqH37nMgSLYIp0/es//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;참고 이미지&quot;
+        title=&quot;참고 이미지&quot;
+        src=&quot;/static/a7ba67ec15bbd64c2e9ee77841b58735/a7172/reference.jpg&quot;
+        srcset=&quot;/static/a7ba67ec15bbd64c2e9ee77841b58735/e4a55/reference.jpg 256w,
+/static/a7ba67ec15bbd64c2e9ee77841b58735/36dd4/reference.jpg 512w,
+/static/a7ba67ec15bbd64c2e9ee77841b58735/a7172/reference.jpg 567w&quot;
+        sizes=&quot;(max-width: 567px) 100vw, 567px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;결국 코드를 작성한다는 것은 모두가 이해하기 쉬운 읽기 기반의 코드를 작성한다는 의미이다. 그리고 코드를 잘 짠다라고 말하는 것은 결국 읽기가 좋다는 의미이고 읽기 좋은 코드는 결국 미래를 위해 유지보수를 위해 필요한 작업이라고 생각이 든다.&lt;/p&gt;
+&lt;p&gt;또한 우린 가끔 이런 말을 하곤 한다. 나도 몇번 들었던 말이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;코드는 작성하고 난 순간부터 레거시다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;여기서 레거시란, 오래되고 유지보수가 힘든 코드라고 생각하면 된다. 즉, 우리가 작성한 코드들은 먼 훗날의 레거시 코드가 되고 이 레거시 코드들을 유지보수 할 미래의 나 혹은 동료들을 위해 읽기 쉬운 코드를 작성함이 좋을듯 싶어진다. 나 또한 이번에 &lt;strong&gt;제대로 학습&lt;/strong&gt;하여 실무에도 적용해볼 수 있는 기회가 되었으면 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 읽기 쉬운 코드 작성하는 현재까지 생각&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;미래를 위해 그래야함&lt;/li&gt;
+&lt;li&gt;유지보수 하기 좋음&lt;/li&gt;
+&lt;li&gt;미래의 나와 동료를 위해 읽기 쉬운 &lt;strong&gt;클린코드&lt;/strong&gt;를 작성해야함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;강의 구성&lt;/h2&gt;
+&lt;p&gt;클린코드, 리팩토링 과정의 최고의 연습은 테스트코드를 작성하는 것이다.&lt;/p&gt;
+&lt;p&gt;테스트 코드를 작성문화를 가진 기업들은 일반적으로 아래의 절차를 가진다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🛠 리팩토링 프로세스 (주관적인 생각)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;리팩토링 대상/범위 확인&lt;/li&gt;
+&lt;li&gt;기능보장을 위한 테스트 코드 작성&lt;/li&gt;
+&lt;li&gt;리팩토링&lt;/li&gt;
+&lt;li&gt;테스트 코드 검증&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 프로세스로 리팩토링을 진행하지만 우빈님께서는 현재 테스트코드 없이 진행한다고 하셨다. 또한 롬복도 사용을 하지 않으신다고 하며, 순수코드에 집중한다고 하셨다.&lt;/p&gt;
+&lt;p&gt;나 또한 이번에 우빈님 말씀대로 순수코드에 집중해보며, 시간과 여유가 있을 시, 내가 스스로 테스트 코드도 작성해봄이 좋을 것 같다!&lt;/p&gt;
+&lt;h2&gt;강의에 사용할 용어들&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 용어정리&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;도메인(domain): 실무에 자주 사용되는 말들로, 해결하고자하는 문제영역들을 말한다.(비즈니스 요구사항 함축)&lt;/li&gt;
+&lt;li&gt;도메인 지식: 도메인을 이해하고 해결하는데 필요한 지식&lt;/li&gt;
+&lt;li&gt;레거시, 유산: 우리가 현자 가지고 있는 코드 *&lt;/li&gt;
+&lt;li&gt;조상: 과거의 나 / 동료 / 이 코드를 작성했던 개발자분들&lt;/li&gt;
+&lt;li&gt;후손: 미래의 나 / 동료 / 내가 만든 코드들을 보게 될 많은 개발자분들&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 추가 참조
+&lt;a href=&quot;https://johnlock.tistory.com/405&quot;&gt;https://johnlock.tistory.com/405&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[내가 개발자 커리어를 시작한 이유]]></title><description><![CDATA[서사 안녕하세요, 개발자 양성빈(Robert)입니다. 어느덧 202…]]></description><link>https://sungbin.kr/%EB%82%B4%EA%B0%80-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%BB%A4%EB%A6%AC%EC%96%B4%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%9C-%EC%9D%B4%EC%9C%A0/</link><guid isPermaLink="false">https://sungbin.kr/내가-개발자-커리어를-시작한-이유/</guid><pubDate>Wed, 14 Aug 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
