@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Sep 2024 13:00:28 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 0기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%5B%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD%5D-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/[인프런-워밍업-스터디-클럽]-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Thu, 26 Sep 2024 10:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 28 Sep 2024 05:50:23 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 0기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%5B%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD%5D-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/[인프런-워밍업-스터디-클럽]-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Thu, 26 Sep 2024 10:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -94,9 +94,147 @@
 &lt;li&gt;후손: 미래의 나 / 동료 / 내가 만든 코드들을 보게 될 많은 개발자분들&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+&lt;h2&gt;우리가 클린코드를 추구하는 이유&lt;/h2&gt;
+&lt;p&gt;우리는 왜 클린코드라는 것을 지켜야 하는걸까? 결론부터 말하면 &lt;strong&gt;가독성&lt;/strong&gt;때문이다. 가독성이 좋다라는 것은 이해가 잘된다는 것을 말하며 그것은 곧 유지보수가 수월해지며 그 만큼 우리의 시간과 자원을 절약한다.&lt;/p&gt;
+&lt;p&gt;세상에는 클린코드라 지칭하는 수많은 원칙들과 조언들이 존재한다. 하지만 이런 원칙들을 관통하는 아주 중요한 주제가 있는데 그게 바로 &lt;strong&gt;추상&lt;/strong&gt;이다. 이번부터 추상을 한번 알아보자.&lt;/p&gt;
+&lt;h2&gt;프로그램의 정의&lt;/h2&gt;
+&lt;p&gt;그러면 추상이라는 것을 구체적으로 들어가기 전에 프로그램이 무엇인지 알아보자. 내가 생각하는 프로그램은 아래와 같다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;📚 추가 참조
-&lt;a href=&quot;https://johnlock.tistory.com/405&quot;&gt;https://johnlock.tistory.com/405&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;프로그램 = 설치하는 것&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;쉽게 생각해서 프로그램은 설치하는것이라 알고 있었다. 거기서 프로그램의 구조는 데이터 + 코드로 이루어진다 생각한다. 그래서 앞으로 이 2가지를 가지고 데이터의 추상과 코드의 논리를 가지고 학습해볼 예정이다.&lt;/p&gt;
+&lt;h2&gt;추상과 구체&lt;/h2&gt;
+&lt;p&gt;이제 본격적으로 추상을 들어가보자. &lt;strong&gt;추상&lt;/strong&gt;하면 같이 따라 다니는 단어가 있는데 그것이 바로 &lt;strong&gt;구체&lt;/strong&gt;이다. 이 두 단어는 매우 중요한 단어이다. 추상이라는 단어가 무엇일까? 우빈님께서 한자와 위키백과, 피카소의 명언을 참조하셔서 말씀을 해주셨듯이 추상은 아래와 같다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 추상&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;구체적인 정보에서 어떤 이미지를 뽑아내는 것이다&lt;/li&gt;
+&lt;li&gt;중요한 정보는 가려내어 남기고 덜 중요한 정보는 생략하여 버린다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;추상은 항상 구체적인 실제에서 시작해야한다.(feat. 피카소)&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉, 위에 이야기를 토대로 나온 것이 추상화 레벨이다. 즉, 추상화라 하는 것은 내가 생각했을 때 추상적인 것이 몇 %이고 구체적인것이 몇 %이냐라는 것이다. 쉽게 비유하면 이런것이다. 친구와 이야기를 나눌때 진지함 30%이고 농담 70% 주제야!라고 한다. (개인적인 이야기)&lt;/p&gt;
+&lt;p&gt;아무튼 추상화는 중요한것 같다. 하지만 막상 너무 어렵게 느껴진다. 하지만 오히려 인간은 추상화 능력이 매우 뛰어난 존재이다. 예시를 보자.&lt;/p&gt;
+&lt;p&gt;친구와 아래와 같이 이야기를 했다 해보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🗒️ 예시
+Q. 주말에 뭐했어?
+A. 나는 하나의 큰 공간에서 나의 신경을 이용해 나의 걷는 수단으로 하나의 큰 구체를 차는 행위를 했어!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이렇게 했을 때 친구의 반응은 아래와 같을 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 568px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 108.59375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFSUlEQVQ4ywE+BcH6ALWrq+LY0ebb0d/SyOHWzeHXzt/UzNzPyNvNxt7RypaMhkdDOTo3LY2GfcrBueHUzdjLw9fJwdXHvODTywDc13nf09Dk2dDe0sre08ve0svd0srbz8fc0MhpZFwICQMJCgETFA0cGRIqJyKupqHs4tvh1M7YysLazMYA8fMa6eKO3tPW3tPI3tPL3dLK29DI5djQiH94BwgAERQNEhUOFBEMLCQdFxUNMC4pyr+63M7I1Me/2czFAMG4jePatd3SztnOw+DVzd7TzNzSytfLxDc1LgcKAxYYEUUxJXtSRJdtVYdiTB8SC3BpZOHSydLCudzQxwC6s63c087Z0Mjb0MjRxbvLv7bczsWxpp8YFhAJDQUiHBSga03ZnXzep4noroqEX0Q2MSrVx73SwrnbzcUAvLSpvLSrY11WcGpkVk9IT0hAZFhTSkA5Dg0FCAsENiMXt31d2qSF26mQ4KmL1Zp2TToso5mRu6yjx7iwALevpaGakCQjHRUXEywuLS0vLiAkJSkiICUXERkRC1oxIZZeRp9qU76Fa5llT6xzV3FVQzQxMEM/PD07OACzqZ+JgnYgIBogIR4hIyI4ODRnYFdMQDQ1HRNBJRmLVT51SziOXETDh2mgblqreF7Or5dXVVAhISE9PDkAqZ+TcGleGRgTHh4ZHyAdTE5LamhiqKOdmI+JYTwssm5S15l8xYZq0ZNz2Z2B356Am4BtMDAsJSQjT0xGAJ6Uh2BYTxYVER0dGB8gHERGQ1RVUYKDgYGDgVhJPo1QOrVzWZtdRa1vV7ZxWLN3XDw0LBESEignJykoJgCaj4JWTUQUEw8dHRgfIBxISUZgX1tUVE5GSEBQUkl9UTygYkWGRzqVTEmtZE/Dj3pnW1kLDg04NzRQT0sAl4yATEQ8EhINGhsVIB8cTUtGWFhSV1dQWFRNb2Vfh1lGj1U6oF9Lt29dvn1dxpyQwKWlKyclHB4bMTIvAJOJfUY/NxAQDBoaFR0eG0FAPWZgW5J+e7CQi7SJhZtnXXA9KX1KM6ZtUreAZ8memdu1s8ipppSAfT85OACZjoM8OTAQEAsYGRQiIB2Hc3DFnpfNoZvOqqa8kI6oc3GOW0yDTTWhaFLEmJHPrK3Ws7Hcu7vhwL/VtrQAkIV5My8mEREMGBgUkXh22K2lyZ+UyKGa1bm5zaqqsX99sX13o2NLu4d81LKy1LOw07Gw1be6wJmZyqKgAIp/cjEtIwACAFRGRNOspsqdlM2knNWxr9/Fxdm+vb2QjL6Nh8KOgtGvq9m5uNWxrtW0sdKzsrqNjsafnAB8cHI2NDQxMi+WgX6/mpe6mJLJr6zTvr3fy8rbvLzJlZa6fnzVqKfcuLrZr7DSq6nRr6zHo6PBlJXNqKUAop5QiY1v3N7l1tnZr6qvuLm96Onq2tvd17q76rm98Nnc2KOm6Jaf8cvP7cLI1rS1yKKfxJ6dyaOku46PANHXBYGIaOvr8uLj4bG0uKqusrW2uaetsNSboe6rteuvtuaIk+qstu3P1O/U1tSwssSamcmko8ajo7SEiQCxsjR0eoi5vsCyt7qWk5uTl6CUkpqYn6TZoKftnqXnoKjjgY3tpa7xxs3wvMLTpKbEm5vOrq/Hpam4iY8Azc2pSklIc1lbl3l6uZ6di2pukGxyt6Cj2ri63p6l4quv4Kqw4KOp3Jqh1Y6UzJyfwpqbzrKzyqSsuY2TAExMSDIrKaV7d7OHg7qLiq2AgZBcXs2mpta9vtK0uN3Aw93AxN3Bxdi1uc+hpsaancSgodO6u8ylrbeJkHQmt7qbysuJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;참고사진&quot;
+        title=&quot;참고사진&quot;
+        src=&quot;/static/1f242e326b5382cd76179386c201bbb4/10e91/reference01.png&quot;
+        srcset=&quot;/static/1f242e326b5382cd76179386c201bbb4/6f3f2/reference01.png 256w,
+/static/1f242e326b5382cd76179386c201bbb4/01e7c/reference01.png 512w,
+/static/1f242e326b5382cd76179386c201bbb4/10e91/reference01.png 568w&quot;
+        sizes=&quot;(max-width: 568px) 100vw, 568px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;하지만 우리는 유추를 어느정도 해볼 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🗒️ 예시
+Q. 주말에 뭐했어?
+A. 축구했어!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;첫번째 예시는 구체이고 바로 위의 예시가 추상화 과정이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;추상화: 정보 함축, 제거
+구체화: 유추, 정보재현 이해&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이것은 컴퓨터 과학에서도 사용된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🙋🏻 컴퓨터는 0과 1밖에 모르는데 어떻게 &lt;strong&gt;고수준&lt;/strong&gt;의 작업을 할까?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;먼저 정답을 이야기하면 바로 추상화과정때문이다. 그럼 자세히 들어가보자. 1bit가 무엇일까? 0과 1을 의미한다. 이것은 정보의 최소단위이고 이것은 결국 전구의 켜짐과 꺼짐을 나타내는데 이것을 존재성이라 한다. 1byte는 무엇일까? 용량의 최소단위이며 8bit를 묶어서 1byte라 한다. 또한 프로그래밍 언어에서 자료형을 이야기할때 몇byte를 묶어서 하나의 자료형을 나타낸다. 여기서 데이터(bit) 덩어리를 짤라서 묶고 어떻게 읽을것인가이다. 즉, 이것이 추상화이다.&lt;/p&gt;
+&lt;p&gt;또한 AND나 OR같은 논리 연산식도 데이터와 데이터가 만나 새로운 데이터를 만드는 방법을 의미한다.&lt;/p&gt;
+&lt;p&gt;즉, 종합해보면 이전에 프로그램을 데이터와 코드로 나타냈는데 위의 예시를 통해 각각 추상화가 가능하다는 것을 알 수 있다.&lt;/p&gt;
+&lt;p&gt;그러면 처음 질문으로 돌아가서 고수준 작업은 무엇일까? 고수준이라는 것은 추상화 레벨이 높다는 것이고 그와 반대로 저수준은 추상화 레벨이 낮다는 것이다. 대표적인 예시로 프로그래밍 언어와 기계어, 하드웨어와 운영체제와 어플리케이션, OSI7 Layer를 예로 보면 확 알 것이다.&lt;/p&gt;
+&lt;p&gt;그런데 우리는 읽기 좋은 코드를 이야기 하고 있는데 왜 추상화 과정이 필요할까? 적절한 추상화는 복잡한 데이터와 복잡한 로직을 단순화하여 이해하기 쉽도록 돕는다. 즉, 읽기 쉽다! 예시를 통해 보자.&lt;/p&gt;
+&lt;p&gt;성빈나라에 축구라는 것을 뻥뻥이라고 해보자. 그리고 친구한테 뻥뻥이했다라고 말하면 친구는 못알아 들을 것이다.&lt;/p&gt;
+&lt;p&gt;이렇게 못알아 듣는 이유 즉, 추상으로부터 구체를 유추하지 못한 이유는 추상화 과정에서 중요정보를 부각시키지 못했고 상대적으로 덜 중요한 정보를 제거했기 때문이다. 또한 해석자가 동일하게 공유하는 문맥이 아니기 때문이다. 이 말은 중요한 정보는 기준이 각각 다르고 즉, 도메인 별로 추상화 기준이 다르다는것을 알 수 있다. 그래서 다른 실무진들이 도메인 지식이 중요하다는 것도 이와 같기 때문이라 생각이 든다.&lt;/p&gt;
+&lt;p&gt;잘못된 추상화는 side-effect를 유발하며 이는 매우 critical하다. 적절한 추상화는 해당 도메인의 문맥 안에서 정말 중요한 핵심개념만 남겨서 표현한다. 적절한 추상화의 대표적인 행위가 바로 &lt;strong&gt;이름짓기&lt;/strong&gt;인데 한번 이름짓기에 대해 살펴보자.&lt;/p&gt;
+&lt;h2&gt;이름 짓기&lt;/h2&gt;
+&lt;p&gt;개발자들이 업무를 하면서 무엇이 가장 힘드냐고 물어보면 10의 9은 &quot;이름짓기&quot;가 힘들다고 말한다. 나 또한 실무에서 변수명같은것을 짓는데만 30분을 소비한 경험이 있곤 하다.&lt;/p&gt;
+&lt;p&gt;그런데 진짜로 이름 잘 짓는게 중요할까? 나는 중요하다고 본다. 중요하지 않은 일을 이렇게 시간투자하면서 많은 개발자들이 힘들게 시간을 투자하고 있지 않을 것이다.&lt;/p&gt;
+&lt;p&gt;이름 짓는다는 행위는 &lt;strong&gt;추상적인 사고&lt;/strong&gt;를 기반으로 한다.추상적인 사고는 첫째, 표현하고자 하는 구체에서 정말 중요한 핵심개념만을 추출하여 잘 드러내는 표현이며, 우리 도메인의 문맥안에서 이해되는 용어이다. 그럼 이름 짓는 주의 점들을 살펴보겠다.&lt;/p&gt;
+&lt;h3&gt;단수, 복수 구분&lt;/h3&gt;
+&lt;p&gt;끝에 -(e)를 붙여서 어떤 데이터(변수, 클래스)가 단수인지 복수인지 나타내는 것만으로도 읽는이에게 중요한 정보를 전달 할 수 있다.&lt;/p&gt;
+&lt;h3&gt;이름 줄이지 않기&lt;/h3&gt;
+&lt;p&gt;줄임말이라는 것은 가독성을 제물로 바쳐 효율성을 얻는 것으로 대부분 잃는 것에 비해 얻는 것이 적다. 즉, 자재하는 것이 좋으나 관용어처럼 많이 사람들이 사용하는 줄임말이 존재한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;column → col, latitude → lat, longitude → lon, count -&gt; cnt&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 예시에서 count를 줄이는 것은 우빈님은 비추하신다고 하셨다. 왜냐하면 겨우 5글자에서 3자로 줄이고 cnt만 봤을때 count라고 연상이 안된다고 하셨는데 그 이야기를 들어보니 나도 뭔가 와 닿지 않았다. 이전까지 실무에서도 귀찮을때 이렇게 줄이곤 했는데 조금 반성하게 되는 계기가 된 것 같았다.&lt;/p&gt;
+&lt;p&gt;또한 자주 사용하는 줄임말이 이해할 수 있는 것은 사실 문맥을 보고 알 수 있다. 예를 들어 익명 클래스에 저런 관용어가 있다고 해보자. 처음 보는 신입 개발자는 알 수 없을 것이다.&lt;/p&gt;
+&lt;h3&gt;은어, 방언 사용 X&lt;/h3&gt;
+&lt;p&gt;농담에서 파생된 용어, 일부 팀원, 현재 우리팀만 아는 은어 금지해야한다. 만약 다른 개발자가 해당 코드를 보면 이해하기 힘들기 때문이다. 또한 되도록 도메인 용어를 사용하자! 우리도 실무에서 도메인 용어 사전을 엑셀로 만들어서 사용하곤 한다. 이러닝 도메인을 가진 우리의 예로 보면 스코라는 단위를 표현할때 sco라는 표현 혹은 sc를 많이 사용한다. 물론 이렇게 정의되었더라도 하나로 정하면 그 프로젝트에서는 그것으로 밀고 사용해야한다.&lt;/p&gt;
+&lt;h3&gt;좋은 코드 보고 습득하기&lt;/h3&gt;
+&lt;p&gt;비슷한 상황에서 자주 사용하는 용어, 개념을 습득하자. github에 open되어 있는 라이브러리나 프레임워크의 코드를 보면서 용어들을 정리해 볼 필요가 있다고 느껴졌다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ex. pool, candidate, threshold등 (일상 용어 != 코드용어)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그럼 이제 코드를 통해 우빈님이 제공해준 코드를 고쳐보자.&lt;/p&gt;
+&lt;p&gt;자세한 것은 강의를 통해 확인해보고 간략히만 설명해보겠다.&lt;/p&gt;
+&lt;p&gt;아래와 같이 의미가 없는 변수들을 변경해보았다. 대표적으로 for문의 i와 j의 변수를 아래와 같이 변경해보았다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk15&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;; row &amp;lt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;; row++) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;; col &amp;lt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;; col++) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    board[row][col] = &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;□&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;이런식으로 나머지도 수정을 해보았다. 추가적으로 나는 주석도 달아보았다. 주석이 없으니 우빈님과 코드를 읽으면서 뭔가 난해한 부분도 많기 때문에 주요 로직에 주석을 다는것도 Readable code이지 않을까?&lt;/p&gt;
+&lt;h2&gt;메서드와 추상화&lt;/h2&gt;
+&lt;p&gt;잘 쓰여진 코드의 메서드는 반드시 1개의 주제를 가져야 한다. 메서드의 선언부로 우리는 구체적인 내용을 추상화 할 수 있다. 만약 그렇게 하기 힘들다면 그 메서드는 2가지 이상의 일을 하고 있다고 볼 수 있다. 역할분리가 힘든 메서드라고 나는 생각한다.&lt;/p&gt;
+&lt;p&gt;그래서 메서드를 작성할때 생략할 정보와 의미를 부여하고 드러낼 정보를 구분하는것이 중요하다. 즉, &lt;strong&gt;추상화&lt;/strong&gt;가 중요하다. 만약 아까처럼 메서드 내용을 보고 이름을 유추하기 힘들다면 그 메서드 안에 의미를 담을 수 있는 더 작은 단위로 쪼개고 그 쪼갠것을 보고 하나의 유추할 수 있는 포괄적 의미의 메서드 이름을 적어보는 것이 좋을 것 같다.&lt;/p&gt;
+&lt;h2&gt;메서드 선언부&lt;/h2&gt;
+&lt;p&gt;메서드 선언부는 아래와 같이 구성되어 있다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;반환타입 메서드명(파라미터) {}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 용어정리&lt;/p&gt;
+&lt;p&gt;메서드 명과 파라미터를 통틀어서 메서드 시그니처라는 용어를 사용한다.
+메서드 시그니처를 통해서 자바에서 오버로딩이 가능하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;메서드는 추상화된 구체를 유추할 수 있는 적절한 의미가 담긴 이름이어야 한다. 또한 메서드의 파라미터라는 정보를 통하여 더 풍부한 의미를 전달할 수 있다. 보통 메서드 명을 동사로 시작하는 경우가 있지만 &lt;strong&gt;반드시 일 필요는 없다.&lt;/strong&gt; 단순 데이터 반환 같은 경우는 명사로 하여도 무방하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;파라미터와 같이 사용할때 메서드 명은 보통 전치사로 끝나는게 좋다고 하셨다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;selectedColIndex&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;convertColFrom&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(cellInputCol);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;selectedRowIndex&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;convertRowFrom&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(cellInputRow);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위와 같이 표기하면 확실히 읽을때 명확해짐을 볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;파라미터의 타입, 개수, 순서를 통하여 의미전달이 또한 가능하다. 아래의 코드를 살펴보자.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;3&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createLecture&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; title, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; localDateToString) {}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createLecture&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; lectureTitle, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; openDate) {}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위의 두 메서드중에 2번째것이 명확하다는 것을 알 수 있을것이다. 첫번째 메서드는 메서드를 사용할때 두번째 파라미터에 무엇을 넣어야 하는지 불분명하기 때문이다.&lt;/p&gt;
+&lt;p&gt;여기서 파라미터는 외부와 소통하는 창이라고 볼 수 있다. 사용하는 입장에서 어떤 정보가 필요한지 알려주는 기능을 한다.&lt;/p&gt;
+&lt;p&gt;또한 메서드 시그니처에 납득이 가는 적절한 타입의 반환값을 돌려줘야 한다. 만약 납득이 안 간다면 문제가 있는 메서드일 확률이 높다. 또한 &lt;code&gt;void&lt;/code&gt; 대신 충분히 반환할만한 가치가 있는 값이 있는지 고민을 해보는게 좋을 것이다.&lt;/p&gt;
+&lt;p&gt;그리고 추가적으로 메서드를 리팩토링 과정을 거쳐 추상화함에 있어서 너무 긴 코드들을 메서드로 묶는다는 생각보단, 추상화가 필요한 부분을 리팩토링한다고 생각하는것이 좋다. 단 1줄이더라도 추상화할만한 가치가 있다면 하는것이 좋다.&lt;/p&gt;
+&lt;p&gt;그래서 강의를 통해 예제 프로젝트를 기능단위로 묶어서 메서드로 분리함으로 조금 더 깔끔한 코드로 리팩토링 실습을 해보았다.&lt;/p&gt;
+&lt;h2&gt;추상화 레벨&lt;/h2&gt;
+&lt;p&gt;우리는 이전까지 엄청 긴 코드들(구체)에서 추상화 과정을 거쳐서 메서드를 추출해보았다. 이렇게 메서드를 추출하는 그 순간 읽는 자 기준으로 외부세계와 내부세계의 경계가 생긴다. 당연하게 생각해보면 쭉 코드를 읽다가 갑자기 메서드를 보면 살짝 멈칫할 것이다. 여기서 외부세계란 추상화 레벨이 높은 세계이고 내부세계란 추상화 레벨이 낮은 구체라고 생각하면 좋을 것이다. 그래서 내부세계에서는 구체적인 내용이 들어가 있고 외부세계에서는 메서드의 필요한 파라미터를 내부세계로 넘겨서 메서드명과 반환타입을 전달하게 될 것이다.&lt;/p&gt;
+&lt;p&gt;또한 &lt;strong&gt;하나의 세계 안 에서 추상화 레벨은 동등해야 한다.&lt;/strong&gt; 만약 그렇지 못한다면 레벨을 맞추게 추상화 과정을 거쳐야 한다.&lt;/p&gt;
+&lt;p&gt;그래서 실습을 통하여 같은 추상화 레벨이 되도록 메서드들을 분리해보았는데 나는 여기서 몇몇 이해가 안되는 부분이 있었다. 이 부분은 질문을 해봐야 겠다.&lt;/p&gt;
+&lt;h2&gt;매직 넘버, 매직 스트링&lt;/h2&gt;
+&lt;p&gt;매직 넘버, 매직 스트링을 알기 전에 상수부터 알아보자. 상수로 추출한다는 것은 하나의 이름을 부여한다는 것이고 즉, 추상화 한다는 것이다.&lt;/p&gt;
+&lt;p&gt;매직 넘버와 매직 스트링은 의미를 갖고 있으나 상수로 추출되지 않은 숫자나 문자열을 의미하며 이름을 부여함으로 읽기 좋은 코드에 다가간다.&lt;/p&gt;
+&lt;p&gt;실습을 통해 매직 넘버와 매직 스트링을 상수로 추출해보았다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 추가 참조&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://johnlock.tistory.com/405&quot;&gt;https://johnlock.tistory.com/405&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://maily.so/trendaword/posts/52a9a219&quot;&gt;https://maily.so/trendaword/posts/52a9a219&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
@@ -187,6 +325,22 @@
     opacity: 0.7;
   }
   
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk7 { color: #B5CEA8; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[내가 개발자 커리어를 시작한 이유]]></title><description><![CDATA[서사 안녕하세요, 개발자 양성빈(Robert)입니다. 어느덧 202…]]></description><link>https://sungbin.kr/%EB%82%B4%EA%B0%80-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%BB%A4%EB%A6%AC%EC%96%B4%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%9C-%EC%9D%B4%EC%9C%A0/</link><guid isPermaLink="false">https://sungbin.kr/내가-개발자-커리어를-시작한-이유/</guid><pubDate>Wed, 14 Aug 2024 16:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
