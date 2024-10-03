@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Oct 2024 06:23:42 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day4 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 미션2 1. 아래 코드와 설명을 보고, [섹션…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day4-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day4-미션/</guid><pubDate>Wed, 02 Oct 2024 05:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Oct 2024 06:34:50 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day4 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 미션2 1. 아래 코드와 설명을 보고, [섹션…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day4-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day4-미션/</guid><pubDate>Wed, 02 Oct 2024 05:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -931,6 +931,162 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day2 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 예시…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day2-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day2-미션/</guid><pubDate>Sun, 29 Sep 2024 05:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
+        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
+/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
+/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
+/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;예시 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;추상: 동호회 사람들과 모여서 축구를 한다.&lt;/li&gt;
+&lt;li&gt;구체
+&lt;ul&gt;
+&lt;li&gt;같은 좋아하는 것을 목표로 모인 연합의 사람들과 모인다.&lt;/li&gt;
+&lt;li&gt;경기를 하기 위해 랜덤으로 팀을 나눈다.&lt;/li&gt;
+&lt;li&gt;서로 다른 지점에 하나의 구체를 넣기 위해 사람의 신경계와 근육을 이용하여 승부를 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;예시 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;추상: 크롬 웹 브라우저에 &lt;a href=&quot;http://www.google.com%EC%9D%84&quot;&gt;www.google.com을&lt;/a&gt; 입력하여 구글 홈페이지를 접속한다.&lt;/li&gt;
+&lt;li&gt;구체:
+&lt;ul&gt;
+&lt;li&gt;사용자가 크롬에 &lt;a href=&quot;http://www.google.com%EC%9D%84&quot;&gt;www.google.com을&lt;/a&gt; 입력하면, 브라우저는 먼저 DNS 캐시, hosts 파일 등을 확인한 후, 도메인의 IP 주소를 찾기 위해 DNS 서버에 요청을 보낸다.&lt;/li&gt;
+&lt;li&gt;IP 주소를 얻으면, 브라우저는 TCP 3-way 핸드셰이크로 서버와 연결을 설정하고, HTTPS의 경우 TLS 핸드셰이크를 통해 보안 통신을 설정한다.&lt;/li&gt;
+&lt;li&gt;이후 HTTP 요청을 서버로 전송하고, 서버는 HTML 데이터를 응답하여 브라우저가 이를 렌더링해 화면에 표시&lt;/li&gt;
+&lt;li&gt;로컬 네트워크에서는 ARP를 사용해 IP 주소를 MAC 주소로 변환하여 데이터가 전송&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;예시 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;추상: 어느 웹 사이트에 로그인을 진행한다.&lt;/li&gt;
+&lt;li&gt;구체
+&lt;ul&gt;
+&lt;li&gt;로그인 정보 입력:
+사용자가 웹사이트의 로그인 페이지에 사용자 이름과 비밀번호를 입력하고 &quot;로그인&quot; 버튼을 누릅니다.&lt;/li&gt;
+&lt;li&gt;HTTPS 요청 전송:
+브라우저는 이 로그인 정보를 HTTPS 프로토콜을 사용해 암호화하여 서버로 전송합니다. HTTPS는 TLS를 통해 데이터를 보호하여 중간에서 탈취되지 않도록 보장합니다.&lt;/li&gt;
+&lt;li&gt;서버에서 인증 처리:
+서버는 받은 로그인 정보를 데이터베이스의 사용자 정보와 비교합니다. 입력된 비밀번호는 보통 해시(Hash) 값으로 변환되어 비교되며, 만약 일치한다면 인증이 성공합니다.&lt;/li&gt;
+&lt;li&gt;세션 또는 토큰 생성:
+인증이 성공하면 서버는 사용자에게 세션 ID나 JWT(JSON Web Token)와 같은 토큰을 발급합니다. 이 세션이나 토큰은 사용자가 인증된 상태임을 나타내며, 클라이언트에 저장됩니다(세션 쿠키 또는 로컬 스토리지).&lt;/li&gt;
+&lt;li&gt;인증 상태 유지:
+이후 사용자가 웹사이트의 다른 페이지를 요청할 때, 브라우저는 이 세션 ID나 토큰을 함께 전송하여 사용자가 인증된 상태로 남아 있을 수 있도록 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 출사표]]></title><description><![CDATA[출사표 인프런 워밍업 클럽 2기가 오픈되었다. 0기때 참가하고 1기때 서포터로 활동한 나는…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-출사표/</guid><pubDate>Sat, 28 Sep 2024 22:36:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
@@ -1329,47 +1485,9 @@ A. 축구했어!&lt;/p&gt;
 &lt;p&gt;매직 넘버와 매직 스트링은 의미를 갖고 있으나 상수로 추출되지 않은 숫자나 문자열을 의미하며 이름을 부여함으로 읽기 좋은 코드에 다가간다.&lt;/p&gt;
 &lt;p&gt;실습을 통해 매직 넘버와 매직 스트링을 상수로 추출해보았다.&lt;/p&gt;
 &lt;h2&gt;미션1&lt;/h2&gt;
-&lt;h3&gt;예시 1&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;추상: 동호회 사람들과 모여서 축구를 한다.&lt;/li&gt;
-&lt;li&gt;구체
-&lt;ul&gt;
-&lt;li&gt;같은 좋아하는 것을 목표로 모인 연합의 사람들과 모인다.&lt;/li&gt;
-&lt;li&gt;경기를 하기 위해 랜덤으로 팀을 나눈다.&lt;/li&gt;
-&lt;li&gt;서로 다른 지점에 하나의 구체를 넣기 위해 사람의 신경계와 근육을 이용하여 승부를 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;예시 2&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;추상: 크롬 웹 브라우저에 &lt;a href=&quot;http://www.google.com%EC%9D%84&quot;&gt;www.google.com을&lt;/a&gt; 입력하여 구글 홈페이지를 접속한다.&lt;/li&gt;
-&lt;li&gt;구체:
-&lt;ul&gt;
-&lt;li&gt;사용자가 크롬에 &lt;a href=&quot;http://www.google.com%EC%9D%84&quot;&gt;www.google.com을&lt;/a&gt; 입력하면, 브라우저는 먼저 DNS 캐시, hosts 파일 등을 확인한 후, 도메인의 IP 주소를 찾기 위해 DNS 서버에 요청을 보낸다.&lt;/li&gt;
-&lt;li&gt;IP 주소를 얻으면, 브라우저는 TCP 3-way 핸드셰이크로 서버와 연결을 설정하고, HTTPS의 경우 TLS 핸드셰이크를 통해 보안 통신을 설정한다.&lt;/li&gt;
-&lt;li&gt;이후 HTTP 요청을 서버로 전송하고, 서버는 HTML 데이터를 응답하여 브라우저가 이를 렌더링해 화면에 표시&lt;/li&gt;
-&lt;li&gt;로컬 네트워크에서는 ARP를 사용해 IP 주소를 MAC 주소로 변환하여 데이터가 전송&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;예시 3&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;추상: 어느 웹 사이트에 로그인을 진행한다.&lt;/li&gt;
-&lt;li&gt;구체
-&lt;ul&gt;
-&lt;li&gt;로그인 정보 입력:
-사용자가 웹사이트의 로그인 페이지에 사용자 이름과 비밀번호를 입력하고 &quot;로그인&quot; 버튼을 누릅니다.&lt;/li&gt;
-&lt;li&gt;HTTPS 요청 전송:
-브라우저는 이 로그인 정보를 HTTPS 프로토콜을 사용해 암호화하여 서버로 전송합니다. HTTPS는 TLS를 통해 데이터를 보호하여 중간에서 탈취되지 않도록 보장합니다.&lt;/li&gt;
-&lt;li&gt;서버에서 인증 처리:
-서버는 받은 로그인 정보를 데이터베이스의 사용자 정보와 비교합니다. 입력된 비밀번호는 보통 해시(Hash) 값으로 변환되어 비교되며, 만약 일치한다면 인증이 성공합니다.&lt;/li&gt;
-&lt;li&gt;세션 또는 토큰 생성:
-인증이 성공하면 서버는 사용자에게 세션 ID나 JWT(JSON Web Token)와 같은 토큰을 발급합니다. 이 세션이나 토큰은 사용자가 인증된 상태임을 나타내며, 클라이언트에 저장됩니다(세션 쿠키 또는 로컬 스토리지).&lt;/li&gt;
-&lt;li&gt;인증 상태 유지:
-이후 사용자가 웹사이트의 다른 페이지를 요청할 때, 브라우저는 이 세션 ID나 토큰을 함께 전송하여 사용자가 인증된 상태로 남아 있을 수 있도록 합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;해당 미션을 진행하면서 구체와 추상에 대한 개념을 확실히 이해할 수 있었다. 조금은 어색했지만 예시들을 몇개 해보니 당연한 것들이었다.
+제가 작성한 미션 링크는 아래와 같습니다.&lt;/p&gt;
+&lt;p&gt;[미션1 링크]&lt;/p&gt;
 &lt;h2&gt;뇌 메모리 적게 쓰기&lt;/h2&gt;
 &lt;p&gt;정리하는 시스템에서 중요한 과제는 최소한의 인지적 노력으로 최대의 정보를 제공해야 한다고 뇌 과학에서 이야기를 한다. 지금 내가 생각해보면 그렇다. 인간의 뇌가 컴퓨터 메모리라고 하였을때 우리의 뇌는 싱글 스레드 기반으로 처리할 것이다. 그리고 다른 사물을 보았을때 다른것을 생각할때 &lt;strong&gt;컨텍스트 스위칭&lt;/strong&gt;이라는 작업을 거쳐야 한다.&lt;/p&gt;
 &lt;p&gt;우리의 뇌는 다른 것을 생각할때 &lt;strong&gt;범주화&lt;/strong&gt;라는 작업을 거쳐야 한다. 범주화란 특정 대상의 특징들을 분류하는 작업을 말한다. 즉, 범주화를 통해 우리의 뇌는 최소한의 기억 데이터로 최대 효과를 볼 수 있다.&lt;/p&gt;
