@@ -1,4 +1,203 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Oct 2024 07:21:39 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day4 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 미션2 1. 아래 코드와 설명을 보고, [섹션…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day4-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day4-미션/</guid><pubDate>Wed, 02 Oct 2024 05:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Oct 2024 17:55:51 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 2주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 어느덧 인프런 워밍업 스터디 클럽을 시작한지도 2주째가 시작된다. 그리고 이번주…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-2%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-2주차-발자국/</guid><pubDate>Fri, 04 Oct 2024 02:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
+        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
+/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
+/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
+/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;어느덧 인프런 워밍업 스터디 클럽을 시작한지도 2주째가 시작된다. 그리고 이번주 1주에 대한 회고를 시작해보려고 한다.&lt;/p&gt;
+&lt;p&gt;이번주도 여러가지를 배우고 많은 경험이 된 한 주였다. 그럼 회고를 시작하겠다. 완주 및 우수러너를 위해 오늘도 달려본다.&lt;/p&gt;
+&lt;h2&gt;주석의 양면성&lt;/h2&gt;
+&lt;p&gt;클린코드 관점에서 주석은 죄악이냐 아니냐 논쟁이 많다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;주석이 많다는 것은 그만큼 비즈니스 요구사항을 코드에 잘못 녹였다는 이야기&lt;/li&gt;
+&lt;li&gt;코드를 설명하는 주석을 쓰면 코드가 아니라 주석에 의존한다. 주석에 의존하여 코드를 작성하면 적절하지 않은 추상화 레벨을 갖게 되어 낮은 품질의 코드가 만들어 진다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🙋🏻 아니 그러면 주석 언제 써요?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;우리가 리팩토링 할때 정말 큰 난관 중 하나가 히스토리를 전혀 알 수 없는 코드다.&lt;/li&gt;
+&lt;li&gt;후대에 전해야 할 &quot;의사결정의 히스토리&quot;를 도저히 코드로 표현할 수 없을 때 주석으로 상세히 설명한다.&lt;/li&gt;
+&lt;li&gt;주석을 작성할 때 자주 변하는 정보는 최대한 지양해서 작성한다.&lt;/li&gt;
+&lt;li&gt;만약 관련 정책이 변하거나 코드가 변경되었다면 주석도 잊지 않고 함께 업데이트 해야한다. 주석이 없는 코드보다 부정확한 주석이 달린 코드가 더 치명적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;우리가 가진 모든 표현방법을 총동원해 코드에 의도를 녹여내고 그럼에도 불구하고 전달해야할 정보가 남았을때 사용하는게 주석이다.&lt;/p&gt;
+&lt;p&gt;이번 예제 실습은 주석이 달린 gameStatus를 enum으로 변경하고 관련 비즈니스 로직을 MineSweeper가 아니라 GameBoard에 있는게 어울려 그곳으로 변경하였다.&lt;/p&gt;
+&lt;h2&gt;변수와 메서드의 나열 순서&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;변수는 사용하는 순서대로 나열한다.
+&lt;ul&gt;
+&lt;li&gt;인지적 경제성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;메서드의 순서도 고려해보아야 하는데 객체의 입장에서 생각하자.&lt;/li&gt;
+&lt;li&gt;객체는 협력을 위한 존재이다. 외부세계에 내가 어떤 기능을 제공할 수 있는지를 드러낸다. (정해진 답은 아니지만 우빈님 추천) 공개 메서드들을 상단에 배치하고 나머지를 private 메서드들로 나열한다.&lt;/li&gt;
+&lt;li&gt;공개 메서드들끼리도 기준을 가지고 배치하는 것이 좋다.
+&lt;ul&gt;
+&lt;li&gt;객체지향을 하다보면 중요한 객체의 경우 메서드가 수십개까지도 늘어날 수 있는데 중요도 순, 종류별로 그룹화하여 배치하면 실수로 비슷한 조직의 메서드를 중복으로 만드는 것을 일관성 있는 로직을 유지할 수 있다.&lt;/li&gt;
+&lt;li&gt;상태변경을 최우선, 그 이후는 판별, 조회로직이 있는 메서드들 순으로 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;비공개 메서드는 공개 메서드에서 언급한 순서대로 배치한다.&lt;/li&gt;
+&lt;li&gt;공통으로 사용하는 메서드라면 (가장 하단과 같이) 적당한 곳에 배치한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이를 통해 우리의 예시 코드도 이와 같이 리팩토링 하는 작업을 해보았다.&lt;/p&gt;
+&lt;h2&gt;패키지 나누기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;패키지는 문맥으로써의 정보를 제공할 수 있다.&lt;/li&gt;
+&lt;li&gt;패키지를 쪼개지 않으면 관리가 어려줘 진다.&lt;/li&gt;
+&lt;li&gt;패키지를 너무 잘게 쪼개도 마찬가지로 관리가 어려워진다.&lt;/li&gt;
+&lt;li&gt;대규모 패키지 변경은 팀원과의 합의를 이룬 시점에 하자.
+&lt;ul&gt;
+&lt;li&gt;현재 기준으로 본인만 변경하고 있는 부분이라면 괜찮으나 여러 사람이 변경중인 부분이나 공통으로 사용하는 클래스들의 패키지를 한번에 변경하면 추후 브랜츠 충돌이 날 수 있다.&lt;/li&gt;
+&lt;li&gt;따라서 처음 만들때부터 잘 고민해서 패키지를 나누는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;기능 유지보수하기 (1) - 버그 잡기&lt;/h2&gt;
+&lt;p&gt;해당 시간에는 깃발이 전부 꼽았을때 승리조건으로 가는 오류를 고쳐보았다. 이 수정을 통해 우리가 객체지향적으로 작성하여 수정될 곳이 적었지만 만약 이전의 코드였다면 여러군데 고쳐야 할 우려가 있었을 것이다.&lt;/p&gt;
+&lt;h2&gt;기능 유지보수하기 (2) - 알고리즘 교체하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DFS(깊이 우선 탐색) -&gt; 재귀, Stack&lt;/li&gt;
+&lt;li&gt;BFS(너비 우선 탐색) -&gt; Queue&lt;/li&gt;
+&lt;li&gt;재귀를 이용한 DFS도 결국 stack이다.
+&lt;ul&gt;
+&lt;li&gt;스레드마다 생기는 스택영역에는 함수를 호출할 때마다 frame이 쌓인다.&lt;/li&gt;
+&lt;li&gt;frame은 지역변수, 연산을 위한 정보등을 담고 있다.&lt;/li&gt;
+&lt;li&gt;stack영역은 결국 크기가 제한되어 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;우리가 필요한건 각 Cell의 모든 메서드 정보가 아니다. 각 Cell의 CellPosition만 있다면 원하는 작업을 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그래서 해당 부분을 통해 우리는 재귀 로직을 stack형태로 변경을 해보았다.&lt;/p&gt;
+&lt;h2&gt;IDE의 도움 받기&lt;/h2&gt;
+&lt;p&gt;읽기 좋은 코드란 결국 가독성이 좋아야 한다. 이것을 위해 IDE의 큰 도움을 받을 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;코드 포맷 정렬: option + cmd + L | Ctrl + Alt + L&lt;/li&gt;
+&lt;li&gt;코드 품질: SonarLint
+&lt;ul&gt;
+&lt;li&gt;lint: 잠재적인 문제가 될 수 있는 오류, 버그, 스타일등을 미리 알려주는 코드품질 체크도구&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;포맷규칙: .editorconfig
+&lt;ul&gt;
+&lt;li&gt;여러사람과의 협업을 염두하면 IDE의 기본 포맷팅에 익숙해지는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;스타일은 혼자 결정하는 것이 아니라 팀 내 합의로 도출되어야 한다.&lt;/li&gt;
+&lt;li&gt;한번 정해지면 절재적인것이 아니라 사용하면서 계속 의견을 듣고 개선/반영하는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 기능들을 이용하여 우리 예제 프로젝트들도 포맷팅 및 리팩토링을 해보았다. ex) Stack -&gt; Deque&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day4 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 미션2 1. 아래 코드와 설명을 보고, [섹션…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day4-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day4-미션/</guid><pubDate>Wed, 02 Oct 2024 05:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
