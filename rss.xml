@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2024 22:03:31 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Sat, 05 Oct 2024 03:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Oct 2024 21:36:37 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Sat, 05 Oct 2024 03:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -882,6 +882,66 @@ A. 축구했어!&lt;/p&gt;
 &lt;p&gt;이번 강의에서는 배울 점이 많았다. 나는 해당 설정 관련 부분들을 config에 빼고 해당 config를 getter로 삼는 provider로 넘겨주는 식으로 하였다. 하지만 I/O통합 부분은 진짜 강좌를 보면서 &quot;아! 이것도 있었지..&quot;라는 생각이 들며 조금은 반성이 되었다. 나머지 일급 컬렉션, display()의 책임 분리, Order객체로 분리하여 비즈니스 로직 이관까지는 그래도 비슷하게 갔던것 같다. 나는 거기서 조금 if문 3개로 나눠진 display를 switch문으로 변경까지 조금 읽기 쉬운 코드로 변경해보았다.&lt;/p&gt;
 &lt;h2&gt;리팩토링 (3) - 관점의 차이로 달라지는 추상화&lt;/h2&gt;
 &lt;p&gt;해당 부분은 나는 DIP 생각 없이 지뢰때 했던것 처럼 초기화 로직과 실행로직을 분리하고 이렇게 생각하니 FileHandler부분도 두개의 메서드를 분리할 수 있지 않을까 싶었고 그렇게 분리를 하였는데 강의에서는 DIP원칙을 적용하여 했었던것이다. 왜 그런지 모르고 그냥 기계처럼 한 것이 조금 반성스럽고 고쳐야할 부분이라 생각이 든다.&lt;/p&gt;
+&lt;h2&gt;능동적 읽기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;복잡하거나 엉망인 코드를 읽고 이해하려 할 때 리팩토링 하면서 읽기
+&lt;ul&gt;
+&lt;li&gt;공백으로 단락 구분하기&lt;/li&gt;
+&lt;li&gt;메서드와 객체로 추상화 해보기&lt;/li&gt;
+&lt;li&gt;주석으로 이해한 내용 표기하며 읽기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;우리에게는 언제든 돌아갈 수 있는 &lt;code&gt;git reset --hard&lt;/code&gt;가 있다.&lt;/li&gt;
+&lt;li&gt;핵심목표는 우리의 도메인 지식을 늘리는 것 그리고 이전 작성자의 의도를 파악하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이전까지 나는 코드를 눈으로 해석하고 리팩토링 하려는 습관들이 있었다. 하지만 이번 강의를 통해 코드를 분리해보고 주석도 달아보면서 리팩토링하면서 읽어가야겠다는 습관으로 고쳐야겠다는 생각이 들었다.&lt;/p&gt;
+&lt;h2&gt;오버 엔지니어링&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;필요한 적정수준보다 더 높은 수준의 엔지니어랑
+&lt;ul&gt;
+&lt;li&gt;ex) 구현체가 하나인 인터페이스
+&lt;ul&gt;
+&lt;li&gt;인터페이스 형태가 아키텍쳐 이해에 도움을 주거나 근시일내에 구현체가 추가될 가능성이 높다면 OK.&lt;/li&gt;
+&lt;li&gt;구현체를 수정할때마다 인터페이스도 수정해야함.&lt;/li&gt;
+&lt;li&gt;코드 탐색에 영향을 줌 / 어플리케이션이 비대해짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ex) 너무 이른 추상화
+&lt;ul&gt;
+&lt;li&gt;정보가 숨겨지기 때문에 복잡도가 높아진다.&lt;/li&gt;
+&lt;li&gt;후대 개발자들이 선대의 의도를 파악하기가 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;지금 이 내용을 학습해보니 이전에 미션3에서 내가 구현한 코드들이 오버엔지니어링이였지 않을까라는 생각을 하면서 반성하게 되었다.&lt;/p&gt;
+&lt;h2&gt;은탄환은 없다&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;클린코드도 은탄환은 아니다.&lt;/li&gt;
+&lt;li&gt;실무: 2가지 사이의 줄다리기
+&lt;ul&gt;
+&lt;li&gt;지속가능한 소프트웨어의 품질 vs 기술부채를 안고 가는 빠른 결과물&lt;/li&gt;
+&lt;li&gt;대부분의 회사는 돈을 벌고 성장해야하고 시장에서 빠르게 살아남는 것이 목표&lt;/li&gt;
+&lt;li&gt;이런 경우에도 클린코드를 추구하지 말라는 것이 아니라 미래시점에 잘 고치도록 할 수 있는 코드센스가 필요하다. 결국은 클린코드의 사고법을 기반으로 결정하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;모든 기술의 방법론은 적정 기술의 범위 내에서 사용
+&lt;ul&gt;
+&lt;li&gt;ex) 당장 급하게 배포나가야 하는데 동료에게 style관련된 리뷰를 주고 고치도록 강요하는 사람&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;도구라는 것은 일단 그것을 한계까지 사용할 줄 아는 사람이 그것을 사용하지 말아야 할때도 아는 법이다.
+&lt;ul&gt;
+&lt;li&gt;적정 수준을 알기 위해 때로는 극단적인 시도도 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이것을 보고 미션때 오버 엔지니어링을 해보는것도 좋은 경험이 되었다고 다시 느끼게 되었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 기술부채란?&lt;/p&gt;
+&lt;p&gt;현 시점에서 더 오래 소요될 수 있는 더 나은 접근방식을 사용하는 대신 쉬운(제한된) 솔루션을 채택함으로써 발생되는 추가적인 재작업의 비용을 반영하는 소프트웨어 개발의 한 관점&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
