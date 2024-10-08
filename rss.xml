@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Oct 2024 21:43:49 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Sat, 05 Oct 2024 03:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2024 23:56:17 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 09 Oct 2024 08:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
+        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
+/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
+/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
+/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;어느덧 벌써 워밍업 클럽이 막바지로 가고 있는 것 같다. 워밍업 클럽을 참여 전의 나보다 많이 성장했는가를 항상 발자국 쓸때 돌이켜 물어보는 것 같다. 과연 성장을 했을끼? 나는 당당히 성장을 하였다고 생각을 한다. 해당 스터디를 통해 나의 생활도 지식도 성장이 되었다 생각하며 해당에 대한 물음은 워밍업 클럽 수료 후에 다시 되물음을 해보겠다.&lt;/p&gt;
+&lt;p&gt;이번 주차에서는 이제 Readable Code 강좌가 완강이 되고 Practical Testing 강좌를 시작하는 주차다. 이번주도 열심히 달려본 내역들을 작성해보겠다.&lt;/p&gt;
+&lt;h2&gt;강의소개&lt;/h2&gt;
+&lt;p&gt;이 강좌는 테스트가 처음이거나 테스트 코드는 들어봤거나 작성하려고 시도를 해본 경험이 있는등 테스트가 궁금한 모든 분들을 위해 나온 강의이다. 나도 해당 테스트를 어떻게 하면 잘 작성할지가 궁금하여 이 강좌를 듣게 되고 해당 워밍업 클럽을 참여하게 된 이유이기도 하다.&lt;/p&gt;
+&lt;p&gt;테스트를 작성하는 역량은 채용시장에서 주니어 개발자에게 기대하는 요소 중 하나다. 채용시 구현과제 등에서 테스트 작성여부, 테스트 코드 구현방식을 확인한다. 또한 소프트웨어의 품질을 보장하는 방법으로 그 중요성을 알고 있는지도 확인을 하기도 한다고 한다.&lt;/p&gt;
+&lt;p&gt;이번 강좌에서는 다음과 같은 목표를 두고 학습을 진행한다고 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 목표&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;테스트 코드가 필요한 이유&lt;/li&gt;
+&lt;li&gt;좋은 테스트 코드란 무엇일까?&lt;/li&gt;
+&lt;li&gt;실제 실무에서 진행하는 방식 그대로 테스트를 작성해가면서 API를 설계하고 개발하는 방법&lt;/li&gt;
+&lt;li&gt;정답은 없지만 오답은 존재한다. 구체적인 이유에 근거한 상세한 테스트 작성 팁&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;벌써부터 많은 기대를 품으며 다음 강의로 바로 가봐야 겠다.&lt;/p&gt;
+&lt;h2&gt;어떻게 학습하면 좋을까?&lt;/h2&gt;
+&lt;p&gt;효과적인 학습을 하기 위해 가장 먼저 선행되어야 하는 것은 바로 &lt;strong&gt;무엇을 모르는지 아는 것&lt;/strong&gt;이다. 무엇을 모르는 지 아는것은 찾아볼 수 있게 된다는 것이다.&lt;/p&gt;
+&lt;p&gt;우리는 학습을 하면서 이 부분은 완벽히 아는 부분, 이 부분은 반만 아는 부분, 이 부분은 처음 들어보는 부분으로 구분된다. 그래서 강좌에서 함계 학습한 키워드와 추가 학습을 위한 키워드를 분리하여 키워드 기반으로 정리를 해주신다고 하니 많은 기대를 가지며 다음 강의부터 본격적으로 달려 볼 예정이다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 1주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 0기때 이후 첫 발자국을 작성해보는 시간이다. 처음 마음 먹었던 초심을 생각하며…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-1%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-1주차-발자국/</guid><pubDate>Sat, 05 Oct 2024 03:05:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
