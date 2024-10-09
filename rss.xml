@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2024 23:56:17 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 09 Oct 2024 08:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 09 Oct 2024 00:41:02 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 09 Oct 2024 08:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -43,6 +43,38 @@
 &lt;h2&gt;어떻게 학습하면 좋을까?&lt;/h2&gt;
 &lt;p&gt;효과적인 학습을 하기 위해 가장 먼저 선행되어야 하는 것은 바로 &lt;strong&gt;무엇을 모르는지 아는 것&lt;/strong&gt;이다. 무엇을 모르는 지 아는것은 찾아볼 수 있게 된다는 것이다.&lt;/p&gt;
 &lt;p&gt;우리는 학습을 하면서 이 부분은 완벽히 아는 부분, 이 부분은 반만 아는 부분, 이 부분은 처음 들어보는 부분으로 구분된다. 그래서 강좌에서 함계 학습한 키워드와 추가 학습을 위한 키워드를 분리하여 키워드 기반으로 정리를 해주신다고 하니 많은 기대를 가지며 다음 강의부터 본격적으로 달려 볼 예정이다.&lt;/p&gt;
+&lt;h2&gt;테스트는 왜 필요할까?&lt;/h2&gt;
+&lt;p&gt;기술 학습에 있어서 &apos;왜?&apos;가 중요하다. 테스트하면 생각나는게 무엇일까? 나는 처음 테스트코드를 볼때 &lt;strong&gt;굳이 해야하나?&lt;/strong&gt; &lt;strong&gt;개발시간만 더 늘릴뿐일텐데라는 생각을 하였다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;그런데 만약 테스트코드가 없이 실제 인간이 수동으로 테스트를 하면 매우 큰 문제들을 야기할 수 있다. 인간은 실수의 동물이기 때문이다. 또한 만약 기능을 개발할때 기존 기능을 건들게 된다면 기존 기능도 다시 테스트를 하는 시간낭비가 발생한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 테스트 작성을 안하면?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;커버할 수 없는 영역 발생&lt;/li&gt;
+&lt;li&gt;경험과 감에 의존&lt;/li&gt;
+&lt;li&gt;늦은 피드백&lt;/li&gt;
+&lt;li&gt;유지보수 어려움&lt;/li&gt;
+&lt;li&gt;소프트웨어에 대한 신뢰가 떨어딘다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;테스트 코드를 작성하지 않으면?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;변화가 생기는 매 순간마다 발생할 수 있는 모든 case를 고려해야한다.&lt;/li&gt;
+&lt;li&gt;변화가 생기는 매 순간마다 모든 팀원이 동일한 고민을 해야한다.&lt;/li&gt;
+&lt;li&gt;빠르게 변화하는 소프트웨어의 안정성을 보장할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;테스트코드가 병목이 된다면?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;프로덕션 코드의 안정성을 제공하기 힘들어진다.&lt;/li&gt;
+&lt;li&gt;테스트 코드 자체가 유지보수하기 어려운 새로운 짐이 된다.&lt;/li&gt;
+&lt;li&gt;잘못된 검증이 이루어질 가능성이 생긴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;올바른 테스트 코드&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;자동화 테스트로 비교적 빠른 시간 안에 버그를 발견할 수 있고 수동 테스트에 드는 비용을 크게 절약할 수 있다.&lt;/li&gt;
+&lt;li&gt;소프트웨어의 빠른 변화를 지원한다.&lt;/li&gt;
+&lt;li&gt;팀원들의 집단 지성을 팀 차원의 이익으로 승격시킨다.&lt;/li&gt;
+&lt;li&gt;가까이 보면 느리지만 멀리보면 빠르다.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
