@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Oct 2024 06:32:57 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥까지 파헤치기 챕터1 자바 기술 시스템 소개]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch01-%EC%9E%90%EB%B0%94-%EA%B8%B0%EC%88%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch01-자바-기술-시스템-소개/</guid><pubDate>Sat, 12 Oct 2024 15:28:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Oct 2024 06:54:38 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥까지 파헤치기 챕터1 자바 기술 시스템 소개]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch01-%EC%9E%90%EB%B0%94-%EA%B8%B0%EC%88%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch01-자바-기술-시스템-소개/</guid><pubDate>Sat, 12 Oct 2024 15:28:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -59,7 +59,30 @@
 &lt;p&gt;🗒️ JRE란?&lt;/p&gt;
 &lt;p&gt;자바 SE API와 자바 가상 머신 그리고 배포 기술까지를 묶어서 JRE라고 한다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/01.png&quot; alt=&quot;자바 기술 시스템 구성 요소&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.59375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADKUlEQVQoz02S/UubBxDHw9gvg6lzzpeOubWVjRVl9Icx+sMo22CDdTDo+kPHoPsPFsbY6KSllHZjhTI6sNSqSS1T1zQvprbGaqw6NcakqHmSaFJrYkzjW3zymMTEvJjk+YzEvR18uePu+HB3nCKfz5PL5YhGo4hihDnBhXveg8PpxulewCG4sNrsjP45gXXajlDMu+ZLmnM4cS94SafTFE2WZRT/BImdOJ6lADfuDnFn0Eab1szt++O0aYf4vd9Cu36EnkE7HfphNObHdA9M02EYKXkpnvwPWCgUkGVKQO9SgFbNQ/4YmOLabSPq3hHUhmF6TBba7z6k894o17vvozIMc73HRFf/JCrdENv/B0YiEXJ7WZKZPDtBgVDbKZZVZ7BfPYm75TRr6q9YUX/NUuvpkmZ+PYnj2imcv31BSPUlz26dISsF/wYWUOzu7pLP7RGO7rI108eW8jl8ynKizS8TOVvJsrKM9e9f4um3VfiVZcTOv4L4QzmL31TgU5aV+uI+O/HUHhSBxQlBRoylWZvtQ/jxRazNdSxcqsd35SCj31Xhuvga/iuHsDXX4v3pELPna3l8rg7hQj3ChVfJbM4TS2aQC3kU4XAYKCBtp/A/uYf+1gsM6l5Hq6rEpDlAX1cNg9o6DJ01mDTVGFRVjBgP8MhQg669ErOummxqkVRa3geGQiGy2TRbUhK/0Ev/5eeZvvkGpl8qMF6uQOisZ/hqOd3nKnjwcxlz6jomW2rRXyyn91I5ky3V+Fxmnq2GS3dUJJPJ0soyEA1ZmLhRi3DnKDb1m1jaG/Bom7Cq32KstYHxm4dxdL2NV9fIVEcDk22Heao/wppvio3wdomjSCQS5PYyrIREIoEhfLqDhEzvwcwxPJojLBubwHWc9YF3WNQ1saRvhJn3SY4fJWBsRLa/C1k/id0cspzfnzCTSSFKSWIbVrz9xwiOfUZg9FPcDz7EY/qI1fETrI59gKP3OOsTHyPaPsf36ESp7jN/QiEVYCeR2X8bURSRJAlJ2iYa2yKw4WBl08nKhvCv3ItTzLrHcD2xEAw7WdkUCG7u+2LvdlQkFouXbvgXDBL1KwUYV10AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;자바 기술 시스템 구성 요소&quot;
+        title=&quot;자바 기술 시스템 구성 요소&quot;
+        src=&quot;/static/ecef6ccf50bb9e5d0dc167a8d0c137f0/2bef9/01.png&quot;
+        srcset=&quot;/static/ecef6ccf50bb9e5d0dc167a8d0c137f0/6f3f2/01.png 256w,
+/static/ecef6ccf50bb9e5d0dc167a8d0c137f0/01e7c/01.png 512w,
+/static/ecef6ccf50bb9e5d0dc167a8d0c137f0/2bef9/01.png 1024w,
+/static/ecef6ccf50bb9e5d0dc167a8d0c137f0/71c1d/01.png 1536w,
+/static/ecef6ccf50bb9e5d0dc167a8d0c137f0/f02b9/01.png 1554w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;자바 기술 시스템을 핵심 비즈니스로 관점을 옮겨서 보면 다음과 같이 나눠진다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
@@ -133,7 +156,30 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;그리고 2021년에는 다시 정책을 바꿔 LTS버전을 2년주기로 출시하겠다 발표. 그래서 JDK17이후 LTS버전이 JDK21이다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/02.png&quot; alt=&quot;LTS 버전 주기&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.70312499999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABqUlEQVQoz3WSDU/bMBCG+/9/0CbRMRATjAHbYHy0FJK1aWFireN82T7boc+UhIlN0yw98p3v7tXplUciFu8tsQ00ekOj1zxvAzE62vaF6Ib8T9q/icERRBg5sYg4urM43GNxuIunpak1xpQDtvqX37UXvFiiF0bGGKxpcOJZHh9wu7+DsKVuCmpTYVzN6iHjPpmRpnckyYxsOe9rTYet+7gqi0FQVxXFKmN+sMvD2Ueme2NC2yKmxnvBi/s/XhBrMGXxKigxouYJ6bs3PHw+7gW32y3eNAQvBO+JIRDE40X6oc6r0MceMQapylfBFlDfE9LxW1anR8ze73C5XLN4fGL86RJV1PxYa8rasikqxidXJKsnrtOM/S83TBaPfLi4xdQVQRyj+NxSqzU/ZxNUlvKU3nNwfsM0zTi5umWSLDifJnybJdxnjxxdTLm8m/N1csfZ9YxJumT/9AJnzLBhjBHxQqEVpVaookTrnE2e9/eAZqMUSmt0kaPyvM+LQqNyTVUVtNEPG3Y+xeAJzvZYaxDnsJ03zuKsGd7EvdS6noGur/slvUbvreMXunGo3hV/Cj8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;LTS 버전 주기&quot;
+        title=&quot;LTS 버전 주기&quot;
+        src=&quot;/static/3c2aaf3e28ba221f93a7534d9d21d1fb/2bef9/02.png&quot;
+        srcset=&quot;/static/3c2aaf3e28ba221f93a7534d9d21d1fb/6f3f2/02.png 256w,
+/static/3c2aaf3e28ba221f93a7534d9d21d1fb/01e7c/02.png 512w,
+/static/3c2aaf3e28ba221f93a7534d9d21d1fb/2bef9/02.png 1024w,
+/static/3c2aaf3e28ba221f93a7534d9d21d1fb/71c1d/02.png 1536w,
+/static/3c2aaf3e28ba221f93a7534d9d21d1fb/aaf7f/02.png 1668w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;JDK10 출시. 주된 목표는 내부 리팩터링(소스 저장소 통합, 가비지 컬렉터 인터페이스 통합, JIT 인타페이스 통합). 사용자 입장에서는 지역 변수 타입 추론 말고는 별로 없었다.&lt;/p&gt;
 &lt;p&gt;이 해에 큰 사건이 있었는데 안드로이드의 자바 저작권 침해 사건이 있었고 처음에는 구글한테 배상을 하라 하였지만 자바 진영 사람들이 구글편에 서고 이후 구글이 상고하여 승소하였다.&lt;/p&gt;
 &lt;p&gt;오라클의 이윤추구로 인하여 자바EE 잘라냄. 오라클은 JDBC, JMS, 서블릿과 그 외 널리 쓰이는 기본 요소들은 소유하고 자바 EE 소유권은 이클립스 재단으로 넘기고 Java라는 상표도 못 사용하게 해서 자카르타EE로 바뀌었다.&lt;/p&gt;
@@ -215,7 +261,31 @@
 &lt;h3&gt;언어 독립&lt;/h3&gt;
 &lt;p&gt;자바 대체로 코틀린, 고, 자바스크립트, 파이썬이 언급된다. 특히 AI의 발전으로 파이썬이 급부상한다. 예전에는 모든것을 자바로 할것 같았지만 새로운 시장이 열리면서 각 시장마다 선두하는 언어들이 있다. 자바만으로는 힘들것 같다.&lt;/p&gt;
 &lt;p&gt;오라클은 그랄VM이라는 새로운 기술을 발표. 그랄VM은 핫스팟 가상 머신 위에 구축된 크러스 언어 풀 스택 가상머신이다. 그랄VM은 다양한 언어를 지원한다. 그래서 서로 다른 언어들이 데이터를 같은 메모리 공간에서 주고 받을 수 있고 각 언어용으로 작성된 기존 네이티브 라이브러리들도 사용가능하다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/03.png&quot; alt=&quot;그랄 VM 아키텍쳐&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB40lEQVQoz2XM3U9SARzG8fP/dau1dafWrWtd5qzEaHKcmDldhNSAhrL1wlZiICCHw0v5QgF6zhHYGjbI2ZZsKZ4X4Ns4btXq4rNn+z3PfoJlGgx07TTpWga9ro5pGBi6jqF3MEwwzC49wLRM6F/u9UF/foZ+fk6nc4ZhGAiWNXhiYpk6/T6cNmZoao+pf2mwmVynsl8lU5S4aDc4nVuiva+wUfpKPvOT8HNQnkY4zu2iHX3jpH2B0LMsDLNDV+/Q78FBJUgytUK5qpArypQ0lb29l6hKgUIgQGXvI2Fpm41UmfVoDTmW4FNxh6KqcNRsIjTdbiqvo7SaJeTDOqtvozz0uBG9c4heN4uBJTxrfpZDKzx542d51cvKmgdv2MNSaAHx2Tyibx7H4gMi8QhCPZ9jVz2m/P2Ezz9qbJSK+BLvCEib+LfeE0zHeCHF/8gk7M7O9GATIyjF8SWjfKipCMlZB2nXXback6Sd98i47pMVHciuKbJzTnILLrKPZmyyOGXffxOn7G12dpr09ATKqxBCamSI1NhVUjcuJccGhkmMDCGNj1KYvE1+4ha5O+Okbl4jOTps938b3GPXr1CcdyJIioqsamT+o5LTNHZqNXbrdbarVWTtspP/pWlsHSgctlr8Ag0xBMfiCkfAAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;그랄 VM 아키텍쳐&quot;
+        title=&quot;그랄 VM 아키텍쳐&quot;
+        src=&quot;/static/2f37fae831ec5bf79022efa41d9a0847/2bef9/03.png&quot;
+        srcset=&quot;/static/2f37fae831ec5bf79022efa41d9a0847/6f3f2/03.png 256w,
+/static/2f37fae831ec5bf79022efa41d9a0847/01e7c/03.png 512w,
+/static/2f37fae831ec5bf79022efa41d9a0847/2bef9/03.png 1024w,
+/static/2f37fae831ec5bf79022efa41d9a0847/71c1d/03.png 1536w,
+/static/2f37fae831ec5bf79022efa41d9a0847/a878e/03.png 2048w,
+/static/2f37fae831ec5bf79022efa41d9a0847/10c1e/03.png 2090w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그랄 VM은 기본적으로 각종 언어의 소스코드나 컴파일된 중간 형식을 인터프리터를 통해 그랄VM이 이해할 수 있는 중간표현으로 변환하는 식으로 작동한다. 그랄VM은 새로운 언어용 인터프리터를 빠르게 제작할 수 있는 언어 구현 프레임 워크인 트러플을 제공하며 트러플 위에서 고성능 LLVM 비트코드 인터프리터인 수롱을 제작한다.&lt;/p&gt;
 &lt;p&gt;그랄VM은 진정한 의미에서 물리머신에 대응하는 고수준 언어 가상머신이다. 물리머신의 명령어 집합과 같은 역할을 하면서 머신의 특성과만 관련이 있을 뿐 특정 고수준 언어의 특성과는 관련이 없다.&lt;/p&gt;
 &lt;p&gt;프로그래밍언어마다 런타임 환경 성능이 제각각이라 어떤 언어는 성능이 많이 떨어지겠지만 그랄VM은 입력된 중간 표현을 자동으로 최적화하고 런타임에 JIT컴파일까지 해주기 때문에 때로는 네이티브 컴파일러들보다 실행성능이 뛰어나다.&lt;/p&gt;
