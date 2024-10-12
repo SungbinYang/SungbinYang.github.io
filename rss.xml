@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Oct 2024 13:30:04 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 2주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 어느덧 인프런 워밍업 스터디 클럽을 시작한지도 2주째가 시작된다. 그리고 이번주…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-2%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-2주차-발자국/</guid><pubDate>Fri, 11 Oct 2024 02:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Oct 2024 00:52:44 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 2주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 어느덧 인프런 워밍업 스터디 클럽을 시작한지도 2주째가 시작된다. 그리고 이번주…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-2%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-2주차-발자국/</guid><pubDate>Fri, 11 Oct 2024 02:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -514,6 +514,28 @@
 &lt;blockquote&gt;
 &lt;p&gt;클라이언트 관점에서의 피드백을 주는 Test Driven&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2&gt;테스트는 []다.&lt;/h2&gt;
+&lt;p&gt;테스트는 무엇일까? 테스트는 문서라고 볼 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로덕션 기능을 설명하는 테스트 코드 문서&lt;/li&gt;
+&lt;li&gt;다양한 테스트 케이스를 통해 프로덕션 코드를 이해하는 시각과 관점을 보완&lt;/li&gt;
+&lt;li&gt;어느 한 사람이 과거에 경험했던 고민의 결과물을 팀 차원으로 승격시켜서 모두의 자산으로 공유할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;DisplayName을 섬세하게&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;@DisplayName&lt;/code&gt;을 사용하여 테스트 명을 구체화할때 명사의 나열보단 문장으로 작성하는 것이 좋다. 또한 테스트 행위에 대한 결과를 기술하는데 도메인 용어를 사용하여 매서드 자체의 관점보다 도메인 정책 관점으로 한층 추상화된 내용을 담는것이 좋다. 마지막으로 테스트의 현상을 중점으로 기술하지 말자. 예를 들어 ~실패라기 보단 도메인의 내용을 담는것이 좋을 것 같다.&lt;/p&gt;
+&lt;h2&gt;BDD(Behavior Driven Development) 스타일로 작성하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TDD에서 파생된 개발방법&lt;/li&gt;
+&lt;li&gt;함수단위의 테스트에 집중하기보다 시나리오에 기반한 테스트 케이스(TC) 자체에 집중하여 테스트&lt;/li&gt;
+&lt;li&gt;개발자가 아닌 사람이 봐도 이해할 수 있을 정도의 추상화 수준(레벨)을 권장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Given / When / Then&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Given: 시나리오 진행에 필요한 모든 준비 과정(객체, 값, 상태 등)&lt;/li&gt;
+&lt;li&gt;When: 시나리오 행동 진행&lt;/li&gt;
+&lt;li&gt;Then: 시나리오 진행에 대한 결과 명시 및 검증&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;어떤환경에서(Given) 어떤 행동을 진행했을 때(When) 어떤 상태 변화가 일어난다.(Then)라는것을 토대로 @DisplayName을 상세히 적을 수 있다.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
