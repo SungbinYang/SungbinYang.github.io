@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Oct 2024 11:42:37 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 16 Oct 2024 05:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Oct 2024 21:30:32 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 4주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. Presentation Layer 테스트 외부세계의 요청을 가장 먼저 받는 계층 파라미터에 대한 최소한의 검증을 수행 MockMVC Mock 객체를 사용해 스프링 MVC…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-4%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-4주차-발자국/</guid><pubDate>Thu, 17 Oct 2024 04:25:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
+        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
+/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
+/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
+/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Presentation Layer 테스트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;외부세계의 요청을 가장 먼저 받는 계층&lt;/li&gt;
+&lt;li&gt;파라미터에 대한 최소한의 검증을 수행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;MockMVC&lt;/h3&gt;
+&lt;p&gt;Mock 객체를 사용해 스프링 MVC 동작을 재현할 수 있는 테스트 프레임워크&lt;/p&gt;
+&lt;h3&gt;요구사항&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;관리자 페이지에서 신규상품을 등록할 수 있다.&lt;/li&gt;
+&lt;li&gt;상품명, 상품타입, 판매상태, 가격등을 입력받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그래서 해당 요구사항으로 비즈니스 로직을 작성 후 해당 부분 테스트를 해보았다. 여기서 잠깐 주목할만한 부분이라면 바로 &lt;code&gt;@Transactional(readOnly = true)&lt;/code&gt;와 &lt;code&gt;@Transactional&lt;/code&gt;이다. readOnly옵션은 읽기 전용이라는 뜻이다. 해당옵션에서는 CRUD중에 R만 기능동작을 하게 한다. 또한 JPA에서 CUD스냅샷 저장과 변경감지를 하지 않아 성능향상에 이점을 줄 수 있다. 또한 CQRS에서 Command부분과 Read부분을 나누자는 것처럼 우리의 비즈니스 로직중에 해당 클래스를 readOnly옵션을 전체로 주고 CUD에 해당되는 부분만 @Transactional을 사용하자!&lt;/p&gt;
+&lt;p&gt;또한 우리는 validation을 적용하고 예외를 처리하기 위해 spring-boot-starter-validation 의존성을 추가해주고 각 dto에 어노테이션들을 추가해주었다. 또한 각 예외상황에 맞게 처리할 RestControllerAdvice를 두었으며 공통응답객체를 만들어 진행을 해보았다. 여기서 유심히 볼 부분이 몇가지 존재한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ @NotBlank vs @NotNull vs @NotEmpty&lt;/p&gt;
+&lt;p&gt;NotNull은 null값을 허용을 하지 않는 것이고 NotEmpty는 &quot;&quot;문자열만 허용을 하지 않으며 NotBlank는 이 둘을 다 포함하면서 &quot; &quot;문자열도 포함시키지 않는다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;또한 해당 request DTO를 만들면서 하나의 DTO를 이용해서 presentation layer부터 Business Layer까지 쓰이곤 한다. 이런 점은 DTO를 두고 의존성을 둘 수 있다는 것이다. 이건 layered architecture에 어긋한다. 따라서 서비스용 DTO, 컨트롤용 DTO를 별도 개발해서 진행을 해보는 작업을 해보았다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 16 Oct 2024 05:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
