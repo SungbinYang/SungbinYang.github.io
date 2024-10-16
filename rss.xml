@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Oct 2024 21:18:25 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 16 Oct 2024 05:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Oct 2024 11:33:26 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 3주차 발자국]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-3%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-3주차-발자국/</guid><pubDate>Wed, 16 Oct 2024 05:32:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -200,6 +200,9 @@
 &lt;li&gt;Then: 시나리오 진행에 대한 결과 명시 및 검증&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;어떤환경에서(Given) 어떤 행동을 진행했을 때(When) 어떤 상태 변화가 일어난다.(Then)라는것을 토대로 @DisplayName을 상세히 적을 수 있다.&lt;/p&gt;
+&lt;h2&gt;미션&lt;/h2&gt;
+&lt;p&gt;이번 미션은 저번에 Readable Code에서 진행했던 마지막 과제 프로젝트인 &apos;지뢰찾가&apos;, &apos;스터디카페&apos;중에 1개의 프로젝트를 가지고 테스트 코드를 작성해보는 시간을 가졌다. 조건은 BDD스타일로 3개이상의 클래스 총 7개 이상 테스트를 작성하는 것이었지만 나는 한층 공부한다는 마음으로 테스트 커버리지 툴인 jacoco를 가지고 스터디 카페부터 진행을 하였다. 그 결과 테스트 커버리지 98%라는 결과를 가지게 되었다. 그리고 조금 더 욕심이 나서 지뢰찾기도 일부 클래스를 진행하였다. 이번 미션을 해보면서 어려웠고 힘들었지만 테스트 작성에 많이 익숙해진 경험을 가지게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/SungbinYang/Inflearn-warming-up-club-2/tree/main/src/test/java/me/sungbin/day12&quot;&gt;깃허브 주소&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;레이어드 아키텍쳐(Layered Architecture)와 테스트&lt;/h2&gt;
 &lt;p&gt;레이어드 아키텍쳐에서는 아래와 같이 구성되어 있다.&lt;/p&gt;
 &lt;blockquote&gt;
