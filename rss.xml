@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Oct 2024 20:06:50 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day15 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 미션의 요구사항은 다음과 같다. Layered Architecture…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day15-미션/</guid><pubDate>Fri, 18 Oct 2024 04:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Oct 2024 20:11:13 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day15 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 미션의 요구사항은 다음과 같다. Layered Architecture…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day15-미션/</guid><pubDate>Fri, 18 Oct 2024 04:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -114,7 +114,7 @@
 &lt;h4&gt;특징&lt;/h4&gt;
 &lt;p&gt;사용자의 요청을 받아 비즈니스 레이어로 전달하고, 그 결과를 사용자에게 반환하는 역할을 한다. 주로 컨트롤러에서 사용자의 요청을 처리하고 적절한 응답을 제공한다. 이 레이어는 웹 브라우저나 API 요청과 직접적으로 상호작용하며, JSON, HTML, XML과 같은 포맷으로 데이터를 응답한다. 프레젠테이션 레이어는 축구 경기에서 관중과 가장 가까이 있는 공격수처럼, 사용자와 직접적으로 상호작용하는 역할을 한다.&lt;/p&gt;
 &lt;h4&gt;테스트 방법&lt;/h4&gt;
-&lt;p&gt;프레젠테이션 레이어는 컨트롤러 테스트를 통해 HTTP 요청과 응답이 정상적으로 처리되는지 확인한다.&lt;/p&gt;
+&lt;p&gt;프레젠테이션 레이어는 컨트롤러 테스트를 통해 HTTP 요청과 응답이 정상적으로 처리되는지 확인한다. 또한 파리미터에 대한 최소한의 검증로직이 포함된다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;단위 테스트&lt;/li&gt;
 &lt;/ul&gt;
