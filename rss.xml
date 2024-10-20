@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Oct 2024 02:56:20 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day15 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 미션의 요구사항은 다음과 같다. Layered Architecture…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day15-미션/</guid><pubDate>Fri, 18 Oct 2024 04:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Oct 2024 21:11:23 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day15 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 미션의 요구사항은 다음과 같다. Layered Architecture…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day15-미션/</guid><pubDate>Fri, 18 Oct 2024 04:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -475,6 +475,49 @@
 &lt;p&gt;나는 미션을 진행하면서 이런 물음이 생각났고 private 메서드를 리플렉션을 통해 테스트를 한 경우가 있는데 위의 해답을 듣고 나니 괜히 테스트를 한것이구나라는 생각이 들어 조금은 반성하게 된 계기였다.&lt;/p&gt;
 &lt;h2&gt;Q. 테스트에서만 필요한 메서드가 생겼는데 프로덕션 코드에서는 필요 없다면?&lt;/h2&gt;
 &lt;p&gt;답변은 만들어도 된다. 다만 &lt;strong&gt;보수적&lt;/strong&gt;으로 접근해야 한다. 즉, 어떤 객체가 마땅히 가져도 되고 미래지향적이면 만들어도 상관없다.&lt;/p&gt;
+&lt;h2&gt;학습 테스트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;잘 모르는 기능, 라이브러리, 프레임워크를 학습하기 위해 작성하는 테스트&lt;/li&gt;
+&lt;li&gt;여러 테스트 케이스를 스스로 정의하고 검증하는 과정을 통해 보다 구체적인 동작과 기능을 학습&lt;/li&gt;
+&lt;li&gt;관련 문서만 읽는 것보다 훨씬 재밌게 학습&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Spring REST Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;테스트 코드를 통한 API 문서 자동화 도구&lt;/li&gt;
+&lt;li&gt;API 명세를 문서로 만들고 외부에 제공함으로써 현업을 원활하게 한다.&lt;/li&gt;
+&lt;li&gt;기본적으로 AsciiDOC을 사용하여 문서를 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring REST Docs vs Swagger&lt;/h3&gt;
+&lt;h4&gt;Spring REST Docs&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;테스트 코드를 통과해야 문서가 만들어진다. (신뢰도가 높다)&lt;/li&gt;
+&lt;li&gt;프로적션 코드에 비침투적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;코드 양이 많다.&lt;/li&gt;
+&lt;li&gt;설정이 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Swagger&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;적용이 쉽다&lt;/li&gt;
+&lt;li&gt;문서에서 바로 API 호출을 수행해볼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;프로덕션 코드에 침투적이다.&lt;/li&gt;
+&lt;li&gt;테스트와 무관하기 때문에 신뢰도가 떨어질 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
