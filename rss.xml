@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Oct 2024 21:15:11 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 문제1 요구사항은 아래와 같다. @Mock, @MockBean, @Spy, @SpyBean, @InjectMocks…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day18-미션/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 24 Oct 2024 11:18:17 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 문제1 요구사항은 아래와 같다. @Mock, @MockBean, @Spy, @SpyBean, @InjectMocks…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day18-미션/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -31,7 +31,7 @@
 &lt;p&gt;@Mock, @MockBean, @Spy, @SpyBean, @InjectMocks 의 차이를 한번 정리해 봅시다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;모의 객체(Mock)는 실제 객체 대신 테스트에 필요한 동작만 수행하도록 가상으로 만들어주는 객체이다. 이러한 Mock 객체는 다양한 방법으로 생성되고 사용될 수 있으며, 각 어노테이션은 그 특성에 맞게 활용됩니다. 축구팀을 비유로 설명하면, 각 어노테이션은 다른 역할을 수행하는 선수처럼 생각할 수 있습니다. 각 선수의 역할을 확인해보자. 또한 예제 코드를 살펴보자.&lt;/p&gt;
-&lt;h4&gt;@Mock&lt;/h4&gt;
+&lt;p&gt;@Mock&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;설명: &lt;code&gt;@Mock&lt;/code&gt;은 테스트에서 **가짜 객체(Mock)**를 만들어서 실제 객체의 동작을 대신하는 어노테이션이다. 주로 메서드의 리턴값을 임의로 설정해서 테스트할 수 있다.&lt;/li&gt;
 &lt;li&gt;특징
@@ -62,7 +62,7 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(playerName).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;Lionel Messi&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;@MockBean&lt;/h4&gt;
+&lt;p&gt;@MockBean&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;설명: &lt;code&gt;@MockBean&lt;/code&gt;은 스프링 애플리케이션 컨텍스트 내의 특정 빈을 가짜로 대체하는 어노테이션이다. 통합 테스트에서 실제 빈 대신 가짜 빈을 사용하고 싶을 때 주로 사용한다.&lt;/li&gt;
 &lt;li&gt;특징
@@ -92,7 +92,7 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(playerGoals).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;@Spy&lt;/h4&gt;
+&lt;p&gt;@Spy&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;정의: &lt;code&gt;@Spy&lt;/code&gt;는 실제 객체를 사용하면서도, 일부 메서드만 가짜로 동작하게 만드는 어노테이션이다. 즉, 객체의 대부분은 실제 동작을 유지하면서 필요한 부분만 가짜로 처리할 수 있다.&lt;/li&gt;
 &lt;li&gt;특징
@@ -122,7 +122,7 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(playerName).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;호날두&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;@SpyBean&lt;/h4&gt;
+&lt;p&gt;@SpyBean&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;정의: &lt;code&gt;@SpyBean&lt;/code&gt;은 스프링 애플리케이션 컨텍스트 내의 빈을 스파이로 만들어서, 실제 객체의 대부분은 동작하게 두고 필요한 부분만 가짜로 처리하는 어노테이션이다.&lt;/li&gt;
 &lt;li&gt;특징
@@ -152,7 +152,7 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(playerGoals).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;@InjectMocks&lt;/h4&gt;
+&lt;p&gt;@InjectMocks&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;정의: &lt;code&gt;@InjectMocks&lt;/code&gt;는 Mock이나 Spy 객체들을 주입받아서 의존성 설정을 자동으로 처리해주는 어노테이션이다. 이를 통해 객체가 필요로 하는 의존성을 자동으로 설정할 수 있다.&lt;/li&gt;
 &lt;li&gt;특징
