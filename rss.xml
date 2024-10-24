@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 24 Oct 2024 11:18:17 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 문제1 요구사항은 아래와 같다. @Mock, @MockBean, @Spy, @SpyBean, @InjectMocks…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day18-미션/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 24 Oct 2024 11:57:38 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 문제1 요구사항은 아래와 같다. @Mock, @MockBean, @Spy, @SpyBean, @InjectMocks…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day18-미션/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -267,7 +267,7 @@
 &lt;li&gt;각 테스트의 고유 로직은 &lt;code&gt;given&lt;/code&gt;, &lt;code&gt;when&lt;/code&gt;, &lt;code&gt;then&lt;/code&gt; 절에 분리한다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@BeforeEach&lt;/code&gt;에 포함될 수 있는 부분은 모든 테스트에 공통적으로 필요한 내용으로 합치고, 테스트 케이스별 행동과 상황 설정을 각 &lt;code&gt;given&lt;/code&gt;, &lt;code&gt;when&lt;/code&gt; 절에 넣습니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;@BeforeEach에 배치할 내용&lt;/h4&gt;
+&lt;p&gt;@BeforeEach에 배치할 내용&lt;/p&gt;
 &lt;p&gt;사용자 생성과 게시물 생성은 모든 테스트에서 공통적으로 필요하기 때문에 &lt;code&gt;@BeforeEach&lt;/code&gt;에 배치될 수 있다. 이렇게 하면 각 테스트에서 중복 코드를 줄일 수 있다. 예를 들어, 사용자 생성에 필요한 내용 준비와 게시물 생성에 필요한 내용 준비는 반복적으로 나타나므로 공통화할 수 있다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;6&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;BeforeEach&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -283,7 +283,7 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// 1-4, 2-4, 3-6 공통: 사용자1의 게시물 생성&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    사용자1의 게시물 생성&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;writeComment 테스트&lt;/h4&gt;
+&lt;p&gt;writeComment 테스트&lt;/p&gt;
 &lt;p&gt;이 테스트에서는 사용자가 댓글을 작성할 수 있는 시나리오이다. &lt;code&gt;@BeforeEach&lt;/code&gt;에서 공통으로 사용자와 게시물을 생성했으니, 이제 given, when 절에서 각각의 고유 로직을 작성한다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;7&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;사용자가 댓글을 작성할 수 있다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -304,7 +304,7 @@
 &lt;li&gt;when: 사용자가 댓글을 생성한다.&lt;/li&gt;
 &lt;li&gt;then: 검증 절에서는 댓글이 제대로 작성되었는지 확인한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;updateComment 테스트&lt;/h4&gt;
+&lt;p&gt;updateComment 테스트&lt;/p&gt;
 &lt;p&gt;이 테스트는 사용자가 댓글을 수정할 수 있는 시나리오이다. 마찬가지로 &lt;code&gt;@BeforeEach&lt;/code&gt;에서 사용자와 게시물을 생성했으니, &lt;code&gt;given&lt;/code&gt;, &lt;code&gt;when&lt;/code&gt; 절에서 각각의 고유 로직을 작성한다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;8&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;사용자가 댓글을 수정할 수 있다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -328,7 +328,7 @@
 &lt;li&gt;when: 사용자가 댓글을 수정한다.&lt;/li&gt;
 &lt;li&gt;then: 댓글이 정상적으로 수정되었는지 검증한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;cannotUpdateCommentWhenUserIsNotWriter 테스트&lt;/h4&gt;
+&lt;p&gt;cannotUpdateCommentWhenUserIsNotWriter 테스트&lt;/p&gt;
 &lt;p&gt;이 테스트는 댓글 작성자가 아닌 사용자가 댓글을 수정하려 할 때 수정이 불가능한 시나리오이다. @BeforeEach에서는 공통적으로 사용자1을 생성했으나, 사용자2를 추가로 생성하는 부분이 있다. 그리고 사용자1의 게시물과 댓글을 생성한 후, 사용자2가 그 댓글을 수정하려는 시도를 given, when 절에서 처리한다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;9&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;자신이 작성한 댓글이 아니면 수정할 수 없다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
