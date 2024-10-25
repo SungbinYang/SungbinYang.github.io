@@ -1,4 +1,373 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 25 Oct 2024 13:05:04 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 문제1 요구사항은 아래와 같다. @Mock, @MockBean, @Spy, @SpyBean, @InjectMocks…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day18-미션/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 25 Oct 2024 13:11:45 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 4주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 마지막 발자국 작성차례이다. 어느덧 벌써 수료날짜가 얼마 남지 않았다. 남은 시간 끝까지 달려보자. Presentation Layer…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-4%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-4주차-발자국/</guid><pubDate>Fri, 25 Oct 2024 10:08:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
+        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
+/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
+/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
+/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;드디어 마지막 발자국 작성차례이다. 어느덧 벌써 수료날짜가 얼마 남지 않았다. 남은 시간 끝까지 달려보자.&lt;/p&gt;
+&lt;h2&gt;Presentation Layer 테스트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;외부세계의 요청을 가장 먼저 받는 계층&lt;/li&gt;
+&lt;li&gt;파라미터에 대한 최소한의 검증을 수행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;MockMVC&lt;/h3&gt;
+&lt;p&gt;Mock 객체를 사용해 스프링 MVC 동작을 재현할 수 있는 테스트 프레임워크&lt;/p&gt;
+&lt;h3&gt;요구사항&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;관리자 페이지에서 신규상품을 등록할 수 있다.&lt;/li&gt;
+&lt;li&gt;상품명, 상품타입, 판매상태, 가격등을 입력받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그래서 해당 요구사항으로 비즈니스 로직을 작성 후 해당 부분 테스트를 해보았다. 여기서 잠깐 주목할만한 부분이라면 바로 &lt;code&gt;@Transactional(readOnly = true)&lt;/code&gt;와 &lt;code&gt;@Transactional&lt;/code&gt;이다. readOnly옵션은 읽기 전용이라는 뜻이다. 해당옵션에서는 CRUD중에 R만 기능동작을 하게 한다. 또한 JPA에서 CUD스냅샷 저장과 변경감지를 하지 않아 성능향상에 이점을 줄 수 있다. 또한 CQRS에서 Command부분과 Read부분을 나누자는 것처럼 우리의 비즈니스 로직중에 해당 클래스를 readOnly옵션을 전체로 주고 CUD에 해당되는 부분만 @Transactional을 사용하자!&lt;/p&gt;
+&lt;p&gt;또한 우리는 validation을 적용하고 예외를 처리하기 위해 spring-boot-starter-validation 의존성을 추가해주고 각 dto에 어노테이션들을 추가해주었다. 또한 각 예외상황에 맞게 처리할 RestControllerAdvice를 두었으며 공통응답객체를 만들어 진행을 해보았다. 여기서 유심히 볼 부분이 몇가지 존재한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ @NotBlank vs @NotNull vs @NotEmpty&lt;/p&gt;
+&lt;p&gt;NotNull은 null값을 허용을 하지 않는 것이고 NotEmpty는 &quot;&quot;문자열만 허용을 하지 않으며 NotBlank는 이 둘을 다 포함하면서 &quot; &quot;문자열도 포함시키지 않는다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;또한 해당 request DTO를 만들면서 하나의 DTO를 이용해서 presentation layer부터 Business Layer까지 쓰이곤 한다. 이런 점은 DTO를 두고 의존성을 둘 수 있다는 것이다. 이건 layered architecture에 어긋한다. 따라서 서비스용 DTO, 컨트롤용 DTO를 별도 개발해서 진행을 해보는 작업을 해보았다. 또한 컨트롤러에서는 최소한의 검증을 하고 그 외에는 서비스용으로 옮겨보는 법도 생각해보았다.&lt;/p&gt;
+&lt;h2&gt;미션&lt;/h2&gt;
+&lt;p&gt;이번 미션은 레이어 아키텍쳐에 관하여 설명과 테스트 방법에 대해 나만의 언어로 풀어쓰는 미션이다. 처음에는 내 언어로 표현한다는게 막막했지만 차근차근 정리를 해가다보니 금방 쉽게 풀어써졌다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/&quot;&gt;미션 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Mockito로 Stubbing하기&lt;/h2&gt;
+&lt;h3&gt;요구사항&lt;/h3&gt;
+&lt;p&gt;현재 관리자 페이지에서 당일 매출에 대한 내역을 메일전송을 받고 싶어한다.&lt;/p&gt;
+&lt;p&gt;그래서 우리는 해당 요구사항을 바탕으로 비즈니스 로직을 작성하였다. 핵심은 테스트이다. 메일 전송은 외부 네트워크를 타고 전송이 되는 로직이라 매우 오랜 시간이 걸린다.(내 경험) 또한 메일을 계속 보내다보면 나중에 수 많은 테스트 메일이 쌓여 있는 것을 알 수 있다. 이럴때는 어떻게 할까? 메일 전송 행위자체를 mocking하면 되는데 이것을 &lt;strong&gt;stubbing&lt;/strong&gt;이라고 한다. 우리는 메일 전송 로직을 mockBean을 이용해 mocking하고 행위 자체를 stubbing하여 테스트를 수행 할 수 있었다.&lt;/p&gt;
+&lt;h2&gt;Test Double&lt;/h2&gt;
+&lt;h3&gt;출처&lt;/h3&gt;
+&lt;p&gt;배우 대역의 스턴트맨이 그 Test Double의 근원지이다.&lt;/p&gt;
+&lt;h3&gt;관련 용어&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dummy: 아무것도 하지 않는 깡통객체&lt;/li&gt;
+&lt;li&gt;Fake: 단순한 형태로 동일한 기능은 수행하나 프로덕션에서 쓰기에는 부족한 객체(ex. FakeRepository)&lt;/li&gt;
+&lt;li&gt;Stub: 테스트에서 요청한 것에 대해 미리 준비한 결과를 제공하는 객체. 그 외에는 응답X&lt;/li&gt;
+&lt;li&gt;Spy: Stub이면서 호출된 내용을 기록하며 보여줄 수 있는 객체. 일부는 실제 객체러첨 동작시키고 일부만 stubbing&lt;/li&gt;
+&lt;li&gt;Mock: 행위에 대한 기대를 명세하고 그에 따라 동작하도록 만들어진 객체&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Stub과 Mock을 헷갈려한다. 동일한거 아닌가? 결론부터 말하자면 Mock은 Stub이 아니다. Mock은 행위에 대한 검증을 할때 사용하고 Stub은 상태에 대한 검증을 할때 사용된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;@Mock, @Spy, @InjectMocks&lt;/h2&gt;
+&lt;p&gt;순수 Mockito로 검증하는 시간을 가져보았다. 우리는 &lt;code&gt;@SpringBootTest&lt;/code&gt;를 붙여서 통합 테스트를 가져보았는데 그렇게 하지 않고 순수 Mockito로 테스트할 수 있는 방법은 없을까?&lt;/p&gt;
+&lt;p&gt;그래서 우리는 기존에 MailService를 테스트를 가져보았다. 의존성으로 주입된 것들을 mock()을 이용하여 만들어주고 MailService를 해당 mock()으로 만든 것을 생성자에 넣어주어서 실행했다.&lt;/p&gt;
+&lt;p&gt;하지만 이렇게 하는것보다 더 좋은 방법은 &lt;code&gt;@Mock&lt;/code&gt;과 &lt;code&gt;@InjectMocks&lt;/code&gt;를 이용하는 방법이다. mock()으로 생성한 객체는 @Mock 어노테이션을 붙여서 사용이 가능하고 만들어진 mock 객체를 이용하여 생성한 객체 MockService는 @InjectMocks를 이용하여 더 간단히 사용이 가능하다. 추가적으로 해당 메서드 안에 특정메서드가 몇번 불렸는지 확인하는 것은 &lt;code&gt;verify&lt;/code&gt;로 확인이 가능하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@Mock을 사용할 때는 @ExtendWith(MockitoExtension.class)을 붙여줘야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;또한 &lt;code&gt;@Spy&lt;/code&gt;를 이용할건데 사용법은 @Mock과 유사하다. 다른점은 @Mock을 사용할때 &lt;code&gt;when().thenReturn()&lt;/code&gt;식을 이용했는데 @Spy는 &lt;code&gt;doReturn().when().메서드()&lt;/code&gt;를 이용하면 된다. @Mock과 비교해보자. @Mock을 사용하면 해당 메서드만 mocking을 하여 사용하고 그 외의 메서드들은 작동을 안 한다. 하지만 @Spy를 사용하면 해당 객체에 호출한 메서드들이 전부 작동이 된다. 그래서 일반적으로 @Mock을 사용하지만 @Spy를 이용할 때도 있으니 알아두자.&lt;/p&gt;
+&lt;h2&gt;BDDMockito&lt;/h2&gt;
+&lt;p&gt;BDD는 행위주도개발로 이전에 한번 살펴본 적이 있다. 이전에 실습한 코드를 보면 뭔가 이상하다고 느낄 수 있을 것이다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mailSendClient&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;thenReturn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;분명 given절인데 when이 들어가져 있다. 그래서 만들어진 것이 BDDMockito다. BDDMockito의 given을 이용하면 아래와 같이 변경이 가능하다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;given&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mailSendClient&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;willReturn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그럼 정확히 given에 given을 이용하니 명확해진다.&lt;/p&gt;
+&lt;h2&gt;Classicist VS. Mockist&lt;/h2&gt;
+&lt;p&gt;Classicist입장은 다 mocking하면 실제 객체들의 동작 및 두 객체들이 합쳐서 동작할때 그에 따른 사이드 이펙트는 어떻게 검증할건데라는 입장이며 Mockist 입장은 모든 걸 다 mocking하면 각 객체들의 기능에 대한걸 보장하니 굳이 통합테스트를 할 필요가 없다라는 입장이다.&lt;/p&gt;
+&lt;p&gt;우리는 Persistence Layer에서 단위 테스트를 진행하고 Business Layer에서는 통합 테스트를 Presentation Layer에서 두 레이어를 모킹하여 진행했다. 이것을 Mockist가 본다면 굳이 시간낭비하고 있다고 할 것이다.&lt;/p&gt;
+&lt;p&gt;우빈님의 생각은 Classicist입장이시며 mocking을 할때는 외부시스템을 사용할 일이 있을때 사용한다고 하셨다.&lt;/p&gt;
+&lt;p&gt;즉 결론은 mocking을 했다 하더라도 실제 프로덕션 코드에서 런타임 시점에 일어날 일을 정확하게 stubbing했다 단언할 수 없으니 통합테스트를 해보자는 것 같다.&lt;/p&gt;
+&lt;p&gt;나의 입장은 이렇다. QuerDSL같은 외부자원을 사용할때 나는 해당 부분을 테스트할때 테스트를 진행하고 비즈니스 레이어에는 해당 부분을 mocking처리한다. 그리고 컨트롤러 부분에서 통합테스트를 사용하는데 이 부분은 한번 질문을 드려봐야겠다.&lt;/p&gt;
+&lt;h2&gt;한 문단에 한 주제&lt;/h2&gt;
+&lt;p&gt;이전 강의인 Readable Code에서도 배웠고 학창시절 영어독해시간에도 배웠듯이 한 문단에는 하나의 주제로 이루어져야 한다. 테스트도 문서다. 즉, 각각 하나의 테스트는 하나의 문단이고 그 테스트 코드는 하나의 주제를 가져야 한다.&lt;/p&gt;
+&lt;h2&gt;완벽하게 제어하기&lt;/h2&gt;
+&lt;p&gt;테스트 코드를 작성할 때는 모든 조건들을 완벽히 제어가 가능해야 한다. 우리는 이전에 &lt;code&gt;LocalDateTime.now()&lt;/code&gt;을 사용하면서 현재시간에 따라 테스트가 성공할때도 있고 실패할때도 있는 경우를 보았다. 그래서 우리는 이를 해결하기 위해 이 현재시간을 상위에 넘기고 파라미터로 받는 방식을 택하였다.&lt;/p&gt;
+&lt;p&gt;그러면 만약에 &lt;code&gt;LocalDateTime.now()&lt;/code&gt;를 사용해도 테스트가 무조건 성공한다면 사용해도 되나? 우빈님께서는 지양한다고 하셨다. 그 이유는 그 테스트는 성공할진 몰라도 팀 단위에서 해당 코드를 사용하면 그게 프로젝트에 번져서 빈번히 사용할 확률이 높기때문이라고 하셨다. 나도 이점을 한번 주의해야겠다.&lt;/p&gt;
+&lt;h2&gt;테스트 환경의 독립성을 보장하자&lt;/h2&gt;
+&lt;p&gt;테스트 환경은 대부분 given절에서 환경을 세팅한다. 그런데 이런 given절에서 다른 API를 사용하게 된다면 어떻게 될까? 해당 API와 테스트 코드가 결합도가 생기게 된다. 이런 부분을 방지하고 테스트코드 독립성을 보장시켜야 한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;재고가 부족한 상품으로 주문을 생성하려는 경우 예외가 발생한다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createOrderWithNoStock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LocalDateTime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;registeredDateTime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDateTime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;product1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createProduct&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(BOTTLE, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createProduct&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(BAKERY, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;002&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;product3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createProduct&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(HANDMADE, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;003&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;productRepository&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;saveAll&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(product1, product2, product3));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stock1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stock2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;002&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stock1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;deductQuantity&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;); &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// @todo&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stockRepository&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;saveAll&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(stock1, stock2));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;OrderCreateServiceRequest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;OrderCreateServiceRequest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;productNumbers&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;002&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;003&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// when &amp;amp; then&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;assertThatThrownBy&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(() &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;orderService&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createOrder&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(request, registeredDateTime))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isInstanceOf&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;hasMessage&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;재고가 부족한 상품이 있습니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위의 코드에서 todo부분을 살펴보자. 해당 코드는 주문생성관련 로직이다. 그런데 deductQuantity를 현재 재고보다 많이 차감시키면 해당 메서드에서 예외를 던질 것이다. 그러면 given절에서 테스트가 실패되고 내가 위에서 말했던 결합도가 생긴 케이스이다. 또한 이건 내 생각이지만 주문생성로직에 재고차감로직이 들어가 있으니 하나의 테스트코드에 주제가 2개가 되버리는 상황이 생긴다. 이런것을 방지하는 것이 좋다.&lt;/p&gt;
+&lt;h2&gt;테스트 간 독립성을 보장하자&lt;/h2&gt;
+&lt;p&gt;테스트는 각각 수행되어야 하고 테스트 순서가 무작위여도 같은 결과가 나와야 한다. 하지만 만약 테스트에 공유자원을 사용하게 되면 예상치 못한 결과가 나올 우려가 있기에 테스트가 실패할 경우도 있을 것이다. 이런 점때문에 공유자원 사용은 지양하자.&lt;/p&gt;
+&lt;h2&gt;한 눈에 들어오는 Test Fixture 구성하기&lt;/h2&gt;
+&lt;h3&gt;Test Fixture&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixture: 고정 틀, 고정되어 있는 물체 (given절에 생성한 객체들)&lt;/li&gt;
+&lt;li&gt;테스트를 위해 원하는 상태로 고정시킨 일련의 객체&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;우리는 이에 관련해서 &lt;code&gt;@BeforeEach&lt;/code&gt; &lt;code&gt;BeforeAll&lt;/code&gt;에 대해 알아보았다. 그런데 @BeforeEach같은 경우 given절에서 만든 데이터를 넣는 행위는 지양하다고 하셨다. 결국 이것은 이전에 봤던 공유자원과 같은 역할을 한다. 또한 테스트는 문서인데 given절을 보려니 없어서 스크롤로 위로 왔다갔다 하는 상황이 발생하기 때문에 테스트 문서의 파편화가 일어난다.&lt;/p&gt;
+&lt;p&gt;그러면 언제 @BeforeEach를 쓸까? 각 테스트 입장에서 봤을 때 아예 몰라도 테스트 내용을 이해하는데 문제가 없는가?라는 물음과 수정해도 모든 테스트에 영향을 주지 않는가?라는 물음에 괜찮다면 사용하자! 그렇지 않다면 지양하자.&lt;/p&gt;
+&lt;p&gt;또한 data.sql을 이용해 미리 쿼리를 생성해 given절을 작성하는 행위는 지양하자. 왜냐하면 테스트 파편화가 일어나기도 하고 나중에 실무에 가면 수십개의 컬럼과 수십개의 테이블이 있고 이 테이블이나 컬럼이 바뀔때마다 수정을 해줘야 하기때문에 관리포인트가 늘어나기 때문이다.&lt;/p&gt;
+&lt;p&gt;또한 given절에 객체를 생성 시, 필요한 파라미터만 주입받는것을 고려하면 작성하자. 해당 파라미터를 보고 이 파라미터는 테스트에 전혀 영향을 주지 않을 것 같은 것은 고정값으로 두고 파라미터를 빼는 것처럼 말이다.&lt;/p&gt;
+&lt;p&gt;마지막으로 builder와 같이 given절에 들어가는 것을 하나의 테스트 config 클래스에 모아두는 행위는 지양하자. 왜냐하면 나중에 실무에서 작성하다보면 새로운 빌더가 생기고 메서드 오버로딩때문에 파라미터 순서만 바뀌는 빌더도 많이 생길 수 있으며 테스트 문서 파편화로 인해 더 불편해질 것 같다. 그래서 클래스마다 필요한 파라미터만 받아서 작성하는 것이 좋다.&lt;/p&gt;
+&lt;h2&gt;Test Fixture 클렌징&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;deleteAll()&lt;/code&gt;과 &lt;code&gt;deleteAllInBatch()&lt;/code&gt;에 차이에 대해 알아보자. 우빈님은 &lt;code&gt;deleteAllInBatch()&lt;/code&gt;를 더 선호하신다고 하셨다. 그 이유에 대해 알아보자.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deleteAllInBatch()&lt;/code&gt;는 delete from~ 절만 나가는 순수 테이블 전체 삭제에 용이하다. 하자민 단점이라하면 순서를 잘 생각해야 한다. 만약 A라는 테이블과 B라는 테이블이 M:N 연관관계를 맺어 중간테이블 AB라는 테이블이 있을때 AB부터 테이블을 삭제해주고 A, B순서대로 삭제를 해줘야 한다. 그렇지 않으면 예외가 발생한다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deleteAll()&lt;/code&gt;은 굳이 중간테이블을 삭제할 필요없이 중간테이블을 알고 있는 테이블만 삭제해도 알아서 삭제해준다. 하지만 단점은 해당 메서드를 실행하면 해당 엔티티를 먼저 전체 select를 하고 다음으로 delete from where 절이 나간다. 그리고 해당 절은 테이블에 있는 데이터 수 만큼 나가기 때문에 수많은 데이터가 존재하면 성능이 매우 떨어질 것이다.&lt;/p&gt;
+&lt;p&gt;그래서 &lt;code&gt;deleteAllInBatch()&lt;/code&gt;가 더 선호하는 이유를 알 것 같다. 하지만 이런것보다 side effect를 잘 고려해서 &lt;code&gt;@Transactional&lt;/code&gt;을 잘 사용하는 것이 베스트일 것 같다.&lt;/p&gt;
+&lt;h2&gt;@ParameterizedTest&lt;/h2&gt;
+&lt;p&gt;테스트 코드에 if-else나 for문같이 조건문, 반복문등 읽는 사람의 생각이 들어가는 것을 지양해야한다고 말했다. 그래서 여러가지 테스트 로직이 하나의 테스트 코드에 있다면 분리하자고 하였다. 그런데 만약 단순히 값 여러개로 하나의 테스트를 하고 싶은경우 테스트를 나누는 것보다 &lt;code&gt;@ParameterizedTest&lt;/code&gt;를 사용하는 것이 깔끔해진다.&lt;/p&gt;
+&lt;p&gt;대표적인 예시로 내가 사이드프로젝트에서 작성했던 코드를 들 수 있을 것 같다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;3&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;ParameterizedTest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;MethodSource&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;providedTestDataForSignup&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;회원가입 통합 테스트 - 실패(유효하지 않은 회원가입 폼)&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;member_signup_integration_test_fail_caused_by_invalid_signup_form&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; name, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; nickname, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; email, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; password, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; confirmPassword, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; phoneNumber, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; birthday) throws Exception {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;MemberSignupRequestDto&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;requestDto&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;MemberSignupRequestDto&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(name, nickname, email, password, confirmPassword, phoneNumber, birthday);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;/api/auth/signup&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                  .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; + &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;;charset=UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                    .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; + &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;;charset=UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                    .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;objectMapper&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;writeValueAsString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(requestDto)))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andDo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isBadRequest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;GlobalExceptionCode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;INVALID_REQUEST_PARAMETER&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getHttpStatus&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;GlobalExceptionCode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;INVALID_REQUEST_PARAMETER&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;lt;Arguments&amp;gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;providedTestDataForSignup&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;tester&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;email@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1234-1234&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;robert&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;test@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1234-1234&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;robert&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;email@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;t5r4e3w2q1@&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1234-1234&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;robert&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;email@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1111-1111&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    );&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;이렇게 &lt;code&gt;@MethodSource&lt;/code&gt;를 사용하는 경우 이외에오 &lt;code&gt;@CsvSource&lt;/code&gt;를 이용하는 경우도 있고 다른 방법도 있으니 한번 찾아보면 좋을 것 같다.&lt;/p&gt;
+&lt;h2&gt;@DynamicTest&lt;/h2&gt;
+&lt;p&gt;공유변수를 가지고 여러개의 테스트가 사용하는 것은 지양하자고 하였다. 왜냐하면 테스트의 순서가 생겨버리고 서로 강결합이 되기 때문이다. 하지만 환경 설정 후 시나리오 테스트를 하는 경우가 있을 것이다. 그럴 경우 &lt;code&gt;@DynamicTest&lt;/code&gt;를 이용하자. 사용법은 아래와 같다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;4&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;TestFactory&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;lt;DynamicTest&amp;gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;dynamicTests&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;DynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;dynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, () &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// when&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// then&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            }),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;DynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;dynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, () &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// when&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// then&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            })&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        );&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;테스트 수행도 비용이다. 환경 통합하기&lt;/h2&gt;
+&lt;p&gt;이제 전체 테스트를 돌려보자. 지금 테스트를 전체 돌려보면 2.x초라는 시간이 걸리고 spring boot 서버가 6번 뜨는 불필요한 행위가 발생한다.&lt;/p&gt;
+&lt;p&gt;테스트 코드를 작성하는 이유가 인간의 수동화된 검증에 대한 불신도 있지만 가장 큰 이유는 시간을 아끼기 위해서이다. 하지만 테스트를 돌렸는데 2.x초라는 행위는 너무 아깝다. 그래서 우리는 하나의 통합추상 클래스를 만들어 service와 repository부분을 하나의 추상클래스를 상속받게 함으로 테스트 띄우는 횟수를 줄였다. 그리거 마지막 controller부분도 별도의 추상클래스를 만들어 해당 클래스를 상속받게 함으로 서버 띄우는 횟수를 줄여갔다. 결론적으로 총 서버는 2번 띄워졌고 2.x초에서 1.x초로 속도가 줄어갔다.&lt;/p&gt;
+&lt;h2&gt;Q. private 메서드의 테스트는 어떻게 하나요?&lt;/h2&gt;
+&lt;p&gt;정답은 할 필요도 없고 하려고 해서도 안된다. 클라이언트 입장에서는 제공되는 public 메서드만 알 수 있고 알아야하며 그 외의 내부 메서드는 알 필요가 없다. 또한 public 메서드를 테스트한다는 것은 내부 private 메서드도 자동으로 같이 테스트하는 것이므로 따로 테스트를 할 필요가 없다. 다만 만약 이렇게 해도 계속 위의 물음이 생각나면 객체를 분리할 시점인가를 검토해야한다. 그리고 객체를 분리시켜 해당 private 메서드를 해당 객체의 public 메서드로 두고 단위 테스트를 진행해야 할 것이다.&lt;/p&gt;
+&lt;p&gt;나는 미션을 진행하면서 이런 물음이 생각났고 private 메서드를 리플렉션을 통해 테스트를 한 경우가 있는데 위의 해답을 듣고 나니 괜히 테스트를 한것이구나라는 생각이 들어 조금은 반성하게 된 계기였다.&lt;/p&gt;
+&lt;h2&gt;Q. 테스트에서만 필요한 메서드가 생겼는데 프로덕션 코드에서는 필요 없다면?&lt;/h2&gt;
+&lt;p&gt;답변은 만들어도 된다. 다만 &lt;strong&gt;보수적&lt;/strong&gt;으로 접근해야 한다. 즉, 어떤 객체가 마땅히 가져도 되고 미래지향적이면 만들어도 상관없다.&lt;/p&gt;
+&lt;h2&gt;학습 테스트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;잘 모르는 기능, 라이브러리, 프레임워크를 학습하기 위해 작성하는 테스트&lt;/li&gt;
+&lt;li&gt;여러 테스트 케이스를 스스로 정의하고 검증하는 과정을 통해 보다 구체적인 동작과 기능을 학습&lt;/li&gt;
+&lt;li&gt;관련 문서만 읽는 것보다 훨씬 재밌게 학습&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Spring REST Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;테스트 코드를 통한 API 문서 자동화 도구&lt;/li&gt;
+&lt;li&gt;API 명세를 문서로 만들고 외부에 제공함으로써 현업을 원활하게 한다.&lt;/li&gt;
+&lt;li&gt;기본적으로 AsciiDOC을 사용하여 문서를 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Spring REST Docs vs Swagger&lt;/h3&gt;
+&lt;h4&gt;Spring REST Docs&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;테스트 코드를 통과해야 문서가 만들어진다. (신뢰도가 높다)&lt;/li&gt;
+&lt;li&gt;프로적션 코드에 비침투적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;코드 양이 많다.&lt;/li&gt;
+&lt;li&gt;설정이 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Swagger&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;적용이 쉽다&lt;/li&gt;
+&lt;li&gt;문서에서 바로 API 호출을 수행해볼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;프로덕션 코드에 침투적이다.&lt;/li&gt;
+&lt;li&gt;테스트와 무관하기 때문에 신뢰도가 떨어질 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;미션3 진행&lt;/h2&gt;
+&lt;p&gt;테스트코드의 마지막 미션을 진행하였다. 이번에 배운 어노테이션들, @BeforeEach가 적용하여 BDD 스타일 적용하는 실습등 미션을 진행했는데 해당 미션을 통해서 해당 어노테이션들에 대해 확실히 알 수 있었으며 BDD 스타일이 조금 적응된 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/&quot;&gt;미션링크&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;깜짝 특강&lt;/h2&gt;
+&lt;h3&gt;Day18 미션 공통 피드백&lt;/h3&gt;
+&lt;p&gt;핵심은 중복 제거가 아니고 도메인이다. 사용자, 게시물은 간접적이므로 &lt;code&gt;setup()&lt;/code&gt;으로 댓글은 직접적이므로 given절에 배치해야 한다.&lt;/p&gt;
+&lt;h3&gt;Q&amp;#x26;A&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘문) REST API의 조건 중 하나인 hateoas에 대해 실무에서 많이 사용하는지와 제가 제대로 적용하고 있는지&lt;/p&gt;
+&lt;p&gt;답변) 아직까지 사용한 곳을 본적이 없다고 하셨다. 그 이유를 생각해보시는데 단순히 hateoas를 적용하기에는 APP-FE-BE 간 긴밀한 스펙과 복잡한 동작들이 너무 많고 또 이미 만들어져 있는 구조를 hateoas 형태로 전환한다는것은 불가능에 가깝다고 느끼신다고 하셨다. 또한 실무에서는 대부분 그런 규칙을 지키는 것보다 다른 중요한 것들이 더 많다고 판단하기 때문이라고도 하셨다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;코드리뷰&lt;/h3&gt;
+&lt;p&gt;우빈님께서 많은 칭찬을 해주셔서 몸둘 바를 모르겠지만 몇가지 피드백 사항이 있었다. 그 중에 제일 생각나는 피드백을 말하면 다음과 같다. given / when / then절에 설명하는 주석은 생략해도 좋다. 하지만 given절이 몇십줄이고 서로 다른 특징들이 나열되어 있다면 간단히 적는 걸 추천하신다고 하셨다.&lt;/p&gt;
+&lt;p&gt;이것으로 모든 워밍업 클럽 진도가 완료가 되었다, 나 자신에게도 뜻 깊은 경험과 성장이 되었으며 이러한 경험의 반복을 이뤄나가고 싶다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk3 { color: #6A9955; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .mtk7 { color: #B5CEA8; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 문제1 요구사항은 아래와 같다. @Mock, @MockBean, @Spy, @SpyBean, @InjectMocks…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day18-미션/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -524,375 +893,6 @@
   .dark-default-dark .mtk4 { color: #569CD6; }
   .dark-default-dark .mtk3 { color: #6A9955; }
   .dark-default-dark .mtk11 { color: #DCDCAA; }
-  .dark-default-dark .mtk8 { color: #CE9178; }
-  .dark-default-dark .mtk7 { color: #B5CEA8; }
-  .dark-default-dark .mtk15 { color: #C586C0; }
-  .dark-default-dark .grvsc-line-highlighted::before {
-    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
-    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
-  }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 4주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 마지막 발자국 작성차례이다. 어느덧 벌써 수료날짜가 얼마 남지 않았다. 남은 시간 끝까지 달려보자. Presentation Layer…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-4%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-4주차-발자국/</guid><pubDate>Mon, 21 Oct 2024 04:25:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;banner&quot;
-        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
-        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
-/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
-/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
-/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
-        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이 블로그 글은 &lt;a href=&quot;https://inf.run/kHiWM&quot;&gt;박우빈님의 인프런 강의&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;드디어 마지막 발자국 작성차례이다. 어느덧 벌써 수료날짜가 얼마 남지 않았다. 남은 시간 끝까지 달려보자.&lt;/p&gt;
-&lt;h2&gt;Presentation Layer 테스트&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;외부세계의 요청을 가장 먼저 받는 계층&lt;/li&gt;
-&lt;li&gt;파라미터에 대한 최소한의 검증을 수행&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;MockMVC&lt;/h3&gt;
-&lt;p&gt;Mock 객체를 사용해 스프링 MVC 동작을 재현할 수 있는 테스트 프레임워크&lt;/p&gt;
-&lt;h3&gt;요구사항&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;관리자 페이지에서 신규상품을 등록할 수 있다.&lt;/li&gt;
-&lt;li&gt;상품명, 상품타입, 판매상태, 가격등을 입력받는다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;그래서 해당 요구사항으로 비즈니스 로직을 작성 후 해당 부분 테스트를 해보았다. 여기서 잠깐 주목할만한 부분이라면 바로 &lt;code&gt;@Transactional(readOnly = true)&lt;/code&gt;와 &lt;code&gt;@Transactional&lt;/code&gt;이다. readOnly옵션은 읽기 전용이라는 뜻이다. 해당옵션에서는 CRUD중에 R만 기능동작을 하게 한다. 또한 JPA에서 CUD스냅샷 저장과 변경감지를 하지 않아 성능향상에 이점을 줄 수 있다. 또한 CQRS에서 Command부분과 Read부분을 나누자는 것처럼 우리의 비즈니스 로직중에 해당 클래스를 readOnly옵션을 전체로 주고 CUD에 해당되는 부분만 @Transactional을 사용하자!&lt;/p&gt;
-&lt;p&gt;또한 우리는 validation을 적용하고 예외를 처리하기 위해 spring-boot-starter-validation 의존성을 추가해주고 각 dto에 어노테이션들을 추가해주었다. 또한 각 예외상황에 맞게 처리할 RestControllerAdvice를 두었으며 공통응답객체를 만들어 진행을 해보았다. 여기서 유심히 볼 부분이 몇가지 존재한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;⚠️ @NotBlank vs @NotNull vs @NotEmpty&lt;/p&gt;
-&lt;p&gt;NotNull은 null값을 허용을 하지 않는 것이고 NotEmpty는 &quot;&quot;문자열만 허용을 하지 않으며 NotBlank는 이 둘을 다 포함하면서 &quot; &quot;문자열도 포함시키지 않는다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;또한 해당 request DTO를 만들면서 하나의 DTO를 이용해서 presentation layer부터 Business Layer까지 쓰이곤 한다. 이런 점은 DTO를 두고 의존성을 둘 수 있다는 것이다. 이건 layered architecture에 어긋한다. 따라서 서비스용 DTO, 컨트롤용 DTO를 별도 개발해서 진행을 해보는 작업을 해보았다. 또한 컨트롤러에서는 최소한의 검증을 하고 그 외에는 서비스용으로 옮겨보는 법도 생각해보았다.&lt;/p&gt;
-&lt;h2&gt;미션&lt;/h2&gt;
-&lt;p&gt;이번 미션은 레이어 아키텍쳐에 관하여 설명과 테스트 방법에 대해 나만의 언어로 풀어쓰는 미션이다. 처음에는 내 언어로 표현한다는게 막막했지만 차근차근 정리를 해가다보니 금방 쉽게 풀어써졌다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/&quot;&gt;미션 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Mockito로 Stubbing하기&lt;/h2&gt;
-&lt;h3&gt;요구사항&lt;/h3&gt;
-&lt;p&gt;현재 관리자 페이지에서 당일 매출에 대한 내역을 메일전송을 받고 싶어한다.&lt;/p&gt;
-&lt;p&gt;그래서 우리는 해당 요구사항을 바탕으로 비즈니스 로직을 작성하였다. 핵심은 테스트이다. 메일 전송은 외부 네트워크를 타고 전송이 되는 로직이라 매우 오랜 시간이 걸린다.(내 경험) 또한 메일을 계속 보내다보면 나중에 수 많은 테스트 메일이 쌓여 있는 것을 알 수 있다. 이럴때는 어떻게 할까? 메일 전송 행위자체를 mocking하면 되는데 이것을 &lt;strong&gt;stubbing&lt;/strong&gt;이라고 한다. 우리는 메일 전송 로직을 mockBean을 이용해 mocking하고 행위 자체를 stubbing하여 테스트를 수행 할 수 있었다.&lt;/p&gt;
-&lt;h2&gt;Test Double&lt;/h2&gt;
-&lt;h3&gt;출처&lt;/h3&gt;
-&lt;p&gt;배우 대역의 스턴트맨이 그 Test Double의 근원지이다.&lt;/p&gt;
-&lt;h3&gt;관련 용어&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Dummy: 아무것도 하지 않는 깡통객체&lt;/li&gt;
-&lt;li&gt;Fake: 단순한 형태로 동일한 기능은 수행하나 프로덕션에서 쓰기에는 부족한 객체(ex. FakeRepository)&lt;/li&gt;
-&lt;li&gt;Stub: 테스트에서 요청한 것에 대해 미리 준비한 결과를 제공하는 객체. 그 외에는 응답X&lt;/li&gt;
-&lt;li&gt;Spy: Stub이면서 호출된 내용을 기록하며 보여줄 수 있는 객체. 일부는 실제 객체러첨 동작시키고 일부만 stubbing&lt;/li&gt;
-&lt;li&gt;Mock: 행위에 대한 기대를 명세하고 그에 따라 동작하도록 만들어진 객체&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Stub과 Mock을 헷갈려한다. 동일한거 아닌가? 결론부터 말하자면 Mock은 Stub이 아니다. Mock은 행위에 대한 검증을 할때 사용하고 Stub은 상태에 대한 검증을 할때 사용된다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;@Mock, @Spy, @InjectMocks&lt;/h2&gt;
-&lt;p&gt;순수 Mockito로 검증하는 시간을 가져보았다. 우리는 &lt;code&gt;@SpringBootTest&lt;/code&gt;를 붙여서 통합 테스트를 가져보았는데 그렇게 하지 않고 순수 Mockito로 테스트할 수 있는 방법은 없을까?&lt;/p&gt;
-&lt;p&gt;그래서 우리는 기존에 MailService를 테스트를 가져보았다. 의존성으로 주입된 것들을 mock()을 이용하여 만들어주고 MailService를 해당 mock()으로 만든 것을 생성자에 넣어주어서 실행했다.&lt;/p&gt;
-&lt;p&gt;하지만 이렇게 하는것보다 더 좋은 방법은 &lt;code&gt;@Mock&lt;/code&gt;과 &lt;code&gt;@InjectMocks&lt;/code&gt;를 이용하는 방법이다. mock()으로 생성한 객체는 @Mock 어노테이션을 붙여서 사용이 가능하고 만들어진 mock 객체를 이용하여 생성한 객체 MockService는 @InjectMocks를 이용하여 더 간단히 사용이 가능하다. 추가적으로 해당 메서드 안에 특정메서드가 몇번 불렸는지 확인하는 것은 &lt;code&gt;verify&lt;/code&gt;로 확인이 가능하다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;@Mock을 사용할 때는 @ExtendWith(MockitoExtension.class)을 붙여줘야 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;또한 &lt;code&gt;@Spy&lt;/code&gt;를 이용할건데 사용법은 @Mock과 유사하다. 다른점은 @Mock을 사용할때 &lt;code&gt;when().thenReturn()&lt;/code&gt;식을 이용했는데 @Spy는 &lt;code&gt;doReturn().when().메서드()&lt;/code&gt;를 이용하면 된다. @Mock과 비교해보자. @Mock을 사용하면 해당 메서드만 mocking을 하여 사용하고 그 외의 메서드들은 작동을 안 한다. 하지만 @Spy를 사용하면 해당 객체에 호출한 메서드들이 전부 작동이 된다. 그래서 일반적으로 @Mock을 사용하지만 @Spy를 이용할 때도 있으니 알아두자.&lt;/p&gt;
-&lt;h2&gt;BDDMockito&lt;/h2&gt;
-&lt;p&gt;BDD는 행위주도개발로 이전에 한번 살펴본 적이 있다. 이전에 실습한 코드를 보면 뭔가 이상하다고 느낄 수 있을 것이다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mailSendClient&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;thenReturn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;분명 given절인데 when이 들어가져 있다. 그래서 만들어진 것이 BDDMockito다. BDDMockito의 given을 이용하면 아래와 같이 변경이 가능하다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;given&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mailSendClient&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(), &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;willReturn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;그럼 정확히 given에 given을 이용하니 명확해진다.&lt;/p&gt;
-&lt;h2&gt;Classicist VS. Mockist&lt;/h2&gt;
-&lt;p&gt;Classicist입장은 다 mocking하면 실제 객체들의 동작 및 두 객체들이 합쳐서 동작할때 그에 따른 사이드 이펙트는 어떻게 검증할건데라는 입장이며 Mockist 입장은 모든 걸 다 mocking하면 각 객체들의 기능에 대한걸 보장하니 굳이 통합테스트를 할 필요가 없다라는 입장이다.&lt;/p&gt;
-&lt;p&gt;우리는 Persistence Layer에서 단위 테스트를 진행하고 Business Layer에서는 통합 테스트를 Presentation Layer에서 두 레이어를 모킹하여 진행했다. 이것을 Mockist가 본다면 굳이 시간낭비하고 있다고 할 것이다.&lt;/p&gt;
-&lt;p&gt;우빈님의 생각은 Classicist입장이시며 mocking을 할때는 외부시스템을 사용할 일이 있을때 사용한다고 하셨다.&lt;/p&gt;
-&lt;p&gt;즉 결론은 mocking을 했다 하더라도 실제 프로덕션 코드에서 런타임 시점에 일어날 일을 정확하게 stubbing했다 단언할 수 없으니 통합테스트를 해보자는 것 같다.&lt;/p&gt;
-&lt;p&gt;나의 입장은 이렇다. QuerDSL같은 외부자원을 사용할때 나는 해당 부분을 테스트할때 테스트를 진행하고 비즈니스 레이어에는 해당 부분을 mocking처리한다. 그리고 컨트롤러 부분에서 통합테스트를 사용하는데 이 부분은 한번 질문을 드려봐야겠다.&lt;/p&gt;
-&lt;h2&gt;한 문단에 한 주제&lt;/h2&gt;
-&lt;p&gt;이전 강의인 Readable Code에서도 배웠고 학창시절 영어독해시간에도 배웠듯이 한 문단에는 하나의 주제로 이루어져야 한다. 테스트도 문서다. 즉, 각각 하나의 테스트는 하나의 문단이고 그 테스트 코드는 하나의 주제를 가져야 한다.&lt;/p&gt;
-&lt;h2&gt;완벽하게 제어하기&lt;/h2&gt;
-&lt;p&gt;테스트 코드를 작성할 때는 모든 조건들을 완벽히 제어가 가능해야 한다. 우리는 이전에 &lt;code&gt;LocalDateTime.now()&lt;/code&gt;을 사용하면서 현재시간에 따라 테스트가 성공할때도 있고 실패할때도 있는 경우를 보았다. 그래서 우리는 이를 해결하기 위해 이 현재시간을 상위에 넘기고 파라미터로 받는 방식을 택하였다.&lt;/p&gt;
-&lt;p&gt;그러면 만약에 &lt;code&gt;LocalDateTime.now()&lt;/code&gt;를 사용해도 테스트가 무조건 성공한다면 사용해도 되나? 우빈님께서는 지양한다고 하셨다. 그 이유는 그 테스트는 성공할진 몰라도 팀 단위에서 해당 코드를 사용하면 그게 프로젝트에 번져서 빈번히 사용할 확률이 높기때문이라고 하셨다. 나도 이점을 한번 주의해야겠다.&lt;/p&gt;
-&lt;h2&gt;테스트 환경의 독립성을 보장하자&lt;/h2&gt;
-&lt;p&gt;테스트 환경은 대부분 given절에서 환경을 세팅한다. 그런데 이런 given절에서 다른 API를 사용하게 된다면 어떻게 될까? 해당 API와 테스트 코드가 결합도가 생기게 된다. 이런 부분을 방지하고 테스트코드 독립성을 보장시켜야 한다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;재고가 부족한 상품으로 주문을 생성하려는 경우 예외가 발생한다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createOrderWithNoStock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LocalDateTime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;registeredDateTime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDateTime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;product1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createProduct&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(BOTTLE, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createProduct&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(BAKERY, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;002&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;product3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createProduct&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(HANDMADE, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;003&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;productRepository&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;saveAll&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(product1, product2, product3));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stock1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stock2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;002&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stock1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;deductQuantity&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;); &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// @todo&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;stockRepository&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;saveAll&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(stock1, stock2));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;OrderCreateServiceRequest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;OrderCreateServiceRequest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;productNumbers&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;001&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;002&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;003&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// when &amp;amp; then&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;assertThatThrownBy&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(() &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;orderService&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createOrder&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(request, registeredDateTime))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isInstanceOf&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;hasMessage&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;재고가 부족한 상품이 있습니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;위의 코드에서 todo부분을 살펴보자. 해당 코드는 주문생성관련 로직이다. 그런데 deductQuantity를 현재 재고보다 많이 차감시키면 해당 메서드에서 예외를 던질 것이다. 그러면 given절에서 테스트가 실패되고 내가 위에서 말했던 결합도가 생긴 케이스이다. 또한 이건 내 생각이지만 주문생성로직에 재고차감로직이 들어가 있으니 하나의 테스트코드에 주제가 2개가 되버리는 상황이 생긴다. 이런것을 방지하는 것이 좋다.&lt;/p&gt;
-&lt;h2&gt;테스트 간 독립성을 보장하자&lt;/h2&gt;
-&lt;p&gt;테스트는 각각 수행되어야 하고 테스트 순서가 무작위여도 같은 결과가 나와야 한다. 하지만 만약 테스트에 공유자원을 사용하게 되면 예상치 못한 결과가 나올 우려가 있기에 테스트가 실패할 경우도 있을 것이다. 이런 점때문에 공유자원 사용은 지양하자.&lt;/p&gt;
-&lt;h2&gt;한 눈에 들어오는 Test Fixture 구성하기&lt;/h2&gt;
-&lt;h3&gt;Test Fixture&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixture: 고정 틀, 고정되어 있는 물체 (given절에 생성한 객체들)&lt;/li&gt;
-&lt;li&gt;테스트를 위해 원하는 상태로 고정시킨 일련의 객체&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;우리는 이에 관련해서 &lt;code&gt;@BeforeEach&lt;/code&gt; &lt;code&gt;BeforeAll&lt;/code&gt;에 대해 알아보았다. 그런데 @BeforeEach같은 경우 given절에서 만든 데이터를 넣는 행위는 지양하다고 하셨다. 결국 이것은 이전에 봤던 공유자원과 같은 역할을 한다. 또한 테스트는 문서인데 given절을 보려니 없어서 스크롤로 위로 왔다갔다 하는 상황이 발생하기 때문에 테스트 문서의 파편화가 일어난다.&lt;/p&gt;
-&lt;p&gt;그러면 언제 @BeforeEach를 쓸까? 각 테스트 입장에서 봤을 때 아예 몰라도 테스트 내용을 이해하는데 문제가 없는가?라는 물음과 수정해도 모든 테스트에 영향을 주지 않는가?라는 물음에 괜찮다면 사용하자! 그렇지 않다면 지양하자.&lt;/p&gt;
-&lt;p&gt;또한 data.sql을 이용해 미리 쿼리를 생성해 given절을 작성하는 행위는 지양하자. 왜냐하면 테스트 파편화가 일어나기도 하고 나중에 실무에 가면 수십개의 컬럼과 수십개의 테이블이 있고 이 테이블이나 컬럼이 바뀔때마다 수정을 해줘야 하기때문에 관리포인트가 늘어나기 때문이다.&lt;/p&gt;
-&lt;p&gt;또한 given절에 객체를 생성 시, 필요한 파라미터만 주입받는것을 고려하면 작성하자. 해당 파라미터를 보고 이 파라미터는 테스트에 전혀 영향을 주지 않을 것 같은 것은 고정값으로 두고 파라미터를 빼는 것처럼 말이다.&lt;/p&gt;
-&lt;p&gt;마지막으로 builder와 같이 given절에 들어가는 것을 하나의 테스트 config 클래스에 모아두는 행위는 지양하자. 왜냐하면 나중에 실무에서 작성하다보면 새로운 빌더가 생기고 메서드 오버로딩때문에 파라미터 순서만 바뀌는 빌더도 많이 생길 수 있으며 테스트 문서 파편화로 인해 더 불편해질 것 같다. 그래서 클래스마다 필요한 파라미터만 받아서 작성하는 것이 좋다.&lt;/p&gt;
-&lt;h2&gt;Test Fixture 클렌징&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;deleteAll()&lt;/code&gt;과 &lt;code&gt;deleteAllInBatch()&lt;/code&gt;에 차이에 대해 알아보자. 우빈님은 &lt;code&gt;deleteAllInBatch()&lt;/code&gt;를 더 선호하신다고 하셨다. 그 이유에 대해 알아보자.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;deleteAllInBatch()&lt;/code&gt;는 delete from~ 절만 나가는 순수 테이블 전체 삭제에 용이하다. 하자민 단점이라하면 순서를 잘 생각해야 한다. 만약 A라는 테이블과 B라는 테이블이 M:N 연관관계를 맺어 중간테이블 AB라는 테이블이 있을때 AB부터 테이블을 삭제해주고 A, B순서대로 삭제를 해줘야 한다. 그렇지 않으면 예외가 발생한다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;deleteAll()&lt;/code&gt;은 굳이 중간테이블을 삭제할 필요없이 중간테이블을 알고 있는 테이블만 삭제해도 알아서 삭제해준다. 하지만 단점은 해당 메서드를 실행하면 해당 엔티티를 먼저 전체 select를 하고 다음으로 delete from where 절이 나간다. 그리고 해당 절은 테이블에 있는 데이터 수 만큼 나가기 때문에 수많은 데이터가 존재하면 성능이 매우 떨어질 것이다.&lt;/p&gt;
-&lt;p&gt;그래서 &lt;code&gt;deleteAllInBatch()&lt;/code&gt;가 더 선호하는 이유를 알 것 같다. 하지만 이런것보다 side effect를 잘 고려해서 &lt;code&gt;@Transactional&lt;/code&gt;을 잘 사용하는 것이 베스트일 것 같다.&lt;/p&gt;
-&lt;h2&gt;@ParameterizedTest&lt;/h2&gt;
-&lt;p&gt;테스트 코드에 if-else나 for문같이 조건문, 반복문등 읽는 사람의 생각이 들어가는 것을 지양해야한다고 말했다. 그래서 여러가지 테스트 로직이 하나의 테스트 코드에 있다면 분리하자고 하였다. 그런데 만약 단순히 값 여러개로 하나의 테스트를 하고 싶은경우 테스트를 나누는 것보다 &lt;code&gt;@ParameterizedTest&lt;/code&gt;를 사용하는 것이 깔끔해진다.&lt;/p&gt;
-&lt;p&gt;대표적인 예시로 내가 사이드프로젝트에서 작성했던 코드를 들 수 있을 것 같다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;3&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;ParameterizedTest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;MethodSource&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;providedTestDataForSignup&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;회원가입 통합 테스트 - 실패(유효하지 않은 회원가입 폼)&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;member_signup_integration_test_fail_caused_by_invalid_signup_form&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; name, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; nickname, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; email, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; password, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; confirmPassword, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; phoneNumber, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; birthday) throws Exception {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;MemberSignupRequestDto&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;requestDto&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;MemberSignupRequestDto&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(name, nickname, email, password, confirmPassword, phoneNumber, birthday);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;/api/auth/signup&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                  .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; + &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;;charset=UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                    .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; + &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;;charset=UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                    .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;objectMapper&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;writeValueAsString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(requestDto)))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andDo&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;isBadRequest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;())&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;GlobalExceptionCode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;INVALID_REQUEST_PARAMETER&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getHttpStatus&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;GlobalExceptionCode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;INVALID_REQUEST_PARAMETER&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            .&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;lt;Arguments&amp;gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;providedTestDataForSignup&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;tester&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;email@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1234-1234&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;robert&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;test@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1234-1234&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;robert&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;email@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;t5r4e3w2q1@&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1234-1234&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;Arguments&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;양성빈&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;robert&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;email@email.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;1q2w3e4r5t!&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;010-1111-1111&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;LocalDate&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    );&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;이렇게 &lt;code&gt;@MethodSource&lt;/code&gt;를 사용하는 경우 이외에오 &lt;code&gt;@CsvSource&lt;/code&gt;를 이용하는 경우도 있고 다른 방법도 있으니 한번 찾아보면 좋을 것 같다.&lt;/p&gt;
-&lt;h2&gt;@DynamicTest&lt;/h2&gt;
-&lt;p&gt;공유변수를 가지고 여러개의 테스트가 사용하는 것은 지양하자고 하였다. 왜냐하면 테스트의 순서가 생겨버리고 서로 강결합이 되기 때문이다. 하지만 환경 설정 후 시나리오 테스트를 하는 경우가 있을 것이다. 그럴 경우 &lt;code&gt;@DynamicTest&lt;/code&gt;를 이용하자. 사용법은 아래와 같다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;4&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;TestFactory&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;DisplayName&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;lt;DynamicTest&amp;gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;dynamicTests&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;DynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;dynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, () &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// when&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// then&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            }),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;DynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;dynamicTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, () &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// given&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// when&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// then&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            })&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        );&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;테스트 수행도 비용이다. 환경 통합하기&lt;/h2&gt;
-&lt;p&gt;이제 전체 테스트를 돌려보자. 지금 테스트를 전체 돌려보면 2.x초라는 시간이 걸리고 spring boot 서버가 6번 뜨는 불필요한 행위가 발생한다.&lt;/p&gt;
-&lt;p&gt;테스트 코드를 작성하는 이유가 인간의 수동화된 검증에 대한 불신도 있지만 가장 큰 이유는 시간을 아끼기 위해서이다. 하지만 테스트를 돌렸는데 2.x초라는 행위는 너무 아깝다. 그래서 우리는 하나의 통합추상 클래스를 만들어 service와 repository부분을 하나의 추상클래스를 상속받게 함으로 테스트 띄우는 횟수를 줄였다. 그리거 마지막 controller부분도 별도의 추상클래스를 만들어 해당 클래스를 상속받게 함으로 서버 띄우는 횟수를 줄여갔다. 결론적으로 총 서버는 2번 띄워졌고 2.x초에서 1.x초로 속도가 줄어갔다.&lt;/p&gt;
-&lt;h2&gt;Q. private 메서드의 테스트는 어떻게 하나요?&lt;/h2&gt;
-&lt;p&gt;정답은 할 필요도 없고 하려고 해서도 안된다. 클라이언트 입장에서는 제공되는 public 메서드만 알 수 있고 알아야하며 그 외의 내부 메서드는 알 필요가 없다. 또한 public 메서드를 테스트한다는 것은 내부 private 메서드도 자동으로 같이 테스트하는 것이므로 따로 테스트를 할 필요가 없다. 다만 만약 이렇게 해도 계속 위의 물음이 생각나면 객체를 분리할 시점인가를 검토해야한다. 그리고 객체를 분리시켜 해당 private 메서드를 해당 객체의 public 메서드로 두고 단위 테스트를 진행해야 할 것이다.&lt;/p&gt;
-&lt;p&gt;나는 미션을 진행하면서 이런 물음이 생각났고 private 메서드를 리플렉션을 통해 테스트를 한 경우가 있는데 위의 해답을 듣고 나니 괜히 테스트를 한것이구나라는 생각이 들어 조금은 반성하게 된 계기였다.&lt;/p&gt;
-&lt;h2&gt;Q. 테스트에서만 필요한 메서드가 생겼는데 프로덕션 코드에서는 필요 없다면?&lt;/h2&gt;
-&lt;p&gt;답변은 만들어도 된다. 다만 &lt;strong&gt;보수적&lt;/strong&gt;으로 접근해야 한다. 즉, 어떤 객체가 마땅히 가져도 되고 미래지향적이면 만들어도 상관없다.&lt;/p&gt;
-&lt;h2&gt;학습 테스트&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;잘 모르는 기능, 라이브러리, 프레임워크를 학습하기 위해 작성하는 테스트&lt;/li&gt;
-&lt;li&gt;여러 테스트 케이스를 스스로 정의하고 검증하는 과정을 통해 보다 구체적인 동작과 기능을 학습&lt;/li&gt;
-&lt;li&gt;관련 문서만 읽는 것보다 훨씬 재밌게 학습&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Spring REST Docs&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;테스트 코드를 통한 API 문서 자동화 도구&lt;/li&gt;
-&lt;li&gt;API 명세를 문서로 만들고 외부에 제공함으로써 현업을 원활하게 한다.&lt;/li&gt;
-&lt;li&gt;기본적으로 AsciiDOC을 사용하여 문서를 작성한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Spring REST Docs vs Swagger&lt;/h3&gt;
-&lt;h4&gt;Spring REST Docs&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;장점
-&lt;ul&gt;
-&lt;li&gt;테스트 코드를 통과해야 문서가 만들어진다. (신뢰도가 높다)&lt;/li&gt;
-&lt;li&gt;프로적션 코드에 비침투적이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;단점
-&lt;ul&gt;
-&lt;li&gt;코드 양이 많다.&lt;/li&gt;
-&lt;li&gt;설정이 어렵다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Swagger&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;장점
-&lt;ul&gt;
-&lt;li&gt;적용이 쉽다&lt;/li&gt;
-&lt;li&gt;문서에서 바로 API 호출을 수행해볼 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;단점
-&lt;ul&gt;
-&lt;li&gt;프로덕션 코드에 침투적이다.&lt;/li&gt;
-&lt;li&gt;테스트와 무관하기 때문에 신뢰도가 떨어질 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;미션3 진행&lt;/h2&gt;
-&lt;p&gt;테스트코드의 마지막 미션을 진행하였다. 이번에 배운 어노테이션들, @BeforeEach가 적용하여 BDD 스타일 적용하는 실습등 미션을 진행했는데 해당 미션을 통해서 해당 어노테이션들에 대해 확실히 알 수 있었으며 BDD 스타일이 조금 적응된 것 같다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day18-%EB%AF%B8%EC%85%98/&quot;&gt;미션링크&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;깜짝 특강&lt;/h2&gt;
-&lt;h3&gt;Day18 미션 공통 피드백&lt;/h3&gt;
-&lt;p&gt;핵심은 중복 제거가 아니고 도메인이다. 사용자, 게시물은 간접적이므로 &lt;code&gt;setup()&lt;/code&gt;으로 댓글은 직접적이므로 given절에 배치해야 한다.&lt;/p&gt;
-&lt;h3&gt;Q&amp;#x26;A&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;잘문) REST API의 조건 중 하나인 hateoas에 대해 실무에서 많이 사용하는지와 제가 제대로 적용하고 있는지&lt;/p&gt;
-&lt;p&gt;답변) 아직까지 사용한 곳을 본적이 없다고 하셨다. 그 이유를 생각해보시는데 단순히 hateoas를 적용하기에는 APP-FE-BE 간 긴밀한 스펙과 복잡한 동작들이 너무 많고 또 이미 만들어져 있는 구조를 hateoas 형태로 전환한다는것은 불가능에 가깝다고 느끼신다고 하셨다. 또한 실무에서는 대부분 그런 규칙을 지키는 것보다 다른 중요한 것들이 더 많다고 판단하기 때문이라고도 하셨다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;코드리뷰&lt;/h3&gt;
-&lt;p&gt;우빈님께서 많은 칭찬을 해주셔서 몸둘 바를 모르겠지만 몇가지 피드백 사항이 있었다. 그 중에 제일 생각나는 피드백을 말하면 다음과 같다. given / when / then절에 설명하는 주석은 생략해도 좋다. 하지만 given절이 몇십줄이고 서로 다른 특징들이 나열되어 있다면 간단히 적는 걸 추천하신다고 하셨다.&lt;/p&gt;
-&lt;p&gt;이것으로 모든 워밍업 클럽 진도가 완료가 되었다, 나 자신에게도 뜻 깊은 경험과 성장이 되었으며 이러한 경험의 반복을 이뤄나가고 싶다.&lt;/p&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
-  .dark-default-dark {
-    background-color: #1E1E1E;
-    color: #D4D4D4;
-  }
-  .dark-default-dark .mtk3 { color: #6A9955; }
-  .dark-default-dark .mtk11 { color: #DCDCAA; }
-  .dark-default-dark .mtk1 { color: #D4D4D4; }
-  .dark-default-dark .mtk12 { color: #9CDCFE; }
-  .dark-default-dark .mtk4 { color: #569CD6; }
-  .dark-default-dark .mtk10 { color: #4EC9B0; }
   .dark-default-dark .mtk8 { color: #CE9178; }
   .dark-default-dark .mtk7 { color: #B5CEA8; }
   .dark-default-dark .mtk15 { color: #C586C0; }
