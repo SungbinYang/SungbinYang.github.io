@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 25 Oct 2024 13:11:45 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 4주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 마지막 발자국 작성차례이다. 어느덧 벌써 수료날짜가 얼마 남지 않았다. 남은 시간 끝까지 달려보자. Presentation Layer…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-4%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-4주차-발자국/</guid><pubDate>Fri, 25 Oct 2024 10:08:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 26 Oct 2024 00:12:54 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 4주차 발자국]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의를 참조하여 작성한 글입니다. 드디어 마지막 발자국 작성차례이다. 어느덧 벌써 수료날짜가 얼마 남지 않았다. 남은 시간 끝까지 달려보자. Presentation Layer…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-4%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EC%9E%90%EA%B5%AD/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-4주차-발자국/</guid><pubDate>Fri, 25 Oct 2024 10:08:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -1762,6 +1762,59 @@
 &lt;p&gt;핸들 방식의 가장 큰 장점은 참조에 &apos;안정적인&apos; 핸들의 주소가 저장된다. 핸들을 이용하면 이렇게 객체의 위치가 바뀌는 상황에서도 참조 자체는 손댈 필요 없이 핸들 내의 인스턴스 데이터 포인터만 변경하면 된다.&lt;/p&gt;
 &lt;p&gt;다이렉트 포인터 방식의 가장 큰 장점은 속도다. 핸들을 경유하는 오버헤드가 없기 때문이다.&lt;/p&gt;
 &lt;p&gt;핫 스팟은 주로 다이렉트 포인터 방식을 사용한다.&lt;/p&gt;
+&lt;h2&gt;실전: OutofMemoryError 예외&lt;/h2&gt;
+&lt;p&gt;프로그램 카운터 외에도 가상 머신 메모리의 여러 런타임 영역에 OutofMemory가 날 수 있다.&lt;/p&gt;
+&lt;h3&gt;자바 힙 오버플로우&lt;/h3&gt;
+&lt;p&gt;자바 힙은 객체 인스턴스를 저장한다. 객체를 계속 생성하고 그 객체들의 접근할 경로가 살아 있다면 언제가는 힙의 최대 용량을 넘어설 것이고 메모리 오버플로우가 발생할 것이다.&lt;/p&gt;
+&lt;p&gt;OutofMemory가 가장 많이 발생하는 영역이 자바 힙이다.&lt;/p&gt;
+&lt;p&gt;이런 메모리 문제를 해결하는 일반적인 방법으로는 메모리 이미지 분석 도구로 힙 덤프 스냅숏을 분석해 보는 것이다. 첫째로 오버플로우를 일으킨 객체가 꼭 필요한 객체인지 아닌지를 확인해야한다. 만약 아니라면 메모리 누수로 인한 문제가 발생한 것이다.&lt;/p&gt;
+&lt;p&gt;메모리 누수 같은 문제는 도구를 이용해 누수된 객체로부터 GC루트까지 참조사슬을 살펴본다. 그러면 메모리 누수를 일으키는 코드의 정확한 위치를 알 수 있다.&lt;/p&gt;
+&lt;p&gt;만약 메모리 누수 문제가 아니라면 자바 가상 머신의 힙 매개 변수 설정(-Xmx와 -Xms)과 컴퓨터의 가용 메모리를 비교하여 가상 머신에 메모리를 더 많이 할당 할 수 있는지 알아보고 수명주기가 너무 긴 상태를 유지하는 객체가 없는지, 공간 낭비가 심한 데이터 구조를 쓰고 있는 것은 아닌지 살펴 런타임에 소비하는 메모리를 최소화한다.&lt;/p&gt;
+&lt;h3&gt;가상 머신 스택과 네이티브 메서드 스택 오버플로우&lt;/h3&gt;
+&lt;p&gt;핫스팟 가상 머신은 가상 머신 스택과 네이티브 메서드 스택을 구분하지 않는다. 또한 스택 크기는 오직 -Xss 매개 변수로만 변경이 가능하다. 가상머신 스택과 네이티브 메서드 스택에서는 아래의 2가지 예외가 발생할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;스레드가 요구하는 스택 깊이가 가상 머신이 허용하는 최대 깊이보다 크면 StackOverflowError를 던진다.&lt;/li&gt;
+&lt;li&gt;가상 머신이 스택 메모리를 동적으로 확장하는 기능을 지원하나, 가용 메모리가 부족해 스택을 더 확장할 수 없다면 OutOfMemoryError를 던진다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;핫스팟 가상 머신은 스택의 확장을 지원하지 않는다. 스레드 실행 중에 가상 머신 스택이 넘치는 일은 없다. 즉, 스택 용량이 부족하여 새로운 스택 프레임을 담을 수 없을때만 StackOverflowError가 발생한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;자바 가상 머신 버전과 운영체제에 따라 특히 운영체제의 메모리 페이지 크기에 따라 최소 스택 크기에 제한이 있을 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;핫스팟 가상 머신은 새로운 스택 프레임용 메모리를 할당 할 수 없다면 StackOverflowError를 던진다. 하지만 스택 크기를 동적으로 확장이 가능하다면 OutOfMemoryError가 발생한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;다이렉트 메모리와 자바 가상 머신 프로세스가 자체적으로 소비하는 메모리를 제외한 나머지가 가상 머신 스택과 네이티브 메서드 스택에 할당된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;StackOverflowError가 발생하면 예외를 일으킨 스택 정보가 분석용으로 제공되어 문제 위치를 찾기가 상대적으로 쉽다.&lt;/p&gt;
+&lt;h3&gt;메서드 영역과 런타임 상수 풀 오버플로우&lt;/h3&gt;
+&lt;p&gt;런타임 상수 풀은 메서드 영역에 속하므로 두 영역의 오버플로 테스트는 동시에 수행 가능하다.&lt;/p&gt;
+&lt;p&gt;JDK6까지 핫스팟은 상수 풀울 영구 세대에 할당했다. JDK6로 오버플로우 테스트를 해보면 OutofMemoryError가 발생하고 &lt;strong&gt;PermGen Space&lt;/strong&gt;라고 나온다. 이를 통해 런타임 상수 풀이 정말로 메서드 영역의 한 부분임을 알 수 있다. 하지만 이를 JDK7이상에 테스트하면 아무런 예외를 던지지 않고 무한루프를 돈다. 이유는 영구세대에 저장했던 문자열 상수 풀을 JDK7부터 자바 힙으로 옮겼기 때문이다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Sample&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;[] &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;컴퓨터&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot; 소프트웨어&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;intern&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() == str1);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위의 코드를 JDK6에서 실행하면 false가 나오지만 JDK7에 실행하면 true가 나온다. 이유는 다음과 같다. JDK6의 &lt;code&gt;intern()&lt;/code&gt; 메서드는 처음 만나는 문자열 인스턴스를 영구 세대의 문자열 상수 풀에 복사한 다음 영구세대에 저장한 문자열 인스턴스의 참조를 반환한다. 한편 &lt;code&gt;StringBuilder&lt;/code&gt;로 생성한 문장려 객체의 인스턴스는 자바 힙에 존재한다. 따라서 둘은 같은 참조가 될 수 없고 자연히 fasle를 반환한다.&lt;/p&gt;
+&lt;p&gt;JDK7이상에서는 JRockit등의 &lt;code&gt;intern()&lt;/code&gt; 메서드는 문자열 인스턴스를 영구 세대에 복사할 필요가 없다. 문자열 상수 풀 위치가 자바 힙이므로 그저 풀에 있는 첫 번째 인스턴스의 참조로 바꿔주면 된다. 따라서 &lt;code&gt;intern()&lt;/code&gt;이 반환하는 참조는 &lt;code&gt;StringBuilder&lt;/code&gt;가 생성한 문자열 인스턴스와 같다.&lt;/p&gt;
+&lt;p&gt;메서드 영역의 다른 부분에 들어가는 내용으로는 타입 관련 정보 저장이다. 클래스 이름, 접근 제한자, 상수 풀, 필드 설명, 메서드 설명등이다. 이를 테스트하기 위해 CGLib으로 런타임에 바이트코드를 조작하여 다량의 클래스를 동적으로 생성하여 테스트를 해볼 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;스프링이나 하이버네이트같은 프레임워크도 CGLib과 같은 바이트코드 조작 기술을 써서 클래스들을 동적으로 강화한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;메서드 영역의 오버플로도 흔히 발생하는 메모리 오버플로 예외다. 가바지 컬렉터가 클래스 하나를 회수해 가기 위한 조건은 생각보다 까다로운 편이다. 애플리케이션에서 빈번히 실행되는 코드가 동적 클래스를 많이 생성한다면 이 클래스들의 회수하는 시점에 특별히 신경써야 한다. CGLib으로 바이트 코드를 강화하는 것은 동적 언어뿐만 아니라 아래와 같은 경우에도 접할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;동적으로 JSP 파일을 생성하는 웹 사이트 또는 애플리케이션&lt;/li&gt;
+&lt;li&gt;OSGi 애플리케이션 (같은 클래스 파일이라도 다른 로더가 읽어 들였다면 다른 클래스로 간주)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JDK8부터 영구 세대 대신에 메타스페이스를 이용한다. 그레서 앞선 테스트들은 나오기 힘들지만 파괴적인 동작을 수행하는 걸 방지하기 위해 핫스팟은 여전히 메타스페이스 보호용 매개변수를 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-XX:MaxMetaspaceSize: 메타스페이스의 최대 크기를 설정한다.&lt;/li&gt;
+&lt;li&gt;-XX:MetaspaceSize: 메타스페이스의 초기 크기를 바이트 단위로 지정할 수 있다. 이 크기가 가득 차면 가비지 컬렉터가 클래스 언로딩을 시도한 다음 크기를 조정한다. 클래스 언로딩으로 공간이 넉넉하게 확보됐다면 이 값을 줄이고 많이 확보하지 못했다면 적절한 값으로 증가시킨다.&lt;/li&gt;
+&lt;li&gt;-XX:MinMetaspaceFreeRatio: 가비지 컬렉션 후 가장 작은 메타스페이스 여유 공간의 비율을 정한다. 이 값을 조절해 메타스페이스 공간이 부족해 발생하는 가비지 컬렉션 빈도를 줄일 수 있디.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;네이티브 다이렉트 메모리 오버플로우&lt;/h3&gt;
+&lt;p&gt;다이렉트 메모리에서 발생한 오버플로의 특징은 힙 덤프 파일에서는 이상한 점을 찾을 수 없다는 것이다.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
@@ -1851,6 +1904,21 @@
     opacity: 0.7;
   }
   
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥까지 파헤치기 챕터1 자바 기술 시스템 소개]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch01-%EC%9E%90%EB%B0%94-%EA%B8%B0%EC%88%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch01-자바-기술-시스템-소개/</guid><pubDate>Sat, 12 Oct 2024 15:28:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
