@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 26 Oct 2024 00:17:01 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 ch02 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM 밑바닥까지 파헤치기책을 참고하여 작성된 글이다.  자바 메모리 영역과 메모리 오버플로 들어가며 메모리 관리 측면에서 C,C…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch02-%EC%9E%90%EB%B0%94-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%AD%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch02-자바-메모리-영역과-메모리-오버플로/</guid><pubDate>Sat, 26 Oct 2024 09:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Oct 2024 09:44:33 GMT</lastBuildDate><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-출사표/</guid><pubDate>Sun, 27 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEYElEQVQ4yzVUa1MTVxjOn2mnttOZjlP7pTMdB6u1OraiQtRaCxLQCkpCSAxINCEJAUISYgSDIOGSLLmS7DWbJcitELO3bAimTWTPbrx1pl/8C50FnTkf3jkzz/s873Pe56gAi4p0CrCIyKIyh77bJWUWkVgEsDBgEInDAYcBBgYMLBVxkYUlJgWYlEinRSalAhwqsgh4EZfz0d2txEpqulqAX9Gw0o7DxEJyfyd22KW2AQEaruRT/+SXAXsIZhGZx3lqtgy7fK6+hclBejVCr0Lv93Kv6XQV91UxD8jHy1gg0vjZlrd7NRffzoZkDtmnU6p9Bvm3nJ0P2Hr17bnYeA0dWc+Gn44ZZkZ7VmKP3uwslfBAbWupXkivP7gixNw8Ob/3PCzxyrCKbMCitXwSCrqC08OVzbjj91Paqye7ulutNuMbgVxwa0OuTnjWwW0tvy6vvFxdrG5FlKGYtOrAMMWb9CPTrEtfZ7FF9TGdpsloNUw8skrbMXi8oxy8uebSeC8dpZbGd6BBNjFS54lPzBwmMijV2VBwNIsbYfTqt+ae1nsWg3dsoLQemexr2gzcqkIDafWXSV/fdsjGQFaZw0QaVkk8Blj0bWUt6uxEPHdeFeCx00duXjltHNCGg57ErONe28/GloaHzUeHzn4e9fdvh+2rS26pSIh0WmGul3McZAsYL7wgnm3a1Ust38S9uk0yRM05Fn0mQ09bYPyB875mdEDzIru4EfWS6Wf1IiEysApwuCRQ/JL55cyfa70/btmaStRc2Gead3an5t0C4p80t82NmxDIu0PMFch5FplgI3b5ECxxmCRQfyPDq87mCup/+/I5GX/S0tygPv994LF9j8/V6DS8MIpDXiI2UV6PZIK2XXJKFjIHYB4HAlWFh9IOdWLB82Evkx047778dWjs7iYyNXL3l8BoLwm5c4nHRNSfnLb6zDe2l30STwAGUUk8IZWoctKxN9Xade246d6t55C7ln36obYm5hPlZVfIrB7pbhwb6es3to/ZtXsLnaXoQ6lIfmSul3NCzFqZ+sPQdsLUccbfrzb3XndZO4csd0adhsfDWouuKehsb7t8fNpj3F827y47QPGTbHk3J8QHwZxG19Iwbde8jevygY7CTNe1xu9uXz9ZCHbzkOk/asimb/Y7uyTUXk6PiCx2CMbAgWG489KVX48hvtuViEEI6d9hFr3mp0WP9j1hrcT66YAO7mvGbTfop3cruAtw+OFTofUSuRL393b/FvQYmCfav1wd3EwPSN2/dfWHicH2GqSnjOcSTV8lLx5JXjwSb/xizdYKhIyyYYDH6gK+ngknYzNEOrizOMTOWkqxYZl0WXrUkcn+avQB3nmK0p3J6s5S+nPZ2yc2LNcBq/wQimyRRfYZtEojNRoVC7BYSANGCbnIYoAnZJ6QWUz6eFDAICIDiyxysNtFQmQRuYjXS0RdyMgCKZcyslIQr0tkXSDlolJLyk0GFAnAY0qQlEgi/wPnRxWBXoxHrwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일&quot;
+        title=&quot;썸네일&quot;
+        src=&quot;/static/eba36e9725a5f7e95580bb91114107ef/2bef9/thumbnail.png&quot;
+        srcset=&quot;/static/eba36e9725a5f7e95580bb91114107ef/6f3f2/thumbnail.png 256w,
+/static/eba36e9725a5f7e95580bb91114107ef/01e7c/thumbnail.png 512w,
+/static/eba36e9725a5f7e95580bb91114107ef/2bef9/thumbnail.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;도입&lt;/h2&gt;
+&lt;p&gt;이번에 인프런 워밍업 클럽이 실질적으로 종료가 되었다. 정말 힘들고 알 찬 경험이었다. 하지만 조금 쉬고 싶지만 쉬는과 동시에 나는 나태함이라는 지옥에 빠질 확률이 높다. 그래서 나는 **&apos;성빈 클럽&apos;**이라는 것을 개최하려고 마음을 먹었다.&lt;/p&gt;
+&lt;h2&gt;본론&lt;/h2&gt;
+&lt;h3&gt;성빈 클럽 개최 이유&lt;/h3&gt;
+&lt;p&gt;그럼 성빈클럽을 개최한 이유는 나 자신때문일까? 그렇지는 않다. 바로 나의 성장도 있지만 참여자 &lt;strong&gt;모두의 성장&lt;/strong&gt;을 바라기 때문이다. 또한 제대로 된 &lt;strong&gt;학습&lt;/strong&gt;을 바라기에 이 스터디 클럽을 개설한 이유이다.&lt;/p&gt;
+&lt;p&gt;제대로 된 학습이 무엇일까? 먼저 학습의 정의부터 가보자. 학습이란 배워서 익히는 일이라고 한다. 하지만 모든 공부에 있어서 배우는 학만 하시고 익히는 습을 안 하시는 분들이 많으신 것 같다. 어느 교육을 듣든간에 들어오는 학만큼 습을 하지 아니한다면 과연 제대로 된 학습이 될 수 있을까?&lt;/p&gt;
+&lt;p&gt;내가 개최한 성빈 클럽에서는 참여자들과 나의 제대로 된 학습을 기반으로 진행을 할 예정이다. 방식 자체는 인프런 워밍업 클럽과 유사하다. 하지만 여기서 나는 참여자들의 수준에 따른 수준 별 미션이 별도 제공이 될 예정이고 이 미션들은 내가 순수 작업할 예정이다. 또한 같이 모르는 것에 대해 깊이 있고 심도 있는 내용을 다뤘으면 하는 바람이다. 물론 이미 미션을 수행하는 것에서 해당 주제에 심화 부분까지 다룰 예정이기때문에 학습은 제대로 할 수 있다고 본다.&lt;/p&gt;
+&lt;p&gt;물론 나의 성장도 도움이 될 것이다. 새싹이 혼자 자라는 것보다 같이 다른 식문들과 자랄 때 더 큰 성장의 효과를 본다고 한다. 우리 인간도 마찬가지다. 인간이 성장하는 것은 혼자 성장하는 것보다 같이 성장하는 것이 더 큰 효과와 수치를 보일 수 있을 것이다.&lt;/p&gt;
+&lt;h3&gt;WDD (Why Driven Development)&lt;/h3&gt;
+&lt;p&gt;**WDD(Why Driven Development)**란 왜 주도 개발이라는 내가 만든 용어이다. 뭐든지 무엇을 하든 &apos;왜&apos;라는 물음을 항상 생각한다. 즉, 무얼 학습하더라도 해당 기술이나 이론에 대한 **‘당위성’**을 스스로 제시할 수 있을정도로 열심히 해야한다. 예컨데 이걸 왜 사용해야하는지, 이 기술이 왜 등장했는지등 이런 질문들을 스스로에게 끊임없이 진행해야한다.&lt;/p&gt;
+&lt;p&gt;이런 방법론을 성빈클럽에도 적용할 예정이다. 항상 왜 사용하는지에 대한 끊임없는 물음을 통해 나와 참여자들이 공동성장을 바랬으면 하는 바람이다.&lt;/p&gt;
+&lt;h2&gt;마무리&lt;/h2&gt;
+&lt;p&gt;출사표는 이걸로 마무리를 지어보려 한다. 나의 대규모? 스터디인 만큼 잘 진행해서 이 스터디 클럽이 끝났을때 조금의 성장이라도 이뤘으면 하는 바람이다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 ch02 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM 밑바닥까지 파헤치기책을 참고하여 작성된 글이다.  자바 메모리 영역과 메모리 오버플로 들어가며 메모리 관리 측면에서 C,C…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch02-%EC%9E%90%EB%B0%94-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%AD%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch02-자바-메모리-영역과-메모리-오버플로/</guid><pubDate>Sat, 26 Oct 2024 09:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
