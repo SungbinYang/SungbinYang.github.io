@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Oct 2024 09:48:48 GMT</lastBuildDate><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-출사표/</guid><pubDate>Sun, 27 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Oct 2024 10:16:46 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터2 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Sun, 27 Oct 2024 19:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 458px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 130.859375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAEDAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAfblxTuMriaiKP/EABkQAAIDAQAAAAAAAAAAAAAAAAABAhARIP/aAAgBAQABBQI3RVGmxC4//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGBAAAwEBAAAAAAAAAAAAAAAAASAxABD/2gAIAQEABj8CQ8mhX//EABoQAAIDAQEAAAAAAAAAAAAAAAABESExQSD/2gAIAQEAAT8hbvRcuMah6KwsILk7iiM1YY8f/9oADAMBAAIAAwAAABCcG43/xAAXEQEBAQEAAAAAAAAAAAAAAAABABAR/9oACAEDAQE/EFRCLhn/xAAXEQEBAQEAAAAAAAAAAAAAAAABABAR/9oACAECAQE/EAEWbrn/xAAdEAEAAwEAAgMAAAAAAAAAAAABABEhMUFRYdHw/9oACAEBAAE/EEKRUbPBvIjpt+ILUI74lU3cKabfcRo6zGfrlPcW4fcFIPC9lHqUeoE//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일&quot;
+        title=&quot;썸네일&quot;
+        src=&quot;/static/6f4fdad8a4449334ff8d7722b46c646c/f7c3c/thumbnail.jpg&quot;
+        srcset=&quot;/static/6f4fdad8a4449334ff8d7722b46c646c/e4a55/thumbnail.jpg 256w,
+/static/6f4fdad8a4449334ff8d7722b46c646c/f7c3c/thumbnail.jpg 458w&quot;
+        sizes=&quot;(max-width: 458px) 100vw, 458px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;가비지 컬렉터와 메모리 할당 전략&lt;/h2&gt;
+&lt;h3&gt;들어가며&lt;/h3&gt;
+&lt;p&gt;가비지 컬렉션의 역사는 자바보다 오래되었다. 가비지 컬렉션이 처리해야 할 문제를 제기하였다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어떤 메모리를 회수해야 하나?&lt;/li&gt;
+&lt;li&gt;언제 회수해야 할까?&lt;/li&gt;
+&lt;li&gt;어떻게 회수해야 할까?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;오늘날 동적 메모리 할당과 가비지 컬렉션 기술은 상당히 발전되었다. 왜 가비지 컬렉션과 메모리 할당의 내부를 이해해야 할까?&lt;/p&gt;
+&lt;p&gt;정답은 다양한 메모리 오버플로우와 누수 문제를 해결해야 하는 상황이나 더 높은 동시성을 달성하는 데 가비지 컬렉션이 방해가 되는 상황때문이다.&lt;/p&gt;
+&lt;p&gt;자바 힙과 메서드 영역은 요구하는 메모리 크기가 다를 수 있다. 그래서 이 메모리 영역들의 할당과 회수는 동적으로 이루어진다. 가비지 컬렉터는 바로 이런 영역을 관리하는 데 집중한다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-출사표/</guid><pubDate>Sun, 27 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -122,7 +246,7 @@
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 ch02 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM 밑바닥까지 파헤치기책을 참고하여 작성된 글이다.  자바 메모리 영역과 메모리 오버플로 들어가며 메모리 관리 측면에서 C,C…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch02-%EC%9E%90%EB%B0%94-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%AD%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch02-자바-메모리-영역과-메모리-오버플로/</guid><pubDate>Sat, 26 Oct 2024 09:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터2 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM 밑바닥까지 파헤치기책을 참고하여 작성된 글이다.  자바 메모리 영역과 메모리 오버플로 들어가며 메모리 관리 측면에서 C,C…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch02-%EC%9E%90%EB%B0%94-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%AD%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch02-자바-메모리-영역과-메모리-오버플로/</guid><pubDate>Sat, 26 Oct 2024 09:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
