@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Oct 2024 21:54:49 GMT</lastBuildDate><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[이번 미션을 통해 나는 JVM에 대해 좀 더 깊게 공부를 할 수 있었으며, System.out.println()이 어떻게 구성되어 있고 동작하는지 볼 수 있는 기회였다. 그럼 문제풀이 시작해보겠다. 초급 문제1 JVM(Java Virtual…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EB%AF%B8%EC%85%981/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-미션1/</guid><pubDate>Tue, 29 Oct 2024 06:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Oct 2024 22:26:31 GMT</lastBuildDate><item><title><![CDATA[성빈 클럽 미션1]]></title><description><![CDATA[이번 미션을 통해 나는 JVM에 대해 좀 더 깊게 공부를 할 수 있었으며, System.out.println()이 어떻게 구성되어 있고 동작하는지 볼 수 있는 기회였다. 그럼 문제풀이 시작해보겠다. 초급 문제1 JVM(Java Virtual…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EB%AF%B8%EC%85%981/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-미션1/</guid><pubDate>Tue, 29 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -64,7 +64,7 @@
 &lt;p&gt;위의 문제에 대한 내 생각은 다음과 같다. 주석은 코드의 가독성을 높이고 코드의 기능을 설명하거나 매래에 수정할 때 참고할 수 있는 정보를 제공한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;단일 라인 주석: // 주석내용&lt;/li&gt;
-&lt;li&gt;다중 라인 주석: /_ 여러줄의 주석 내용 _/&lt;/li&gt;
+&lt;li&gt;다중 라인 주석: /* 여러줄의 주석 내용 */&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;하지만 주석이 너무 무분별하게 적혀져 있으면 오히려 가독성이 떨어지는 부분이 있다. 이 부분은 사람마다 차이가 있으니 구글링으로 &apos;주석의 양면성&apos;에 대해 공부해보는 것도 좋을 것 같다.&lt;/p&gt;
 &lt;h3&gt;문제3&lt;/h3&gt;
