@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Oct 2024 12:37:13 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터3 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Sun, 27 Oct 2024 19:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 28 Oct 2024 21:43:58 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터3 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Sun, 27 Oct 2024 19:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -122,6 +122,326 @@
     opacity: 0.7;
   }
   
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[이번 미션을 통해 나는 JVM에 대해 좀 더 깊게 공부를 할 수 있었으며, System.out.println()이 어떻게 구성되어 있고 동작하는지 볼 수 있는 기회였다. 그럼 문제풀이 시작해보겠다. 초급 문제1 JVM(Java Virtual…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EB%AF%B8%EC%85%981/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-미션1/</guid><pubDate>Sun, 27 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEzElEQVQ4ywXB61dSBwAA8Psf7Pu2U2frcdaO85EvFNJCHj4oXB7zNQtrZGpJQUrpOrNcKaaWWk6Sh4rARDEBicsbBIX7AC4gYYGQhGVa2VptfdzvByw7dYgL9EBGL2T0uPUYYnY5Qcm0cHZ2UquWSaUCoXD0z7GhFac+iDm96FIAc/mxFQy1Qy4QgF2GjfByImyP+cEXqxbMIl2YFaYcxhUXU9nNdT+kpFJKjzMbziwuqj582Pn098tk1P0qhsXjEdhtBnyoGXZotX8NxGG5a1GgFdxSyvk/pmWRSERWUz2RgC8oKCTkZmm0qi8fk+P8wdITdMFA23oYhdxmwI9auB3XOi/Xrrtl0jEeZJi2GpV4QmEFjdzaUEE7SkhPz8jOyzOZdMmQqYxW+tWe9JpycgjWwZANQCGQ1drYxqSBgg6dbCiKLoALE8VEclUp8erZcnx21rEiUju7aXnZspMMS4ev0Yuyx++0JGJByG0BUMjQwKg9id+vHmgMrSjDywrt3HhORhYJl3GalvfNt3tw+bjz1WSbWbu7+yYRxcKoPr4ejEVXEdgCIJCxs5N7jn5UP9Eb9FoDsMGiV9afPtNwpo5zoa6Mdry2ppJ7odJkUAdDPh8GYQEUQZxul83tMgEIYn/7ZuO/z+9evd54/34r4IcwzP1ILLJaDduvIpsvn79OPn+7He/t7yOXlOUVknIKSIWUMhKFqlBMAl7f8uePOzqj8XI7t/t2j9WoDgSgwXu8GZlg1WsNhXyhkPdF/CmHy9373cEWxqnh35vO1tD3HTgkkwsBzL/yNAixWpsfT3SfIv408mB4603CqR61qx5CT/jP1rBELLi7vX6H11NbUzE31qUcabvBpKempcvlYsDncyY2wrKh6zwmvp6Wxm1jb26u+9xGtXKqq+vGdhy1gQre3T4vbPGtLHKuXiSXlJIoFAIhb35OAmB+V2wNC0M68WB7dXWF1aRZW8NiUcztsvXf67epRTLh/a6u31aWNJBtfqi/i0YvI1NJubgc5ZwEWF2F42E0FvZ++rz7z8ftd++SkecBv9exFoKf+e1X2JdEj+47DAp4BQzCeqdJwWD8kp2Ti8/PfTwvBUCDqm+w78HI3e7bN9s6OpsvswWiR5FIIBiEEcjq9Tg8iB11GwTC0RYWi3e3xwjOKuR85vlfNZpZQCKbwBccqTxBPpSSmpKZW0YtYja17GzFErHQ1mYkFvFFwnDcr+VwWPtTs4+fLHfqxahVkJKeNjklAOSKaRKxoKKYkHE4s4hKPVdJuXDp0pd/t7xOpVk3F4/6gm71OjLfeeN6biGxprbSrOj1mKTsRsbkBB+YkooJuMw6elFJCaWyumr/odSLVziIdYbXTOxln1r1mCIu5Qt49tp1TkZ+AeN01aKwY6qnhUrASSQCQPNkXjDyh2FmWCocamo8Ryk61tPbjTiNYzcZ4z1NSyr+mlO2Ac+0t7Ey84/U1/zM76wa45YfPLBvWioG/AF46YlM3NvqsqgcdsPVVua9gTsvk1HEoVpaeOA1Cf3WiYhrhsNu+Xrvwfycw7cbCm/V5n2/d49kWgggiM1m1YIaqdMOoqjTZFBbrVqPx+GB9BhqRt16yGXwwiatVskfH5VOj4PzIlApEgkf2pd0/wPQ4smZ3V+pqAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일&quot;
+        title=&quot;썸네일&quot;
+        src=&quot;/static/1cc49a7a61d843cdc95319531c69a69f/2bef9/01.png&quot;
+        srcset=&quot;/static/1cc49a7a61d843cdc95319531c69a69f/6f3f2/01.png 256w,
+/static/1cc49a7a61d843cdc95319531c69a69f/01e7c/01.png 512w,
+/static/1cc49a7a61d843cdc95319531c69a69f/2bef9/01.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이번 미션을 통해 나는 JVM에 대해 좀 더 깊게 공부를 할 수 있었으며, &lt;code&gt;System.out.println()&lt;/code&gt;이 어떻게 구성되어 있고 동작하는지 볼 수 있는 기회였다. 그럼 문제풀이 시작해보겠다.&lt;/p&gt;
+&lt;h2&gt;초급&lt;/h2&gt;
+&lt;h3&gt;문제1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JVM(Java Virtual Machine)이 자바 프로그램을 실행할 때 하는 주요 역할을 설명하세요. JVM이 자바 프로그램을 운영체제와 독립적으로 실행할 수 있게 해주는 이유는 무엇인가요?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 문제에 대한 내 생각은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JVM은 자바 프로그램이 운영체제와 독립적으로 실행될 수 있게 합니다. 자바 코드는 소스 파일에서 작성되며, 컴파일러에 의해 바이트코드로 변환된 후 JVM이 바이트코드를 해석하거나 기계어로 번역하여 실행한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JVM은 이러한 과정을 통해 자바 프로그램이 모든 플랫폼에서 일관된 방식으로 동작할 수 있도록 한다. 즉, JVM이 없다면 바이트코드를 실행할 수 없기 때문에 자바 프로그램이 운영체제와 상관없이 실행되지 못한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 667px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHuLYypP//EABcQAQEBAQAAAAAAAAAAAAAAAAEQIUH/2gAIAQEAAQUC66Rn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGhAAAwEAAwAAAAAAAAAAAAAAAREhABAxQf/aAAgBAQABPyFX1rIcAgt60HqnH//aAAwDAQACAAMAAAAQCy//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPxBX/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxAAAgMBAQEAAAAAAAAAAAAAAREAIUExkWH/2gAIAQEAAT8QAMXD5fs6QE6PyKwfsQ0Gq4OhDGTlMlaZ/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;부연설명&quot;
+        title=&quot;부연설명&quot;
+        src=&quot;/static/06f588f9f2f8a5d903d268be15e5ff29/e20b3/reference01.jpg&quot;
+        srcset=&quot;/static/06f588f9f2f8a5d903d268be15e5ff29/e4a55/reference01.jpg 256w,
+/static/06f588f9f2f8a5d903d268be15e5ff29/36dd4/reference01.jpg 512w,
+/static/06f588f9f2f8a5d903d268be15e5ff29/e20b3/reference01.jpg 667w&quot;
+        sizes=&quot;(max-width: 667px) 100vw, 667px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;문제2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;자바 주석을 사용하는 기본적인 이유를 설명하고, 주석을 작성하는 두 가지 방법을 각각 예시와 함께 설명하세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 문제에 대한 내 생각은 다음과 같다. 주석은 코드의 가독성을 높이고 코드의 기능을 설명하거나 매래에 수정할 때 참고할 수 있는 정보를 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;단일 라인 주석: // 주석내용&lt;/li&gt;
+&lt;li&gt;다중 라인 주석: /* 여러줄의 주석 내용 */&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하지만 주석이 너무 무분별하게 적혀져 있으면 오히려 가독성이 떨어지는 부분이 있다. 이 부분은 사람마다 차이가 있으니 구글링으로 &apos;주석의 양면성&apos;에 대해 공부해보는 것도 좋을 것 같다.&lt;/p&gt;
+&lt;h3&gt;문제3&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;System.out.println()&lt;/code&gt;을 사용하여 자기소개를 콘솔에 출력하는 프로그램을 작성하세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Resume&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;[] &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;안녕하세요, 경기도 시흥에 사는 양성빈입니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;만나서 반갑습니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;현재 저는 개발에 푹 빠져 있습니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;깃헙주소: &lt;a href=&quot;https://github.com/SungbinYang/Java/blob/main/java-start/src/mission/ch02/Resume.java&quot;&gt;https://github.com/SungbinYang/Java/blob/main/java-start/src/mission/ch02/Resume.java&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;중급&lt;/h2&gt;
+&lt;h3&gt;문제1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JVM의 내부 구조 중 클래스 로더, 실행 엔진, 메모리 관리 역할에 대해 간단히 기술하세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 문제에 대한 내 생각은 다음과 같다. JVM은 자바 프로그램의 실행을 담당하는 가상 머신으로, 바이트코드를 기계어로 해석하여 프로그램이 운영체제와 무관하게 동작할 수 있게 한다. 이제 JVM의 구조적 요소에 대해 살펴보겠다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;클래스 로더: 프로그램 실행 시 필요한 클래스를 메모리에 로드하여 중복 로드를 방지하고 클래스 간 의존성을 관리한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;실행엔진: 인터프리터와 JIT 컴파일러가 포함되어 있으며, 바이트코드를 기계어로 변환하여 실행 성능을 향상시킨다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;메모리 관리: 자바의 힙, 스택 메모리를 관리하며, JVM의 가비지 컬렉션을 통해 사용하지 않는 객체를 자동으로 제거하여 메모리 누수를 방지한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;문제2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;System.out.println()&lt;/code&gt;의 내부 동작 과정에서 &lt;code&gt;PrintStream&lt;/code&gt; 클래스가 어떻게 작동하는지 설명하세요. 또한 &lt;code&gt;println()&lt;/code&gt; 메서드가 어떤 방식으로 콘솔에 출력을 전달하는지 기술하세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;System.out&lt;/code&gt;은 &lt;code&gt;PrintStream&lt;/code&gt; 객체로, &lt;code&gt;System.out.println()&lt;/code&gt;이 호출되면 &lt;code&gt;PrintStream&lt;/code&gt; 클래스의 &lt;code&gt;println()&lt;/code&gt; 메서드가 작동하여 텍스트를 출력 스트림으로 보낸다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 799px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.95312500000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACB0lEQVQ4y5WS2XLbMAxF/SVpGm/aRS0Utcu2LEuOk4fOtP//KadDyomTmYybPlwBFMAzAIHF2Et+Tzl/hoTEdXh6DHjaCB6XPg8PFg8/7P/SIrAVwi2oxR4VdcSiQmQ7grjCclLWVsTGilhvI9ZW/IV0PGa5Efxc+izWtmRlp2z9HDtsSbI9cdrh+C1u2OJHLaocyPIey1V3tXUUi62ToeUFFUF8JJYN+75i39c0XUlRFQRCsbHlt7TQHw10/IK1JYkSxfNLy+W143iqjVVlycqa8+7pCsxuQDtDJIrpueV8aTn0tbGpKlht5fXSfeh7yxqok6Mk52yAHf1QG7gvlKn+XxUa4FvvlpuzslLCOGM868oaDn3FaWrIioLlJv3eG9pegS9KMtViuyVF2fHyOvD6a0TVOxy/wgtrHL80XXxtZ1+zFjIfSdSRIh+p1ESdT9TFGdlcSJsXpDojszNJNhClhzvqieXxQ8tejis6XLHDCVvcoMXTZ+2L7upruzP+JxvtsbyStZW+DUXiBhVCju8Kk4Eom+ZzekLI6RZLP8Susv1yfkMDtGdgaC6+Aa6+PCELbWeIlgbq8y1nNEO9AR2JE5QE8cGU7wmtlrxqjFTZ4IZ62gOpOuJHHUXTUXUdMtctH8xAPgHdoMSPemTRmv07nhqiVJl32djXlfng672cY/L9n97Dv08I3Dk277u1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;코드&quot;
+        title=&quot;코드&quot;
+        src=&quot;/static/162035daf8a3c49a4839c93cacf5d0f3/76cea/reference02.png&quot;
+        srcset=&quot;/static/162035daf8a3c49a4839c93cacf5d0f3/6f3f2/reference02.png 256w,
+/static/162035daf8a3c49a4839c93cacf5d0f3/01e7c/reference02.png 512w,
+/static/162035daf8a3c49a4839c93cacf5d0f3/76cea/reference02.png 799w&quot;
+        sizes=&quot;(max-width: 799px) 100vw, 799px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PrintStream&lt;/code&gt;의 내부 &lt;code&gt;write()&lt;/code&gt; 메서드를 통해 출력 스트림에 데이터를 전달하고, 데이터를 효율적으로 출력하기 위해 버퍼링을 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 776px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.6875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB5UlEQVQ4y52T2W6bQBhG/SSOk9gwCzOA2RlsvGdp04tIVdX3f5BTDamTOEkVNxdHMCM4+r6fYdT3lofbOXcrwaYJebxz/Pre8vOhYVtrrieGydRyGSQDF5ea8VgwvlCMJ4qLN4xCmRDKGCliKtuxau9x7hvd8gcu35MVW3S1QecbonKHMC0zkTMN51xNYyZXEZPrF0batghdE8iSIGqI+htUuiSUDWHUYuodttyiohYZtSjToW2H0BWhR50y0qZBRDWByNHpkubxN/FqhfWp7BKhKoRuCFVJIPNXFB8yUqZBeqEsUFmHWW4IsxqZHJO/POylb/lQaJLlkGKeL2i6PbFbYwpHkvf4kRxl/5K+ZhD6JMOGLDG6paq2uPUtabkjsu4rwmpY+OtMFVjjcP2BuO+J593Zsmehn+FRKFQ5rJtqR7pYE5UOqauzU55U9jJ/FKr5mjrbkMQdNjmd4/9V9glUiY4a5lVP1q8p6x3atF9JWAxify5VVDMTBbPQkw/3oSgIxOfSk4SeNF6QNTeYxZ54cyDd3ZP2B1J3XvXhTzl+lFCXw9zy5oDt9th2jc0dIq4RSY0y9RlC2z4JZYGIKqx1dItb5tWBJNsjfcW/dc+Z43PlQBVPCVTJNMyYeUT27uXPEv4BQtLw/E6lRN0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;코드&quot;
+        title=&quot;코드&quot;
+        src=&quot;/static/f9de3e22f752b5e10f2688b6f9e45be2/167b5/reference03.png&quot;
+        srcset=&quot;/static/f9de3e22f752b5e10f2688b6f9e45be2/6f3f2/reference03.png 256w,
+/static/f9de3e22f752b5e10f2688b6f9e45be2/01e7c/reference03.png 512w,
+/static/f9de3e22f752b5e10f2688b6f9e45be2/167b5/reference03.png 776w&quot;
+        sizes=&quot;(max-width: 776px) 100vw, 776px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;println()&lt;/code&gt; 메서드는 운영체제의 개행 방식(\n 또는 \r\n)에 따라 자동으로 줄바꿈을 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;고급&lt;/h2&gt;
+&lt;h3&gt;문제1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JVM(Java Virtual Machine)의 구조와 역할을 상세히 설명하세요. JVM이 자바 프로그램을 실행하는 과정에서 클래스 로딩, 바이트코드 검증, JIT 컴파일 등이 수행되는 각 단계와 그 역할을 단계별로 서술하세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;JVM은 자바 프로그램을 실행하기 위해 클래스 로딩, 바이트코드 검증, 실행 엔진의 해석 및 컴파일 과정이 단계별로 수행된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스 로더(Class Loader): 자바 클래스 파일을 읽고 메모리에 로드한다. 클래스 간의 의존성을 검사하고, 프로그램이 필요로 하는 클래스를 적재한다.&lt;/li&gt;
+&lt;li&gt;바이트코드 검증(Bytecode Verifier): 로드된 바이트코드가 무결성을 지니고 있는지 검증한다. 이는 보안적 측면에서도 중요하며, 잘못된 메모리 접근이나 실행 오류를 방지한다.&lt;/li&gt;
+&lt;li&gt;실행 엔진(Execution Engine):
+&lt;ul&gt;
+&lt;li&gt;인터프리터: 바이트코드를 한 줄씩 해석하여 실행하므로 느리지만, 프로그램 시작 속도가 빠르다.&lt;/li&gt;
+&lt;li&gt;JIT 컴파일러: 실행 중 자주 호출되는 코드 블록을 기계어로 변환하여 성능을 최적화한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;메모리 관리(Memory Management): 힙, 스택 등의 메모리를 관리하고, 가비지 컬렉션을 통해 사용되지 않는 객체를 자동으로 삭제한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 과정을 통해 JVM은 자바 프로그램을 바이트코드에서 기계어로 변환하여 운영체제에서 실행할 수 있게 한다.&lt;/p&gt;
+&lt;h3&gt;문제2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;자바의 &lt;code&gt;System&lt;/code&gt; 클래스는 상속하거나 인스턴스화할 수 없도록 설계되어 있습니다. 이 설계가 자바의 객체지향 원칙에 어떻게 부합하는지 설명하고, 이로 인해 얻을 수 있는 장점에 대해 서술하세요. (힌트: 싱글톤 패턴과 캡슐화 관점에서 설명해 보세요.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;자바의 &lt;code&gt;System&lt;/code&gt; 클래스는 &lt;code&gt;final&lt;/code&gt;로 선언되어 있어 상속이 불가능하며, 생성자가 &lt;code&gt;private&lt;/code&gt;으로 선언되어 있어 인스턴스화할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50.78125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVQoz5WS3XKDIBCF8zBN5B+iEBEFjUnamd70/Z/mdECTNJ20nV4cVgf4dpezm2gvGNwbOvuKvrnAhnc0xw/oegIRHZjsQWUAXb+zKnbAjrqn2rxQh0oEkHxQdCC8A2UdiAigGaCGW+Q6Lv/lXAvC/YNyok3eYCpC1DPE/lgk7QWqPkHoCWp/hjQnSDOXJBkozFhiSaIiuE4l3oCNmVDrBGtGNCbBmRHKzRA+QfoA3Uco30M3A6rcGrFri/ab3AL0ZoLTIxQPUCyUyHQPVgfwxoM3XZHcL+/3m9YKE+rxCDr0IEOADAlCBWwrix1xN23Xyq6mPAVS4UGlx1ZYEH1ApQ8gsl0v3Vv5euknWAHmhWbnVATjEUzExSQzlcfOBmRXf4M8VshbhOaMtp5hUoJLJygTUT2MQ/sPoPDQegBjLajOI+RBbu3eB/avVq/AT5GSN8zoxkEJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;코드&quot;
+        title=&quot;코드&quot;
+        src=&quot;/static/ac9ae7c3c8b04a6417b00be4fbd74839/d8f62/reference04.png&quot;
+        srcset=&quot;/static/ac9ae7c3c8b04a6417b00be4fbd74839/6f3f2/reference04.png 256w,
+/static/ac9ae7c3c8b04a6417b00be4fbd74839/01e7c/reference04.png 512w,
+/static/ac9ae7c3c8b04a6417b00be4fbd74839/d8f62/reference04.png 601w&quot;
+        sizes=&quot;(max-width: 601px) 100vw, 601px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;이 설계는 &lt;code&gt;System&lt;/code&gt; 클래스가 전역적으로 사용되는 리소스를 관리하는 역할을 하며, 싱글톤 패턴을 통해 의도치 않은 객체 생성을 방지한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;또한, 외부에서 접근할 수 없는 내부 데이터는 캡슐화로 보호되어, 프로그램의 안정성을 높인다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;상속과 인스턴스화를 차단함으로써 &lt;code&gt;System&lt;/code&gt; 클래스의 불필요한 확장과 사용을 막아, 리소스의 무결성과 일관성을 유지할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 참고자료&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://devham76.github.io/java/jvm/&quot;&gt;https://devham76.github.io/java/jvm/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-출사표/</guid><pubDate>Sun, 27 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
