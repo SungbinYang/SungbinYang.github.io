@@ -1,4 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 03 Nov 2024 03:30:32 GMT</lastBuildDate><item><title><![CDATA[성빈 클럽 자바 입문 회고록]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-자바-입문-회고록/</guid><pubDate>Sun, 03 Nov 2024 11:39:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 03 Nov 2024 03:37:54 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[회고록 어느덧 인프런 워밍업 스터디 클럽…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-회고록/</guid><pubDate>Sun, 03 Nov 2024 12:34:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
+        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
+/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
+/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
+/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;회고록&lt;/h2&gt;
+&lt;p&gt;어느덧 인프런 워밍업 스터디 클럽 2기가 수료식까지 마무리가 되었습니다. 처음 이 스터디 클럽을 신청할때 &quot;과연 이 스터디 클럽이 마무리가 되었을 때 정말 얼마나 나 자신이 성장을 할 수 있을까?&quot;라는 생각을 하게 되었습다. 그리고 지금 마무리 시점에서 정말로 성장을 할 수 있었다는 생각을 들게 되었습니다.&lt;/p&gt;
+&lt;p&gt;이번에 배운 클린코드와 테스트코드는 지식 자체도 내가 어려운 부분이라 조금은 걱정이 되었지만 미션과 강의를 학습하면서 이제 나에게 &lt;strong&gt;두려움의 대상에서 친구의 대상&lt;/strong&gt;이 되었던 것 같습니다! 그럼 이제 본격적으로 후기를 작성해보겠습니다.&lt;/p&gt;
+&lt;h3&gt;수료식&lt;/h3&gt;
+&lt;p&gt;오프라인 수료식에 조금 일찍 도착한 나는 같이 학습한 러너분 한분과 커피 한잔을 하고 인프랩 사무실에 도착했습니다. 명찰을 나눠주신 임직원분께서 익숙한 얼굴이라 하시면서 친근히 맞이해주셨습니다.&lt;/p&gt;
+&lt;h4&gt;네트워킹&lt;/h4&gt;
+&lt;p&gt;테이블에 앉고 다른 러너분들도 슬슬 들어오시기 시작하셨습니다. 그리고 같은 테이블에 디스코드로만 뵙던 러너분들과 인사를 하면서 서로의 소개를 하고 같이 서로의 context를 공유를 하였습니다.&lt;/p&gt;
+&lt;h4&gt;저녁식사&lt;/h4&gt;
+&lt;p&gt;저녁은 스터디별로 진행이 되었고 인프랩 측에서 맛있는 피자를 준비해주셨고 우빈님께서 각 테이블을 돌아다니시면서 재밌는 이야기를 많이 나누곤 했습니다.&lt;/p&gt;
+&lt;h4&gt;질의응답&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAWopnZUCCa3nJGmFf//EABwQAAIBBQEAAAAAAAAAAAAAAAECAwQREiAiMf/aAAgBAQABBQKo8jJzIuZwWCI4ldu9v//EABkRAAEFAAAAAAAAAAAAAAAAAAABEBESIf/aAAgBAwEBPwFZsa//xAAVEQEBAAAAAAAAAAAAAAAAAAAgMf/aAAgBAgEBPwGD/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAECERIgMf/aAAgBAQAGPwKIixYidOh93//EABsQAAICAwEAAAAAAAAAAAAAAAERAFEQIUEg/9oACAEBAAE/IX1XNzIVQ5LQNs3yHBsRYeDWH5//2gAMAwEAAgADAAAAEHzT/P/EABcRAQADAAAAAAAAAAAAAAAAAAEAEHH/2gAIAQMBAT8QKjV//8QAGREAAgMBAAAAAAAAAAAAAAAAAREAECFR/9oACAECAQE/EAgfZl//xAAbEAEAAwEAAwAAAAAAAAAAAAABABEhEDFhkf/aAAgBAQABPxBlCLd09RSaG01YZDN05UHhBKgayGPCyofWaJtMSS8IRfnhz//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;이미지&quot;
+        title=&quot;이미지&quot;
+        src=&quot;/static/a95f4968d6ec82b2721827b2321f8b45/72e01/02.jpg&quot;
+        srcset=&quot;/static/a95f4968d6ec82b2721827b2321f8b45/e4a55/02.jpg 256w,
+/static/a95f4968d6ec82b2721827b2321f8b45/36dd4/02.jpg 512w,
+/static/a95f4968d6ec82b2721827b2321f8b45/72e01/02.jpg 1024w,
+/static/a95f4968d6ec82b2721827b2321f8b45/47311/02.jpg 1080w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;사전에 미리 받으신 질문들에 대해 우빈님께서 질의응답을 해주셨고 여러 질문들에 대해서 나도 많이 얻고 깨닫는 부분이 있었고 질문을 해주신 러너분들과 답변을 해주신 우빈님께 감사의 인사를 드리고 싶었습니다.&lt;/p&gt;
+&lt;h4&gt;우수러너 시상식&lt;/h4&gt;
+&lt;p&gt;어느덧 우수러너 시상식이 시작되었습니다. 솔직한 마음으로 나름 &quot;나도 받지 않을까?&quot;라는 마음이 없지는 않았지만 그래도 큰 기대는 하지 않았습니다. 솔직히 이번 과제를 0기때보다 열심히 하질 못한 것 같다는 죄책감에 다른 분들이라도 받으셨으면 좋겠다라는 생각을 하게되었습니다. 하지만 예상 밖으로 제가 &lt;strong&gt;우수러너&lt;/strong&gt;에 당첨이 되었습니다! 정말 믿을 수가 없었습니다. 우수러너로 1:1 멘토링권과 인프랩측에서 준비한 굳즈를 받게 되었고 너무 행복했습니다! 굳즈도 정말 &lt;strong&gt;이븐&lt;/strong&gt;한 굳즈들이였습니다! 또한 더욱 즐거웠던건 제가 아는 러너분들도 우수러너에 선정되었다는게 매우 좋았습니다.&lt;/p&gt;
+&lt;h3&gt;마지막&lt;/h3&gt;
+&lt;p&gt;&apos;인프런 워밍업 스터디 클럽&apos;이 다른 기업의 교육프로그램인 &apos;우x코&apos;처럼 커지기를 바라며 3기가 개최가 되고 저에게 다시 기회가 온다면 참여해보고 싶다는 생각을 하며 이 글의 마침표를 적어봅니다. 또한 다 같이 성장이라는 모토로 더욱 거대한 클럽이 되었으면 하는 마음으로 이 글을 마무리합니다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[성빈 클럽 자바 입문 회고록]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-자바-입문-회고록/</guid><pubDate>Sun, 03 Nov 2024 11:39:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -3734,156 +3884,6 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day18 미션]]></title><description><![CDATA[회고록 어느덧 인프런 워밍업 스터디 클럽…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-회고록/</guid><pubDate>Wed, 23 Oct 2024 20:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAB7CAAAewgFu0HU+AAADS0lEQVQ4yz2SfUjcdRzHvxqRkdEoG6w2tHmMyZbiTciShvPmvPMef/foPXgPv9/dbZ3O0zNtutD1YJK1sDHWyqbYgqgt9sf+KBxk0ePAYOEf0oKCkIhWUretlt7v94rf3eiPL3z++by/3+/r/RKW0HVswd+paGqkylhLm2mS8GFwJQq4EhquBMUjyfw/u2QNV2oDZxx8KY1YH9hjGvu7VMT0W39gjcDw+Du0tNlwR6/iVvSlQnG5NGs443r4P0jyTZzJdayZG7hlGJuCsx9qLC3B7ByIlR8g9TRkjkBq4DdcMkjK7TD5Oi9MnCObPcmz4+c5/eYcR55ZxBEBXxw8SRh7VePjBbjy5yoX175FTM+oLH4F+wPgiOkvUvEnwBFfx6es4w0nCCoSsXQE84Enac2cwCSv0qYs44irSKkCS1/CzC+f03r1KMJ/EE7OrOBLXsMpgy8KLQPfUDFvpmpC5u4zrdxxuhHRb0C8XIe42IxYfILNswN4IxoOGXLHYOm7NX789RZC/5o18hce5RZORcUXAcPoK4hLdYjZXYj+akTwYcRZIyK0lbKJekSsktqXjhMIgyup0um/TCA6R/YoCCmhFVn4Ujp8FU8E6gbfQLxbgzjfhNj3IKLxPsSwAWGoRFx4DLHwCA0vfkBXBKzRPDsb+tht7MXarSFKOmhIugqyihQH61N5qjsPc+e2rZTltlN+qp5y9xbKpndRnt3OTu8kZiVfRKRbYI/+TZu0jFvZuB2oh8VVnMkC9t5/cesNxqBD+h4xZUMM7kDsq0Gc2kFtz/tYOvI8Wn2A5sYxnHKBwEG9RLCEKTHUJfakSrdZgj9jj+kqzTH/nqB9sILOfkFnSNA8KogOm/DHJ6ivPURTQw5LpCR4brzA869pCG9Kw38ITO4VHqqJsukBI4+3f0Y8+wk9Q15yQyn6h9I8N5Um29dL35CHcOZr7HqZMVBy8PrbGqOT0DNSDIQ9e+e5q2ILxj0mGow27tnUgrlrrehlRwjMIWgPgDkC5q6Sr864SiwLX1zOc2X5GuNTNzh2nFLgNkOCynvvZ2+rn6rN9QS7R/jo0irTM1oRtC9dwJ3cwCOrOHrzSOl1bN2QGdFY+PQm5y78hDOWL6L6D1V+fv4FPhP9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;banner&quot;
-        src=&quot;/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png&quot;
-        srcset=&quot;/static/6eafdc06d45f840680ba9adf321b5737/6f3f2/01.png 256w,
-/static/6eafdc06d45f840680ba9adf321b5737/01e7c/01.png 512w,
-/static/6eafdc06d45f840680ba9adf321b5737/2bef9/01.png 1024w,
-/static/6eafdc06d45f840680ba9adf321b5737/c1b63/01.png 1200w&quot;
-        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;회고록&lt;/h2&gt;
-&lt;p&gt;어느덧 인프런 워밍업 스터디 클럽 2기가 수료식까지 마무리가 되었습니다. 처음 이 스터디 클럽을 신청할때 &quot;과연 이 스터디 클럽이 마무리가 되었을 때 정말 얼마나 나 자신이 성장을 할 수 있을까?&quot;라는 생각을 하게 되었습다. 그리고 지금 마무리 시점에서 정말로 성장을 할 수 있었다는 생각을 들게 되었습니다.&lt;/p&gt;
-&lt;p&gt;이번에 배운 클린코드와 테스트코드는 지식 자체도 내가 어려운 부분이라 조금은 걱정이 되었지만 미션과 강의를 학습하면서 이제 나에게 &lt;strong&gt;두려움의 대상에서 친구의 대상&lt;/strong&gt;이 되었던 것 같습니다! 그럼 이제 본격적으로 후기를 작성해보겠습니다.&lt;/p&gt;
-&lt;h3&gt;수료식&lt;/h3&gt;
-&lt;p&gt;오프라인 수료식에 조금 일찍 도착한 나는 같이 학습한 러너분 한분과 커피 한잔을 하고 인프랩 사무실에 도착했습니다. 명찰을 나눠주신 임직원분께서 익숙한 얼굴이라 하시면서 친근히 맞이해주셨습니다.&lt;/p&gt;
-&lt;h4&gt;네트워킹&lt;/h4&gt;
-&lt;p&gt;테이블에 앉고 다른 러너분들도 슬슬 들어오시기 시작하셨습니다. 그리고 같은 테이블에 디스코드로만 뵙던 러너분들과 인사를 하면서 서로의 소개를 하고 같이 서로의 context를 공유를 하였습니다.&lt;/p&gt;
-&lt;h4&gt;저녁식사&lt;/h4&gt;
-&lt;p&gt;저녁은 스터디별로 진행이 되었고 인프랩 측에서 맛있는 피자를 준비해주셨고 우빈님께서 각 테이블을 돌아다니시면서 재밌는 이야기를 많이 나누곤 했습니다.&lt;/p&gt;
-&lt;h4&gt;질의응답&lt;/h4&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 133.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAWopnZUCCa3nJGmFf//EABwQAAIBBQEAAAAAAAAAAAAAAAECAwQREiAiMf/aAAgBAQABBQKo8jJzIuZwWCI4ldu9v//EABkRAAEFAAAAAAAAAAAAAAAAAAABEBESIf/aAAgBAwEBPwFZsa//xAAVEQEBAAAAAAAAAAAAAAAAAAAgMf/aAAgBAgEBPwGD/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAECERIgMf/aAAgBAQAGPwKIixYidOh93//EABsQAAICAwEAAAAAAAAAAAAAAAERAFEQIUEg/9oACAEBAAE/IX1XNzIVQ5LQNs3yHBsRYeDWH5//2gAMAwEAAgADAAAAEHzT/P/EABcRAQADAAAAAAAAAAAAAAAAAAEAEHH/2gAIAQMBAT8QKjV//8QAGREAAgMBAAAAAAAAAAAAAAAAAREAECFR/9oACAECAQE/EAgfZl//xAAbEAEAAwEAAwAAAAAAAAAAAAABABEhEDFhkf/aAAgBAQABPxBlCLd09RSaG01YZDN05UHhBKgayGPCyofWaJtMSS8IRfnhz//Z&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;이미지&quot;
-        title=&quot;이미지&quot;
-        src=&quot;/static/a95f4968d6ec82b2721827b2321f8b45/72e01/02.jpg&quot;
-        srcset=&quot;/static/a95f4968d6ec82b2721827b2321f8b45/e4a55/02.jpg 256w,
-/static/a95f4968d6ec82b2721827b2321f8b45/36dd4/02.jpg 512w,
-/static/a95f4968d6ec82b2721827b2321f8b45/72e01/02.jpg 1024w,
-/static/a95f4968d6ec82b2721827b2321f8b45/47311/02.jpg 1080w&quot;
-        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;사전에 미리 받으신 질문들에 대해 우빈님께서 질의응답을 해주셨고 여러 질문들에 대해서 나도 많이 얻고 깨닫는 부분이 있었고 질문을 해주신 러너분들과 답변을 해주신 우빈님께 감사의 인사를 드리고 싶었습니다.&lt;/p&gt;
-&lt;h4&gt;우수러너 시상식&lt;/h4&gt;
-&lt;p&gt;어느덧 우수러너 시상식이 시작되었습니다. 솔직한 마음으로 나름 &quot;나도 받지 않을까?&quot;라는 마음이 없지는 않았지만 그래도 큰 기대는 하지 않았습니다. 솔직히 이번 과제를 0기때보다 열심히 하질 못한 것 같다는 죄책감에 다른 분들이라도 받으셨으면 좋겠다라는 생각을 하게되었습니다. 하지만 예상 밖으로 제가 우수러너에 당첨이 되었습니다! 정말 믿을 수가 없었습니다. 우수러너로 1:1 멘토링권과 인프랩측에서 준비한 굳즈를 받게 되었고 너무 행복했습니다! 굳즈도 정말 &lt;strong&gt;이븐&lt;/strong&gt;한 굳즈들이였습니다! 또한 더욱 즐거웠던건 제가 아는 러너분들도 우수러너에 선정되었다는게 매우 좋았습니다.&lt;/p&gt;
-&lt;h3&gt;마지막&lt;/h3&gt;
-&lt;p&gt;&apos;인프런 워밍업 스터디 클럽&apos;이 다른 기업의 교육프로그램인 &apos;우x코&apos;처럼 커지기를 바라며 3기가 개최가 되고 저에게 다시 기회가 온다면 참여해보고 싶다는 생각을 하며 이 글의 마침표를 적어봅니다. 또한 다 같이 성장이라는 모토로 더욱 거대한 클럽이 되었으면 하는 마음으로 이 글을 마무리합니다.&lt;/p&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) Day15 미션]]></title><description><![CDATA[이 블로그 글은 박우빈님의 인프런 강의와 워밍업클럽 2기 참조하여 작성한 글입니다. 미션 미션의 요구사항은 다음과 같다. Layered Architecture…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-Day15-%EB%AF%B8%EC%85%98/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-Day15-미션/</guid><pubDate>Fri, 18 Oct 2024 04:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
