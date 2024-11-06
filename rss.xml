@@ -1,4 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 03 Nov 2024 04:12:29 GMT</lastBuildDate><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 회고록]]></title><description><![CDATA[회고록 어느덧 인프런 워밍업 스터디 클럽…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-회고록/</guid><pubDate>Sun, 03 Nov 2024 12:34:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Nov 2024 12:16:35 GMT</lastBuildDate><item><title><![CDATA[우리의 스터디 클럽 자바 기초 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9A%B0%EB%A6%AC%EC%9D%98-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-%EC%9E%90%EB%B0%94-%EA%B8%B0%EC%B4%88-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/우리의-스터디-클럽-자바-기초-출사표/</guid><pubDate>Wed, 06 Nov 2024 20:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOklEQVQoz61STYuCUBQVhcw0M0TBxNz1I1q0KNqKOxHdCCK4so1KuxZtAskg+hn9xjPcNzxpgoEZaHG4h/Puve9+CbPZDJ+EoOs6I4Zh/Dv4PYZyCZxMJhNMp1NmNU2DqqpM5+AaB2mc85ihwvl8juVyCcuymHUcB57nMZ1AjqQtFgv2TiCdfFzXhe/7sG2bFSSMRiNst1tcLhckSYLb7Yb7/Y7n84kgCLDZbNC2LY7HI06nE7quQ5Zl2O12uF6vOJ/P6PseeZ5DFEUIVO5qtcLhcEAURWiaBkVRoKoqhGGI9XqNOI5R1zVLTEjTFPv9Ho/HA2VZsk+oGEmSvmdI/RPG4/EwF1mWh9kSJ5CPoihsGdSeaZpsHNQuaWwpfMvvW+MOnPO3V52SEuf2x9n8Br7lv5zRcDafPOwvKi8RxDzVJt0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일&quot;
+        title=&quot;썸네일&quot;
+        src=&quot;/static/25e4fb4df69cea6316c1a40dd14a8c9c/8c557/01.png&quot;
+        srcset=&quot;/static/25e4fb4df69cea6316c1a40dd14a8c9c/6f3f2/01.png 256w,
+/static/25e4fb4df69cea6316c1a40dd14a8c9c/01e7c/01.png 512w,
+/static/25e4fb4df69cea6316c1a40dd14a8c9c/8c557/01.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;도입&lt;/h2&gt;
+&lt;p&gt;해당 스터디의 출사표를 작성해보려고 한다. 지난 성빈 클럽을 운영해보면서 좋았던 점과 아쉬웠던 점을 풀어서 써보려고 한다. 그리고 해당 스터디가 왜 우리의 스터디 클럽으로 변경되었는지 그 이유와 이번 스터디에는 어떤 마음으로 운영을 할 것이며 어떤게 지난 스터디와 변경되었는지 알아보자.&lt;/p&gt;
+&lt;h2&gt;본론&lt;/h2&gt;
+&lt;h3&gt;지난 스터디의 회고&lt;/h3&gt;
+&lt;p&gt;지난 성빈클럽이라는 스터디는 내가 문제를 출제하고 참여자분들께서 풀고 디스코드 쓰레드에 올려주시면 제가 리뷰를 달고 하는 방식이였다. 감사하게도 열 분이나 참여를 해주셨고 그 분들것을 한분 한분 리뷰를 하다보니 너무 시간적인 소비가 많이 들었다. 또한 미션을 매일매일 제출하는 시스템이다 보니, 약간 해당 스터디가 숙제의 느낌을 너무 받았다. 그래서 다음 스터디도 개설을 할지가 고민이 많이 되었다. 참여자분들께 의견을 구해보았고 참여를 하고 싶은 의견이 100%로 만장일치가 되었고 조금 방식을 변경해보기로 생각하였다.&lt;/p&gt;
+&lt;h3&gt;우리의 스터디 클럽의 방향성&lt;/h3&gt;
+&lt;p&gt;지난 성빈 스터디 클럽은 이름 그대로 저의 스터디 클럽이고 제가 주최가 되어서 진행하는 방식이였다면 우리의 스터디 클럽은 주최가 우리 전부이다. 모두가 주최가 되어서 진행을 하게 되며 단순 제가 리뷰해주는 방식에서 모두가 리뷰해주는 방식으로 변경할 예정이다.&lt;/p&gt;
+&lt;p&gt;또한 블로그에 미션을 업로드하는 방식이였다면 이번에는 Github Organization을 생성하여 해당 레포에 PR을 올리고 리뷰를 해주는 방식으로 진행할 것이다. 또한 이전에는 인프런 워밍업 클럽 서버 안에 채널 안에서 운영해야해서 커스터마이징 하기가 힘들다는 단점에 새로운 디스코드 서버를 파기로 하였고 웹 훅을 이용해 코드리뷰 PR 알림을 디스코드와 연동해보기로 결정하였다.&lt;/p&gt;
+&lt;h3&gt;나 자신의 다짐&lt;/h3&gt;
+&lt;p&gt;이번에는 나도 적극 리뷰를 남겨보도록 할 것이다. 리뷰에 대한 압박감때문에 조금 두려웠는데 리뷰어를 해주신다는 분도 모셔와서 조금 활발하게 리뷰를 세세히 하게 할 수 있을 것 같다.&lt;/p&gt;
+&lt;h2&gt;마무리&lt;/h2&gt;
+&lt;p&gt;이름도 변경된 만큼 새로운 환경에 진입한 만큼 조금 더 재밌는 문제로 출제해보고 나 자신의 성장이 아닌 모두의 성장이 이룰 수 있도록 이 스터디가 많은 도움이 되었으면 좋겠다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[인프런 워밍업 스터디 클럽 2기 백엔드(클린코드, 테스트코드) 회고록]]></title><description><![CDATA[회고록 어느덧 인프런 워밍업 스터디 클럽…]]></description><link>https://sungbin.kr/%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%9B%8C%EB%B0%8D%EC%97%85-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-2%EA%B8%B0-%EB%B0%B1%EC%97%94%EB%93%9C(%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C)-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/인프런-워밍업-스터디-클럽-2기-백엔드(클린코드-테스트코드)-회고록/</guid><pubDate>Sun, 03 Nov 2024 12:34:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
