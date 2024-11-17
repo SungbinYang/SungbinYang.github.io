@@ -1,4 +1,190 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Nov 2024 12:16:35 GMT</lastBuildDate><item><title><![CDATA[우리의 스터디 클럽 자바 기초 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9A%B0%EB%A6%AC%EC%9D%98-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-%EC%9E%90%EB%B0%94-%EA%B8%B0%EC%B4%88-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/우리의-스터디-클럽-자바-기초-출사표/</guid><pubDate>Wed, 06 Nov 2024 20:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 17 Nov 2024 15:14:17 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터3 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Mon, 18 Nov 2024 00:10:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 458px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 130.859375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAEDAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAfblxTuMriaiKP/EABkQAAIDAQAAAAAAAAAAAAAAAAABAhARIP/aAAgBAQABBQI3RVGmxC4//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGBAAAwEBAAAAAAAAAAAAAAAAASAxABD/2gAIAQEABj8CQ8mhX//EABoQAAIDAQEAAAAAAAAAAAAAAAABESExQSD/2gAIAQEAAT8hbvRcuMah6KwsILk7iiM1YY8f/9oADAMBAAIAAwAAABCcG43/xAAXEQEBAQEAAAAAAAAAAAAAAAABABAR/9oACAEDAQE/EFRCLhn/xAAXEQEBAQEAAAAAAAAAAAAAAAABABAR/9oACAECAQE/EAEWbrn/xAAdEAEAAwEAAgMAAAAAAAAAAAABABEhMUFRYdHw/9oACAEBAAE/EEKRUbPBvIjpt+ILUI74lU3cKabfcRo6zGfrlPcW4fcFIPC9lHqUeoE//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일&quot;
+        title=&quot;썸네일&quot;
+        src=&quot;/static/6f4fdad8a4449334ff8d7722b46c646c/f7c3c/thumbnail.jpg&quot;
+        srcset=&quot;/static/6f4fdad8a4449334ff8d7722b46c646c/e4a55/thumbnail.jpg 256w,
+/static/6f4fdad8a4449334ff8d7722b46c646c/f7c3c/thumbnail.jpg 458w&quot;
+        sizes=&quot;(max-width: 458px) 100vw, 458px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;가비지 컬렉터와 메모리 할당 전략&lt;/h2&gt;
+&lt;h3&gt;들어가며&lt;/h3&gt;
+&lt;p&gt;가비지 컬렉션의 역사는 자바보다 오래되었다. 가비지 컬렉션이 처리해야 할 문제를 제기하였다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어떤 메모리를 회수해야 하나?&lt;/li&gt;
+&lt;li&gt;언제 회수해야 할까?&lt;/li&gt;
+&lt;li&gt;어떻게 회수해야 할까?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;오늘날 동적 메모리 할당과 가비지 컬렉션 기술은 상당히 발전되었다. 왜 가비지 컬렉션과 메모리 할당의 내부를 이해해야 할까?&lt;/p&gt;
+&lt;p&gt;정답은 다양한 메모리 오버플로우와 누수 문제를 해결해야 하는 상황이나 더 높은 동시성을 달성하는 데 가비지 컬렉션이 방해가 되는 상황때문이다.&lt;/p&gt;
+&lt;p&gt;자바 힙과 메서드 영역은 요구하는 메모리 크기가 다를 수 있다. 그래서 이 메모리 영역들의 할당과 회수는 동적으로 이루어진다. 가비지 컬렉터는 바로 이런 영역을 관리하는 데 집중한다.&lt;/p&gt;
+&lt;h3&gt;대상이 죽었는가?&lt;/h3&gt;
+&lt;p&gt;자바 세계에서 거의 모든 객체 인스턴스가 힙에 저장된다. 가바지 컬렉터가 힙을 청소하려면 가장 먼저 객체의 생사유무를 알아야 한다.&lt;/p&gt;
+&lt;h4&gt;참조 카운팅 알고리즘&lt;/h4&gt;
+&lt;p&gt;많은 교재에서 객체가 살아 있는지 판단하는 알고리즘은 아래와 같이 말한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;객체를 가리키는 참조 카운터를 추가한다. 참조하는 곳이 하나 늘어날 때마다 카운터 값을 1씩 증가시킨다.&lt;/li&gt;
+&lt;li&gt;참조하는 곳이 하나 사라질때마다 카운터 값을 1씩 감소시킨다.&lt;/li&gt;
+&lt;li&gt;카운터 값이 0이 된 객체는 더는 사용될 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하지만 자바 가상 머신에서는 참조 카운팅을 쓰지 않는다. 이 간결한 알고리즘에서도 고려해야 할 특이 상황이 적지 않고 모든 상황에서 문제없이 동작하게 하려면 계산할 게 상당히 늘어나기 때문이다.&lt;/p&gt;
+&lt;h4&gt;도달 가능성 분석 알고리즘&lt;/h4&gt;
+&lt;p&gt;오늘날의 주류 프로그래밍 언어들은 객체 생사 판단에 도달 가능성 분석 알고리즘을 이용한다. 이 알고리즘의 기본 아이디어는 GC루트라고 하는 루트 객체들을 시작 노드 집합으로 쓰는 것이다. 탐색 과정에서 만들어지는 경로를 참조 체인이라 한다. 그리고 어떤 객체와 GC 루트 사이를 이어주는 참조 체인이 없다면 이 객체는 더 이상 사용하는게 아닐 것이다.&lt;/p&gt;
+&lt;p&gt;자바에서 GC루트로 이용할 수 있는 객체는 아래와 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가상머신스택에서 참조하는 객체: 실행중인 메서드에서 쓰는 매개변수, 지역변수, 임시변수&lt;/li&gt;
+&lt;li&gt;메서드 영역에서 클래스가 정적 필드로 참조하는 객체: 자바 클래스의 참조 타입 정적 변수&lt;/li&gt;
+&lt;li&gt;메서드 영역에서 상수로 참조되는 객체: 문자열 테이블 안의 참조&lt;/li&gt;
+&lt;li&gt;네이티브 메서드 스택에서 JNI가 참조하는 객체&lt;/li&gt;
+&lt;li&gt;자바 가상 머신 내부에서 쓰이는 참조: 기본 데이터 타입에 해당하는 Class 객체, 일부 상주 예외 객체, 시스템 클래스 로더&lt;/li&gt;
+&lt;li&gt;동기화 락으로 잠겨 있는 모든 객체&lt;/li&gt;
+&lt;li&gt;자바 가상 머신 내부 상황을 반영하는 JMXBean: JVMTI에 등록된 콜백, 로컬 코드 캐시등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;세대 단위 컬렉션과 부분 컬렉션의 경우, 자바 힙의 일부 영역부터 분석을 시작한다. 또한 객체는 다른 영역에 있는 객체도 참조할 수 있으므로 연관된 영역의 객체들도 GC루트 집합에 포함시켜야 도달 가능성을 정확하게 분석할 수 있다.&lt;/p&gt;
+&lt;h4&gt;다시 참조 이야기로&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;강한 참조: 가장 전통적인 정의의 참조를 뜻한다. 즉, 프로그램 코드에서 참조를 할당하는 걸 말한다. 강한 참조 관계가 남아 있는 객체는 GC가 절대 회수하지 않는다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;부드러운 참조: 유용하지만 필수는 아닌 객체를 표현한다. 부드러운 참조만 남은 객체라면 메모리 오버플로가 나기 직전에 두 번째 회수를 위한 회수 목록에 추가된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;약한 참조: 부드러운 참조와 비슷하지만 연결 강도가 더 약하다. 약한 참조뿐인 객체는 다음번 GC까지만 살아 있다. GC가 동작하기 시작하면 메모리가 넉넉하더라도 약하게 참조된 객체는 모두 회수된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;유령참조: 참조 중에 가장 약함. 유령참조는 객체 수명에 아무런 영향을 주지 않으며 유령 참조를 통해 객체 인스턴스를 가져오는 것마저 불가능하다. 유령 참조를 거는 유일한 목적은 대상 객체가 회수될 때 알림을 받기 위해서다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;파이널 참조&lt;/p&gt;
+&lt;p&gt;참조 강도는 약한 참조와 유령 참조 사이로 &lt;code&gt;finalize()&lt;/code&gt; 메서드를 구현한 객체는 모두 파이널 참조의 대상이 되어 별도의 대기열에 등록되며 해당 객체에 도달할 수 있는 강한 참조, 부드러운 참조, 약한 참조가 모두 없어지면 finalize() 메서드 호출.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;살았나 죽었나?&lt;/h4&gt;
+&lt;p&gt;도달 가능성 분석 알고리즘이 &apos;도달 불가능&apos;으로 판단한 객체라고 해서 반드시 죽어야 하는 것은 아니고 유예단계가 남아 있다. GC루트와 연결된 참조 체인을 찾지 못한 객체에는 첫번째 표시가 이루어지면 이어서 필터링이 진행된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;필터링 조건&lt;/p&gt;
+&lt;p&gt;finalize() 메서드를 실행해야 하는 객체&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;finalize()가 필요없는 객체이거나 가상머신이 finalize()를 이미 호출한 경우 모두 실행할 필요없음으로 처리된다.&lt;/p&gt;
+&lt;p&gt;필터링이 되면 그 객체는 F-큐라는 대기열에 추가된다. 그러면 나중에 가상머신이 우선순위가 가장 낮은 종료자 스레드를 생성해 F-큐에 들어 있는 객체들의 finalize 메서드를 실행한다.&lt;/p&gt;
+&lt;p&gt;finalize 메서드를 통해 부활한 객체는 참조 체인상의 아무 객체와 다시 연결하면 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;finalize 사용X jdk9부터 폐기 대상&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;메서드 영역 회수하기&lt;/h4&gt;
+&lt;p&gt;메서드 영역의 가비지 컬렉션은 상수와 클래스를 회수한다. 다 쓴 상수를 회수하는 방법도 자바 힙에서 객체를 회수하는 방법과 매우 비슷하다.&lt;/p&gt;
+&lt;p&gt;다 쓴 상수는 이 리터럴을 누군가 쓰고 있는지 판단만 하면 되지만 클래스는 더 복잡하다. 아래의 3가지 조건을 동시에 만족해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이 클래스의 인스턴스가 모두 회수되었다. 즉, 자바 힙에는 해당 클래스와 하위 클래스의 인스턴스가 하나도 존재하지 않는다.&lt;/li&gt;
+&lt;li&gt;이 클래스를 읽어 들인 클래스 로더가 회수되었다. 이 조건은 OSGi나 JSP 리로딩처럼 세심하게 설계된 대안 클래스 로더 없ㅇ이는 충족하기 어렵다.&lt;/li&gt;
+&lt;li&gt;이 클래스에 해당하는 &lt;code&gt;java.lang.Class&lt;/code&gt; 객체를 아무 곳에서도 참조하지 않고 리플렉션 기능으로 이 클래스의 메서드를 이용하는 곳도 전혀 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[우리의 스터디 클럽 자바 기초 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%9A%B0%EB%A6%AC%EC%9D%98-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-%EC%9E%90%EB%B0%94-%EA%B8%B0%EC%B4%88-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/우리의-스터디-클럽-자바-기초-출사표/</guid><pubDate>Wed, 06 Nov 2024 20:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
@@ -2512,130 +2698,6 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터3 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Sun, 27 Oct 2024 19:13:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 458px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 130.859375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAEDAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAfblxTuMriaiKP/EABkQAAIDAQAAAAAAAAAAAAAAAAABAhARIP/aAAgBAQABBQI3RVGmxC4//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGBAAAwEBAAAAAAAAAAAAAAAAASAxABD/2gAIAQEABj8CQ8mhX//EABoQAAIDAQEAAAAAAAAAAAAAAAABESExQSD/2gAIAQEAAT8hbvRcuMah6KwsILk7iiM1YY8f/9oADAMBAAIAAwAAABCcG43/xAAXEQEBAQEAAAAAAAAAAAAAAAABABAR/9oACAEDAQE/EFRCLhn/xAAXEQEBAQEAAAAAAAAAAAAAAAABABAR/9oACAECAQE/EAEWbrn/xAAdEAEAAwEAAgMAAAAAAAAAAAABABEhMUFRYdHw/9oACAEBAAE/EEKRUbPBvIjpt+ILUI74lU3cKabfcRo6zGfrlPcW4fcFIPC9lHqUeoE//9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;썸네일&quot;
-        title=&quot;썸네일&quot;
-        src=&quot;/static/6f4fdad8a4449334ff8d7722b46c646c/f7c3c/thumbnail.jpg&quot;
-        srcset=&quot;/static/6f4fdad8a4449334ff8d7722b46c646c/e4a55/thumbnail.jpg 256w,
-/static/6f4fdad8a4449334ff8d7722b46c646c/f7c3c/thumbnail.jpg 458w&quot;
-        sizes=&quot;(max-width: 458px) 100vw, 458px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;가비지 컬렉터와 메모리 할당 전략&lt;/h2&gt;
-&lt;h3&gt;들어가며&lt;/h3&gt;
-&lt;p&gt;가비지 컬렉션의 역사는 자바보다 오래되었다. 가비지 컬렉션이 처리해야 할 문제를 제기하였다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;어떤 메모리를 회수해야 하나?&lt;/li&gt;
-&lt;li&gt;언제 회수해야 할까?&lt;/li&gt;
-&lt;li&gt;어떻게 회수해야 할까?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;오늘날 동적 메모리 할당과 가비지 컬렉션 기술은 상당히 발전되었다. 왜 가비지 컬렉션과 메모리 할당의 내부를 이해해야 할까?&lt;/p&gt;
-&lt;p&gt;정답은 다양한 메모리 오버플로우와 누수 문제를 해결해야 하는 상황이나 더 높은 동시성을 달성하는 데 가비지 컬렉션이 방해가 되는 상황때문이다.&lt;/p&gt;
-&lt;p&gt;자바 힙과 메서드 영역은 요구하는 메모리 크기가 다를 수 있다. 그래서 이 메모리 영역들의 할당과 회수는 동적으로 이루어진다. 가비지 컬렉터는 바로 이런 영역을 관리하는 데 집중한다.&lt;/p&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[성빈 클럽 출사표]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%84%B1%EB%B9%88-%ED%81%B4%EB%9F%BD-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/성빈-클럽-출사표/</guid><pubDate>Sun, 27 Oct 2024 18:41:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
