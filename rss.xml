@@ -1,4 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Nov 2024 05:01:58 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터3 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Mon, 18 Nov 2024 00:10:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Nov 2024 05:07:10 GMT</lastBuildDate><item><title><![CDATA[WDD(Why-Driven-Development)]]></title><description><![CDATA[WDD(Why-Driven-Development)  지금까지 스터디를 운영해보고 스스로 학습을 해보면서 가장 중요한 깨달음을 얻었고 WDD라는 방법론을 소개하려고 합니다. WDD란? WDD(Why-Driven-Development…]]></description><link>https://sungbin.kr/WDD/</link><guid isPermaLink="false">https://sungbin.kr/WDD/</guid><pubDate>Tue, 19 Nov 2024 12:06:27 GMT</pubDate><content:encoded>&lt;h2&gt;WDD(Why-Driven-Development)&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVQoz7WRTwtFQBTFB+U72CIRZZKslI1YIGlWU5K1778/urfUyyvP+7c4nebOnXt+0xVCCPxY1w2GYcA0TXbS1wM/JjwIDhEV1aMowjRNUEohz3OuWZb1RP5Af53oOA76vkdVVfB9/zUhpY3jiG3bsK4ryrLEPM9MNQwD2rZlSq016rpG13VYloVDyJum4ff0A9u2IQjb8zzEcYwsy9hd10UQBDwoSRKmJKe7MAyRpimKooCUks9HL8H9ZynnhZx1p+f2Ut7VDtcP5rba51SkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일 이미지&quot;
+        title=&quot;썸네일 이미지&quot;
+        src=&quot;/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/8c557/01.png&quot;
+        srcset=&quot;/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/6f3f2/01.png 256w,
+/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/01e7c/01.png 512w,
+/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/8c557/01.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;지금까지 스터디를 운영해보고 스스로 학습을 해보면서 가장 중요한 깨달음을 얻었고 WDD라는 방법론을 소개하려고 합니다.&lt;/p&gt;
+&lt;h3&gt;WDD란?&lt;/h3&gt;
+&lt;p&gt;WDD(Why-Driven-Development)란 &lt;code&gt;왜&lt;/code&gt;라는 의문을 가지며 그것을 주도하여 개발을 하는 과정을 말합니다.
+이제까지 스터디, 토이프로젝트, 공부를 하면서 이런 물음없이 학습을 진행하게 되었습니다. 그러고 나서 스스로 복습을 하고 회고를 해보는 과정에서 해당 물음이 문득 떠올랐습니다.
+토이 프로젝트를 진행하면서 &quot;왜 이런 방식으로 해야할까? 다른 방법은 안될까?&quot;라는 물음이 상기되었고 공부를 하면서도 &quot;이것이 왜 이렇게 동작할까?&quot;라는 물음이 스스로에게 나오게 되었습니다.
+그러면서 조금의 반성이 들기 시작했습니다. 이런 물음 없이 학습을 하게 되면 나중에 왜 이렇게 되고 왜 그러는지에 대한 의문만 잔뜩 남게 되었습니다.
+그러면 WDD를 어떻게 적용하고 학습을 하는지에 대해 한번 공유해보겠다.&lt;/p&gt;
+&lt;h3&gt;WDD 적용방법&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 방법은 저의 방법이고 개개인마다 다를 수 있습니다. 참고만 부탁드립니다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;적용방법은 다음과 같습니다.&lt;/p&gt;
+&lt;p&gt;첫번째, &apos;왜&apos;라는 물음을 항상 가진다. 저는 학습을 하면서 해당 개념에 대해 왜 이 개념이 등장했는가에 대해 고민을 먼저 합니다. 강의를 듣더라도 해당 물음이 생기면 바로바로 찾아보기도 합니다.
+또한 프로젝트를 진행하더라도 왜 우리가 이 기술을 도입하는가에 대해 팀원분들과 고민을 하려는 노력을 합니다. 예를 들어 스프링의 DI의 개념에 대해 학습을 한다고 하면 왜 DI가 등장을 했는지부터 찾아보는 것 같습니다. 이처럼 항상 &apos;왜&apos;라는 질문을 생각합니다.&lt;/p&gt;
+&lt;p&gt;둘째, &apos;왜&apos;라는 물음에 답하기 위해 고민을 해본다. 저는 해당 물음을 스스로에게 던지면 한번 구글링을 해보거나 gpt에게 물어봅니다. 이를 통해 나온 결론 혹은 답변을 메모장이나 저만의 노트, 노션에 정리를 해둡니다.&lt;/p&gt;
+&lt;h3&gt;WDD 효과&lt;/h3&gt;
+&lt;p&gt;WDD를 적용하면서 물음을 던지고 그에 대한 물음을 알고 개념을 학습을 하니 조금 더 개념이 와닿은것 같습니다. 또한 팀 프로젝트에는 개념뿐만 아니라 코드리뷰 과정에도 왜 라는 질문에 리뷰를 주면 고민을 해보고 더 나은 방법에 대해 공부를 해보는 것 또한 많은 성장을 저한테 주는 것 같습니다. 또한 면접에서 &quot;왜 이렇게 로직을 적용하셨나요? 더 나은 방법은 없는가요?&quot;라는 질문에도 답변을 할 수 있는 자신감이 생겼던 것 같습니다.&lt;/p&gt;
+&lt;h3&gt;결론&lt;/h3&gt;
+&lt;p&gt;이건 제가 찾은 방법이고 다른 분들께는 비효율적이다라고 생각이 들 수 있을겁니다. 이 부분은 미래의 저한테도 느껴질 수 있는 부분입니다. 하지만 현재에 저한테 가장 좋았던 방법이고 꾸준히 실천해보려고 합니다. 응원 부탁드리며, 적용해보고 싶으신 분들은 적용해서 같이 성장하는 하루가 되었으면 합니다. 감사합니다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터3 자바 메모리 영역과 메모리 오버플로]]></title><description><![CDATA[이 포스팅은 JVM…]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch03-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0%EC%99%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9-%EC%A0%84%EB%9E%B5/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch03-가비지-컬렉터와-메모리-할당-전략/</guid><pubDate>Mon, 18 Nov 2024 00:10:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -9750,137 +9881,6 @@ A. 축구했어!&lt;/p&gt;
 &lt;h2&gt;OT 후기&lt;/h2&gt;
 &lt;p&gt;전 날 &apos;&lt;strong&gt;인프런 워밍업 스터디 클럽&lt;/strong&gt;&apos;의 커뮤니티를 가입하게 되었고 당일 온라인 라이브로 OT를 진행하게 되었습니다. 간단한 일정과 방법을 코치님이 말씀을 주셨고 간단한 자바의 역사에 대해 알려주시고 간단한 질문을 받은 뒤, 라이브는 종료되었습니다.&lt;/p&gt;
 &lt;p&gt;여기서 나는 일정이 빡빡하다는 것을 알고 평일에는 직장에 소모되다 보니 과제를 미리미리 해보자는 마음을 갖게 되었고 오늘 OT 들은 자바부터 상세히 파보기 시작했습니다. 그러면서 여러 자료를 찾다가 다른 러너분들과 공유되고 싶다는 글을 찾게 되었습니다. 이렇게 첫 시작으로 지금 마음가짐으로 끝까지 완주해서 우수러너까지 노려봤으면 좋겠습니다. 다들 응원 부탁드립니다. 🥳&lt;/p&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[WDD(Why-Driven-Development)]]></title><description><![CDATA[WDD(Why-Driven-Development)  지금까지 스터디를 운영해보고 스스로 학습을 해보면서 가장 중요한 깨달음을 얻었고 WDD라는 방법론을 소개하려고 합니다. WDD란? WDD(Why-Driven-Development…]]></description><link>https://sungbin.kr/WDD/</link><guid isPermaLink="false">https://sungbin.kr/WDD/</guid><pubDate>Fri, 19 Jan 2024 12:06:27 GMT</pubDate><content:encoded>&lt;h2&gt;WDD(Why-Driven-Development)&lt;/h2&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVQoz7WRTwtFQBTFB+U72CIRZZKslI1YIGlWU5K1778/urfUyyvP+7c4nebOnXt+0xVCCPxY1w2GYcA0TXbS1wM/JjwIDhEV1aMowjRNUEohz3OuWZb1RP5Af53oOA76vkdVVfB9/zUhpY3jiG3bsK4ryrLEPM9MNQwD2rZlSq016rpG13VYloVDyJum4ff0A9u2IQjb8zzEcYwsy9hd10UQBDwoSRKmJKe7MAyRpimKooCUks9HL8H9ZynnhZx1p+f2Ut7VDtcP5rba51SkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;썸네일 이미지&quot;
-        title=&quot;썸네일 이미지&quot;
-        src=&quot;/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/8c557/01.png&quot;
-        srcset=&quot;/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/6f3f2/01.png 256w,
-/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/01e7c/01.png 512w,
-/static/64b0f04dedba1dbcd4d8bbb9e891b6d7/8c557/01.png 700w&quot;
-        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;지금까지 스터디를 운영해보고 스스로 학습을 해보면서 가장 중요한 깨달음을 얻었고 WDD라는 방법론을 소개하려고 합니다.&lt;/p&gt;
-&lt;h3&gt;WDD란?&lt;/h3&gt;
-&lt;p&gt;WDD(Why-Driven-Development)란 &lt;code&gt;왜&lt;/code&gt;라는 의문을 가지며 그것을 주도하여 개발을 하는 과정을 말합니다.
-이제까지 스터디, 토이프로젝트, 공부를 하면서 이런 물음없이 학습을 진행하게 되었습니다. 그러고 나서 스스로 복습을 하고 회고를 해보는 과정에서 해당 물음이 문득 떠올랐습니다.
-토이 프로젝트를 진행하면서 &quot;왜 이런 방식으로 해야할까? 다른 방법은 안될까?&quot;라는 물음이 상기되었고 공부를 하면서도 &quot;이것이 왜 이렇게 동작할까?&quot;라는 물음이 스스로에게 나오게 되었습니다.
-그러면서 조금의 반성이 들기 시작했습니다. 이런 물음 없이 학습을 하게 되면 나중에 왜 이렇게 되고 왜 그러는지에 대한 의문만 잔뜩 남게 되었습니다.
-그러면 WDD를 어떻게 적용하고 학습을 하는지에 대해 한번 공유해보겠다.&lt;/p&gt;
-&lt;h3&gt;WDD 적용방법&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;해당 방법은 저의 방법이고 개개인마다 다를 수 있습니다. 참고만 부탁드립니다!&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;적용방법은 다음과 같습니다.&lt;/p&gt;
-&lt;p&gt;첫번째, &apos;왜&apos;라는 물음을 항상 가진다. 저는 학습을 하면서 해당 개념에 대해 왜 이 개념이 등장했는가에 대해 고민을 먼저 합니다. 강의를 듣더라도 해당 물음이 생기면 바로바로 찾아보기도 합니다.
-또한 프로젝트를 진행하더라도 왜 우리가 이 기술을 도입하는가에 대해 팀원분들과 고민을 하려는 노력을 합니다. 예를 들어 스프링의 DI의 개념에 대해 학습을 한다고 하면 왜 DI가 등장을 했는지부터 찾아보는 것 같습니다. 이처럼 항상 &apos;왜&apos;라는 질문을 생각합니다.&lt;/p&gt;
-&lt;p&gt;둘째, &apos;왜&apos;라는 물음에 답하기 위해 고민을 해본다. 저는 해당 물음을 스스로에게 던지면 한번 구글링을 해보거나 gpt에게 물어봅니다. 이를 통해 나온 결론 혹은 답변을 메모장이나 저만의 노트, 노션에 정리를 해둡니다.&lt;/p&gt;
-&lt;h3&gt;WDD 효과&lt;/h3&gt;
-&lt;p&gt;WDD를 적용하면서 물음을 던지고 그에 대한 물음을 알고 개념을 학습을 하니 조금 더 개념이 와닿은것 같습니다. 또한 팀 프로젝트에는 개념뿐만 아니라 코드리뷰 과정에도 왜 라는 질문에 리뷰를 주면 고민을 해보고 더 나은 방법에 대해 공부를 해보는 것 또한 많은 성장을 저한테 주는 것 같습니다. 또한 면접에서 &quot;왜 이렇게 로직을 적용하셨나요? 더 나은 방법은 없는가요?&quot;라는 질문에도 답변을 할 수 있는 자신감이 생겼던 것 같습니다.&lt;/p&gt;
-&lt;h3&gt;결론&lt;/h3&gt;
-&lt;p&gt;이건 제가 찾은 방법이고 다른 분들께는 비효율적이다라고 생각이 들 수 있을겁니다. 이 부분은 미래의 저한테도 느껴질 수 있는 부분입니다. 하지만 현재에 저한테 가장 좋았던 방법이고 꾸준히 실천해보려고 합니다. 응원 부탁드리며, 적용해보고 싶으신 분들은 적용해서 같이 성장하는 하루가 되었으면 합니다. 감사합니다.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
