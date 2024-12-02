@@ -1,4 +1,122 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Nov 2024 11:38:06 GMT</lastBuildDate><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터4 가상 머신 성능 모니터링과 문제 해결 도구]]></title><description><![CDATA[이 포스팅은 JVM 밑바닥까지 파헤치기책을 참고하여 작성된 글이다.  가상 머신 성능 모니터링과 문제 해결 도구 들어가며 가상 머신 장애 처리 및 분석 도구를 적절히 이용하면 데이터를 분석하여 문제를 식별하고 해결하는 일이 훨씬 쉬워진다.]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch04-%EA%B0%80%EC%83%81-%EB%A8%B8%EC%8B%A0-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EA%B3%BC-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%8F%84%EA%B5%AC/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch04-가상-머신-성능-모니터링과-문제-해결-도구/</guid><pubDate>Sun, 24 Nov 2024 20:34:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 Dec 2024 20:50:02 GMT</lastBuildDate><item><title><![CDATA[우리의 스터디 클럽 자바 중급1 출사표]]></title><description><![CDATA[도입 드디어 우리의 스터디 클럽 중급…]]></description><link>https://sungbin.kr/%EC%9A%B0%EB%A6%AC%EC%9D%98-%EC%8A%A4%ED%84%B0%EB%94%94-%ED%81%B4%EB%9F%BD-%EC%9E%90%EB%B0%94-%EC%A4%91%EA%B8%891-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/우리의-스터디-클럽-자바-중급1-출사표/</guid><pubDate>Tue, 03 Dec 2024 05:39:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOklEQVQoz61STYuCUBQVhcw0M0TBxNz1I1q0KNqKOxHdCCK4so1KuxZtAskg+hn9xjPcNzxpgoEZaHG4h/Puve9+CbPZDJ+EoOs6I4Zh/Dv4PYZyCZxMJhNMp1NmNU2DqqpM5+AaB2mc85ihwvl8juVyCcuymHUcB57nMZ1AjqQtFgv2TiCdfFzXhe/7sG2bFSSMRiNst1tcLhckSYLb7Yb7/Y7n84kgCLDZbNC2LY7HI06nE7quQ5Zl2O12uF6vOJ/P6PseeZ5DFEUIVO5qtcLhcEAURWiaBkVRoKoqhGGI9XqNOI5R1zVLTEjTFPv9Ho/HA2VZsk+oGEmSvmdI/RPG4/EwF1mWh9kSJ5CPoihsGdSeaZpsHNQuaWwpfMvvW+MOnPO3V52SEuf2x9n8Br7lv5zRcDafPOwvKi8RxDzVJt0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;썸네일&quot;
+        title=&quot;썸네일&quot;
+        src=&quot;/static/25e4fb4df69cea6316c1a40dd14a8c9c/8c557/01.png&quot;
+        srcset=&quot;/static/25e4fb4df69cea6316c1a40dd14a8c9c/6f3f2/01.png 256w,
+/static/25e4fb4df69cea6316c1a40dd14a8c9c/01e7c/01.png 512w,
+/static/25e4fb4df69cea6316c1a40dd14a8c9c/8c557/01.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;도입&lt;/h2&gt;
+&lt;p&gt;드디어 우리의 스터디 클럽 중급1편의 스터디가 시작을 하게 되었다. 지난 스터디와 달라진 점은 리뷰 중점에서 추가로 자신만의 언어로 표현하라는 테마로 시작해보려고 한다.&lt;/p&gt;
+&lt;h2&gt;스터디 방식&lt;/h2&gt;
+&lt;p&gt;기존에는 빨리 진도를 마치겠다는 생각으로 학습하는 시간과 미션을 제출하는 시간, 리뷰를 진행하는 시간을 동시에 진행을 하게 되었다. 그러다보니 쉽게 지치시는 스터디원분들도 계시기도 하셨다. 그리고 막판에는 리뷰도 성의없는 리뷰들도 많았었던 것 같다. 그래서 조금 고민을 하였다. 어떻게 하면 이것을 해결할까?&lt;/p&gt;
+&lt;p&gt;그래서 생각해둔 것이 학습하는 시간과 미션을 하는 시간, 리뷰를 하는 시간을 철저히 분리시키고 PR 템플릿을 자세히 작성하게끔 유도를 시키는 방안으로 시작하기로 하였다. 일단 OT때 반응은 아직은 잘 모르겠다. 하지만 스터디원분들이 항상 열심히 해주시기에 한번 기대를 해보며 적극적인 피드백을 주셨으면 한다.&lt;/p&gt;
+&lt;h2&gt;마무리&lt;/h2&gt;
+&lt;p&gt;어느덧 중급편까지 진행을 해오면서 많은 시행착오가 있었다. 그런 부분들을 하나하나 수정해나가면서 같이 공부하면서 나 또한 많은 자극을 느끼는 것 같다. 또한 해당 스터디가 숙제처럼 전혀 느껴져서는 안된다. 그것을 방지하면서 적절한 스터디가 되가길 나중에 모두의 꿈을 같이 성취하길 바라면서 이 짧은 글을 마친다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[JVM 밑바닥 까지 파헤치기 챕터4 가상 머신 성능 모니터링과 문제 해결 도구]]></title><description><![CDATA[이 포스팅은 JVM 밑바닥까지 파헤치기책을 참고하여 작성된 글이다.  가상 머신 성능 모니터링과 문제 해결 도구 들어가며 가상 머신 장애 처리 및 분석 도구를 적절히 이용하면 데이터를 분석하여 문제를 식별하고 해결하는 일이 훨씬 쉬워진다.]]></description><link>https://sungbin.kr/JVM-%EB%B0%91%EB%B0%94%EB%8B%A5-%EA%B9%8C%EC%A7%80-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-ch04-%EA%B0%80%EC%83%81-%EB%A8%B8%EC%8B%A0-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EA%B3%BC-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%8F%84%EA%B5%AC/</link><guid isPermaLink="false">https://sungbin.kr/JVM-밑바닥-까지-파헤치기-ch04-가상-머신-성능-모니터링과-문제-해결-도구/</guid><pubDate>Sun, 24 Nov 2024 20:34:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;이 포스팅은 &lt;a href=&quot;https://ebook.insightbook.co.kr/book/164&quot;&gt;JVM 밑바닥까지 파헤치기&lt;/a&gt;책을 참고하여 작성된 글이다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
