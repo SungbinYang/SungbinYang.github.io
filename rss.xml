@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 Mar 2025 05:57:34 GMT</lastBuildDate><item><title><![CDATA[자바 입문 Hello World]]></title><description><![CDATA[📖 참고사항 https://inf.run/2zsZz Hello World 개발 환경 설정 Java 프로그래밍 개발에 앞서 먼저 환경 세팅을 해보려고 합니다. 개발함에 있어서 우리는 개발에 필요한 IDE…]]></description><link>https://sungbin.kr/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-Hello-World/</link><guid isPermaLink="false">https://sungbin.kr/자바-입문-Hello-World/</guid><pubDate>Fri, 03 Jan 2025 14:57:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 Mar 2025 09:00:10 GMT</lastBuildDate><item><title><![CDATA[자바 입문 출사표]]></title><description><![CDATA[📖 참고사항 https://inf.run/2zsZz https://www.tiobe.com/tiobe-index…]]></description><link>https://sungbin.kr/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/자바-입문-출사표/</guid><pubDate>Fri, 03 Jan 2025 14:57:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuUlEQVQoz2NgEtX5T03MgEuCUUT7PzlyDPg0gGgGYS0wBrOFNFHkSHYhq4TefzZJ/f8cUob/mcV0/3PLGpPuQpBikGYGfvX/zoFJ//tnLPo/Zc6y/2UNPf9Xrt/+3ys84z8Dt/J/FnFd4l0INpBX9X9IYgHYoNTC+v9FtZ3/04sa/ruHpP5nEFAHqyHZyzzypmCDGbiUwK4C03xqpIUhSCFMMSgSQC4BeQ+ZJjmW0V2AzwCiDSQ3YQMAdBMJAyE7NrIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/9edf9d9ba41ad2ed638c25e3dac1c427/8c557/banner.png&quot;
+        srcset=&quot;/static/9edf9d9ba41ad2ed638c25e3dac1c427/6f3f2/banner.png 256w,
+/static/9edf9d9ba41ad2ed638c25e3dac1c427/01e7c/banner.png 512w,
+/static/9edf9d9ba41ad2ed638c25e3dac1c427/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📖 참고사항&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://inf.run/2zsZz&quot;&gt;https://inf.run/2zsZz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tiobe.com/tiobe-index/&quot;&gt;https://www.tiobe.com/tiobe-index/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;자바 입문 출사표&lt;/h2&gt;
+&lt;p&gt;저는 이제까지 단순히 강의만 듣고 관련 문제들을 푸는 방식으로 학습을 이어왔습니다. 하지만 이렇게 하니 나중에 개념자체를 금방 쉽게 까먹는 일이 비일비재하였습니다. 그래서 어떻게 하면 까먹지 않을까라는 생각을 하게 되었고 저는 &lt;strong&gt;다른 분들께 설명&lt;/strong&gt;을 하는 방식을 하고 그 설명 글을 블로그에 개시해보자는 생각까지 하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;설명을 하려면 일단 내가 &lt;strong&gt;대충&lt;/strong&gt; 아는 지식으로는 안되며, 이 지식이 정말 확실한지 검증의 단계 또한 필요하기에 이 부분에 대해서 저에게 많은 &lt;strong&gt;학습&lt;/strong&gt;을 할 수 있을 것 같다는 생각을 하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;처음은 자바 입문편부터 시작해보려고 합니다. 물론 &lt;a href=&quot;https://inf.run/2zsZz&quot;&gt;김영한님의 인프런 자바 입문편&lt;/a&gt;을 기반으로 시작하려고 합니다. 해당 강좌를 듣고 영한님께서 그대로 설명해주시는 부분을 그대로 텍스트로 옮기는 것이 아니라 저만의 또 다른 언어로 설명을 해보고, 강좌에서 다루지 못했던 부분들도 깊게 파보는 시간을 가져보려고 합니다. 이것이 제가 생각하기에 최고의 학습이라고 생각이 듭니다.&lt;/p&gt;
+&lt;p&gt;이 또한 저의 스스로의 챌린지이고 이 챌린지가 끝까지 갈 수 있게 독자분들의 응원과 격려 부탁드리겠습니다. 감사합니다. 😊&lt;/p&gt;
+&lt;h2&gt;왜 자바일까?&lt;/h2&gt;
+&lt;p&gt;저는 첫 프로그래밍 언어로 자바를 선택하였습니다. 그러면 왜 자바로 선택했을까요? 이유를 듣기 전에 프로그래밍 언어 순위를 먼저 살펴보도록 하겠습니다. 저는 &lt;a href=&quot;https://www.tiobe.com/tiobe-index/&quot;&gt;TIOBE&lt;/a&gt;라는 사이트를 방문해서 살펴보았습니다. 살펴보니 대락적인 순위과 다음과 같았습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 49.21875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVQoz12Qy04bQRBF5zfzkKLALhJRxMeECFhEQf4ebILJBjlKgI0D9kw/6l3dqHvIht2903Xq3prheHHz8XT1/tvy6GJ9cH719mR59GN9cLZ68/Xy88X18eLmy2L94XTVv1/3gctP338enl+9O1kOARTEM1vEJkA8kWVu4s929zjlCQTEUct2F0JmsvpvjFNm1DKgGFsh8RehjmqshbU8RcokpD7bkBHZxGoCAlLpsLI5qXXYWY1FmjC/e4hAwuqznRKgqHgJCYBFvAzIRlpQfBbUQ2Zx/3eTgIF1tiETsrHVkBHacG2waCVxIO1Y799XjOl+ShgySrctudcOGTOJWIcb05NfwTD+Tsgkr28Oud9sdciorBXZgYxk3qJdlPXt3T7AGDO3amWMAGSsdYyQUFjr0HcUEkNWVv+f7Kz+sNmGhFPE+Sm2m9tw/9si6kNr7/UFtspqRMxW2Mrtr80+pN0UE5B43YcErOp1N8WZegZ7nzASLimR6gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;TIOBE 프로그래밍 언어 순위&quot;
+        title=&quot;TIOBE 프로그래밍 언어 순위&quot;
+        src=&quot;/static/7873d67726b0ce0deca7ffdb963cfcb3/2bef9/reference01.png&quot;
+        srcset=&quot;/static/7873d67726b0ce0deca7ffdb963cfcb3/6f3f2/reference01.png 256w,
+/static/7873d67726b0ce0deca7ffdb963cfcb3/01e7c/reference01.png 512w,
+/static/7873d67726b0ce0deca7ffdb963cfcb3/2bef9/reference01.png 1024w,
+/static/7873d67726b0ce0deca7ffdb963cfcb3/f0811/reference01.png 1367w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;AI 시대에 맞게 1위는 파이썬이였습니다. 2위는 C++였고 바로 3위가 Java였습니다. 그러면 독자분들께서는 이런 의문이 들것입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;왜 파이썬으로 시작을 안 하고 3등인 Java로 시작하셨나요?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;일단 저의 목표는 웹 백엔드 개발자로 직무전환을 목표로 하며, 현재 백엔즈 개발자 시장의 채용공고 기술 스택을 확인해보면 Java나 Kotlin이 주로 이루기 때문입니다. 쉽게 채용사이트에서 보시면 확인이 가능하실 겁니다.&lt;/p&gt;
+&lt;p&gt;그래서 Java를 시작으로 설명을 진행해 볼 예정이며, 궁금하신 사항이나 잘못된 지식이 있을 경우 댓글에 남겨주시면 신속하게 수정하겠습니다. 독자들의 많은 응원 부탁드립니다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[자바 입문 Hello World]]></title><description><![CDATA[📖 참고사항 https://inf.run/2zsZz Hello World 개발 환경 설정 Java 프로그래밍 개발에 앞서 먼저 환경 세팅을 해보려고 합니다. 개발함에 있어서 우리는 개발에 필요한 IDE…]]></description><link>https://sungbin.kr/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-Hello-World/</link><guid isPermaLink="false">https://sungbin.kr/자바-입문-Hello-World/</guid><pubDate>Fri, 03 Jan 2025 14:57:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
@@ -497,158 +649,6 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[자바 입문 출사표]]></title><description><![CDATA[📖 참고사항 https://inf.run/2zsZz https://www.tiobe.com/tiobe-index…]]></description><link>https://sungbin.kr/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%EC%B6%9C%EC%82%AC%ED%91%9C/</link><guid isPermaLink="false">https://sungbin.kr/자바-입문-출사표/</guid><pubDate>Fri, 03 Jan 2025 14:57:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuUlEQVQoz2NgEtX5T03MgEuCUUT7PzlyDPg0gGgGYS0wBrOFNFHkSHYhq4TefzZJ/f8cUob/mcV0/3PLGpPuQpBikGYGfvX/zoFJ//tnLPo/Zc6y/2UNPf9Xrt/+3ys84z8Dt/J/FnFd4l0INpBX9X9IYgHYoNTC+v9FtZ3/04sa/ruHpP5nEFAHqyHZyzzypmCDGbiUwK4C03xqpIUhSCFMMSgSQC4BeQ+ZJjmW0V2AzwCiDSQ3YQMAdBMJAyE7NrIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;banner&quot;
-        src=&quot;/static/9edf9d9ba41ad2ed638c25e3dac1c427/8c557/banner.png&quot;
-        srcset=&quot;/static/9edf9d9ba41ad2ed638c25e3dac1c427/6f3f2/banner.png 256w,
-/static/9edf9d9ba41ad2ed638c25e3dac1c427/01e7c/banner.png 512w,
-/static/9edf9d9ba41ad2ed638c25e3dac1c427/8c557/banner.png 700w&quot;
-        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;📖 참고사항&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://inf.run/2zsZz&quot;&gt;https://inf.run/2zsZz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.tiobe.com/tiobe-index/&quot;&gt;https://www.tiobe.com/tiobe-index/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;자바 입문 출사표&lt;/h2&gt;
-&lt;p&gt;저는 이제까지 단순히 강의만 듣고 관련 문제들을 푸는 방식으로 학습을 이어왔습니다. 하지만 이렇게 하니 나중에 개념자체를 금방 쉽게 까먹는 일이 비일비재하였습니다. 그래서 어떻게 하면 까먹지 않을까라는 생각을 하게 되었고 저는 &lt;strong&gt;다른 분들께 설명&lt;/strong&gt;을 하는 방식을 하고 그 설명 글을 블로그에 개시해보자는 생각까지 하게 되었습니다.&lt;/p&gt;
-&lt;p&gt;설명을 하려면 일단 내가 &lt;strong&gt;대충&lt;/strong&gt; 아는 지식으로는 안되며, 이 지식이 정말 확실한지 검증의 단계 또한 필요하기에 이 부분에 대해서 저에게 많은 &lt;strong&gt;학습&lt;/strong&gt;을 할 수 있을 것 같다는 생각을 하게 되었습니다.&lt;/p&gt;
-&lt;p&gt;처음은 자바 입문편부터 시작해보려고 합니다. 물론 &lt;a href=&quot;https://inf.run/2zsZz&quot;&gt;김영한님의 인프런 자바 입문편&lt;/a&gt;을 기반으로 시작하려고 합니다. 해당 강좌를 듣고 영한님께서 그대로 설명해주시는 부분을 그대로 텍스트로 옮기는 것이 아니라 저만의 또 다른 언어로 설명을 해보고, 강좌에서 다루지 못했던 부분들도 깊게 파보는 시간을 가져보려고 합니다. 이것이 제가 생각하기에 최고의 학습이라고 생각이 듭니다.&lt;/p&gt;
-&lt;p&gt;이 또한 저의 스스로의 챌린지이고 이 챌린지가 끝까지 갈 수 있게 독자분들의 응원과 격려 부탁드리겠습니다. 감사합니다. 😊&lt;/p&gt;
-&lt;h2&gt;왜 자바일까?&lt;/h2&gt;
-&lt;p&gt;저는 첫 프로그래밍 언어로 자바를 선택하였습니다. 그러면 왜 자바로 선택했을까요? 이유를 듣기 전에 프로그래밍 언어 순위를 먼저 살펴보도록 하겠습니다. 저는 &lt;a href=&quot;https://www.tiobe.com/tiobe-index/&quot;&gt;TIOBE&lt;/a&gt;라는 사이트를 방문해서 살펴보았습니다. 살펴보니 대락적인 순위과 다음과 같았습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 49.21875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVQoz12Qy04bQRBF5zfzkKLALhJRxMeECFhEQf4ebILJBjlKgI0D9kw/6l3dqHvIht2903Xq3prheHHz8XT1/tvy6GJ9cH719mR59GN9cLZ68/Xy88X18eLmy2L94XTVv1/3gctP338enl+9O1kOARTEM1vEJkA8kWVu4s929zjlCQTEUct2F0JmsvpvjFNm1DKgGFsh8RehjmqshbU8RcokpD7bkBHZxGoCAlLpsLI5qXXYWY1FmjC/e4hAwuqznRKgqHgJCYBFvAzIRlpQfBbUQ2Zx/3eTgIF1tiETsrHVkBHacG2waCVxIO1Y799XjOl+ShgySrctudcOGTOJWIcb05NfwTD+Tsgkr28Oud9sdciorBXZgYxk3qJdlPXt3T7AGDO3amWMAGSsdYyQUFjr0HcUEkNWVv+f7Kz+sNmGhFPE+Sm2m9tw/9si6kNr7/UFtspqRMxW2Mrtr80+pN0UE5B43YcErOp1N8WZegZ7nzASLimR6gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;TIOBE 프로그래밍 언어 순위&quot;
-        title=&quot;TIOBE 프로그래밍 언어 순위&quot;
-        src=&quot;/static/7873d67726b0ce0deca7ffdb963cfcb3/2bef9/reference01.png&quot;
-        srcset=&quot;/static/7873d67726b0ce0deca7ffdb963cfcb3/6f3f2/reference01.png 256w,
-/static/7873d67726b0ce0deca7ffdb963cfcb3/01e7c/reference01.png 512w,
-/static/7873d67726b0ce0deca7ffdb963cfcb3/2bef9/reference01.png 1024w,
-/static/7873d67726b0ce0deca7ffdb963cfcb3/f0811/reference01.png 1367w&quot;
-        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;AI 시대에 맞게 1위는 파이썬이였습니다. 2위는 C++였고 바로 3위가 Java였습니다. 그러면 독자분들께서는 이런 의문이 들것입니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;왜 파이썬으로 시작을 안 하고 3등인 Java로 시작하셨나요?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;일단 저의 목표는 웹 백엔드 개발자로 직무전환을 목표로 하며, 현재 백엔즈 개발자 시장의 채용공고 기술 스택을 확인해보면 Java나 Kotlin이 주로 이루기 때문입니다. 쉽게 채용사이트에서 보시면 확인이 가능하실 겁니다.&lt;/p&gt;
-&lt;p&gt;그래서 Java를 시작으로 설명을 진행해 볼 예정이며, 궁금하신 사항이나 잘못된 지식이 있을 경우 댓글에 남겨주시면 신속하게 수정하겠습니다. 독자들의 많은 응원 부탁드립니다.&lt;/p&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[2024년 주니어 개발자 회고록]]></title><description><![CDATA[2024년의 나는 어땠을까? 202…]]></description><link>https://sungbin.kr/2024%EB%85%84-%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%9A%8C%EA%B3%A0%EB%A1%9D/</link><guid isPermaLink="false">https://sungbin.kr/2024년-주니어-개발자-회고록/</guid><pubDate>Wed, 01 Jan 2025 18:46:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
