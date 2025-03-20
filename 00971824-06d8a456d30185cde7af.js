@@ -1,0 +1,20 @@
+"use strict";
+(self["webpackChunk_vallista_blog"] = self["webpackChunk_vallista_blog"] || []).push([[18],{
+
+/***/ 3091:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   h: function() { return /* binding */ J; }
+/* harmony export */ });
+/* harmony import */ var _emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9033);
+/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1141);
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4217);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1855);
+/* harmony import */ var _utils_math_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8182);
+function p(){return"You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop).";}const J=I=>{const{caption:b,captionSpacing:A,src:W,...c}=I,X=(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null),[C,u]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null);(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{const Z=new Image();return Z.src=W,Z.onload=()=>{u(W);},()=>{Z.onload=null;};},[]);const d=(0,_utils_math_js__WEBPACK_IMPORTED_MODULE_2__/* .raiseDecimalPoint */ .M)(c.height/c.width*100);return/* @__PURE__ */(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__/* .jsx */ .Y)(Y,{...{src:C},...c,show:!!C,children:/* @__PURE__ */(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__/* .jsxs */ .FD)(H,{width:c.width,children:[/* @__PURE__ */(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__/* .jsx */ .Y)(V,{height:d,children:/* @__PURE__ */(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__/* .jsx */ .Y)(a,{ref:X,decoding:"async",src:C!==null&&C!==void 0?C:""})}),b&&/* @__PURE__ */(0,_emotion_react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__/* .jsx */ .Y)(n,{style:{marginTop:`${A}px`},children:b})]})});},Y=/* @__PURE__ */(0,_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)("figure", true?{target:"e2vwpld4"}:0)("display:block;text-align:center;",_ref=>{let{show:I,margin:b}=_ref;return/*#__PURE__*//* @__PURE__ */(0,_emotion_react__WEBPACK_IMPORTED_MODULE_4__/* .css */ .AH)("margin:",b!==null&&b!==void 0?b:0,"px 0;opacity:",I?1:0,";transition:opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);"+( true?"":0), true?"":0, true?"":0, true?"":0);},";"+( true?"":0)),H=/* @__PURE__ */(0,_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)("main", true?{target:"e2vwpld3"}:0)(_ref2=>{let{width:I}=_ref2;return/*#__PURE__*//* @__PURE__ */(0,_emotion_react__WEBPACK_IMPORTED_MODULE_4__/* .css */ .AH)("width:",I,"px;margin:0 auto;max-width:100%;"+( true?"":0), true?"":0, true?"":0, true?"":0);},";"+( true?"":0)),V=/* @__PURE__ */(0,_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)("div", true?{target:"e2vwpld2"}:0)("display:flex;justify-content:center;position:relative;",_ref3=>{let{height:I}=_ref3;return/*#__PURE__*//* @__PURE__ */(0,_emotion_react__WEBPACK_IMPORTED_MODULE_4__/* .css */ .AH)("padding-bottom:",I,"%;"+( true?"":0), true?"":0, true?"":0, true?"":0);},";"+( true?"":0)),a=/* @__PURE__ */(0,_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)("img", true?{target:"e2vwpld1"}:0)( true?{name:"1opu7t3",styles:"height:100%;left:0;position:absolute;top:0;width:100%"}:0),n=/* @__PURE__ */(0,_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)("p", true?{target:"e2vwpld0"}:0)(_ref4=>{let{theme:I}=_ref4;return/*#__PURE__*//* @__PURE__ */(0,_emotion_react__WEBPACK_IMPORTED_MODULE_4__/* .css */ .AH)("color:",I.colors.PRIMARY.ACCENT_5,";font-size:0.875rem;text-align:center;"+( true?"":0), true?"":0, true?"":0, true?"":0);},";"+( true?"":0));
+
+/***/ })
+
+}]);
+//# sourceMappingURL=00971824-06d8a456d30185cde7af.js.map
