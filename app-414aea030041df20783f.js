@@ -4511,7 +4511,7 @@ exports.useTransition=function(){return U.current.useTransition()};exports.versi
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  q: function() { return /* binding */ a; }
+  q: function() { return /* binding */ m; }
 });
 
 // EXTERNAL MODULE: ../../node_modules/.pnpm/@emotion+react@11.14.0_@types+react@18.3.19_react@18.2.0/node_modules/@emotion/react/jsx-runtime/dist/emotion-react-jsx-runtime.browser.esm.js
@@ -4521,7 +4521,9 @@ var react = __webpack_require__(1855);
 ;// ../../packages/design-system/dist/constants/messages.js
 var r=/* @__PURE__ */(T=>(T.NOT_FOUND_CONTEXT="에러! 상위 스코프에서 CONTEXT를 찾지 못했습니다!",T))(r||{});
 ;// ../../packages/design-system/dist/utils/createContext.js
-function a(){const e=/*#__PURE__*/react.createContext(null);return[_ref=>{let{children:t,...o}=_ref;return/* @__PURE__ */(0,emotion_react_jsx_runtime_browser_esm/* jsx */.Y)(e.Provider,{value:o,children:t});},()=>{const t=react.useContext(e);if(typeof window>"u")return{state:{}};if(!t)throw new Error(r.NOT_FOUND_CONTEXT);return t;}];}
+function m(){const t=/*#__PURE__*/react.createContext(null);return[_ref=>{let{children:e,...n}=_ref;return/* @__PURE__ */(0,emotion_react_jsx_runtime_browser_esm/* jsx */.Y)(t.Provider,{value:n,children:e});},()=>{const e=react.useContext(t);if(!e){if(typeof window>"u")return{// This is a minimal state that most contexts might have
+state:{// Add common fallback properties
+expandedTarget:null,setExpandedTarget:()=>{},toastList:[],message:()=>{},success:()=>{},error:()=>{},remove:()=>{},changeTheme:()=>{},uniqueId:"ssr-fallback-id",animationState:0,changeAnimationState:()=>{},nextAnimationState:()=>{}}};throw new Error(r.NOT_FOUND_CONTEXT);}return e;}];}
 
 /***/ }),
 
@@ -6193,4 +6195,4 @@ const s={shape:"square",size:"medium",loading:!1,disabled:!1};function m(e){var 
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=app-af899b672863d76cfbf8.js.map
+//# sourceMappingURL=app-414aea030041df20783f.js.map
