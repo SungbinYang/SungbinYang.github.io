@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 04:56:04 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 코드 Edit]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 서문 지금부터 우리는 IntelliJ…]]></description><link>https://sungbin.kr/IntelliJ-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-코드-Edit/</guid><pubDate>Sat, 22 Mar 2025 13:18:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 05:05:21 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 코드 Edit]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 서문 지금부터 우리는 IntelliJ…]]></description><link>https://sungbin.kr/IntelliJ-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-코드-Edit/</guid><pubDate>Sat, 22 Mar 2025 13:18:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -339,6 +339,33 @@
 &lt;ul&gt;
 &lt;li&gt;맥: option + Shift + command + 좌/우 방향키&lt;/li&gt;
 &lt;li&gt;윈도우/리눅스: Alt + Ctrl + Shift + 좌/우 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;코드 즉시 보기&lt;/h2&gt;
+&lt;p&gt;우리는 프로젝트를 진행하다보면 해당 코드가 어떻게 구현되어 있는지 보고 싶을 때가 존재한다. 그럴 때마다 매번 해당 코드로 가서 직접 확인하는 것은 매우 번거로운 일이다. 그럴 때 단축키를 활용하면 효율적일 것이다.&lt;/p&gt;
+&lt;h3&gt;인자 값 즉시 보기&lt;/h3&gt;
+&lt;p&gt;해당 메서드나 클래스의 인자 값을 보고 싶을 때는 아래와 같은 단축키를 활용하면 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + p&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + p&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;코드 구현부 즉시 보기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: option + space&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Shift + Ctrl + i&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;문서 즉시 보기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: F1&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + q&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
