@@ -1,4 +1,453 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 04:07:50 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 소개]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 왜 해당 글을 쓰려는가? 개발에 있어서 가장 중요한 것은 프로그래밍 언어이다. 하지만 그 언어를 이용하여 프로젝트를 진행할 때 가장 중요한 역할을 하는 것은 바로 IDE…]]></description><link>https://sungbin.kr/IntelliJ-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-소개/</guid><pubDate>Sat, 22 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 04:56:04 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 코드 Edit]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 서문 지금부터 우리는 IntelliJ…]]></description><link>https://sungbin.kr/IntelliJ-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-코드-Edit/</guid><pubDate>Sat, 22 Mar 2025 13:18:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.09374999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADv0lEQVQ4y32UbUxbVRjHz33pC6xlhJfey4ARmq5lVNrVASma29IxOkSZG8vCBMaic2oXEMoSCKOFFjYzN5IlS+SD2Uxc5ssHyPwK6qytmdPqTEzmBxUtvqFGp2Rm8zV/c8+9vYyAnuTJOfc8z/3l/9z/k0se7TgEySvBaDCCIRwIIaix7EHEt4Dxxq8R9X9J94nA9/CIHTQvB/vQIeiv/Q596hb0iZtgrv0B2/k3Qdpb94LneK1QhsUD39GI+r/QYG5xv1rDgDCMAm3tplBDchnMu3cUoL/BtwIT9iIeWMJ441cY9X22AhP20Xy2AxqscmYf6ILh6m0w7/0J2/Ovy8BGmnAJ7ZhQYbK6Z5tv4UTTj3CpMJ7TgWXZFeBdUK7lEbDXAfsLCZCG+lpUF7ZhYkcWtoRu9yVIpYOoNAdWA9YLlgMj73uOoPz8GyBdwQFEpAzigW9xXPoUZ4K34bYcgFkgqLRupi9ZrVa43W54PB4UFRWtgTKq8l1SO8jR3WcQ8y8h4l+gCk8FbyKPOPHSKy8i8VaSFqbTaWRXX1+f0iantksUgwY21uH97b0gT7Y9gzHfNxQmG7C9TBmNy5dfQyqVouepqSksLi5SYH9/vwZkVdgT+R7AHsNVb1gGnqQKZUOybsoxMzODRCKhPcvK5NXb26uapCh8Kv9eYOsYYBtFqv5pkNDu05gM/Exdlgv0OgPdZ2dnkUwmNWAkEqHAo6GQaoYKqxrDX44RwDaiAOWWPUKnNmc8z2sK5+fnEQqFMD09jeXlZQrc5nLTvM1QgDv2YcAxit/sQ4B9HB96j4EEGnaoMOV7ZIFzc3O05VgsRkGZTAZdnZ2a4nv0xfh1yzH84zgOVE/gRvnj6HFIID6vtGoEssMbDocRjUbpWcfzyqzdFRX8RvxtHwGqojgnBuldnlgC4vf6/ndwjUYjBRKehWDKh5CbhzxjLtpMW3C94jBaTFYFZiQ43en9b6DBYIDZZIZ5wwaQHA6DpRJ+cA3hF/cIfqoZRrRQgkn9qRh5Dumhatw41bK25fXisNkF2CNA1SQ+rwhhV06llsvlOVwJO4GL9+HtyE6QZt9OxRSGWRPy/RF5aJ0n6KydFYLIZXUaTM+xuDLgBC5IwHP1eGesGaR7XxdEi7iuskFzLWCP4+Oyx3C/rmRVriCHID20lSrDdD1woQ7peBNIz/6DOPBwB5wOJ0osJSgTNqHAYkHr5m1YqBvGyzUHYRXLYSouRLlYijJxE4qLRJzrqUVmKogP4gF8NNmET04G8Orgg/gXHc2nqO2eOj4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png&quot;
+        srcset=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/6f3f2/banner.png 256w,
+/static/c5da15e564730427f1bf60504a2f2c5c/01e7c/banner.png 512w,
+/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png 1024w,
+/static/c5da15e564730427f1bf60504a2f2c5c/e72de/banner.png 1198w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/NwFz&quot;&gt;향로님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;서문&lt;/h2&gt;
+&lt;p&gt;지금부터 우리는 IntelliJ에서 단축키를 통해 조금 더 빠르게 개발을 해보려고 한다. 그러면 왜 우리는 단축키를 알아야 할까? 만약 우리가 단축키 자체가 존재하지 않는다면 우리는 마우스로 작업하다가 코드를 작성할 때는 키보드로 갔다가 매우 불편할 것이다. 단축키만 제대로 배운다면 우리는 키보드만으로도 충분히 개발을 할 수 있을 것이다. 그럼 지금부터 단축키에 대해 알아보자.&lt;/p&gt;
+&lt;h2&gt;메인 메서드 생성 및 실행&lt;/h2&gt;
+&lt;p&gt;프로그래밍에 가장 먼저 할 것은 메인 메서드 클래스를 생성하고 실행하는 법을 알아야 한다. 그럼 먼저 디렉토리, 패키지를 생성하고 클래스를 만드는 법에 대해 살펴보자.&lt;/p&gt;
+&lt;h3&gt;디렉토리, 패키지, 클래스등 생성 목록 보기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + n&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: alt + insert&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행 화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.890625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABuklEQVQ4y5WT227aQBRF/Rrw3XPx2NhjME4AQQRpEY2IWiJStVLf+v//sioGkdII2vRha+5rzj5nxlsubum6jmbYYkqLymukrshkQZJqhNDYukLpgRunIic3NZk0pJlGqhydF0hdoHSNV1lLrhVaS4zRlIWhMJI0SfH9hCBI6PdjAj92/YP8s/5xfGyTSOCJvMTahqZpMaZCSkUSx0RRShCmhP+hJJV4SVowX31h9/KTD+s9phjR64Vuwyma84gugU7zmcjxklgyma5YPmwZ364cMIoEYZgRxwKlDFIakjT/4/Al4EFeKitmsxW752/MFhukqgjDYzSuIE2LVAOC4LrVE/Cwx1m+nSx53O6ZzD4i5eDVYpZp6nrocivEOyPUekg3fWC92TFsFyhVOeD5gSg62n8XMI4V4+mSz8/fmc3XKP0beP40/laUc3m9m5D2bs7j04srzDnwkMtrObt2gdfvR3STJbv9D+b3mzfAf+st2OvdBNhmyvbpK/P7T2SixPeji3adDpdFGZVtGdQt2lROUarcuqd0SVGN6O4WtOMJprDuz16XIslyyqJhPBxhbYdtxlR1ixIFvwDXvkWY9WAOCAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/be6d3e78e044987084694db661f7e913/2bef9/01.png&quot;
+        srcset=&quot;/static/be6d3e78e044987084694db661f7e913/6f3f2/01.png 256w,
+/static/be6d3e78e044987084694db661f7e913/01e7c/01.png 512w,
+/static/be6d3e78e044987084694db661f7e913/2bef9/01.png 1024w,
+/static/be6d3e78e044987084694db661f7e913/71c1d/01.png 1536w,
+/static/be6d3e78e044987084694db661f7e913/a878e/01.png 2048w,
+/static/be6d3e78e044987084694db661f7e913/b8765/01.png 2868w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위의 화면에서 생성을 원하는 부분을 키보드로 입력하거나 찾으면 된다. 상세한 것은 직접 실습을 통해 해보자.&lt;/p&gt;
+&lt;h3&gt;코드 템플릿&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;메인 메서드 생성
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;psvm&lt;/code&gt; 혹은 &lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;System.out.println()&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sout&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;실행 화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB0klEQVQ4y62T247aMBRF8wklN5wLIXGc2I4DMQkZCDAVVdWX0XTU/v/H7AoHGKioRhr1Ycn2g9fZ9rGtlx97DMOAtttASI2Ct6B5A8pXKFULViyw7npw1SOlNTJao6p75KVGminkrAaXDbhcgvEWVr3UkJxD8BJScNRKomQJ6qrBrvsOrZ9RLgaIxQAu16YgK1dm5LK/Ik4FkxJWWkrEYYgwICOEgEx9sELhcHjDt+Nv7A6v2O1fsdm9YDi8Yf/1F3bPP9G0R+gzzeqIjElY0UyCBBS2PYXrhgbbJpglHFJtIdTWjJV8QsE7lGJtEkm1RinG9UgHympYvh8hnnEQMofnBfD8CK5DME+lEY2C9d3xrsesnu6IIgprFhegTIOyBYIgRRhmIMEcaVYZ4aONF/6Wn/ZacVYhiChcl8DzQoNjEoo74aOED4UZ1YgTDseZ3ginSObiw4S3ha7CnGkkaWVErhu8C9NPCqMwQxBS+H78f4S2Q66ikcjcp+lyvb2/J3mW/EMenro8mXimCY49vTL54r2/w9s01UXcoxQj/DKXvXklVs6U6SjNK2S0wml9mnPZQTV7sEKfv9rKJFSLrUnYtRt03QDVDFi2e7T6gDSV+APej3yPI1/PeAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/432d86cb875162fa59711cb4b3a67f53/2bef9/02.png&quot;
+        srcset=&quot;/static/432d86cb875162fa59711cb4b3a67f53/6f3f2/02.png 256w,
+/static/432d86cb875162fa59711cb4b3a67f53/01e7c/02.png 512w,
+/static/432d86cb875162fa59711cb4b3a67f53/2bef9/02.png 1024w,
+/static/432d86cb875162fa59711cb4b3a67f53/71c1d/02.png 1536w,
+/static/432d86cb875162fa59711cb4b3a67f53/a878e/02.png 2048w,
+/static/432d86cb875162fa59711cb4b3a67f53/d9ed5/02.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACBElEQVQ4y62T2W7bMBBF9QmNVy1etFOUZFmmZdmMEydBW7RNAhQB+v+/cgrRtdw+pECBPlxwBHLOjOaS1vPnI1pr1HZPJmsSoQijNZFQiEKRpCua7Q5R7PDDkiBakZctiaiJohVRUiJkjZBrYqGwyqpGCkEmUmQmKAuJiJfkskKrJ6rqjnilScuWNNsSJTVhXBHGa+J0Q5yq8yoUy3mC5aeSmeviOvZZto09nZjO9ocvPJ2+c3t65XD/gj4+s9fPtPorrf6Gaj6y3jxQq0fWm0eCWGJ5c4nthAwGU0Yj16iLl35Otb7npF9QzSda/UJ7+4q+f0Of3jg+/KDaPJDlLXl5QBZ7omSFNZl4zOYC214yHjuMJx6jkc3Sz86H8wOpbBH5HpntSMSWJGuQxXkEQu56eV6INZ8lhHE3lxWO4+O6gYH7QWGqpllzTcoa0g4oFGmmELIxRbu9bu1yrVmQ43ih6Wo8do2Gw3OHsjz0h9/TpVgPDMKa2UIwHE5/A05ZLDNkcfjjl/6mHhjFNQs/N6DRyLkC/Svwnzr03ADHDZlMZv8HOBjaPeisi8uyn2Gf9CtRvAN3O5dvbsbGhOFg2uvmw4j5QhiXL05eQBdwmp0lLrHcmVtiRXFhHA2jnCDM6b67WEhFubkzl7Z7WkmmDKhYHQx4q/Zst5piranUEVXf4fuSn4cZfeDtx7SiAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/a6add99e67090b5865a946bba7b73f43/2bef9/03.png&quot;
+        srcset=&quot;/static/a6add99e67090b5865a946bba7b73f43/6f3f2/03.png 256w,
+/static/a6add99e67090b5865a946bba7b73f43/01e7c/03.png 512w,
+/static/a6add99e67090b5865a946bba7b73f43/2bef9/03.png 1024w,
+/static/a6add99e67090b5865a946bba7b73f43/71c1d/03.png 1536w,
+/static/a6add99e67090b5865a946bba7b73f43/a878e/03.png 2048w,
+/static/a6add99e67090b5865a946bba7b73f43/d9ed5/03.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이제 실행을 해보자. 실행의 방법은 여러가지가 있다. 마우스로 녹색 실행 버튼을 누르는 방법도 있지만 해당 방법은 마우스를 사용해야 한다. 그러면 쉬운 단축키를 알아보자.&lt;/p&gt;
+&lt;h3&gt;실행&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 포커스
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + Shift + R&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + Shift + F10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;이전 포커스
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + R&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Shift + F10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 포커스: 현재 포커스 가져있는 파일&lt;/li&gt;
+&lt;li&gt;이전 포커스: 이전에 실행했던 파일&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행화면은 다음과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACEElEQVQ4y42T6U7cMBCA8wiQPZJstJvbdu57kwBLQer9/u/ztTEgWlQqfnyasWR/icczxs8vNyzLQtefSbOWIKo5+QWRbJF5RyxKhn5E5iN+WGiE7EhkQxiVREmBTBtkWpPIDiMrG5SQCCFQUpIqRRyeSFXJ0j3S1BeSckEUEzId9KFYtM90mihpiUSLd0wwhlaSC4c0WbF1VPGesig5T1+5WX5wvnxnunxjGD/T9I/U3QNN96DjS74SJhlGkJS4roe1d7CtA7blst/ZhGFGXt2i8om0mMmKmXTN8/kdJiJRYljWCecQYZo2m43DZutgmntOntSbpBqQ6fghXDfEcGxPP0QUV9j2Kvex7BN+kOkvrxtVdn6fZ9maHw4BxtFXHE8Sx/G0aJXu9y6en35IKN8KvajGPgRcXW0xTUtzdb3j5CmyYvn/371BC5O4JBUlMs5RcYFKSkSU4XkpfljiBYWOYVw9EVWv+TNBVBGLWpfLiERDIlsS8crasHk50Y+f6Md7inL+o/f+zSq2rCOGubHZ7dy/2G4PWtKPD5qmu1A3d/paQr3WNH2J+YyIa6ydi3F9vWOzeardxrRY17Z9pBvvGKZ7qnahbBaa4cK4rE19g8pGRPokf2qrM16Qa48RxTmerwijjCDMWNfr/Bb1RNHd6qvHcp3VXud5NZFVC0M/03Uzeb1Qd7fUxczx9+j9AlDnfx4Iq8r6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image4&quot;
+        title=&quot;image4&quot;
+        src=&quot;/static/e989cfcab4f1b7ec4098de5a1846ad10/2bef9/04.png&quot;
+        srcset=&quot;/static/e989cfcab4f1b7ec4098de5a1846ad10/6f3f2/04.png 256w,
+/static/e989cfcab4f1b7ec4098de5a1846ad10/01e7c/04.png 512w,
+/static/e989cfcab4f1b7ec4098de5a1846ad10/2bef9/04.png 1024w,
+/static/e989cfcab4f1b7ec4098de5a1846ad10/71c1d/04.png 1536w,
+/static/e989cfcab4f1b7ec4098de5a1846ad10/a878e/04.png 2048w,
+/static/e989cfcab4f1b7ec4098de5a1846ad10/d9ed5/04.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACEUlEQVQ4y42S6W7bOBRG9QiJlWixG2uhxEUUtVqWVSHTdDBd3/99TmElRYugGfTHwXcJXH7kXbzvn96zLAvDeMZUPZloOaY1QvUoO1BIx2mcUHYizesNqQZK1ZELhyhrlOlQpqVUA17lOrRUSCnRSmG0psiPGO1Yho907SOlW5D1jDKn7VIh+xeGDVH2CNmTPpR4p15hZYwpr0Sb6iKgrh3T+TPvl2+cH78yP37hNP1HN36kHZ7ohqdNf4+zwuBlpeNwSAiDmCjcE4UHgvuILK+wzYq2M6a+UNUXzDW2lzeYEaXDC8Mj8V6w20X4fox/F7PbBRwTvSUpfUKZ6a84HHK8OEq2QYiiIYqu5ilhdCTNqu3la6Kuzm/zYnaN9/sM7yHVPBwVcZxsRlfTIDiQpOavDNVrw0S0RPuMm5s7drtw4+b2biu5qpf//90rNsOycBjpUIVFFzW6dEhRkSSGNHckWb1pXjRvkomrtkRxiidkR6l6SvmLPHfY+sw4fdiw7vLb7v2ZXDSE4QPezo+4vz+8Yk/brYzTE+PpiX74h6Zbn6dufpVofpZrZ5w6EQfv8G5v7/H95975Ww8DfD/CtRemyweaYaFqZqblX7pxfTayM1KfkXpC6QlpJmw5ENzFeKKwJKkmF9W2zNezKGpsc8ENK9bNFLJD2wljz7T9St2unMaZcViw7UIzrIzNyvEo+QE5J38xbXWZ/AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image5&quot;
+        title=&quot;image5&quot;
+        src=&quot;/static/b32de08ee0e9e70ea1ddc7d76997f6b8/2bef9/05.png&quot;
+        srcset=&quot;/static/b32de08ee0e9e70ea1ddc7d76997f6b8/6f3f2/05.png 256w,
+/static/b32de08ee0e9e70ea1ddc7d76997f6b8/01e7c/05.png 512w,
+/static/b32de08ee0e9e70ea1ddc7d76997f6b8/2bef9/05.png 1024w,
+/static/b32de08ee0e9e70ea1ddc7d76997f6b8/71c1d/05.png 1536w,
+/static/b32de08ee0e9e70ea1ddc7d76997f6b8/a878e/05.png 2048w,
+/static/b32de08ee0e9e70ea1ddc7d76997f6b8/d9ed5/05.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이전 포커스를 알 수 있는 방법은 위의 사진에 우측 상단에 &apos;Main&apos;이라고 되어 있는 것으로 구분한다. 이것을 우리는 &lt;strong&gt;Run Configuration&lt;/strong&gt;이라는데 실행한 클래스가 이 곳에 담긴다. 이것을 보고 이전 포커스가 무엇인지 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;해당 부분을 클릭하여 Edit Configuration을 눌러서 어떤 파일들이 실행이 되었는지 혹은 이곳에 파일을 만들 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACeklEQVQ4y22T2Y7jNhBF9d7TXrRSJLWvtGR5d7ftniBAJ5Pk/z/oBGJPjATIw0UJgnR5brHK2W9bmqYmLyqkyvADiRdIwjgllAlCJdRNiZA5QajwQ0UkUqI4IYw0odDEKiVWCUIWOCrJkHGMEIJEp5TNQJ63qKQhLXqabkfb7SjKDTKp0VlHVhjSvLcGkcie8j2BU+YSHbvIaEkqJfvDL/TmRJYbhvHCOJxouy1p2tJVOzbmymZ7pTNHkqy33/2jMFI4oUhx3YDFYoW7DoiiryhzLestm/GGGe+05o3N+GAzftC0J/JyROkaqepnnVvhLJc+a1fw8rJiufTw/RjfF3hezGY8WZq8mqjavT3AmANjdyTPDVJVxLJ8ynUjnNUqIAhTZtL1OiAI5Jd8SVaNVOZC3kwkhbEkSs8mBUnSPg3nOmu9DmdCj9U6xJf6aWgpA8lmvHI4/0rT7mnbid4c6Po9vZlpxyfZfwxdX7GykZc28r8Ne3Nku3uj6Y62h6250nRnmv5MUU1I9T+GIk6RIiGeLyKUz8izad0deL9/sj8+2O5uTPu7fR6md0sfxRlBqAnsRSbM7XPmlyLOrWYq1w1xvQjPiyjricf337k/PjmeP750eljqupnsP6Ed8owwSlmufJxvr2sWC4+5hr6iqya6ckuWdkyHD+7f/+L28SfX2w+Ol0+Ol9+43v7g7fbj57hUdmTCQPP6bYUz9+71dc3LywLPjUh0g5QVadbZ7Sirgc14Ydi+05oz/fCGGa4M2xuxqhBxgdYleWGIohQnEtpGnaf8a48FfhAjdYHO5jEpCX7urIgzpMptRK0T8rxCZTU6KWn7A2ne8TdUwGTM6j+jLwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image6&quot;
+        title=&quot;image6&quot;
+        src=&quot;/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/2bef9/06.png&quot;
+        srcset=&quot;/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/6f3f2/06.png 256w,
+/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/01e7c/06.png 512w,
+/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/2bef9/06.png 1024w,
+/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/71c1d/06.png 1536w,
+/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/a878e/06.png 2048w,
+/static/0d6fb4a5b3e4df55bb3824b75b3ce2d1/d9ed5/06.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACiElEQVQ4y22TW2/iSBCFeQ6BBPCtu9122/iObcDcw2Q0O4myD/P/f8+3654V0krzcFSS1fp86lTVZNcV5HmGSdZIFeF4kpUr8USEJzWB0mR5SiANrqdwPIUfRPhC4/khXhAiVIRQmkAmTJSOkUIQBD5haEjXDSYpCaMCbUrycktRbknSBqkzwrgkTmoiU1mAH8QPOauASWokoVgi/DlGa97uX1xvP7ncPmj7K5UF9uiooFxvaeozTXemrAd0XBGb+iHPV0y8IGK5dJnNXgj8EfiLfvhB3V7Jy4GyPlO3bxT1haa907TfyIsDJm1RYYZU2aOOUUxeXhwWS8H0ac7KkVTt3T6OkwaTbsjKHUm2Jc13pFlHXe9pywFjaqRaI2T60HLpM3l9dXH9CM/XrFxFPXzQ9O8k686Ck2KPKbbopLZOVDhCErQuHsCxjlosvNHhiteFhyOUnWLZXUmz7QO46W4U5Z686KnqPWW1o6pHt+3D2f+AS0fZlp+eZjiOYH/4SZrvbbsjsKoHiupAUZ+t8vJIXh1J1j1S/QEYiAgZaAJPomRCv/uLcnO1sFG74Y3h+E63vdHv3tgNdzb9laY944sY1wtxfW0jG+ObjB/HpR33aPxj010wafcAHk7v3N8/GY7ffutwp9teyPKeQJj/ljy2wHHAk+fZgvl8xfPzK66naYfPR0txMjr8zv37L07XL4bTB8Ppk/Ptby63r9/rIlNbAz/mZb5kMp2+MJstmE7nLBceSqb4gUHpzC5znFQ07YlNd6Woj1SbC/XmbIcl5BohElsdN7SmJn4Q4oy36yt7x44rcD2BDBO0KVB6bXMabzYQYyzGthiGGmPWqDgjMgWRzlj9e3r/AHw0adv2TcGKAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image7&quot;
+        title=&quot;image7&quot;
+        src=&quot;/static/94346e17cf6ea018df2bb9405d6e1413/2bef9/07.png&quot;
+        srcset=&quot;/static/94346e17cf6ea018df2bb9405d6e1413/6f3f2/07.png 256w,
+/static/94346e17cf6ea018df2bb9405d6e1413/01e7c/07.png 512w,
+/static/94346e17cf6ea018df2bb9405d6e1413/2bef9/07.png 1024w,
+/static/94346e17cf6ea018df2bb9405d6e1413/71c1d/07.png 1536w,
+/static/94346e17cf6ea018df2bb9405d6e1413/a878e/07.png 2048w,
+/static/94346e17cf6ea018df2bb9405d6e1413/d9ed5/07.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;라인 수정하기&lt;/h2&gt;
+&lt;p&gt;이제 라인을 복제, 삭제, 합치는 등 다양한 단축키들을 알아보자.&lt;/p&gt;
+&lt;h3&gt;라인 복제하기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + d&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;라인 삭제하기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + delete&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + Y&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;라인 합치기&lt;/h3&gt;
+&lt;p&gt;라인 합치기라는게 생소할 수 있을 것이다. 이 부분을 코드를 통해 먼저 보여주고 단축키를 설명하겠다.&lt;/p&gt;
+&lt;p&gt;라인 합치기 전 코드는 아래와 같다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.inflearn.intellij.chap1.lineedit;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LineJoin&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;joinString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;안녕하세요. &amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; +&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;IntelliJ 강의에 오신 것을 &amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; +&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;환영합니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createQuery&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;SELECT * &amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; +&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;FROM MEMBER &amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; +&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;WHERE MEMBER.name = &amp;#39;robert&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;라인 합치기를 한 코드는 아래와 같다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.inflearn.intellij.chap1.lineedit;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;LineJoin&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;joinString&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;안녕하세요. IntelliJ 강의에 오신 것을 환영합니다.&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;createQuery&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;quot;SELECT * FROM MEMBER WHERE MEMBER.name = &amp;#39;robert&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그럼 단축키를 알아보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;Ctrl + Shift + J&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이번 단축키는 맥과 윈도우/리눅스 둘다 동일하다.&lt;/p&gt;
+&lt;h3&gt;라인 단위로 옮기기&lt;/h3&gt;
+&lt;p&gt;라인 단위로 옮기기는 구문 이동과 라인 이동이 있다. 이 둘의 차이는 다음과 같다.&lt;/p&gt;
+&lt;p&gt;구문 이동은 문법에 맞게 라인 한줄을 이동한다. 라인 한줄을 이동할 때 문법에 맞지 않을 것 같으면 이동하지 않는다. 라인 이동은 구문 무시하고 무작정 라인을 이동하는 것이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;구문이동
+&lt;ul&gt;
+&lt;li&gt;맥: Shift + command + 위/아래 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Shift + Ctrl + 위/아래 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;라인 이동
+&lt;ul&gt;
+&lt;li&gt;맥: Shift + option + 위/아래 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Shift + Alt + 위/아래 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Element 단위로 옮기기&lt;/h3&gt;
+&lt;p&gt;이 방법은 코드를 좌우로 움직일때 유용하다. 예를 들어, html의 속성 값을 옮기거나 파라미터 값을 위치 조정할때 유용하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: option + Shift + command + 좌/우 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Alt + Ctrl + Shift + 좌/우 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .mtk8 { color: #CE9178; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] 소개]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 왜 해당 글을 쓰려는가? 개발에 있어서 가장 중요한 것은 프로그래밍 언어이다. 하지만 그 언어를 이용하여 프로젝트를 진행할 때 가장 중요한 역할을 하는 것은 바로 IDE…]]></description><link>https://sungbin.kr/IntelliJ-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-소개/</guid><pubDate>Sat, 22 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -154,6 +603,9 @@
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;결론&lt;/h2&gt;
 &lt;p&gt;앞으로의 시리즈에서 단축키 위주로 진행을 할 예정이다. 반드시 해당 단축키를 암기만 하지 말고 직접 사용해보면서 체득하는게 해당 시리즈에서 가장 중요할 것 같다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
