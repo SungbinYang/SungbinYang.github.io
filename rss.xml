@@ -1,4 +1,230 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 05:05:21 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 코드 Edit]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 서문 지금부터 우리는 IntelliJ…]]></description><link>https://sungbin.kr/IntelliJ-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-코드-Edit/</guid><pubDate>Sat, 22 Mar 2025 13:18:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 05:23:27 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 포커스]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/IntelliJ-%ED%8F%AC%EC%BB%A4%EC%8A%A4/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-포커스/</guid><pubDate>Sat, 22 Mar 2025 14:03:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.09374999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADv0lEQVQ4y32UbUxbVRjHz33pC6xlhJfey4ARmq5lVNrVASma29IxOkSZG8vCBMaic2oXEMoSCKOFFjYzN5IlS+SD2Uxc5ssHyPwK6qytmdPqTEzmBxUtvqFGp2Rm8zV/c8+9vYyAnuTJOfc8z/3l/9z/k0se7TgEySvBaDCCIRwIIaix7EHEt4Dxxq8R9X9J94nA9/CIHTQvB/vQIeiv/Q596hb0iZtgrv0B2/k3Qdpb94LneK1QhsUD39GI+r/QYG5xv1rDgDCMAm3tplBDchnMu3cUoL/BtwIT9iIeWMJ441cY9X22AhP20Xy2AxqscmYf6ILh6m0w7/0J2/Ovy8BGmnAJ7ZhQYbK6Z5tv4UTTj3CpMJ7TgWXZFeBdUK7lEbDXAfsLCZCG+lpUF7ZhYkcWtoRu9yVIpYOoNAdWA9YLlgMj73uOoPz8GyBdwQFEpAzigW9xXPoUZ4K34bYcgFkgqLRupi9ZrVa43W54PB4UFRWtgTKq8l1SO8jR3WcQ8y8h4l+gCk8FbyKPOPHSKy8i8VaSFqbTaWRXX1+f0iantksUgwY21uH97b0gT7Y9gzHfNxQmG7C9TBmNy5dfQyqVouepqSksLi5SYH9/vwZkVdgT+R7AHsNVb1gGnqQKZUOybsoxMzODRCKhPcvK5NXb26uapCh8Kv9eYOsYYBtFqv5pkNDu05gM/Exdlgv0OgPdZ2dnkUwmNWAkEqHAo6GQaoYKqxrDX44RwDaiAOWWPUKnNmc8z2sK5+fnEQqFMD09jeXlZQrc5nLTvM1QgDv2YcAxit/sQ4B9HB96j4EEGnaoMOV7ZIFzc3O05VgsRkGZTAZdnZ2a4nv0xfh1yzH84zgOVE/gRvnj6HFIID6vtGoEssMbDocRjUbpWcfzyqzdFRX8RvxtHwGqojgnBuldnlgC4vf6/ndwjUYjBRKehWDKh5CbhzxjLtpMW3C94jBaTFYFZiQ43en9b6DBYIDZZIZ5wwaQHA6DpRJ+cA3hF/cIfqoZRrRQgkn9qRh5Dumhatw41bK25fXisNkF2CNA1SQ+rwhhV06llsvlOVwJO4GL9+HtyE6QZt9OxRSGWRPy/RF5aJ0n6KydFYLIZXUaTM+xuDLgBC5IwHP1eGesGaR7XxdEi7iuskFzLWCP4+Oyx3C/rmRVriCHID20lSrDdD1woQ7peBNIz/6DOPBwB5wOJ0osJSgTNqHAYkHr5m1YqBvGyzUHYRXLYSouRLlYijJxE4qLRJzrqUVmKogP4gF8NNmET04G8Orgg/gXHc2nqO2eOj4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png&quot;
+        srcset=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/6f3f2/banner.png 256w,
+/static/c5da15e564730427f1bf60504a2f2c5c/01e7c/banner.png 512w,
+/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png 1024w,
+/static/c5da15e564730427f1bf60504a2f2c5c/e72de/banner.png 1198w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/NwFz&quot;&gt;향로님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;포커스 에디터&lt;/h2&gt;
+&lt;h3&gt;단어 별 이동&lt;/h3&gt;
+&lt;p&gt;포커스가 다른데 가 있을 때 다른 곳으로 포커스를 가고 싶을때 좌/우 방향키를 계속 이용하기엔 시간이 너무 아깝다. 그래서 단어별로 이동 할 수 있는 단축키를 알아보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: option + 좌/우 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + 좌/우 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;단어 별 선택&lt;/h3&gt;
+&lt;p&gt;단어 별 선택은 다른 에디터들을 써보았으면 매우 똑같다. 그래도 한번 다시 보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Shift + option + 좌/우 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Shift + Ctrl + 좌/우 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;라인 첫/끝 이동&lt;/h3&gt;
+&lt;p&gt;해당 부분은 키보드의 Home키나 End키로 쉽게 할 수 있다. 다만, 맥은 해당 키가 존재하지 않기에 어떻게 해야할지 살펴보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Fn + 좌/우 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Home, End&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;라인 전체 선택&lt;/h3&gt;
+&lt;p&gt;라인 전체 선택도 매우 쉽게 알 수 있다. 많이 사용 해봤을 것이다. 그래도 다시 한번 알아보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;맥: Shift + command + 좌/우 방향키(Fn + Shift + 좌/우 방향키)
+윈도우/리눅스: Shift + Home/End&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;page up/dowm&lt;/h3&gt;
+&lt;p&gt;이 부분도 윈도우는 키보드의 page up/down 버튼을 누르면 되지만 맥은 해당 키가 존재하지 않기에 어떻게 해야할지 살펴보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;맥: Fn + 위/아래 방향키
+윈도우/리눅스: Shift + Home/End&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;포커스 특수키&lt;/h2&gt;
+&lt;p&gt;그러면 이제 포커스 특수 키들에 대해 알아보자!&lt;/p&gt;
+&lt;h3&gt;포커스 범위 한 단계씩 늘리기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: option + 위/아래 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/맥: Ctrl + w / Shift + Ctrl + w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;포커스 뒤로 앞으로 가기&lt;/h3&gt;
+&lt;p&gt;해당 기능을 단축키로 사용하면 해당 파일에서 뿐만 아니라 다른 파일에 포커스가 갔었다면 다른 파일로도 옮겨지는 유용한 기능이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + [, ]&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + Alt + 죄/우 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;멀티 포커스&lt;/h3&gt;
+&lt;p&gt;해당 기능은 반복되는 부분들을 한번에 변경할 때 매우 유용하다. 예를 들어 아래 코드에서 &lt;code&gt;getCourse()&lt;/code&gt;를 다르게 변경하고 싶을 때 사용한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.inflearn.intellij.chap2.special;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; java.util.ArrayList;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; java.util.List;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;FocusCopy&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;copyFocus&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCourse&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCourse&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCourse&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCourse&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getCourse&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;());&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: option + option(누른채로) + 아래 방향키&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + Ctrl(누른채로) + 아래 방향키&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;오류 라인 자동 포커스&lt;/h3&gt;
+&lt;p&gt;이 기능을 이용하면 쉽게 오류 라인쪽으로 바로 포커스가 이동한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;F2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 단축키는 맥과 윈도우 공통이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] 코드 Edit]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 서문 지금부터 우리는 IntelliJ…]]></description><link>https://sungbin.kr/IntelliJ-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-코드-Edit/</guid><pubDate>Sat, 22 Mar 2025 13:18:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
