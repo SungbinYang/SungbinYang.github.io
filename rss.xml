@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 01:28:25 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 소개]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 왜 해당 글을 쓰려는가? 개발에 있어서 가장 중요한 것은 프로그래밍 언어이다. 하지만 그 언어를 이용하여 프로젝트를 진행할 때 가장 중요한 역할을 하는 것은 바로 IDE…]]></description><link>https://sungbin.kr/IntelliJ-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-소개/</guid><pubDate>Sat, 22 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 04:07:50 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 소개]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 왜 해당 글을 쓰려는가? 개발에 있어서 가장 중요한 것은 프로그래밍 언어이다. 하지만 그 언어를 이용하여 프로젝트를 진행할 때 가장 중요한 역할을 하는 것은 바로 IDE…]]></description><link>https://sungbin.kr/IntelliJ-%EC%86%8C%EA%B0%9C/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-소개/</guid><pubDate>Sat, 22 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABkUlEQVQ4y5WTyXKrMBBF+Y7E8TOjAE0gQEKA8ZTCGdf5/y+5KcDxiytJJV6ckhaqo9vdkpNQgzDKsXQp7lYpFssINwsft4vgR25uPXiBQMIaRHEJkmqkvEVAFJzKDohpjTKzaJojMrWFyNYQeQ+RfbC+RHYoqnuY9hnaPkzY7hVUtHD67TOEbJGZDQ6PbzDNC8r6CZV9gm5eUOgBMu8h1RZSbU5spwu5nC/gpwAkKeHYbgDnNSLRQukDmBijl2f8SOGfS7FcJd+QfiKZzjm2HZByAyF2MPYBhd6D0BokNSBpPRFECq7P4Pr8VxwmGvhRDsF6aDOAyu4silmDMK6w8v7LPu+/FcapRhQXYHID0xyRl7spXZTMCcfVC7NfRRfCkFRQeQ7bHpAV+3O5MbUg1MIL5JXCuIKSJUy9B5Xrc8lzQg03ENcJx8fJsw5VfT+Xm5rTIMRF3/4iPQkVODug1EfErJ7KHJ/LyqN/HsaXoQi+Q2VG4dy3YBKyq2STkCQaZPyPrAPL+qlnI36YXyX6EL4D6F2HdrTYppwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 96.09374999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADv0lEQVQ4y32UbUxbVRjHz33pC6xlhJfey4ARmq5lVNrVASma29IxOkSZG8vCBMaic2oXEMoSCKOFFjYzN5IlS+SD2Uxc5ssHyPwK6qytmdPqTEzmBxUtvqFGp2Rm8zV/c8+9vYyAnuTJOfc8z/3l/9z/k0se7TgEySvBaDCCIRwIIaix7EHEt4Dxxq8R9X9J94nA9/CIHTQvB/vQIeiv/Q596hb0iZtgrv0B2/k3Qdpb94LneK1QhsUD39GI+r/QYG5xv1rDgDCMAm3tplBDchnMu3cUoL/BtwIT9iIeWMJ441cY9X22AhP20Xy2AxqscmYf6ILh6m0w7/0J2/Ovy8BGmnAJ7ZhQYbK6Z5tv4UTTj3CpMJ7TgWXZFeBdUK7lEbDXAfsLCZCG+lpUF7ZhYkcWtoRu9yVIpYOoNAdWA9YLlgMj73uOoPz8GyBdwQFEpAzigW9xXPoUZ4K34bYcgFkgqLRupi9ZrVa43W54PB4UFRWtgTKq8l1SO8jR3WcQ8y8h4l+gCk8FbyKPOPHSKy8i8VaSFqbTaWRXX1+f0iantksUgwY21uH97b0gT7Y9gzHfNxQmG7C9TBmNy5dfQyqVouepqSksLi5SYH9/vwZkVdgT+R7AHsNVb1gGnqQKZUOybsoxMzODRCKhPcvK5NXb26uapCh8Kv9eYOsYYBtFqv5pkNDu05gM/Exdlgv0OgPdZ2dnkUwmNWAkEqHAo6GQaoYKqxrDX44RwDaiAOWWPUKnNmc8z2sK5+fnEQqFMD09jeXlZQrc5nLTvM1QgDv2YcAxit/sQ4B9HB96j4EEGnaoMOV7ZIFzc3O05VgsRkGZTAZdnZ2a4nv0xfh1yzH84zgOVE/gRvnj6HFIID6vtGoEssMbDocRjUbpWcfzyqzdFRX8RvxtHwGqojgnBuldnlgC4vf6/ndwjUYjBRKehWDKh5CbhzxjLtpMW3C94jBaTFYFZiQ43en9b6DBYIDZZIZ5wwaQHA6DpRJ+cA3hF/cIfqoZRrRQgkn9qRh5Dumhatw41bK25fXisNkF2CNA1SQ+rwhhV06llsvlOVwJO4GL9+HtyE6QZt9OxRSGWRPy/RF5aJ0n6KydFYLIZXUaTM+xuDLgBC5IwHP1eGesGaR7XxdEi7iuskFzLWCP4+Oyx3C/rmRVriCHID20lSrDdD1woQ7peBNIz/6DOPBwB5wOJ0osJSgTNqHAYkHr5m1YqBvGyzUHYRXLYSouRLlYijJxE4qLRJzrqUVmKogP4gF8NNmET04G8Orgg/gXHc2nqO2eOj4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;banner&quot;
         title=&quot;banner&quot;
-        src=&quot;/static/5c1b2411077d031a6c5c20af90e36807/2bef9/01.png&quot;
-        srcset=&quot;/static/5c1b2411077d031a6c5c20af90e36807/6f3f2/01.png 256w,
-/static/5c1b2411077d031a6c5c20af90e36807/01e7c/01.png 512w,
-/static/5c1b2411077d031a6c5c20af90e36807/2bef9/01.png 1024w,
-/static/5c1b2411077d031a6c5c20af90e36807/71c1d/01.png 1536w,
-/static/5c1b2411077d031a6c5c20af90e36807/a878e/01.png 2048w,
-/static/5c1b2411077d031a6c5c20af90e36807/0b569/01.png 2878w&quot;
+        src=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png&quot;
+        srcset=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/6f3f2/banner.png 256w,
+/static/c5da15e564730427f1bf60504a2f2c5c/01e7c/banner.png 512w,
+/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png 1024w,
+/static/c5da15e564730427f1bf60504a2f2c5c/e72de/banner.png 1198w&quot;
         sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -154,6 +152,8 @@
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;결론&lt;/h2&gt;
+&lt;p&gt;앞으로의 시리즈에서 단축키 위주로 진행을 할 예정이다. 반드시 해당 단축키를 암기만 하지 말고 직접 사용해보면서 체득하는게 해당 시리즈에서 가장 중요할 것 같다.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
