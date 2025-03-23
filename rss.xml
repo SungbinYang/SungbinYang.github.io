@@ -1,4 +1,227 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 23 Mar 2025 03:09:51 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 리팩토링]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 리팩토링 extract…]]></description><link>https://sungbin.kr/IntelliJ-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-리팩토링/</guid><pubDate>Sun, 23 Mar 2025 11:44:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 23 Mar 2025 04:29:05 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 디버깅]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/IntelliJ-%EB%94%94%EB%B2%84%EA%B9%85/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-디버깅/</guid><pubDate>Sun, 23 Mar 2025 13:13:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.09374999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADv0lEQVQ4y32UbUxbVRjHz33pC6xlhJfey4ARmq5lVNrVASma29IxOkSZG8vCBMaic2oXEMoSCKOFFjYzN5IlS+SD2Uxc5ssHyPwK6qytmdPqTEzmBxUtvqFGp2Rm8zV/c8+9vYyAnuTJOfc8z/3l/9z/k0se7TgEySvBaDCCIRwIIaix7EHEt4Dxxq8R9X9J94nA9/CIHTQvB/vQIeiv/Q596hb0iZtgrv0B2/k3Qdpb94LneK1QhsUD39GI+r/QYG5xv1rDgDCMAm3tplBDchnMu3cUoL/BtwIT9iIeWMJ441cY9X22AhP20Xy2AxqscmYf6ILh6m0w7/0J2/Ovy8BGmnAJ7ZhQYbK6Z5tv4UTTj3CpMJ7TgWXZFeBdUK7lEbDXAfsLCZCG+lpUF7ZhYkcWtoRu9yVIpYOoNAdWA9YLlgMj73uOoPz8GyBdwQFEpAzigW9xXPoUZ4K34bYcgFkgqLRupi9ZrVa43W54PB4UFRWtgTKq8l1SO8jR3WcQ8y8h4l+gCk8FbyKPOPHSKy8i8VaSFqbTaWRXX1+f0iantksUgwY21uH97b0gT7Y9gzHfNxQmG7C9TBmNy5dfQyqVouepqSksLi5SYH9/vwZkVdgT+R7AHsNVb1gGnqQKZUOybsoxMzODRCKhPcvK5NXb26uapCh8Kv9eYOsYYBtFqv5pkNDu05gM/Exdlgv0OgPdZ2dnkUwmNWAkEqHAo6GQaoYKqxrDX44RwDaiAOWWPUKnNmc8z2sK5+fnEQqFMD09jeXlZQrc5nLTvM1QgDv2YcAxit/sQ4B9HB96j4EEGnaoMOV7ZIFzc3O05VgsRkGZTAZdnZ2a4nv0xfh1yzH84zgOVE/gRvnj6HFIID6vtGoEssMbDocRjUbpWcfzyqzdFRX8RvxtHwGqojgnBuldnlgC4vf6/ndwjUYjBRKehWDKh5CbhzxjLtpMW3C94jBaTFYFZiQ43en9b6DBYIDZZIZ5wwaQHA6DpRJ+cA3hF/cIfqoZRrRQgkn9qRh5Dumhatw41bK25fXisNkF2CNA1SQ+rwhhV06llsvlOVwJO4GL9+HtyE6QZt9OxRSGWRPy/RF5aJ0n6KydFYLIZXUaTM+xuDLgBC5IwHP1eGesGaR7XxdEi7iuskFzLWCP4+Oyx3C/rmRVriCHID20lSrDdD1woQ7peBNIz/6DOPBwB5wOJ0osJSgTNqHAYkHr5m1YqBvGyzUHYRXLYSouRLlYijJxE4qLRJzrqUVmKogP4gF8NNmET04G8Orgg/gXHc2nqO2eOj4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png&quot;
+        srcset=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/6f3f2/banner.png 256w,
+/static/c5da15e564730427f1bf60504a2f2c5c/01e7c/banner.png 512w,
+/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png 1024w,
+/static/c5da15e564730427f1bf60504a2f2c5c/e72de/banner.png 1198w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/NwFz&quot;&gt;향로님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;디버깅&lt;/h2&gt;
+&lt;p&gt;디버깅이란, 소프트웨어에서 오류 또는 버그를 찾아 개발이나 실행 중 발생하는 시스템의 논리적 오류나 비정상적인 연산을 찾아내고 수정하는 작업 과정이다. 그러면 디버깅 과정과 단축키에 대해 살펴보자.&lt;/p&gt;
+&lt;h3&gt;디버그 모드로 실행(현재 위치)&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + Shift + d&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: 단축키 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;디버그 모드로 실행(이전에 실행한 메서드)&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + d&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Shift + F9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그러면 디버깅 실행 화면을 살펴보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACd0lEQVQ4y23S627jNhCGYV1DkmZty7bOFCWKlERSsixbjrMFekCB9P6v5i3kbAMU3R8PMBwSxMcBg79+m7nME84PVHVLkjXksqdselLR0dke7T1RW1IMNY1zaDchlKU2M6JxVO2ArFvysid4eT0SHiq2oeD1dc8uzDDqxNwu2PGOsBfypqeyLZmqiIWk1t3jAqk6lHE0rcN0nvhYEDw9vbLdHhCi4fl5w26XUOkzurtiz+/086+403dO/k5rrkg1I5uJ6uH0pW4m8rwmeHresd2E1JXi5SVku0tQ1YC1Z/y4MHYXBj3h9QlnPP6HtrKfpEWXPVZ6XD0QvPyyY/MtRJRrwh3hPqfvz3g7cn/7znJduF5vLOcLy2Xmdp24XT3z5JhP9mGwLbPz6FQRrM98ftpwyEvCPGZ/yNB2oZ5m2mmhO92Q7oLsZ0Q7UZgTuR4ozPip/SS7ieOhIDhGOYd9QlpI0lKwP+QUwqLUhPVvDOM72l1omvHRF6vSIYR71HnRU6yEZbONCRrl0bWlrixG9kjRcZ7/4H77QOuJOFMck4oorjj+RCF6stwQpYrtNiFYbh/c3//msvzJ/f2D0/Q71lzouxuiGsmKnihRHKLyf46RxPs71i7I2hOGKYG0FuU9tbNUfUdhNI20GDUh6hNpbohTRZI2xD+hzETv32jtjXCfEWSyIytb4qwm+kFKi6tnlL4im5midBRyoJD+i6gGhBzIS0cmLGXes1tnGKeaJDUk2ad1HaXNZ6JEPVIkmf7a/7eO03Vu/+1/2xwJ1h9f6zPKrNZU02Meq7IZUXqkrNc0PXnRIStHVlpaY2nb9YxHmRHTTESR5B8JIIbpYtrr4wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/6a1cd635a735fbb4918bdbe9e0c26b08/2bef9/01.png&quot;
+        srcset=&quot;/static/6a1cd635a735fbb4918bdbe9e0c26b08/6f3f2/01.png 256w,
+/static/6a1cd635a735fbb4918bdbe9e0c26b08/01e7c/01.png 512w,
+/static/6a1cd635a735fbb4918bdbe9e0c26b08/2bef9/01.png 1024w,
+/static/6a1cd635a735fbb4918bdbe9e0c26b08/71c1d/01.png 1536w,
+/static/6a1cd635a735fbb4918bdbe9e0c26b08/a878e/01.png 2048w,
+/static/6a1cd635a735fbb4918bdbe9e0c26b08/d9ed5/01.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;디버깅 창을 보면 왼쪽이 &lt;code&gt;call stack&lt;/code&gt;이라고 해서 해당 메서드의 브레이크 포인트까지 어떤 걸 타고 왔냐를 볼 수 있는 화면이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 용어정리&lt;/p&gt;
+&lt;p&gt;브레이크 포인트란, 코드 실행에 있어서 오류가 의심되는 부분이나 실행 중 연산하는 값을 중간 확인해야 하는 부분에 종단점이라고 볼 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그러면 이제 디버그 모드에서 다양한 기능들을 살펴보자.&lt;/p&gt;
+&lt;h3&gt;Resume: 다음 브레이크 포인트로 이동하기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;맥: command + option + r
+윈도우/리눅스: F9&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Step Over: 현재 브레이크에서 다음 한 줄로 넘어가기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;F8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Step Into: 현재 브레이크의 다음 메서드 이동&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;F7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Step Out: 현재 메서드 밖으로 이동&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;Shift + F8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Evaluate Expression: 브레이크 된 상태에서 코드 즉시 실행&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;맥: option + F8
+윈도우/리눅스: Alt + F8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행화면은 다음과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACfUlEQVQ4y0WT2W7bOBiF9QxxJrUly9q4SKREUZvlLQnQmRYFinn/x/kGYozOxcFPXvDwLGT0++eN++3CNC80pqcUDmFHSuXQrefyWNHtgupn/PmGG2/08w01eNqzp3IK43usGxFqIHp9O5GkDYdE8fZ2JE5KStGh3UQ9ncllR5ppstJwKmpOeU2aazKhyLUkl5JCNEjdczoKopeXNw6HFKVadrs9cZyjmzNtt+CmK3Uzo82MkJ6i6igrh9Qjul7+R7Og6pmsVEQvu5jDPsE0lt1rQpKUNO2KdQv9cEE2PbL2FKWlFC1CdgjlUc05EAWy51qqjuj1r5j9twSlN4UxcVwEQtOe8eM70/oDP35iuwuNXYMSVQ/48ULXrzi/4oaVabxjS0u02dy97EmlJhEZ6Uniz5/kygYC5z+o1EhWWPKyJS8ssh1w1zvteqO7bLjTXx/kuSQ6ZYLjsaCUNVWtyTKFrCeyymK7K8P4HVHPgWzLMEzhkM0cUOkBocdwZh/nRJ1dcGbCNhO+mTDKc7v+wtoV3cx4/0Do4Q/hhvSkntBI6amECw4Oh5zo/vmbj+//cn3/yePzF8v1Hwb/QEuP6S7Myw9Us5AVhry0ZLkJ5FsMG5bz34zjg8bModCo3G6QXw86QPZI1SOqLtgwZgrvspIeqaegulID2lxQZqXtbwzTB/30QXKsiELQ5TPwJ7JtX5hgKUkVSSrDZVtJw/T+pfSpeBMk1IgWA/FmOQ+5OP7MZ5Np1nA8adKsDvP4JI+PIpBlRcupaCnKr3Nbtt/2JyLTXTHuStvfA0y3ou2CdRdse8bYhdZtBU3hhzR2Ca32/YYZ3c5Yd8a1F7Ks5j8EPYB4RPiGUAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/e73eaef851a5b9453872c3162a262e48/2bef9/02.png&quot;
+        srcset=&quot;/static/e73eaef851a5b9453872c3162a262e48/6f3f2/02.png 256w,
+/static/e73eaef851a5b9453872c3162a262e48/01e7c/02.png 512w,
+/static/e73eaef851a5b9453872c3162a262e48/2bef9/02.png 1024w,
+/static/e73eaef851a5b9453872c3162a262e48/71c1d/02.png 1536w,
+/static/e73eaef851a5b9453872c3162a262e48/a878e/02.png 2048w,
+/static/e73eaef851a5b9453872c3162a262e48/d9ed5/02.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;watch: 브레이크 이후의 코드 변경 상태 확인하기&lt;/h3&gt;
+&lt;p&gt;해당 기능은 단축키가 없고 디버깅 채널에 안경모양 아이콘을 클릭하면 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] 리팩토링]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 리팩토링 extract…]]></description><link>https://sungbin.kr/IntelliJ-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-리팩토링/</guid><pubDate>Sun, 23 Mar 2025 11:44:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
