@@ -1,4 +1,324 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Mar 2025 05:42:48 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 검색]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 검색 텍스트 현재 파일 검색 이 기능도 여러분은 누구나 알 수 있는 단축키이다. ⌨️ 단축키 맥: command + f 윈도우/리눅스: Ctrl + f…]]></description><link>https://sungbin.kr/IntelliJ-%EA%B2%80%EC%83%89/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-검색/</guid><pubDate>Sat, 22 Mar 2025 14:20:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 23 Mar 2025 01:50:16 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 자동완성]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/IntelliJ-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-자동완성/</guid><pubDate>Sun, 23 Mar 2025 10:22:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.09374999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADv0lEQVQ4y32UbUxbVRjHz33pC6xlhJfey4ARmq5lVNrVASma29IxOkSZG8vCBMaic2oXEMoSCKOFFjYzN5IlS+SD2Uxc5ssHyPwK6qytmdPqTEzmBxUtvqFGp2Rm8zV/c8+9vYyAnuTJOfc8z/3l/9z/k0se7TgEySvBaDCCIRwIIaix7EHEt4Dxxq8R9X9J94nA9/CIHTQvB/vQIeiv/Q596hb0iZtgrv0B2/k3Qdpb94LneK1QhsUD39GI+r/QYG5xv1rDgDCMAm3tplBDchnMu3cUoL/BtwIT9iIeWMJ441cY9X22AhP20Xy2AxqscmYf6ILh6m0w7/0J2/Ovy8BGmnAJ7ZhQYbK6Z5tv4UTTj3CpMJ7TgWXZFeBdUK7lEbDXAfsLCZCG+lpUF7ZhYkcWtoRu9yVIpYOoNAdWA9YLlgMj73uOoPz8GyBdwQFEpAzigW9xXPoUZ4K34bYcgFkgqLRupi9ZrVa43W54PB4UFRWtgTKq8l1SO8jR3WcQ8y8h4l+gCk8FbyKPOPHSKy8i8VaSFqbTaWRXX1+f0iantksUgwY21uH97b0gT7Y9gzHfNxQmG7C9TBmNy5dfQyqVouepqSksLi5SYH9/vwZkVdgT+R7AHsNVb1gGnqQKZUOybsoxMzODRCKhPcvK5NXb26uapCh8Kv9eYOsYYBtFqv5pkNDu05gM/Exdlgv0OgPdZ2dnkUwmNWAkEqHAo6GQaoYKqxrDX44RwDaiAOWWPUKnNmc8z2sK5+fnEQqFMD09jeXlZQrc5nLTvM1QgDv2YcAxit/sQ4B9HB96j4EEGnaoMOV7ZIFzc3O05VgsRkGZTAZdnZ2a4nv0xfh1yzH84zgOVE/gRvnj6HFIID6vtGoEssMbDocRjUbpWcfzyqzdFRX8RvxtHwGqojgnBuldnlgC4vf6/ndwjUYjBRKehWDKh5CbhzxjLtpMW3C94jBaTFYFZiQ43en9b6DBYIDZZIZ5wwaQHA6DpRJ+cA3hF/cIfqoZRrRQgkn9qRh5Dumhatw41bK25fXisNkF2CNA1SQ+rwhhV06llsvlOVwJO4GL9+HtyE6QZt9OxRSGWRPy/RF5aJ0n6KydFYLIZXUaTM+xuDLgBC5IwHP1eGesGaR7XxdEi7iuskFzLWCP4+Oyx3C/rmRVriCHID20lSrDdD1woQ7peBNIz/6DOPBwB5wOJ0osJSgTNqHAYkHr5m1YqBvGyzUHYRXLYSouRLlYijJxE4qLRJzrqUVmKogP4gF8NNmET04G8Orgg/gXHc2nqO2eOj4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png&quot;
+        srcset=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/6f3f2/banner.png 256w,
+/static/c5da15e564730427f1bf60504a2f2c5c/01e7c/banner.png 512w,
+/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png 1024w,
+/static/c5da15e564730427f1bf60504a2f2c5c/e72de/banner.png 1198w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/NwFz&quot;&gt;향로님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;자동완성&lt;/h2&gt;
+&lt;p&gt;자동완성은 매우 중요하다. 개발자가 일일이 하나하나 전부 타이핑을 한다면 개발하는데 시간이 매우 오래 걸리기 때문이며, 비즈니스 로직에 작성하는데도 방해가 될 것이다. 이런 불편함에 많은 개발자들은 자동완성 기능을 많이 이용한다. 그러면 자동완성 기능을 알아보자.&lt;/p&gt;
+&lt;h3&gt;스마트 자동완성&lt;/h3&gt;
+&lt;p&gt;스마트 자동완성이란, 말 그대로 똑똑하게 자동완성을 시켜준다. 대표적인 예시로 아래의 코드가 있을때 해당 인터페이스에 어떤 구현체가 들어가야할지 혹은 파라미터에 어떤 값이 들어가는게 좋을지 선별해서 IDE가 우리에게 알려준다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.inflearn.intellij.chap4;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; org.junit.jupiter.api.Test;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; java.util.Calendar;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; java.util.GregorianCalendar;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; java.util.Locale;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;StaticTest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;() {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;// 스마트 자동완성 기능으로 구현체도 선별할 수 있고 구현체뿐만 아니라 구현체의 파리미터 값도 알 수 있다.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;Calendar&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk12&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;mtk15&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; ;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;Ctrl + Shift + Space&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;스태틱 메서드 자동완성&lt;/h3&gt;
+&lt;p&gt;테스트 코드를 작성하다보면 &lt;code&gt;assertThat&lt;/code&gt;과 같은 static 메서드를 import하기가 인텔리제이에서 좋게 지원해주지는 않는다. 그럴 때 스태틱 메서드 자동완성 단축키를 쓰면 쉽게 import 혹은 어느 패키지에 있는지 알려준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;Ctrl + Space + Space&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Getter/Setter/생성자 자동완성&lt;/h3&gt;
+&lt;p&gt;우리는 객체를 설계할 때 getter, setter, 생성자등을 다양하게 만들어야 할 수 있다. 그럴 때 우리는 단축키를 이용해서 쉽게 만들 수 있다. 단축키를 사용하면 아래와 같이 나오는데 여기서 골라서 진행하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/0lEQVQ4y5WT23LTMBCG8wCxY9nxSSdLPsSJSUILaekwhYHOcMv7v83HSBSY0pYZLv6xVqv9vKvVrq7PE9PU471HKUvVGJTpUcZTa4+2nmme0X5Ho1z0WTchTY82Pa22qMGirKVuHat0UyIKySYrSTcFomiwZsJ1AbJHdzOmO2DMhFQ9Sg/x20iPVAONdNTGILVjW7Ss1uuMvGijwjoTFUqNODNj3R6lp2i3cqCV/YuS0TdQVjIABdkmR0lLkuQIUaH1hLN7rD9guhmpx5iNVOPLevTXjWWVJII0FVS1IU0LiqKh8wuHNxdOb+/ox3O0rTv8U507xNiVEDVZVlK2HUUpyfOGpvVcbr/y5eE7x/N9DGjbn3f2atlqiNWtQiNCltvGkW9l3AwH5v07luMNrj+hzfQ76G89B8aSc4rKkIk6boYMQ8n3n79xPH9A/Q9Q5E18KllekyQZIg/Anvlwzd3HB5bjbez0r6BW9U/gz4AbI8i7kkQmJCpBqG0EHpYL7y+fYlO02T3L6lXg2qzJ+5rt0JCYNUJvozNA7OOTCVdQNy5KvlL6H6Bek+oU4StSu2EjRfxjaMTp6oZxPjEv1yynG05Xt7+zamSYkqedDkOxkraj1oZKS0olaYxB2xHTTfhpoev3qGC7HV0YRTPSqgHvBrwfUd0YZ9t1O8pS8QNA91tCa9PwKwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/2880801490b27ddef9cfcdac45808e7d/2bef9/01.png&quot;
+        srcset=&quot;/static/2880801490b27ddef9cfcdac45808e7d/6f3f2/01.png 256w,
+/static/2880801490b27ddef9cfcdac45808e7d/01e7c/01.png 512w,
+/static/2880801490b27ddef9cfcdac45808e7d/2bef9/01.png 1024w,
+/static/2880801490b27ddef9cfcdac45808e7d/71c1d/01.png 1536w,
+/static/2880801490b27ddef9cfcdac45808e7d/a878e/01.png 2048w,
+/static/2880801490b27ddef9cfcdac45808e7d/d9ed5/01.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + n&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Alt + Insert&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;오버라이드 메서드 자동완성&lt;/h3&gt;
+&lt;p&gt;우리는 인터페이스를 구현하거나 상속을 받아서 오버라이딩 메서드를 구현해야 하는 경우에도 쉽게 하는 경우가 있다. 원래는 기존 구현해야 할 메서드들을 복사해서 구현하거나 클래스에 빨간 밑줄이 그어지면 &lt;code&gt;Alt + Enter&lt;/code&gt;를 이용해서 구현해야 하는 경우가 있었는데 더 쉽게 하는 단축키가 존재한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;Ctrl + i&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Live Template&lt;/h2&gt;
+&lt;h3&gt;Live Template?&lt;/h3&gt;
+&lt;p&gt;라이브 템플릿은 미리 약속된 약어를 입력하고 특정 키를 누르면 미리 구성되어 템플릿화되어 있는 코드를 화면에 자동으로 표시해주는 기능이다. 우리가 이전에 학습했던 &lt;code&gt;main&lt;/code&gt;, &lt;code&gt;psvm&lt;/code&gt;, &lt;code&gt;sout&lt;/code&gt;등이 그렇다. 하지만 우리가 이런 약어를 전부 알 수는 없다. 그래서 이런 목록들을 볼 수 있게 인텔리제이가 단축키를 제공해준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + j&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + j&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACRUlEQVQ4y32T6XLaMBSF/QoJEIzNZuNN3mS8Y0igSRPotL86ff9X+TpSSLdk+uOMbMv6ru45kvHtsmcYeqq6QcSSjZ8Tph1h1uJ46j2lrhpCUbN2Uy0/LPHDAtdN9XwUSy0vLDEsJ2Nyt+ROabpgsQxoyxND9URWHRFyT5gNBFGFH1Ya5gWventWYxSXrBYBhmU5zBc+47HJaGQysxyStKMqP9E9XJDdiVweSLIdcbojitsPFYqWtRtijEYWi5XAtFxGoymW7eofUjlQlEdE0hGKhlAvbP4DbHT7xng8wzQX+H7CaDxD7Ti6Lo6TDj+qr63+VhDV76Q8tm0HQ0HMqU0iUm5vZ8wXHtv6kbp7pt9f6IYLbX+m6c7U3YtWUZ6Q2+NfUt/UWuPuzmYysVg4CabtYNkOSTZwOHxluP9C1T5Td2ea/gv74w+Gh+96XiQ9cfqndtouHYpprthkPesgZz73CKOGorjXbesUg632KC8fyYrTtcXmnRTLmJlrLHvDzHYZ3U51ysrD7faISHuiuNPVi+oz2+aFbXPWiSrAv8Fo4NKTzJehho3fQhEtZXUilXtSeU9WHJHVkwbK8ukKe03+bXe/gKtlgjX3NEwD1bERLSJu2fgFrlcQRC1h3GvFWa8T/ejoaA/dTc7KyTTs5mai/VQVk7wh33bIakeS1wSiJJUdcdboW6OKBNHr7tQYiIbZbI2x8RLWboyziXFcQRBK0nxHJnuSQnmn2t4h0pY47fSBV61WZUeliskdebmnLA6s14KfLw6FO9nsCW8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/1b3a49c231a6c401f004a7f991feb02c/2bef9/02.png&quot;
+        srcset=&quot;/static/1b3a49c231a6c401f004a7f991feb02c/6f3f2/02.png 256w,
+/static/1b3a49c231a6c401f004a7f991feb02c/01e7c/02.png 512w,
+/static/1b3a49c231a6c401f004a7f991feb02c/2bef9/02.png 1024w,
+/static/1b3a49c231a6c401f004a7f991feb02c/71c1d/02.png 1536w,
+/static/1b3a49c231a6c401f004a7f991feb02c/a878e/02.png 2048w,
+/static/1b3a49c231a6c401f004a7f991feb02c/d9ed5/02.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;대표적으로 해당 변수에 대한 if 긍정 조건문을 쉽게 만드는 &lt;code&gt;ifn&lt;/code&gt;과 if 부정 조건문을 만드는 &lt;code&gt;inn&lt;/code&gt;이 있다.&lt;/p&gt;
+&lt;h2&gt;Custom Live Template&lt;/h2&gt;
+&lt;p&gt;우리는 우리의 입맛에 맞게 라이브 템플릿을 커스텀해서 만들 수 있다. 그런 방법을 알아보자.&lt;/p&gt;
+&lt;p&gt;먼저, 우리가 이전에 배운 Action 검색을 키는 &lt;code&gt;command + Shift + a&lt;/code&gt;를 눌러서 Live Template을 검색하자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACZUlEQVQ4y22T227bOBBA/VzHiiRL1IWiRN1ty7GlOHFiN2nibbto89IC+//fchZi3CJB+3AwAgkezgxHk2Hb0NQleV4QyxQRKqQqSVSBHyhEKMmLnEjmeEIawigjiFKEkGY/kimRVASRZuL4CsvysC7nBnceUmQtlV4hdUuU1oRJTRhpgjBDnBkPm7VzjKTGm0dMHCfAnUfMZg6zC9sIlW4p8o522VO1W4qiQ6UtedFRlB2ZXhDL8h1RXOKLmMls5jL3JLYT8mFqoeKSn48/Oe2/stt85NA/sbs6sl3dc7N5YD88su8f0dmCMC7eCAuCUI1CB9v2iCLF9MImijQ//vmP0/GF5frIqrunWx8MV9tHNv0z+8N3Mr18LTUufuM64iy8dElkynRqI4RiuH3i7viZ27sTVTNQVL2hbK7ptk902xM6X5NmC1K9NIwXjO2aWNYcy3KZC4Vt+6bxh+NXI9sOD9TtjrIeqBc3tKt7Ntdf6G+/keqVKVUmNTKpTHTcYHwUwaXtEaqaIExNGTf7V1lzllXNtWH8HjMcpUnaEkb5u5JH12TMajTbbsB0aiGClOPDvzyfXrg/fqFZ3FBUW8q6N8LV5pNhFEZvHmXECL1Q43qxGZmLCxtfJAy7B/rhSNX06GL9B+MFUjW/hb/iq9BTOG6IZTlGKALF4eNnPj1/Y9MfWKx2FNXGiPLyysR6cWvm8q8ZiiDDEynjPE4/WHh+Qnd1x3pzR7MYjGwU/SI7Zxmbv6d410N7FAZhgi8kfiDNpMdJgcqWKDMSK7L8LR3LeqCpB7SuyPMKmVWkukZnDb4v+R/P7mhrWsoIewAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/66b92e996f8194fbf07361495e6a62f0/2bef9/03.png&quot;
+        srcset=&quot;/static/66b92e996f8194fbf07361495e6a62f0/6f3f2/03.png 256w,
+/static/66b92e996f8194fbf07361495e6a62f0/01e7c/03.png 512w,
+/static/66b92e996f8194fbf07361495e6a62f0/2bef9/03.png 1024w,
+/static/66b92e996f8194fbf07361495e6a62f0/71c1d/03.png 1536w,
+/static/66b92e996f8194fbf07361495e6a62f0/a878e/03.png 2048w,
+/static/66b92e996f8194fbf07361495e6a62f0/d9ed5/03.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 후, Settings에 있는 Live Templates를 들어간다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVklEQVQ4y3WT2W7bOhCG/QJNLWsjRVEktcur7NgOnMYpivaq6Pu/zleQKXrqi3PxQ5yR+M1olsXx0NN3Da6uUaoiExqla1TpSDJFlhc4ZxHKBttLSEMuKzL/XiikqpBKk0vLIso0T08xuagoVB3k3ETX7nH1BuMmXLOlrHq0GYL8+cMeKcqWXBqkDxhLFlGUE61ycmGozISQFmsG5tMXjs9f6IcZW2+ouwN1u39Q081UZkQWPpGGNCtYfPq0IloJirLHuC1xIjFlx/X2g7f3n9TtLgRRZRMu/asPX/0BLGpyoT0w4ulpRZaV6GokSSSldBy3Nw7zK8YOSGkD1NfuX/3ndwG6irKPDD00z0tcewxFt6pl35yIk4I4zknT4n8kQ4aVnTB2YhULFr4hASgM/XTB1Fs6u+Z5ekXbNWkiSVNFkhQhe//0sCT4iz/laFFlF3qxiKKMz59jlO6YT18xdqRrdszzK023Cx/XzZZhOtEPB7p+j3FrXL39233/y76mnrVYLjOWyzRELquRaJmgdcO377/Y7m8M45lpc2V3uDGuL+F8ON6ZtjemzQuVHR+BibBEsSRJFXV7RAiDUjXz8zvz6f4gH6Afz5wv77zdv3N9uVOZ4RGYJppllIUud+MVpXu0bjnOb6y317+aNhc2uxfG6cx8eON4vrM7vIbBfwBmuSFONSKvkNKF5vgCexWq/TNzbdgIf9bVQDeeMfWOYbpg3ZpcWGTRhMQWuShJ/Y6mBXEq8HahXFglWbqw1340wv6KCllYMlFRVQatDVL7semxpg/T8BvjpmPsSShzBQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image4&quot;
+        title=&quot;image4&quot;
+        src=&quot;/static/aec0c575dbd598dd0f0644ec106c9b08/2bef9/04.png&quot;
+        srcset=&quot;/static/aec0c575dbd598dd0f0644ec106c9b08/6f3f2/04.png 256w,
+/static/aec0c575dbd598dd0f0644ec106c9b08/01e7c/04.png 512w,
+/static/aec0c575dbd598dd0f0644ec106c9b08/2bef9/04.png 1024w,
+/static/aec0c575dbd598dd0f0644ec106c9b08/71c1d/04.png 1536w,
+/static/aec0c575dbd598dd0f0644ec106c9b08/a878e/04.png 2048w,
+/static/aec0c575dbd598dd0f0644ec106c9b08/d9ed5/04.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 후 + 버튼에 Live Template을 누르고 Abbreviation과 description을 작성 후, 마지막으로 Template text에 작성한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTklEQVQ4y11T2W7bQBDTD8SxLGnvU7dky7LjI2nhpCj6/9/EYid9SPpArBYLcUjOTHZee/Rdg1jX0NqBCQtta2gTUTINxhViDBA60D1BSA8uLar0LjSkdpDagsuALGcWm00BLhyUrgkxzmjbBSFOcGFCbA6wboD1/+AGeD/ChwlKN1RApoKFRJbnHPmOgwsP5ycIGWBci9Plgde33xjGM3ycUbfHL1gxD1cMw4UKSFUTccUUsqenHfKdgDI9fDygLCWUitj3Z7TNEdaPqCr9xUFDkF+/E6GqwYVNhDk2mx0YM7BuRFkpCOGxxCOs6WD9BJayKyVZSw7IogwEQWck0l3OPhUmUs4NYnsi4kTY25GyCs0RnFsUhUBVqf8gSXXKOeW5KwSy1BAiTCTjDaE+IPgRh7hC255ypeCFJ9Ky/CRLitOZFGrTQpuOepHlOcPzcwFtO6wvvxDCiFDPmOcLlvkNy/pBRZLabjii7Rb4MFPnE4zrIWSkookr224ZttuKKhs3It+WsK7F9fZOVaWKKAoOxg368YL5cMfx/MB0+IFp/woXxu+EpQjIC4my0qjbM1nTpkHTHT8thz3ZS42Z9ncM0w3X2wce739wf32H88N3wqq02OaMmtGNd7LuXId1eaOw6+6MUC80b0ndNN1wWh94uX5gWX/Cx+k7IeMeRWUhuKP2c1LYwpgexnZQKXDbUVbpJ8pyvCA2K6kNcQYXAVI1JCzjwtBOpvkrKoF0VzrSKgkdaa+ljhDS0XBLFcCEg7MO1npIm8amR/A9LcBfKGpgSft5EJIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image5&quot;
+        title=&quot;image5&quot;
+        src=&quot;/static/01e8017f335a4f604a314319e983e150/2bef9/05.png&quot;
+        srcset=&quot;/static/01e8017f335a4f604a314319e983e150/6f3f2/05.png 256w,
+/static/01e8017f335a4f604a314319e983e150/01e7c/05.png 512w,
+/static/01e8017f335a4f604a314319e983e150/2bef9/05.png 1024w,
+/static/01e8017f335a4f604a314319e983e150/71c1d/05.png 1536w,
+/static/01e8017f335a4f604a314319e983e150/a878e/05.png 2048w,
+/static/01e8017f335a4f604a314319e983e150/d9ed5/05.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 후, 아래 Define이라는 밑줄이 나올텐데 해당 템플릿을 어느 언어 혹은 프레임워크에 쓸건지 선택해야한다. 본인이 쓸 곳이 어딘지 선택을 하고 apply 후 ok를 하면 끝이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .dark-default-dark {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+  }
+  .dark-default-dark .mtk4 { color: #569CD6; }
+  .dark-default-dark .mtk1 { color: #D4D4D4; }
+  .dark-default-dark .mtk10 { color: #4EC9B0; }
+  .dark-default-dark .mtk11 { color: #DCDCAA; }
+  .dark-default-dark .mtk3 { color: #6A9955; }
+  .dark-default-dark .mtk12 { color: #9CDCFE; }
+  .dark-default-dark .mtk15 { color: #C586C0; }
+  .dark-default-dark .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] 검색]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 검색 텍스트 현재 파일 검색 이 기능도 여러분은 누구나 알 수 있는 단축키이다. ⌨️ 단축키 맥: command + f 윈도우/리눅스: Ctrl + f…]]></description><link>https://sungbin.kr/IntelliJ-%EA%B2%80%EC%83%89/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-검색/</guid><pubDate>Sat, 22 Mar 2025 14:20:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
