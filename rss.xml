@@ -1,4 +1,484 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 24 Mar 2025 09:04:52 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 디버깅]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/IntelliJ-%EB%94%94%EB%B2%84%EA%B9%85/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-디버깅/</guid><pubDate>Sun, 23 Mar 2025 13:13:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 24 Mar 2025 12:46:47 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ IDEA] 디버깅]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. Git…]]></description><link>https://sungbin.kr/IntelliJ-Git-Github/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-Git-Github/</guid><pubDate>Sun, 23 Mar 2025 13:13:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.09374999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADv0lEQVQ4y32UbUxbVRjHz33pC6xlhJfey4ARmq5lVNrVASma29IxOkSZG8vCBMaic2oXEMoSCKOFFjYzN5IlS+SD2Uxc5ssHyPwK6qytmdPqTEzmBxUtvqFGp2Rm8zV/c8+9vYyAnuTJOfc8z/3l/9z/k0se7TgEySvBaDCCIRwIIaix7EHEt4Dxxq8R9X9J94nA9/CIHTQvB/vQIeiv/Q596hb0iZtgrv0B2/k3Qdpb94LneK1QhsUD39GI+r/QYG5xv1rDgDCMAm3tplBDchnMu3cUoL/BtwIT9iIeWMJ441cY9X22AhP20Xy2AxqscmYf6ILh6m0w7/0J2/Ovy8BGmnAJ7ZhQYbK6Z5tv4UTTj3CpMJ7TgWXZFeBdUK7lEbDXAfsLCZCG+lpUF7ZhYkcWtoRu9yVIpYOoNAdWA9YLlgMj73uOoPz8GyBdwQFEpAzigW9xXPoUZ4K34bYcgFkgqLRupi9ZrVa43W54PB4UFRWtgTKq8l1SO8jR3WcQ8y8h4l+gCk8FbyKPOPHSKy8i8VaSFqbTaWRXX1+f0iantksUgwY21uH97b0gT7Y9gzHfNxQmG7C9TBmNy5dfQyqVouepqSksLi5SYH9/vwZkVdgT+R7AHsNVb1gGnqQKZUOybsoxMzODRCKhPcvK5NXb26uapCh8Kv9eYOsYYBtFqv5pkNDu05gM/Exdlgv0OgPdZ2dnkUwmNWAkEqHAo6GQaoYKqxrDX44RwDaiAOWWPUKnNmc8z2sK5+fnEQqFMD09jeXlZQrc5nLTvM1QgDv2YcAxit/sQ4B9HB96j4EEGnaoMOV7ZIFzc3O05VgsRkGZTAZdnZ2a4nv0xfh1yzH84zgOVE/gRvnj6HFIID6vtGoEssMbDocRjUbpWcfzyqzdFRX8RvxtHwGqojgnBuldnlgC4vf6/ndwjUYjBRKehWDKh5CbhzxjLtpMW3C94jBaTFYFZiQ43en9b6DBYIDZZIZ5wwaQHA6DpRJ+cA3hF/cIfqoZRrRQgkn9qRh5Dumhatw41bK25fXisNkF2CNA1SQ+rwhhV06llsvlOVwJO4GL9+HtyE6QZt9OxRSGWRPy/RF5aJ0n6KydFYLIZXUaTM+xuDLgBC5IwHP1eGesGaR7XxdEi7iuskFzLWCP4+Oyx3C/rmRVriCHID20lSrDdD1woQ7peBNIz/6DOPBwB5wOJ0osJSgTNqHAYkHr5m1YqBvGyzUHYRXLYSouRLlYijJxE4qLRJzrqUVmKogP4gF8NNmET04G8Orgg/gXHc2nqO2eOj4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png&quot;
+        srcset=&quot;/static/c5da15e564730427f1bf60504a2f2c5c/6f3f2/banner.png 256w,
+/static/c5da15e564730427f1bf60504a2f2c5c/01e7c/banner.png 512w,
+/static/c5da15e564730427f1bf60504a2f2c5c/2bef9/banner.png 1024w,
+/static/c5da15e564730427f1bf60504a2f2c5c/e72de/banner.png 1198w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/NwFz&quot;&gt;향로님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Git 기본 기능 사용하기&lt;/h2&gt;
+&lt;p&gt;사실 해당 기능은 별 의미가 없어 보인다고 생각을 했다. 그냥 터미널에서 다 해결이 가능하기 때문이다. 하지만 해당 기능들의 단축키를 체득하니 이만한 꿀팁이 없는 것 같다. 그럼 한번 시작해보겠다.&lt;/p&gt;
+&lt;h3&gt;Git View On&lt;/h3&gt;
+&lt;p&gt;해당 기능은 Git에 관련된 기능은 아니고 깃의 여러가지 화면을 보여주는 기능이다. 해당 기능의 시작으로 여러 단축키를 통해 깃을 자유롭게 이용할 수 있는 것이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;맥: command + 9
+윈도우/리눅스: Alt + 9&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABu0lEQVQoz42SyZKcMBBE+YaZZkcIRjsCsTc9HrtjTvb/f1E6EN04bB/swwtKVamMrBDB0PUYnYXVHG0j4dyGcbjDuA+o9gahZ3A1g8sJQs0eriZ/9qhjLs0MLnoEjHOwN4E8TUCKAsrMGN9/4Pr5Hct2h7bvaLoD0z7o/u413RcIPSG4XApkhUYYVdhrYze4+RNuucONX2Hdx3/RDt/AeL8bZogTipJqXC45mBwhzQqhFwi9+vrfLFDNhrJqEIQhQZoQSGkRxRW4HKHs5oVqp7me/Gl0zswV2t5Aa4sgz97AWOcTphlDUUgUhQCtGi8gpUZJzfndoZUBrZujTxSynCEvBNK0RpDEFIRo7En3lcMwx8tLirrSYKzxdXjJ/WyHEI6+X2CMe+gJopie94M4qbx7GBYPQYHX1wx1bVDXytd779knhGGeb7B2RByX3mj3iKLSa4KSsMPscWnHJ6wNGDNHwt8MOYZhhTE9sqzyIaKInJqgJr9SPBM+Vza6P3uH4XPlFVo7JAn18ziufCC/sms3/4cLOUCZCUofaHuFVJN/DP9AdH+ExtdSjdBmgVQDXDdCNRNsu0KJAT8Bdmk4vOddKeAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/aca7fc23353982d53e94f4885c9ae58b/2bef9/01.png&quot;
+        srcset=&quot;/static/aca7fc23353982d53e94f4885c9ae58b/6f3f2/01.png 256w,
+/static/aca7fc23353982d53e94f4885c9ae58b/01e7c/01.png 512w,
+/static/aca7fc23353982d53e94f4885c9ae58b/2bef9/01.png 1024w,
+/static/aca7fc23353982d53e94f4885c9ae58b/71c1d/01.png 1536w,
+/static/aca7fc23353982d53e94f4885c9ae58b/29114/01.png 1920w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;여기서 추가로 설정할것이 있다. 우리는 쉽게 변경사항들을 알고 싶지만 위의 사진만 봐서는 변경사항이 일어나는지 확인하기 힘들다. 그럴때는 &lt;code&gt;settings&lt;/code&gt;에 가서 commit이라고 검색을 하면 아래와 같이 나오는데 해당 팝업에서 &lt;code&gt;Use non-modal commit interface&lt;/code&gt; 체크박스를 체크해제한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBElEQVQoz02TW2+bQBCFeU1sc1l22RvsDRwT7Dh20lxUKVWrSv3//+hUs26dPBwNsMynw5mh2KYJaYwYBg9lPewwQdsEoQOE9hDKQRkP0ycIdbmXJkD3CcpGdMplUa9UDkXfW7heQUuOmO5h7QhjEu6XF5yePrAc3hDiAT7sMaUj7qYzbL+F0hHapKuMHaG0Q9G2Am2rsF6XMPYO2oxoGon98oK39994ePyOEB8Q06cGN2PwM5y/1MHt4Pw9tIkoNpsGDdOoKoHBL4jjCaIbMG5POJ5/YdqeMU0npHTMTglIDv+7ItG17SdwYS/AumLoOoMwHuHjPr+0m58xL6/5U8fxMYO+As0XIImAQvQoqoqDc5mB2m6hVEDLNOblG95efyKGQwaFdED8B6RYOukhdbhKmYiWG8pQ5uk0TEJ0DlJ6MALunvDx8QfH4/vVXYj7XJUO4EKjbjrUtUBZtVcVTS2yVXJKlYBd5zDPzzg//8hTHinD8THnOU5n+HAH5wLKkqEs2wymfoqvqGoOEh0KbsFFj5bbvBZSkZMhD4lc9W6HEBf4sEXf+9xHENIFzlBw1mG9rrHZ1Fitqqzb2w0EV5Cdxuq2xGpV5uc3Nxs0DYf36QIsWe4tq09woaVD3QgwJsFamXeyYV3+O7QhFyKfk8gRZTc4WpMA1qo80FZotFyBNR3+AoRxIvGIxo+0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/4a570829abbee790cdf060e0dcd71ff9/2bef9/02.png&quot;
+        srcset=&quot;/static/4a570829abbee790cdf060e0dcd71ff9/6f3f2/02.png 256w,
+/static/4a570829abbee790cdf060e0dcd71ff9/01e7c/02.png 512w,
+/static/4a570829abbee790cdf060e0dcd71ff9/2bef9/02.png 1024w,
+/static/4a570829abbee790cdf060e0dcd71ff9/71c1d/02.png 1536w,
+/static/4a570829abbee790cdf060e0dcd71ff9/14747/02.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그러면 아래와 같이 &lt;code&gt;Local History&lt;/code&gt; 탭이 보일텐데 해당 탭을 통해 변경사항들을 쉽게 알 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCUlEQVQoz4XRW2/TQBCGYf+HuK3ttZ3YXq+9u05zsJ0eElSRqhVqCxKiHIQQaQoCBOr/v3yRE1AQB3HxaGa+i9Fo1zltjzlqa6pqRFEMycsJVs0YmUcUeUsuG2w5Q6spg7jakOmIIq9RckraH5L2u+yQNBniVFZzaAtKGaN1gn5aY97MUa8X5K9OkLct2e2M6MYSXRvCG0t4bRBXeqPrwytD+MzQPylxhBgQxoq9ns++L4heGtTDHPUwZfDR4q0K/LuCYK137jtmq5vvNMFnQ3he4Lg9QSAUnpexdxAinhui+zHJ+pD4fUXwziD+561GrC3eIsPp9QIODkLSVOPuhWTjCXlTk9U1smnIm2ZTZVP/sM1+1eXqaEasNM6BN6AfSnI5xAskSTJGyhqZTsmTKSqtUWmzk9Tkf6HSllhoHJla6vYIW40oS4tSBlUY9GlNuTylXD5CLxeUyzlmOSc9HhK1hnhmd1pL/6RClBInjnLCqI/vCwIvIPAFvghIb4eUDwvSLxOiD9X24Ttr86eVRnwy+GcZThQpXDei1xO4bojbC3H3Q4IXmsHXGcW3MfG9xV+Vu6U/rfQ23yy0eGfdhbGi+xi3F2zqpncD4nlFcjmifz5icDEm+c0muxyTPZkQP66ILir8ocSxRY0vUsJQbkWdnEK1qLxFyeaf8qxmNpozHh4j8wnpwPIda9VN4rDpvQoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/40dd448824fd34b22b34acb3b1b95d02/2bef9/03.png&quot;
+        srcset=&quot;/static/40dd448824fd34b22b34acb3b1b95d02/6f3f2/03.png 256w,
+/static/40dd448824fd34b22b34acb3b1b95d02/01e7c/03.png 512w,
+/static/40dd448824fd34b22b34acb3b1b95d02/2bef9/03.png 1024w,
+/static/40dd448824fd34b22b34acb3b1b95d02/71c1d/03.png 1536w,
+/static/40dd448824fd34b22b34acb3b1b95d02/5068c/03.png 1917w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Git option Popup&lt;/h3&gt;
+&lt;p&gt;깃에 기능들을 쉽게 사용할 수 있게 하는 팝업이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + v&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Alt + `&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB30lEQVQoz2VS2W7bMBDUeyKJ933osBw7cdIihZsCfelL//+TpuAqhgP0YcDd5XA43GV3XDcs64yUC1zICGmBCxO0r9CuQtkM6wt8nCje8wof551nC3SrhQrjMrqcIkryCE4iBoNaNqyHN0zbBXU+I+UNMR8R00Yx5emOW57LET5M6ITQENJh6EeMo0SIK+r2hvV0wbKeENMuFknseEf5xGeeyxOcr+j6noMLj5EZDIOA8zN8WOD9THFMB1xef+J0fr/v/YeZjCgVdsFxFDAmoO8FCYV4IEIj5/yEj19/8f7jDzlp9dv+V7SLlY7oRqahtINzCUxYGFdg/QTrJhhX4cKCp/MV6+E7OWw1YwutjWNpbbwZsjmU0lJBKg8hLRg3aJe0Sca0kvjl22+czlc4PxFSXpDyCmsypA5kZBwVzaDjTEPrhGGUGAZJxf3pBSFkMGbw/HLFy+sHGLfUmm07o9YFnBu4uEKbAiHbHFR7sgJjCsPA0frZBvP4yGBMRHPf4nbwFktpSCzGStw2UGkSGWl5p8RObGJ9v68PDyOsidTXtvcVSllM04oYC5S08D7D2gg+7KY6bwsY1xDCUg8buDD0p3woe2+YBmMaw6io17ksCLFCm4Ba29eaYJooN/gHCAkdGyP05/8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image4&quot;
+        title=&quot;image4&quot;
+        src=&quot;/static/207d7d4acb9dddfd99cb525a21a9cc65/2bef9/04.png&quot;
+        srcset=&quot;/static/207d7d4acb9dddfd99cb525a21a9cc65/6f3f2/04.png 256w,
+/static/207d7d4acb9dddfd99cb525a21a9cc65/01e7c/04.png 512w,
+/static/207d7d4acb9dddfd99cb525a21a9cc65/2bef9/04.png 1024w,
+/static/207d7d4acb9dddfd99cb525a21a9cc65/71c1d/04.png 1536w,
+/static/207d7d4acb9dddfd99cb525a21a9cc65/c72f7/04.png 1915w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Git History&lt;/h3&gt;
+&lt;p&gt;해당 기능은 해당 파일에 history, 즉 변경사항들의 이력을 볼 수 있는 기능이다. 이전에 배웠던 Git option popup을 킨 후에 4번으로 가면 아래처럼 이력을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB5ElEQVQoz32S227TQBBA/Qu0tmM7dmLH3vV9fU/SkEuDEAWJR4SgQkLi///hIDuhagX04Wg0I+3ZGc1o63qgrlukLPCDlDBpKMotWbYmCNWEjCvSrCMIqykXcUOaDcRpTxhVhJFCJs0UNdtaoBs+czdG113ibKDdnqn7I1m1I1N7ZLpGpANxtp6Q6YBIhinKKR/rG0Kh0EzDwbZcwlWCbnjIpEU1B1R7vDweJZPsKrgy5s9rSbYhEhWaaS5wbJ9IlDjzkFztGHYP7PYPtP0Z1Rwp6gPlKxTVnqY7U8YD2sxcYOguvqjwlilBpEjyLWmxuY64eRr1f4xT5OWOXLRoluXjLSSenxIEGcP6PVmxZSVqItm+iog7RNwSyoY46RFBiZbnA4fjJ/ruRN+faZsjSdKzCtV1gy+RskUmHao9kKsTZX1Pku0oqyOrsESbzTwsazkxmy24ubHR9TmG4f6N6aHfOjgLweHdZ7bHj6j1PdVwT9GdCEahYbqT4A//FD1jFNpuOJ3W3ekD5bCn6N6ixjOTLdq44UtXDre3Lxlrzz/TjTn6Gwcj9Fg91pS/7gh+1CweS5Y/FctdgpZFNZYT4LrRBU88RdsOGJf2hO1jmT6OjBBfOsrvdxSPPdHXltW3Gm+b8BuIYUIsij6skwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image5&quot;
+        title=&quot;image5&quot;
+        src=&quot;/static/e4a6f82b01a57907e116921cdd3b9075/2bef9/05.png&quot;
+        srcset=&quot;/static/e4a6f82b01a57907e116921cdd3b9075/6f3f2/05.png 256w,
+/static/e4a6f82b01a57907e116921cdd3b9075/01e7c/05.png 512w,
+/static/e4a6f82b01a57907e116921cdd3b9075/2bef9/05.png 1024w,
+/static/e4a6f82b01a57907e116921cdd3b9075/71c1d/05.png 1536w,
+/static/e4a6f82b01a57907e116921cdd3b9075/8963a/05.png 1918w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + v =&gt; 4&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Alt + ` =&gt; 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;branch&lt;/h3&gt;
+&lt;p&gt;브랜치도 명령어 없이 단축키로 생성 및 변경을 할 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: Ctrl + v =&gt; 7&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Alt + ` =&gt; 7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행 화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABsElEQVQoz42Ty27bMBBF9QGJJVkU36IoUn7EcdKgaBcBukj//6NOQcoIHCCLLg5EzQzuXHFGzbocCPOMNh4hHd6vGLswmrihAtoEjFvquaBsxPiEdgtSh4p2M0oHmn0/0naKh4eex90eZxMpXwn5gg8HjE2f2Er+EvvMuYwugu2uo+8Vw2DYFUG/Eo8/WC8vrIcLUzgT5o3pji+xcCLMTxgbaR4ee7puj5KWx92AMUvttnW+c+M2F99R8sWIGB1NcdV1A1p72lagdNyKXMa5zJKetiuYz/VzvxW9F+z3imG09aKVnjEmou1SKeJ/fv3l/ecHv18/eHt+R+p5y93X3c6DsDQ+rJwvbxyPr9WNvRVVTMTeriAuz8TlaRuAz4R4xvoTzp/QJmP9gbE4lNLhfMRPCak8u1bQ9fKTthM1VjZg1w503ch+NITDkeP1hfx8xqaESQmhLU0vDIOaGKRnkBNCfUdA6BtyYrQBc0rE65l4PWJOC/q0MDhLM1ah/0PcnmW5y4C0TmiVMLrs54oQjsa7XDtLM3/FRkYdNqE7t+W9DKZO12emkLFTrj+BVBP/AKTkIlPD7EVdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image6&quot;
+        title=&quot;image6&quot;
+        src=&quot;/static/be1d6afd9a7d9a2c405330d1ef2be6ec/2bef9/06.png&quot;
+        srcset=&quot;/static/be1d6afd9a7d9a2c405330d1ef2be6ec/6f3f2/06.png 256w,
+/static/be1d6afd9a7d9a2c405330d1ef2be6ec/01e7c/06.png 512w,
+/static/be1d6afd9a7d9a2c405330d1ef2be6ec/2bef9/06.png 1024w,
+/static/be1d6afd9a7d9a2c405330d1ef2be6ec/71c1d/06.png 1536w,
+/static/be1d6afd9a7d9a2c405330d1ef2be6ec/5068c/06.png 1917w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzElEQVQoz2VTWXKjMBTkDIntONgYg/bF7AiCkylXkpma+1+opyTAlWQ+ugSS6Nfd7xH1tYO1BRgzyIjBxYzQ2oGIFkQ0yEgBLipI1SInJXJSgIkGUvcQqgOhZYBQNSgrEB0OGZ72DA8PMTabI5R2aN0nSneDrSYIM0DoAVw7SDMECO3AlQvreq7sCMpLRNvtM+IDQXKS2O0SaDuinv7C3X7DjTeY4hWX6g22fA2Yn3/C7/8KyqPHxwOe9wlILrHZJmCyhVA9uOzBVT+rkV14Z6JDTsuw+rOv8MrTs/YKE+z3CSiz2D2lILxeLK2XHZjsIPQIQmucMwvGm9nuAq494Yg0M4iORwZCLIRqIUQDZVxQuMKH760w6UBZEwiz/BIKU97c4V2cUoUoSyWG/oamvKKtrqiaN5jiBcoOkNpB+dBlB3O5BtvUO1AdlBlDM7zCOSaH01khiuM8WGMr5Gzzbnn5QHtCNRNq4zBd/6B379B2mDO0i+X4SL/l8R8WYibaQDyr6fAyfWC6foCLOuzNhBpRmop7+D87x7+RD3eLXpW9DODL4Ptifh5PvstatOCqgzQuQIXhdaGiWJV9AV3/EtmG5khZhfs+d0IK/AMO7Epv0LQ00wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image7&quot;
+        title=&quot;image7&quot;
+        src=&quot;/static/fc4aba991770571dda926f133ab3baa8/2bef9/07.png&quot;
+        srcset=&quot;/static/fc4aba991770571dda926f133ab3baa8/6f3f2/07.png 256w,
+/static/fc4aba991770571dda926f133ab3baa8/01e7c/07.png 512w,
+/static/fc4aba991770571dda926f133ab3baa8/2bef9/07.png 1024w,
+/static/fc4aba991770571dda926f133ab3baa8/71c1d/07.png 1536w,
+/static/fc4aba991770571dda926f133ab3baa8/9e818/07.png 1913w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 생성 및 체크아웃까지 가능하다. 그러고 git views on 터미널에 콘솔탭을 확인해보면 아래와 같이 이력이 나와 있는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.953125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVQY06WOwQqDMBAF8ycVpclm3VjRmE0L0pP//0lPTCt48ZTDMLdhzCCKGL9461Y8TivC6wMOGSx6IcNSxNPNt1iaYbouoJcMogjyCxynKsyjFbheYf0Cy+nnCkzTCugfrL0rh0fQsVafnYc7YiaYE1evGiQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image8&quot;
+        title=&quot;image8&quot;
+        src=&quot;/static/1b636f5c984a709ff8ecc41e8407679d/2bef9/08.png&quot;
+        srcset=&quot;/static/1b636f5c984a709ff8ecc41e8407679d/6f3f2/08.png 256w,
+/static/1b636f5c984a709ff8ecc41e8407679d/01e7c/08.png 512w,
+/static/1b636f5c984a709ff8ecc41e8407679d/2bef9/08.png 1024w,
+/static/1b636f5c984a709ff8ecc41e8407679d/71c1d/08.png 1536w,
+/static/1b636f5c984a709ff8ecc41e8407679d/bcec6/08.png 1834w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Commit&lt;/h3&gt;
+&lt;p&gt;커밋도 단축키로 진행이 가능하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + k&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + k&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;실행 화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVQoz1WS2W7bMBBF/QNJvMjaKGqhFlKWbCuSLdlOGqDIS9+KAi3Q5f+/4xSS7S4PFwMMiDN37nCWxikyDPFEiGUL1n6Mikuq8kSSNpSbnnr3Srk5kmZ7onhDHFeIIMP1Y2w3nOSKCNuVzObzFQ8PC+y1x8PjkjDUJNJgdEuYlgRBgednZNmervtAorbESY0M9aQwMsjQEMUlvkiYPT0uGKGOI3h8XOF6Ma6X4Nwmr9cBy6WHzvdcTu+oGzCQ4yCFL9KbMhwnZDa6Gh1ajmRlCWw7JCv2NN0LqmhQ6W5yVeiO8+md7XaYeiLIJ6An1A2cYa0Fs6cni1ErVzJf2thORBhvMNWA3vRTLTY9VXXiNHykaS5Tlnfg5M5Pp0wn4Hyxvh7DDlitXDyRICNDUfYU5jAp0x11NdA1LxSqIUm2+EGOc49nrL5iZfnM7LWPyWuyWJMmhjgxJGmF2fboaqDcXSi3Z6rmlXp7RqU1cTpmmF/z9pMJOq5ujcDl0iFVJckIUyVS5Midpv5xYfPrjeLnK/n3HvXtQPq1I/pcI79UBHWG595XVn9XXiyda7i3gMdpUhl026PbI/nzkaI9kDcdadOSPx8o2iNBovG8ZAJOWd6BluVdG/71/CMwjEpMOaBN/48GjBko9BGt++nN1Uj65ziWJZiJMQMxThgvNULV9Elz05Hp9j/luqOsz5xfPtG0b8iwQEqFkBlBmGM7kt8lFTRibkCwyAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image9&quot;
+        title=&quot;image9&quot;
+        src=&quot;/static/383f1e40efc97fb880f43462812a05ae/2bef9/09.png&quot;
+        srcset=&quot;/static/383f1e40efc97fb880f43462812a05ae/6f3f2/09.png 256w,
+/static/383f1e40efc97fb880f43462812a05ae/01e7c/09.png 512w,
+/static/383f1e40efc97fb880f43462812a05ae/2bef9/09.png 1024w,
+/static/383f1e40efc97fb880f43462812a05ae/71c1d/09.png 1536w,
+/static/383f1e40efc97fb880f43462812a05ae/14747/09.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;단축키를 입력하면 위와 같이 나오는데 커밋 메세지를 작성해주고 커밋과 push를 동시에 진행이 가능하다. 더 신기한 것은 오른쪽 옵션에서 reformat과 rearrage 기능등이 있는데 해당 기능들을 통해 정렬이 안되어 있는 코드들을 정렬해서 커밋 및 푸시 할 수 있다. 다양한 옵션들이 있으니 궁금하면 한번 찾아서 적용해보자.&lt;/p&gt;
+&lt;h3&gt;push&lt;/h3&gt;
+&lt;p&gt;가끔 파일을 새로 생성한 경우 위와 같이 진행할때 push까지 진행이 안되는 경우가 있다. 그럴때는 일단 커밋만 진행하고 아래의 단축키를 이용해서 push를 별도로 진행해줘야 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + Shift + k&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + Shift + k&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;pull&lt;/h3&gt;
+&lt;p&gt;해당 기능은 단축키가 존재하지 않는다. 사용하려면 별도 키 매핑을 하거나 action 탭을 열어서 &lt;code&gt;git pull&lt;/code&gt;이라고 검색 후 진행해야 한다.&lt;/p&gt;
+&lt;h2&gt;Github 연동하기&lt;/h2&gt;
+&lt;h3&gt;Github 연동하기&lt;/h3&gt;
+&lt;p&gt;이 기능은 별도 단축키가 존재하지 않는다. action탭을 열어서 &lt;code&gt;share github&lt;/code&gt;을 입력하여 진향을 해야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB4UlEQVQoz22S2W7bMBBF9WytJLVbVrTL1mIt3mKnbtIEMFoU7f//zS1I1QqK+uFyZkTOGYozUpFliKIQQRDA83wYxIJhfEo3LDBmg5mO8Lkoc2CaHihzp3PEAqGWiKXVysfSM+HZBjyHQNcIFrKOhaxBlnXIij5ZWYeiTLrvqYoBVSVCimLAMExIlPLqPhSFQNOo2KjzHrvuBV19QlcdUWY91lmPMu3RrA/Y918QhYWA8xwuDhVADrItF4w5UFUqqu/HK97ffqOuz2iayz/i3w7HG/JihCxrM+xuJb4Qg8GxfQHkv7Kud7hcb0jyHlGyRZx2fzX5zfCBMG7/A3JJfKHEhOcG0DQmgJtqh28fv3A8vaNqTkjzAVkxCltWzxhPP0Whh0BdZyDUhuOuoOumAJabAV9ff2B3eEXbnbHe7JGkHZJsuuW2u6IqRywWD4A8YOYSOrGhqWS+4fnlhmG8Ynd4Q9tdULfPaLZnVM0F/f47orR7fEPCXDBrCU2lc5eL9SBAad4jyXphhYQ/YMvfMKqhyJ9dnoGWFYCZgQDd5ylYFcjyHnHSII4bxEk7K+Jx2sHzYjE295z7TEqOG8JyQjH9lDriPVdhOXWVdzhp8RRVeIrqWVnawfdT0cRpjp05/w8quCOfG4wm1QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;image10&quot;
+        src=&quot;/static/931d12b205531c54ec8170cb69ce4d5e/2bef9/10.png&quot;
+        srcset=&quot;/static/931d12b205531c54ec8170cb69ce4d5e/6f3f2/10.png 256w,
+/static/931d12b205531c54ec8170cb69ce4d5e/01e7c/10.png 512w,
+/static/931d12b205531c54ec8170cb69ce4d5e/2bef9/10.png 1024w,
+/static/931d12b205531c54ec8170cb69ce4d5e/71c1d/10.png 1536w,
+/static/931d12b205531c54ec8170cb69ce4d5e/26c3a/10.png 1907w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위에처럼 입력하여 엔터를 누르면 아래처럼 프로젝트를 생성하는 팝업이 나온다. 원하는 repository 이름을 작성하고 설명란을 적고 share를 하면 된다. 그러면 깃헙에 해당 프로젝트가 생성이 된 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVQoz4VTy3LCMAzMPSF+SI7txAYaCp3SKdPSWw/9/7/ajk1etDAcNlZsaSNvVsVht0ffbxBChPcdpGogpLmC1gbMbnpXZMHsQewglclQ2oDIoQidR2gNfCPRWgUhFFarGfUYV4v9SqIaMO6lWEpGoVT6ejccaNT1jDGxrASqjAvBMmeZmwmrSsGwzVdaJqdY6yZfzdmYYbiFUnbKu7UWmVloWNtedZg6ej1+4uv8g/PpG4f+HYfnD4R4QFmKm4QJRXooxfAuoK5pQSixfTpmELcgasF8QTq7SygEIeloXYQQfEUY4ws22zd436MLe+x2J8T1gw6zVtRCLrSZRTbZRglKO1i3AZsHHUrdgJpw588N9hjWsqyztrdyJ8Ksi4nZW4lgJFl6cfJkKvq7X12sNdYXSbvGrqHJQWsLTRZEdpgY/jc1M3iYogbEFppdrvsFx9cKOIAr1Z4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/7ac9a59e22b01fd888b72a25dd27d9b2/2bef9/11.png&quot;
+        srcset=&quot;/static/7ac9a59e22b01fd888b72a25dd27d9b2/6f3f2/11.png 256w,
+/static/7ac9a59e22b01fd888b72a25dd27d9b2/01e7c/11.png 512w,
+/static/7ac9a59e22b01fd888b72a25dd27d9b2/2bef9/11.png 1024w,
+/static/7ac9a59e22b01fd888b72a25dd27d9b2/71c1d/11.png 1536w,
+/static/7ac9a59e22b01fd888b72a25dd27d9b2/ec09f/11.png 1916w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Github clone&lt;/h3&gt;
+&lt;p&gt;해당 기능은 단축키가 있는 것이 아니고 아래와 같은 화면에서 클론 받고 싶은 url을 입력하거나 repository를 선택하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiElEQVQoz4WS7W7bIBSGfQut4w9sMBzAXxh7Sepl0Ta16qRJu4Ld/528EyRps7bZfjw6gNBzXnFItPYQTY+qJpQVIcsFNjmPhPVH+2u4HCKmXaCtR2LbGVKNUMpA6hEZI+RMISsbbAqBNKvjOpAGccFjfaE4Ee4GEtN6GOPAZAdlZ5S8jR39pyMUTZDkEJoSOXDRoeYtjJ3BasJ9fhJdN0iUHsGFRS16KOtRchvFP3/9xsP6Aw/rI0a3QpsFRDOUnqH1jKy4JBZ/kVS1QckIjXTQ3RIThjf9vD5hnA7Y7r5GmSIP0jNUkJJHdk52Q6ghqYMdtqiaHqy2CMOSasKX4zP6YR/XQXjhPwk1iAyUmVCEfW1iipBst/8eaxCGswv/FLKKIKSDUANyRiiYiimM3WK7+wY/H7AsR0z+ADonf536LWHjIPUU3zB8Gy76iCIH0tNp4sqh7ffo+vV2QnYWVs0ArkYw0cXu95sqcrdhuEtfCWdpxl9kb6XnhPrqMzfvur4lvdQPEv4BLYopsPw7V0cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/6bf91232db8f6a9e150a84f8f8b76090/2bef9/12.png&quot;
+        srcset=&quot;/static/6bf91232db8f6a9e150a84f8f8b76090/6f3f2/12.png 256w,
+/static/6bf91232db8f6a9e150a84f8f8b76090/01e7c/12.png 512w,
+/static/6bf91232db8f6a9e150a84f8f8b76090/2bef9/12.png 1024w,
+/static/6bf91232db8f6a9e150a84f8f8b76090/71c1d/12.png 1536w,
+/static/6bf91232db8f6a9e150a84f8f8b76090/14747/12.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;위의 Github연동 및 clone과정은 지금까지 인텔리제이를 깃헙과 연동한 경험이 없다면 로그인을 하라는 창이 등장할 것이다. 그러면 로그인을 진행해주면 된다. 필자는 이미 경험이 있어서 로그인 창 화면은 따로 보여드리지 못할 것 같다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] 디버깅]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/IntelliJ-%EB%94%94%EB%B2%84%EA%B9%85/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-디버깅/</guid><pubDate>Sun, 23 Mar 2025 13:13:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
