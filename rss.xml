@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 31 Mar 2025 09:36:36 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/%08Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Apr 2025 12:22:25 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/%08Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
@@ -1691,7 +1691,83 @@
 &lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/NwFz&quot;&gt;향로님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;자동완성&lt;/h2&gt;
-&lt;p&gt;자동완성은 매우 중요하다. 개발자가 일일이 하나하나 전부 타이핑을 한다면 개발하는데 시간이 매우 오래 걸리기 때문이며, 비즈니스 로직에 작성하는데도 방해가 될 것이다. 이런 불편함에 많은 개발자들은 자동완성 기능을 많이 이용한다. 그러면 자동완성 기능을 알아보자.&lt;/p&gt;
+&lt;p&gt;자동완성은 매우 중요하다. 개발자가 일일이 하나하나 전부 타이핑을 한다면 개발하는데 시간이 매우 오래 걸리기 때문이며, 비즈니스 로직에 작성하는데도 방해가 될 것이다. 이런 불편함에 많은 개발자들은 자동완성 기능을 많이 이용한다. 그러면 자동완성 기능을 알아보자. 일반적인 자동완성에도 단축키가 존재한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;p&gt;Ctrl + space&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;해당 단축키는 맥과 윈도우 공통이다. 하지만 맥 환경에서는 작동이 안되는 경우도 있다. 그 이유는 맥의 기본 키 세팅에서의 충돌 문제가 원인이다. 처음에 필자도 작동이 안되서 이것저것 찾아보았다. 그럼 해당 이슈를 해결해보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqUlEQVQoz32R+0tTcRiHv7SdY66bnbO5zTMvmWa5Obdztqx0aZaZpnShUsz6IQgKoqKCIH8o6V5WZBc7Xcwd3dKtsraEqKAIqj/riZ2iC0Q/PLy8vC8fnpdX1O0wKe68TvG+p3gu5DDGkvRlxjiSH2VX2mR3xqRh/0uqO3MMWoV+jK7kOLsyD9n/ymTg5Rg7p016Jx/TaY0jKltHEYlLLDl4n4SVZjBvsv3ZBHW3szSnUvSceEbIbRFZ/ICWziQH5p7Q9CTFguE8gbN5jJHndFiTdGSSrJ+cQmh7biH6TlF3ZZgeK03t8Tnk/s+Iox9oGUnTVH6TUMkQ9coxgq4hjIG7bM9N4D+TR2z7xsLNX6ns/YB+9AXBGzOIipFJjMcm8dMWNYl3lBmfWJz4gv/ke9q677JCPkJdyWGqXH0sc+1m+fxDlPc/om0iS2Dve3yxz9Q2vmVV9RwNoVlE/YMsTQMZwhWzhKtmCa7MUd7xkeYDUwQXHaPK1U+1awC/vAmv1IomtxMoGsTXNUX77VcEu99QX5EjuiyLXjaDMNZY6IqFoaXQy6cJVb0m3ptFrzmH5thKZfFONHkLHucaG7ezCa+0Gq/oobb5Dj2PMsRbs0SWThOrsBCGep+Y9hBDG0cvS6OvnEFfcY2AtA2/vAFN7sLjXIvbGf+FWqhSFLdYR7DlNN3JKdZunEZfMo7QvTfRvaMYfpOYliTsu0qgqNe28Usb8UoJO0B1GH/jjKFKOktFhBqjn7ZRk+YdKUTEc5lo6Q0M3z0a3RfRiragOmJ2UKmUsE9UHAaKQ/83kkGJaMCnbiBy/AKi0X2eqOcqYXUYf9Eme6lwYqlznW1ZMFEc0f+iygXTMMq8GKJBGSKknMEnt6M4IrbR7wfEf5pE7dkP/gyL/EJ1/ui/AwVmjg/DFM2ZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;세팅 이미지1&quot;
+        title=&quot;세팅 이미지1&quot;
+        src=&quot;/static/07c17141c50b694b9710f44d38fa49d8/2bef9/issue01.png&quot;
+        srcset=&quot;/static/07c17141c50b694b9710f44d38fa49d8/6f3f2/issue01.png 256w,
+/static/07c17141c50b694b9710f44d38fa49d8/01e7c/issue01.png 512w,
+/static/07c17141c50b694b9710f44d38fa49d8/2bef9/issue01.png 1024w,
+/static/07c17141c50b694b9710f44d38fa49d8/71c1d/issue01.png 1536w,
+/static/07c17141c50b694b9710f44d38fa49d8/8963a/issue01.png 1918w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위의 화면에서 시스템 설정을 들어가보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 709px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 87.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYElEQVQ4y11U227bRhDVJxRoggJFU0eUeKdIijfxTorUXbQsyZITO02MokEbpA0QBEHQ7+hDC/StX3qKGVqC24fBcme5Z8+eObMde7fFk+kW39RrfFvPIGZrKHoIqa/BMn1MJyvI0gCSaJxHsa9znHKP1zv27h7d9SsIzRHq8hpO9hqqmmBo+/DcGEN7BE21ocgmb9K1IVwnPOcJRFUsDgaMDx/RW91Dal7AmbxC5L6FLqcIwxR5NsFg4GJguAwQjjLYVoA0qRCFBd8g8FOYps95VbXQuTx+wNPqBt+lDXTzCEu4hS4lsCzvzOIUBEIA9kPe0B3+x9CH8N2Qc536+DvE5R36/h62cge7fwdVijEaJcwkSyskccnfxEhVTGjKgCWg62t0XdVBWB6gaw46/v4LvOYeltWCWf0XUKUQaVqiyCcMYpkezIGHgeFAM0ZwwiXG5YwZUV7XHThe0TK0Fm8Qjn/CQHgJs3cDs7+DIgbIswpFPoXvxfC9BFGYY2gF0DQHpp1wwYghhTMMEXgxs+6U1x9Rpb+gDH5GbN9B766higHiuGAWZTFFXS0YkNmwnm1VCYxGOjBNqxZwd/UFdfQOq+o9XG0LTVhAlQIEQYIsrc/saHNrkbZAJ3b0TYUhrQm8M60+ow7fInFvoQkz6L0FFNHHpF6gWe/YOkky5g3ENk3GLAOBuE7E1yXLkKUYsCg+ofR/gCEuoPUm0HtTqKIH2/Z5Q+C3etE3RZbVmM3WmNRL5PkEeVZjOl0jicftlfebzyjCW/hWA0UYQ+9PoYgeZMngzqCfKOh0mhO7ptnhanPN2lJcbQ58CAMetr8hHl7CNeYwxAqaUEHuu4ij/KzLqV8pqIe7z2V0L2Qeha6Ci2ciR9t60QHR6AZxeIOB3kDuz6FIHtKkxChodXncLbrWFoQ8SQUjDcn4p0ekM7r/B09mf+Gr+k98Pf8bT+s/ICsR3GHAPfq4oo+D2o5MT0XaXh2x2x4fbLP7FYaxgSguISsNZGkFWXQhSToU2Tpbg0ftvyyJURyXuLzcYzyeP2i4+RGxu4IpldCEDGo3hdSzkWUVW6MnqOf37/9BRSINv38m4vmFxPNOmezh2ysOpVdAETIoosN2Ob0u5DHSicYgaOe0Fo5yxFHBa9V4zj78F86xSXd6CN13AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;세팅 이미지2&quot;
+        title=&quot;세팅 이미지2&quot;
+        src=&quot;/static/351e3214c2b92266fdbcb54879dc50eb/4d08a/issue02.png&quot;
+        srcset=&quot;/static/351e3214c2b92266fdbcb54879dc50eb/6f3f2/issue02.png 256w,
+/static/351e3214c2b92266fdbcb54879dc50eb/01e7c/issue02.png 512w,
+/static/351e3214c2b92266fdbcb54879dc50eb/4d08a/issue02.png 709w&quot;
+        sizes=&quot;(max-width: 709px) 100vw, 709px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위의 키보드 설정 탭으로 들어간 뒤 키보드 단축 버튼을 클릭한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 705px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 87.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCElEQVQ4y6WUSY8bRRSA+4hQooztGbv3tXpx293e4m57vE3smXg0WUg0SzgkMEiIgFgk/ge5IYEEBzjwOz/U5SSEkZAgHD5VvVf1Pr2qarXi5gX+4YA9kdGIUppRB81N0XSXVsvE9yOCIKGlWmiaLVFV6y1vcjKv2ShWp0TPhhzEPQ7iLrrIMe0euu7iOALLCuR8V+SgqjaG6WHbAtP0ZU7XHXRth9LtHzKbHxN2C7LRnP5gSRiMsA1B4ofEXohvugSWh7B3RG5AOwhJfEFgOri6LbEND6U/fcD2429ZrLaMizW9fE4sBjhuj7Q8J59d0Zmc051ekhQXxMUlcbmjPX1GMHyKmW5xszMsb4jidlfkq3OWq1OKckPanhA4HexogXP+O5PrX1l8/hvlp78QXf6M/vBHGic/sH/ySo6Nk1ekVz+xevkHVvYQJRsuOTt7St6b044LkmhM4PXxrIgoGpC3c0mWZPTTnCxKiV1B4oWS6ko6YVvu8SyBMlmc8vLL71mvH3NY3mdanlCM7uGYMabqY6jBW3Q5Ckw9/BuGJuS6qQco5WLLZ9dfMZ+d0stmZJ0pWVrimBGWEWL/B6xKWEyOubq4phhvmJbHxGJI4GY7oS7+pUj8JRyPN1yef8IgX9BJCvnCoZ+/v/DucMOTj56zmG3ptguElxMG/0OYjB4xfvQN6/kJg94M4WWEwfsd2dwJzygef828WJJE1XEzSSW8WfSPVHuqr0K+8t0Vzy5e0M+nCD8jCnIprCTqgSPRW95r8c2OX8eqi7WvYakuymgw43T7hLxbEok+cdgn9LsIr8NscsRitqGfl7IT2bUZvkOErfvY6RHh0ReYYYniOW08J8V3U0Ql8rty7rsJy/mG9b0to8EEQ/OwjOAGAlNzsDprovvfoYcTlKpYbXoc1G32axb7exb1PYNGQ6XZ1Ll1q8bt23Xq9Sa1WpNa/R3exHf2uPPhBzRq+yienWKoEYYao7citGZ1dwGG7uJ7EZ4b4jpC/htdN5SjYwe7WOaqtRA/aOP7MX8CWpMPcr1tCFoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;세팅 이미지3&quot;
+        title=&quot;세팅 이미지3&quot;
+        src=&quot;/static/a9cf81288695b09dcaf2737a4aa5ceac/d2cbc/issue03.png&quot;
+        srcset=&quot;/static/a9cf81288695b09dcaf2737a4aa5ceac/6f3f2/issue03.png 256w,
+/static/a9cf81288695b09dcaf2737a4aa5ceac/01e7c/issue03.png 512w,
+/static/a9cf81288695b09dcaf2737a4aa5ceac/d2cbc/issue03.png 705w&quot;
+        sizes=&quot;(max-width: 705px) 100vw, 705px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;입력소스 탭을 클릭 후, &lt;strong&gt;이전 입력 소스 선택&lt;/strong&gt; 체크박스를 체크해제한다. 그러면 자동완성이 될 것이다.&lt;/p&gt;
 &lt;h3&gt;스마트 자동완성&lt;/h3&gt;
 &lt;p&gt;스마트 자동완성이란, 말 그대로 똑똑하게 자동완성을 시켜준다. 대표적인 예시로 아래의 코드가 있을때 해당 인터페이스에 어떤 구현체가 들어가야할지 혹은 파라미터에 어떤 값이 들어가는게 좋을지 선별해서 IDE가 우리에게 알려준다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;java&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; me.sungbin.inflearn.intellij.chap4;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -1714,6 +1790,31 @@
 &lt;p&gt;⌨️ 단축키&lt;/p&gt;
 &lt;p&gt;Ctrl + Shift + Space&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;실행화면은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3UlEQVQoz22S2W7iQBBF/Q3BLMZg8Nru9op3yKqQTGZGmYf5/485ozYkAWUerlRdah3dulXGoR3o2po0LRAixfNi4qJEVQ0y3xOIikiUxLLG8wtcPycUO6RqEbLBDwr8IEfIHUGYY6SJJE8iROCghIsIVqRJTbt/o7h7QZW3RKojki1CdaN0HcbtZy+SHXHSE0QFhm1vWTkRU9NiNrWZTm1EXFENR7L6EaF6AlETxs0Z1FzAT9DTux+dGubEZmlHLCwf07QxzRUqH6gOR4rqid3wyt3jH7r9L6r2hbr7wa55Ji3uycoHsvJ+rPVfLygwJpMli4WD50p0raF+WI4jaDdJceD49pfu8JusfEJlB1R2+y2COBnYuAnGfOYwn63Z+hmW5TKbra+AMht4PL6zv/tJtntGJMM43seoH9L/N646AZfLLWGUsbBc5nPnG/Dh+Z2mfyUtn8a+1tdC2guHCmNyszw5dBWTGxud6QfwK/DTJsdt6l5cj5sXVw7PwLnlYG8i5qst04U9yo+ugd90zu6/GdqxzbJas8gtTHXDNJngKX2o/VXwV4CLUcOLs3G2CmOjAtbFFq9WrPMNTr4hSitkukdql3FDqO/wQnrUWOlj7sjyHpn2pPkB38/5B635SAOY6MprAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image0&quot;
+        title=&quot;image0&quot;
+        src=&quot;/static/dbbb48abf571449b2ba571e17fe389ff/2bef9/00.png&quot;
+        srcset=&quot;/static/dbbb48abf571449b2ba571e17fe389ff/6f3f2/00.png 256w,
+/static/dbbb48abf571449b2ba571e17fe389ff/01e7c/00.png 512w,
+/static/dbbb48abf571449b2ba571e17fe389ff/2bef9/00.png 1024w,
+/static/dbbb48abf571449b2ba571e17fe389ff/71c1d/00.png 1536w,
+/static/dbbb48abf571449b2ba571e17fe389ff/14747/00.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;스태틱 메서드 자동완성&lt;/h3&gt;
 &lt;p&gt;테스트 코드를 작성하다보면 &lt;code&gt;assertThat&lt;/code&gt;과 같은 static 메서드를 import하기가 인텔리제이에서 좋게 지원해주지는 않는다. 그럴 때 스태틱 메서드 자동완성 단축키를 쓰면 쉽게 import 혹은 어느 패키지에 있는지 알려준다.&lt;/p&gt;
 &lt;blockquote&gt;
