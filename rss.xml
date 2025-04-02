@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Apr 2025 05:29:20 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[banner 해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;./assets/banner.png&quot; alt=&quot;banner&quot;&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Apr 2025 06:07:03 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 34.765625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAACE3AAAhNwEzWJ96AAABHUlEQVQoz1WRMS9FQRCF75yIKy9ISGgUSuUc5ZxCodRoPYXXCQql0NOKqERLzU9RiV9BoZaQubv33aeY7O7Mnjk73zagmgxjYLr3XGMLVJhH5rJmuTdGree9MGQ9z+Vek8KMvtkhqFdQl+axDdcDqI0qzrr15vVc9Zo+Jt364i6oD1Cf5voxjy9QT3CNQO2DsTm8vmu0XDWL1aSLZnDSuzF+wfg2z1VvKOIxqANQe6BOzSOnmIBxYa67Mo3OQC2kWWNlnBWjnkHdw+MFjEdQR4WZdsx1bB7XYIyNKY5bUFegzsG4AXViVGuFYQLt2MwNrBJ8tFaBm3ccl8wj76yBakGtGzUyj3lQqzMjz3Ip0KvB/1w1syFffzym/LLhH6nMUyxaWH/MAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/8a0394ae0c7806c4bb53a0c508b6d110/5a190/banner.png&quot;
+        srcset=&quot;/static/8a0394ae0c7806c4bb53a0c508b6d110/6f3f2/banner.png 256w,
+/static/8a0394ae0c7806c4bb53a0c508b6d110/01e7c/banner.png 512w,
+/static/8a0394ae0c7806c4bb53a0c508b6d110/5a190/banner.png 800w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/xZG3C&quot;&gt;인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
