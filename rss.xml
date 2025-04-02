@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Apr 2025 06:07:03 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Apr 2025 06:15:05 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
@@ -167,7 +167,31 @@
 &lt;p&gt;필자는 맥 환경이므로 아래의 명령어를 통해 설치를 할 수 있었다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container dark-default-dark&quot; data-language=&quot;shell&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;brew install gradle&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;설치 결과는 아래와 같다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/01.png&quot; alt=&quot;image1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABRUlEQVQ4y7WSXU+DMBSGS2FA+SgMCsg+w5gjuCUmmqhXxktjYvz/v+Y1p6ZKtl2QZV68OaftydO355Q9Pt/j61Nh2ytMM4UsyzCZTLQcx4Ft2+CcgzE2Tvv9HQ6HHrNZDaUKlGWJoiiQ5znSNEUcx3BddzxwuVggCEJwbsOyLIRhqOOwiNweQ8k56QToeR44d+F5PoQQ+snkinIDpppzQNo/AdazCqulRCwFhAjg+74uPHv7GD29PODjXWHdpsiLEnVNvfwZDvWQLhgOiWTyYTQ522w3kFmBaZKjqkpUVaWh8/lcR7M2OQ2NZPapPQSiV2lg27YoVwqxjPQhKYoiLRoQrZMkgZRS5xSHol6Tu982dV2HdbPF7W6Hpmn0lzGwi3q46zd4ew3QdTeQcgop/xwef59Rsh0bQjBwzi5zdKqrgf4H+A2eQRqmoE/tWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/7ad0796602808aedfd7664304c27e148/2bef9/01.png&quot;
+        srcset=&quot;/static/7ad0796602808aedfd7664304c27e148/6f3f2/01.png 256w,
+/static/7ad0796602808aedfd7664304c27e148/01e7c/01.png 512w,
+/static/7ad0796602808aedfd7664304c27e148/2bef9/01.png 1024w,
+/static/7ad0796602808aedfd7664304c27e148/71c1d/01.png 1536w,
+/static/7ad0796602808aedfd7664304c27e148/a878e/01.png 2048w,
+/static/7ad0796602808aedfd7664304c27e148/d9ed5/01.png 2880w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
 &lt;/blockquote&gt;
