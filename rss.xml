@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Apr 2025 07:13:47 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Apr 2025 11:36:18 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
@@ -856,26 +856,25 @@ dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACd0lEQVQ4y23S627jNhCGYV1DkmZty7bOFCWKlERSsixbjrMFekCB9P6v5i3kbAMU3R8PMBwSxMcBg79+m7nME84PVHVLkjXksqdselLR0dke7T1RW1IMNY1zaDchlKU2M6JxVO2ArFvysid4eT0SHiq2oeD1dc8uzDDqxNwu2PGOsBfypqeyLZmqiIWk1t3jAqk6lHE0rcN0nvhYEDw9vbLdHhCi4fl5w26XUOkzurtiz+/086+403dO/k5rrkg1I5uJ6uH0pW4m8rwmeHresd2E1JXi5SVku0tQ1YC1Z/y4MHYXBj3h9QlnPP6HtrKfpEWXPVZ6XD0QvPyyY/MtRJRrwh3hPqfvz3g7cn/7znJduF5vLOcLy2Xmdp24XT3z5JhP9mGwLbPz6FQRrM98ftpwyEvCPGZ/yNB2oZ5m2mmhO92Q7oLsZ0Q7UZgTuR4ozPip/SS7ieOhIDhGOYd9QlpI0lKwP+QUwqLUhPVvDOM72l1omvHRF6vSIYR71HnRU6yEZbONCRrl0bWlrixG9kjRcZ7/4H77QOuJOFMck4oorjj+RCF6stwQpYrtNiFYbh/c3//msvzJ/f2D0/Q71lzouxuiGsmKnihRHKLyf46RxPs71i7I2hOGKYG0FuU9tbNUfUdhNI20GDUh6hNpbohTRZI2xD+hzETv32jtjXCfEWSyIytb4qwm+kFKi6tnlL4im5midBRyoJD+i6gGhBzIS0cmLGXes1tnGKeaJDUk2ad1HaXNZ6JEPVIkmf7a/7eO03Vu/+1/2xwJ1h9f6zPKrNZU02Meq7IZUXqkrNc0PXnRIStHVlpaY2nb9YxHmRHTTESR5B8JIIbpYtrr4wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCklEQVQoz3XT627aMBiH8VxDqXqAQELOztFOnJADoaUtbdnUbfd/M89EqCqmbR9+em3Z/suyXhtD3bKpJUmSEAQC1wnx84yoLhCyQcqRONWItGLt5BPHKwiFJogq/EDhegV+KHG9DMN1fCzLYX53z3KxwJzPieKSUj+S1U+kaiQueoKkIc42X0TaTOLsU9oSRxXGzc2CuSm4uV0zmy2YzUy8oERVD5TDM2X7jC5H4qQlzruvwCS/qPmGJOvIowZjNptzCl1ZAVdX91xfLwgCSaN7+s1IX40MZUtf1bSyoinOVFSghDyLCuqkRKwFxt2dje+lqKLDsgS3txZhrInVhmIzkNYtad2T6Ja41GeVRnyOhaoQqiStG2xfYIioYv/4k/3+F0P3St9/Zxx/4PsKe51j2SnLZTQxL5zmCzPEdYtpr2UlmGaAIbOQj+PI8W3Ht/cHXp80XZ0h04FQbHDcAnud/NPKEsRJQ6UfkdUOx80wOhlyfFG8PSkOO8HL1qItHYqoJUkG/FDjB6f20GdhjeeXrJ1sYjsZrqcIg4rlMsDY6oTjQfP2rDk8ZBx2Hq0OWdkp9vr/zoHn6ngS31OYpo9RlyEf7zXHQz3d9LgPGJqQlXV58E+Xwac3tuxkGs8XHoaSinHbsx22DF1D1+SUMp960fPlX6G2k+K4+fQ7TusikvihIowq1nbMb6ykTGn6R5SAAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;image1&quot;
         title=&quot;image1&quot;
-        src=&quot;/static/6a1cd635a735fbb4918bdbe9e0c26b08/2bef9/01.png&quot;
-        srcset=&quot;/static/6a1cd635a735fbb4918bdbe9e0c26b08/6f3f2/01.png 256w,
-/static/6a1cd635a735fbb4918bdbe9e0c26b08/01e7c/01.png 512w,
-/static/6a1cd635a735fbb4918bdbe9e0c26b08/2bef9/01.png 1024w,
-/static/6a1cd635a735fbb4918bdbe9e0c26b08/71c1d/01.png 1536w,
-/static/6a1cd635a735fbb4918bdbe9e0c26b08/a878e/01.png 2048w,
-/static/6a1cd635a735fbb4918bdbe9e0c26b08/d9ed5/01.png 2880w&quot;
+        src=&quot;/static/822ce3e6c014392fde7d030913af4016/2bef9/01.png&quot;
+        srcset=&quot;/static/822ce3e6c014392fde7d030913af4016/6f3f2/01.png 256w,
+/static/822ce3e6c014392fde7d030913af4016/01e7c/01.png 512w,
+/static/822ce3e6c014392fde7d030913af4016/2bef9/01.png 1024w,
+/static/822ce3e6c014392fde7d030913af4016/71c1d/01.png 1536w,
+/static/822ce3e6c014392fde7d030913af4016/5068c/01.png 1917w&quot;
         sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;디버깅 창을 보면 왼쪽이 &lt;code&gt;call stack&lt;/code&gt;이라고 해서 해당 메서드의 브레이크 포인트까지 어떤 걸 타고 왔냐를 볼 수 있는 화면이다.&lt;/p&gt;
+&lt;p&gt;디버깅 창을 보면 왼쪽이 &lt;code&gt;call stack&lt;/code&gt;이라고 해서 해당 메서드의 브레이크 포인트까지 어떤 걸 타고 왔냐를 볼 수 있는 화면이다. 오른쪽 창은 &lt;code&gt;variable&lt;/code&gt;이라고 해서 해당 브레이크 포인트까지 쓸 수 있는 변수들을 나열해 놓은 것이다. 보통 우리는 실무에서 디버깅을 할 때 &lt;code&gt;variable&lt;/code&gt;의 변화를 보면서 코드의 흐름을 파악하곤 한다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;✅ 용어정리&lt;/p&gt;
 &lt;p&gt;브레이크 포인트란, 코드 실행에 있어서 오류가 의심되는 부분이나 실행 중 연산하는 값을 중간 확인해야 하는 부분에 종단점이라고 볼 수 있다.&lt;/p&gt;
@@ -902,7 +901,58 @@ dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;p&gt;⌨️ 단축키&lt;/p&gt;
 &lt;p&gt;Shift + F8&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3&gt;조건식 브레이크&lt;/h3&gt;
+&lt;p&gt;아래와 같이 코드가 있을 때 2번째 요소 아이템에만 브레이크 포인트를 걸고 싶을 때가 있을 것이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; 조건으로&lt;span class=&quot;token function&quot;&gt;_Break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; books &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Book&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; books&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;book&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그럴 때 브레이크 포인트를 출력 코드에 두고 오른쪽 마우스를 클릭 하면 아래와 같은 팝업창이 뜨는데 여기서 원하는 조건을 코드로 적어주면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB/UlEQVQoz3XS626jMBCGYa4hDQmEnAhgGx/AQDgk2bTbSqv9tfd/Oe8qpNKqWvXHo5Fl+ZuxNMFtmBjOHqMNolBkJ4l0DtM3mHZEmwHjeqzrORwNx9SQFTVCtRTCk54s6ckgVE2eVwR5JjjsT2yimF2SzITyuPEVP/5EVxekGZDlmUJ1s1y25KKd6/PcIXVPLiqCVZiw2SrC1ZHFYsNikSDtSHv5xfXjD83wga5+YP3rt4y/Y5u3uUHw8pIQxweOack62rOJU7TsaM3E0N1p/YRVLU42ONl+qy7PZAdFsFxuiaMdp1RS24nKjqiiQaYGKWpsPWHNiNUDWnWUsqWc6yfVoR6hukdn9SMwYb3eckw1pWqp6olT5tgdDdZNTNd3rrffvF4+8O6MFi1GfqVlQ1X22MwThMsdUZQRJwVReGC9OpLlHuOvtOc3+uaOb0esajCiwcpnNfIfLfz8ZfuYMEo37OuclYgIi5CwWFGYhrq+0w7v6OqGNBeEHhF6oPhG6a7ooiXYlBFxF5FOOet6SVSH5NbjqjtN/4Z2F0p7QerH6vT/0z2i7NH2gs4bgoPK2JqU1Av2VcpabMi1R+lpDinmR8MXj0kfIQ+P+0KdKc30DMzyilPuiZOU7S5ju8sRqntOZka0mxDleV7e4pP8bKLMgKsGSjvi6htGdPwF4CJIZ8SfFq0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image6&quot;
+        title=&quot;image6&quot;
+        src=&quot;/static/0ee74b1422843f162fdd2b18b5cbb4cf/2bef9/06.png&quot;
+        srcset=&quot;/static/0ee74b1422843f162fdd2b18b5cbb4cf/6f3f2/06.png 256w,
+/static/0ee74b1422843f162fdd2b18b5cbb4cf/01e7c/06.png 512w,
+/static/0ee74b1422843f162fdd2b18b5cbb4cf/2bef9/06.png 1024w,
+/static/0ee74b1422843f162fdd2b18b5cbb4cf/71c1d/06.png 1536w,
+/static/0ee74b1422843f162fdd2b18b5cbb4cf/c72f7/06.png 1915w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Evaluate Expression: 브레이크 된 상태에서 코드 즉시 실행&lt;/h3&gt;
+&lt;p&gt;해당 기능은 브레이크 포인트까지 사용 가능한 모든 변수 및 메서드를 이용해서 테스트 해보고 싶은 기능들을 테스트 해볼 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; evaluate_사용하기&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  productRepository&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;책&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  productRepository&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2000L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;운동화&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  productRepository&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;냉장고&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token class-name&quot;&gt;Product&lt;/span&gt; product &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; productService&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;findByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;운동화&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2000L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; product&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getAmount&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 코드에서 &lt;code&gt;findByName&lt;/code&gt; 라인에 브레이크 포인트를 잡았다고 한다면 productRepository변수와 해당 인터페이스가 제공하는 메서드들을 전부 이용하여 Evaluate Expression을 해볼 수 있다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;⌨️ 단축키&lt;/p&gt;
 &lt;p&gt;맥: option + F8
@@ -935,7 +985,93 @@ dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;watch: 브레이크 이후의 코드 변경 상태 확인하기&lt;/h3&gt;
-&lt;p&gt;해당 기능은 단축키가 없고 디버깅 채널에 안경모양 아이콘을 클릭하면 된다.&lt;/p&gt;
+&lt;p&gt;해당 기능은 단축키가 없다. 그러면 버튼이라도 좀 보이게 있어야 하는데 처음 접하시는 분들은 버튼이 어디 있는지 모를 것이다. 처음에는 안 보인다. 이것을 보이게끔 세팅을 해줘야 한다. 가장 우측에 칠판모양 아이콘인 &lt;code&gt;Layer Settings&lt;/code&gt;를 클릭 후 &lt;code&gt;Seperate Watches&lt;/code&gt;를 클릭하면 위에 &lt;code&gt;Watches&lt;/code&gt;탭이 아래와 같이 활성화 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7klEQVQoz32S23LaMBRF/Q+FhxACtvFNN19lMOYWwAnJNP//O6sjh3bSTqYPa/ZII23tc468XBUkcYy/mBP6S0J/QaYKinWPKDckWUOUOGrCVUEYlQSrgiDMR3V7TuO0Jo4LvIeHOY+PCdPpE5PJjMnkkVVc0h5feL590BwHuvNP+uMrVbdH11tM05PbflRdd+jmk0iUeM7kYbbiaSFGs+l0PqaS6556d6buL+T7A9r2yLpDNXfsFtVskfUGWa9RtkNklTOcM53OCPyEH5P5mNIPNYXeUTYnpO7JREectcSZvWtLnNo7LVFqSbKW0Nd4YSDR0pLrNTIpkWJD3VwRoiURliiuCCPXK9czcye/r3NWUUGcVAi5ZhUZPC0Vb7cXhpeB4Xrl9jpwOj5TqA4ld2SqJxXdHzLZj6n8QI84U/do1RzIRINXqICPW8P70HI7a4b9krZcEASGMMw/J/sPbsKjWWhGXSwlVb0bU3unxnC7VryeS66HlGEfsq5C/MD8SfEdzuw3bt3YAybv8No65eNmeRssbxfD+yWlb6PR8Oul/+EHisT9w6TAK43g5dxyfd5wObVcjhUbm7P09V9lfU32XWJ3fjaL8JTZoMwWqbfk5R5luhFhNkjVfluem2qaWVLRUBUWaVryvCNLan4Bg/xLnDxlgNcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/6d088d0702be311fef1d5a27907cf622/2bef9/03.png&quot;
+        srcset=&quot;/static/6d088d0702be311fef1d5a27907cf622/6f3f2/03.png 256w,
+/static/6d088d0702be311fef1d5a27907cf622/01e7c/03.png 512w,
+/static/6d088d0702be311fef1d5a27907cf622/2bef9/03.png 1024w,
+/static/6d088d0702be311fef1d5a27907cf622/71c1d/03.png 1536w,
+/static/6d088d0702be311fef1d5a27907cf622/29114/03.png 1920w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 한번 product라고 입력해보자. 그러면 아래와 같이 변수가 없다고 나올 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACE0lEQVQoz42TWW7jMBBEdQcHseMlWklKIrVZayx5SexsHiT3v80bWE4mg/maj4diN9jFAkFafd3R1jlaa6SM8D1FmKSYdYGIc4QsUFFOFK+5t2NsJ8YTKVIVBDLD91NcTyNUih+kWL4vcGyf+eyO1WLBcjEn0iX18ELVH9HZBpNuSbKB2HSEcYu6EDVXvmqdbBCqwLq9XTBfhtxOXSaTBZPJEhlVtE+v7N8+6E7v9K+fDMcz9fZA2e9HquEwUvY7yn479pQusCaTObPpCseNRsObmzm+zDHrnrw9kNV7orJDJTXKNIRpi0ouNKNKUyNNRZx1KJFhzWYOy7lD4EXczRymUxtf5BjdYbINYdygVIOQa4K/ELIcCWSJL9YEquLejrBCldO2T9T1gWo90A+/2O0/icMKISt8UeAH+Q+iwPMzHNeMeF5CKHMS3bJaSaw0kXycd5zfD7y9DLw8FbS1xqgWrXtU/ICKWmTUjqriDqEqXNdgOwYTFtSmodYdwSVhl0neTwWvjzmnreC4WVJnNvfOZUDjuPorzT/qJbheMq4vxpd6sRRYfRXzdip5ecw47UKetwFN4eG46Tjwfxg8P70a1oXk463m/Nzwfiw4HzWbJuTeNl+nXxN9p3Hd5M/9fae77kmYLwKsIi8Yhg193zMMA/3mgbKsCWQx/oYLfpD9mI5psrEXiJwozMcHrcISx4n5DaSNTBipoU5xAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image4&quot;
+        title=&quot;image4&quot;
+        src=&quot;/static/ffced7ef8bee396619b482d8906591b6/2bef9/04.png&quot;
+        srcset=&quot;/static/ffced7ef8bee396619b482d8906591b6/6f3f2/04.png 256w,
+/static/ffced7ef8bee396619b482d8906591b6/01e7c/04.png 512w,
+/static/ffced7ef8bee396619b482d8906591b6/2bef9/04.png 1024w,
+/static/ffced7ef8bee396619b482d8906591b6/71c1d/04.png 1536w,
+/static/ffced7ef8bee396619b482d8906591b6/7ebf9/04.png 1919w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;당연한 이야기이다. product라는 지역변수가 없으니 안 나올 것이다. 다만, Step Over 단축키를 통해 다음 라인으로 이동해보자. 그러면 갑자기 아래처럼 product 변수에 값이 나올 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCklEQVQoz42S626bQBCFeYXIUdKAYzCXBZbrAovBgO0kdppETfr+T/NVJkqitj/aH59mVto5Omc0xqA72qYkkQlCxHhuSJTlyKrElyVCVESxQiY1tpPgrBO8oCCMKoKwxPdzXC9FhMXcG54bYNsu5rcbbi2LpWUhohK1vafs7gizDXE2ILMtIm7wwgZP1LiinusHQrZ4osC4urIwlzFX12sWC4vF5S2BUPTdxGF3pB8OTPsTh/GebdfR1pq2bui0ZtNoNlrTtxqtGqIgxVgsTM6iK1twcXHN5aVJJBuKpqfpdtTtjlS3pKohrzdklSZTzXutmk9y1SKDHOPbjYPwM8qiJ/ALTNPF9QuSpCMttoRyg4g2+OdoQfVbzA/coMIPG2xHYsSRYn94ZX94Yze9MO3e2O9/ImVLEOpZfO1luF7+F2svx/NyhJ+TJS2rVYhRZIIfzwNPjxOPx57TXUmvM9K4I8lGRLwhiPQnImpnt2dBx82RYYnOe8qkw176GH0Z8nxSfL9XHKeAh+2SplixclIcR+Ks03+QkaYdvlCYVoAxNglPx5rHu4LjLuI0+bTKxVnnrN3svzjfpuvmLJcCQ1eC1yfNy6nl+UHx8iDZ6oiV/e7gfeDL0Z9ve07y7tS0fAxVKqZxyzAMjOPIOPTUtZ4jnO/xQ+TLTTrvz/ML/KAkjsr5bxjV84p+AaFbS/qM3g2dAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image5&quot;
+        title=&quot;image5&quot;
+        src=&quot;/static/04b59e3d2f75cc46765b423c2b63a699/2bef9/05.png&quot;
+        srcset=&quot;/static/04b59e3d2f75cc46765b423c2b63a699/6f3f2/05.png 256w,
+/static/04b59e3d2f75cc46765b423c2b63a699/01e7c/05.png 512w,
+/static/04b59e3d2f75cc46765b423c2b63a699/2bef9/05.png 1024w,
+/static/04b59e3d2f75cc46765b423c2b63a699/71c1d/05.png 1536w,
+/static/04b59e3d2f75cc46765b423c2b63a699/ec09f/05.png 1916w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Evaluate Expression vs watch&lt;/h3&gt;
+&lt;p&gt;언제 Evaluate Expression을 사용하고 언제 watch를 사용해야할까? Evaluate Expression은 해당 순간 즉시 값을 확인해보거나 테스트 해보고 싶을 때 자주 사용하며, watch는 브레이크 시점부터 다음 브레이크까지 상태를 연속적으로 확인할 때 사용을 한다. 이 점을 생각하면서 적용해보자.&lt;/p&gt;
+&lt;h2&gt;추가&lt;/h2&gt;
+&lt;h3&gt;브레이크 포인트 잡는 단축키&lt;/h3&gt;
+&lt;p&gt;마우스로 브레이크 포인트를 잡을 수 있지만 단축키로도 잡을 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⌨️ 단축키&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맥: command + F8&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: Ctrl + F8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] 리팩토링]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. 리팩토링 extract…]]></description><link>https://sungbin.kr/IntelliJ-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-리팩토링/</guid><pubDate>Sun, 23 Mar 2025 11:44:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
