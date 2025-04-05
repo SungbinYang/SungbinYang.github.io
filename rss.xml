@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Apr 2025 12:37:42 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Apr 2025 03:08:40 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Gradle란 무엇인가? Gradle란 자바나 스칼라 프로젝트에서 많이 사용되는 빌드 자동화 도구이다. 또한 Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Sat, 29 Mar 2025 10:00:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
@@ -413,6 +413,142 @@ dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;추가 플러그인&lt;/h2&gt;
+&lt;p&gt;이번에는 내가 자주 애용하는 플러그인들을 몇가지 소개해보려고 한다. 해당 플러그인들을 보고 유용하다 싶으시면 적용해보시면 좋을 것 같다.&lt;/p&gt;
+&lt;h3&gt;Lombok&lt;/h3&gt;
+&lt;p&gt;롬복은 실제 프로젝트에서 많이 사용한다. 하지만 단순히 롬복 의존성만 넣어준다고 해서 제대로 IDE에 나오지 않을 수 있다. 그래서 많은 분들이 해당 플러그인을 설치한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOUlEQVQoz5WR61LCMBCF+x6ONElvadL0kl6pKaDgOI7Kb9//RY6TglJhCvrjzE6S3W83e5wsHxCJBpnskPIGItAQQTmRHu/rco1Y1KBMHUQTUJac4lFO1W2RFgYr84bXl0889O8YzP5HxnxgZfbo2mfU7Qa5NvCDAoSqE3zSwKmWWzTLHQhTcIkEoQnciex5QSR00qPTaxRpDxGW8FiKBT3kkxF2gDpVu4MqBnh+fno4ky1MowZPagsZlIiPa+GBhu9lY853rcNFgzCuwfxsHkgkMt7CqA1kWEKG1SgLDbz8N9DCrCnXgPdEIOctqrjHncvhUjlO7Z592UYnEreBdkLrtAW6Mzn/mtACFW+wyh7BWDoaSGf0J6B1P4o0qmKAEDXCSM/m3gRO97Mglzu7AFrYrQmvNToHfgEkxUVnyM1U6wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image9&quot;
+        title=&quot;image9&quot;
+        src=&quot;/static/f079b06a344600ad2d3facd4b5ead0bf/2bef9/09.png&quot;
+        srcset=&quot;/static/f079b06a344600ad2d3facd4b5ead0bf/6f3f2/09.png 256w,
+/static/f079b06a344600ad2d3facd4b5ead0bf/01e7c/09.png 512w,
+/static/f079b06a344600ad2d3facd4b5ead0bf/2bef9/09.png 1024w,
+/static/f079b06a344600ad2d3facd4b5ead0bf/71c1d/09.png 1536w,
+/static/f079b06a344600ad2d3facd4b5ead0bf/5068c/09.png 1917w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;AsciiDoc&lt;/h3&gt;
+&lt;p&gt;해당 플러그인은 &lt;code&gt;spring rest docs&lt;/code&gt;를 사용하고 테스트 코드로 생성한 snippet들을 문서화 할때 이용하는 플러그인이다. 해당 플러그인을 설치하면 자동완성 기능과 아무색깔이 없는 텍스트를 색깔이 나오게끔 하며 미리보기 기능도 지원하게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVQoz42SwU4TYRDH+w7SFhRlu922tHTb7pa2bNkWKmgMKCTGaLRWMIHAARNO6tFnAJVgDBeP+gZIBNF40MSDJr4BaGmhsiWNBfoz+0mixmj9kn/mm5nMLzOTcURjGQKhJLGwQaQzSUjRCfniQl3C6iKejPcTVg28Sgy/T8OrRP+Q7I3gSPQMoGomwz1DjAzlyeUuks2MYpoXyJgjwvaZo+haDl8ggeRRkU6GcLcquNzykbw4XTIn2gM4EsYgSWMASVbpkLqQ5DAdnp+y/fZTQeLxLDfGp7lemKQwNkX+yIrY2BQ3J2boPz2Mozs1iKplkJUYkieMR1Z/kz2K0+Xh0uVxDg8P2N6uUKlYHBzs02g0qO/X2dvbw34PHj7GYe/PH0wgK9G/AlucElfzk6KoXCpTLm1RqZSpVnfZ3iryefMLDWD+/iMcNsyGNgNey08IYKm0xebGBsViEcuy+LqzQ7FYFrm5+cUfHTYDHmuRKIxNi6JarUbVsqjXvwnfHnl31xL/hcWlf3coHQHdrV7Oj1zhw8dPPF9ZY3n5Baur66y/esPay9esrKzy9t17bt+913xkAfaECQa7USMGatQgpvei6SYx3RSxzlBCyB/Q/w9on1M0apA1z5LrO0c6NUA6PUiveYZUKocWSRPXTMJdyeY7tK+/7biP2Vt3ePbkKQtzS8xMz+JuU0RO1Pyi73iwtdF6MOgSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;image10&quot;
+        src=&quot;/static/e6229e9f95f15b4a1a39f8f4fdd3f75d/2bef9/10.png&quot;
+        srcset=&quot;/static/e6229e9f95f15b4a1a39f8f4fdd3f75d/6f3f2/10.png 256w,
+/static/e6229e9f95f15b4a1a39f8f4fdd3f75d/01e7c/10.png 512w,
+/static/e6229e9f95f15b4a1a39f8f4fdd3f75d/2bef9/10.png 1024w,
+/static/e6229e9f95f15b4a1a39f8f4fdd3f75d/71c1d/10.png 1536w,
+/static/e6229e9f95f15b4a1a39f8f4fdd3f75d/14747/10.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Key Promoter X&lt;/h3&gt;
+&lt;p&gt;해당 플러그인은 우리가 단축키를 일일이 외우지 못하니 해당 부분들을 도움을 주는 플러그인이다. 만약 마우스로 우리가 무슨 행위를 한다면 해당 플러그인이 단축키를 팝업 형태로 제공해준다. 또한 커스텀하게 키 매핑하는 기능도 지원해주는 아주 좋은 플러그인이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB4ElEQVQoz22SWW7bMBRFvY8mljVPnCVLsi0bTix3CBKgX/3qBrr/BZxCjIek6McBCT7qvvt4tdD2QF6tyfKGNG9YBhXLZXHjcVkQhjXW7GjcniiSBKEgjCRhJAj9/s6iHU5ot6cSHXmxJljVrG4fSL+fz7U+0LojVdWSpOZW8/c+iC7W24m2f0aUPa45UpSddzFfnpndJLGmzBrCWHmxq+D/WLT9RK1HpNzTDRPOHUgz64tRrLxIllgvmmXauwiC6t5wnugy1cyiqHuSzDGefvLy9pvd+Eo3fL+xHr6x2bxgzcju1x9M94wxW5TZYuyIcTtcs0eoDXnRsMirjqxokXZH252oqp441kSxJk60d5nEFllajtNEax1OaVSt0EKhhEFLg5GKIpfvgmnRImRPvzkjxOZm//0Na5JIU+eKVqSsVUGvCwZTslYljSyxovRnVV7fBetmRJo9cWo/pbfyoSjCUPFlWfPwD8tA8BgIHoL5PcVFMG+x/RPSjKzCa2LKs4qkD0XLDbYZcW7EfViF6pGqR6mBomzvDl1zoKq7W7pX5pTT2LAdTkznN07TK+fLenz6wW4zefaHr3T98ZJy3vhfxtj9p/e7jhxHCll0qHpAVr2nrta+4VyLw/fmc4h/AfWuTuKrmJBQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/781764c6f3c9c91cf69404781ff5d733/2bef9/11.png&quot;
+        srcset=&quot;/static/781764c6f3c9c91cf69404781ff5d733/6f3f2/11.png 256w,
+/static/781764c6f3c9c91cf69404781ff5d733/01e7c/11.png 512w,
+/static/781764c6f3c9c91cf69404781ff5d733/2bef9/11.png 1024w,
+/static/781764c6f3c9c91cf69404781ff5d733/71c1d/11.png 1536w,
+/static/781764c6f3c9c91cf69404781ff5d733/9e818/11.png 1913w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Nyan Progress Bar&lt;/h3&gt;
+&lt;p&gt;일단 인텔리제이 상에서 로딩화면이 딱딱한데 해당 플러그인을 설치하면 고양이가 돌아다니는 귀여운 행위를 감상할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVQoz42S0XKCMBBF/RHFgCGBRAgxJCqCrWjtTN/60v//ktshKOJUpz6cCQPLmd29meSqBktLxEyDxivMghSzGR+YzjgIEShUBWP2iKlCMBcg4bKHSJDwxsSsD8h1jVRasKT0xXNf1P/QPTNeIs8bFHoPkRjQuBi+9XUjYbk5opPKxEGbN/DEIgyzobg7F1GOTDiIpfWkwj4XGneEVDtIuUPpWhS6BqXqJgwlaKS8NCDSv79ylc59Xc+EC4cFWyEzjR89irJ+jxemQYLw0uV4FU87ZKkF5Qa2OuP0+YNt9QVt2oHCHGDtBzgz92HcCW8MQq0btKdvOHdGKjZIZU8i1sizGjxeISDij+ChMOYGqa4glluQsBs5GY2dgMwFolFQ/wopMyjcOzK188IwutEtmlGNeKF8KK8Ju5FXzXAdxkISZV7YJf1Sh9eU7bqFKur7a3E5u4QfpfxI+At1p0X/n8KsCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;image12&quot;
+        src=&quot;/static/87df65e1e32825a50e6725e6c6a83e9f/2bef9/12.png&quot;
+        srcset=&quot;/static/87df65e1e32825a50e6725e6c6a83e9f/6f3f2/12.png 256w,
+/static/87df65e1e32825a50e6725e6c6a83e9f/01e7c/12.png 512w,
+/static/87df65e1e32825a50e6725e6c6a83e9f/2bef9/12.png 1024w,
+/static/87df65e1e32825a50e6725e6c6a83e9f/71c1d/12.png 1536w,
+/static/87df65e1e32825a50e6725e6c6a83e9f/5068c/12.png 1917w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;SonarQube For IDE&lt;/h3&gt;
+&lt;p&gt;해당 플러그인은 코드 품질을 자동으로 체크해주는 기능으로 우리가 개발하면서 고쳐봐야 할 부분들을 실시간 검사를 해서 밑줄 형태로 경고를 띄워준다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9klEQVQoz12S246bMBBA8yNNwtUGDMY2xpAAuTSrVaVKfev//8mpYLNZdR+OxtejGXt2up0RpScXlix37A8l+7188WMviaIKayZ6fyVLWw7HiiiuiWL1jZpdN9zRdqZUPaLw2+FjpJ4X6m0spEfrBWcu6Hokzdrn3ncUOz8+WKWqDNjuiix64rh5SdeYJppSdmSlJZMGIS1xuu5XJKkiThRxWhMna4bhgWonlDrj+zvGzKRp+58wiRuktJzvb/SnBSlLirImkw2pVCS5JBMrDTtZBVLhaPsr1t/Ic/sqdxPGHxlKYTjPN07TlVwUNG2HGxaKpiOXFUkmSDLFTpQ9ufRUeqC1C0K47R0Px3JjfyyJjgohDF04EcYZpS3Wj5zmG873aOu3tVzqD2EmO4xduNz+0HWP7R1luRIQRY+qRsqiox8GpsuNcJrxw5kwTmhjqVtH3a7C5ikUjnD9zeP9L2H8hfMPnH978qAP7xSFp2k9tfbIyiBLTZIIDlHO4ZgRJWvJ9aewQ/cXqubEfi03qp7tU23zNG5o1IBxE6050zQjxkxYO2Ps9KJS/VfJzi2UKmwfESf6RZQ05KnBdxeW+Z0x3LHtGedmOr/g+8srqjp8/bIPd7SZtjb5JHrGJGpwduZ0+sk43An+il2zchN1PWyilbU//wEveFEn0Rr6AQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image13&quot;
+        title=&quot;image13&quot;
+        src=&quot;/static/29c838749f5abb29ca41f541ad889118/2bef9/13.png&quot;
+        srcset=&quot;/static/29c838749f5abb29ca41f541ad889118/6f3f2/13.png 256w,
+/static/29c838749f5abb29ca41f541ad889118/01e7c/13.png 512w,
+/static/29c838749f5abb29ca41f541ad889118/2bef9/13.png 1024w,
+/static/29c838749f5abb29ca41f541ad889118/71c1d/13.png 1536w,
+/static/29c838749f5abb29ca41f541ad889118/ec09f/13.png 1916w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;JWT Analyzer&lt;/h3&gt;
+&lt;p&gt;해당 플러그인은 jwt값을 디코딩해서 내부 정보를 확인해보려면 &lt;a href=&quot;https://jwt.io&quot;&gt;jwt 공식 사이트&lt;/a&gt;에 직접 방문해서 확인하는 번거로움이 있지만 해당 플러그인을 이용하면 IDE내에서 확인이 가능하다.&lt;/p&gt;
+&lt;h3&gt;Jetbrains AI Assistant&lt;/h3&gt;
+&lt;p&gt;해당 플러그인은 유료이다. AI시대인만큼 우리는 AI를 적극적으로 활용한다. 다만, 우리는 일정 금액을 지불하고 다양한 AI를 사용한다. 하지만 해당 IDE를 이용하면 일정 금액만 지불하면 코파일럿처럼 코드도 알아서 자동완성 해주고 채팅도 가능하며 심지어 다양한 AI모델을 골라서 쓸 수 있다. 한번 자금적인 여유가 된다면 추천한다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ IDEA] Git & Github]]></title><description><![CDATA[해당 블로그 글은 향로님의 인프런 강의를 바탕으로 쓰여진 글입니다. Git…]]></description><link>https://sungbin.kr/IntelliJ-Git-Github/</link><guid isPermaLink="false">https://sungbin.kr/IntelliJ-Git-Github/</guid><pubDate>Mon, 24 Mar 2025 21:30:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
