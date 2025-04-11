@@ -115,7 +115,7 @@ rootProject<span class="token punctuation">.</span>name <span class="token opera
     </span></p>
 <h2>Project script blocks에 대해 알아보자</h2>
 <p>우리는 지금까지 멀티모듈 프로젝트를 만드는 작업 및 빌드까지의 과정을 하였다. 그런데 여기서 궁금한 사항이 있을 것이다. 각 서브모듈 하나만 빌드를 하고 싶을 경우도 있을 것이다. 그럴때 어떻게 할까? 아래와 같이 명령어를 작성하면 해당 모듈만 명령을 내릴 수 있다.</p>
-<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">gradle :서브모듈명:태스트</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">gradle :서브모듈명:태스크</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
 <p>그러면 해당 모듈만 태스크가 내려지는 것을 알 수 있다. 다음으로 script blocks에 대해 알아보자. 이게 과연 뭘까? 우리는 이미 알고 있다. 바로 <code>repositories</code>나 <code>dependencies</code>같은 것이다. 그러면 실습을 통해 좀 더 자세히 살펴보자.</p>
 <p>우리는 이전에 만든 프로젝트에서 루트 프로젝트에 <code>build.gradle</code>을 만들어서 아래와 같이 작성해보자.</p>
 <div class="gatsby-highlight" data-language="groovy"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-groovy line-numbers"><code class="language-groovy">tasks<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'getProjectName'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
