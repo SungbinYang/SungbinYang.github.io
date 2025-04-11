@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Apr 2025 14:32:49 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Multi Modules 프로젝트]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Multi 모듈 프로젝트 소개 이제 멀티 모듈 프로젝트에 대해 알아보자. 먼저 이론적인 부분부터 알아보고 Single module…]]></description><link>https://sungbin.kr/Multi-Modules-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</link><guid isPermaLink="false">https://sungbin.kr/Multi-Modules-프로젝트/</guid><pubDate>Fri, 11 Apr 2025 23:19:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Apr 2025 14:46:38 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Multi Modules 프로젝트]]></title><description><![CDATA[해당 블로그 글은 인프런 강의를 바탕으로 쓰여진 글입니다. Multi 모듈 프로젝트 소개 이제 멀티 모듈 프로젝트에 대해 알아보자. 먼저 이론적인 부분부터 알아보고 Single module…]]></description><link>https://sungbin.kr/Multi-Modules-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</link><guid isPermaLink="false">https://sungbin.kr/Multi-Modules-프로젝트/</guid><pubDate>Fri, 11 Apr 2025 23:19:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
@@ -519,7 +519,7 @@ dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;p&gt;Build Performance: implementation은 내부 사용으로 재컴파일을 제한하기 때문에 더 빠르다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Compatibility: api는 공개 API를 정의하는 의존성에 더 적합하고, implementation은 내부 의존성에 더 적합합니다. 즉, open API를 만든다면 api로 노출시키는게 좋고 어플레키이션을 만드는거라면 implementation을 하는게 좋다.&lt;/p&gt;
+&lt;p&gt;Compatibility: api는 공개 API를 정의하는 의존성에 더 적합하고, implementation은 내부 의존성에 더 적합하다. 즉, open API를 만든다면 api로 노출시키는게 좋고 어플레키이션을 만드는거라면 implementation을 하는게 좋다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;의존성을 추가하면 소비자에게 전이적 의존성이 되어 잠재적으로 버전 충돌을 일으킬 수 있다. 즉, Producer가 api를 만들기 위해 다른 라이브러리를 가져다 쓸건데 해당 api를 가져다 쓰는 Consumer가 Producer와 같은 라이브러리를 쓰다가 버전 충돌이 발생할 우려가 있기 때문이다.&lt;/p&gt;
