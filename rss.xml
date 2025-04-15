@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 14:53:22 GMT</lastBuildDate><item><title><![CDATA[[스프링 입문] 프로젝트 환경 설정]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 프로젝트 생성 그러면 먼저 스프링 부트 프로젝트를 만들고 실행까지 진행해보자. 스프링 부트 프로젝트를 생성하는 방법으로는 2가지가 존재한다. start.spring.io start…]]></description><link>https://sungbin.kr/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/</link><guid isPermaLink="false">https://sungbin.kr/프로젝트-환경설정/</guid><pubDate>Tue, 15 Apr 2025 23:47:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 16:13:32 GMT</lastBuildDate><item><title><![CDATA[[스프링 입문] 스프링 웹 개발 기초]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 정적 컨텐츠 정적 컨텐츠란, 아무런 가공 없이 요청한 html파일을 그대로 보여주는 것을 말한다. 스프링 부트는 해당 기능을 제공한다. html파일을 resources/static…]]></description><link>https://sungbin.kr/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EC%B4%88/</link><guid isPermaLink="false">https://sungbin.kr/스프링-웹-개발-기초/</guid><pubDate>Wed, 16 Apr 2025 01:08:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -24,7 +24,165 @@
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/WUc1V&quot;&gt;영한님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/deYaF&quot;&gt;영한님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;정적 컨텐츠&lt;/h2&gt;
+&lt;p&gt;정적 컨텐츠란, 아무런 가공 없이 요청한 html파일을 그대로 보여주는 것을 말한다. 스프링 부트는 해당 기능을 제공한다. html파일을 &lt;code&gt;resources/static&lt;/code&gt;에 만들어두기만 하면 된다. 예를 들어 아래와 같이 a.html을 만들었다고 가정하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-html line-numbers&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;token doctype-tag&quot;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&quot;token name&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;ko&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;UTF-8&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;a&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+a
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고 스프링 부트 프로젝트를 실행시키고 url을 &lt;code&gt;http://localhost:8080/a.html&lt;/code&gt;을 입력하면 해당 html이 그대로 반환이 된다. 상세한 요청 플로우를 그림과 같이 살펴보자. 이번에는 hello-static.html이라고 해보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 991px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.34375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABsUlEQVQoz32S2W7bMBBF/QW1JXGTSG1eZFmSk7Z2bcdLExgpUKD//z2nIJM4AYr04QAzXC7vzHAkhECnDuOmGFvh8ziOA1EUhVyIBKVT0nyGyiqEKXDVgumiR9v65a7f0xkjkcRk9UAxPJG3B7IsYzabMZ/PAz43xmBSi6tbmvsLq+0zXx9+Uzdrmv4b7bDBTXtstXwVrDrc6oxb7rDWUZYlVVUFrLUURcF4PCaJJsz7PcvvV7rNE0mSEMcRcTRBSIUtmzeHHfXdlaI93Er2hz0+9w6TRKCVwi62pM2RvH0Ia+Pxl4CQGlvdBHuGwx/q/kQSeiZuglJKlFI45yiKHNdsqIYLs/WZol6Q2hJjy+Du3WHVYdszebvHOkeaGqbTKXVdk6ZpEJtMJuGB5u7IsHvm/vCLbnul6M7kqxPl8IgpPjgs+scwFKU1SspQpvaxUmEwvg1KJuTLHW51wa1O2OUR155w7ZG8+/lBsFqR+6E0PxBSvn6Vd3zvTJaTz9cvgstDwBt4iffBpckXXjBBKo3UKVKbf8Te+imEROoMqcyneDMj/y0CWcYt/oxw5n9Y/gJ1XQ0QeQ6LOQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/4b78f6d8806b98f23065545d31771684/1b19f/01.png&quot;
+        srcset=&quot;/static/4b78f6d8806b98f23065545d31771684/6f3f2/01.png 256w,
+/static/4b78f6d8806b98f23065545d31771684/01e7c/01.png 512w,
+/static/4b78f6d8806b98f23065545d31771684/1b19f/01.png 991w&quot;
+        sizes=&quot;(max-width: 991px) 100vw, 991px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;사용자가 &lt;a href=&quot;http://localhost:8080/hello-static.html%EC%9D%84&quot;&gt;http://localhost:8080/hello-static.html을&lt;/a&gt; 요청한다. 그러면 톰캣 웹 서버를 거쳐서 스프링 컨테이너에 해당 url이 매핑된 컨트롤러가 있는지 찾는다. 하지만 찾을 수 없다면 static 디렉토리 안에 hello-static.html이 존재하는지 찾고 있다면 반환하고 없으면 404를 띄운다.&lt;/p&gt;
+&lt;h2&gt;MVC와 템플릿 엔진&lt;/h2&gt;
+&lt;p&gt;MVC란 한마디로 Model, View, Controller라는 것으로 관심사를 분리하자는데서 시작이 되었다. 일단 MVC와 자세한 내용은 추후 다뤄보고 템플릿 엔진을 이용해서 동적 html을 반환시켜보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/hello-mvc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;helloMvc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@RequestParam&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Model&lt;/span&gt; model&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addAttribute&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hello-template&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 컨트롤러를 만들어 보자! 지난번과 다르게 파라미터로 &lt;code&gt;@RequestParam&lt;/code&gt;이라는 어노테이션이 들어갔다. 지금 간략히 말하면 해당 어노테이션의 value값으로 된 쿼리 파라미터를 사용자 요청에 넘길때 사용하겠다는 의미이다.&lt;/p&gt;
+&lt;p&gt;그러면 그림과 함께 요청 플로우에 대해 알아보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1019px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.265625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpElEQVQoz2WS0XLTMBBF8wP0AUuWZMmWYzmyHIcS0pa2k4TQYeCFb+D/P+Mwlkkpw8Md6WF1dc/urkpt0S6g7RohJEVR/CMhBMbWVD6i7BplW3xINGGk8htsO2CaHinLXLsyfqCZvuKGJ7qwYRxHUkrEGOm6jqoylLrCtol2OuPGM3F/oe1Hpv0T6zhhux3KOETxnpVpIm484eJnTOXQWqO1yacxBuccNzfvcvr17kh3+4KPB5SpmR6+0/Q7tG3RVU2RDX0k7L/ht88IqRBiwbxKKUVZSrSx1OmJenumjgcq50n7Mz5sMXX4a1j5gXT/g3Y6IkuNlAIp5atmQ2ctrm6o02M2dPEOaysO94/0fUC7DuPaPwmbiE2n/Pv8aMa8og7DkBVCxyYmut2R9e0LbbrHh5HLz1+k/Qnlupxw6WEeygWXnimVXlClfEWezec2zMh+e8Rtv1DHO5TWNGHKw1iQmyXhvDIuPmDDHlkqpFiQF0NJKSXGelz4iOsP2P5AvfmEa2Nem1l1+ECpDKIoWL3tlxDiv/vV+JpavtaUmSiHeEP0GwC08veGE04iAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/5c0dc12aaff9bc9a94c91563aa22297c/159fb/02.png&quot;
+        srcset=&quot;/static/5c0dc12aaff9bc9a94c91563aa22297c/6f3f2/02.png 256w,
+/static/5c0dc12aaff9bc9a94c91563aa22297c/01e7c/02.png 512w,
+/static/5c0dc12aaff9bc9a94c91563aa22297c/159fb/02.png 1019w&quot;
+        sizes=&quot;(max-width: 1019px) 100vw, 1019px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;브라우저에서 &lt;a href=&quot;http://localhost:8080/hello-mvc?name=spring%EA%B3%BC&quot;&gt;http://localhost:8080/hello-mvc?name=spring과&lt;/a&gt; 같은 요청이 온다. 그러면 웹 서버 톰캣은 스프링 컨테이너에 넘기고 해당 컨테이너에서 위의 url과 매핑된 컨트롤러를 찾는다. 그리고 파라미터로 넘겨온 값을 Model객체가 넣어서 문자열과 함께 viewResolver에 반환된다. 그러면 해당 resolver는 템플릿 엔진을 이용해 동적으로 html을 변환하고 해당 변환된 html을 브라우저에 보여준다.&lt;/p&gt;
+&lt;h2&gt;API&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@ResponseBody&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/hello-api&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;helloApi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@RequestParam&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;Hello&lt;/span&gt; hello &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    hello&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; hello&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 작성할때 api형식으로 JSON 형태로 반환하고 싶을 때 기존에서 &lt;code&gt;@ResponseBody&lt;/code&gt; 어노테이션을 붙여주기만 하면 되며, 객체를 반환해주면 된다. 아마 코드를 보면 조금은 느낄 것이다. 그런데 희한하지 않나? 분명 요청이 들어오면 반환값을 가지고 ViewResolver에 갈텐데 어떻게 객체를 판단할까? 왜 html이 안 나올까? &lt;code&gt;@ResponseBody&lt;/code&gt;를 붙이면 ViewResolver를 타지 않고 HTTP BODY에 내용을 직접 반환하게 해준다. 즉, JSON형태로 출력된다.(물론, XML형태로도 반환이 가능)&lt;/p&gt;
+&lt;p&gt;그러면 그림과 함께 세부동작은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.640625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABv0lEQVQoz3WS6XLTQBCE8wKQ8kp7r1bX6rBlR7JxnBAgCfCHKt7/eZrakewcwI9WqVajb7tn5ipNU/BF8T1JkjdKl/NZyazlnGpefeec4yo+TDnANkdoH+CshfcezjlYa6lIKgNbbuDCBF2NCNt7NMMRRTvChx1stYWQikwR0DVHZMMzsrBDXVdomhYhBFRVhSzLoLUmV/X2AcXND5TDA4zzGI9fUbcbGB+gTEbuCWjDHtnmETrvwdgKjCVgSQLGGKSUFOf64wfk/S2K3TOK9QnKlQjTT7hmT+/KuBkYi4v+hO3n3wRME0YxX/fOWAujFVxzgFt/o0TR9TgdKJGyxXuHB3LoqgFSCiilSNFdjJznOQTnKDd35DDvTwj9iPunX5hOT9RHqez/gXKBnYFxQGx1vQC/EzBv96i7HcpuhG8/0eDSy1DCAX54vERO05fIcXJKGZi8g+/v4PovyLpb5N0RVRuBE10glZ6nHH8SUkMoBy7m0c895Jdeci4gtINQFkIZcKnhmwmh26Lup8VIMu/hm4VdYH8p1pDzZaHZilasatYouxvorF6GKWbgPyHvdHZ8vkAaD5UFklj6Fx3+ARfnJKaiZxkCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/7d11d0b251634506c6c184f9c172dfe2/2bef9/03.png&quot;
+        srcset=&quot;/static/7d11d0b251634506c6c184f9c172dfe2/6f3f2/03.png 256w,
+/static/7d11d0b251634506c6c184f9c172dfe2/01e7c/03.png 512w,
+/static/7d11d0b251634506c6c184f9c172dfe2/2bef9/03.png 1024w,
+/static/7d11d0b251634506c6c184f9c172dfe2/1be7e/03.png 1059w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;@ResponseBody&lt;/code&gt; 를 사용&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP의 BODY에 문자 내용을 직접 반환&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;viewResolver&lt;/code&gt; 대신에 &lt;code&gt;HttpMessageConverter&lt;/code&gt; 가 동작&lt;/li&gt;
+&lt;li&gt;기본 문자처리: &lt;code&gt;StringHttpMessageConverter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;기본 객체처리: &lt;code&gt;MappingJackson2HttpMessageConverter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;클라이언트의 HTTP Accept 해더와 서버의 컨트롤러 반환 타입 정보 둘을 조합해서 &lt;code&gt;HttpMessageConverter&lt;/code&gt;가 선택된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[스프링 입문] 프로젝트 환경 설정]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 프로젝트 생성 그러면 먼저 스프링 부트 프로젝트를 만들고 실행까지 진행해보자. 스프링 부트 프로젝트를 생성하는 방법으로는 2가지가 존재한다. start.spring.io start…]]></description><link>https://sungbin.kr/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/</link><guid isPermaLink="false">https://sungbin.kr/프로젝트-환경설정/</guid><pubDate>Tue, 15 Apr 2025 23:47:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.796875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJklEQVQ4y81TsUoDQRDdi6JFIGgRC21E0MLKt6nEWlBbSWPxLj8hqJ2IvYJiYeFHWLz9HP8kcntzm70kl8rCgWGO2Zu382beOvfXRsGVwUevvikUFpO7qXPzuXQ2bxlY0VFU5F4uycX/DKcGC74BW6ew19VNZCPffRZGkUrPEscUfihMKdxa19sUdijsW9yicErhiMKAwpDCAYWNBFgG37PiLwqvFM6sYJPCDYXn6gIKjxTeKDxReLdY5e8oHFIzyoUBPlA4obBLAdbBOYUPCi8U7ilcUygpTBgwpvBZux+mJWXLGFgH3xQu69lizWiOGjVQMdewuqBwVc/VJ0CXb4pCf3Hg3mWAS5Yxk11LHl0FlF8pKWOzANi6caV02g8hSqmR0/+3X9vqDF0VVUFRAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배너 이미지&quot;
+        title=&quot;배너 이미지&quot;
+        src=&quot;/static/5f4529d8f76ad590ec9007b9d5469ce2/2bef9/banner.png&quot;
+        srcset=&quot;/static/5f4529d8f76ad590ec9007b9d5469ce2/6f3f2/banner.png 256w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/01e7c/banner.png 512w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/2bef9/banner.png 1024w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/71c1d/banner.png 1536w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/a878e/banner.png 2048w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/1307b/banner.png 3000w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/deYaF&quot;&gt;영한님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;프로젝트 생성&lt;/h2&gt;
 &lt;p&gt;그러면 먼저 스프링 부트 프로젝트를 만들고 실행까지 진행해보자. 스프링 부트 프로젝트를 생성하는 방법으로는 2가지가 존재한다.&lt;/p&gt;
