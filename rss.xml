@@ -1,93 +1,489 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 12:38:49 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 5일차]]></title><description><![CDATA[📖 질문 API 설계와 버전 관리 전략 API를 설계하거나 운영하면서, 일관성을 유지하고 변경을 관리하기 위해 어떤 전략을 사용했는지 설명해 주세요. (버전 관리, 응답 포맷 설계, 호환성 유지 방식 등을 중심으로) 힌트: 실무에서는 API…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day5/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day5/</guid><pubDate>Tue, 15 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 14:53:22 GMT</lastBuildDate><item><title><![CDATA[[스프링 입문] 프로젝트 환경 설정]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 프로젝트 생성 그러면 먼저 스프링 부트 프로젝트를 만들고 실행까지 진행해보자. 스프링 부트 프로젝트를 생성하는 방법으로는 2가지가 존재한다. start.spring.io start…]]></description><link>https://sungbin.kr/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/</link><guid isPermaLink="false">https://sungbin.kr/프로젝트-환경설정/</guid><pubDate>Tue, 15 Apr 2025 23:47:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVQoz93SsQ4BAQyH8d8RQvAUNt7ErXI32gwSYfcC3vpv6WCROLEwfGnaNF+btJAv86vCWTGvfEkWZFX1t4VNxR25kxvZkCO5kDM5VM9oiHBN9qQlW3IlHTmRfojwFZMaNiXjT4/SPG38P2/zAKQNzSHnyggQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 66.796875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJklEQVQ4y81TsUoDQRDdi6JFIGgRC21E0MLKt6nEWlBbSWPxLj8hqJ2IvYJiYeFHWLz9HP8kcntzm70kl8rCgWGO2Zu382beOvfXRsGVwUevvikUFpO7qXPzuXQ2bxlY0VFU5F4uycX/DKcGC74BW6ew19VNZCPffRZGkUrPEscUfihMKdxa19sUdijsW9yicErhiMKAwpDCAYWNBFgG37PiLwqvFM6sYJPCDYXn6gIKjxTeKDxReLdY5e8oHFIzyoUBPlA4obBLAdbBOYUPCi8U7ilcUygpTBgwpvBZux+mJWXLGFgH3xQu69lizWiOGjVQMdewuqBwVc/VJ0CXb4pCf3Hg3mWAS5Yxk11LHl0FlF8pKWOzANi6caV02g8hSqmR0/+3X9vqDF0VVUFRAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;배너 이미지&quot;
         title=&quot;배너 이미지&quot;
-        src=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png&quot;
-        srcset=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/6f3f2/banner.png 256w,
-/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/01e7c/banner.png 512w,
-/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png 700w&quot;
-        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        src=&quot;/static/5f4529d8f76ad590ec9007b9d5469ce2/2bef9/banner.png&quot;
+        srcset=&quot;/static/5f4529d8f76ad590ec9007b9d5469ce2/6f3f2/banner.png 256w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/01e7c/banner.png 512w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/2bef9/banner.png 1024w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/71c1d/banner.png 1536w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/a878e/banner.png 2048w,
+/static/5f4529d8f76ad590ec9007b9d5469ce2/1307b/banner.png 3000w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;📖 질문&lt;/p&gt;
-&lt;p&gt;API 설계와 버전 관리 전략&lt;/p&gt;
-&lt;p&gt;API를 설계하거나 운영하면서, 일관성을 유지하고 변경을 관리하기 위해 어떤 전략을 사용했는지 설명해 주세요. (버전 관리, 응답 포맷 설계, 호환성 유지 방식 등을 중심으로)&lt;/p&gt;
-&lt;p&gt;힌트: 실무에서는 API가 한 번 공개되면 쉽게 바꿀 수 없습니다. 이 질문은 &quot;처음부터 바뀔 수 있음을 고려하고 설계했는가&quot;를 묻는 것입니다. URI 버전 관리, 응답 포맷 고정, Deprecation 정책 같은 구체적인 조치가 있다면 강력한 답변이 됩니다.&lt;/p&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/WUc1V&quot;&gt;영한님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;답변&lt;/h2&gt;
-&lt;p&gt;안녕하세요. API를 설계하고 운영하면서 일관성과 변경 관리를 위해 제가 실제 프로젝트에서 적용했던 전략에 대해 말씀드리겠습니다.&lt;/p&gt;
-&lt;p&gt;회의실 예약 시스템 개발 프로젝트에서 API 설계와 운영에 중점을 두었던 경험이 있습니다. 처음부터 변경 가능성을 고려하여 다음과 같은 전략을 사용했습니다.&lt;/p&gt;
-&lt;h3&gt;API 버전 관리&lt;/h3&gt;
+&lt;h2&gt;프로젝트 생성&lt;/h2&gt;
+&lt;p&gt;그러면 먼저 스프링 부트 프로젝트를 만들고 실행까지 진행해보자. 스프링 부트 프로젝트를 생성하는 방법으로는 2가지가 존재한다.&lt;/p&gt;
+&lt;h3&gt;start.spring.io&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://start.spring.io/&quot;&gt;start.spring.io&lt;/a&gt;에 접속한 다음 아래와 같이 세팅을 진행한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVQoz42Ra26DMBCEc4smhPCwjR8YMAQIaSJFaqX2/jeaajeBiraR+mPkBc9+nrU3USaQCI3jbYAKBmE4oXA1tocM+0wiSgWvu1Qs9axdkuMlTpEqg9v7B9cbAtKmawMyqyGtR64thC0R5wXiXDFImBJZYRCl+QLWvoFrOt6jPvq/mVMQMDeWT0uUhnQOwjj+piQ+9GjPAx+WKYussAyzdcueeaIF6MMR9XFkCJnJFEsaNWdg0424fF7Rv/WcjESpyDtfwSqhch6hP0G5ik25diyhHZtpLF1V0HXFIFIiNV8JaQVcxq5b9NMFVdtzYlIZOm6klNvDXVSToh8PtUpIJzb9iOl6Q90NMFWArQOvB1GsXveZvoGZQCoNCu8hS4dEFk8b/tIv4Bx/n9KGWDX/J9kKSDB+NVdBmRLK+PtqPfrpFe0woRvP6E5nrsumQ2EfnodPmnIBfgEwxxwdFmgiywAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/f004f0da63d5733c47b0411228a091a1/2bef9/01.png&quot;
+        srcset=&quot;/static/f004f0da63d5733c47b0411228a091a1/6f3f2/01.png 256w,
+/static/f004f0da63d5733c47b0411228a091a1/01e7c/01.png 512w,
+/static/f004f0da63d5733c47b0411228a091a1/2bef9/01.png 1024w,
+/static/f004f0da63d5733c47b0411228a091a1/71c1d/01.png 1536w,
+/static/f004f0da63d5733c47b0411228a091a1/40a97/01.png 1911w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이후 하단의 GENERATE 버튼을 클릭하면 압축파일이 다운로드 받아지는데 해당 압축파일을 해제하고 인텔리제이에서 import를 진행해주면 된다. import하는 방법은 &lt;a href=&quot;https://sungbin.kr/Hello-World/&quot;&gt;자바 입문 포스팅&lt;/a&gt;을 참조바란다.&lt;/p&gt;
+&lt;h3&gt;인텔리제이&lt;/h3&gt;
+&lt;p&gt;인텔리제이 상용버전을 사용한다면 인텔리제이 자체 내에서 생성이 가능하다. 인텔리제이를 실행하고 나서 New Project를 클릭 후, 아래와 같이 세팅을 진행한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 994px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACM0lEQVQ4y31U23abMBDkN1LbAoQwIAmJOzg4duI0Tdq3PvT0/79kerQYX2KnD3N0WKTZnZ2VvEQqfGNrMJZixRIwPwOPDCJhwLkBD3PovIexjxQPeU4IQn0XnlQNRGwmMiJNYYtH5GZAnrQosh5BoLBYTsn8QNLBkJ/JL+EN4wdy04P5kipwmx2ZWBfgQsPYFlGkEIQZGFvj4YFjuYypgFnRjCBU8Mr6Bf3wTARz2ZlssE5KrNMGdXtA072iavYwxROiuIJYN4jiGlwUpGh1bBdJbuod9cgRzIRzr6R+RNO+EJk2G/CoQCTKCfG03kgeh2dsd++wx6Y7QmM3ULpDbkd0/StysyFTpGrBeY5I2GNydWvKbv8Lb+9/0HTfUXdv0GZ7Oih1j+3uJ5r+gEy1pCTNaqi8PyWfHT+bsnlFPxzgB2fntBmg0xoiMjCmA2MJmbFYCAJj2dXoXJJ6bX/A/vkDVb0lmc5tJ9noDqUcsGte0KgBRlRQoYXmFlKUCC76dlVhWY/IZAsRW4i4gB8oGhs3i0lSUoVVNUKpdhoPlhLcPoebCovqCWU1nn7OYzN9K6RpQbcmcA7HFcVn6YtlTHuuCLtuj2FzODXZwZninHRE4clJRTfmUt5EdL16UlXgkaXMLjBLdv2UeoAtt4iPQ3/vHt/0kPkKvvvpAhebPh/+6kG4IVRxDRM3EPw8V+HNIU0xWj/hknS1SuFZ2WN8+g2dj/SS3HtB/kc4tynNWvz4+It/UZPYB37md6sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/1b009c2c522f8c3d083b8a28ae477e64/75609/02.png&quot;
+        srcset=&quot;/static/1b009c2c522f8c3d083b8a28ae477e64/6f3f2/02.png 256w,
+/static/1b009c2c522f8c3d083b8a28ae477e64/01e7c/02.png 512w,
+/static/1b009c2c522f8c3d083b8a28ae477e64/75609/02.png 994w&quot;
+        sizes=&quot;(max-width: 994px) 100vw, 994px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이후 NEXT를 클릭하고 나서 의존성을 아래와 같이 검색해서 추가해준다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 998px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABxUlEQVQ4y4WU2W6cMBiFeYZhFmDA2Gw2hGVYMgmZlotGqtTmrnd9/wc5lc2EsliTi19gCz6f8y82WFaBsQKUPcGnT6AsV8GCXK25aHCpb4jiy32/eBhG2w7gogbxBVwvUWAWlvcPSlBWTAfJPR10vmcU5YuCSJhHOFyPq/d5qEPuP66B67VBwxqen+F48rHfn3E4uIuQexI6qv1UKdOTaQ8ywqSD64nHQPc/UEKipIXIesT8eauQRc304xqmB+YIwgphXCOIKp3lC04WfQz0EgRToYpJqa5QBg0usOxgAq7Bcn12Y1Vp4mfqqSvKp3ojSd9UUeag+btpOqAsQ9N+R9N+Q5p2M0Vjvy4UJmmPJLuBBpXWtgQSIvDj/QNdN6xytrQs0zIC0x4Rv8J2Qpg7a6NWFkWkHcKonCyPFjWNHYtXyBD5ABbVcM4JjkeyAc57bW55k0Oe3RCLF3gkg0dSuCRVSudFkkBpZzEp2rnOYRCaw3YimDsbu52lLJumrUAyZA4XfbgZuXLKn7K8Nx0c9mdYFtXG6eTDI2IGyRcjKAsm28l1uRpH49r/RvP888uradkq4w3E0yv64Q+a7h2/Pv6iqgf8A0Tcv+rMm5i1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/2f9a4c14e46c0ee30d330cf0b5e1ece8/350de/03.png&quot;
+        srcset=&quot;/static/2f9a4c14e46c0ee30d330cf0b5e1ece8/6f3f2/03.png 256w,
+/static/2f9a4c14e46c0ee30d330cf0b5e1ece8/01e7c/03.png 512w,
+/static/2f9a4c14e46c0ee30d330cf0b5e1ece8/350de/03.png 998w&quot;
+        sizes=&quot;(max-width: 998px) 100vw, 998px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;의존성 잠깐 알아보기&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;URI 기반 버전 관리를 적용하였습니다. &lt;code&gt;/api/v1/reservations&lt;/code&gt;, &lt;code&gt;/api/v2/reservations&lt;/code&gt;형태로 관리를 하였습니다.&lt;/p&gt;
+&lt;p&gt;Spring Web: 스프링 웹 서버를 띄우주게 하는 역할을 한다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;메이저 변경은 버전을 올리고 마이너 변경은 하위 호환성 원칙을 유지하는 원칙을 세웠습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;새 버전 출시 시 최소 3개월의 마이그레이션 기간을 두어 클라이언트가 적응할 시간을 확보하는데 중점을 두었습니다.&lt;/p&gt;
+&lt;p&gt;Thymeleaf: html과 자바를 연동시켜서 동적으로 화면을 보여주게끔 하는 템플릿 엔진 역할을 한다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;응답 포맷 설계&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 주의&lt;/p&gt;
+&lt;p&gt;스프링 부트 프로젝트를 생성하기 전에 &lt;strong&gt;반드시&lt;/strong&gt; JDK가 설치되어 있어야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;빌드 툴을 설정 할 때, gradle-groovy, gradle-kotlin, maven 3개 선택하는게 있다. 일단 필자는 gradle로 진행하였다. 왜냐하면 maven은 흔히 레거시 프로젝트에서 많이 사용했고 gradle에 비하여 조금 느리기 때문이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;스프링 부트 프로젝트가 정상적으로 로드가 되면 아래와 같이 프로젝트 구조가 되어 있을 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 388px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 247.265625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAxCAYAAADa6ImIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFl0lEQVRIx51X2XLbNhTle9uxxZ0EuO87KYlaLcmKYyedZNppJ51O//9DTgeg5C2WLfvh6IIAeHhX4EooEx/jpsZkfYVZW2LZTzAZt6jyCF1bcbRNydE1Fdo6R1sX6Np6WG9KNFWGcVujLlMI1zMT612GzY89/r0O8d9Ngl2vY9sb2Ey1Ab2OzVQf5BGP5reHZ/aOoKsEJCxBmwX6MIRNbKgqha5RaB+AoEgEqptDb9fIgwquk0GSCGSZfgiCKhNobgp/+wVxtoYXjiGKGhSFvgByYv4BgqxQSKKOwO8wWf0N26+RlhtougdR1CGJBiTJgCyZ/AVZJvd4kfD+QbMRhRP0zR38uIftlqBWOkg7g2GGT0hOEh4XRMmAZYZYtl/hhh2CuIcfjhFlSwTRFMRKuCWPtXuJdDBZMjC6VKDoFG7RIcnWiNIFwmSGtNxyQibz+hp+NHlbQ0JTRNkOJomgaQ503eM+ZNIw/GHMpQtVc14nZD8mSRBXe7hRC1W2Di+YA6Rn8m2TCWTRgBmkqL5+Q1pfw3YK7q/X0uPNKEsKQUQqLJNbWEEHVbVe1eRkHvIBy3KFgBoxFuUORdlxnw2brHeRCg8bCS5GJoo8xPf9GIpZQ5F1ntzn5N8TDbmjFQqVkV5SVFmGL5sWhjNBWqx5ZFk5vuSC5x8QfnY2hU099PwsnCJMFrxSWNUwv74VnCc+VLiWFBcjgiJJcLcdw/anPMnjbMXzkGkqSeZQ3480Po6FwVzCSSXZwKWk8Xy7+E2GbMVorj8jThb8wEjyNa8WNmZwvJoTn9TQ1lPk1hTETmDZOSwnA7ECGGYAk8T8gCA04RXFq0p3T5vM8tA1csyiT/DSntfxoIF5b+JzMEtOm8ySeyTjF6eEsf4HUdByjUYj9T4Xz6mYg4aE5+FIpEgDirtNCcubIIynPMKPa/it6hGOAVFUipFsIfIoblYlnKBHUqzh+s3hZQuK+nbVCEyz4wEh/ypDVCloOkXGolpuEGdLHtGivUFW73igHiJLfoIgSxTqJYWeVND2e0TRHJpiQxYp2BqX9yAP8ycgKI4O1dahZS7oaoq86kFiH6pj3IPt4fsejU9B0GoZDHI1QtbEuNn9Dmddw2gVqGytUaA1w55zIKilAu2AUS6h3Qf49lcFrY2hlSKUfAS1lPm6egYErToQVsOE1RmYf07Q7hOQzoHTB9BrfSDlewZ5CsJxk8onZIwyGeWViy9/FnCXHYr9AkajQynEV4mOH3piMhvrlYzLVEazC/HHjwburEKy6ZBup1xTObvgbrhH8dQlPCjqAUfHqrUC2imINhHCuyXiqxrxdgxvmcJbJPAWMdx5BHcew5mF0BsNaiUdghKr0BINeqKBj1OdP0uBCK0O4e83CMcV4vkUUd8hXS4O4zHCacNhZBRKrECNNQgiO6FlE3PNgpes4EdzJMWWdwisesRLhd8r4kjjYIfFccwOW341SA+1LlArQhSPMZ7eYrX+jKvNHcaTDTy/gusVcP1ikK8i59KyYgiEhvCCBs30FtvdF3y6+Y5+toXtZLCd9Gw4bgZKIwjcLNOF3C7h+hNYXoe02sP2Km7WYIr5Ng5mC5JsgqgeameOMJ0jLa+g6+5Pd8XZnQMjNBmhO0eQ9AjjHtRKoKr2u1qQZ4Q+CucKQbZCmK0Q5StYTv4hLQVJpqCaidvMxoR1YHaA0HQxGhnvbpQGQskENV3M6gppmSKrMwRJBN1yIEsfMVkyYdEQVdfD7xOE8wxeF8OKfUgj8/3tHGssLzQLarVEELCgLOEHUyT5ZmjU3+lHgZIIbb6Gm87g8+5/yi95Jh93Bmf3h66dYVENtcv+RrBrk0n2PKSO+T4NHSvErCgQJHPeDAXxjIMRJsUV4nz9qFrImxBMEvIaZMn8BDS+lyZrls7E/7nVKstmr6O+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image4&quot;
+        title=&quot;image4&quot;
+        src=&quot;/static/6807f2f6a2a0dae0fe3f4c92627c55c3/96c67/04.png&quot;
+        srcset=&quot;/static/6807f2f6a2a0dae0fe3f4c92627c55c3/6f3f2/04.png 256w,
+/static/6807f2f6a2a0dae0fe3f4c92627c55c3/96c67/04.png 388w&quot;
+        sizes=&quot;(max-width: 388px) 100vw, 388px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그러면 각각 디렉토리가 무슨 역할을 하는지 하나하나 살펴보자.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Spring HATEOAS를 활용하여 응답 포맷을 표준화하였습니다.&lt;/p&gt;
+&lt;p&gt;gradle: gradle 관련 정보가 담겨 있다. ex. 버전정보&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;JSON 응답에 &lt;code&gt;data&lt;/code&gt;, &lt;code&gt;links&lt;/code&gt;, &lt;code&gt;meta&lt;/code&gt; 섹션을 분리해 확장성을 확보했습니다.&lt;/p&gt;
+&lt;p&gt;src/main/java: 실제 자바로 작성된 코드들이 들어가 있다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;필드 추가는 허용하되, 기존 필드 제거나 변경은 버전 증가 없이 하지 않는 원칙을 적용했습니다.&lt;/p&gt;
+&lt;p&gt;src/main/resources: 자바 파일 외의 xml이나 html, 각종 설정 파일들이 들어가 있는 곳이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;src/test: 테스트 코드가 작성되는 곳이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.gitignore: 버전관리에서 제외시킬 파일이나 디렉토리 명을 기재한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;build.gradle: 제일 중요한 파일이다. 각종 라이브러리, 의존성등 다양한 설정을 하는 곳이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;settings.gradle: 프로젝트 이름이 들어가져 있으며 나중에 멀티모듈 프로젝트를 할때 수정이 필요하다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;문서화&lt;/h3&gt;
+&lt;p&gt;여기서 가장 중요한 build.gradle을 자세히 살펴보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-groovy line-numbers&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;plugins &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    id &lt;span class=&quot;token string&quot;&gt;&apos;java&apos;&lt;/span&gt;
+    id &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot&apos;&lt;/span&gt; version &lt;span class=&quot;token string&quot;&gt;&apos;3.4.4&apos;&lt;/span&gt;
+    id &lt;span class=&quot;token string&quot;&gt;&apos;io.spring.dependency-management&apos;&lt;/span&gt; version &lt;span class=&quot;token string&quot;&gt;&apos;1.1.7&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+group &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;me.sungbin&apos;&lt;/span&gt;
+version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0.0.1-SNAPSHOT&apos;&lt;/span&gt;
+
+java &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    toolchain &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        languageVersion &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; JavaLanguageVersion&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+repositories &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-thymeleaf&apos;&lt;/span&gt;
+    implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-web&apos;&lt;/span&gt;
+    testImplementation &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-test&apos;&lt;/span&gt;
+    testRuntimeOnly &lt;span class=&quot;token string&quot;&gt;&apos;org.junit.platform:junit-platform-launcher&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+tasks&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;named&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;useJUnitPlatform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;plugins&lt;/code&gt;는 각 종 플러그인의 id값을 통해 일종의 플러그인을 불러오는 역할을 한다. group은 프로젝트 생성 시, 우리가 작성했던 값이 있고 version은 자동으로 생성해주었다. &lt;code&gt;java&lt;/code&gt;는 플러그인 java를 활용하여 언어 버전 정보를 표시해주었다. &lt;code&gt;repositories&lt;/code&gt;는 라이브러리나 프레임워크를 불러올 때 저장소를 명시하는 역할을 하며 현재는 &lt;code&gt;mavenCentral()&lt;/code&gt;을 이용한다. &lt;code&gt;dependencies&lt;/code&gt;는 라이브러리들을 명시하는 곳이다. &lt;code&gt;tasks.named&lt;/code&gt;는 기존에 존재하는 test 태스크를 명시하여 클로져에 구현을 해두었다.&lt;/p&gt;
+&lt;p&gt;그럼 이제 스프링 부트 프로젝트를 실행하면 아래와 같이 정상적으로 톰캣이 가동이 될 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8klEQVQoz42T2W7bMBBF9Q1N0zrxIlkrJVqSqdWWJcebYqco6gJB+/9/cloxadGHFs3DATjk4M4dDmmsqoasLJCLFN+XCKEo1JYkaXC8JXMnwQ8UIsz12nZSbCfRsQgLPD/DdVN8oXDcGCOWIWnkIjyTKDCJQokqH1hUW6K0xQ9LjSdKgqjE11Q69kTx+3zYs70E435sMZl6vL8ZcfPuI3NHUtUnivZC3l3I6p6sOJAst8TL7g+2r7zEiXrAFxnGh9sp01mIZUtGI4uZFSFkrasOjoKo+i9DrpArTCvCuBtZjGeCydTl7s5iZoZa8C1CfxWcTAPipMW2JbfarcAXBV6Qv40hVxRaWAt6zoJ2c+Hcf0dlHUFYIGSFiApcX2G76b9xYkwz1CaGzu7HzuDQI8060qxFFQ+6kvdrcqLUbrXj10kP+OFLm6GsieIGay4xLcl47GF4Xsx6e2bV9qhyT14dSFRLPFDvSZojSb0nK3aUqyN5tSNVHct8iy9y5nas36XjpkwmPkYqMs5Pz1w+P1O2Z3bHK6vmRL4+Uj59pb5+o3r8wqm/cv70zKG/0nRnEtXpKzGtBdZ8oYXvxy6GG6SsN4+sux5V7ambnqLakZU70s2JZHMirneU1V4XqlYH1pselW8RUUUohwEq/Wusn0P5AZrnUaq3vGv8AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image5&quot;
+        title=&quot;image5&quot;
+        src=&quot;/static/e717ba954b0966390d70875fabadd09c/2bef9/05.png&quot;
+        srcset=&quot;/static/e717ba954b0966390d70875fabadd09c/6f3f2/05.png 256w,
+/static/e717ba954b0966390d70875fabadd09c/01e7c/05.png 512w,
+/static/e717ba954b0966390d70875fabadd09c/2bef9/05.png 1024w,
+/static/e717ba954b0966390d70875fabadd09c/71c1d/05.png 1536w,
+/static/e717ba954b0966390d70875fabadd09c/14747/05.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;스프링 부트는 톰캣과 같은 웹 서버를 내장하고 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그리고 웹 브라우저에 &lt;code&gt;localhost:8080&lt;/code&gt;을 입력하면 아래와 같이 스프링 부트가 자동으로 만든 에러페이지를 볼 수 있을 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVUlEQVQoz+3OMQrAMAiF4dz/jOLgESSgYPCVBJKh0CGhQ4f+8Cbhw0JEYGaICMwM7o7WGnqZObZTqbVCVQfUwYhYyBH4dNiFFji/uO8ULXi5H/wgeAH22xsN/C575gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image6&quot;
+        title=&quot;image6&quot;
+        src=&quot;/static/bcbff0476ad9ff540132d42ab14f641d/2bef9/06.png&quot;
+        srcset=&quot;/static/bcbff0476ad9ff540132d42ab14f641d/6f3f2/06.png 256w,
+/static/bcbff0476ad9ff540132d42ab14f641d/01e7c/06.png 512w,
+/static/bcbff0476ad9ff540132d42ab14f641d/2bef9/06.png 1024w,
+/static/bcbff0476ad9ff540132d42ab14f641d/71c1d/06.png 1536w,
+/static/bcbff0476ad9ff540132d42ab14f641d/c72f7/06.png 1915w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;꿀팁&lt;/h3&gt;
+&lt;p&gt;최근 IntelliJ 버전은 Gradle을 통해서 실행 하는 것이 기본 설정이다. 이렇게 하면 실행속도가 느리다. 다음과 같이 변경하면 자바로 바로 실행해서 실행속도가 더 빠르다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Spring Rest Docs를 통하여 테스트와 문서를 함께 관리하고 항상 최신 상태를 유지하였습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;변경 예정 API에 대해 &lt;code&gt;Deprecated&lt;/code&gt;헤더를 포함하고, 대체 API 정보를 제공했습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;문서에 변경 이력과 마이그레이션 가이드를 포함시켜 클라이언트 개발자들의 이해를 도왔습니다.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Preferences&lt;/code&gt; -&gt; &lt;code&gt;Build, Execution, Deployment&lt;/code&gt; -&gt; &lt;code&gt;Build Tools Gradle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Build and run using: Gradle -&gt; IntelliJ IDEA&lt;/li&gt;
+&lt;li&gt;Run tests using: Gradle -&gt; IntelliJ IDEA&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;확장성을 고려한 설계&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 981px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.65624999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACeElEQVQ4y11TW3KjMBD0FeKkYrMYkBAIEMjIAmzjR2wn61T2AHv/o/TWCMOm8tGlEUI9PTOt2S8h4fsJ/FWKVZBBZhtkuUWWNw550aDtLi6WmUUs1mC8Aosr8FhDCuMQx9rtZ6tVjiAq4fkJvEUEYw7Y7W+wzQnWnlCoFpXeQZUd9LpHkpoH4UBQyhZ1tkOaGHChMWPCYLFkeF0yrBYcTXPG5fqFpj2DcQ0hGySydSRUSRBmCKN8Au1JTBDlA2GSbfHy4mM+XyLyBJTaYt+/O5WE/vDh9v3hHfv+hkpvkRcWRdGgUA1U2SJJazBeDiUL2YHFBn5YQEQKqbToj79xPBHuOJ8/HU7nu9vb9g2pNEjlxoF6Tr0lMqpiFqcduNjAD3KEnoDWexxPn6jNcbo4XBpAQ4lYOfTxgYgNq1OoN1cXUB9lrNG2N9y//qLpPlCorevluu5Rm8MEGphI6olkhFOo9A4iNQh5iTLvIOJBAf1AZASy0Wgnp/RR7mQh/k0hlfy6iPD0tEAcZBCinn4wG7LQFdvdFW33ho09ugS2PaNtz25fm96BkjmFmTrCX0nM596DcD1lo/KIgC6o3EJlG3AaHp2LNWKhncoRjpDFNZZLjudnDysvdo4fCYls19+gqz1suUOr90hDhSKuEX0r9X/JpLA8IYiU8yINhj7SIWWkYRBxGBUIyQVBhphXri3DINY/oDEjy/DEIggVfF88pjWoJGOTqaWsUVUWISsQstK9Dnr3wQMuDjNwKpkII752Cj2PTeMnkGFpmtzFxrmBktHlIPiBMBt6SM2lhx4xNfVuXEfDsm/xeK7NBd3+D4y9wXZ39EeKL/gHVue7jz+K9rUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image7&quot;
+        title=&quot;image7&quot;
+        src=&quot;/static/6e4a79f367de810db89a820e85b082d1/1c3a5/07.png&quot;
+        srcset=&quot;/static/6e4a79f367de810db89a820e85b082d1/6f3f2/07.png 256w,
+/static/6e4a79f367de810db89a820e85b082d1/01e7c/07.png 512w,
+/static/6e4a79f367de810db89a820e85b082d1/1c3a5/07.png 981w&quot;
+        sizes=&quot;(max-width: 981px) 100vw, 981px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;JDK 설치 확인&lt;/h3&gt;
+&lt;p&gt;정상적으로 해당 프로젝트가 JDK를 제대로 인식하고 있는지를 확인할 수 있는 곳이 있다. 맥 기준 단축키로 &lt;code&gt;command + ;&lt;/code&gt;를 입력하면 아래와 같이 화면이 나오는데 설치한 JDK가 나오면 제대로 적용이 된 것이다.&lt;/p&gt;
+&lt;p&gt;또한 현재 스프링 부트는 3.4버전이므로 JDK17이상이 반드시 필수이다. 이하 버전일 경우 에러가 발생하니 유의 바란다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1007px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABw0lEQVQ4y9WU2W6jMBSGeYY2zYCB4AWbfQ/ZSDtSq2qkef/3+UccCEqqUYXmbi5+HXywP5/FthUojc12B9fTMFEDIXJwnoGLHAHPIFWBLOuRpHsIWZCPi2yeM80b/Tdrvb79wmX4oEHXfyAtBpj4CBMfECUnko6P0FG/jKN01Jm+hSofoFbTnNF2F3i+QZYfIcMaOmpQlAeKzvUM/F00K6aFUlUEIiuLxwiliCBlhO12h6I8LSnFcQ2lSyjdkXY8BXMVXDckMaYQ6hpt/0ngBdj3A7ruBNdVqOoLyZgaed7B3xk4TIG5IRwm4TgSjN1LUWZC5uCioPpbSVKiqvbwvBB1M6DtrkjzA9ruFXVzJR9t1AwoqzNlMEY72WyqocwhxFxDz5MIAo0fNodUJYWtdENNMcms+KaemqPNnuzoC3W7pEspbzYunp4c2DZfijvWMKAobsoW8ftjM38vTREFrJcXDyN0ApYPu63VQ4QTkH0B/gX63Ub/BFyp/wY4NkWsBn7XOOt5PDbPDp3DNcCvrwsXt6M2rbN8W8K3BXwW3k1cF+ECmtfQTYnCenKMP+crtAoocnoY6u4dZf2GqvmJy/U3/gCAqefw7NfY+wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image8&quot;
+        title=&quot;image8&quot;
+        src=&quot;/static/f49ba270f93233e45a027bd56f328b82/54bf4/08.png&quot;
+        srcset=&quot;/static/f49ba270f93233e45a027bd56f328b82/6f3f2/08.png 256w,
+/static/f49ba270f93233e45a027bd56f328b82/01e7c/08.png 512w,
+/static/f49ba270f93233e45a027bd56f328b82/54bf4/08.png 1007w&quot;
+        sizes=&quot;(max-width: 1007px) 100vw, 1007px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1011px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAACBklEQVQ4y9WT3XKbMBCFeYNMjG3+EQgwSCBjjPxHqN2m6WSaXPWi7/8opyPFxnYST6578Y1WKzh7xC5GnM4wsQkCPwfjEgVvQZM5aCIQxSWyrAYvV8iLRu9DwkAIByFMx+8xpHzAcrmF7yZo6z3k6gDPSyDEFn3/G4um02I0qfQLfpAPBGFxFjvGxv7wgqdffxDRCq6TIPAL3N1NIMo1Xp//QogNyqpF1/1AJSQYa/S+LFsQUsBxKDwvg+9nCIIZjDjOkWUlRiMH02mAycSHabqYFQ14tUbONij4Fjlbg1cdinILXu0wU/lyAz7v9Sc6uTWk3EHKDrZNMB57g6CqKPgOYST09byBAq6XwXEp+u4Rz48v+NY/oWkfIOYbGHkusFisrwTVOp2GSLIWUyuEObJhms7AaGTDcyJ8LyXqrEaaCO0ySWsYnkcRRfmV2FscwLKjIX+Jyjl2BJbWCOMK0ZGYChjqUF3x8uH38bnIOa+KkVhokRNK1Pis+lc5tbftaBC5cnjL1S3xW4Inl/+54C2+FPysAarz9/f20OFrXFg2GQQvO22YYxeKs7O3MYpjBsaXcF2qh9uyiEY5U6vrpR+6rMcmsClCh8K1IowvXMZxiYKvULClhvFWr2k6R0yP1xyuW53nsEgX+kBBovIDp18qSec6vhziRj6hkT8hFnvUzQFd/4p/lTnT8ebZnC0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image9&quot;
+        title=&quot;image9&quot;
+        src=&quot;/static/a86227d763c989f452b298b20b8d5d54/6bfd0/09.png&quot;
+        srcset=&quot;/static/a86227d763c989f452b298b20b8d5d54/6f3f2/09.png 256w,
+/static/a86227d763c989f452b298b20b8d5d54/01e7c/09.png 512w,
+/static/a86227d763c989f452b298b20b8d5d54/6bfd0/09.png 1011w&quot;
+        sizes=&quot;(max-width: 1011px) 100vw, 1011px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;라이브러리 살펴보기&lt;/h2&gt;
+&lt;p&gt;gradle같은 빌드 툴을 사용하면 의존관계를 관리해준다. 즉, 필요한 의존성이 있는 경우 알아서 땡겨온다. 그래서 우리는 이전에 2가지 라이브러리만 추가 했지만 실제는 아래처럼 수 많은 라이브러리들이 받아와진다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 389px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 243.359375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAxCAYAAADa6ImIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGklEQVRIx4VX2XLbRhDUJ5jifeIGAZCiQAIUKTuuOLaShzyk8v8/M6meY3FRlYct3L1z9PQMng7plX7d/qEwu1Oav1OUXinNv1K8f6PpdEPj54Vbz/93HM3pabkMydtmtN1m5EclBfGFwYLoTPOFT5tdTttdIUfvwOc7/8jXO1x7co37fvhKT5PphtbrhHabjLzwlfbFN7YSHy9XkW5wozCpKMnuFMZyxKZ8zG6U5O98nR2/09N0uiY/rCk//U1p8c4AXnCiJL/zB/vDbwyGl3ENK/AMVuE9Pyxp9GXK7uLIgF5woX3xQVFS8Que/0JhfHHWBVHJVkRpzUBBfKbNNiMveKHFIqDJZM3xxmLAnX+mtPglsVMLcQ6AtPjK4DgiFHgW8jsvHPPFMqTZbEfzucdHZ2F2/IuS7MbJgFv42DYQ8Cs/QwyxESzGM4QjLb5xaPBe4/Lhw2XXC08UJjWDwBocDRAr0mf2rhhRcuYV8KyAV4lh+Mo7AzRgwJqXAeIZNse78MbiDWa0LFSX467Lobps7uM5LESyEENsKkyo2ZAW4J+DGLZdFsCz45/dg+VMJeWkZLntclRyBuEWLAFlJGY1u+iAXIwrjqORvWOhJYXjoiD9pOBoH9t9LgTVgiFt4p7LsNRc5oTU/GGocbSkoZLwbofYTQxLl8l2DEPlHVsOwOzGArFaJ0yZ9SZtaOMqRV2O0zeRs6TmjVC/ADOLsCm8QemNvsxYwli+2jFM87tQQ7kG5cE5wM1KrgjbDBUDAWGFqql4/dkFdOKgdWpJMfJKTGtNWsULLkMw4O5stv1cHPrZtawHuoHRRmTshdbbjMbjZTfLcdYFNGqYtcY7IzgLr5YcrJ3NvWEt42XLJp8ntS6hT9t9TiAXwon1cTJZPQA0NQGISpW4XruQGDiqCIDYRADXQ2I73qUmDDe9rz1FeWg1jbLD+Y57UNwrPY1hv9SMHiZZJgomW3hnPvcbC/viAGtMC9ntVl3jWmSr4g1RIViQ/47LfXEwETBZQoKwAYYAxAuZBfdGI1TJ3DWqXgzfVJVLRwsBvbnM4xrA6CmIHywHODI86HpOHFQDRUhrJwbmqgjHjV1F18OEMbAQfdlc5oUMZ4084RkqwpKA89U6pcl45cAGMeyLg+heJYlQmccsAzCO3WhG4+cll9wDwA+KUvmQl7pt1GlnFpvygOQVvJCcjsuIIVy2GJq4moJDspoxT4jOgqsVBVJ3RpF+ll21aAwbwHe3EeIK122AwvPGwuCsSbk6lyQRYjEDaA8xBZK4ls5SCAQ2eDg5tDNrIZAquTgw3ENjt019FYqHw1ITw3tT21p+ALBzsV4EwxLZmxy6MWRAlTNLQNPkpVE5BVIFH4oDXGaqCICIbNXMNUohNxDElZtmUYpD+VIL4Zpllcswv/PQKXP2hY87X4Z4tM9n/RsY9hQFNGU2QTXphyWwEjUslbJwHPxUHCyLloympwj3oEZQGJGxwmnhUByyhiZG5EhVBs3cSGxWZofvPNMslkFXvvriYLRBzGzYdEKRVLTe7lUc5rw+URsRB5DVMss9OGq3VYiC/EpIzLa6Nj1xCIbiIKJadQZOG0PagmprGMNDSxzUtUDpYSOIVQbHVQd2aOEDl8+d34r2H4C1TAN0jSwq3c+jWNzpKSWl+U+lxckpjsw0VwUrXVPifzwA+sdBCBgwiO90PP9Lxel3rpC9/hkhs8XphzuHu/nLD8eA4vSHiy2mWMw2/wEGjYVuKEW18wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;image10&quot;
+        src=&quot;/static/c50dff80183fc81fe3a7dd653508b85f/00a4e/10.png&quot;
+        srcset=&quot;/static/c50dff80183fc81fe3a7dd653508b85f/6f3f2/10.png 256w,
+/static/c50dff80183fc81fe3a7dd653508b85f/00a4e/10.png 389w&quot;
+        sizes=&quot;(max-width: 389px) 100vw, 389px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그러면 핵심적인 라이브러리 구조에 대해 살펴보자.&lt;/p&gt;
+&lt;h3&gt;스프링 부트 라이브러리&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;쿼리 파라미터로 응답에 포함될 필드를 선택할 수 있는 &lt;code&gt;fileds&lt;/code&gt;파라미터를 지원했습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;페이징, 정렬, 필터링등의 공통 기능을 일관된 방식으로 제공했습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;기본 값을 명확히 문서화하여 추후 동작 방식이 바뀌지 않도록 했습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;테스트 자동화&lt;/h3&gt;
+&lt;li&gt;spring-boot-starter-web
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;API 계약 테스트를 통해 비의도적 변경을 방지했습니다.&lt;/p&gt;
+&lt;li&gt;spring-boot-starter-tomcat: 톰캣 (웹서버)&lt;/li&gt;
+&lt;li&gt;spring-webmvc: 스프링 웹 MVC&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;회의실 예약 시스템에서는 테스트 커버리지 **100%**를 달성하여 변경 시 안정성을 확보했습니다.&lt;/p&gt;
+&lt;li&gt;spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(View)&lt;/li&gt;
+&lt;li&gt;spring-boot-starter(공통): 스프링 부트 + 스프링 코어 + 로깅
+&lt;ul&gt;
+&lt;li&gt;spring-boot
+&lt;ul&gt;
+&lt;li&gt;spring-core&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;spring-boot-starter-logging
+&lt;ul&gt;
+&lt;li&gt;logback, slf4j(로깅 라이브러리, slf4j는 인터페이스라 생각, logback이 구현체)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;실제로 통합인증 시스템 개발 시에는 이전 시스템과의 호환성을 유지하면서 JWT 기반으로 전환하는 과정에서 일정 기간 동안 두 방식을 모두 지원하는 전략을 사용하였습니다. 클라이언트에게 충분한 마이그레이션 기간을 제공하고 단계적으로 구버전 API를 deprecated 처리하여 혼란을 최소화했습니다.&lt;/p&gt;
-&lt;p&gt;이러한 전략들이 실제 프로젝트에서 API 변경으로 인한 혼란을 줄이고 클라이언트와 서버 간의 원활한 통합을 가능하게 하였습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[자바 입문] Hello World]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 개발 환경 설정 IDE 본격적으로 자바의 학습에 앞서서 개발을 하려면 IDE가 필요하다. IDE…]]></description><link>https://sungbin.kr/Hello-World/</link><guid isPermaLink="false">https://sungbin.kr/Hello-World/</guid><pubDate>Tue, 15 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📚 꿀팁&lt;/p&gt;
+&lt;p&gt;실제 실무에서는 &lt;code&gt;System.out.println()&lt;/code&gt;을 사용하지 않는다. 대신에 로깅 라이브러리를 이용한다. 왜냐하면 실제 여러가지 기능도 있고 나중에 한데 모아서 보기 좋기 때문이다. 로깅 라이브러리들은 여러가지가 존재하지만 그중에 slf4j-logback 조합을 많이 이용한다. 왜냐하면 성능도 더 좋고 기능도 다양하기 때문이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;View 환경설정&lt;/h2&gt;
+&lt;h3&gt;웰컴 페이지 만들기&lt;/h3&gt;
+&lt;p&gt;스프링 부트에서는 웰컴 페이지 기능을 제공한다. &lt;code&gt;resources/static&lt;/code&gt; 디렉토리에 &lt;code&gt;index.html&lt;/code&gt;을 만들어서 넣어주면 해당 html파일이 웰컴 페이지로 등록이 된다.&lt;/p&gt;
+&lt;p&gt;하지만 해당 페이지는 너무 정적인 페이지이다. 동적인 페이지를 만들고 싶을 때는 어떻게 할까? 그럴때 &lt;code&gt;Thymeleaf&lt;/code&gt;를 이용하는 것이다. 그러면 예시코드를 작성해보자. 우리는 &lt;code&gt;/hello&lt;/code&gt;라는 url에 동적인 페이지를 만들 것이다. 그려먼 먼저 url 매핑을 해줘야 한다. 컨트롤러 클래스를 만들어서 매핑하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hellospring&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;controller&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;springframework&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stereotype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Controller&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;springframework&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Model&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;springframework&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;web&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;bind&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;annotation&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;GetMapping&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Controller&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HelloController&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/hello&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Model&lt;/span&gt; model&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addAttribute&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hello!!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고 &lt;code&gt;resources/templates&lt;/code&gt; 디렉토리 하위에 컨트롤러에 반환한 문자열 이름의 html파일을 넣어준다. 지금 예시는 hello이니 hello.html을 아래와 같이 작성한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-html line-numbers&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;token doctype-tag&quot;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&quot;token name&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;ko&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;http://www.thymeleaf.org&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;UTF-8&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;th:&lt;/span&gt;text&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;안녕하세요. &apos; + ${data}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;안녕하세요. 손님&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일반 html과 살짝 다른 점은 &lt;code&gt;xmlns:th&lt;/code&gt;라는 타임리프 문법을 적용한걸 볼 수 있다. 그리고 &lt;code&gt;th:text&lt;/code&gt;를 통하여 동적 텍스트를 받을 수 있다는 것을 알 수 있었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;위의 코드에서 data란 컨트롤러에 model에서 addAttribute를 할 때 key값을 뜻한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;동작 환경&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 796px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.03125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBUlEQVQoz12T2W7iQBBF+QIgtntxL27vWwMOJAQMIUyieYo0L/P//3JHLkgizcNVW1b5dNW95Vmc1CDZEoxxRFH0LRZFkNohdi2kLSFtRaq6R+TNAGFryOlb15CYiDGz/QW2f4NtRwgZQ3AOIQRJaw1lM9i8R+rPMN2F5Pe/kdcrNH6H3eGCJG/h6i1iW2Bm2hNsd4ZpXlCUFbqug/eeTqUUlosFwmCJYnVEvr4iW1+R1E9YzOdIqzWq1QsYlzSJ+gLq5gTTHMCYQBgECIIAYRhCSon5fE7Prt0j6S9I11c0mxFMavjDJ3bXv7DVFrHJbh2m/oLy8QNJewQXEowxEuecgM45Gj9p9jDtNPYrXPOMh4clXN6g9juEESMgdVgOv7AZP+G6ERGFEt4CuYOTJKHT1E934JmAy8Uc3q9wGM/gLIKcgEmBmW5GqHqkDm3iyDelNAVSliUBsyxDt3sj/4rhHdX6CBkb1NsPbE5/oNL+p0N7D8W2U5H6HneScymM0TBaofBHqiMf22caM+uPqLfvEKaA1OnNQ9u9Ylod045gXPzsIGPkYRhxcGnguiOtzLRiaTcFONUxRFOQYQCTNjegLh+hyy10vgHngpZ5gkUEFLBZS57pYoDKB6higCkH2Nzf1cPkPWy5gYgtZhRCGFAY061fYXz/MWFIHXzV/Cj6T7f3/wDaUi4GIRJxbAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/a9c215fec23b66b5aae26380bcff6cd8/d48f1/11.png&quot;
+        srcset=&quot;/static/a9c215fec23b66b5aae26380bcff6cd8/6f3f2/11.png 256w,
+/static/a9c215fec23b66b5aae26380bcff6cd8/01e7c/11.png 512w,
+/static/a9c215fec23b66b5aae26380bcff6cd8/d48f1/11.png 796w&quot;
+        sizes=&quot;(max-width: 796px) 100vw, 796px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;웹 브라우저에 url을 입력을 한다. 그러면 해당 url이 톰캣 웹 서버에 도착을 하고 스프링 컨테이너로 전달해준다. 해당 전달해준 url에 매핑되는 컨트롤러를 찾는다. 그리고 스프링 컨테이너에서 만들어주는 &lt;code&gt;Model&lt;/code&gt; 객체를 통하여 data를 넣어주고 문자열 리턴을 한다. 그러면 viewResolver를 통하여 html파일을 반환해준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;spring-boot-devtools&lt;/code&gt; 라이브러리를 추가하면, &lt;code&gt;html&lt;/code&gt; 파일을 컴파일만 해주면 서버 재시작 없이 View 파일 변경이 가능하다.&lt;/p&gt;
+&lt;p&gt;인텔리J 컴파일 방법: 메뉴 build Recompile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;빌드하고 실행하기&lt;/h2&gt;
+&lt;p&gt;터미널이나 콘솔창으로 이동하여 아래와 같이 빌드를 진행할 수 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;./gradlew clean build&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cd build/libs&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;java -jar hello-spring-0.0.1-SNAPSHOT.jar&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;그러면 아래와 같이 정상 실행 되는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.640625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfUlEQVQoz6WSTY+bMBRFbQg1wQSwgSEDJDDNByTMNFLVTKu2qlSp66666///HaeCaqIsJ+3i6lnPfkfX1xbt5hPffpx5/nqkbD+zrNesG80b5SOEuElyrNXqLeldR15suK8G9u9OpJm6GXZRubznoV2xqkt22weOxyO+0v8B3PQUzZm0OJGXH+mGA9udwp0HmCTB87zbgFX/haT9TVT+Qix+YqvvvH9u6A4hjjvDdV1msxmO47wOaOwWPz6j7ZnAnJmFHyibPbu9g+N5BEFAoDVKvTJXvfBZLBShVgSB9+/ZvSjKY5LUEJmYJLGEejE5mvsKf8wwTfGyDM9aojgmy7JJxpipxnGM1nq6ie/7iDzPKfICW6dUy5rc5CQmYa4UYdPgPj7hPT7h9AfWbcvpdGIYBrquo67rCTTmfHForSWJEnQWkts74iBirgNcKfGKAtH3iGFAbLYsq+oCe9EIHZ1dHu1ClwIpJVJIhJR/e+OhK4374+A4c72+/gV/ALpX+Pbz1k1FAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;image12&quot;
+        src=&quot;/static/ab9cf428f8161915d8f05b8ca0c9c814/2bef9/12.png&quot;
+        srcset=&quot;/static/ab9cf428f8161915d8f05b8ca0c9c814/6f3f2/12.png 256w,
+/static/ab9cf428f8161915d8f05b8ca0c9c814/01e7c/12.png 512w,
+/static/ab9cf428f8161915d8f05b8ca0c9c814/2bef9/12.png 1024w,
+/static/ab9cf428f8161915d8f05b8ca0c9c814/71c1d/12.png 1536w,
+/static/ab9cf428f8161915d8f05b8ca0c9c814/9e818/12.png 1913w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[자바 입문] Hello World]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 개발 환경 설정 IDE 본격적으로 자바의 학습에 앞서서 개발을 하려면 IDE가 필요하다. IDE…]]></description><link>https://sungbin.kr/Hello-World/</link><guid isPermaLink="false">https://sungbin.kr/Hello-World/</guid><pubDate>Tue, 15 Apr 2025 21:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -531,7 +927,96 @@
 &lt;p&gt;개발할 때 자바와 서버에서 실행할 때 다른 자바를 사용 가능하다. 그래서 개발할 때는 편리한 JDK나 혹은 팀 컨벤션에 맞는 JDK를 사용하지만 실무에서는 해당 환경에 맞는 JDK를 사용 하는 것이 효과가 나올 것이다. 예를들어 AWS에 EC2 인스턴스에 JDK를 설치하려고 한다면 AWS Correto를 사용하는 것이 더 최적화 되고 좋을 것이다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[99클럽] 면접반 4일차]]></title><description><![CDATA[📖 질문 데이터베이스 최적화 기법 DB…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day4/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day4/</guid><pubDate>Mon, 14 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[99클럽] 면접반 5일차]]></title><description><![CDATA[📖 질문 API 설계와 버전 관리 전략 API를 설계하거나 운영하면서, 일관성을 유지하고 변경을 관리하기 위해 어떤 전략을 사용했는지 설명해 주세요. (버전 관리, 응답 포맷 설계, 호환성 유지 방식 등을 중심으로) 힌트: 실무에서는 API…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day5/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day5/</guid><pubDate>Tue, 15 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVQoz93SsQ4BAQyH8d8RQvAUNt7ErXI32gwSYfcC3vpv6WCROLEwfGnaNF+btJAv86vCWTGvfEkWZFX1t4VNxR25kxvZkCO5kDM5VM9oiHBN9qQlW3IlHTmRfojwFZMaNiXjT4/SPG38P2/zAKQNzSHnyggQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배너 이미지&quot;
+        title=&quot;배너 이미지&quot;
+        src=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png&quot;
+        srcset=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/6f3f2/banner.png 256w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/01e7c/banner.png 512w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📖 질문&lt;/p&gt;
+&lt;p&gt;API 설계와 버전 관리 전략&lt;/p&gt;
+&lt;p&gt;API를 설계하거나 운영하면서, 일관성을 유지하고 변경을 관리하기 위해 어떤 전략을 사용했는지 설명해 주세요. (버전 관리, 응답 포맷 설계, 호환성 유지 방식 등을 중심으로)&lt;/p&gt;
+&lt;p&gt;힌트: 실무에서는 API가 한 번 공개되면 쉽게 바꿀 수 없습니다. 이 질문은 &quot;처음부터 바뀔 수 있음을 고려하고 설계했는가&quot;를 묻는 것입니다. URI 버전 관리, 응답 포맷 고정, Deprecation 정책 같은 구체적인 조치가 있다면 강력한 답변이 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;답변&lt;/h2&gt;
+&lt;p&gt;안녕하세요. API를 설계하고 운영하면서 일관성과 변경 관리를 위해 제가 실제 프로젝트에서 적용했던 전략에 대해 말씀드리겠습니다.&lt;/p&gt;
+&lt;p&gt;회의실 예약 시스템 개발 프로젝트에서 API 설계와 운영에 중점을 두었던 경험이 있습니다. 처음부터 변경 가능성을 고려하여 다음과 같은 전략을 사용했습니다.&lt;/p&gt;
+&lt;h3&gt;API 버전 관리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;URI 기반 버전 관리를 적용하였습니다. &lt;code&gt;/api/v1/reservations&lt;/code&gt;, &lt;code&gt;/api/v2/reservations&lt;/code&gt;형태로 관리를 하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;메이저 변경은 버전을 올리고 마이너 변경은 하위 호환성 원칙을 유지하는 원칙을 세웠습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;새 버전 출시 시 최소 3개월의 마이그레이션 기간을 두어 클라이언트가 적응할 시간을 확보하는데 중점을 두었습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;응답 포맷 설계&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Spring HATEOAS를 활용하여 응답 포맷을 표준화하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JSON 응답에 &lt;code&gt;data&lt;/code&gt;, &lt;code&gt;links&lt;/code&gt;, &lt;code&gt;meta&lt;/code&gt; 섹션을 분리해 확장성을 확보했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;필드 추가는 허용하되, 기존 필드 제거나 변경은 버전 증가 없이 하지 않는 원칙을 적용했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;문서화&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Rest Docs를 통하여 테스트와 문서를 함께 관리하고 항상 최신 상태를 유지하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;변경 예정 API에 대해 &lt;code&gt;Deprecated&lt;/code&gt;헤더를 포함하고, 대체 API 정보를 제공했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;문서에 변경 이력과 마이그레이션 가이드를 포함시켜 클라이언트 개발자들의 이해를 도왔습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;확장성을 고려한 설계&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;쿼리 파라미터로 응답에 포함될 필드를 선택할 수 있는 &lt;code&gt;fileds&lt;/code&gt;파라미터를 지원했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;페이징, 정렬, 필터링등의 공통 기능을 일관된 방식으로 제공했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;기본 값을 명확히 문서화하여 추후 동작 방식이 바뀌지 않도록 했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;테스트 자동화&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;API 계약 테스트를 통해 비의도적 변경을 방지했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;회의실 예약 시스템에서는 테스트 커버리지 **100%**를 달성하여 변경 시 안정성을 확보했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;실제로 통합인증 시스템 개발 시에는 이전 시스템과의 호환성을 유지하면서 JWT 기반으로 전환하는 과정에서 일정 기간 동안 두 방식을 모두 지원하는 전략을 사용하였습니다. 클라이언트에게 충분한 마이그레이션 기간을 제공하고 단계적으로 구버전 API를 deprecated 처리하여 혼란을 최소화했습니다.&lt;/p&gt;
+&lt;p&gt;이러한 전략들이 실제 프로젝트에서 API 변경으로 인한 혼란을 줄이고 클라이언트와 서버 간의 원활한 통합을 가능하게 하였습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[99클럽] 면접반 4일차]]></title><description><![CDATA[📖 질문 데이터베이스 최적화 기법 DB…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day4/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day4/</guid><pubDate>Mon, 14 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
