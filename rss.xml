@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 00:41:24 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 5일차]]></title><description><![CDATA[📖 질문 API 설계와 버전 관리 전략 API를 설계하거나 운영하면서, 일관성을 유지하고 변경을 관리하기 위해 어떤 전략을 사용했는지 설명해 주세요. (버전 관리, 응답 포맷 설계, 호환성 유지 방식 등을 중심으로) 힌트: 실무에서는 API…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day5/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day5/</guid><pubDate>Tue, 15 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 12:38:49 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 5일차]]></title><description><![CDATA[📖 질문 API 설계와 버전 관리 전략 API를 설계하거나 운영하면서, 일관성을 유지하고 변경을 관리하기 위해 어떤 전략을 사용했는지 설명해 주세요. (버전 관리, 응답 포맷 설계, 호환성 유지 방식 등을 중심으로) 힌트: 실무에서는 API…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day5/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day5/</guid><pubDate>Tue, 15 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
@@ -87,7 +87,451 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;실제로 통합인증 시스템 개발 시에는 이전 시스템과의 호환성을 유지하면서 JWT 기반으로 전환하는 과정에서 일정 기간 동안 두 방식을 모두 지원하는 전략을 사용하였습니다. 클라이언트에게 충분한 마이그레이션 기간을 제공하고 단계적으로 구버전 API를 deprecated 처리하여 혼란을 최소화했습니다.&lt;/p&gt;
-&lt;p&gt;이러한 전략들이 실제 프로젝트에서 API 변경으로 인한 혼란을 줄이고 클라이언트와 서버 간의 원활한 통합을 가능하게 하였습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[99클럽] 면접반 4일차]]></title><description><![CDATA[📖 질문 데이터베이스 최적화 기법 DB…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day4/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day4/</guid><pubDate>Mon, 14 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;p&gt;이러한 전략들이 실제 프로젝트에서 API 변경으로 인한 혼란을 줄이고 클라이언트와 서버 간의 원활한 통합을 가능하게 하였습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[자바 입문] Hello World]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 개발 환경 설정 IDE 본격적으로 자바의 학습에 앞서서 개발을 하려면 IDE가 필요하다. IDE…]]></description><link>https://sungbin.kr/Hello-World/</link><guid isPermaLink="false">https://sungbin.kr/Hello-World/</guid><pubDate>Tue, 15 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQoz6WRPQvCQAyG+///R6GKm6AndhIcrNaiXVzEaqVaPym9Xs67XuIgiEvFw2whPDxJXof+KOf7uD4cUWtLGJGIHpMA2PDdWpgBqRyNOfMVkTHmV/ilSW7QjfPF+hRnpVC1hVkb3Nxla54NVpczVw1bN8Co9TbJw7QIdsX+Wtk9DHklXU+3O6bXl66HIG1gIQTzIVrCNJSzCJWyzLnp0A/4CfW+SjF6WKSqAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배너 이미지&quot;
+        title=&quot;배너 이미지&quot;
+        src=&quot;/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png&quot;
+        srcset=&quot;/static/3189e9c0404650ccc6c5ffc998bc8717/6f3f2/banner.png 256w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/01e7c/banner.png 512w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png 1024w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/71c1d/banner.png 1536w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/e8950/banner.png 2000w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 블로그 글은 &lt;a href=&quot;https://inf.run/WUc1V&quot;&gt;영한님의 인프런 강의&lt;/a&gt;를 바탕으로 쓰여진 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;개발 환경 설정&lt;/h2&gt;
+&lt;h3&gt;IDE&lt;/h3&gt;
+&lt;p&gt;본격적으로 자바의 학습에 앞서서 개발을 하려면 IDE가 필요하다. IDE라는 도구를 이용하면 정말 개발을 편하게 진행할 수 있다. 그 중에 자바 개발에 있어서 실무에서 많이 쓰는 IDE가 &lt;strong&gt;인텔리제이&lt;/strong&gt;와 &lt;strong&gt;이클립스&lt;/strong&gt;이다. 과거에는 정말 이클립스 IDE를 많이 사용을 하였다. 하지만, 최근에는 인텔리제이를 많이 이용한다. 개인적으로 이렇게 판도가 바뀐 이유는 이클립스는 매 버전마다 설치를 해줘야 할 뿐더러 프로그램이 무겁고 IDE 자체 내의 버그가 많기 때문이다. 그래서 해당 강의에서는 인텔리제이로 진행을 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;과거로부터 내려오는 레거시 프로젝트 같은 경우는 이클립스를 많이 이용하긴 한다. 또한 신규 프로젝트더라도 SI회사거나 인텔리제이 라이센스 비용을 지불 할 수 없는 회사 같은 경우는 이클립스를 여전히 이용한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;OS&lt;/h3&gt;
+&lt;p&gt;실무에서는 맥 환경의 OS를 많이 이용하긴 한다. 하지만 금융권이나 SI프로젝트 회사, 그 밖의 기업들 중에서 맥 환경이 아닌 윈도우 환경을 많이 사용한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;자바는 별도로 설치를 진행하지 않아도 무방하다. 왜냐하면 인텔리제이 안에서 자바 설치도 함께 진행하기 때문이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;인텔리제이 설치하기&lt;/h3&gt;
+&lt;p&gt;인텔리제이 설치 방법은 이 전에 내가 작성한 &lt;a href=&quot;https://sungbin.kr/IntelliJ-%EC%86%8C%EA%B0%9C/&quot;&gt;인텔리제이 포스팅&lt;/a&gt;에서 간략히 소개를 하였다. 그래서 해당 부분에서는 &lt;a href=&quot;https://www.jetbrains.com/ko-kr/toolbox-app/&quot;&gt;다운로드 링크&lt;/a&gt;만 제공하고 과정은 생략하려고 한다.&lt;/p&gt;
+&lt;p&gt;또한 필자는 상용버전인 IntelliJ Ultimate를 사용하고 있다. 하지만 무료버전인 Community버전을 이용하여도 무방하다.&lt;/p&gt;
+&lt;h3&gt;인텔리제이 실행하기&lt;/h3&gt;
+&lt;p&gt;인텔리제이를 다운로드 받고 실행을 하면 아래와 같이 화면이 나온다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABE0lEQVQoz6XQS27DIBSFYS+kbfzANjYYQ8E84ih1nDRRJp11/0s5VcigiqpKrjv4xAT9XG7Sqzc0zCGrFLJc4Om5xvPLDV2kYQEtD2DdDg3zSNz2DGkmSBWghwPKekBWCGxShjRj8fxNmjJkefcgMeEE42b0MiCMV3RyQstHkFIuUpBvedEjUWZCwx2EPWN//IQbPzD4K5Q+QOl5sVdzBBc7JJQ5kFpDihnOX0DZNn57k7ZIM/5nSd1aEGowSA/r30HZiIpa5KT/sZ8lYrCkBp0eoe0cY3XjUTUuXri9uirI++k+YetR1gYVHZATuT4ouj2sv6DhY9zjzb+CXGyh7ekebEMMFmuDhA7QysKF80NwzYRfrRFIVjEWwKwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image1&quot;
+        title=&quot;image1&quot;
+        src=&quot;/static/cbb6b585b092163f81453dfe6739a94e/2bef9/01.png&quot;
+        srcset=&quot;/static/cbb6b585b092163f81453dfe6739a94e/6f3f2/01.png 256w,
+/static/cbb6b585b092163f81453dfe6739a94e/01e7c/01.png 512w,
+/static/cbb6b585b092163f81453dfe6739a94e/2bef9/01.png 1024w,
+/static/cbb6b585b092163f81453dfe6739a94e/71c1d/01.png 1536w,
+/static/cbb6b585b092163f81453dfe6739a94e/8963a/01.png 1918w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;필자는 기존에 여러 프로젝트를 했기에 리스트처럼 여러개 프로젝트가 나오지만 처음 설치하시는 분들은 빈 화면일 것이다. 여기서 &lt;code&gt;New Project&lt;/code&gt;버튼을 클릭한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.640625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVQoz4WSV47bMBgGfYSNi6xCilVdcpFXetjASLn/nSYw7Si7DjZ5GHwACQ7+wpW1PTKviDPHPjFsd4Jt9GCX3Ynen70jElg/oGyH1C25rln5YkDpmlx7lG1IpUfkBXFiyGSxkApHnFpS4Rd2+5ztXrDdy8AmEqxc0WNdi1Qe7XuU7blMP6mbmbp5pWtnLsev9PVE6U5U/kxhDzR+JE0t6yhbZDf5SpsGITyJqhC6QaqGafqBL09oO9DchOM32namKEa8O+LsIeQ+0Q+RXFilmQvtKdVhigNSVczT9S6rXzkd3+iGGV+OyLwOaNOH+yj+I/ydd2FqsdpjfI9QNdP8HeeP1NWFy+VKVY9Yd8DY4UEfcv+ZMEks0lbktiXLK8bLlaI8o3RHrruQt6puklCd+Z8wNQjdhgqlKmm7KUhMeNgvkmeifwll3mD8QCYrSn/GuWNo8zOcP31YypPQIvIS5XoyUYTZ5bolzfwnOMp6JE7N07dZtmzR2mHLgVgUbGNNlBjWu4yXTcyXTfIXL+uYze6j7Cb8BXOGLoSdP6QjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image2&quot;
+        title=&quot;image2&quot;
+        src=&quot;/static/f61d238a3bd24664f9e77c89a7b38315/2bef9/02.png&quot;
+        srcset=&quot;/static/f61d238a3bd24664f9e77c89a7b38315/6f3f2/02.png 256w,
+/static/f61d238a3bd24664f9e77c89a7b38315/01e7c/02.png 512w,
+/static/f61d238a3bd24664f9e77c89a7b38315/2bef9/02.png 1024w,
+/static/f61d238a3bd24664f9e77c89a7b38315/71c1d/02.png 1536w,
+/static/f61d238a3bd24664f9e77c89a7b38315/69d6b/02.png 1912w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;클릭하면 위와 같이 나오는데 우측에 자바를 택하고 프로젝트 이름과 해당 프로젝트 설치 경로를 선택해준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;빌드 시스템은 기본으로 IntelliJ로 되어 있을 것이다. 하지만 다른 것이 선택되어 있다면 IntelliJ로 선택하자.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;다음으로 JDK를 설치해야 한다. 필자는 기존에 이미 JDK를 설치한 경험이 있어서 JDK가 자동으로 뜨지만 처음 설치하시는 분들은 No-SDK라고 표시가 될 것이다. 그 부분을 클릭하면 아래와 같이 화면이 나온다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzklEQVQoz22SWXIiMRBEOcLYGOhFau29N2CaxczEeLv/nd5EC7A9YX9kKKSQnrKqcmZsjywqktyxSg0PC3HRUjBf5FG3fVTcX7UU2DCgbIvULUJVzPx0oGsK7VG2IRMOUQSS1JDLECVkiOdpZsmEJxOBXAQeVvI/zZeSmQsD1rVI5dG+R9mB8fBO3RypmwN1M9IPJ3zYonSPNj2FarBmiJ/eT64j7FLBTNsGITyJqhC6RqqWw+EtAowbaLsT4/hC254IYYdzmwg1dmCZKObL/BO4ksyy3MWflOowfk2hKo7HZ7QdaOo92+GJdX+mKkeManG6w5iL01yWV6j4KPsKtFjtMb5H6obD8RXnN9TVyGZzZrt7pun/UNZHzBeH1q1Jc/cdmKYGaUuUaxFFxW78SygfKSY3U0/3r/TbN0K1R5suAm9KMvsDMDMI3aJ9h1QVbbdH6ctD7zfsD+8M21fKao/z29jfaQ3lLk791sfPkjNDUTSYsEbIitI/xuZP7ianu/GFbvhN0z19qO3PuLBhlZmfHNqYPeX6mK9pAFM0stxz6/F0J83cVZZQPcaB3C9+nLJFaxtTn0yBTTTLKWOLnLt5yt3Dd/2aJx+Qrw7/Af51MSarWEuLAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image3&quot;
+        title=&quot;image3&quot;
+        src=&quot;/static/b458328b9cb5827d31b0e6a4267a1145/2bef9/03.png&quot;
+        srcset=&quot;/static/b458328b9cb5827d31b0e6a4267a1145/6f3f2/03.png 256w,
+/static/b458328b9cb5827d31b0e6a4267a1145/01e7c/03.png 512w,
+/static/b458328b9cb5827d31b0e6a4267a1145/2bef9/03.png 1024w,
+/static/b458328b9cb5827d31b0e6a4267a1145/71c1d/03.png 1536w,
+/static/b458328b9cb5827d31b0e6a4267a1145/c72f7/03.png 1915w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;여기서 Download JDK를 클릭 후, 원하는 종류와 버전의 JDK를 아래와 같이 클릭 후 설치해주면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVQoz4WS647TMBBG+wosvSWx43viJE7aJW0XCbEC3v+dDopbWpCW3R+fxh7ZZz7PeGVsQtYt+8qxKwzrjWC9vWlZb6rH/p4T93PWjyg7IHWPVJGVDyNKd9Tao1xHITyVDOxLk6OQgVI4ispSlJZSeEoRqERgs6tZ7+Rdn7eSlQ0J6wak8mif0G5kPv8idhdidybGmZQu+HBEm5RVqw5rxlzgaVvdYIL1TrDSpkMIT6FahI7Uuud8+Ylvjhg70qevHOfXDLf+mlugS1xadAU9XK7KyrEvDKoeMGGi1pHL+Xu+0DZHgj/k2CwOVYdSHdoMHwBLi9Ue41Nu7vnlB85PdN3MfPxGiidaNxFMwukB9RGwKCzSNtS2R6jIfHrFhwNK91g/5UnmAumFpv2S8+8DS4NQfXa4PLlPZ9St+UK2N0VkHXPuz3DeBS6HjR8RdaTxz1g3ZTl3wP6jCWMnnD/kr/UfoEXUDcoNiLql7y5oOyJk86Yq2RD7E0XleNpUb03ZorXDNiOFDGxLy67y+aM+bcp86Rof+rQu7+7+dvkbZH0uj0n3k6wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image4&quot;
+        title=&quot;image4&quot;
+        src=&quot;/static/23861672f9dcf6f66f7cb676c29ad855/2bef9/04.png&quot;
+        srcset=&quot;/static/23861672f9dcf6f66f7cb676c29ad855/6f3f2/04.png 256w,
+/static/23861672f9dcf6f66f7cb676c29ad855/01e7c/04.png 512w,
+/static/23861672f9dcf6f66f7cb676c29ad855/2bef9/04.png 1024w,
+/static/23861672f9dcf6f66f7cb676c29ad855/71c1d/04.png 1536w,
+/static/23861672f9dcf6f66f7cb676c29ad855/c72f7/04.png 1915w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 create 버튼을 클릭하면 샘플코드와 같이 코드가 나올 것이다. 지금은 아무것도 모르니 일단 실행만 해보자. 단축키로 &lt;code&gt;Ctrl + Shift + R&lt;/code&gt; 혹은 윈도우 기준 &lt;code&gt;Ctrl + Shift + F10&lt;/code&gt;을 누르면 아래와 같이 뭔가 실행이 된 것을 알 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABl0lEQVQoz42S647aMBSE8wpF7apQFpLYTmzHscmFhHAp2lZV3/+JvmrNLtAKrfrj0xyP7LGONEndnsj9wFoFtB3wbiITnjwSooqipTD9m3dDFg1CBYT0lKahUJ7EFAWlEOSrJWXpaba/sf5IaYcrhdlS6P4v7+q/qXE7NnYgeV6uEXnJbPaVdWYx9QHj9jFUVzt0NV7U7S4Bd9wH22rCFR3JYp4iZcVstiDNKzbhhAsnqnDC1ocYdnk4Ur6GPCAGugkrG5LFYo2Ulk+zOWlmCc2Z0J/x3REXjmi3R7spEtd7gIorT1jVkswXOUJ3fPm8RKpAt31hO/xkmn4xDD9oNt9pm3PUEI4P8f5A15zxZU/ybalIReDp6Zksq/Cmv2A7fNFQq4CTARfVP6SSHq82yFVJkucWqztyUSOLDapsYx1utDevfJ9v5/d7he5YrTWJko5+fMGFPaYaI/pO/531Q3/A1hNpVpFoGbB+wtaXily79RH39dE9KnZ0ZJUaklzW1x9V2f0Xr1XRrzWyA8bvMfWI83uE8PwBijlLiQyIlC4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image5&quot;
+        title=&quot;image5&quot;
+        src=&quot;/static/5bd79bc70b1a22a2e583d34a775799fa/2bef9/05.png&quot;
+        srcset=&quot;/static/5bd79bc70b1a22a2e583d34a775799fa/6f3f2/05.png 256w,
+/static/5bd79bc70b1a22a2e583d34a775799fa/01e7c/05.png 512w,
+/static/5bd79bc70b1a22a2e583d34a775799fa/2bef9/05.png 1024w,
+/static/5bd79bc70b1a22a2e583d34a775799fa/71c1d/05.png 1536w,
+/static/5bd79bc70b1a22a2e583d34a775799fa/14747/05.png 1914w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;윈도우와 다른 점&lt;/h3&gt;
+&lt;p&gt;UI상 인텔리제이는 거의 맥과 윈도우와 비슷하다. 하지만 단축키를 포함해서 다른 부분들이 몇가지 존재한다. 대표적으로 &lt;code&gt;settings&lt;/code&gt;를 클릭하는 메뉴가 다른데 필자는 맥환경이기도 하고 일일이 다 설명하기에는 글이 길어지므로 생략할 예정이다. 다른 부분이 있다면 구글링이나 AI Agent 도움을 받아서 해결해보자.&lt;/p&gt;
+&lt;h3&gt;한국어 설치 팩&lt;/h3&gt;
+&lt;p&gt;가끔 가다가 한국어 설치 팩이 자동으로 설치되는 경우가 있다. 그러면 매우 좋지 않다. 왜냐하면 에러나 메뉴같은 것을 찾을 때 대부분 영어로 검색해야 빨리 찾을 수 있기 때문이다. 그래서 혹여나 설치하였다면 &lt;code&gt;action&lt;/code&gt; 검색 단축키를 통해 아래와 같이 플러그인을 검색하여 해제해주자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.65624999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACeUlEQVQ4y32T6XLaSBRG9Q5ZEFhLSwLtC0KABNZGjGUIOE5NfkzN9v6PcaYkcOKZOP5xqltd6qPvXnVLquujqQ6a5qILn+kswbQiDDMaRtfLSNIt1jRGF94F3b3iYYoAU/gI4aOqMyR5JBhPLEayYDw2WWQlphkyuZlh2wlxkuN7GatFjR/UeH6FG9W4UYUfNywXHXn2gBs1qEaCZNorFNVDHlvIY8Fy3ZAXLTN7PiTWhD98wJktiJOOND2Q5icWm0fSzZl5cSbdPuKn9ygiRloW3bBJ1Tym/pz86RN50RHGWxTNQxMBlhkT2BlRsKFY7InDCttdYll9e66YETc3U6QwaXD8LboR4YUFu+43jqe/OT3+w/H818Dh8AfV5kQ8r1nnB9L0lnRRMp3NEeal3z2KYiMJM0U3YoSVDou35Znu8Dt1+0TZfKFqnijrL2yKI3nWkEQF8XyD4y6Z2gtsZ4njrQa5otpItrdFExGjkc5I1tF0H0V1UDV3aMMz/fqn3Ylv3/6k656oqo793Zmq7mjaA3VzQOuFfrzDj1s+ftSQZYFhxd9L+D/rfEe2qgn9NYG3InbWBOGaOOkTZ0xkA6kvV1Fd3r0bI4+NYaMwwp9k/dq23NM2xyFduzuyuzvR7I401QNt+xk/yJDev7/hwweFfpTlH8KX0ud53R4oiz2367uh1Lp+GMRVeU9Z3hPFq16ovCl8OddFMBylAdX9D6rmDxdE6mVvJwx/2YaXmFbMRJleSr4wufyUV4TC+CF+Tf78rGrOc0J1SDkev55QfE/6shXBlfBKdDmHphEOd7bvT//C28JrIhGQLvcsi+Mwpss7mt1XZnbKv2UOwGfvlzbfAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image6&quot;
+        title=&quot;image6&quot;
+        src=&quot;/static/3d8dbaac7502ac71a4eff7bf03c9b3cd/00d43/06.png&quot;
+        srcset=&quot;/static/3d8dbaac7502ac71a4eff7bf03c9b3cd/6f3f2/06.png 256w,
+/static/3d8dbaac7502ac71a4eff7bf03c9b3cd/01e7c/06.png 512w,
+/static/3d8dbaac7502ac71a4eff7bf03c9b3cd/00d43/06.png 1000w&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;이클립스 설치 방법&lt;/h3&gt;
+&lt;p&gt;어쩌다가 이클립스 설치가 필요한 경우도 있을 것이다. 해당 독자분들을 위해 예전에 학부생때 작성했던 &lt;a href=&quot;https://blog.naver.com/ysb05222/221916326429&quot;&gt;네이버 블로그 포스팅&lt;/a&gt;을 참고해보자.&lt;/p&gt;
+&lt;h2&gt;다운로드 소스 코드 실행 방법&lt;/h2&gt;
+&lt;p&gt;인텔리제이를 실행하고 나서, &lt;code&gt;File -&gt; New -&gt; Project from Existing Sources...&lt;/code&gt;를 선택한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABxklEQVQoz4WS227aQBRF/QltEhEIwWCM5+IZj23wDQzlUiqlL6ma//+XVWEITZQqfVg6M2ekPfvMbC82JXm9xeVrErdivX7qahAkTKaGkS8Z+Yqhr9CRwuiEMEoJQksYOaahZRLEzIQjCGI8IxXLZkNRthhbszz+ws4PSNWgbIO2S5SpOyJ9okLoChlXiPhcZVyjbI1SGd7wYURVrVGmRNuGdvuM0C3atOikRZkGocsrMi7f7f/2a4KpwbvvjaibLYtqh0mWfN+/oM03bLZnXv4gXRxw+fZKkm0+YNMN6XzHdJbiDfojiuLkqCK2DfvDb7Td4PINebFD2VXnUnWjN0hTn4lfa9U5PJ2NA4PX648J1YJez0eIjJ/HFzLb4nTJPC7J5IJcFWQXUpmfEWdclJJEjkxkhL7EGwxD/Knj65cesyhlt3tGyRqpSqQukPptfV2/5dzTcc14EuM9PkZMpim3tw+EM8fh+IK2LZEsrz/5X96O3L/3ubsbcnMz6ASb1RNCVQj1yY/q8hKX8uMbDgYTbm8GneDJ8mtM5DVj/+bdJeocG/80sj+WDB9n9PuTTlCogkguPkXoAnUR1m6JtjXWrQhDxx+KdU0xXbQtmQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image7&quot;
+        title=&quot;image7&quot;
+        src=&quot;/static/8493eca862afad80869f603fc9979a75/2bef9/07.png&quot;
+        srcset=&quot;/static/8493eca862afad80869f603fc9979a75/6f3f2/07.png 256w,
+/static/8493eca862afad80869f603fc9979a75/01e7c/07.png 512w,
+/static/8493eca862afad80869f603fc9979a75/2bef9/07.png 1024w,
+/static/8493eca862afad80869f603fc9979a75/71c1d/07.png 1536w,
+/static/8493eca862afad80869f603fc9979a75/9e818/07.png 1913w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 후, 블러 올 압축을 푼 폴더를 선택한다. 그 후, &lt;code&gt;Create project from existing sources&lt;/code&gt;를 선택한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 745px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACR0lEQVQ4y3WSS2/TUBBGvUTsWLZq83AcX7+fsWO7duzm0aZJ6AtFUJW2EuIXsGZZ1uz4uwfZISE8uvg093pmjr8ZXUm3Iww3QZgRfSPADlOCYcEgLYizHGcwxD+pyKsxWVERpTmDbIwWlOhuiOYMEHbYSNE8JNlKyGbX5OMLZMPHT3KGo1OS8Zzh7BZ3tCJcPjC5eaK8fCCZXjY5M53jREOMIEbzQjRvQFfYSCIomb97ZHn1HjNIaQuLtqLSihe4Tz8Y3n9HXn3j1clXXpfPvIk/I6cVcTWjI0w6mkVXt5ENh45q1sCC6dUdo8kC3UtoaxYd3Ua4YeM0SHN0b4Bs2PTMukknvP5IsbhG90IUy9sA61zfROpZCdFogR+XCDsiHKaNasBxX6f1y0XtoHEhTOKiYrp4S5iN/nVohiPick6Sn2F4CZoTNMveArbq6pvYFib5dM7yZk0xPW922OTrCXQXSfgZfjYhziZoTrwbubv35zpuzy3VYHm75u7pE1frD0R5tZnAdGj3DSTXiynKGW6Uo1rBb0cvAOtme5DgDjPsKEU4wW4lDdD3XFarJXExoW96/wU22oPXYzeT/FXTAK0wZLycE6c10N+52Rb/oRecb+42bdVC0ryY8vySLKkQuk/PdBvJ++72tfe9qauj4dKzPHqKjuRaERdnN5wkI1Rhk0/OWd8/7p5E02Q6O+0glstsecnpfIW6+oK6fqarhUiyYmHZIe2O4KilcNwVdBSDo47KQavHYUt5US1Za3Qg2xwqHseyyU/oNpYsZOmWhgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image8&quot;
+        title=&quot;image8&quot;
+        src=&quot;/static/371256dbcf1617b7ca42c6788b53c9e3/7e509/08.png&quot;
+        srcset=&quot;/static/371256dbcf1617b7ca42c6788b53c9e3/6f3f2/08.png 256w,
+/static/371256dbcf1617b7ca42c6788b53c9e3/01e7c/08.png 512w,
+/static/371256dbcf1617b7ca42c6788b53c9e3/7e509/08.png 745w&quot;
+        sizes=&quot;(max-width: 745px) 100vw, 745px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 나서, 계속 Next를 하다가 JDK 선택 화면이 나오면 JDK 선택 (미 다운로드 시, 설치를 해당 화면에서 가능)하고 나서 마지막 Create를 눌러주면 기존 프로젝트를 불러 올 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 756px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 98.82812500000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABRklEQVQ4y9WU3XKCMBCF8x6ihCCBGEBArCBU8Wc6xdLpRd//WU4nER3rMIq9shffLLOze3Y3IUvKWQk3TiFECk/M4IkUYpLC9RJQy4fDY/hBhol8AbND7bsF2ecHbDYHbHcfWFc1qk2N7a7BstjrAIsFMKmESY/fFgtbe83RT/xpjvX2G8XqC8uy0RSvn9ou8hrZ8nBmoci7qJEXDaKkAuE8RhCt4bhz2OMIthNrO3bix+AqbwrC7ECLqHapJa/ORD6ID3Ip0H02j+CDXDr+LKoaai1RqgraVngOQZVvnUd+RsHnH/l/3DLrHPn0c/fnFE+7Xsrla6E9+PW67HZ9mZbEyBQYjry7y/MWA8PVOkTwBMF0hWT+pteQqsJ0tfuwtiuVV64ahFEJwlkAITOESaVX0MBwYAxdGEPeA1fHq42eF++QQYYfGtZHhFFb3zAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image9&quot;
+        title=&quot;image9&quot;
+        src=&quot;/static/fcf7925e9ab6f10a86ee41ffb781aa2a/8ae3e/09.png&quot;
+        srcset=&quot;/static/fcf7925e9ab6f10a86ee41ffb781aa2a/6f3f2/09.png 256w,
+/static/fcf7925e9ab6f10a86ee41ffb781aa2a/01e7c/09.png 512w,
+/static/fcf7925e9ab6f10a86ee41ffb781aa2a/8ae3e/09.png 756w&quot;
+        sizes=&quot;(max-width: 756px) 100vw, 756px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 748px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 98.4375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSUlEQVQ4y+1Vy07DMBD0V1C1QbXTOmlqO83LcRNCIUUcEVzgyv//xSC7TQm0QJA4cOhhJHt3dnblaCdkGsdgTIL5ClMqQJmEP4sPiFcVkvQKQpaO08+dAtH5DaQy4EECrRsopTGZzDEezxxGI4aLEXMx7zL4EjZPmQBZV1uYdYtFlKE0GxRFgzStkGY1srxGoXd3z+OuaOJ9BneNI2EgZAVS1XcozS3CMEFe1Mj3IkoVYL4A5wlm89h1p/QEmMCULsGDFDzIQOauYLV/nx2sAPOlI9v4kLfreKQ7MP892N07om3yMXeMw0fpd/B7U/aJQyY8EvwrnAXPgv9OcOhGfMdzu0z3Bttf8p/EurpdrXTm7MzBuk0Ylc56fjOhdShbFyy0q11KA6tFsmSDpn1Bmm/dr2CQIJMII42mfcb6+hHa3OPh6RUqbvAGR45BvligzEcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;image10&quot;
+        src=&quot;/static/a7d1f9eeba6d8a5b4ef442e22bffc830/f8915/10.png&quot;
+        srcset=&quot;/static/a7d1f9eeba6d8a5b4ef442e22bffc830/6f3f2/10.png 256w,
+/static/a7d1f9eeba6d8a5b4ef442e22bffc830/01e7c/10.png 512w,
+/static/a7d1f9eeba6d8a5b4ef442e22bffc830/f8915/10.png 748w&quot;
+        sizes=&quot;(max-width: 748px) 100vw, 748px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 744px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 99.21875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpklEQVQ4y+2U2XbaMBCG9SCAbcArtmzLC8EboRCWhIRsbZL3f5A/R4OdOCS0tLfNxXdGGo1+zehoxBIeQeEcfc2D1vfQH0g4oWouDFMgFAWCMIduhOSTa92eg07XRk9x0FNGtFfCiukat7snbC7vsNncYXv9iHVtV+tbbK9/kr28esCujrvZ/UJRLjHJ5hifzRCKnITlYSwRJYr8AmW1oiBpy2pJ4yxf0Lyarmhzkp4jTirEyZSEoriEYYaUuWVHGOo+GB8mCJwzuHwM7k/gB9kHgjCjkod6gE7XQrdnE7JcaRV1RMgYKcrUvgtFc8kp70Km3ozbPllOc09f0exjvws65F3Urdn72oexZuHdniJ46HOh1hqsPfmbbD/yLfhfC/47LcE/P2T1REhw36+yyR2Cxq3ebTrhU0ZHepsZZoSRl8OyU9jOGC4v4LiTtw9WO7wOraY+TCahaqP613HAPF6g/PGENNtCJBeYVA+I0hUGQ/9oyY3YQA9hWmltY1h2AuaZAoGYIZveQzcFOh2Dyj5e8l5QZuSLGar5M8J4gdn8HsvNC14BJPNPZLAT/McAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/3b87b98fdc5e12e60d6157907e058e4c/cab8c/11.png&quot;
+        srcset=&quot;/static/3b87b98fdc5e12e60d6157907e058e4c/6f3f2/11.png 256w,
+/static/3b87b98fdc5e12e60d6157907e058e4c/01e7c/11.png 512w,
+/static/3b87b98fdc5e12e60d6157907e058e4c/cab8c/11.png 744w&quot;
+        sizes=&quot;(max-width: 744px) 100vw, 744px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;자바 프로그램 실행&lt;/h2&gt;
+&lt;p&gt;이제 자바 파일을 생성해보자. &lt;code&gt;src&lt;/code&gt; 디렉토리 밑에 단축키 &lt;code&gt;command + n&lt;/code&gt;을 누른 후 자바 클래스를 선택하여 자바 파일을 생성할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HelloJava&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello Java&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고 대소문자를 유의해서 위와 같이 코딩하자. 그 후에 실행을 하면 아래와 같이 콘솔창에 글자가 찍혀서 나온다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Hello Java&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 각각 작성한 코드들이 무엇인지 살펴보자.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;public class HelloJava&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스라고 한다. 아직은 클래스가 무엇인지 몰라도 된다.&lt;/li&gt;
+&lt;li&gt;지금은 단순히 파일 하나 만들었다고 생각하자.&lt;/li&gt;
+&lt;li&gt;파일명과 클래스명이 동일하야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{}&lt;/code&gt; 블록을 사용해서 클래스의 시작과 끝을 나타낸다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;public static void main(String[] args)&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;main 메서드라고 한다. 아직은 메서드가 뭔지 몰라도 된다.&lt;/li&gt;
+&lt;li&gt;자바는 &lt;code&gt;main(String[] args)&lt;/code&gt; 메서드를 찾아서 시작한다.&lt;/li&gt;
+&lt;li&gt;지금은 단순히 &lt;strong&gt;main&lt;/strong&gt;은 프로그램의 시작점이라 이해!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{}&lt;/code&gt; 블록을 사용해서 메서드의 시작과 끝을 나타낸다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;System.out.println(”Hello Java”);&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;값을 콘솔에 출력하는 기능이다.&lt;/li&gt;
+&lt;li&gt;자바는 문자열을 사용할 때 “을 사용한다. 쌍따옴표 사이에 원하는 문자열을 감싸면 된다.&lt;/li&gt;
+&lt;li&gt;자바는 세미콜론으로 문장을 구분한다. 문장이 끝나면 세미콜론이 필수다. 한글로 치면 마침표 느낌이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;블록&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;블록이 시작되고 끝날때마다 들여쓰기 적용을 확인하자! 이것은 코드를 쉽게 구분하고 이해하도록 도와주는 좋은 관례이다. 블록이 중첩될 때마다 들여쓰기 깊이가 추가된다.&lt;/li&gt;
+&lt;li&gt;들여쓰기는 보톤 space 4번이다. 인텔리제이에서는 Tab키가 space 4번으로 기본적용 되어 있다.&lt;/li&gt;
+&lt;li&gt;원한다면 다르게 변경이 가능하지만 실제 실무에서는 &lt;strong&gt;팀 컨벤션&lt;/strong&gt;에 따라야 한다.&lt;/li&gt;
+&lt;li&gt;들여쓰기 안 해도 프로그램이 동작한다. 하지만 가독성은 좋지 않다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;주석(comment)&lt;/h2&gt;
+&lt;p&gt;주석은 소스코드의 대한 이해가 필요하거나 잠시 막아두고 싶은 코드가 있을 때 사용을 한다. 실무에서는 모호한 코드같은 것이 보이거나 &lt;code&gt;java docs&lt;/code&gt;를 작성할 때 많이 이용한다. 주석을 이용하면 자바는 해당 부분을 무시한다. 즉, 우리 개발자가 보기 위한 용도로 보면 좋을 것 같다.&lt;/p&gt;
+&lt;h3&gt;주석의 종류&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;한줄 주석&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;//&lt;/code&gt; 기호로 시작한다. 이 기호 이후의 모든 텍스트는 주석으로 처리된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;여러 줄 주석&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/*&lt;/code&gt; 로 시작해서 &lt;code&gt;*/&lt;/code&gt; 로 끝난다. 이 사이의 모든 텍스트는 주석으로 처리된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;주석을 쉽게 할 수 있는 단축키가 존재한다. 맥 기준으로 &lt;code&gt;command + /&lt;/code&gt;를 하면 주석이 자동 처리 된다.&lt;/p&gt;
+&lt;h2&gt;자바란?&lt;/h2&gt;
+&lt;h2&gt;자바 표준 스펙&lt;/h2&gt;
+&lt;p&gt;자바는 표준스펙을 정의하고 그 스펙을 가지고 여러 회사들이 다양한 JDK를 만들어서 제공을 한다. 왜 이런 스펙이 존재하는걸까? 그냥 필자가 생각하기에는 이런 것 같다. 각 회사마다 JDK를 제멋대로 만들었다고 해보자. 그런데 갑자기 개발자가 운영배포를 하면서 JDK를 변경했다고 해보자. 그러면 개발환경에서 잘 돌아가던 프로젝트가 운영에서 박살이 날 수 있을 것이다. 이에 자바 커뮤니티 프로세스(JCP)에서 자바 표준 스펙을 관리하며 해당 스펙이 일종의 설계도가 되는 것이다. 그리고 이것을 바탕으로 다양한 회사에서 회사의 특징들을 추가해서 JDK를 배포하는 것이다. 그래서 우리는 Oracle JDK를 사용하다가 Amazone Corretto JDK로 변경해도 이상이 없는 것이다.&lt;/p&gt;
+&lt;h2&gt;컴파일과 실행&lt;/h2&gt;
+&lt;p&gt;자바는 컴파일이라는 과정과 실행이라는 과정으로 나눠진다. 상세 과정은 아래와 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자바 소스 코드를 개발자가 작성한다.&lt;/li&gt;
+&lt;li&gt;자바 컴파일러를 사용해서 소스코드를 컴파일한다.
+&lt;ul&gt;
+&lt;li&gt;자바가 제공하는 &lt;code&gt;javac&lt;/code&gt; 라는 프로그램을 사용&lt;/li&gt;
+&lt;li&gt;.java → .class 파일이 생성&lt;/li&gt;
+&lt;li&gt;자바 소스 코드를 바이트 코드로 변환하며 자바 가상 머신에서 더 빠르게 실행될 수 있게 최적화하고&lt;/li&gt;
+&lt;/ul&gt;
+문법 오류 검출&lt;/li&gt;
+&lt;li&gt;자바 프로그램 실행
+&lt;ul&gt;
+&lt;li&gt;자바가 제공하는 &lt;code&gt;java&lt;/code&gt; 라는 프로그램을 사용&lt;/li&gt;
+&lt;li&gt;자바 가상 머신이 실행되면서 프로그램 작동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;IDE와 자바&lt;/h2&gt;
+&lt;p&gt;인텔리제이에서 자바 코드를 실행하면 컴파일과 실행을 모두 한번에 처리한다.&lt;/p&gt;
+&lt;h3&gt;인텔리제이를 통한 자바 컴파일, 실행 과정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;컴파일
+&lt;ul&gt;
+&lt;li&gt;자바 코드를 컴파일하면 &lt;code&gt;javac&lt;/code&gt; 라는 프로그램을 직접 사용해야 하는데 인텔리제이는 자바 코드를 실행할 때 이 과정을 자동으로 처리한다.&lt;/li&gt;
+&lt;li&gt;인텔리제이 화면에서 프로젝트에 있는 out 폴더에 가보면 컴파일 된 .class 파일이 있는 것을 확인이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfElEQVQoz42T2W7bMBBF9QctEARoLNmxIpIiqc3aF8tL8pKiaYr+/8+cQnILN4Dt9uGCxCwHc4egk2YjftLiBRnKlryMI1XRI0yH0C2+rPBVjYiG0/0vCd0RhA1PsiLQDUI3OJkN2FeSOvEo84R+94Ph+E7ZvRLnz9jsgEkn7bHZ8YPMlMsO53u6x4nCBT+PAV+3Hl0lybIDeXUgKUbidEu8GUnzLXE2ECU9UTJc0Clukx5HCZfvO8HrsKLKBaHtMKZBxy06agnjFpM0hLZG6gpl6qua8jPwfSf4tn2cgcq0KHupYYLe1lTnGLnk7dnydgipCzUDp2muNdyKz0B/5dGWiiJeEenJcks4F9T/nOgi8OHLGt/XfPr8wMKV897+2LwOqS9OPAO9pY+SEff3S1xPfADeUmjOEKnPO3aW3hNCWO7uXBZucLL8PzZ/P5yJG+KsR0c1gcpxHtcGERZ4nmTtW2zSIcMSqa9ozlVo28znphjo+xc20++SKb8ARe5O+BVq65EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;image12&quot;
+        src=&quot;/static/3b57e6be8692e0cf62a579177dc21395/2bef9/12.png&quot;
+        srcset=&quot;/static/3b57e6be8692e0cf62a579177dc21395/6f3f2/12.png 256w,
+/static/3b57e6be8692e0cf62a579177dc21395/01e7c/12.png 512w,
+/static/3b57e6be8692e0cf62a579177dc21395/2bef9/12.png 1024w,
+/static/3b57e6be8692e0cf62a579177dc21395/71c1d/12.png 1536w,
+/static/3b57e6be8692e0cf62a579177dc21395/8bf8a/12.png 1901w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 인텔리제이를 통해 class파일이 확인 가능하다. 하지만 원래 클래스 파일 자체는 기계어로 구성되어 있다. 그것을 인텔리제이가 우리가 보기 쉽게 디컴파일을 한 것이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;실행
+&lt;ul&gt;
+&lt;li&gt;자바를 실행하려면 &lt;code&gt;java&lt;/code&gt; 라는 프로그램을 사용한다. 이 때 컴파일 된 .class 파일 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;인텔리제이에서 자바 코드를 실행하면 컴파일과 실행을 모두 한번에 처리한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;자바와 운영체제 독립성&lt;/h2&gt;
+&lt;p&gt;일반적인 프로그램은 다른 운영체제에서 실행이 불가능하다. 예컨데, 윈도우에서 다운받은 LOL 게임 프로그램이 맥에서 실행이 안되는 것처럼 말이다. 왜냐하면 윈도우 프로그램은 윈도우 운영체제가 사용하는 명령어들로 구성이 되어 있기 때문이다.&lt;/p&gt;
+&lt;p&gt;하지만 자바는 자바가 설치된 모든 운영체제에서 실행이 가능하다. 그 이유는 JDK가 큰 역할을 한다. 개발자가 자바를 작성하면 OS에 특회된 JDK가 각 OS에 맞게 컴파일을 해주기 때문이다. 그래서 개발자는 운영체제를 고려하지 않고 개발에만 집중하면 되는 것이다.&lt;/p&gt;
+&lt;h3&gt;자바 개발과 운영 환경&lt;/h3&gt;
+&lt;p&gt;개발할 때 자바와 서버에서 실행할 때 다른 자바를 사용 가능하다. 그래서 개발할 때는 편리한 JDK나 혹은 팀 컨벤션에 맞는 JDK를 사용하지만 실무에서는 해당 환경에 맞는 JDK를 사용 하는 것이 효과가 나올 것이다. 예를들어 AWS에 EC2 인스턴스에 JDK를 설치하려고 한다면 AWS Correto를 사용하는 것이 더 최적화 되고 좋을 것이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[99클럽] 면접반 4일차]]></title><description><![CDATA[📖 질문 데이터베이스 최적화 기법 DB…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day4/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day4/</guid><pubDate>Mon, 14 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
