@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Apr 2025 16:13:32 GMT</lastBuildDate><item><title><![CDATA[[스프링 입문] 스프링 웹 개발 기초]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 정적 컨텐츠 정적 컨텐츠란, 아무런 가공 없이 요청한 html파일을 그대로 보여주는 것을 말한다. 스프링 부트는 해당 기능을 제공한다. html파일을 resources/static…]]></description><link>https://sungbin.kr/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EC%B4%88/</link><guid isPermaLink="false">https://sungbin.kr/스프링-웹-개발-기초/</guid><pubDate>Wed, 16 Apr 2025 01:08:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Apr 2025 01:15:52 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 6일차]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day6/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day6/</guid><pubDate>Wed, 16 Apr 2025 09:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVQoz93SsQ4BAQyH8d8RQvAUNt7ErXI32gwSYfcC3vpv6WCROLEwfGnaNF+btJAv86vCWTGvfEkWZFX1t4VNxR25kxvZkCO5kDM5VM9oiHBN9qQlW3IlHTmRfojwFZMaNiXjT4/SPG38P2/zAKQNzSHnyggQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배너 이미지&quot;
+        title=&quot;배너 이미지&quot;
+        src=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png&quot;
+        srcset=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/6f3f2/banner.png 256w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/01e7c/banner.png 512w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📖 질문&lt;/p&gt;
+&lt;p&gt;장애 대응 및 복구 전략&lt;/p&gt;
+&lt;p&gt;시스템 장애 발생 시 신속하게 대응하고 복구하기 위해 어떤 전략을 수립하고 적용했는지 구체적으로 설명해 주세요.&lt;/p&gt;
+&lt;p&gt;힌트: 장애 탐지, 알림 시스템, 롤백 전략, 재시도 메커니즘 등의 구체적인 대응 방식을 중심으로 설명해 주세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;답변&lt;/h2&gt;
+&lt;p&gt;제 경험을 바탕으로 시스템 장애 발생 시 대응 전략에 대해 말씀드리겠습니다.&lt;/p&gt;
+&lt;h3&gt;장애 탐지 방식&lt;/h3&gt;
+&lt;p&gt;사내 회의실 예약 시스템을 개발할 때 초기에는 장애 탐지가 지연되는 문제가 있었습니다. 이를 해결하기 위해 아래와 같이 진행을 하게 되었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;모니터링 시스템 구축: Spring Actuator와 Prometheus, Grafana를 이용하여 실시간 시스템 상태 모니터링을 구현했습니다. 특히 CPU 사용량, 메모리, 응답 시간등 몇 가지 핵심 지표에 대한 대시보드를 Grafana를 통하여 확인할 수 있었습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;로그 중앙화: ELK 스택을 활용하여 분산된 서비스의 로그를 중앙에서 수집하고 분석하게끔 구축을 하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;헬스체크 엔드포인트: 각 서비스별로 상태 확인을 위한 헬스체크 API를 구현하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;알림 시스템&lt;/h3&gt;
+&lt;p&gt;장애 발생 시 빠른 대응을 위하여 알림체계를 구축한 경험이 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;임계치 기반 알림: 회의실 예약 시스템에서 동시 접속자가 급증하거나 응답 시간이 특정 임계 값을 초과할 경우 자동 알림이 발송되도록 구현하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Microsoft Teams 활용: 모니터링 시스템과 사내 메신저로 쓰고 있는 Microsoft Teams를 연동하여 실시간으로 알림이 전달되도록 구성하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;우선순위 설정: 알림의 심각도를 분류하여 심각한 순으로 우선순위를 부여하고 해당 부분에 대해서 먼저 대응할 수 있도록 구축하였습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;롤백 및 복구&lt;/h3&gt;
+&lt;p&gt;사내 백오피스 통합 인증 시스템 개발 과정에서 다음과 같은 롤백 및 복구 전략을 적용했습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;블루그린 배포 전략: 신규 버전 배포 시 기존 버전과 신규 버전을 동시에 유지하고, 문제 발생 시 즉시 이전 버전으로 전환할 수 있는 구조를 구축했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스냅샷 백업: 주요 데이터에 대해 정기적인 스냅샷을 생성하여 데이터 손실 시 빠르게 복구할 수 있는 체계를 마련했습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;재시도 메커니즘&lt;/h3&gt;
+&lt;p&gt;회의실 예약 시스템에서 특히 중점을 둔 부분은 외부 서비스 연동 시 발생할 수 있는 일시적 장애에 대한 대응이었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;메시지 큐 활용: 중요 작업은 RabbitMQ를 활용해 비동기 처리하여 시스템 부하를 분산시키고, 실패한 작업은 자동으로 재시도할 수 있도록 구현했습니다. 단, 재시도 횟수를 정하고 특정 횟수를 시도하였는데도 실패 시, 클라이언트에게 에러 페이지를 보여주도록 진행하였습니다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[스프링 입문] 스프링 웹 개발 기초]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 정적 컨텐츠 정적 컨텐츠란, 아무런 가공 없이 요청한 html파일을 그대로 보여주는 것을 말한다. 스프링 부트는 해당 기능을 제공한다. html파일을 resources/static…]]></description><link>https://sungbin.kr/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EC%B4%88/</link><guid isPermaLink="false">https://sungbin.kr/스프링-웹-개발-기초/</guid><pubDate>Wed, 16 Apr 2025 01:08:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
