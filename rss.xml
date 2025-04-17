@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Apr 2025 13:30:18 GMT</lastBuildDate><item><title><![CDATA[[자바 입문] 변수]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 변수 시작 변수에 대해 알아보기 전에 변수가 왜 필요했는지 알아보자. 위와 같은 코드가 있다하자. 수 천라인의 코드들이 있고 그 사이에 1…]]></description><link>https://sungbin.kr/%EB%B3%80%EC%88%98/</link><guid isPermaLink="false">https://sungbin.kr/변수/</guid><pubDate>Wed, 16 Apr 2025 22:24:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Apr 2025 00:41:27 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 7일차]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day7/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day7/</guid><pubDate>Thu, 17 Apr 2025 10:17:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVQoz93SsQ4BAQyH8d8RQvAUNt7ErXI32gwSYfcC3vpv6WCROLEwfGnaNF+btJAv86vCWTGvfEkWZFX1t4VNxR25kxvZkCO5kDM5VM9oiHBN9qQlW3IlHTmRfojwFZMaNiXjT4/SPG38P2/zAKQNzSHnyggQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배너 이미지&quot;
+        title=&quot;배너 이미지&quot;
+        src=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png&quot;
+        srcset=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/6f3f2/banner.png 256w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/01e7c/banner.png 512w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📖 질문&lt;/p&gt;
+&lt;p&gt;로그/모니터링 시스템 구축&lt;/p&gt;
+&lt;p&gt;시스템 안정성을 높이기 위해 로그 수집이나 모니터링 체계를 구축한 경험이 있다면, 사용 도구와 적용 방식, 효과를 함께 설명해 주세요.&lt;/p&gt;
+&lt;p&gt;힌트: 이 질문은 무슨 문제를 감지하고 대응하기 위해 어떤 구조를 만들었는지가 핵심입니다. 수집 → 필터링 → 시각화 → 알림까지의 흐름이 드러나면 설득력 있는 답변이 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;답변&lt;/h2&gt;
+&lt;p&gt;회의실 예약 시스템 및 사내 백오피스 통합 인증 시스템을 개발하면서 시스템 안정성 확보를 위한 로그 수집 및 모니터링 체계를 구축했던 경험이 있습니다.&lt;/p&gt;
+&lt;h3&gt;수집&lt;/h3&gt;
+&lt;p&gt;Spring Boot Actuator를 활용하여 어플리케이션 상태, 메트릭, 헬스 체크 데이터 수집을 진행하였습니다. 또한 Logback을 통한 구조화된 JSON 형식 로깅을 구현하였습니다. 특히 회의실 예약 시스템에서는 동시성 문제과 같은 ERROR레벨과 같은 critical한 로그들을 상세히 남기도록 설계한 경험이 있습니다.&lt;/p&gt;
+&lt;h3&gt;필터링&lt;/h3&gt;
+&lt;p&gt;Logstash를 통해 로그 데이터 필터링 및 전처리를 진행하였습니다. ERROR 레벨 로그와 성능 병목 관련 로그는 우선순위를 높여서 별도 처리를 진행하였습니다. 예를 들어 동시 예약 시도, JWT 인증 실패등 주요 비즈니스 이벤트를 필터링 하였습니다.&lt;/p&gt;
+&lt;h3&gt;시각화&lt;/h3&gt;
+&lt;p&gt;Grafana로 API 응답 시간, 메모리 사용량, 동시 접속자 수등 실시간 대시보드를 구성하였습니다. 대표적으로 회의실 예약 시스템에서 동시 예약 시도 패턴을 시각화하여 비관적 락 적용 이후 모니터링을 통하여 이상유무를 확인하였습니다.&lt;/p&gt;
+&lt;h3&gt;알림&lt;/h3&gt;
+&lt;p&gt;Microsoft Teams 웹 훅 연동으로 주요 에러 및 시스템 부하 발생 시 즉시 알림이 오도록 설계하였습니다.&lt;/p&gt;
+&lt;p&gt;이렇게 로그/모니터링 시스템을 구축을 하면서 안정성이 향상되었고 응답시간이 느린 병목 지점을 확인하여 개선할 수 있는 계기도 만들게 되었습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[자바 입문] 변수]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 변수 시작 변수에 대해 알아보기 전에 변수가 왜 필요했는지 알아보자. 위와 같은 코드가 있다하자. 수 천라인의 코드들이 있고 그 사이에 1…]]></description><link>https://sungbin.kr/%EB%B3%80%EC%88%98/</link><guid isPermaLink="false">https://sungbin.kr/변수/</guid><pubDate>Wed, 16 Apr 2025 22:24:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
