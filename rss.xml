@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Apr 2025 07:59:44 GMT</lastBuildDate><item><title><![CDATA[[자바 입문] 메서드]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 메서드 시작 메서드는 일종의 함수와 같다. 함수라고 막 1차 함수,…]]></description><link>https://sungbin.kr/%EB%A9%94%EC%84%9C%EB%93%9C/</link><guid isPermaLink="false">https://sungbin.kr/메서드/</guid><pubDate>Sun, 20 Apr 2025 16:07:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Apr 2025 08:12:00 GMT</lastBuildDate><item><title><![CDATA[[자바 입문] 메서드]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 메서드 시작 메서드는 일종의 함수와 같다. 함수라고 막 1차 함수,…]]></description><link>https://sungbin.kr/%EB%A9%94%EC%84%9C%EB%93%9C/</link><guid isPermaLink="false">https://sungbin.kr/메서드/</guid><pubDate>Sun, 20 Apr 2025 16:07:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -341,10 +341,7 @@
 &lt;li&gt;&lt;strong&gt;코드 재사용&lt;/strong&gt;: 메서드는 특정 기능을 캡슐화하므로, 필요할 때마다 그 기능을 다시 작성할 필요 없이 해당 메서드를 호출함으로써 코드를 재사용할 수 있다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;코드의 가독성&lt;/strong&gt;: 이름이 부여된 메서드는 코드가 수행하는 작업을 명확하게 나타내므로, 코드를 읽는 사람에게 추가적인 문맥을 제공한다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;모듈성&lt;/strong&gt;: 큰 프로그램을 작은, 관리 가능한 부분으로 나눌 수 있다. 이는 코드의 가독성을 향상시키고 디버깅을 쉽게 만든다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;코드 유지 관리&lt;/strong&gt;: 메서드를 사용하면, 코드의 특정 부분에서 문제가 발생하거나 업데이트가 필요한 경우 해당 메서&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;드만 수정하면 된다. 이렇게 하면 전체 코드 베이스에 영향을 주지 않고 변경 사항을 적용할 수 있다.&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;코드 유지 관리&lt;/strong&gt;: 메서드를 사용하면, 코드의 특정 부분에서 문제가 발생하거나 업데이트가 필요한 경우 해당 메서드만 수정하면 된다. 이렇게 하면 전체 코드 베이스에 영향을 주지 않고 변경 사항을 적용할 수 있다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;재사용성과 확장성&lt;/strong&gt;: 잘 설계된 메서드는 다른 프로그램이나 프로젝트에서도 재사용할 수 있으며, 새로운 기능을 추가하거나 기존 기능을 확장하는 데 유용하다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;추상화&lt;/strong&gt;: 메서드를 사용하는 곳에서는 메서드의 구현을 몰라도 된다. 프로그램의 다른 부분에서는 복잡한 내부 작업에 대해 알 필요 없이 메서드를 사용할 수 있다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;테스트와 디버깅 용이성&lt;/strong&gt;: 개별 메서드는 독립적으로 테스트하고 디버그할 수 있다. 이는 코드의 문제를 신속하게 찾고 수정하는 데 도움이 된다.&lt;/li&gt;
