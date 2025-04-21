@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Apr 2025 08:12:00 GMT</lastBuildDate><item><title><![CDATA[[자바 입문] 메서드]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 메서드 시작 메서드는 일종의 함수와 같다. 함수라고 막 1차 함수,…]]></description><link>https://sungbin.kr/%EB%A9%94%EC%84%9C%EB%93%9C/</link><guid isPermaLink="false">https://sungbin.kr/메서드/</guid><pubDate>Sun, 20 Apr 2025 16:07:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 21 Apr 2025 01:11:45 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 9일차]]></title><description><![CDATA[📖 질문 테스트 코드 작성 또는 TDD 경험 테스트 코드나 TDD…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day9/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day9/</guid><pubDate>Mon, 21 Apr 2025 10:06:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVQoz93SsQ4BAQyH8d8RQvAUNt7ErXI32gwSYfcC3vpv6WCROLEwfGnaNF+btJAv86vCWTGvfEkWZFX1t4VNxR25kxvZkCO5kDM5VM9oiHBN9qQlW3IlHTmRfojwFZMaNiXjT4/SPG38P2/zAKQNzSHnyggQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배너 이미지&quot;
+        title=&quot;배너 이미지&quot;
+        src=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png&quot;
+        srcset=&quot;/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/6f3f2/banner.png 256w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/01e7c/banner.png 512w,
+/static/28366a8bb8ec5fc0935c8bf35fa6d3d3/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📖 질문&lt;/p&gt;
+&lt;p&gt;테스트 코드 작성 또는 TDD 경험&lt;/p&gt;
+&lt;p&gt;테스트 코드나 TDD 관점을 염두에 두고 개발 구조를 설계하거나 구현한 경험이 있다면 공유해 주세요. 꼭 완전한 테스트 주도 개발이 아니더라도, 테스트 가능성을 높이기 위해 고민했던 방식이 있다면 좋습니다.&lt;/p&gt;
+&lt;p&gt;힌트: 이 질문은 “TDD를 완벽하게 했는가”보다, 코드를 테스트하기 쉽게 만들기 위해 어떤 구조나 습관을 가졌는지를 보고자 합니다. 로직 분리, 의존성 주입, 인터페이스 추상화 같은 작은 실천도 강력한 답이 될 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;답변&lt;/h2&gt;
+&lt;p&gt;테스트 가능한 구조를 염두에 두고 개발한 경험이 있습니다. 특히 사내 회의실 예약 시스템을 개발을 할 때 **테스트 커버리지 100%**를 달성하면서 여러가지 고민을 했습니다.&lt;/p&gt;
+&lt;h3&gt;비즈니스 로직 계층 분리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;회의실 예약 로직을 서비스 계층으로 분리하여 단위 테스트가 용이하도록 설계 했습니다.&lt;/li&gt;
+&lt;li&gt;컨트롤러는 요청 검증과 응답처리에만 집중하고, 비즈니스 로직은 서비스 계층에서 처리했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;의존성 주입을 통한 테스트 용이성 확보&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring의 DI를 활용하여 외부 의존성을 주입받도록 구현했습니다. 예를들어, 인증 메일 전송 기능을 인터페이스로 추상화하고 테스트 시에는 Mock 객체를 주입하여 테스트 코드를 작성했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;동시성 문제 테스트를 위한 구조화&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;비관적 락 적용 부분을 별도의 메서드로 분리하여 동시성 테스트가 가능하도록 하였습니다.&lt;/li&gt;
+&lt;li&gt;멀티스레드 환경을 시뮬레이션 하는 테스트를 작성하여 동시 예약 충돌 방지 기능을 검증했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;테스트 가능한 문서화&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring Rest Docs를 활용하여 테스트를 하면서 동시에 API 문서화도 자동으로 수행되도록 했습니다.&lt;/li&gt;
+&lt;li&gt;REST API의 계약을 검증하는 테스트를 작성하여 API 명세와 실제 구현의 일관성을 보장했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 접근 방식을 통해 코드의 안정성을 높이고 SSE 같은 복잡한 기능도 안전하게 구현할 수 있었고, 결과적으로 100%의 테스트 커버리지를 달성하면서도 실질적으로 유의미한 테스트를 작성할 수 있었고, 이는 안정적인 서비스 운영으로 이어졌습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[자바 입문] 메서드]]></title><description><![CDATA[해당 블로그 글은 영한님의 인프런 강의를 바탕으로 쓰여진 글입니다. 메서드 시작 메서드는 일종의 함수와 같다. 함수라고 막 1차 함수,…]]></description><link>https://sungbin.kr/%EB%A9%94%EC%84%9C%EB%93%9C/</link><guid isPermaLink="false">https://sungbin.kr/메서드/</guid><pubDate>Sun, 20 Apr 2025 16:07:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
