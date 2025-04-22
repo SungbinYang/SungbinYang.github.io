@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Apr 2025 00:45:21 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 10일차]]></title><description><![CDATA[📖 질문 실시간 데이터 스트리밍 실시간 데이터 스트리밍 환경에서 지연(latency) 문제를 해결하거나, 처리 안정성을 높이기 위해 어떤 설계를 했는지 설명해 주세요. 힌트: Kafka, Redis Streams, SSE…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day10/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day10/</guid><pubDate>Tue, 22 Apr 2025 09:40:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Apr 2025 01:00:06 GMT</lastBuildDate><item><title><![CDATA[[99클럽] 면접반 10일차]]></title><description><![CDATA[📖 질문 실시간 데이터 스트리밍 실시간 데이터 스트리밍 환경에서 지연(latency) 문제를 해결하거나, 처리 안정성을 높이기 위해 어떤 설계를 했는지 설명해 주세요. 힌트: Kafka, Redis Streams, SSE…]]></description><link>https://sungbin.kr/99%ED%81%B4%EB%9F%BD-day10/</link><guid isPermaLink="false">https://sungbin.kr/99클럽-day10/</guid><pubDate>Tue, 22 Apr 2025 09:40:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
@@ -252,10 +252,7 @@
 &lt;p&gt;메서드를 호출하려면 위와 같이 호출하면 된다. 메서드 이름을 부르고 들어가야 할 인자 값을 넣는다. 그럼 해당 인자 값이 메서드 파라미터로 넘어가서 수행하게 된다.&lt;/p&gt;
 &lt;h3&gt;메서드 용어 정리&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;인수: 위의 코드처럼 메서드 호출부에 들어가는 값들을 인수라고 한다. 즉, 메서드 내부로 들어가는 값을 의미&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;한다. 인자도 같은 의미이다.&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;인수: 위의 코드처럼 메서드 호출부에 들어가는 값들을 인수라고 한다. 즉, 메서드 내부로 들어가는 값을 의미한다. 인자도 같은 의미이다.&lt;/li&gt;
 &lt;li&gt;매개변수, 파라미터: 매개변수, 파라미터는 같은 말이며 메서드 호출부와 메서드 내부 사이에서 값을 전달하는 역할을 하는 변수라는 뜻이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;메서드 정의&lt;/h2&gt;
@@ -264,10 +261,7 @@
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;메서드를 정의할 때는 위와 같이 정의를 한다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;제어자: &lt;code&gt;public&lt;/code&gt; , &lt;code&gt;static&lt;/code&gt; 과 같은 부분이다. 제어자는 뒤에서 설명한다. 지금은 항상 `public&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;static` 키워드를 입력하자.&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;제어자: &lt;code&gt;public&lt;/code&gt; , &lt;code&gt;static&lt;/code&gt; 과 같은 부분이다. 제어자는 뒤에서 설명한다. 지금은 항상 &lt;code&gt;public static&lt;/code&gt; 키워드를 입력하자.&lt;/li&gt;
 &lt;li&gt;반환 타입: 메서드가 실행 된 후 반환하는 데이터의 타입을 지정한다. 메서드가 값을 반환하지 않는 경우, 없다는 뜻의 &lt;code&gt;void&lt;/code&gt; 를 사용해야 한다. ex. void print(String str)&lt;/li&gt;
 &lt;li&gt;메서드 이름: 메서드를 호출할 때 메서드 이름을 통해 호출을 한다.&lt;/li&gt;
 &lt;li&gt;매개변수: 입력 값으로, 메서드 내부에서 사용할 수 있는 변수이다. 매개변수는 옵션이다. 입력값이 필요 없는 메서드는 매개변수를 지정하지 않아도 된다.&lt;/li&gt;
@@ -850,13 +844,9 @@ students &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span cl
 &lt;p&gt;위와 같이 향상된 for문을 이용할 수 있다. 향상된 for문은 아래와 같은 특성이 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;일반 for문과 같이 동작한다.&lt;/li&gt;
-&lt;li&gt;향상된 for문은 배열의 인덱스를 사용하지 않고, 종료 조건을 주지 않아도 된다. 단순히 해당 배열을 처음부터 끝&lt;/li&gt;
+&lt;li&gt;향상된 for문은 배열의 인덱스를 사용하지 않고, 종료 조건을 주지 않아도 된다. 단순히 해당 배열을 처음부터 끝까지 탐색한다.&lt;/li&gt;
+&lt;li&gt;향상된 for문은 배열의 인덱스를 사용하지 않고도 배열의 요소를 순회할 수 있기 때문에 코드가 간결하고 가독성이 좋다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;까지 탐색한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;향상된 for문은 배열의 인덱스를 사용하지 않고도 배열의 요소를 순회할 수 있기 때문에 코드가 간결하고 가독성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이 좋다.&lt;/p&gt;
 &lt;p&gt;다만 향상된 for문을 못 사용하는 부분이 있다. 바로 배열의 인덱스를 활용할 때 사용을 못한다. 그럴때는 어쩔수 없이 일반 for문을 사용해야 한다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;💡 꿀팁&lt;/p&gt;
@@ -1095,11 +1085,12 @@ students &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span cl
 &lt;p&gt;반면에 위의 &lt;code&gt;for&lt;/code&gt;문은 변수 i는 딱 for문 코드 블록에서만 신경쓰면 된다. 효율적이다라고 생각이 들 것이다. 그래서 이전에 왜 실무에서 for문을 많이 쓰는지 알 수 있을 것이다. 이런 측면이 한 몫을 해주는 것이다.&lt;/p&gt;
 &lt;h3&gt;정리&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;변수는 꼭 필요한 범위로 한정해서 사용하는 것이 좋다. 변수의 스코프는 꼭 필요한 곳으로 한정해서 사용하자. 메&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;모리를 효율적으로 사용하고 더 유지보수하기 좋은 코드를 만들 수 있다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;좋은 프로그램은 무한한 자유가 있는 프로그램이 아니라 적절한 제약이 있는 프로그램이다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;변수는 꼭 필요한 범위로 한정해서 사용하는 것이 좋다. 변수의 스코프는 꼭 필요한 곳으로 한정해서 사용하자. 메모리를 효율적으로 사용하고 더 유지보수하기 좋은 코드를 만들 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;좋은 프로그램은 무한한 자유가 있는 프로그램이 아니라 적절한 제약이 있는 프로그램이다.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;형변환1 - 자동 형변환&lt;/h2&gt;
 &lt;h3&gt;형변환&lt;/h3&gt;
@@ -1824,10 +1815,9 @@ intValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span cl
 &lt;p&gt;삼항 연산자는 항이 3개라는 뜻이다. &lt;code&gt;조건&lt;/code&gt; , &lt;code&gt;참_표현식&lt;/code&gt; , &lt;code&gt;거짓_표현식&lt;/code&gt; 이렇게 항이 3개이다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;조건에 만족하면 &lt;code&gt;참_표현식&lt;/code&gt; 이 실행되고, 조건에 만족하지 않으면 &lt;code&gt;거짓_표현식&lt;/code&gt; 이 실행된다. 앞의 &lt;code&gt;if&lt;/code&gt; , &lt;code&gt;else&lt;/code&gt; 문&lt;/p&gt;
+&lt;p&gt;조건에 만족하면 &lt;code&gt;참_표현식&lt;/code&gt; 이 실행되고, 조건에 만족하지 않으면 &lt;code&gt;거짓_표현식&lt;/code&gt; 이 실행된다. 앞의 &lt;code&gt;if&lt;/code&gt; , &lt;code&gt;else&lt;/code&gt; 문과 유사하다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;과 유사하다.&lt;/p&gt;
 &lt;p&gt;약간 &lt;code&gt;if-else&lt;/code&gt;를 간편하게 보이기 위한 식이 삼항 연산자라고 생각하면 될 것 같다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!&lt;/p&gt;
