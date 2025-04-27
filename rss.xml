@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Apr 2025 05:59:26 GMT</lastBuildDate><item><title><![CDATA[[자바 기본] 다형성과 설계]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EB%8B%A4%ED%98%95%EC%84%B1%EA%B3%BC-%EC%84%A4%EA%B3%84/</link><guid isPermaLink="false">https://sungbin.kr/다형성과-설계/</guid><pubDate>Sun, 27 Apr 2025 14:53:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Apr 2025 06:31:05 GMT</lastBuildDate><item><title><![CDATA[[자바 기본] 다형성과 설계]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EB%8B%A4%ED%98%95%EC%84%B1%EA%B3%BC-%EC%84%A4%EA%B3%84/</link><guid isPermaLink="false">https://sungbin.kr/다형성과-설계/</guid><pubDate>Sun, 27 Apr 2025 14:53:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -57,6 +57,9 @@
 &lt;li&gt;다형성의 본질을 알려면 협력이라는 객체간의 관계를 알아야 한다.&lt;/li&gt;
 &lt;li&gt;해당 본질을 알게되면 클라이언트는 변경하지 않고 서버의 구현 기능을 유연하게 변경 할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;스프링의 핵심인 IoC, DI가 다형성을 이용한 것이다.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2&gt;다형성 - 역할과 구현 예제1&lt;/h2&gt;
 &lt;p&gt;이제 예제를 통해 역할과 구현을 나눠보도록 하겠다. 일단 처음에는 역할과 구현을 나누지 않고 작성해보고 점차 발전해보겠다. 예제는 K-패스로 해보겠다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;KpassKbankCard&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
