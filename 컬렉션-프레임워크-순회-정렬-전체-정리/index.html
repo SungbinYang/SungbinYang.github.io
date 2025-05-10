@@ -1,0 +1,714 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[자바 중급2] 컬렉션 프레임워크 - 순회, 정렬, 전체 정리 · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/컬렉션-프레임워크-순회-정렬-전체-정리/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[자바 중급2] 컬렉션 프레임워크 - 순회, 정렬, 전체 정리"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[자바 중급2] 컬렉션 프레임워크 - 순회, 정렬, 전체 정리"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-e19ab4801f705d965f2d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-b886238b8f8508435f5b.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js"/><link as="fetch" rel="preload" href="/page-data/컬렉션-프레임워크-순회-정렬-전체-정리/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[자바 중급2] 컬렉션 프레임워크 - 순회, 정렬, 전체 정리</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->자바</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 5월 10일<!-- --> · <!-- -->16<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">자바 중급2<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (10개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css s3rky0">.css-s3rky0{margin-bottom:0.5rem;}.css-s3rky0::marker{font-weight:600;color:#9195F6;}.css-s3rky0::after{content:'- 16분';margin-left:0.2rem;font-size:0.8rem;}.css-s3rky0>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-s3rky0>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-s3rky0 e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - 순회, 정렬, 전체 정리</span></li><style data-emotion="css 13xotzt">.css-13xotzt{margin-bottom:0.5rem;}.css-13xotzt::marker{font-weight:600;color:#9195F6;}.css-13xotzt::after{content:'- 7분';margin-left:0.2rem;font-size:0.8rem;}.css-13xotzt>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13xotzt>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13xotzt e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - Map, Stack, Queue</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - Set</span></li><style data-emotion="css 1ap6lfi">.css-1ap6lfi{margin-bottom:0.5rem;}.css-1ap6lfi::marker{font-weight:600;color:#9195F6;}.css-1ap6lfi::after{content:'- 11분';margin-left:0.2rem;font-size:0.8rem;}.css-1ap6lfi>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1ap6lfi>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1ap6lfi e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - HashSet</span></li><li class="css-ovkdog e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - Hash</span></li><style data-emotion="css tupxoa">.css-tupxoa{margin-bottom:0.5rem;}.css-tupxoa::marker{font-weight:600;color:#9195F6;}.css-tupxoa::after{content:'- 17분';margin-left:0.2rem;font-size:0.8rem;}.css-tupxoa>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-tupxoa>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-tupxoa e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - List</span></li><style data-emotion="css 1rb90kg">.css-1rb90kg{margin-bottom:0.5rem;}.css-1rb90kg::marker{font-weight:600;color:#9195F6;}.css-1rb90kg::after{content:'- 14분';margin-left:0.2rem;font-size:0.8rem;}.css-1rb90kg>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1rb90kg>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1rb90kg e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - LinkedList</span></li><style data-emotion="css sym2eg">.css-sym2eg{margin-bottom:0.5rem;}.css-sym2eg::marker{font-weight:600;color:#9195F6;}.css-sym2eg::after{content:'- 15분';margin-left:0.2rem;font-size:0.8rem;}.css-sym2eg>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-sym2eg>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-sym2eg e1k9d3a00"><span>[자바 중급2] 컬렉션 프레임워크 - ArrayList</span></li><li class="css-1rb90kg e1k9d3a00"><span>[자바 중급2] 제네릭2</span></li><style data-emotion="css ikk1gw">.css-ikk1gw{margin-bottom:0.5rem;}.css-ikk1gw::marker{font-weight:600;color:#9195F6;}.css-ikk1gw::after{content:'- 9분';margin-left:0.2rem;font-size:0.8rem;}.css-ikk1gw>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ikk1gw>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ikk1gw e1k9d3a00"><span>[자바 중급2] 제네릭1</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQoz6WRPQvCQAyG+///R6GKm6AndhIcrNaiXVzEaqVaPym9Xs67XuIgiEvFw2whPDxJXof+KOf7uD4cUWtLGJGIHpMA2PDdWpgBqRyNOfMVkTHmV/ilSW7QjfPF+hRnpVC1hVkb3Nxla54NVpczVw1bN8Co9TbJw7QIdsX+Wtk9DHklXU+3O6bXl66HIG1gIQTzIVrCNJSzCJWyzLnp0A/4CfW+SjF6WKSqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="배너 이미지"
+        title="배너 이미지"
+        src="/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png"
+        srcset="/static/3189e9c0404650ccc6c5ffc998bc8717/6f3f2/banner.png 256w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/01e7c/banner.png 512w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png 1024w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/71c1d/banner.png 1536w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/e8950/banner.png 2000w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 블로그 글은 <a href="https://inf.run/xexJb">영한님의 인프런 강의</a>를 바탕으로 쓰여진 글입니다.</p>
+</blockquote>
+<h2>순회1 - 직접 구현하는 Iterable, Iterator</h2>
+<p>순회라는 단어는 여러 곳을 돌아다닌다는 뜻이다. 자료 구조에 순회는 자료 구조에 들어있는 데이터를 차례대로 접근해서 처리하는 것을 순회라 한다. 그런데 다양한 자료 구조가 있고, 각각의 자료 구조마다 데이터를 접근하는 방법이 모두 다르다.</p>
+<p>배열 리스트 같은 경우는 인덱스 0번부터 <code>size</code>까지 인덱스를 증가시키면서 순회를 진행해야 하고 연결 리스트는 <code>Node</code>의 <code>next</code>를 참조해서 해당 값이 null일때까지 순회를 진행해야 한다. 이처럼 여러 자료구조마다 순회방식이 매우 다양하고 복잡하다. 이것을 사용하는 사용자 입장에서 이런 내부 구조 로직을 알아야 한다는 것은 매우 불필요하다. 사용자는 내부 구조가 뭔지 모르게 블랙박스라고 생각하고 사용하기만 하면 된다.</p>
+<p>자료 구조의 구현과 관계 없이 모든 자료 구조를 동일한 방법으로 순회할 수 있는 일관성 있는 방법이 있다면, 자료 구조를 사용하는 개발자 입장에서 매우 편리할 것이다. 자바는 이런 문제를 해결하기 위해 <code>Iterable</code>과 <code>Iterator</code> 인터페이스를 제공한다.</p>
+<h3>Iterable, Iterator</h3>
+<p><code>Iterable</code>은 반복 가능하다라는 의미이고 <code>Iterator</code>은 반복자라는 의미이다. 내부 구조를 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Iterable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+  <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> <span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div></div>
+<p><code>Iterable</code>은 <code>Iterator</code>만 반환한다. 즉, 반복 가능하니 반복자를 반환해야 한다라는 의미로 생각하면 쉬울 것 같다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+  <span class="token keyword">boolean</span> <span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">E</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>hasNext()</code>는 다음 요소가 있는지 판단하닌 기준 로직이고, <code>next()</code>는 다음 요소를 반환하는 로직이다. 이 두 인터페이스를 구현하면 순회를 할 수 있고, 사용자는 해당 인터페이스의 메서드만 사용하기만 하면 된다. 정말 간편해진 것 같다. 그럼 예제코드를 통해 한번 뼈저리게 느껴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>iterable</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Iterator</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyArrayIterator</span> <span class="token keyword">implements</span> <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> currentIndex <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> targetArr<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MyArrayIterator</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> targetArr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>targetArr <span class="token operator">=</span> targetArr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> currentIndex <span class="token operator">&lt;</span> targetArr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> targetArr<span class="token punctuation">[</span><span class="token operator">++</span>currentIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>해당 클래스는 배열의 반복자를 커스텀하게 개발한 것이다. 처음 <code>currentIndex</code>의 값을 -1로 설정하고 외부로 주입 받은 배열의 참조값을 통해 배열에 접근하여 <code>hasNext()</code>메서드를 구현한다. 그리고 <code>next()</code> 메서드를 통해 인덱스를 증가시켜 첫 배열의 인덱스인 0을 가리키게 한다. 이제 해당 반복자를 <code>Iterable</code>을 구현한 클래스에 반환시켜야 할 것이다.</p>
+<blockquote>
+<p>✅ 참고</p>
+<p>Iterator` 는 단독으로 사용할 수 없다. 또한 해당 구현체도 단독으로 사용 불가다.</p>
+</blockquote>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>iterable</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Iterator</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyArray</span> <span class="token keyword">implements</span> <span class="token class-name">Iterable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MyArray</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>numbers <span class="token operator">=</span> numbers<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyArrayIterator</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>이제 사용하는 코드를 확인해보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>iterable</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Iterator</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyArrayMain</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyArray</span> myArray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> iterator <span class="token operator">=</span> myArray<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"iterator 사용"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Integer</span> value <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"value = "</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그럼 이제 클래스 구조도를 살펴보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.328125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABPklEQVQoz41SSY6EMAzkAyCxr4JGIMQS1gMnDhz4/5c8KreSSTPdmj4URnalbKdieJ5HjuMwbNvm6LouIX8HavIfHPDvZwzf90mIkaZponVdqes6SpLkjyh4aZpyRK3reuYvy0LjOHINeQMfFI7joH3fqaoqKsuSRUEC8J/nOZ3nyTHLMtq2jfnAMAwURdFTEN3DMOQEyEEQMN6trE/dti1vg3NAHMe/gpII4U/3dwe4mLQoChaTQ/DK34ro0A1BVKZAOc8Lvre+7/nOsMJ/KxePB68thOB7x8RKcBieyaZpeA0Ah+GoLqg3GoRgMyBa1/Wry5gMTlqWxWSYI11GlC5f16VcnueZ86ZpqmbKFDwbdMHYUujdvcqHjRoEsRE2RAM1IQgQgVPyCXx6NjrkGQzx4rLsLN3+1vU7X7r8A1RVNgjlu9uQAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image1"
+        title="image1"
+        src="/static/7bbbbb81b86adf4a4ef36bee48daf8cb/2bef9/01.png"
+        srcset="/static/7bbbbb81b86adf4a4ef36bee48daf8cb/6f3f2/01.png 256w,
+/static/7bbbbb81b86adf4a4ef36bee48daf8cb/01e7c/01.png 512w,
+/static/7bbbbb81b86adf4a4ef36bee48daf8cb/2bef9/01.png 1024w,
+/static/7bbbbb81b86adf4a4ef36bee48daf8cb/1dbe8/01.png 1374w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li><code>MyArray</code>는 <code>Iterable</code> 인터페이스를 구현한다. 따라서 <code>MyArray</code>는 반복할 수 있다는 의미가 된다.</li>
+<li><code>Iterable</code> 인터페이스를 구현하면 <code>iterator()</code> 메서드를 구현해야 한다. 이 메서드는 <code>Iterator</code> 인터페이스를 구현한 반복자를 반환한다. 여기서는 <code>MyArrayIterator</code>를 생성해서 반환했다.</li>
+</ul>
+<p>그럼 이제 메모리 구조도를 그림을 통해 살펴보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.953125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYUlEQVQoz4WS2W4CMQxF+QImk91JyIgWmAFUtVI3aOlD//+jbmVTBpC6PFzFSY5iX8cTay2ICM45cPybjDGIMSKE8Cc3YWg+nyMRgWIAUQTFKElYKSVJxuq6TvbHuzQyrJyzMBPeaN3CuICyfEJZvSAvn2Csg1IKMdL4YM4J3lm0qoFqplBqilZNJebCnPfHCq0xsJ5Q+lfUYY/S72Csh1KNWGQmJ8J8MeD27oDav4hmq2fU/hVl+QhKBe5kmb03TSN2h6EX66ppoLVGrRWlFKkszW5R+j26zTu67QF1/YZu+4HZsAPlGZyz5wq5onRzj65/lDVEQgj+qofMam1gjIU25lsWrdZHy9xDDozRYrmu37F4+ETdHOADjZa99wJzzH1t2/Za0utwfpAtywdQxrDewvkwwqfMpwf5jFtxqUtuwhDb4oOzgowCx3zHCY+/nOXsclxO3Dg2fw3pT8P9H/MFEOIAGGYjVqEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image2"
+        title="image2"
+        src="/static/23641d8c4c090f462a917390e48e1840/2bef9/02.png"
+        srcset="/static/23641d8c4c090f462a917390e48e1840/6f3f2/02.png 256w,
+/static/23641d8c4c090f462a917390e48e1840/01e7c/02.png 512w,
+/static/23641d8c4c090f462a917390e48e1840/2bef9/02.png 1024w,
+/static/23641d8c4c090f462a917390e48e1840/71c1d/02.png 1536w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li><code>MyArrayIterator</code>의 인스턴스를 생성할 때 순회할 대상을 지정해야 한다. 여기서는 <code>MyArray</code>의 배열을 지정했다.</li>
+<li><code>MyArrayIterator</code> 인스턴스는 내부에서 <code>MyArray</code>의 배열을 참조한다.</li>
+<li>이제 <code>MyArrayIterator</code>를 통해 <code>MyArray</code>가 가진 내부 데이터를 순회할 수 있다.</li>
+</ul>
+<h2>순회2 - 향상된 for문</h2>
+<p><code>Iterable</code>,<code>Iterator</code>를 사용하면 또 하나의 큰 장점을 얻을 수 있다. 바로 향상된 for문을 사용이 가능하다. 즉, 배열이거나 <code>Iterable</code>을 구현한 구현체에 한해서 향상된 for문을 사용이 가능하다. 즉, 기존의 아래의 코드를</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Integer</span> value <span class="token operator">=</span> iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"value = "</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>아래의 코드로 변경이 가능한 것이다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> value <span class="token operator">:</span> myArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"value = "</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div></div>
+<p>훨씬 간단해졌다. 사실은 자바 컴파일러가 위의 향상된 for문을 기존에 작성한 코드로 컴파일 타임에 변경을 해주는 거라 이해를 하면 된다. 그래서 전체 배열 순회를 하는 경우 향상된 for문을 실무에서 많이 이용한다.</p>
+<h2>순회3 - 자바가 제공하는 Iterable, Iterator</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 114.0625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAACN0lEQVQ4y52VyYoCQQyG5yzu+77vO4gHH0E8iAuIePbq+98yfIEUZXcrwxxCVZKqv5I/SfdPLpcTpFAoiO2j9Hw+H9J9m+1/fAD/0F/1EKAdKhaLks1mJZPJqOC0PYLP97M3IMC5z94BYux0OjKZTGQ8Hst0OtW9ia+bv9frvYEqoIXMC4vFQsrlslQqFSmVSm+c2UXs1WpV1/l8rivRGucKiAFAXk8mk5JKpRR0NpvpI+v1WiMajUZqx59IJFQ3wBCHRAYA/AAK0Ol0ksvlIsfjUW63m5zPZ7UDmE6nNQAesBo4DkEGkCg4iB6Px2W328n9fleg5/Mpm81GYrGYXgQUQO4ZZY5DQiZ0DpAKoJb2cDiUbrcrg8FA6vW6Ro+fB0kZwI8ckk6tVlPhMoDYrUhcxo5QGIpi7RbikBeazaa+SlS0BitRv14vLQxR+v52ux1uG7+x/Wa2Pa/DLRdM/9rY/uhFTQo2IjLA4OR8nGUMcEMBmBimgD3rdrvVdNF9PxT5UToOrezw1Gq1lBsOQ7wVyQS7+VerlZsoB2hkWh/SNrQGdlIlMgrQ7/c1Ouy0FG2DPdTYfh8CCD9c4HWmhAlhfTwecr1etbXoQ5uUyFlGgoCkfjgc3KQAut/vNW3OGKBNSiSgTQqA2EiX5kXss4XdUrZJ+cjhcrl0U8KKDW4QHkSwNxoNLRjnOWMcgvXWNqRJISgAqy82IUSNH532+fpPMW4QiLY94vtMD05LqLGDf73//KR+ARgSXC1Llr2sAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image3"
+        title="image3"
+        src="/static/e7a45fea246bc24f5ed912d9a7f19ec9/e17e5/03.png"
+        srcset="/static/e7a45fea246bc24f5ed912d9a7f19ec9/6f3f2/03.png 256w,
+/static/e7a45fea246bc24f5ed912d9a7f19ec9/e17e5/03.png 400w"
+        sizes="(max-width: 400px) 100vw, 400px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>자바 컬렉션 프레임워크는 배열 리스트, 연결 리스트, 해시 셋, 연결 해시 셋, 트리 셋 등등 다양한 자료 구조를 제공한다.</li>
+<li>자바는 컬렉션 프레임워크를 사용하는 개발자가 편리하고 일관된 방법으로 자료 구조를 순회할 수 있도록 <code>Iterable</code> 인터페이스를 제공하고, 이미 각각의 구현체에 맞는 <code>Iterator</code>도 다 구현해두었다.</li>
+<li>자바 <code>Collection</code> 인터페이스의 상위에 <code>Iterable</code>이 있다는 것은 모든 컬렉션을 <code>Iterable</code>과 <code>Iterator</code> 를 사용해서 순회할 수 있다는 뜻이다.</li>
+<li><code>Map</code> 의 경우 <code>Key</code> 뿐만 아니라 <code>Value</code> 까지 있기 때문에 바로 순회를 할 수는 없다. 대신에 <code>Key</code> 나 <code>Value</code> 를 정해서 순회할 수 있는데, <code>keySet()</code>, <code>values()</code>를 호출하면 <code>Set</code>, <code>Collection</code>을 반환하기 때문에 <code>Key</code>나 <code>Value</code>를 정해서 순회할 수 있다. 물론 <code>Entry</code>를 <code>Set</code>구조로 반환하는 <code>entrySet()</code>도 순회가 가능하다.</li>
+</ul>
+<p>예제 코드를 통해 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>iterable</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JavaIterableMain</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> set <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">printAll</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printAll</span><span class="token punctuation">(</span>set<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">forEach</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">forEach</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">printAll</span><span class="token punctuation">(</span><span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> iterator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"iterator = "</span> <span class="token operator">+</span> iterator<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">Iterable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> iterable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"iterable = "</span> <span class="token operator">+</span> iterable<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Integer</span> i <span class="token operator">:</span> iterable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>Iterable</code>과 <code>Iterator</code>를 통해 사용을 하니 다형성이 정말 잘 사용된 것을 확인할 수 있다.</p>
+<blockquote>
+<p>✅ 참고</p>
+<p>실행결과를 보면 <code>java.util.ArrayList$Itr</code>와 <code>java.util.HashMap$KeyIterator</code>이 나올 것이다. <code>$</code>표시는 내부 클래스라는 의미이다. 또한 <code>HashSet</code>을 사용하는데 클래스 이름이 <code>HashMap</code>이 나오는 이유는 바로 <code>HashSet</code>자체가 <code>HashMap</code>을 가져다 쓰기 때문이다.</p>
+</blockquote>
+<blockquote>
+<p>✅ 참고</p>
+<p>Iterator (반복자) 디자인 패턴은 객체 지향 프로그래밍에서 컬렉션의 요소들을 순회할 때 사용되는 디자인 패턴이다. 이 패턴은 컬렉션의 내부 표현 방식을 노출시키지 않으면서도 그 안의 각 요소에 순차적으로 접근할 수 있게 해준다. Iterator 패턴은 컬렉션의 구현과는 독립적으로 요소들을 탐색할 수 있는 방법을 제공하며, 이로 인해 코드의 복잡성을 줄이고 재사용성을 높일 수 있다.</p>
+</blockquote>
+<h2>정렬1 - Comparable, Comparator</h2>
+<p>예제 코드를 통하여 데이터를 정렬하는 방법을 알아보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SortMain1</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Integer</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"기본 정렬 후"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>Arrays.sort()</code> 메서드를 사용하면 배열의 값을 비교하여 오름차순으로 정렬을 해준다. 비교 순서는 간단히 보면 아래와 같다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 520px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.96875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABP0lEQVQ4y62UWa6DMAxFWQCFMpUyCDFWVCrsf3eujiVHKS3v631YcTzce5NggizLBMvzXM3f/xU/8wMLFEXxAcLe4pazuNUdexTQnDRN1ZIkOfUxas0n7gtgVYX3+13GcZRhGJwty+J8y/mxvu9lnmdpmkaBHeD1etUCkgBjVVXJ6/WSruvUx9q2lW3bpK5rrSnLUonoA8OuKEA6bDQZeBiGWkwO1tvtJnEcyzRNmoPI7pZ66hwgcgkinWZU0Awze1NH3ePxkCiKZF1XjaESEnKQAqpHRiFHgR27XC6qEEZ8DBU0Q8aeOjs2GO6VQYcNVlShgnXfd/V5CDNi5PBZn8+nOzIK9VEMGTa7bFvNtz1Nx5y97sdn45t9dyTtO7P4scbv+5oUf8T8SfkV/zUpTqE/Ur9G7Cx+zH0d+b9+Dm9DE2GzTJ5sQgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image4"
+        title="image4"
+        src="/static/0db8b4c33e93d7259bf29456ea2d8af6/69902/04.png"
+        srcset="/static/0db8b4c33e93d7259bf29456ea2d8af6/6f3f2/04.png 256w,
+/static/0db8b4c33e93d7259bf29456ea2d8af6/01e7c/04.png 512w,
+/static/0db8b4c33e93d7259bf29456ea2d8af6/69902/04.png 520w"
+        sizes="(max-width: 520px) 100vw, 520px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위와 같은 배열이 있는데 첫번째 요소와 다음 요소를 비교를 진행한다. 즉, 3과 1을 비교해서 3이 더 크므로 서로 위치를 교환한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 516px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.6875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABHklEQVQoz3WTV47EQAhEfQDnnHP4cLj/7Xr1kLBmvJ6PElANdIHdVhRFBiRJYtSP41jw9Ml54zXGWuqEYSgIguC26n/yT1+b6WUWRJ7nZp5n0/e9GYZBME3T7Y/jKGfkKKdI0/RLveX7vmnb1mzbJo3LsjRFUZh9303XdcIRN01jjuMQX6EX0UNXZiGf5Kqq5CDLMmPbttzOSBSSzBkNPM+TfNd15Yw8etwNKUIhSZCoIpnxGGFdV+EogqMIpdQhQi9mdBlZFQLHcUQJDVHDBXDEFLFXFBID1kPDfyPXdS07o2BZFrHneYo6VCmu65IzfCx7p+nXyPp12B1AOh8CC+CesVqgvwwc1nr+mE9fY0Z+458P42fDtxfxy/9s+AdxcBeySD7F1wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image5"
+        title="image5"
+        src="/static/751d813c9a578add1494194117021623/75dcb/05.png"
+        srcset="/static/751d813c9a578add1494194117021623/6f3f2/05.png 256w,
+/static/751d813c9a578add1494194117021623/01e7c/05.png 512w,
+/static/751d813c9a578add1494194117021623/75dcb/05.png 516w"
+        sizes="(max-width: 516px) 100vw, 516px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 다음 인덱스인 3과 2를 비교한다. 3이 더 크므로 두 위치를 교환한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 518px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.46875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABE0lEQVQoz62S2Y6EQAhF/QF3233fjfr/n0fnVELFmen00zwgdblwAYMTx7FgSZIY+/ZW/C3uvF4vS6Zp+sNj8E/8zNFazcE7URRJnudyHIfM8yzLshh/XZds22aw2n3f9k3Ovu9SlqWgYScMw1Dqupa+78XzPAmCQHzfl3EcJcsyEwNTgIjyxJumka7rBA2mM4KoqyDJCFEwTZMRoWAYBsMhCHeep+GqqjI8GvorrGDbtuK6rlkfTwM6gouisM3gEAGz7nNCIwig07quZkWK8fxTkukMpimT0QCMscWflflQRHeM9TDW05jGNcZb4wijYSfUc2B1CLrhwbyfceU0rhxiVlCL//2wnwf8+2g/5XyKc9hvpDAXzRtEV38AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image6"
+        title="image6"
+        src="/static/db47fbb63f9b9e91b7cbb6fe47f5fa02/6b9fd/06.png"
+        srcset="/static/db47fbb63f9b9e91b7cbb6fe47f5fa02/6f3f2/06.png 256w,
+/static/db47fbb63f9b9e91b7cbb6fe47f5fa02/01e7c/06.png 512w,
+/static/db47fbb63f9b9e91b7cbb6fe47f5fa02/6b9fd/06.png 518w"
+        sizes="(max-width: 518px) 100vw, 518px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 다시 처음 인덱스로 돌아와서 마지막 인덱스와 비교를 한다. 1이 더 작으므로 위치는 그대로 유지한다.</p>
+<p>이런식으로 <code>Arrays.sort()</code> 메서드를 이용하면 정렬을 진행한다.</p>
+<blockquote>
+<p>✅ 참고</p>
+<p>실제로는 정렬 성능을 높이기 위한 다양한 정렬 알고리즘이 존재한다. 자바는 초기에는 퀵소트를 사용했다가 지금은 데이터가 작을 때(32개 이하)는 듀얼 피벗 퀵소트(Dual-Pivot QuickSort)를 사용하고, 데이터가 많을 때는 팀소트(TimSort)를 사용한다. 이런 알고리즘은 평균 O(n log n)의 성능을 제공한다.</p>
+</blockquote>
+<h3>비교자 - Comparator</h3>
+<p>그런데 만약 오름차순 정렬이 아닌 내림차순 정렬을 하려면 어떻게 해야할까? 자바에서 제공해주는 <code>Comparator</code>을 구현하고 <code>compare()</code> 메서드를 오버라이딩해서 정의하면 된다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Comparator</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SortMain2</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Integer</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Comparator 비교"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">AscComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"AscComparator: "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DescComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"DescComparator: "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">AscComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reversed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"AscComparator.reversed: "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">AscComparator</span> <span class="token keyword">implements</span> <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> o1<span class="token punctuation">,</span> <span class="token class-name">Integer</span> o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"o1 = "</span> <span class="token operator">+</span> o1 <span class="token operator">+</span> <span class="token string">" o2 = "</span> <span class="token operator">+</span> o2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>o1 <span class="token operator">&lt;</span> o2<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>o1 <span class="token operator">==</span> o2<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">DescComparator</span> <span class="token keyword">implements</span> <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> o1<span class="token punctuation">,</span> <span class="token class-name">Integer</span> o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"o1 = "</span> <span class="token operator">+</span> o1 <span class="token operator">+</span> <span class="token string">" o2 = "</span> <span class="token operator">+</span> o2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>o1 <span class="token operator">&lt;</span> o2<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>o1 <span class="token operator">==</span> o2<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>Arrays.sort()</code> 메서드에 첫번째 인자로 배열과 두번째 인자로 비교자를 넣을 수 있다. 비교자는 <code>Comparator</code>를 구현하면 된다. 그러면 자동으로 <code>compare()</code> 메서드를 호출한다.</p>
+<blockquote>
+<p>✅ 참고</p>
+<p>위의 코드에서는 오름차순 비교자, 내림차순 비교자를 만들었지만 각각 <code>reversed()</code>라는 메서드를 제공해준다. 해당 메서드를 이용하면 오름차순은 내림차순으로 내림차순은 오름차순으로 변경된다.</p>
+</blockquote>
+<h2>정렬2 - Comparable, Comparator</h2>
+<p>자바가 기본으로 제공하는 <code>Integer</code> , <code>String</code> 같은 객체를 제외하고 직접 만든 객체를 정렬하려면 어떻게 해야 할까? 내가 만든 객체이기 때문에 정렬을 할 때 내가 만든 두 객체 중에 어떤 객체가 더 큰지 알려줄 방법이 있어야 한다. 이때는 <code>Comparable</code> 인터페이스를 구현하면 된다. 이 인터페이스는 이름 그대로 비교 가능한, 비교할 수 있는 이라는 뜻으로, 객체에 비교 기능을 추가해 준다.</p>
+<p>예제 코드를 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyUser</span> <span class="token keyword">implements</span> <span class="token class-name">Comparable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyUser</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token class-name">String</span> id<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compareTo</span><span class="token punctuation">(</span><span class="token class-name">MyUser</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">&lt;</span> o<span class="token punctuation">.</span>age <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">==</span> o<span class="token punctuation">.</span>age <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"MyUser{"</span> <span class="token operator">+</span>
+                <span class="token string">"id='"</span> <span class="token operator">+</span> id <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token string">", age="</span> <span class="token operator">+</span> age <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>해당 코드는 <code>Comparable</code> 인터페이스를 구현한 것을 알 수 있다. 그러면 <code>compareTo()</code>메서드를 재정의하여야 하는데 여기서 정렬 기준을 작성하면 된다. 이제 이런 객체를 <code>Arrays.sort()</code> 메서드에 전달해주면 해당 메서드가 객체의 <code>Comparable</code>이 구현되어 있는지 보고 구현이 되어 있다면 정렬을 진행해준다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token class-name">MyUser</span> myUser1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">MyUser</span> myUser2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">MyUser</span> myUser3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">MyUser</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token punctuation">{</span>myUser1<span class="token punctuation">,</span> myUser2<span class="token punctuation">,</span> myUser3<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"기본 데이터"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그런데 만약 다른 기준으로 정렬을 하고 싶다면 이전에 살펴본 것처럼 <code>Comparator</code>를 구현한 비교자 클래스를 만들고 두번째 인자로 넣어주면 된다. 예제코드에서는 id 비교자를 만들어서 해보았다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Comparator</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IdComparator</span> <span class="token keyword">implements</span> <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyUser</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token class-name">MyUser</span> o1<span class="token punctuation">,</span> <span class="token class-name">MyUser</span> o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> o1<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>o2<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위와 같이 비교자 클래스를 만들고 아래와 같이 만들면 된다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SortMain3</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyUser</span> myUser1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyUser</span> myUser2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyUser</span> myUser3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">MyUser</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token punctuation">{</span>myUser1<span class="token punctuation">,</span> myUser2<span class="token punctuation">,</span> myUser3<span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"기본 데이터"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Comparable 기본 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"IdComparator 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IdComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"IdComparator().reversed() 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IdComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reversed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<blockquote>
+<p>⚠️ 주의</p>
+<p>만약 <code>Comparable</code>도 구현하지 않고, <code>Comparator</code>도 제공하지 않으면 <code>ClassCastException</code>이라는 런타임 예외가 발생하니 주의해야 한다.</p>
+</blockquote>
+<h3>정리</h3>
+<p>객체의 기본 정렬 방법은 객체에 <code>Comparable</code>를 구현해서 정의한다. 이렇게 하면 객체는 이름 그대로 비교할 수 있는 객체가 되고 기본 정렬 방법을 가진다. 그런데 기본 정렬 외에 다른 정렬 방법을 사용해야 하는 경우 비교자를 별도로 구현해서 정렬 메서드에 전달하면 된다. 이 경우 전달한 <code>Comparator</code>가 항상 우선권을 가진다. 자바가 제공하는 <code>Integer</code>, <code>String</code>같은 기본 객체들은 대부분 <code>Comparable</code>을 구현해 두었다.</p>
+<h2>정렬3 - Comparable, Comparator</h2>
+<p>정렬은 배열 뿐만 아니라 순서가 있는 <code>List</code> 같은 자료 구조에도 사용할 수 있다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">LinkedList</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SortMain4</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyUser</span> myUser1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyUser</span> myUser2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyUser</span> myUser3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyUser</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"기본 데이터"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Comparable 기본 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//        Collections.sort(list);</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"IdComparator 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IdComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//        Collections.sort(list, new IdComparator());</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위의 코드에서 유의하게 봐야할 메서드들이 있다.</p>
+<ul>
+<li>list.sort()
+<ul>
+<li>위의 코드는 해당 배열의 아이템이 구현한 <code>Comparable</code>을 가지고 기본 정렬을 진행한다. 단, 파라미터로 <code>null</code>을 넣어줘야 한다.</li>
+<li>만약 색다른 비교를 하고 싶다면 <code>Comparator</code>을 구현한 비교자 클래스를 넣어주면 그거대로 비교하여 정렬한다.</li>
+<li>자바8부터 사용 가능하다.</li>
+</ul>
+</li>
+<li>Collections.sort()
+<ul>
+<li>해당 메서드에 파라미터로 자료구조를 넣어주면 자료구조 안에 있는 아이템이 구현한 <code>Comparable</code>을 가지고 비교한다.</li>
+<li>두번째 파라미터로 비교자를 넣을 수 있는데 <code>Comparator</code>을 구현한 비교자 클래스를 넣어주면 그거대로 비교하여 정렬한다.</li>
+<li>하지만 이 방식보다는 객체 스스로 정렬 메서드를 가지고 있는 <code>list.sort()</code> 사용을 더 권장한다.</li>
+</ul>
+</li>
+</ul>
+<p>다음은 트리구조의 비교를 해보자. 트리구조는 비교하면서 정렬을 하기 때문에 비교가 반드시 필요하다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">collection<span class="token punctuation">.</span>compare</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">TreeSet</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SortMain5</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyUser</span> myUser1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyUser</span> myUser2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyUser</span> myUser3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyUser</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">TreeSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyUser</span><span class="token punctuation">></span></span> treeSet1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        treeSet1<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        treeSet1<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        treeSet1<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Comparable 기본 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>treeSet1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">TreeSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyUser</span><span class="token punctuation">></span></span> treeSet2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IdComparator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        treeSet2<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        treeSet2<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        treeSet2<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>myUser3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"IdComparator 정렬"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>treeSet2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>이진 탐색 트리는 데이터를 저장할 때 왼쪽 노드에 저장해야 할 지, 오른쪽 노드에 저장해야 할 지 비교가 필요하다. 따라서 <code>TreeSet</code>, <code>TreeMap</code>은 <code>Comparable</code> 또는 <code>Comparator</code> 가 필수이다.</p>
+<p>위의 코드를 보면 알겠지만 <code>TreeSet</code>을 생성할 때 별도의 비교자를 제공하지 않으면 객체가 구현한 <code>Comparable</code>을 사용한다. 또한 <code>TreeSet</code>을 생성할 때 별도의 비교자를 제공하면 <code>Comparable</code> 대신 비교자(<code>Comparator</code>)를 사용해서 정렬한다.</p>
+<h3>정리</h3>
+<p>자바의 정렬 알고리즘은 매우 복잡하고, 또 거의 완성형에 가깝다. 자바는 <strong>개발자가 복잡한 정렬 알고리즘은 신경 쓰지 않으면서</strong> 정렬의 기준만 간단히 변경할 수 있도록, 정렬의 기준을 <code>Comparable</code>, <code>Comparator</code> 인터페이스를 통해 추상화해 두었다. 객체의 정렬이 필요한 경우 <code>Comparable</code>을 통해 기본 자연 순서를 제공하자. 자연 순서 외에 다른 정렬 기준이 추가로 필요하면 <code>Comparator</code>를 제공하자.</p>
+<h2>컬렉션 유틸</h2>
+<p>컬렉션을 편리하게 다룰 수 있는 다양한 기능을 알아보자.</p>
+<h3>Collections 관련 정렬 메세드</h3>
+<ul>
+<li><code>max</code> : 정렬 기준으로 최대 값을 찾아서 반환한다.</li>
+<li><code>min</code> : 정렬 기준으로 최소 값을 찾아서 반환한다.</li>
+<li><code>shuffle</code> : 컬렉션을 랜덤하게 섞는다.</li>
+<li><code>sort</code> : 정렬 기준으로 컬렉션을 정렬한다.</li>
+<li><code>reverse</code> : 정렬 기준의 반대로 컬렉션을 정렬한다. (컬렉션에 들어있는 결과를 반대로 정렬한다.)</li>
+</ul>
+<h3>편리한 컬렉션 생성</h3>
+<ul>
+<li><code>List.of()</code>를 사용하면 컬렉션을 편리하게 생성할 수 있다. 단 이때는 가변이 아니라 불변 컬렉션이 생성된다.
+<ul>
+<li><code>List</code>, <code>Set</code>, <code>Map</code> 모두 <code>of()</code> 메서드를 지원한다.</li>
+</ul>
+</li>
+<li>불변 컬렉션은 변경할 수 없다. 변경 메서드를 호출하면 <code>UnsupportedOperationException</code> 예외가 발생한다.</li>
+</ul>
+<h3>불변 컬렉션과 가변 컬렉션 전환</h3>
+<ul>
+<li>불변 리스트를 가변 리스트로 전환하려면 <code>new ArrayList&#x3C;>()</code>를 사용하면 된다.</li>
+<li>가변 리스트를 불변 리스트로 전환하려면 <code>Collections.unmodifiableList()</code>를 사용하면 된다.
+<ul>
+<li>물론 다양한 <code>unmodifiableXxx()</code>가 존재한다.</li>
+</ul>
+</li>
+</ul>
+<h3>빈 리스트 생성</h3>
+<ul>
+<li>빈 가변 리스트는 원하는 컬렉션의 구현체를 직접 생성하면 된다.</li>
+<li>빈 불변 리스트는 2가지 생성 방법이 있다.
+<ul>
+<li><code>Collections.emptyList()</code> : 자바5부터 제공되는 기능이다.</li>
+<li><code>List.of()</code> : 자바9부터 제공되는 최신 기능이다. 자바9이상이라면 해당 메서드를 사용하는것을 적극 권장한다.</li>
+</ul>
+</li>
+</ul>
+<h3>Arrays.asList()</h3>
+<p><code>Arrays.asList</code> 메서드를 사용해도 다음과 같이 리스트를 생성할 수 있다. 참고로 이 메서드는 자바 1.2부터 존재했다. 자바 9를 사용한다면 <code>List.of()</code> 를 권장한다.</p>
+<ul>
+<li><code>Arrays.asList()</code>로 생성된 리스트는 <strong>고정된 크기를 가지지만, 요소들은 변경할 수 있다.</strong> 즉, 리스트의 길이는 변경할 수 없지만, 기존 위치에 있는 요소들을 다른 요소로 교체할 수 있다.
+<ul>
+<li><code>set()</code>을 통해 요소를 변경할 수 있다.</li>
+<li><code>add()</code>, <code>remove()</code> 같은 메서드를 호출하면 예외가 발생한다. 크기를 변경할 수 없다.</li>
+</ul>
+</li>
+</ul>
+<p>정리하면 일반적으로 <code>List.of()</code> 를 사용하는 것을 권장한다. 다음과 같은 경우 <code>Arrays.asList()</code> 를 선택할 수 있다. 즉, 리스트의 내부 요소를 변경하려면 <code>Arrays.asList()</code> 메서드를 사용해야 하고 그게 아니라면 무조건 <code>List.of()</code>를 사용하자.</p>
+<blockquote>
+<p>✅ 참고</p>
+<p><code>Arrays.asList()</code>와 <code>List.of()</code>의 차이는 구동방식에도 차이가 있다. 일단 각 메서드는 파라미터로 배열을 받을 수 있는데 <code>Arrays.asList()</code>는 해당 배열의 참조값을 복사해서 사용하고 <code>List.of()</code>는 입력받은 배열을 가지고 새 배열을 만들어서 사용한다. 그래서 <code>Arrays.asList()</code>로 배열을 만들고 배열의 요소 값을 변경하면 기존 배열의 값도 변경되는 사이드 이펙트가 발생하니 주의하자!</p>
+</blockquote>
+<h3>멀티스레드 동기화</h3>
+<ul>
+<li><code>Collections.synchronizedList</code>를 사용하면 일반 리스트를 멀티스레드 상황에서 동기화 문제가 발생하지 않는 안전한 리스트로 만들 수 있다.</li>
+<li>동기화 작업으로 인해 일반 리스트보다 성능은 더 느리다.</li>
+</ul>
+<h2>컬렉션 프레임워크 전체 정리</h2>
+<h3>자바 컬렉션 프레임워크 주요 기능</h3>
+<p>자바 컬렉션 프레임워크는 데이터 그룹을 저장하고 처리하기 위한 통합 아키텍처를 제공한다. 이 프레임워크는 인터페이스, 구현, 알고리즘으로 구성되어 있으며, 다양한 타입의 컬렉션을 효율적으로 처리할 수 있게 해준다. 여기서 컬렉션이란 객체의 그룹이나 집합을 의미한다.</p>
+<h3>Collection 인터페이스 필요성</h3>
+<ul>
+<li>일관성: 모든 컬렉션 타입들이 <code>Collection</code> 인터페이스를 구현함으로써, 모든 컬렉션들이 기본적인 동작을 공유한다는 것을 보장한다. 이는 개발자가 다양한 타입의 컬렉션을 다룰 때 일관된 방식으로 접근할 수 있게 해준다.</li>
+<li>재사용성: <code>Collection</code> 인터페이스에 정의된 메서드들은 다양한 컬렉션 타입들에 공통으로 적용된다. 이는 코드의 재사용성을 높이고, 유지보수를 용이하게 한다.</li>
+<li>확장성: 새로운 컬렉션 타입을 만들 때 <code>Collection</code> 인터페이스를 구현함으로써, 기존에 정의된 알고리즘과 도구를 사용할 수 있게 된다. 이는 프레임워크의 확장성을 향상시킨다.</li>
+<li>다형성: <code>Collection</code> 인터페이스를 사용함으로써, 다양한 컬렉션 타입들을 같은 타입으로 다룰 수 있다. 이는 다형성을 활용해서 유연한 코드를 작성할 수 있게 해준다.</li>
+</ul>
+<h3>Collection 주요 메서드</h3>
+<ul>
+<li><code>add(E e)</code> : 컬렉션에 요소를 추가한다.</li>
+<li><code>remove(Object o)</code> : 주어진 객체를 컬렉션에서 제거한다.</li>
+<li><code>size()</code> : 컬렉션에 포함된 요소의 수를 반환한다.</li>
+<li><code>isEmpty()</code> : 컬렉션이 비어 있는지 확인한다.</li>
+<li><code>contains(Object o)</code> : 컬렉션이 특정 요소를 포함하고 있는지 확인한다.</li>
+<li><code>iterator()</code> : 컬렉션의 요소에 접근하기 위한 반복자를 반환한다.</li>
+<li><code>clear()</code> : 컬렉션의 모든 요소를 제거한다.</li>
+</ul>
+<p><code>Collection</code>은 <code>Map</code>을 제외한 모든 컬렉션 타입의 부모이다. 따라서 모든 컬렉션을 받아서 유연하게 처리할 수 있다. 대표적으로 컬렉션 인터페이스는 <code>iterator</code>를 제공한다. 따라서 데이터를 단순히 순회할 목적이라면 <code>Collection</code>을 사용하면 모든 컬렉션 타입의 데이터를 순회할 수 있다.</p>
+<h3>인터페이스</h3>
+<ul>
+<li>Collection: 단일 루트 인터페이스로, 모든 컬렉션 클래스가 이 인터페이스를 상속받는다.
+<ul>
+<li><code>List</code>, <code>Set</code>, <code>Queue</code> 등의 인터페이스가 여기에 포함된다.</li>
+</ul>
+</li>
+<li>List: 순서가 있는 컬렉션을 나타내며, 중복 요소를 허용한다. 인덱스를 통해 요소에 접근할 수 있다.
+<ul>
+<li>ex. <code>ArrayList</code>, <code>LinkedList</code>...</li>
+</ul>
+</li>
+<li>Set: 중복 요소를 허용하지 않는 컬렉션을 나타낸다. 특정 위치가 없기 때문에 인덱스를 통해 요소에 접근할 수 없다.
+<ul>
+<li>ex. <code>HashSet</code>, <code>LinkedHashSet</code>, <code>TreeSet</code>...</li>
+</ul>
+</li>
+<li>Queue: 요소가 처리되기 전에 보관되는 컬렉션을 나타낸다.
+<ul>
+<li>ex. <code>ArrayDeque</code>, <code>LinkedList</code>, <code>PriorityQueue</code>...</li>
+</ul>
+</li>
+<li>Map: 키와 값 쌍으로 요소를 저장하는 객체이다. <code>Map</code> 은 <code>Collection</code> 인터페이스를 상속받지 않는다.
+<ul>
+<li>ex. <code>HashMap</code>, <code>LinkedHashMap</code>, <code>TreeMap</code>...</li>
+</ul>
+</li>
+</ul>
+<h3>구현</h3>
+<ul>
+<li>List: <code>ArrayList</code>는 내부적으로 배열을 사용하며, <code>LinkedList</code>는 연결 리스트를 사용한다.</li>
+<li>Set: <code>HashSet</code>은 해시 테이블을, <code>LinkedHashSet</code>은 해시 테이블과 연결 리스트를, <code>TreeSet</code>은 레드-블랙 트리를 사용한다.</li>
+<li>Map: <code>HashMap</code>은 해시 테이블을, <code>LinkedHashMap</code>은 해시 테이블과 연결 리스트를, <code>TreeMap</code>은 레드-블랙 트리를 사용한다.</li>
+<li>Queue: <code>LinkedList</code>는 연결 리스트를 사용한다. <code>ArrayDeque</code>는 배열 기반의 원형 큐를 사용한다. 대부분의 경우 <code>ArrayDeque</code>가 빠르다.</li>
+</ul>
+<h3>알고리즘</h3>
+<p><code>Collections</code>와 <code>Arrays</code>를 통해 정렬, 검색, 순환등 다양한 알고리즘을 이용한 유틸을 제공한다.</p>
+<h3>선택 가이드</h3>
+<ul>
+<li><strong>순서가 중요하고 중복이 허용되는 경우</strong>: <code>List</code> 인터페이스를 사용하자. <code>ArrayList</code>가 일반적인 선택이지만, 추가/삭제 작업이 앞쪽에서 빈번한 경우에는 <code>LinkedList</code>가 성능상 더 좋은 선택이다.</li>
+<li><strong>중복을 허용하지 않고 순서가 중요하지 않은 경우</strong>: <code>HashSet</code>을 사용하자. 순서를 유지해야 하면 <code>LinkedHashSet</code>을, 정렬된 순서가 필요하면 <code>TreeSet</code>을 사용하자</li>
+<li><strong>요소를 키-값 쌍으로 저장하려는 경우</strong>: <code>Map</code> 인터페이스를 사용하자. 순서가 중요하지 않다면 <code>HashMap</code>을, 순서를 유지해야 한다면 <code>LinkedHashMap</code>을, 정렬된 순서가 필요하면 <code>TreeMap</code>을 사용하자</li>
+<li><strong>요소를 처리하기 전에 보관해야 하는 경우</strong>: <code>Queue</code>,<code>Deque</code> 인터페이스를 사용하자. 스택, 큐 구조 모두 <code>ArrayDeque</code>를 사용하는 것이 가장 빠르다. 만약 우선순위에 따라 요소를 처리해야 한다면 <code>PriorityQueue</code>를 고려하자.</li>
+</ul>
+<blockquote>
+<p>✅ 참고</p>
+<p><code>PriorityQueue</code>는 <code>Queue</code>에서 우선순위를 부여할 수 있는 기능이 있다.</p>
+</blockquote>
+<h3>실무 선택 가이드</h3>
+<ul>
+<li><code>List</code>의 경우 대부분 <code>ArrayList</code>를 사용한다. 물론, 앞쪽에 삭제,추가가 빈번히 발생하면 <code>LinkedList</code>를 고려하자.</li>
+<li><code>Set</code>의 경우 대부분 <code>HashSet</code>을 사용한다.</li>
+<li><code>Map</code>의 경우 대부분 <code>HashMap</code>을 사용한다.</li>
+<li><code>Queue</code>의 경우 대부분 <code>ArrayDeque</code>를 사용한다.</li>
+</ul>
+<blockquote>
+<p>잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!</p>
+</blockquote></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/컬렉션-프레임워크-순회-정렬-전체-정리/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-b886238b8f8508435f5b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-56d5a7640e67e093d479.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-3cc17b46dad7c277753d.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-b886238b8f8508435f5b.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-e19ab4801f705d965f2d.js" async=""></script></body></html>
