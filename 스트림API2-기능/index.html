@@ -1,0 +1,684 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[자바 고급3] 스트림 API2 - 기능 · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/스트림API2-기능/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[자바 고급3] 스트림 API2 - 기능"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[자바 고급3] 스트림 API2 - 기능"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-e19ab4801f705d965f2d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-b886238b8f8508435f5b.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js"/><link as="fetch" rel="preload" href="/page-data/스트림API2-기능/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[자바 고급3] 스트림 API2 - 기능</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->자바</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 6월 1일<!-- --> · <!-- -->11<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">자바 고급3<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (8개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css 1ap6lfi">.css-1ap6lfi{margin-bottom:0.5rem;}.css-1ap6lfi::marker{font-weight:600;color:#9195F6;}.css-1ap6lfi::after{content:'- 11분';margin-left:0.2rem;font-size:0.8rem;}.css-1ap6lfi>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1ap6lfi>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1ap6lfi e1k9d3a00"><span>[자바 고급3] 스트림 API2 - 기능</span></li><style data-emotion="css 13selu">.css-13selu{margin-bottom:0.5rem;}.css-13selu::marker{font-weight:600;color:#9195F6;}.css-13selu::after{content:'- 10분';margin-left:0.2rem;font-size:0.8rem;}.css-13selu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13selu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13selu e1k9d3a00"><span>[자바 고급3] 스트림 API1 - 기본</span></li><li class="css-1ap6lfi e1k9d3a00"><span>[자바 고급3] 메서드 참조</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[자바 고급3] 람다 vs 익명 클래스</span></li><style data-emotion="css 1fpikdj">.css-1fpikdj{margin-bottom:0.5rem;}.css-1fpikdj::marker{font-weight:600;color:#9195F6;}.css-1fpikdj::after{content:'- 18분';margin-left:0.2rem;font-size:0.8rem;}.css-1fpikdj>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1fpikdj>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1fpikdj e1k9d3a00"><span>[자바 고급3] 람다 활용</span></li><li class="css-1ap6lfi e1k9d3a00"><span>[자바 고급3] 함수형 인터페이스</span></li><style data-emotion="css ikk1gw">.css-ikk1gw{margin-bottom:0.5rem;}.css-ikk1gw::marker{font-weight:600;color:#9195F6;}.css-ikk1gw::after{content:'- 9분';margin-left:0.2rem;font-size:0.8rem;}.css-ikk1gw>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ikk1gw>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ikk1gw e1k9d3a00"><span>[자바 고급3] 람다</span></li><li class="css-ikk1gw e1k9d3a00"><span>[자바 고급3] 람다가 필요한 이유</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQoz6WRPQvCQAyG+///R6GKm6AndhIcrNaiXVzEaqVaPym9Xs67XuIgiEvFw2whPDxJXof+KOf7uD4cUWtLGJGIHpMA2PDdWpgBqRyNOfMVkTHmV/ilSW7QjfPF+hRnpVC1hVkb3Nxla54NVpczVw1bN8Co9TbJw7QIdsX+Wtk9DHklXU+3O6bXl66HIG1gIQTzIVrCNJSzCJWyzLnp0A/4CfW+SjF6WKSqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="배너 이미지"
+        title="배너 이미지"
+        src="/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png"
+        srcset="/static/3189e9c0404650ccc6c5ffc998bc8717/6f3f2/banner.png 256w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/01e7c/banner.png 512w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png 1024w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/71c1d/banner.png 1536w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/e8950/banner.png 2000w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 블로그 글은 <a href="https://inf.run/ZEStF">영한님의 인프런 강의</a>를 바탕으로 쓰여진 글입니다.</p>
+</blockquote>
+<h2>스트림 생성</h2>
+<table style="width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <thead>
+        <tr style="background-color: slateblue; color: white;">
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">생성방법</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">코드 예시</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">특징</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: white; color:black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">컬렉션</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">list.stream()</code></td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">List, Set 등 컬렉션에서 스트림 생성</td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color:black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">배열</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">Arrays.stream(arr)</code></td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">배열에서 스트림 생성</td>
+        </tr>
+        <tr style="background-color: white; color:black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">Stream.of(...)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">Stream.of("a", "b", "c")</code></td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">직접 요소를 입력해 스트림 생성</td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color:black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">무한 스트림(iterate)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">Stream.iterate(0, n -> n + 2)</code></td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">무한 스트림 생성 (초깃값 + 함수)</td>
+        </tr>
+        <tr style="background-color: white; color:black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">무한 스트림(generate)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">Stream.generate(Math::random)</code></td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">무한 스트림 생성 (Supplier 사용)</td>
+        </tr>
+    </tbody>
+</table>
+<p>그럼 해당 부분의 예제 코드를 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">stream<span class="token punctuation">.</span>operation</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">Stream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CreateStreamMain</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"1. 컬렉션으로부터 생성"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> stream1 <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stream1<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"2. 배열로부터 생성"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> stream2 <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stream2<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"3. Stream.of() 사용"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> stream3 <span class="token operator">=</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stream3<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"4. 무한 스트림 생성"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> infiniteStream <span class="token operator">=</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">iterate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n <span class="token operator">-></span> n <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        infiniteStream<span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"5. 무한 스트림 생성 - generate()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Double</span><span class="token punctuation">></span></span> randomStream <span class="token operator">=</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">generate</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token operator">::</span><span class="token function">random</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        randomStream<span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<h2>중간 연산</h2>
+<table style="width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <thead>
+        <tr style="background-color: slateblue; color: white;">
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">연산</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">설명</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">예시</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">filter</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">조건에 맞는 요소만 남김</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.filter(n -> n > 5)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">map</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">요소를 다른 형태로 변환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.map(n -> n * 2)</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">flatMap</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">중첩 구조 스트림을 일차원으로 평탄화</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.flatMap(list -> list.stream())</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">distinct</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">중복 요소 제거</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.distinct()</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">sorted</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">요소 정렬</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.sorted() / stream.sorted(Comparator.reverseOrder())</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">peek</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">중간 처리 (로그, 디버깅)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.peek(System.out::println)</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">limit</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">앞에서 N개의 요소만 추출</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.limit(5)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">skip</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">앞에서 N개의 요소를 건너뛰고 이후 요소만 추출</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.skip(5)</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">takeWhile</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">조건을 만족하는 동안 요소 추출 (Java 9+)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.takeWhile(n -> n < 5)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">dropWhile</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">조건을 만족하는 동안 요소를 버리고 이후 요소 추출 (Java 9+)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.dropWhile(n -> n < 5)</code></td>
+        </tr>
+    </tbody>
+</table>
+<ul>
+<li>중간 연산은 <strong>파이프라인</strong> 형태로 연결할 수 있으며, <strong>스트림을 변경</strong>하지만 원본 데이터 자체를 바꾸지 않는다.</li>
+<li>중간 연산은 <strong>lazy</strong>(지연, 게으르게)하게 동작하므로, <strong>최종 연산</strong>이 실행될 때까지 실제 처리는 일어나지 않는다.</li>
+<li><code>peek</code>은 <strong>디버깅 목적</strong>으로 자주 사용하며, 실제 스트림의 요소값을 변경하거나 연산 결과를 반환하지는 않는다.</li>
+<li><code>takeWhile</code>,<code>dropWhile</code>는 자바 9부터 추가된 기능으로, <strong>정렬된 스트림</strong>에서 사용할 때 유용하다.
+<ul>
+<li>정렬되지 않은 스트림에서 쓰면 예측하기 어렵다.</li>
+</ul>
+</li>
+</ul>
+<h2>FlatMap</h2>
+<p>중간 연산의 하나인 <code>FlatMap</code>에 대해서 알아보자. <code>map</code>은 각 요소를 하나의 값으로 변환하지만, <code>flatMap</code>은 각 요소를 스트림(또는 여러 요소)으로 변환한 뒤, 그 결과를 하나의 스트림으로 평탄화(flatten)해준다. 예를 들면 아래와 같다.</p>
+<p>아래의 이중 리스트가</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span><span class="token punctuation">]</span>,
+    <span class="token punctuation">[</span><span class="token number">3</span>, <span class="token number">4</span><span class="token punctuation">]</span>,
+    <span class="token punctuation">[</span><span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>아래와 같이 변환 되는 것이다.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>이제 코드를 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">stream<span class="token punctuation">.</span>operation</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Collection</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">Stream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MapVsFlatMapMain</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span><span class="token punctuation">></span></span> outerList <span class="token operator">=</span> <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>
+                <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"outerList = "</span> <span class="token operator">+</span> outerList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> forResult <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list <span class="token operator">:</span> outerList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Integer</span> i <span class="token operator">:</span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                forResult<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"forResult = "</span> <span class="token operator">+</span> forResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Stream</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span><span class="token punctuation">></span></span> mapResult <span class="token operator">=</span> outerList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">Collection</span><span class="token operator">::</span><span class="token function">stream</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"mapResult = "</span> <span class="token operator">+</span> mapResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> flatMapResult <span class="token operator">=</span> outerList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">flatMap</span><span class="token punctuation">(</span><span class="token class-name">Collection</span><span class="token operator">::</span><span class="token function">stream</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"flatMapResult = "</span> <span class="token operator">+</span> flatMapResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>여기서 핵심은 <code>map</code>과 <code>flatMap</code>의 차이다. 실행결과를 보면 알겠지만 차이점이 분명해진다. <code>map</code>은 <code>Stream</code>의 참조값이 들어있는 리스트가 출력이 되고 <code>flatMap</code>은 이중 구조의 리스트가 하나의 리스트로 출력이 됨을 알 수 있다. 그럼 왜 그럴까? 그림을 통해 살펴보자.</p>
+<h3>Map</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.9375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxUlEQVQoz3WRVw6EMAwFOQKE3gKRaIL7n8+r8cpRtGI/HiHj9qxkzjnx3svzPHLft5znKcdxSNM0UW3bxv+6rl85qqpKMj7Lssg0TSqao77vVV3XxSZ2Tzmy+ziOkgGYtK6ruivLUvI8l6Io9CR+XZeEEJSxERwj5G/bFtkwDN+GTMAlQVwyiQKSiNEMEcOJDdr3Xfk8z8q1IYWpZSAnTnGEe4ulDanjTr7x6JAiWwfZura68d9YyuPKNskeIRUJb/yfeJQP24ezAphSYZwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image1"
+        title="image1"
+        src="/static/17caf04315c706e7f0ac6cab777680d3/2bef9/01.png"
+        srcset="/static/17caf04315c706e7f0ac6cab777680d3/6f3f2/01.png 256w,
+/static/17caf04315c706e7f0ac6cab777680d3/01e7c/01.png 512w,
+/static/17caf04315c706e7f0ac6cab777680d3/2bef9/01.png 1024w,
+/static/17caf04315c706e7f0ac6cab777680d3/52576/01.png 1412w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위와 같은 리스트가 존재할 때 <code>outerList.stream()</code>을 호출하면 위의 리스트가 아래와 같이 껍떼기 리스트가 <code>Stream</code>타입이 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABBklEQVQoz62RW26EMAxFWQOx8zLQ6Yh2CjMaVYX9b+1W1xSEVKlf/biKc05i5dE8vh54Lk/cP+9gPc5vCDlAq/4kIg0VWuXEFOI5MVNIEjTFCmpfkS0j1YRYIiSKS82KmCM0CUIMBz8c19Jp2FinaKaPCeuy4vJyQU4ZKgoRQdu2uL5esSwL5mlGycW9BEEIAbf3G9Z1xTiOyDkjxggxQWPVUEpBrRVmhpSSb2DI9tBx3F3Xdd6InHXKyZ+g4cQ6Q9/3HjbkCbmJixl3Q+81OT1ZtYphGDw8lDfkFaNGqG4jr7SHbue+hs9xcgdX3ZwpGnb9l5hA+CmignP8x/6Yb0x+MecS8A3whszvRcfm5AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image2"
+        title="image2"
+        src="/static/1478d4462bc28c384d74f96e615f02b0/2bef9/02.png"
+        srcset="/static/1478d4462bc28c384d74f96e615f02b0/6f3f2/02.png 256w,
+/static/1478d4462bc28c384d74f96e615f02b0/01e7c/02.png 512w,
+/static/1478d4462bc28c384d74f96e615f02b0/2bef9/02.png 1024w,
+/static/1478d4462bc28c384d74f96e615f02b0/4352a/02.png 1364w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>즉, 위의 그림처럼 스트림 내부에는 3개의 <code>List&#x3C;Integer></code> 요소가 존재한다. 그리고 <code>map()</code>을 호출하면 <code>list -> list.stream()</code>이 호출되면서 내부에 있는 3개의 <code>List&#x3C;Integer></code>를 <code>Stream&#x3C;Integer></code>로 변환한다. 즉, 아래의 그림처럽 요소의 타입이 변경된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.65625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAm0lEQVQY03WPSw6FIBAEOQOK+MUgK+LShd7/Ym2KBPLewkWHmSmmG8w8z0LOOXVdp77vm6Zp0hf33jc2DENj5rouPc+jlFIxYBFgrdV5noLf960Yo8ZxLBx2HEdjOefCCDE4U5CCIappta6M17CIISdzAmD0cLMsi/Z9F+e6rn+G9MxDCNq2rfTVkHvMEJx7yJDyq/plRP3Fv9gLwQWBjmOlxJwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image3"
+        title="image3"
+        src="/static/4c8da17b0d3603c86038bd2ad7995abd/2bef9/03.png"
+        srcset="/static/4c8da17b0d3603c86038bd2ad7995abd/6f3f2/03.png 256w,
+/static/4c8da17b0d3603c86038bd2ad7995abd/01e7c/03.png 512w,
+/static/4c8da17b0d3603c86038bd2ad7995abd/2bef9/03.png 1024w,
+/static/4c8da17b0d3603c86038bd2ad7995abd/71e8d/03.png 1304w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>변환된 3개의 <code>Stream&#x3C;Integer></code>가 외부 <code>Stream</code>에 포함된다. 따라서 <code>Stream&#x3C;Stream&#x3C;Integer>></code>가 된다. 즉, 아래의 그림처럼 될 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.546875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/ElEQVQoz3VR2W4EMQibX2iAADlmulL3vv7/69yG1YwqbftgkdgO4Zj60nF73jacridc7hfUuYIyQUzewMp/88KYpAvEBWwcGOdc8saRElJOSJo2z8ZrCo2UwYUhRTAlS9gtOzzuD1wvV5gahAWUKOLxcMTz8cRhf0CWvGn7r328OZ/O0KyQLK+EVAitNrTWsCxLRHcHEUUL8zyj9x5aKQVqikTp5f9cgh/+0kpUOZEzXD1+cXPUUiOOKpgYxQtUNfhImBXpI0UnQxsYfi8OdsbE/TU36wbrDmsWM1xnlWsObsU62+HZ+Grhi5Y5c2xtbHTFuP/Gf9ob/7Plb5bntAcNyjf9AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image4"
+        title="image4"
+        src="/static/6315f99eeb83ed150aad60168415e787/2bef9/04.png"
+        srcset="/static/6315f99eeb83ed150aad60168415e787/6f3f2/04.png 256w,
+/static/6315f99eeb83ed150aad60168415e787/01e7c/04.png 512w,
+/static/6315f99eeb83ed150aad60168415e787/2bef9/04.png 1024w,
+/static/6315f99eeb83ed150aad60168415e787/82c1e/04.png 1398w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 마지막으로 <code>toList()</code>를 호출하면 스트림을 리스트로 변환한다. 따라서 내부 요소로 <code>Stream&#x3C;Integer></code>를 3개 가지는 <code>List&#x3C;Stream&#x3C;Integer>></code>로 변환된다. 그래서 실제 콘솔에 참조값들이 찍힌 이유가 <code>List</code>안에 <code>Stream</code> 객체가 들어가있기 때문이다.</p>
+<h3>FlatMap</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.9375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxUlEQVQoz3WRVw6EMAwFOQKE3gKRaIL7n8+r8cpRtGI/HiHj9qxkzjnx3svzPHLft5znKcdxSNM0UW3bxv+6rl85qqpKMj7Lssg0TSqao77vVV3XxSZ2Tzmy+ziOkgGYtK6ruivLUvI8l6Io9CR+XZeEEJSxERwj5G/bFtkwDN+GTMAlQVwyiQKSiNEMEcOJDdr3Xfk8z8q1IYWpZSAnTnGEe4ulDanjTr7x6JAiWwfZura68d9YyuPKNskeIRUJb/yfeJQP24ezAphSYZwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image1"
+        title="image1"
+        src="/static/17caf04315c706e7f0ac6cab777680d3/2bef9/01.png"
+        srcset="/static/17caf04315c706e7f0ac6cab777680d3/6f3f2/01.png 256w,
+/static/17caf04315c706e7f0ac6cab777680d3/01e7c/01.png 512w,
+/static/17caf04315c706e7f0ac6cab777680d3/2bef9/01.png 1024w,
+/static/17caf04315c706e7f0ac6cab777680d3/52576/01.png 1412w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위와 같은 리스트가 존재할 때 <code>outerList.stream()</code>을 호출하면 위의 리스트가 아래와 같이 껍떼기 리스트가 <code>Stream</code>타입이 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABBklEQVQoz62RW26EMAxFWQOx8zLQ6Yh2CjMaVYX9b+1W1xSEVKlf/biKc05i5dE8vh54Lk/cP+9gPc5vCDlAq/4kIg0VWuXEFOI5MVNIEjTFCmpfkS0j1YRYIiSKS82KmCM0CUIMBz8c19Jp2FinaKaPCeuy4vJyQU4ZKgoRQdu2uL5esSwL5mlGycW9BEEIAbf3G9Z1xTiOyDkjxggxQWPVUEpBrRVmhpSSb2DI9tBx3F3Xdd6InHXKyZ+g4cQ6Q9/3HjbkCbmJixl3Q+81OT1ZtYphGDw8lDfkFaNGqG4jr7SHbue+hs9xcgdX3ZwpGnb9l5hA+CmignP8x/6Yb0x+MecS8A3whszvRcfm5AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image2"
+        title="image2"
+        src="/static/1478d4462bc28c384d74f96e615f02b0/2bef9/02.png"
+        srcset="/static/1478d4462bc28c384d74f96e615f02b0/6f3f2/02.png 256w,
+/static/1478d4462bc28c384d74f96e615f02b0/01e7c/02.png 512w,
+/static/1478d4462bc28c384d74f96e615f02b0/2bef9/02.png 1024w,
+/static/1478d4462bc28c384d74f96e615f02b0/4352a/02.png 1364w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>즉, 위의 그림처럼 스트림 내부에는 3개의 <code>List&#x3C;Integer></code> 요소가 존재한다. 그리고 <code>map()</code>을 호출하면 <code>list -> list.stream()</code>이 호출되면서 내부에 있는 3개의 <code>List&#x3C;Integer></code>를 <code>Stream&#x3C;Integer></code>로 변환한다. 즉, 아래의 그림처럽 요소의 타입이 변경된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.65625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAm0lEQVQY03WPSw6FIBAEOQOK+MUgK+LShd7/Ym2KBPLewkWHmSmmG8w8z0LOOXVdp77vm6Zp0hf33jc2DENj5rouPc+jlFIxYBFgrdV5noLf960Yo8ZxLBx2HEdjOefCCDE4U5CCIappta6M17CIISdzAmD0cLMsi/Z9F+e6rn+G9MxDCNq2rfTVkHvMEJx7yJDyq/plRP3Fv9gLwQWBjmOlxJwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image3"
+        title="image3"
+        src="/static/4c8da17b0d3603c86038bd2ad7995abd/2bef9/03.png"
+        srcset="/static/4c8da17b0d3603c86038bd2ad7995abd/6f3f2/03.png 256w,
+/static/4c8da17b0d3603c86038bd2ad7995abd/01e7c/03.png 512w,
+/static/4c8da17b0d3603c86038bd2ad7995abd/2bef9/03.png 1024w,
+/static/4c8da17b0d3603c86038bd2ad7995abd/71e8d/03.png 1304w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그 후, <code>flaMap</code>이 적용되는데 <code>flatMap()</code>은 <code>Stream&#x3C;Integer></code> <strong>내부의 값을 꺼내서</strong> 외부 <code>Stream</code>에 포함한다. 여기서는 1,2,3,4,5,6의 값을 꺼낸다. 즉, <code>flatMap()</code>을 호출하면 <code>list -> list.stream()</code>이 호출되면서 내부에 있는 3개의 <code>List&#x3C;Integer></code>를 <code>Stream&#x3C;Integer></code>로 변환한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxklEQVQoz52SwY6CIQyE/0cwMAVK2cNe3ZhsfP93G20R/TXuwT1MmJTwUaZsyGCRQm1KVQ3vtX8J4IYOju/B4+8PT+dTeCgoXT6TCSEONGHKiYd0CCUkZsl/yg+hvEgwgdWBDdSqNDNaN/beQ+49gn3NYxHI/Xn7VXQBFXGoaQuArzYmpNYaFwVMddZaZcatU8zunoEN7G12tLoZNiZIHz72tL8fWgKxgPI1Qy2jPGQ3vfE+xDWIvXeO57mtUD/SbhhP/vptLohHyZQZ+erdAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image5"
+        title="image5"
+        src="/static/fcb13d43e73455ebac562e6621014a37/2bef9/05.png"
+        srcset="/static/fcb13d43e73455ebac562e6621014a37/6f3f2/05.png 256w,
+/static/fcb13d43e73455ebac562e6621014a37/01e7c/05.png 512w,
+/static/fcb13d43e73455ebac562e6621014a37/2bef9/05.png 1024w,
+/static/fcb13d43e73455ebac562e6621014a37/913a1/05.png 1476w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 마지막으로 <code>toList()</code>를 호출함으로 기존 <code>Stream</code>타입을 <code>List</code>타입으로 변경한다. 즉, 아래의 그림처럼 변경될 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 34.765625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAzElEQVQoz3VR0XLDMAjLN9QCG3Bu1+6t+//v0844XpN1e9AJxEVWYIOAA+bG59eT9887CwpF5QIo/qxXnz4ANxiIADWU+2OnfRjL0P6BuBC+WCYPfZ/G2ximewFLKckiktCDX73m/AKAuI3HlqGBWpXuzr73yb0nIoIes48eOTOzXEka4RVGzoa1VlozuvmszfLj1hpbbQyPnI966D/JFpZhPX5ZmuRRvDstrvxb06YsI5WeIKDESliPBbfT8tv7McpFk0yUyKPINBTwG/SXsKGlAErRAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image6"
+        title="image6"
+        src="/static/2c1f6e5fdd5c5fc74fb1b5a110442b38/2bef9/06.png"
+        srcset="/static/2c1f6e5fdd5c5fc74fb1b5a110442b38/6f3f2/06.png 256w,
+/static/2c1f6e5fdd5c5fc74fb1b5a110442b38/01e7c/06.png 512w,
+/static/2c1f6e5fdd5c5fc74fb1b5a110442b38/2bef9/06.png 1024w,
+/static/2c1f6e5fdd5c5fc74fb1b5a110442b38/5bd27/06.png 1432w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>결론적으로 보면 <code>flatMap</code>은 <strong>중첩 구조</strong>(컬렉션 안의 컬렉션, 배열 안의 배열 등)를 <strong>일차원으로 펼치는 데</strong> 사용된다.</p>
+<h2>Optional 간단 설명</h2>
+<p>Optional에 대해 간단하게 살펴보자.</p>
+<ul>
+<li><code>Optional</code>은 내부에 하나의 값(<code>value</code>)을 가진다.</li>
+<li><code>isPresent()</code>를 통해 그 값(<code>value</code>)이 있는지 없는지 확인할 수 있다.</li>
+<li><code>get()</code>을 통해 내부의 값을 꺼낼 수 있다. 만약 값이 없다면 예외(<code>NoSuchElementException</code>)가 발생한다.</li>
+<li><code>Optional</code>은 이름 그대로 필수가 아니라 옵션이라는 뜻이다.
+<ul>
+<li>이 말은 옵셔널 내부에 값(<code>value</code>)이 있을 수도 있고 없을 수도 있다는 뜻이다.</li>
+</ul>
+</li>
+</ul>
+<p>그럼 예제 코드를 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">stream<span class="token punctuation">.</span>operation</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Optional</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OptionalSimpleMain</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> optional1 <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"optional1 = "</span> <span class="token operator">+</span> optional1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>optional1<span class="token punctuation">.</span><span class="token function">isPresent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Integer</span> i <span class="token operator">=</span> optional1<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"i = "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">></span></span> optional2 <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"optional2 = "</span> <span class="token operator">+</span> optional2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>optional2<span class="token punctuation">.</span><span class="token function">isPresent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Object</span> o <span class="token operator">=</span> optional2<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"o = "</span> <span class="token operator">+</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">Object</span> o2 <span class="token operator">=</span> optional2<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"o2 = "</span> <span class="token operator">+</span> o2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>Optional</code>은 <code>null</code> 값으로 인한 오류(<code>NullPointerException</code>)를 방지하고, 코드에서 "값이 없을 수도 있다"는 상황을 명시적으로 표현하기 위해 사용된다. 간단히 말해, <code>null</code>을 직접 다루는 대신 <code>Optional</code>을 사용하면 값의 유무를 안전하게 처리할 수 있어 코드가 더 명확하고 안정적으로 작성할 수 있다.</p>
+<p>자세한 사항은 추후 포스팅으로 다루겠다.</p>
+<h2>최종 연산</h2>
+<p>최종 연산(Terminal Operation)은 스트림 파이프라인의 <strong>끝</strong>에 호출되어 <strong>실제 연산을 수행</strong>하고 결과를 만들어낸다. 최종 연산이 실행된 후에 스트림은 <strong>소모</strong>되어 더 이상 사용할 수 없다.</p>
+<table style="width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <thead>
+        <tr style="background-color: slateblue; color: white;">
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">연산</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">설명</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">예시</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">collect</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">Collector를 사용하여 결과 수집<br>(다양한 형태로 변환 가능)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.collect(Collectors.toList())</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">toList (Java16+)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">스트림을 불변 리스트로 수집</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.toList()</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">toArray</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">스트림을 배열로 변환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.toArray(Integer[]::new)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">forEach</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">각 요소에 대해 동작 수행 (반환값 없음)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.forEach(System.out::println)</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">count</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">요소 개수 반환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">long count = stream.count();</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">reduce</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">누적 함수를 사용해<br>모든 요소를 단일 결과로 합침<br>초깃값이 없으면 Optional로 반환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">int sum = stream.reduce(0, Integer::sum);</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">min / max</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">최소값, 최댓값을 Optional로 반환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.min(Integer::compareTo),<br>stream.max(Integer::compareTo)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">findFirst</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">조건에 맞는 첫 번째 요소 (Optional 반환)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.findFirst()</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">findAny</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">조건에 맞는 아무 요소나 (Optional 반환)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.findAny()</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">anyMatch</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">하나라도 조건을 만족하는지 (boolean)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.anyMatch(n -> n > 5)</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">allMatch</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">모두 조건을 만족하는지 (boolean)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.allMatch(n -> n > 0)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">noneMatch</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">하나도 조건을 만족하지 않는지<br>(boolean)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">stream.noneMatch(n -> n < 0)</code></td>
+        </tr>
+    </tbody>
+</table>
+<ul>
+<li>최종 연산이 호출되면, 그 동안 정의된 <strong>모든 중간 연산이 한 번에</strong> 적용되어 결과를 만든다.</li>
+<li>최종 연산을 한 번 수행하면, <strong>스트림은 재사용할 수 없다.</strong></li>
+<li><code>reduce</code>를 사용할 때 초깃값을 지정하면, 스트림이 비어 있어도 <strong>초깃값</strong>이 결과가 된다. 초깃값이 없으면 <code>Optional</code>을 반환한다.
+<ul>
+<li>초깃값이 없는데, 스트림이 비어 있을 경우 빈 <code>Optional</code>(<code>Optional.empty()</code>)을 반환한다.</li>
+</ul>
+</li>
+<li><code>findFirst()</code>,<code>findAny()</code>도 결과가 없을 수 있으므로 <strong>Optional</strong>을 통해 값 유무를 확인해야 한다.</li>
+</ul>
+<h2>기본형 특화 스트림</h2>
+<p>스트림 API에는 <strong>기본형(primitive) 특화 스트림</strong>이 존재한다. 자바에서는 <code>IntStream</code>, <code>LongStream</code>, <code>DoubleStream</code> 세 가지 형태를 제공하여 <strong>기본 자료형(int, long, double)에 특화된 기능</strong>을 사용할 수 있게 한다.</p>
+<h3>기본 특화 스트림 종류</h3>
+<table style="width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <thead>
+        <tr style="background-color: slateblue; color: white;">
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">스트림 타입</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">대상 원시 타입</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">생성 예시</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">IntStream</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">int</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">IntStream.of(1, 2, 3), IntStream.range(1, 10), mapToInt(...)</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">LongStream</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">long</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">LongStream.of(10L, 20L), LongStream.range(1, 10), mapToLong(...)</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">DoubleStream</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">double</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">DoubleStream.of(3.14, 2.78), DoubleStream.generate(Math::random), mapToDouble(...)</code></td>
+        </tr>
+    </tbody>
+</table>
+<h3>주요 기능 및 메서드</h3>
+<p>기본형 특화 스트림은 <strong>합계</strong>, <strong>평균</strong> 등 자주 사용하는 연산을 <strong>편리한 메서드</strong>로 제공한다. 또한, <strong>타입 변환</strong>과 <strong>박싱/언박싱</strong> 메서드도 제공하여 다른 스트림과 연계해 작업하기 수월하다. 참고로 기본형 특화 스트림은 <code>int</code>, <code>long</code>, <code>double</code> 같은 숫자를 사용한다. 따라서 숫자 연산에 특화된 메서드를 제공할 수 있다.</p>
+<table style="width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <thead>
+        <tr style="background-color: slateblue; color: white;">
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">메서드 / 기능</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">설명</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; border: 1px solid #3a7bc8;">예시</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">sum()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">모든 요소의 합계를 구한다.</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">int total = IntStream.of(1, 2, 3).sum();</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">average()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">모든 요소의 평균을 구한다.<br>OptionalDouble을 반환.</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">double avg = IntStream.range(1, 5).average().getAsDouble();</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">summaryStatistics()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">최소값, 최댓값, 합계, 개수, 평균<br>등이 담긴 IntSummaryStatistics<br>(또는 Long/Double) 객체 반환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">IntSummaryStatistics stats = IntStream.range(1,5).summaryStatistics();</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">mapToLong()<br>mapToDouble()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">타입 변환 : IntStream → LongStream,<br>DoubleStream ...</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">LongStream ls = IntStream.of(1,2).mapToLong(i -> i * 10L);</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">mapToObj()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">객체 스트림으로 변환 : 기본형 → 참조형</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">Stream&lt;<span style="color: #0969da;">String</span>&gt; s = IntStream.range(1,5).mapToObj(i -> "No: "+i);</code></td>
+        </tr>
+        <tr style="background-color: #f8f9fa; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">boxed()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">기본형 특화 스트림을<br>박싱(Wrapper)된 객체 스트림으로 변환</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">Stream&lt;<span style="color: #0969da;">Integer</span>&gt; si = IntStream.range(1,5).boxed();</code></td>
+        </tr>
+        <tr style="background-color: white; color: black;">
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0; font-weight: 600;">sum(), min(),<br>max(), count()</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;">합계, 최소값, 최댓값, 개수를 반환<br>(타입별로 int/long/double 반환)</td>
+            <td style="padding: 14px 16px; border: 1px solid #e0e0e0;"><code style="background-color: #f1f3f5; padding: 3px 8px; border-radius: 4px; font-family: Consolas, Monaco, monospace; color: #d63384;">long cnt = LongStream.of(1,2,3).count();</code></td>
+        </tr>
+    </tbody>
+</table>
+<h3>성능 - 전통적인 for문 vs 스트림 vs 기본형 특화 스트림</h3>
+<ul>
+<li>전통적인 for문이 보통 가장 빠르다.</li>
+<li>스트림보다 전통적인 for 문이 1.5배 ~ 2배정도 빠르다.
+<ul>
+<li>여기서 말하는 스트림은 <code>Integer</code>같은 객체를 다루는 <code>Stream</code>을 말한다.</li>
+<li>박싱/언박싱 오버헤드가 발생한다.</li>
+</ul>
+</li>
+<li>기본형 특화 스트림(<code>IntStream</code>등)은 전통적인 for문에 가까운 성능을 보여준다.
+<ul>
+<li>전통적인 for문과 거의 비슷하거나 전통적인 for문이 10% ~ 30% 정도 더 빠르다.</li>
+<li>박싱/언박싱 오버헤드를 피할 수 있다.</li>
+<li>내부적으로 최적화된 연산을 수행할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h3>실무 선택</h3>
+<ul>
+<li>이런 성능 차이는 대부분의 일반적인 애플리케이션에서는 거의 차이가 없다. 이런 차이를 느끼려면 한 번에 사용하는 루프가 최소한 수천만 건 이상이어야 한다. 그리고 이런 루프를 많이 반복해야 한다.</li>
+<li>박싱/언박싱을 많이 유발하지 않는 상황이라면 일반 스트림과 기본형 특화 스트림 간 성능 차이는 그리 크지 않을 수 있다.</li>
+<li>반면 대규모 데이터 처리나 반복 횟수가 많을 때는 기본형 스트림이 효과적일 수 있으며, 성능 극대화가 필요한 상황에서는 여전히 for 루프가 더 빠른 경우가 많다. 결국 최적의 선택은 구현의 가독성, 유지보수성등을 함께 고려해서 결정해야 한다.</li>
+<li>정리하면 실제 프로젝트에서는 극단적인 성능이 필요한 경우가 아니라면, 코드의 가독성과 유지보수성을 위해 스트림 API(스트림, 기본형 특화 스트림)를 사용하는 것이 보통 더 나은 선택이다.</li>
+</ul>
+<blockquote>
+<p>잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!</p>
+</blockquote></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/스트림API2-기능/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-b886238b8f8508435f5b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-56d5a7640e67e093d479.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-3cc17b46dad7c277753d.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-b886238b8f8508435f5b.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-e19ab4801f705d965f2d.js" async=""></script></body></html>
