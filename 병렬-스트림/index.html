@@ -1,0 +1,886 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[자바 고급3] 병렬 스트림 · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/병렬-스트림/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[자바 고급3] 병렬 스트림"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[자바 고급3] 병렬 스트림"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/3189e9c0404650ccc6c5ffc998bc8717/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-e19ab4801f705d965f2d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-b886238b8f8508435f5b.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js"/><link as="fetch" rel="preload" href="/page-data/병렬-스트림/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[자바 고급3] 병렬 스트림</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->자바</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 6월 3일<!-- --> · <!-- -->25<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">자바 고급3<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (12개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css nvkrxu">.css-nvkrxu{margin-bottom:0.5rem;}.css-nvkrxu::marker{font-weight:600;color:#9195F6;}.css-nvkrxu::after{content:'- 25분';margin-left:0.2rem;font-size:0.8rem;}.css-nvkrxu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-nvkrxu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-nvkrxu e1k9d3a00"><span>[자바 고급3] 병렬 스트림</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[자바 고급3] 디폴트 메서드</span></li><style data-emotion="css tupxoa">.css-tupxoa{margin-bottom:0.5rem;}.css-tupxoa::marker{font-weight:600;color:#9195F6;}.css-tupxoa::after{content:'- 17분';margin-left:0.2rem;font-size:0.8rem;}.css-tupxoa>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-tupxoa>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-tupxoa e1k9d3a00"><span>[자바 고급3] Optional</span></li><style data-emotion="css iuahyr">.css-iuahyr{margin-bottom:0.5rem;}.css-iuahyr::marker{font-weight:600;color:#9195F6;}.css-iuahyr::after{content:'- 12분';margin-left:0.2rem;font-size:0.8rem;}.css-iuahyr>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-iuahyr>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-iuahyr e1k9d3a00"><span>[자바 고급3] 스트림 API3 - 컬렉터</span></li><style data-emotion="css 1ap6lfi">.css-1ap6lfi{margin-bottom:0.5rem;}.css-1ap6lfi::marker{font-weight:600;color:#9195F6;}.css-1ap6lfi::after{content:'- 11분';margin-left:0.2rem;font-size:0.8rem;}.css-1ap6lfi>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1ap6lfi>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1ap6lfi e1k9d3a00"><span>[자바 고급3] 스트림 API2 - 기능</span></li><style data-emotion="css 13selu">.css-13selu{margin-bottom:0.5rem;}.css-13selu::marker{font-weight:600;color:#9195F6;}.css-13selu::after{content:'- 10분';margin-left:0.2rem;font-size:0.8rem;}.css-13selu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13selu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13selu e1k9d3a00"><span>[자바 고급3] 스트림 API1 - 기본</span></li><li class="css-1ap6lfi e1k9d3a00"><span>[자바 고급3] 메서드 참조</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[자바 고급3] 람다 vs 익명 클래스</span></li><style data-emotion="css 1fpikdj">.css-1fpikdj{margin-bottom:0.5rem;}.css-1fpikdj::marker{font-weight:600;color:#9195F6;}.css-1fpikdj::after{content:'- 18분';margin-left:0.2rem;font-size:0.8rem;}.css-1fpikdj>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1fpikdj>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1fpikdj e1k9d3a00"><span>[자바 고급3] 람다 활용</span></li><li class="css-1ap6lfi e1k9d3a00"><span>[자바 고급3] 함수형 인터페이스</span></li><style data-emotion="css ikk1gw">.css-ikk1gw{margin-bottom:0.5rem;}.css-ikk1gw::marker{font-weight:600;color:#9195F6;}.css-ikk1gw::after{content:'- 9분';margin-left:0.2rem;font-size:0.8rem;}.css-ikk1gw>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ikk1gw>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ikk1gw e1k9d3a00"><span>[자바 고급3] 람다</span></li><li class="css-ikk1gw e1k9d3a00"><span>[자바 고급3] 람다가 필요한 이유</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQoz6WRPQvCQAyG+///R6GKm6AndhIcrNaiXVzEaqVaPym9Xs67XuIgiEvFw2whPDxJXof+KOf7uD4cUWtLGJGIHpMA2PDdWpgBqRyNOfMVkTHmV/ilSW7QjfPF+hRnpVC1hVkb3Nxla54NVpczVw1bN8Co9TbJw7QIdsX+Wtk9DHklXU+3O6bXl66HIG1gIQTzIVrCNJSzCJWyzLnp0A/4CfW+SjF6WKSqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="배너 이미지"
+        title="배너 이미지"
+        src="/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png"
+        srcset="/static/3189e9c0404650ccc6c5ffc998bc8717/6f3f2/banner.png 256w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/01e7c/banner.png 512w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/2bef9/banner.png 1024w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/71c1d/banner.png 1536w,
+/static/3189e9c0404650ccc6c5ffc998bc8717/e8950/banner.png 2000w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 블로그 글은 <a href="https://inf.run/ZEStF">영한님의 인프런 강의</a>를 바탕으로 쓰여진 글입니다.</p>
+</blockquote>
+<h2>단일 스트림</h2>
+<p>병렬 스트림을 제대로 이해하려면 스트림 개념뿐만 아니라 멀티스레드와 fork/join 프레임워크에 대해서 알아야 한다. 멀티스레드는 이전 포스팅에 알아보았고 스트림도 이전에 알아보았으니 이제 fork/join 프레임워크를 알아야 한다. 일단 해당 프레임워크를 알기 전에 단일 스트림부터 차근히 예제를 발전시키면서 학습해보자.</p>
+<p>먼저 우리가 멀티스레드를 배웠을 때 사용했던 유틸을 가져오겠다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">util</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span></span><span class="token class-name">LocalDateTime</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span>format<span class="token punctuation">.</span></span><span class="token class-name">DateTimeFormatter</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyLogger</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">DateTimeFormatter</span> formatter <span class="token operator">=</span> <span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">"HH:mm:ss.SSS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> time <span class="token operator">=</span> <span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>formatter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s [%9s] %s\n"</span><span class="token punctuation">,</span> time<span class="token punctuation">,</span> <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>이제 <code>Job</code> 클래스를 하나 생성하겠다. 일종의 <code>Task</code>라고 생각하면 좋을 것이다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HeavyJob</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">heavyTask</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"calculate "</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">" -> "</span> <span class="token operator">+</span> i <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> i <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">heavyTask</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"["</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"] "</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">" -> "</span> <span class="token operator">+</span> i <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> i <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>HeavyJob</code> 클래스는 오래 걸리는 작업을 시뮬레이션하는데, 각 작업은 1초 정도 소요된다고 가정하겠다.</p>
+<p>이제 <code>main</code> 메서드 코드를 작성해보겠다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ParallelMain1</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">HeavyJob</span><span class="token operator">::</span><span class="token function">heavyTask</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">sum</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>실행시간을 살펴보면 약 8초정도 걸린 것을 볼 수 있을 것이다. 너무 시간이 오래 걸린다. 이것을 스레드를 이용해서 한번 단축시켜보자.</p>
+<h2>스레드 직접 사용</h2>
+<p>앞서 하나의 메인 스레드로 1~8의 범위를 모두 계산했다. 이제 스레드를 이용하여 실행시간을 줄여보자. 예제에서는 스레드 2개를 사용해서 기존 실행시간의 성능을 2배 빠르게 해보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ParallelMain2</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Fork 작업을 분할한다.</span>
+        <span class="token class-name">SumTask</span> task1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">SumTask</span> task2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Thread</span> thread1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>task1<span class="token punctuation">,</span> <span class="token string">"thread-1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Thread</span> thread2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>task2<span class="token punctuation">,</span> <span class="token string">"thread-2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 분할한 작업을 처리한다.</span>
+        thread1<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        thread2<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// join - 처리한 결과를 합친다.</span>
+        thread1<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        thread2<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main 스레드 대기 완료"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> task1<span class="token punctuation">.</span>result <span class="token operator">+</span> task2<span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SumTask</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">int</span> startValue<span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> endValue<span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token keyword">int</span> startValue<span class="token punctuation">,</span> <span class="token keyword">int</span> endValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>startValue <span class="token operator">=</span> startValue<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>endValue <span class="token operator">=</span> endValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"작업 시작"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> startValue<span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> endValue<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">int</span> calculated <span class="token operator">=</span> <span class="token class-name">HeavyJob</span><span class="token punctuation">.</span><span class="token function">heavyTask</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                sum <span class="token operator">+=</span> calculated<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            result <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"작업 완료 result = "</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>thread-1</code>,<code>thread-2</code>가 작업을 분할해서 처리했기 때문에 8초의 작업을 4초로 줄일 수 있었다. 하지만 이렇게 스레드를 직접 사용하면 스레드 수가 늘어나면 코드가 복잡해지고, 예외 처리, 스레드 풀 관리 등 추가 관리 포인트가 생기는 문제가 있다.</p>
+<h2>스레드 풀 사용</h2>
+<p>이번에는 자바가 제공하는 <code>ExecutorService</code>를 사용해서 더 편리하게 병렬 처리를 해보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ParallelMain3</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span><span class="token punctuation">,</span> <span class="token class-name">ExecutionException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ExecutorService</span> es <span class="token operator">=</span> <span class="token class-name">Executors</span><span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">SumTask</span> task1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">SumTask</span> task2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> future1 <span class="token operator">=</span> es<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span>task1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> future2 <span class="token operator">=</span> es<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span>task2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Integer</span> result1 <span class="token operator">=</span> future1<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Integer</span> result2 <span class="token operator">=</span> future2<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> result1 <span class="token operator">+</span> result2<span class="token punctuation">;</span>
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        es<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SumTask</span> <span class="token keyword">implements</span> <span class="token class-name">Callable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">int</span> startValue<span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> endValue<span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token keyword">int</span> startValue<span class="token punctuation">,</span> <span class="token keyword">int</span> endValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>startValue <span class="token operator">=</span> startValue<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>endValue <span class="token operator">=</span> endValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"작업 시작"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> startValue<span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> endValue<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">int</span> calculated <span class="token operator">=</span> <span class="token class-name">HeavyJob</span><span class="token punctuation">.</span><span class="token function">heavyTask</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                sum <span class="token operator">+=</span> calculated<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"작업 완료 result = "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p><code>Executors.newFixedThreadPool(2)</code>로 스레드 풀을 만든다. 이 스레드 풀은 최대 2개의 스레드를 제공한다. 그 후, 작업을 2개로 분리하여 <code>submit(Callable)</code>로 스레드 풀에 작업을 맡기면 <code>Future</code> 객체를 반환 받는다. 메인 스레드는 <code>future.get()</code>을 통해 실제 계산 결과가 반환될 때까지 대기(<code>join</code>과 유사)한다.</p>
+<p>이전 코드에 비해 스레드 풀로 스레드를 관리하고 작업도 <code>Callable</code>로 구현함으로 조금 더 코드가 간결해졌다. 하지만 여전히 코드 레벨에서 분할/병합 로직을 직접 짜야 하고, 스레드 풀 생성과 관리도 개발자가 직접해야 한다.</p>
+<h2>Fork/Join 패턴</h2>
+<h3>분할(Fork), 처리(Execute), 모음(Join)</h3>
+<p>스레드는 한 번에 하나의 작업을 처리할 수 있다. 따라서 하나의 큰 작업을 여러 스레드가 처리할 수 있는 작은 단위의 작업으로 분할(Fork)해야 한다. 그리고 이렇게 분할한 작업을 각각의 스레드가 처리(Execute)하는 것이다. 각 스레드의 분할된 작업 처리가 끝나면 분할된 결과를 하나로 모아야(Join) 한다. 이렇게 **분할(Fork) 처리(Execute) 모음(Join)**의 단계로 이루어진 멀티스레딩 패턴을 <strong>Fork/Join 패턴</strong>이라고 부른다. 이 패턴은 병렬 프로그래밍에서 매우 효율적인 방식으로, 복잡한 작업을 병렬적으로 처리할 수 있게 해준다.</p>
+<p>그러면 해당 패턴이 우리가 이전에 만든 예제에 어떻게 녹아져 있는지 살펴보자.</p>
+<p>예제에서 큰 작업은 1부터 8까지 더하는 작업이다. 이것을 우리는 스레드 2개로 분리하여 스레드1은 1부터 4까지 더하는 계산을 스레드2는 5부터 8까지 더하는 계산을 동시에 진행하였다. 이렇게 큰 작업을 여러 작은 작업으로 쪼개어(<code>Fork</code>) 각각의 스레드나 작업 단위로 할당하는 것을 포크(<code>Fork</code>)라 한다.</p>
+<p>이렇게 작업을 스레드별로 분리를 하였다면 각 스레드가 해당 작업을 처리해야 할 것이다. 그 후에 처리된 결과물을 <strong>하나로 합쳐야 한다.</strong> Join은 이렇게 갈라진 작업들이 모두 끝난 뒤, 다시 <strong>합류</strong>하여 하나로 <strong>결과를 모으는</strong> 모습을 의미한다.</p>
+<p>지금까지 작업을 직접 분할하고, 처리하고, 처리된 결과를 합쳤다. 이러한 분할 -> 처리(작업 병렬 실행) -> 모음의 과정을 더 편리하게 구현할 수 있는 방법은 없을까? 자바는 <strong>Fork/Join 프레임워크</strong>를 제공해서 개발자가 이러한 패턴을 더 쉽게 구현할 수 있도록 지원한다.</p>
+<h2>Fork/Join 프레임워크1 - 소개</h2>
+<p>자바의 Fork/Join 프레임워크는 자바 7부터 도입된 <code>java.util.concurrent</code> 패키지의 일부로, 멀티코어 프로세서를 효율적으로 활용하기 위한 병렬 처리 프레임워크이다.</p>
+<h3>분할 정복 전략</h3>
+<ul>
+<li>큰 작업(task)을 작은 단위로 재귀적으로 분할(fork)</li>
+<li>각 작은 작업의 결과를 합쳐(join) 최종 결과를 생성</li>
+<li>멀티코어 환경에서 작업을 효율적으로 분산 처리</li>
+</ul>
+<h3>작업 훔치기 알고리즘</h3>
+<ul>
+<li>각 스레드는 자신의 작업 큐를 가짐</li>
+<li>작업이 없는 스레드는 다른 바쁜 스레드의 큐에서 작업을 "훔쳐와서" 대신 처리</li>
+<li>부하 균형을 자동으로 조절하여 효율성 향상</li>
+</ul>
+<h3>주요 클래스</h3>
+<h4>ForkJoinPool</h4>
+<ul>
+<li>Fork/Join 작업을 실행하는 특수한 <code>ExecutorService</code> 스레드 풀</li>
+<li>작업 스케줄링 및 스레드 관리를 담당</li>
+<li>기본적으로 사용 가능한 프로세서 수 만큼 스레드 생성</li>
+<li>쉽게 이야기해서 <strong>분할 정복과 작업 훔치기에 특화된 스레드 풀</strong>이다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token comment">// 기본 풀 생성 (프로세서 수에 맞춰 스레드 생성)</span>
+<span class="token class-name">ForkJoinPool</span> pool <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ForkJoinPool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 특정 병렬 수준으로 풀 생성</span>
+<span class="token class-name">ForkJoinPool</span> customPool <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ForkJoinPool</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<h4>ForkJoinTask</h4>
+<ul>
+<li><code>ForkJoinTask</code>는 Fork/Join 작업의 기본 추상 클래스다.</li>
+<li><code>Future</code>를 구현했다.</li>
+<li>개발자는 주로 다음 두 하위 클래스를 구현해서 사용한다.
+<ul>
+<li><code>RecursiveTask&#x3C;V></code> : 결과를 반환하는 작업</li>
+<li><code>RecursiveAction</code> : 결과를 반환하지 않는 작업(<code>void</code>)</li>
+</ul>
+</li>
+</ul>
+<h4>RecursiveTask / RecursiveAction의 구현 방법</h4>
+<ul>
+<li><code>compute()</code> 메서드를 재정의해서 필요한 작업 로직을 작성한다.</li>
+<li>일반적으로 일정 기준(임계값)을 두고, <strong>작업 범위가 작으면 직접 처리</strong>하고, <strong>크면 작업을 둘로 분할</strong>하여 각각 병렬로 처리하도록 구현한다.</li>
+</ul>
+<h4>fork() / join() 메서드</h4>
+<ul>
+<li><code>fork()</code> : 현재 스레드에서 다른 스레드로 작업을 <strong>분할</strong>하여 보내는 동작(비동기 실행)</li>
+<li><code>join()</code> : 분할된 작업이 끝날 때까지 기다린 후 결과를 가져오는 동작</li>
+</ul>
+<blockquote>
+<p>✅ 참고</p>
+<p>Fork/Join 프레임워크를 실무에서 직접적으로 다루는 일은 드물다. 따라서 이런게 있다 정도만 알아두고 넘어가자.</p>
+</blockquote>
+<h3>Fork/Join 프레임워크 활용</h3>
+<p>그럼 앞선 예시를 <code>Fork/Join</code> 프레임워크를 이용하여 해결해보자. 대략 로직은 이렇게 구성하면 좋을 것 같다.</p>
+<ul>
+<li><strong>Fork</strong>: 작업의 크기가 8이면 임계값을 넘었다. 따라서 작업을 절반으로 분할한다.</li>
+<li><strong>Execute</strong>: 다음으로 작업의 크기가 4라면 임계값의 범위 안에 들어오므로 작업을 분할하지 않고, 처리한다.</li>
+<li><strong>Join</strong>: 최종 결과를 합친다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel<span class="token punctuation">.</span>forkjoin</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">parallel<span class="token punctuation">.</span></span><span class="token class-name">HeavyJob</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">RecursiveTask</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SumTask</span> <span class="token keyword">extends</span> <span class="token class-name">RecursiveTask</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">THRESHOLD</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> list<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Integer</span> <span class="token function">compute</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token constant">THRESHOLD</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"[처리 시작] "</span> <span class="token operator">+</span> list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">int</span> sum <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">mapToInt</span><span class="token punctuation">(</span><span class="token class-name">HeavyJob</span><span class="token operator">::</span><span class="token function">heavyTask</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"[처리 완료] "</span> <span class="token operator">+</span> list <span class="token operator">+</span> <span class="token string">" -> sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> mid <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> leftList <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">subList</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> mid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> rightList <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">subList</span><span class="token punctuation">(</span>mid<span class="token punctuation">,</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"[분할] "</span> <span class="token operator">+</span> list <span class="token operator">+</span> <span class="token string">" -> LEFT"</span> <span class="token operator">+</span> leftList <span class="token operator">+</span> <span class="token string">", RIGHT"</span> <span class="token operator">+</span> rightList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name">SumTask</span> leftTask <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span>leftList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">SumTask</span> rightTask <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span>rightList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            leftTask<span class="token punctuation">.</span><span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">int</span> rightResult <span class="token operator">=</span> rightTask<span class="token punctuation">.</span><span class="token function">compute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">Integer</span> leftResult <span class="token operator">=</span> leftTask<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> joinSum <span class="token operator">=</span> leftResult <span class="token operator">+</span> rightResult<span class="token punctuation">;</span>
+
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"LEFT["</span> <span class="token operator">+</span> leftResult <span class="token operator">+</span> <span class="token string">"], RIGHT["</span> <span class="token operator">+</span> rightResult <span class="token operator">+</span> <span class="token string">"] -> sum: "</span> <span class="token operator">+</span> joinSum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">return</span> joinSum<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<ul>
+<li><strong>THRESHOLD (임계값)</strong>: 작업을 더 이상 분할하지 않고 직접 처리할 리스트의 크기를 정의한다. 여기서는 4로 설정되어, 리스트 크기가 4 이하일 때 직접 계산한다. 4보다 크면 작업을 분할한다.</li>
+<li><strong>작업 분할</strong>: 리스트의 크기가 임계값보다 크면, 리스트를 반으로 나누어 <code>leftList</code>와 <code>rightList</code>로 분할한다.</li>
+<li><strong>fork(), compute()</strong>
+<ul>
+<li><code>fork()</code>는 왼쪽 작업을 다른 스레드에 위임하여 병렬로 처리한다.</li>
+<li><code>compute()</code>는 오른쪽 작업을 현재 스레드에서 직접 수행한다(재귀 호출).</li>
+</ul>
+</li>
+<li><strong>join()</strong>: 분할된 왼쪽 작업이 완료될 때까지 기다린 후 결과를 가져온다.</li>
+<li><strong>결과 합산</strong>: 왼쪽과 오른쪽 결과를 합쳐 최종 결과를 반환한다.</li>
+</ul>
+<p>이제 사용하는 코드를 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel<span class="token punctuation">.</span>forkjoin</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ForkJoinPool</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForkJoinMain1</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> data <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">boxed</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"[생성] "</span> <span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">ForkJoinPool</span> pool <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ForkJoinPool</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">SumTask</span> task <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> result <span class="token operator">=</span> pool<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        pool<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"pool: "</span> <span class="token operator">+</span> pool<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<ul>
+<li><strong>데이터 생성</strong>: <code>IntStream.rangeClosed(1, 8)</code>를 사용해 1부터 8까지의 숫자 리스트를 생성한다.</li>
+<li><strong>ForkJoinPool 생성</strong>
+<ul>
+<li><code>new ForkJoinPool(10)</code>으로 최대 10개의 스레드를 사용할 수 있는 풀을 생성한다.</li>
+<li>참고로 기본 생성자(<code>new ForkJoinPool()</code>)를 사용하면 시스템의 프로세서 수에 맞춰 스레드가 생성된다.</li>
+<li>마치 <code>ExecutorService</code>로 스레드 풀을 생성하는 것과 유사하다.</li>
+</ul>
+</li>
+<li><strong>invoke()</strong>: 메인 스레드가 <code>pool.invoke(task)</code>를 호출하면 <code>SumTask</code>를 스레드 풀에 전달한다. <code>SumTask</code>는 <code>ForkJoinPool</code>에 있는 별도의 스레드에서 실행된다. 메인 스레드는 작업이 완료될 때까지 기다린 후 결과를 받는다.</li>
+<li><strong>pool.close()</strong>: 더 이상 작업이 없으므로 풀을 종료한다.</li>
+</ul>
+<p>이것을 그림과 함께 상세하게 살펴보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 81.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACtUlEQVQ4y32UTWslRRSGs1RITLq7quu7+jPdNz0hN0RRZ5xBh6DiiCiiji6GARFBRF04iH9AwZ0uXLgSf+kjVffeJCPjLKqrqap+zntOvaf3hBCkURQFZVnmuaqqvJbmUgjqw33c/U9Qnz5BiYqu6zDGXJ27OfbSYl3XxBgJIdA0DVprpJQopfAh4kSBv/wM/fAnVFXSD8PzgQkwTTMny8K8mjN0tVoxzzMnt24hD16kfvsR6qvfiNawLAvjOOag6fub4L30kLKmCZ55nuiaLgOTurRnncdZi+8n7MmaxVrmEHAhYK3FpX0fEEJeA5N820+M08x4uknn6PCIsqrwSuCNIjhLjIEz5zhxjth1BB9ysEYJRFUipGQvyU6R1A9/Yx98yL2/Xub88oKhHRn6lvjgMXZ9m2U6RjtPqzVR66zw7PQU1x1jPvoWEQdEWWwVao05v0t/tmZ+c6SfeprYMI493de/Ml5+TO8NslZUQmQ3JDXz8ci0fgX33Z/Y5QK5AyaVRhQMXUtQAVWr/FFd1OjDkr6NhBjx3uds0iWkOdknBI8v9+mswlq3AWbPbb0opMBYg1OO5d2F8f4xbeiypZIbksV2zrDO4XVNf+cd/L0PULK6Bu6UZrisEAeC135+lfPv17S6xQWXYbszaa6Vxosjxi9+xH75C3V5+DTwJjilbJShjS3DMGSFKcWUatpzzl2tDX2XXdDEeCPl/7g+18lb+rnPXZTqt+uiHMyYbWdFYtMSh2OC9/+jsJYULxSsPl9x9/c3sNrm4rddl7snKU5KjXWYqsDeeR/z5B+ErJ8NTBdTHVXYlaW93SJKkeunldpejLzOqCyQcaC+eOu6U54HLQ82nhMJUJXob/7AXj5kalxuy2oLFS/tPw181p9jB756r0rq199DzedYJZFbC23ObXr5X9OZrGH7BloLAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image1"
+        title="image1"
+        src="/static/cf421c599f961a1f3f0d240cd7a946fa/2bef9/01.png"
+        srcset="/static/cf421c599f961a1f3f0d240cd7a946fa/6f3f2/01.png 256w,
+/static/cf421c599f961a1f3f0d240cd7a946fa/01e7c/01.png 512w,
+/static/cf421c599f961a1f3f0d240cd7a946fa/2bef9/01.png 1024w,
+/static/cf421c599f961a1f3f0d240cd7a946fa/d0ab7/01.png 1532w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>작업 시작
+<ul>
+<li><code>main</code> 스레드가 <code>invoke(task)</code>를 호출해서 <code>ForkJoinPool</code>에 작업을 요청</li>
+<li>스레드 풀은 스레드를 꺼내서 작업을 실행 여기서는 <code>ForkJoinPool-1-worker-1</code> 스레드가 실행됨, 줄여서 <code>w1</code>이라고 표현하겠음</li>
+<li><code>w1</code> 스레드는 <code>task(SumTask)</code>의 <code>compute()</code>를 호출함</li>
+</ul>
+</li>
+<li>작업 분할
+<ul>
+<li>리스트 크기가 <code>THRESHOLD(4)</code>보다 크므로 분할됨.</li>
+<li><code>w1</code>은 분할한 왼쪽 리스트인 <code>LEFT[1,2,3,4]</code>는 <code>fork(leftTask)</code>를 호출해서 다른 스레드가 작업을 처리하도록 요청함</li>
+<li><code>w1</code>은 분할할 오른쪽 리스트인 <code>RIGHT[5,6,7,8]</code>는 자기 자신의 메서드인 <code>compute(rightTask)</code>를 호출해서 자기 자신이 스스로 처리함 (재귀 호출)</li>
+</ul>
+</li>
+<li>병렬 처리
+<ul>
+<li>각 스레드가 동시에 <code>HeavyJob.heavyTask()</code>를 실행하며 병렬로 계산.</li>
+</ul>
+</li>
+<li>작업 완료
+<ul>
+<li>최종 결과의 합을 구하기 위해 <code>w1</code> 스레드는 <code>w2</code> 스레드의 작업에<code> join()</code> 메서드를 호출해서 <code>w2</code>의 결과를 기다림</li>
+</ul>
+</li>
+</ul>
+<h2>Fork/Join 프레임워크2 - 작업 훔치기</h2>
+<h3>더 분할하여 성능 최적화 하기</h3>
+<p>이번에는 임계값을 줄여서 작업을 더 잘게 분할해보자. 다음 코드를 참고해서 <code>THRESHOLD</code> 값 4를 2로 변경하자. 그러면 8개의 작업이 4개의 작업으로 분할될 것이다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">THRESHOLD</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><code>SumTask</code>의 임계 값을 2로 줄였다. 그리고 프로그램을 실행하니 기존에 비해 2배 더 빨라졌다. 임계값을 낮춤으로써 더 많은 스레드(총 4개)가 병렬로 작업을 처리했으며, 이전 실행(임계값 4)에서는 2개의 스레드만 사용되었다. 로그를 보면 계산이 거의 동시에 시작되어 거의 동시에 완료된 것을 확인할 수 있다.</p>
+<h2>작업 훔치기 알고리즘</h2>
+<blockquote>
+<p>✅ 참고</p>
+<p>이 부분은 크게 중요하지 않으므로 참고로만 알아두자.</p>
+</blockquote>
+<p>이번에는 작업 훔치기에 대해 자세히 알아보자.</p>
+<ul>
+<li><strong>Fork/Join 풀의 스레드는 각자 자신의 작업 큐를 가진다.</strong>
+<ul>
+<li>덕분에 작업을 큐에서 가져가기 위한 스레드간 경합이 줄어든다.</li>
+</ul>
+</li>
+<li>그리고 자신의 작업이 없는 경우, 그래서 스레드가 할 일이 없는 경우에 <strong>다른 스레드의 작업 큐에 대기중인 작업을 훔쳐서 대신 처리</strong>한다.</li>
+</ul>
+<p>그럼 이전 예제를 통해 작업 훔치기 알고리즘에 대해 살펴보자.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">12</span>:09:47.326 <span class="token punctuation">[</span>     main<span class="token punctuation">]</span> <span class="token punctuation">[</span>생성<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<ul>
+<li><code>ForkJoinPool</code>에 작업을 요청하면 <code>ForkJoinPool</code> 내부에 있는 외부 작업 큐에 작업이 저장된다.</li>
+<li>포크 조인 풀의 스레드는 각자 자신의 작업 큐를 가진다.</li>
+<li>포크 조인 풀의 스레드는 만약 자신이 할 일이 없고, 자신의 작업 큐에도 작업이 없는 경우 다른 작업 큐에 있는 작업을 훔쳐서 대신 처리할 수 있다.</li>
+<li><code>w1</code> 스레드는 자신이 처리할 일이 없으므로 다른 작업 큐의 작업을 훔친다. 여기서는 외부 작업 큐에 들어 있는 작업을 훔쳐서 대신 처리한다.</li>
+<li><code>w1</code>은 훔친 작업의 <code>compute()</code>를 호출하면서 작업을 시작한다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">12</span>:09:47.347 <span class="token punctuation">[</span>ForkJoinPool-1-worker-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>분할<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span><span class="token punctuation">]</span> -<span class="token operator">></span> LEFT<span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span><span class="token punctuation">]</span>, RIGHT<span class="token punctuation">[</span><span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<ul>
+<li><code>w1</code>은 작업의 크기가 크다고 평가하고 작업을 둘로 분할한다.</li>
+<li><code>[1,2,3,4]</code>의 작업은 fork를 호출해서 비동기로 다른 스레드가 실행해주길 기대한다.
+<ul>
+<li>사실 <code>fork()</code>는 스레드 자신의 작업 큐에 작업을 넣어두는 것이다.
+<ul>
+<li>이후에 자신이 여유가 되면 스스로 보관한 작업을 처리하고, 자신이 여유가 없고 쉬는 스레드가 있다면 쉬는 스레드가 작업을 훔쳐가서 대신 처리한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>[5,6,7,8]</code>의 작업은 compute를 호출해서 스스로 처리한다. (재귀 호출)</li>
+<li><code>w1</code>은 <code>compute([5,6,7,8])</code>를 호출했으므로 스스로 <code>[5,6,7,8]</code>을 처리해야 한다.</li>
+<li><code>w1</code>의 작업 큐에 있는 <code>[1,2,3,4]</code> 작업은 아직 다른 스레드에서 훔쳐가지 않았다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">12</span>:09:47.348 <span class="token punctuation">[</span>ForkJoinPool-1-worker-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>분할<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span><span class="token punctuation">]</span> -<span class="token operator">></span> LEFT<span class="token punctuation">[</span><span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span>, RIGHT<span class="token punctuation">[</span><span class="token number">7</span>, <span class="token number">8</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<ul>
+<li><code>w1</code>은 <code>[5,6,7,8]</code> 작업을 분할한다.
+<ul>
+<li><code>[5,6]</code>은 Fork를 통해서 자신의 작업 큐에 보관한다.</li>
+<li><code>[7,8]</code>은 compute를 호출해서 스스로 처리한다.</li>
+</ul>
+</li>
+<li><code>w1</code>은 <code>[7,8]</code>의 처리를 시작한다.</li>
+<li><code>w1</code>의 작업 큐에 작업이 2개나 대기 중이다. 쉬고 있는 <code>w2</code>가 <code>w1</code>의 작업<code>[1,2,3,4]</code>를 훔친다.</li>
+<li>참고로 여기에 있는 큐는 데크에 가깝다. 따라서 양쪽으로 넣고 뺄 수 있는 구조이다.</li>
+<li>스레드 스스로 작업을 작업 큐에 보관하거나 꺼낼 때는 위에서, 다른 곳에서 훔칠 때는 아래 방향에서 훔친다.
+<ul>
+<li>이런 구조 덕분에 경합이 덜 발생한다.</li>
+</ul>
+</li>
+<li><code>w2</code>가 <code>compute()</code>를 호출해서 <code>[1,2,3,4]</code>를 처리한다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">12</span>:09:47.348 <span class="token punctuation">[</span>ForkJoinPool-1-worker-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>분할<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span><span class="token punctuation">]</span> -<span class="token operator">></span> LEFT<span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span><span class="token punctuation">]</span>, RIGHT<span class="token punctuation">[</span><span class="token number">3</span>, <span class="token number">4</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<ul>
+<li><code>w2</code>는 작업의 크기가 크다고 평가하고 작업을 둘로 분할한다.</li>
+<li><code>[1,2]</code>의 작업은 fork를 호출해서 자신의 작업 큐에 넣어둔다.</li>
+<li><code>[3,4]</code>의 작업은 compute를 호출해서 스스로 처리한다. (재귀 호출)</li>
+<li>작업 큐에 남아있는 작업들을 <code>w3</code>,<code>w4</code> 스레드가 훔쳐가서 실행한다.
+<ul>
+<li><code>w3</code> : <code>w1</code>의 작업 큐 <code>[5,6]</code>을 훔쳐서 처리</li>
+<li><code>w4</code> : <code>[w2]</code>의 작업 큐 <code>[1,2]</code>를 훔쳐서 처리</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">12</span>:09:47.349 <span class="token punctuation">[</span>ForkJoinPool-1-worker-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>처리 시작<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">7</span>, <span class="token number">8</span><span class="token punctuation">]</span>
+<span class="token number">12</span>:09:47.349 <span class="token punctuation">[</span>ForkJoinPool-1-worker-4<span class="token punctuation">]</span> <span class="token punctuation">[</span>처리 시작<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token number">12</span>:09:47.349 <span class="token punctuation">[</span>ForkJoinPool-1-worker-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>처리 시작<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span>
+<span class="token number">12</span>:09:47.349 <span class="token punctuation">[</span>ForkJoinPool-1-worker-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>처리 시작<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">3</span>, <span class="token number">4</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div></div>
+<ul>
+<li>결과적으로 4개의 작업이 4개의 스레드에 분할되어 동시에 수행된다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">12</span>:09:49.382 <span class="token punctuation">[</span>     main<span class="token punctuation">]</span> pool: java.util.concurrent.ForkJoinPool@65ab7765<span class="token punctuation">[</span>Terminated, parallelism <span class="token operator">=</span> <span class="token number">10</span>, size <span class="token operator">=</span> <span class="token number">0</span>, active <span class="token operator">=</span> <span class="token number">0</span>, running <span class="token operator">=</span> <span class="token number">0</span>, steals <span class="token operator">=</span> <span class="token number">4</span>, tasks <span class="token operator">=</span> <span class="token number">0</span>, submissions <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<ul>
+<li>이번 작업에서 총 4번의 작업 훔치기가 있었다.</li>
+<li>마지막에 출력한 <code>ForkJoinPool</code>의 로그를 확인해보면 <code>steals = 4</code> 항목을 확인할 수 있다.</li>
+</ul>
+<p>임계값을 낮춤으로써 작업이 더 잘게 분할되고, 그 결과 더 많은 스레드가 병렬로 작업을 처리할 수 있게 되었다. 이는 Fork/Join 프레임워크의 핵심 개념인 <strong>분할 정복(Divide and Conquer)</strong> 전략을 명확하게 보여준다. 적절한 임계값 설정은 병렬 처리의 효율성에 큰 영향을 미치므로, 작업의 특성과 시스템 환경에 맞게 조정하는 것이 중요하다.</p>
+<h3>Fork/Join 적절한 작업 크기 선택</h3>
+<p>너무 작은 단위로 작업을 분할하면 스레드 생성과 관리에 드는 오버헤드가 커질 수 있으며, 너무 큰 단위로 분할하면 병렬 처리의 이점을 충분히 활용하지 못할 수 있다.</p>
+<p>작업시간이 완전히 동일하게 처리된다고 가정하면 이상적으로는 한 스레드당 1개의 작업을 처리하는 것이 좋다. 왜냐하면 스레드를 100% 사용하면서 분할과 결합의 오버헤드도 최소화 할 수 있기 때문이다. 하지만 작업 시간이 다른 경우를 고려한다면 한 스레드당 1개의 작업 보다는 더 잘게 쪼개어 두는 것이 좋다. 왜냐하면 <code>ForkJoinPool</code>은 스레드의 작업이 끝나면 다른 스레드가 처리하지 못하고 대기하는 작업을 훔쳐서 처리하는 기능을 제공하기 때문이다. 따라서 쉬는 스레드 없이 최대한 많은 스레드를 활용할 수 있다.</p>
+<p>그래서 실무에서는 적절한 임계값을 선택하는 것이 가장 큰 숙제이다. 그러면 어떻게 적절한 임계값을 설정할까?</p>
+<ul>
+<li><strong>작업의 복잡성</strong>: 작업이 단순하면 분할 오버헤드가 더 크게 작용한다. 작업이 복잡할수록 더 작은 단위로 나누는 것이 유리할 수 있다. 예를 들어 1 + 2 + 3 + 4의 아주 단순한 연산을 1 + 2, 3 + 4로 분할하게 되면 분할하고 합하는 비용이 더 든다.</li>
+<li><strong>작업의 균일성</strong>: 작업 처리 시간이 불균일할수록 작업 훔치기(work stealing)가 효과적으로 작동하도록 적절히 작은 크기로 분할하는 것이 중요하다.</li>
+<li><strong>시스템 하드웨어</strong>: 코어 수, 캐시 크기, 메모리 대역폭 등 하드웨어 특성에 따라 최적의 작업 크기가 달라진다.</li>
+<li><strong>스레드 전환 비용</strong>: 너무 작은 작업은 스레드 관리 오버헤드가 증가할 수 있다.</li>
+</ul>
+<p>적절한 작업의 크기에 대한 정답은 없지만, CPU 바운드 작업이라고 가정할 때, CPU 코어수에 맞추어 스레드를 생성하고, 작업 수는 스레드 수에 4 ~ 10배 정도로 생성하자. 물론 작업의 성격에 따라 다르다. 그리고 성능 테스트를 통해 적절한 값으로 조절하면 된다.</p>
+<h2>Fork/Join 프레임워크3 - 공용 풀</h2>
+<h3>공용 풀 설명</h3>
+<p>자바 8에서는 공용 풀(Common Pool)이라는 개념이 도입되었는데, 이는 Fork/Join 작업을 위한 자바가 제공하는 기본 스레드 풀이다.</p>
+<h3>공용 풀 특징</h3>
+<ul>
+<li><strong>시스템 전체에서 공유</strong>: 애플리케이션 내에서 <strong>단일 인스턴스로 공유</strong>되어 사용된다.</li>
+<li><strong>자동 생성</strong>: 별도로 생성하지 않아도 <code>ForkJoinPool.commonPool()</code>을 통해 접근할 수 있다.</li>
+<li><strong>편리한 사용</strong>: 별도의 풀을 만들지 않고도 <code>RecursiveTask</code> / <code>RecursiveAction</code>을 사용할 때 기본적으로 이 공용 풀이 사용된다.</li>
+<li><strong>병렬 스트림 활용</strong>: 자바 8의 병렬 스트림은 내부적으로 이 공용 풀을 사용한다.</li>
+<li><strong>자원 효율성</strong>: 여러 곳에서 별도의 풀을 생성하는 대신 공용 풀을 사용함으로써 시스템 자원을 효율적으로 관리할 수 있다.</li>
+<li><strong>병렬 수준 자동 설정</strong>: 기본적으로 시스템의 가용 프로세서 수에서 1을 뺀 값으로 병렬 수준(parallelism)이 설정 된다.</li>
+</ul>
+<p>Fork/Join 공용 풀은 쉽게 이야기해서, 개발자가 편리하게 Fork/Join 풀을 사용할 수 있도록 자바가 기본으로 제공하는 Fork/Join 풀의 단일 인스턴스이다.</p>
+<p>코드로 해당 부분을 살펴보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel<span class="token punctuation">.</span>forkjoin</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ForkJoinPool</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForkJoinMain2</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> processorCount <span class="token operator">=</span> <span class="token class-name">Runtime</span><span class="token punctuation">.</span><span class="token function">getRuntime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">availableProcessors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ForkJoinPool</span> commonPool <span class="token operator">=</span> <span class="token class-name">ForkJoinPool</span><span class="token punctuation">.</span><span class="token function">commonPool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"processorCount = "</span> <span class="token operator">+</span> processorCount <span class="token operator">+</span> <span class="token string">", commonPool = "</span> <span class="token operator">+</span> commonPool<span class="token punctuation">.</span><span class="token function">getParallelism</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> data <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">boxed</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"[생성] "</span> <span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">SumTask</span> task <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SumTask</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Integer</span> result <span class="token operator">=</span> task<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"최종 결과: "</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위의 예제는 <code>ForkJoinPool</code> 인스턴스를 생성하지 않고, 대신 공용 풀을 사용한다. 그러면 위의 코드를 조금 더 상세하게 살펴보자.</p>
+<p>이전 예제는 <code>ForkJoinPool</code>을 생성한 다음에 <code>pool.invoke(task)</code>를 통해 풀에 직접 작업을 요청했다. 하지만 이번 예제는 작업에 직접 <code>invoke</code> 메서드를 호출한다.</p>
+<ul>
+<li>여기서 사용한 <code>invoke()</code> 메서드는 현재 스레드(여기서는 메인 스레드)에서 작업을 시작하지만, <code>fork()</code>로 작업 분할 후에는 공용 풀의 워커 스레드들이 분할된 작업을 처리한다.
+<ul>
+<li>메인 스레드가 스레드 풀이 아닌 <code>RecursiveTask</code>의 <code>invoke()</code>를 직접 호출하면 메인 스레드가 작업의 <code>compute()</code>를 호출하게 된다. 이때 내부에서 <code>fork()</code>를 호출하면 공용 풀의 워커 스레드로 작업이 분할 된다.</li>
+<li>메인 스레드는 최종 결과가 나올 때 까지 대기(블로킹)해야 한다. 따라서 그냥 대기하는 것 보다는 작업을 도와주는 편이 더 효율적이다.
+<ul>
+<li><code>invoke()</code> : 호출 스레드가 작업을 도우면서 대기(블로킹)한다. 작업의 결과를 반환 받는다.</li>
+<li><code>fork()</code> : 작업을 비동기로 호출하려면 <code>invoke()</code> 대신에 <code>fork()</code>를 호출하면 된다. <code>Future</code>(<code>ForkJoinTask</code>)를 반환 받는다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>공용 풀은 JVM이 종료될 때까지 계속 유지되므로, 별도로 풀을 종료(<code>shutdown()</code>)하지 않아도 된다. 이렇게 공용 풀(<code>ForkJoinPool.commonPool</code>)을 활용하면, 별도로 풀을 생성/관리하는 코드를 작성하지 않아도 간편하게 병렬 처리를 구현할 수 있다.</p>
+<h3>공용 풀 vs 커스텀 풀</h3>
+<p>공용 풀은 방금 예제에서 사용한 방식이고 커스텀 풀은 이전 예제에서 사용했던 방식이다. 그럼 둘의 차이를 살펴보자.</p>
+<ul>
+<li><strong>자원 관리</strong>: 커스텀 풀은 명시적으로 생성하고 관리해야 하지만, 공용 풀은 시스템에서 자동으로 관리된다.</li>
+<li><strong>재사용성</strong>: 공용 풀은 여러 곳에서 공유할 수 있어 자원을 효율적으로 사용할 수 있다.</li>
+<li><strong>설정 제어</strong>: 커스텀 풀은 병렬 수준(스레드의 숫자), 스레드 팩토리 등을 세부적으로 제어할 수 있지만, 공용 풀은 기본 설정을 사용한다.</li>
+<li><strong>라이프사이클</strong>: 커스텀 풀은 명시적으로 종료해야 하지만, 공용 풀은 JVM이 관리한다. 따라서 종료하지 않아도 된다.</li>
+</ul>
+<p>물론 공용 풀도 설정을 아래와 같이 변경이 가능하지만 진짜 필요한 경우가 아닌 경우에는 사용하지 말자!</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token parameter variable">-Djava.util.concurrent.ForkJoinPool.common.parallelism</span><span class="token operator">=</span><span class="token number">3</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"java.util.concurrent.ForkJoinPool.common.parallelism"</span><span class="token punctuation">,</span> <span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<h3>공용 풀이 CPU - 1만큼 스레드를 생성하는 이유</h3>
+<p>기본적으로 자바의 Fork/Join 공용 풀은 시스템의 가용 CPU 코어 수에서 1을 뺀 값을 병렬 수준(parallelism)으로 사용한다. 이유는 아래와 같다.</p>
+<h4>메인 스레드 참여</h4>
+<p>위의 예제에서 보았지만 메인 스레드도 커스텀 풀에서 했던 것처럼 놀지 않고 작업을 도운다. 따라서 공용 풀에서 스레드를 14개까지 만들 필요 없이 13개의 워커 스레드 + 1개의 메인 스레드로 충분히 CPU 코어를 활용할 수 있다.</p>
+<h4>다른 프로세스와의 자원 경쟁 고려</h4>
+<p>애플리케이션이 실행되는 환경에서는 OS나 다른 애플리케이션, 혹은 GC(가비지 컬렉션) 같은 내부 작업들도 CPU를 사용해야 한다. 즉, 운영체제에서 사용하는 CPU도 존재하고 그 외의 IDE, 브라우저등 여러 곳에서 CPU를 사용할 수 있다. 모든 코어를 최대치로 점유하도록 설정하면 다른 중요한 작업이 지연되거나, 컨텍스트 스위칭 비용이 증가할 수 있다. 따라서 하나의 코어를 여유분으로 남겨 두어 전체 시스템 성능을 보다 안정적으로 유지하려는 목적이 있다.</p>
+<h4>효율적인 자원 활용</h4>
+<p>일반적으로는 CPU 코어 수와 동일하게 스레드를 만들더라도 성능상 큰 문제는 없지만, 공용 풀에서 CPU 코어 수-1을 기본값으로 설정함으로써, 특정 상황(다른 작업 스레드나 OS 레벨 작업)에서도 병목을 일으키지 않는 선에서 효율적으로 CPU를 활용할 수 있다.</p>
+<h2>자바 병렬 스트림</h2>
+<p>자바의 병렬 스트림은 Fork/Join 공용 풀을 사용해서 병렬 연산을 수행한다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel<span class="token punctuation">.</span>forkjoin</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">parallel<span class="token punctuation">.</span></span><span class="token class-name">HeavyJob</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ForkJoinPool</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForkJoinMain3</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> processorCount <span class="token operator">=</span> <span class="token class-name">Runtime</span><span class="token punctuation">.</span><span class="token function">getRuntime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">availableProcessors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ForkJoinPool</span> commonPool <span class="token operator">=</span> <span class="token class-name">ForkJoinPool</span><span class="token punctuation">.</span><span class="token function">commonPool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"processorCount = "</span> <span class="token operator">+</span> processorCount <span class="token operator">+</span> <span class="token string">", commonPool = "</span> <span class="token operator">+</span> commonPool<span class="token punctuation">.</span><span class="token function">getParallelism</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">parallel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">HeavyJob</span><span class="token operator">::</span><span class="token function">heavyTask</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">sum</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>기존에 대비해서 딱 1줄인 <code>.parallel()</code>만 붙여주었다. 그러면 바로 병렬 스트림이 적용되는 것이다. <strong>직접 스레드를 만들 필요 없이</strong> 스트림에 <code>parallel()</code> 메서드만 호출하면, 스트림이 자동으로 병렬 처리된다.</p>
+<p>어떻게 복잡한 멀티스레드 코드 없이 해당 작업들이 병렬로 처리될 수 있을까? 조금 신기하다. 바로 결론부터 말하면 <code>.parallel()</code>에는 Fork/Join 프레임워크의 <code>ForkJoinCommonPool</code>을 사용하고 있기 때문이다. 스트림에서 <code>parallel()</code>를 선언하면 스트림은 공용 <code>ForkJoinPool</code>을 사용하고, 내부적으로 병렬 처리 가능한 스레드 숫자와 작업의 크기 등을 확인하면서, <code>Spliterator</code>를 통해 데이터를 자동으로 분할한다. 분할 방식은 데이터 소스의 특성에 따라 최적화되어 있다. 그리고 공용 풀을 통해 작업을 적절한 수준으로 분할(Fork), 처리(Execute)하고, 그 결과를 모은다(Join) 이때 요청 스레드(여기서는 메인 스레드)도 어차피 결과가 나올 때 까지 대기해야 하기 때문에, 작업에 참여해서 작업을 도운다.</p>
+<h2>병렬 스트림 사용시 주의점1</h2>
+<p>병렬 스트림은 Fork/Join 공용 풀을 사용한다. Fork/Join 공용 풀은 CPU 바운드 작업(계산 집약적인 작업)을 위해 설계되었다. 따라서 스레드가 주로 대기해야 하는 I/O 바운드 작업에는 적합하지 않다.</p>
+<ul>
+<li>I/O 바운드 작업은 주로 네트워크 호출을 통한 대기가 발생한다. 예) 외부 API 호출, 데이터베이스 조회</li>
+</ul>
+<h3>⚠️ 주의 Fork/Join 프레임워크는 CPU 바운드 작업에만 사용해라!</h3>
+<p><strong>Fork/Join 프레임워크는 주로 CPU 바운드 작업(계산 집약적인 작업)을 처리하기 위해 설계</strong>되었다. 이러한 작업은 CPU 사용률이 높고 I/O 대기 시간이 적다. CPU 바운드 작업의 경우, 물리적인 CPU 코어와 비슷한 수의 스레드를 사용하는 것이 최적의 성능을 발휘할 수 있다. 스레드 수가 코어 수보다 많아지면 컨텍스트 스위칭 비용이 증가하고, 스레드 간 경쟁으로 인해 오히려 성능이 저하될 수 있기 때문이다.</p>
+<p>만약 DB 조회와 같이 I/O 바운드 작업을 할 때 해당 병렬 스트림을 사용하면 아래의 문제가 발생한다.</p>
+<ul>
+<li><strong>스레드 블로킹에 따른 CPU 낭비</strong>
+<ul>
+<li><code>ForkJoinPool</code>은 CPU 코어 수에 맞춰 제한된 개수의 스레드를 사용한다. (특히 공용 풀)</li>
+<li>I/O 작업으로 스레드가 블로킹되면 CPU가 놀게 되어, 전체 병렬 처리 효율이 크게 떨어진다.</li>
+</ul>
+</li>
+<li><strong>컨텍스트 스위칭 오버헤드 증가</strong>
+<ul>
+<li>I/O 작업 때문에 스레드를 늘리면, 실제 연산보다 대기 시간이 길어지는 상황이 발생할 수 있다.</li>
+<li>스레드가 많아질수록 컨텍스트 스위칭(context switching) 비용도 증가하여 오히려 성능이 떨어질 수 있다.</li>
+</ul>
+</li>
+<li><strong>작업 훔치기 기법 무력화</strong>
+<ul>
+<li><code>ForkJoinPool</code> 이 제공하는 작업 훔치기 알고리즘은, CPU 바운드 작업에서 빠르게 작업 단위를 계속 처리하도록 설계되었다. (작업을 훔쳐서 쉬는 스레드 없이 계속 작업)</li>
+<li>I/O 대기 시간이 많은 작업은 스래드가 I/O로 인해 대기하고 있는 경우가 많아, 작업 훔치기가 빛을 발휘하기 어렵고, 결과적으로 병렬 처리의 장점을 살리기 어렵다.</li>
+</ul>
+</li>
+<li><strong>분할-정복(작업 분할) 이점 감소</strong>
+<ul>
+<li>Fork/Join 방식을 통해 작업을 잘게 나누어도, I/O 병목이 발생하면 CPU 병렬화 이점이 크게 줄어든다.</li>
+<li>오히려 분할된 작업들이 각기 I/O 대기를 반복하면서, <code>fork()</code> , <code>join()</code> 에 따른 오버헤드만 증가할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p>따라서, 블로킹 작업이나 특수한 설정이 필요한 경우에는 커스텀 풀을 고려해야 한다. 그러면 예제를 통해 해당 주의점에 대해 알아보자. 해당 예제는 여러 요청이 동시에 들어올 때 공용 풀에서 어떤 문제가 발생 할 수 있는지 알아보는 예제이다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel<span class="token punctuation">.</span>forkjoin</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">parallel<span class="token punctuation">.</span></span><span class="token class-name">HeavyJob</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ExecutorService</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">Executors</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForkJoinMain4</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"java.util.concurrent.ForkJoinPool.common.parallelism"</span><span class="token punctuation">,</span> <span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">ExecutorService</span> requestPool <span class="token operator">=</span> <span class="token class-name">Executors</span><span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nThreads <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">String</span> requestName <span class="token operator">=</span> <span class="token string">"request"</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+            requestPool<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token function">logic</span><span class="token punctuation">(</span>requestName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        requestPool<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">logic</span><span class="token punctuation">(</span><span class="token class-name">String</span> requestName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"["</span> <span class="token operator">+</span> requestName <span class="token operator">+</span> <span class="token string">"] START"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">parallel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>i <span class="token operator">-></span> <span class="token class-name">HeavyJob</span><span class="token punctuation">.</span><span class="token function">heavyTask</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> requestName<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">sum</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"["</span> <span class="token operator">+</span> requestName <span class="token operator">+</span> <span class="token string">"] time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>여기서는 CPU 코어 수를 4개로 가정하였다. 즉, 병렬 스트림 내의 공용 풀의 work 스레드는 3개 인것이다. 그리고 <code>logic</code>이라는 무거운 계산을 한다고 해보자. 여기서는 무거운 작업을 표현하기 위해 <code>Thread.sleep()</code>으로 대기를 걸어주었다. 그리고 해당 무거운 작업을 여러 사용자가 요청한다고 시뮬레이션 한 결과이다.</p>
+<p>그러면 먼저 실행 결과부터 보자.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token number">14</span>:28:03.368 <span class="token punctuation">[</span>pool-1-thread-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>request1<span class="token punctuation">]</span> START
+<span class="token number">14</span>:28:03.391 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>request1<span class="token punctuation">]</span> <span class="token number">2</span> -<span class="token operator">></span> <span class="token number">20</span>
+<span class="token number">14</span>:28:03.391 <span class="token punctuation">[</span>pool-1-thread-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>request1<span class="token punctuation">]</span> <span class="token number">3</span> -<span class="token operator">></span> <span class="token number">30</span>
+<span class="token number">14</span>:28:03.391 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request1<span class="token punctuation">]</span> <span class="token number">4</span> -<span class="token operator">></span> <span class="token number">40</span>
+<span class="token number">14</span>:28:03.391 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>request1<span class="token punctuation">]</span> <span class="token number">1</span> -<span class="token operator">></span> <span class="token number">10</span>
+<span class="token number">14</span>:28:04.343 <span class="token punctuation">[</span>pool-1-thread-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request2<span class="token punctuation">]</span> START
+<span class="token number">14</span>:28:04.344 <span class="token punctuation">[</span>pool-1-thread-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request2<span class="token punctuation">]</span> <span class="token number">3</span> -<span class="token operator">></span> <span class="token number">30</span>
+<span class="token number">14</span>:28:04.394 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>request2<span class="token punctuation">]</span> <span class="token number">4</span> -<span class="token operator">></span> <span class="token number">40</span>
+<span class="token number">14</span>:28:04.394 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request2<span class="token punctuation">]</span> <span class="token number">2</span> -<span class="token operator">></span> <span class="token number">20</span>
+<span class="token number">14</span>:28:04.403 <span class="token punctuation">[</span>pool-1-thread-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>request1<span class="token punctuation">]</span> time: 1024ms, sum: <span class="token number">100</span>
+<span class="token number">14</span>:28:05.348 <span class="token punctuation">[</span>pool-1-thread-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request2<span class="token punctuation">]</span> <span class="token number">1</span> -<span class="token operator">></span> <span class="token number">10</span>
+<span class="token number">14</span>:28:05.349 <span class="token punctuation">[</span>pool-1-thread-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>request3<span class="token punctuation">]</span> START
+<span class="token number">14</span>:28:05.350 <span class="token punctuation">[</span>pool-1-thread-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>request3<span class="token punctuation">]</span> <span class="token number">3</span> -<span class="token operator">></span> <span class="token number">30</span>
+<span class="token number">14</span>:28:05.351 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>request3<span class="token punctuation">]</span> <span class="token number">2</span> -<span class="token operator">></span> <span class="token number">20</span>
+<span class="token number">14</span>:28:05.396 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-1<span class="token punctuation">]</span> <span class="token punctuation">[</span>request3<span class="token punctuation">]</span> <span class="token number">1</span> -<span class="token operator">></span> <span class="token number">10</span>
+<span class="token number">14</span>:28:05.396 <span class="token punctuation">[</span>ForkJoinPool.commonPool-worker-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request3<span class="token punctuation">]</span> <span class="token number">4</span> -<span class="token operator">></span> <span class="token number">40</span>
+<span class="token number">14</span>:28:06.354 <span class="token punctuation">[</span>pool-1-thread-2<span class="token punctuation">]</span> <span class="token punctuation">[</span>request2<span class="token punctuation">]</span> time: 2009ms, sum: <span class="token number">100</span>
+<span class="token number">14</span>:28:06.400 <span class="token punctuation">[</span>pool-1-thread-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>request3<span class="token punctuation">]</span> time: 1050ms, sum: <span class="token number">100</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<ul>
+<li>공용 풀의 제한된 병렬성
+<ul>
+<li>공용 풀은 병렬 수준(parallelism)이 3으로 설정되어 있어, 최대 3개의 작업만 동시에 처리할 수 있다. 여기에 요청 스레드도 자신의 작업에 참여하므로 각 작업당 총 4개의 스레드만 사용된다.</li>
+<li>따라서 총 12개의 요청(각각 4개의 작업)을 처리하는데 필요한 스레드 자원이 부족하다.</li>
+</ul>
+</li>
+<li>처리 시간의 불균형
+<ul>
+<li>request1: 1024ms (약 1초)</li>
+<li>request2: 2009ms (약 2초)</li>
+<li>request3: 1050ms (약 1초)</li>
+<li>첫 번째 요청은 거의 모든 공용 풀 워커를 사용할 수 있었지만, 이후 요청들은 제한된 공용 풀 자원을 두고 경쟁해야 한다. 따라서 완료 시간이 점점 느려진다. 물론 지금은 거의 차이가 없고 request3은 request2보다 조금 더 빠르지만 request1에 비해 늦다. 하지만 요청이 엄청 많아지면 시간이 점점 벌어질 것이다.</li>
+</ul>
+</li>
+<li>스레드 작업 분배
+<ul>
+<li>일부 작업은 요청 스레드(pool-1-thread-N)에서 직접 처리되고, 일부는 공용 풀(ForkJoinPool.commonPool-worker-N)에서 처리된다.</li>
+<li>요청 스레드가 작업을 도와주지만, 공용 풀의 스레드가 매우 부족하기 때문에 한계가 있다.</li>
+</ul>
+</li>
+</ul>
+<p>즉, I/O 바운드 작업에 병렬 스트림을 사용한다면 아래와 같은 문제가 있다.</p>
+<ul>
+<li><strong>공용 풀 병목 현상</strong>: 모든 병렬 스트림이 동일한 공용 풀을 공유하므로, 요청이 많아질수록 병목 현상이 발생한다.</li>
+<li><strong>자원 경쟁</strong>: 여러 요청이 제한된 스레드 풀을 두고 경쟁하면서 요청의 성능이 저하된다.</li>
+<li><strong>예측 불가능한 성능</strong>: 같은 작업이라도 동시에 실행되는 다른 작업의 수에 따라 처리 시간이 크게 달라진다.</li>
+</ul>
+<p>특히 실무 환경에서는 주로 여러 요청을 동시에 처리하는 애플리케이션 서버를 사용하게 된다. 이때 수 많은 요청이 공용 풀을 사용하는 것은 매우 위험할수 있다. 따라서 병렬 스트림을 남용하면 전체 시스템 성능이 저하될 수 있다.</p>
+<blockquote>
+<p>⚠️ 주의 실무에서 공용 풀은 절대! I/O 바운드 작업을 하면 안된다!</p>
+<p>실무에서 공용 풀에 I/O 바운드 작업을 해서 장애가 나는 경우가 있다. CPU 코어가 4개라면 공용 풀은 3개의 스레드만 사용한다. 그리고 공용 풀을 애플리케이션 전체에서 사용된다. 공용 풀에 있는 스레드 3개가 I/O 바운드 작업으로 대기하는 순간, 애플리케이션에서 공용 풀을 사용하는 모든 요청이 다 밀리게 된다.</p>
+<p><strong>공용 풀은 반드시 CPU 바운드(계산 집약적인)</strong> 작업에만 사용해야 한다! 병렬 스트림은 처음부터 Fork/Join 공용 풀을 사용해서 CPU 바운드 작업에 맞도록 설계되어 있다. 따라서 이런 부분을 잘 모르고 실무에서 병렬 스트림에 I/O 대기 작업을 하는 것은 아주 위험한 일이다. 특히 병렬 스트림의 경우 단순히 <code>parallel()</code> 한 줄만 추가하면 병렬 처리가 되기 때문에, 어떤 스레드가 사용 되는지도 제대로 이해하지 못하고 사용하는 경우가 있다. 병렬 스트림은 반드시 CPU 바운드 작업에만 사용하자!</p>
+</blockquote>
+<h2>병렬 스트림 사용시 주의점2</h2>
+<p>별도의 전용 스레드 풀을 사용해서 앞선 예제의 문제를 해결해보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">parallel<span class="token punctuation">.</span>forkjoin</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">parallel<span class="token punctuation">.</span></span><span class="token class-name">HeavyJob</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ExecutionException</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ExecutorService</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">Executors</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">Future</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">IntStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token keyword">static</span> <span class="token import static"><span class="token namespace">util<span class="token punctuation">.</span></span><span class="token class-name">MyLogger</span><span class="token punctuation">.</span><span class="token static">log</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForkJoinMain6</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ExecutorService</span> requestPool <span class="token operator">=</span> <span class="token class-name">Executors</span><span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ExecutorService</span> logicPool <span class="token operator">=</span> <span class="token class-name">Executors</span><span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nThreads <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> nThreads<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">String</span> requestName <span class="token operator">=</span> <span class="token string">"request"</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+            requestPool<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> logicPool<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token function">logic</span><span class="token punctuation">(</span>requestName<span class="token punctuation">,</span> logicPool<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        requestPool<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logicPool<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">logic</span><span class="token punctuation">(</span><span class="token class-name">String</span> requestName<span class="token punctuation">,</span> <span class="token class-name">ExecutorService</span> es<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"["</span> <span class="token operator">+</span> requestName <span class="token operator">+</span> <span class="token string">"] START"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Future</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span><span class="token punctuation">></span></span> futures <span class="token operator">=</span> <span class="token class-name">IntStream</span><span class="token punctuation">.</span><span class="token function">rangeClosed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">mapToObj</span><span class="token punctuation">(</span>i <span class="token operator">-></span> es<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token class-name">HeavyJob</span><span class="token punctuation">.</span><span class="token function">heavyTask</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> requestName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> futures<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">mapToInt</span><span class="token punctuation">(</span>f <span class="token operator">-></span> <span class="token punctuation">{</span>
+                    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">return</span> f<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"["</span> <span class="token operator">+</span> requestName <span class="token operator">+</span> <span class="token string">"] time: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"ms, sum: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위의 코드에는 병렬 스트림을 사용하지 않고 로직 풀과 요청 풀을 분리하였다. 이로 인하여 결과를 확인해보면 아래와 같은 효과를 볼 수 있다.</p>
+<ul>
+<li><strong>일관된 처리 시간</strong>
+<ul>
+<li>요청마다 처리시간이 달라지는 것을 해결하였다.</li>
+</ul>
+</li>
+<li><strong>독립적인 스레드 할당</strong>
+<ul>
+<li>공용 스레드 풀에 work 스레드를 사용하지 않고 개별 별도 풀의 스레드를 사용하였다.</li>
+</ul>
+</li>
+<li><strong>확장성 향상</strong>
+<ul>
+<li>공용 풀 병목 현상이 발생하지 않았다.</li>
+</ul>
+</li>
+</ul>
+<h2>CompletableFuture와 주의 사항</h2>
+<p>특히 실무에서 자주 하는 실수가 병렬 스트림을 I/O 대기 작업에 사용하거나, 또는 <code>CompletableFuture</code>를 사용할 때 발생한다.</p>
+<ul>
+<li>병렬 스트림은 처음부터 Fork/Join 공용 풀과 함께 사용하도록 설계되었다. 따라서 반드시 CPU 바운드 작업에 사용해야 한다.
+<ul>
+<li>I/O 대기 작업에 사용하면 Fork/Join 공용 풀의 스레드 병목으로 모든 요청이 밀리는 큰 장애가 발생하기 쉽다.</li>
+</ul>
+</li>
+<li>실무에서 복잡한 멀티스레드 코드를 작성할 때는 <code>CompletableFuture</code>가 도움이 된다.</li>
+<li><code>CompletableFuture</code> 를 생성할 때는 별도의 스레드 풀을 반드시 지정해야 한다. 그렇지 않으면 <strong>Fork/Join 공용 풀</strong>이 대신 사용된다. 이 때문에 많은 장애가 발생한다. <code>CompletableFuture</code> 를 사용할 때는 <strong>반드시! 커스텀 풀을 지정해서 사용</strong>하자!</li>
+</ul>
+<blockquote>
+<p>잘못된 지식이 있을 경우 댓글로 남겨주시면 빠르게 반영하겠습니다!</p>
+</blockquote></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/병렬-스트림/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-b886238b8f8508435f5b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-56d5a7640e67e093d479.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-3cc17b46dad7c277753d.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-814ff86f9f5c3fa14c8d.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-b886238b8f8508435f5b.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-e19ab4801f705d965f2d.js" async=""></script></body></html>
