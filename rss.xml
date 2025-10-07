@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Oct 2025 09:34:12 GMT</lastBuildDate><item><title><![CDATA[[코틀린 입문] 코틀린에서 OOP]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-OOP/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-OOP/</guid><pubDate>Tue, 07 Oct 2025 16:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Oct 2025 09:47:41 GMT</lastBuildDate><item><title><![CDATA[코틀린 상속 간 주의점]]></title><description><![CDATA[코틀린 넌 왜 나에게 이런 시련을 주는건가.. 연휴기간 동안 코틀린 상속 관련 공부를 진행하다가 재미난 이슈가 있어서 한번 공유드릴려구요! 아래의 2개의 클래스가 있습니다. 보시는 바와 같이 Child class가 Parent…]]></description><link>https://sungbin.kr/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%83%81%EC%86%8D-%EA%B0%84-%EC%A3%BC%EC%9D%98-%EC%A0%90/</link><guid isPermaLink="false">https://sungbin.kr/코틀린-상속-간-주의-점/</guid><pubDate>Tue, 07 Oct 2025 18:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVQoz41SMUtCURh9P6I9GoTGfkCbtISDEIig7wml2FIimaE0pLVUBkY22NSSSqmEkZHobKavMM0wyBoawppe8YS83/fFe5qKk4cznHu55zuXey5HKoAIkAihy9HADWjsCwT8R3cLEVQMmxlRSISDM3pLJihtwMwSyV+qATq23oihpWJuI0xck7CZa7nHwMdR9ZgRVSrl2lOt/FAmIkmS6s/19FU6m8sOJeMPkTP++OqebW9MsZeMMh4Yb+FNgil5ngzsBZwrTp1eZxbMlnmLa80V3A/2k3+RPnyH74sLofVCVUkCxsBoMlrtVv2c3r/l185oeYG32W2aSY3H63E4Hc3PpmJG9d55b2p6uza+S/wy3OWVdygUbhuNRjQWDR+Fi8ViJBpJXaRip7FSqSSKoizLPTOc5CXDPa3e4M4lxRPU+lb7Axy9qoHSkACgUw9jDBEZYx09WBjXP60SVY74Sf4AtOgKavup5M4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/619e6175d83cd70c239721219e3cbc91/2bef9/banner.png&quot;
+        srcset=&quot;/static/619e6175d83cd70c239721219e3cbc91/6f3f2/banner.png 256w,
+/static/619e6175d83cd70c239721219e3cbc91/01e7c/banner.png 512w,
+/static/619e6175d83cd70c239721219e3cbc91/2bef9/banner.png 1024w,
+/static/619e6175d83cd70c239721219e3cbc91/c1b63/banner.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;코틀린 넌 왜 나에게 이런 시련을 주는건가..&lt;/h2&gt;
+&lt;p&gt;연휴기간 동안 코틀린 상속 관련 공부를 진행하다가 재미난 이슈가 있어서 한번 공유드릴려구요!&lt;/p&gt;
+&lt;p&gt;아래의 2개의 클래스가 있습니다. 보시는 바와 같이 Child class가 Parent 클래스를 상속받고 있지요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;troubleshooting
+
+&lt;span class=&quot;token keyword&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; number&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Parent Call&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;number&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;troubleshooting
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; number&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Child Call&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고 아래와 같이 main 함수에서 Child class 생성자를 호출합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;troubleshooting
+
+&lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;300&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그러면 결과는 어떻게 찍힐까요?&lt;/p&gt;
+&lt;p&gt;저는 처음에 아래와 같이 생각했습니다. 부모 클래스의 생성자가 호출되면서 number값을 출력할 때 오버라이딩 되었으니 자식 클래스의 number값을 호출하지 않을까? 그래서 아래와 같이 생각했었습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Parent Class
+&lt;span class=&quot;token number&quot;&gt;300&lt;/span&gt;
+Child Class&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그런데 실제 결과는 달랐습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Parent Class
+null
+Child Class&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;오잉? 이상하지 않은가요? 그래서 자바코드로 디컴파일 해보고 공식문서를 찾아본 결과 정답에 대한 솔루션을 알 수 있었습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;공식문서: &lt;a href=&quot;https://kotlinlang.org/docs/inheritance.html#derived-class-initialization-order&quot;&gt;공식문서 링크&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;왜 그런가 싶더니 코틀린 공식 문서에서 아래와 같이 이야기 하더라구요!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;파생 클래스의 새 인스턴스를 생성하는 동안 기본 클래스 초기화는 첫 번째 단계로 수행됩니다(기본 클래스 생성자의 인수 평가에 의해서만 선행됨). 즉, 파생 클래스의 초기화 논리가 실행되기 전에 수행됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;코틀린의 공식문서의 해당 내용을 번역해보았습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;즉, 기본 클래스 생성자가 실행될 때 파생 클래스에서 선언되거나 재정의된 속성은 아직 초기화되지 않은 상태입니다. 기본 클래스 초기화 로직에서 이러한 속성을 사용하면 (직접적으로든 다른 재정의된 멤버 구현을 통해 간접적으로든 ) 잘못된 동작이나 런타임 오류가 발생할 수 있습니다. 따라서 기본 클래스를 설계할 때는 생성자, 속성 초기화자 또는 블록에 멤버를 open사용하지 않는 것이 좋습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉, 요약 하자면 아래와 같을 것입니다.&lt;/p&gt;
+&lt;p&gt;자식 생성자를 호출한다 -&gt; 그 전에 부모 생성자를 호출하려고 할 때 먼저 init block을 호출한다. number 값을 출력하려고 보니 재정의되어서 자식 클래스에 접근한다. -&gt; 그런데 자식 클래스 생성자 전이니 해당 값은 알 수 없다 -&gt; 따라서 null로 출력한다. 그런데 저는 여기서 또 의문이 들었습니다. 분명 선언된 것은 non-nullable 타입인데 어떻게 null이 나오는거야? 또한, 신기한 것은 타입을 String -&gt; Int로 변경 시에는 기본 값 0이 나오더라구요! 그래서 또 한번 30분간 연구를 해보았습니다. 그 덕에 조금 답을 얻을 수 있었는데요.&lt;/p&gt;
+&lt;p&gt;초기화 순서를 먼저 보면 좋을 것 같아요.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Child(&quot;300&quot;) 호출 → Parent() 생성자 호출(슈퍼 생성자 호출이 먼저).&lt;/li&gt;
+&lt;li&gt;Parent의 init가 실행되며 println(number) 수행.&lt;/li&gt;
+&lt;li&gt;number는 open 프로퍼티라서 가상 디스패치로 Child.number getter를 타게 됩니다.&lt;/li&gt;
+&lt;li&gt;하지만 이 시점에는 Child.number의 백킹 필드가 아직 할당 전이므로, 원시 타입 Int → JVM 기본값 0, 레퍼런스 타입(예: String) → JVM 기본값 null이 반환된다고 하더라구요.&lt;/li&gt;
+&lt;li&gt;Kotlin의 Non-null 보장도 생성 중(super 생성자 실행 중)에는 예외적으로 깨질 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그래서 값이 다르게 나왔다고 하더라구요!&lt;/p&gt;
+&lt;h2&gt;후기&lt;/h2&gt;
+&lt;p&gt;해당 과정은 정말 1시간 동안 연구하면서 공식문서를 뒤져보고 gpt한테도 물어보면서 얻은 답변들이였습니다. 그래서 뭔가 재미나면서도 다른 분들께 공유를 드리면 좋을 것 같아서 해당 포스팅을 진행하게 되었습니다. 이렇게 연구하게 된것도 어찌보면 인프런에서 진행하는 &lt;a href=&quot;https://inf.run/RAWqi&quot;&gt;&apos;향로&apos; 와 함께하는 추석 완강 챌린지&lt;/a&gt; 덕도 큰 것 같습니다. 연휴가 이제 거의 절반을 지난 것 같은데 남은 연휴기간도 화이팅입니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 OOP]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-OOP/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-OOP/</guid><pubDate>Tue, 07 Oct 2025 16:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -1258,91 +1342,7 @@ Derived Class&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line
 &lt;blockquote&gt;
 &lt;p&gt;✅ 참고&lt;/p&gt;
 &lt;p&gt;자바도 JDK17부터 sealed class가 추가되었지만 사용 방법이 살짝 다르다.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[코틀린 상속 간 주의점]]></title><description><![CDATA[코틀린 넌 왜 나에게 이런 시련을 주는건가.. 연휴기간 동안 코틀린 상속 관련 공부를 진행하다가 재미난 이슈가 있어서 한번 공유드릴려구요! 아래의 2개의 클래스가 있습니다. 보시는 바와 같이 Child class가 Parent…]]></description><link>https://sungbin.kr/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%83%81%EC%86%8D-%EA%B0%84-%EC%A3%BC%EC%9D%98-%EC%A0%90/</link><guid isPermaLink="false">https://sungbin.kr/코틀린-상속-간-주의-점/</guid><pubDate>Tue, 07 Oct 2025 16:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVQoz41SMUtCURh9P6I9GoTGfkCbtISDEIig7wml2FIimaE0pLVUBkY22NSSSqmEkZHobKavMM0wyBoawppe8YS83/fFe5qKk4cznHu55zuXey5HKoAIkAihy9HADWjsCwT8R3cLEVQMmxlRSISDM3pLJihtwMwSyV+qATq23oihpWJuI0xck7CZa7nHwMdR9ZgRVSrl2lOt/FAmIkmS6s/19FU6m8sOJeMPkTP++OqebW9MsZeMMh4Yb+FNgil5ngzsBZwrTp1eZxbMlnmLa80V3A/2k3+RPnyH74sLofVCVUkCxsBoMlrtVv2c3r/l185oeYG32W2aSY3H63E4Hc3PpmJG9d55b2p6uza+S/wy3OWVdygUbhuNRjQWDR+Fi8ViJBpJXaRip7FSqSSKoizLPTOc5CXDPa3e4M4lxRPU+lb7Axy9qoHSkACgUw9jDBEZYx09WBjXP60SVY74Sf4AtOgKavup5M4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;banner&quot;
-        src=&quot;/static/619e6175d83cd70c239721219e3cbc91/2bef9/banner.png&quot;
-        srcset=&quot;/static/619e6175d83cd70c239721219e3cbc91/6f3f2/banner.png 256w,
-/static/619e6175d83cd70c239721219e3cbc91/01e7c/banner.png 512w,
-/static/619e6175d83cd70c239721219e3cbc91/2bef9/banner.png 1024w,
-/static/619e6175d83cd70c239721219e3cbc91/c1b63/banner.png 1200w&quot;
-        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;코틀린 넌 왜 나에게 이런 시련을 주는건가..&lt;/h2&gt;
-&lt;p&gt;연휴기간 동안 코틀린 상속 관련 공부를 진행하다가 재미난 이슈가 있어서 한번 공유드릴려구요!&lt;/p&gt;
-&lt;p&gt;아래의 2개의 클래스가 있습니다. 보시는 바와 같이 Child class가 Parent 클래스를 상속받고 있지요.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;troubleshooting
-
-&lt;span class=&quot;token keyword&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; number&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Parent Call&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;number&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;troubleshooting
-
-&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; number&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Child Call&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;그리고 아래와 같이 main 함수에서 Child class 생성자를 호출합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;troubleshooting
-
-&lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;300&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;그러면 결과는 어떻게 찍힐까요?&lt;/p&gt;
-&lt;p&gt;저는 처음에 아래와 같이 생각했습니다. 부모 클래스의 생성자가 호출되면서 number값을 출력할 때 오버라이딩 되었으니 자식 클래스의 number값을 호출하지 않을까? 그래서 아래와 같이 생각했었습니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Parent Class
-&lt;span class=&quot;token number&quot;&gt;300&lt;/span&gt;
-Child Class&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;그런데 실제 결과는 달랐습니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Parent Class
-null
-Child Class&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;오잉? 이상하지 않은가요? 그래서 자바코드로 디컴파일 해보고 공식문서를 찾아본 결과 정답에 대한 솔루션을 알 수 있었습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;공식문서: &lt;a href=&quot;https://kotlinlang.org/docs/inheritance.html#derived-class-initialization-order&quot;&gt;공식문서 링크&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;왜 그런가 싶더니 코틀린 공식 문서에서 아래와 같이 이야기 하더라구요!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;파생 클래스의 새 인스턴스를 생성하는 동안 기본 클래스 초기화는 첫 번째 단계로 수행됩니다(기본 클래스 생성자의 인수 평가에 의해서만 선행됨). 즉, 파생 클래스의 초기화 논리가 실행되기 전에 수행됩니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;코틀린의 공식문서의 해당 내용을 번역해보았습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;즉, 기본 클래스 생성자가 실행될 때 파생 클래스에서 선언되거나 재정의된 속성은 아직 초기화되지 않은 상태입니다. 기본 클래스 초기화 로직에서 이러한 속성을 사용하면 (직접적으로든 다른 재정의된 멤버 구현을 통해 간접적으로든 ) 잘못된 동작이나 런타임 오류가 발생할 수 있습니다. 따라서 기본 클래스를 설계할 때는 생성자, 속성 초기화자 또는 블록에 멤버를 open사용하지 않는 것이 좋습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;즉, 요약 하자면 아래와 같을 것입니다.&lt;/p&gt;
-&lt;p&gt;자식 생성자를 호출한다 -&gt; 그 전에 부모 생성자를 호출하려고 할 때 먼저 init block을 호출한다. number 값을 출력하려고 보니 재정의되어서 자식 클래스에 접근한다. -&gt; 그런데 자식 클래스 생성자 전이니 해당 값은 알 수 없다 -&gt; 따라서 null로 출력한다. 그런데 저는 여기서 또 의문이 들었습니다. 분명 선언된 것은 non-nullable 타입인데 어떻게 null이 나오는거야? 또한, 신기한 것은 타입을 String -&gt; Int로 변경 시에는 기본 값 0이 나오더라구요! 그래서 또 한번 30분간 연구를 해보았습니다. 그 덕에 조금 답을 얻을 수 있었는데요.&lt;/p&gt;
-&lt;p&gt;초기화 순서를 먼저 보면 좋을 것 같아요.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Child(&quot;300&quot;) 호출 → Parent() 생성자 호출(슈퍼 생성자 호출이 먼저).&lt;/li&gt;
-&lt;li&gt;Parent의 init가 실행되며 println(number) 수행.&lt;/li&gt;
-&lt;li&gt;number는 open 프로퍼티라서 가상 디스패치로 Child.number getter를 타게 됩니다.&lt;/li&gt;
-&lt;li&gt;하지만 이 시점에는 Child.number의 백킹 필드가 아직 할당 전이므로, 원시 타입 Int → JVM 기본값 0, 레퍼런스 타입(예: String) → JVM 기본값 null이 반환된다고 하더라구요.&lt;/li&gt;
-&lt;li&gt;Kotlin의 Non-null 보장도 생성 중(super 생성자 실행 중)에는 예외적으로 깨질 수 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;그래서 값이 다르게 나왔다고 하더라구요!&lt;/p&gt;
-&lt;h2&gt;후기&lt;/h2&gt;
-&lt;p&gt;해당 과정은 정말 1시간 동안 연구하면서 공식문서를 뒤져보고 gpt한테도 물어보면서 얻은 답변들이였습니다. 그래서 뭔가 재미나면서도 다른 분들께 공유를 드리면 좋을 것 같아서 해당 포스팅을 진행하게 되었습니다. 이렇게 연구하게 된것도 어찌보면 인프런에서 진행하는 &lt;a href=&quot;https://inf.run/RAWqi&quot;&gt;&apos;향로&apos; 와 함께하는 추석 완강 챌린지&lt;/a&gt; 덕도 큰 것 같습니다. 연휴가 이제 거의 절반을 지난 것 같은데 남은 연휴기간도 화이팅입니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터 기초] 넓고 얕은 운영체제]]></title><description><![CDATA[본 포스팅은 인프런의 넓고 얕게 외워서 컴공 전공자 되기를 참조하여 작성한 글입니다. 동시성과 병렬성 동시성 동시성이란, 쉽게 말해 여러 가지 일이 동시에 진행되는 것이라고 생각하면 쉽다. 예를 들어, 라면 먹는 일과 TV…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EB%84%93%EA%B3%A0-%EC%96%95%EC%9D%80-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-넓고-얕은-운영체제/</guid><pubDate>Mon, 06 Oct 2025 21:39:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터 기초] 넓고 얕은 운영체제]]></title><description><![CDATA[본 포스팅은 인프런의 넓고 얕게 외워서 컴공 전공자 되기를 참조하여 작성한 글입니다. 동시성과 병렬성 동시성 동시성이란, 쉽게 말해 여러 가지 일이 동시에 진행되는 것이라고 생각하면 쉽다. 예를 들어, 라면 먹는 일과 TV…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EB%84%93%EA%B3%A0-%EC%96%95%EC%9D%80-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-넓고-얕은-운영체제/</guid><pubDate>Mon, 06 Oct 2025 21:39:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
