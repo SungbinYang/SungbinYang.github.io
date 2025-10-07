@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Oct 2025 13:46:30 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 기초] 프로그래밍 맛보기]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%A7%9B%EB%B3%B4%EA%B8%B0/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-프로그래밍-맛보기/</guid><pubDate>Tue, 07 Oct 2025 22:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Oct 2025 14:25:48 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 기초] 자료구조 소개와 마무리]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%86%8C%EA%B0%9C%EC%99%80-%EB%A7%88%EB%AC%B4%EB%A6%AC/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-자료구조-소개와-마무리/</guid><pubDate>Tue, 07 Oct 2025 23:25:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQoz51Sy0rDUBDN54mR1sYXigvFldpHGts0Qou4bKAPH1UXWlGhFBcV/JbmYaBJpSbErzgyF3JJSqPg4jDJPXfO3Jk5wpqlQDLLoBh9R//x83mkcUI8mbBunSRAXBRzMZH5O5GOEBfbsCoQjWMsRxgfIWMUsWLkkTVL2LSqLK6aJYhGnt0lLmfKXJQJZs0iDpwzdPwXXPkD9MM3PIQj3IcjPH2/49IfoD69hj57ZPxt8MpiLxiynH2nwYrwF1KFbVuFPGmi5nWheRdozvpoTHsouzrkiY7dj1NWtOZ1UHXbqLgtaF4XqtfGjq3xV/IZ0kHGKLAWqJ2l8SG2bBWtr2eWfP55xwSIjyCyWOCz5S1LC4ZNBfacOm6CIW+PWqY5JpeiLFhKiiVIlAYfX0CapSQrJvibz5I2Uv70Z6rgf/EDHOsWLULro5gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/e163e788b6402e2d8f80c986b29ee7b2/8c557/banner.png&quot;
+        srcset=&quot;/static/e163e788b6402e2d8f80c986b29ee7b2/6f3f2/banner.png 256w,
+/static/e163e788b6402e2d8f80c986b29ee7b2/01e7c/banner.png 512w,
+/static/e163e788b6402e2d8f80c986b29ee7b2/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;본 포스팅은 인프런의 &lt;a href=&quot;https://inf.run/udDJ6&quot;&gt;넓고 얕게 외워서 컴공 전공자 되기&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;자료를 정리하는 이유&lt;/h2&gt;
+&lt;p&gt;프로그래밍을 공부하다 보면 주위에서 이렇게들 이야기를 한다. 자료구조랑 알고리즘(문제 해결에 관한 공식)이 중요하다고 한다. 그러면 왜 자료를 정리할까? 자료를 잘 아는 것도 중요하지만 그것을 나중에 찾기 쉽게 정리라는 것이 필요하다.&lt;/p&gt;
+&lt;p&gt;효율이 좋은 사람은 &apos;정리&apos;를 잘한다. 그런데 이 정리를 할 때 어떤 규칙에 맞게 자료를 정리하는데 이 때, &lt;strong&gt;일정규칙으로 자료를 나열하는 것&lt;/strong&gt;이 자료구조이고 &lt;strong&gt;구조화된 자료에서 원하는 것을 빨리 찾아내는 방법&lt;/strong&gt;이 알고리즘이다.&lt;/p&gt;
+&lt;h3&gt;자료구조의 종류&lt;/h3&gt;
+&lt;p&gt;자료구조에는 크게 2가지 종류로 구분할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;선형구조 : 일렬로 줄을 세우는것으로 1차원 구조를 가진다. ex. 스택, 큐&lt;/li&gt;
+&lt;li&gt;비선형구조 : 2차원적 구조를 가지며 선형구조에 비해 매우 성능이 뛰어나다. 단, 선형구조에 비해 논리구조가 복잡하다. ex. 트리구조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;비선형구조는 매우 성능이 뛰어남으로 우리가 흔히 데이터를 저장하는 DB가 전부 비선형구조를 취한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;선형 자료구조 Stack과 Queue&lt;/h2&gt;
+&lt;h3&gt;Stack&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.109375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABY0lEQVQoz42T2Y6DMAxF+STiLLSEFkRZgmCgZSr1of//HXfkQLrNVJ2HK0PiHF3bSSQlgUiC429JEBGEEIjj2MewFs4Jkj4GRQFGLxshkQFpmiLPc1hrQSs07G81QSuCXk1Ejw7DolGEjSZIImhjUFUVnHMoyxJxLHy+NYRyS/jaC8yFwLgX/vwNqCShywinXKCxhEQTdkYgNUuJLKW0d5cZ8kDOYafsUK2cJyAneGe+JMI2tR5abARiIXwPrRbYpQm0SRCL0Gd5q/Kph7cGy2Uty3Zo6gqncUA/DOj7Hq5tUNU1kiQB0dLPMMQnh39NN7PWg5zrUNc1mqZBURSYxhHGmHXa8knR488dfJ/u9zzjcrngfD57Xa9XDMMArfVn4Kv4mhyPx6VU59C2LaZpwuFw+J/Dd8Cu6zyENc+zLz1M/t9ATubGM4TvYQDyd5ZlL6/mAzAkhWfH/eISWUqptzAG/gAKrYqiVYNlRgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;image01&quot;
+        src=&quot;/static/f35151b37c66a266ade32f333deb8f44/2bef9/01.png&quot;
+        srcset=&quot;/static/f35151b37c66a266ade32f333deb8f44/6f3f2/01.png 256w,
+/static/f35151b37c66a266ade32f333deb8f44/01e7c/01.png 512w,
+/static/f35151b37c66a266ade32f333deb8f44/2bef9/01.png 1024w,
+/static/f35151b37c66a266ade32f333deb8f44/fe8a7/01.png 1223w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;스택은 1차원적인 선형자료구조이며, 입출력 지점이 1개뿐인 자료구조이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Last In First Out 구조&lt;/li&gt;
+&lt;li&gt;처음 넣은 것은 맨 아래바닥에 깔린다.&lt;/li&gt;
+&lt;li&gt;넣는 것은 push, 빼는 것은 pop이다.&lt;/li&gt;
+&lt;li&gt;두 번째부터는 처음 넣은 것 위에 쌓인다.&lt;/li&gt;
+&lt;li&gt;바닥에 있는 것을 꺼내려 면 위에 쌓인 것들을 모두 치우는 수밖에 없다.&lt;/li&gt;
+&lt;li&gt;&apos;(정보) 뒤집기&apos;나 &apos;되돌아가기&apos;에서 많이 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Queue&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQoz31SuYoCQRCdv/Fg5+jq7pkdaQNZZGZ3Mw1EnJ3ETxARRExE/EM3NzA3F95SNbZHsg1FXc2rV0dApKE1gbUiLbqJPYSIkOc5rLViv+Y0rCaYG0bgwawhZJYk6T8bY0SUUijLEs65OyDHtTHIrMGnI3w5JaACyMxcxkHCd7+pFsUxoigSYZA4jhGGofgMyJr9MHyT//2MpNPAt5wwaNokuPp4PMZsNsN0OsVwOMRkMkFd1+IPBgNUVYX5fI7qp8aHS/FulBAThr7tPNWSyLMUx+Mv/FssFjidTmJfLhcBP5/P4l+vV5RFIWyZyH2G98UogrEWy+USh8MBu90Oo9EIq9UK+/0em80GRVFIke12i/V6jV6vJ3PmUQTNAh6g+raUbreLVqslkiQJOp2O2O12W2bKebY57sE4HjyfwPOZMH0+Exa/1f98v/0/GfwhOKxi7zYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;image02&quot;
+        src=&quot;/static/0534163dce4f62aadc04de16b06d43cb/2bef9/02.png&quot;
+        srcset=&quot;/static/0534163dce4f62aadc04de16b06d43cb/6f3f2/02.png 256w,
+/static/0534163dce4f62aadc04de16b06d43cb/01e7c/02.png 512w,
+/static/0534163dce4f62aadc04de16b06d43cb/2bef9/02.png 1024w,
+/static/0534163dce4f62aadc04de16b06d43cb/6e7b6/02.png 1491w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;큐는 1차원적인 선형자료구조이며, 입출력 지점이 2개인 자료구조이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First In First Out 구조&lt;/li&gt;
+&lt;li&gt;버스를 타기 위해 줄을 서는 것과 같다.&lt;/li&gt;
+&lt;li&gt;은행에서도 비슷한 경험을 할 수 있다.&lt;/li&gt;
+&lt;li&gt;넣는 것은 enqueue, 빼는 것을 dequeue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;큐는 동기화와 매우 많은 관련이 있다. 멀티태스킹이나 멀티쓰레딩 환경에서 동시다발적으로 연산하기 좋게 할 때 큐라는 자료구조를 쓴다.&lt;/p&gt;
+&lt;h2&gt;비선형 자료구조 2진 트리&lt;/h2&gt;
+&lt;p&gt;비선형구조가 왜 선형구조보다 뛰어날까? 우리는 자료구조를 배우는 이유가 정보를 빠르게 찾기 위해서라고 하였다. 예를 들어 원하는 수를 검색하는 경우를 보자. 선형구조는 일일이 다 확인해봐야 한다. 물론 운이 좋으면 바로 찾겠지만 나쁘면 다 뒤집어야 한다. 하지만 비선형구조는 어떤 기준점을 두고 크면 오른쪽 작으면 왼쪽으로 노드를 이동해서 찾아가는 방법으로 선형구조보다 훨씬 빠를 것으로 기대된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAABT0lEQVQ4y6WUW0sDMRCFP9f1Ulupdq3WS7XerZcuVtzaolXBF0UUn/T//xIZOYG4xF2oAyFkkj2ZnHNmoTxmgWOgCyzwj5jS3AROgQGwldubKKyyKyAD0kkAZoAIqOupK0ADSDRbbsmjozDs4AXQAz6B5cCZKvAFXALnwHoR4A6wIdDVAF+RZgMZA3fAKMSrW6wBQ41mgQBVifQIHBUJtSvubHRK6JkG5oH90Gak0g+83ImUjUqATawnifkTbQG95lQzE7+o6s0S0Gd5ddsBdiRCI6f4IXAD7AFxAeBIfv1wvPV1Q5xrOcvf6vkh4t36QTbqO3LrgQoiKViTmf+KRT21JqygQEbwm+fFroj3q4olyHtZt5i5z4B7oOLxOZbqiXyY6qlZzvS/Yk6APVWVKG8qt9QhbXVTpnPDsj+QfXCtKt2tFZGeenwPVHXL//ob/D4UiGAwcdQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;image03&quot;
+        src=&quot;/static/b2a2ca44b597304dc3eaf57deb3b9e47/2bef9/03.png&quot;
+        srcset=&quot;/static/b2a2ca44b597304dc3eaf57deb3b9e47/6f3f2/03.png 256w,
+/static/b2a2ca44b597304dc3eaf57deb3b9e47/01e7c/03.png 512w,
+/static/b2a2ca44b597304dc3eaf57deb3b9e47/2bef9/03.png 1024w,
+/static/b2a2ca44b597304dc3eaf57deb3b9e47/21b4d/03.png 1280w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자료당 두 개의 위치정보 (링크)를 이용해 셋을 하나로 묶는다.&lt;/li&gt;
+&lt;li&gt;맨 꼭대기를 기준으로 왼쪽 에는 작은 숫자, 오른쪽에는 큰 숫자 카드가 있다고 가정한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;마무리&lt;/h2&gt;
+&lt;p&gt;개발자가 되고 싶고 프로그래밍 언어를 배움에 있어서 반드시 자료구조는 학습해야한다. 자료구조 공부할 때 비선형구조까지 공부를 해야 한다. 그리고 프로그래밍 언어로 직접 구현해 보는 게 좋다. 특히나 각각의 자료구조를 배우면서 본인만의 언어로 직접 구현을 해보면서 어떤 원리로 동작하는지 알아두면 나중에 개발자 커리어에 큰 도움이 되지 않을까?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터 기초] 프로그래밍 맛보기]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%A7%9B%EB%B3%B4%EA%B8%B0/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-프로그래밍-맛보기/</guid><pubDate>Tue, 07 Oct 2025 22:43:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
