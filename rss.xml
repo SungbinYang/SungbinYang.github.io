@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Oct 2025 14:25:48 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 기초] 자료구조 소개와 마무리]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%86%8C%EA%B0%9C%EC%99%80-%EB%A7%88%EB%AC%B4%EB%A6%AC/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-자료구조-소개와-마무리/</guid><pubDate>Tue, 07 Oct 2025 23:25:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Oct 2025 14:31:52 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 기초] 자료구조 소개와 마무리]]></title><description><![CDATA[…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%86%8C%EA%B0%9C%EC%99%80-%EB%A7%88%EB%AC%B4%EB%A6%AC/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-기초-자료구조-소개와-마무리/</guid><pubDate>Tue, 07 Oct 2025 23:25:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
@@ -103,29 +103,15 @@
 &lt;p&gt;큐는 동기화와 매우 많은 관련이 있다. 멀티태스킹이나 멀티쓰레딩 환경에서 동시다발적으로 연산하기 좋게 할 때 큐라는 자료구조를 쓴다.&lt;/p&gt;
 &lt;h2&gt;비선형 자료구조 2진 트리&lt;/h2&gt;
 &lt;p&gt;비선형구조가 왜 선형구조보다 뛰어날까? 우리는 자료구조를 배우는 이유가 정보를 빠르게 찾기 위해서라고 하였다. 예를 들어 원하는 수를 검색하는 경우를 보자. 선형구조는 일일이 다 확인해봐야 한다. 물론 운이 좋으면 바로 찾겠지만 나쁘면 다 뒤집어야 한다. 하지만 비선형구조는 어떤 기준점을 두고 크면 오른쪽 작으면 왼쪽으로 노드를 이동해서 찾아가는 방법으로 선형구조보다 훨씬 빠를 것으로 기대된다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 83.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAABT0lEQVQ4y6WUW0sDMRCFP9f1Ulupdq3WS7XerZcuVtzaolXBF0UUn/T//xIZOYG4xF2oAyFkkj2ZnHNmoTxmgWOgCyzwj5jS3AROgQGwldubKKyyKyAD0kkAZoAIqOupK0ADSDRbbsmjozDs4AXQAz6B5cCZKvAFXALnwHoR4A6wIdDVAF+RZgMZA3fAKMSrW6wBQ41mgQBVifQIHBUJtSvubHRK6JkG5oH90Gak0g+83ImUjUqATawnifkTbQG95lQzE7+o6s0S0Gd5ddsBdiRCI6f4IXAD7AFxAeBIfv1wvPV1Q5xrOcvf6vkh4t36QTbqO3LrgQoiKViTmf+KRT21JqygQEbwm+fFroj3q4olyHtZt5i5z4B7oOLxOZbqiXyY6qlZzvS/Yk6APVWVKG8qt9QhbXVTpnPDsj+QfXCtKt2tFZGeenwPVHXL//ob/D4UiGAwcdQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image03&quot;
-        title=&quot;image03&quot;
-        src=&quot;/static/b2a2ca44b597304dc3eaf57deb3b9e47/2bef9/03.png&quot;
-        srcset=&quot;/static/b2a2ca44b597304dc3eaf57deb3b9e47/6f3f2/03.png 256w,
+&lt;div style=&quot;background: #fff;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 83.203125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAABT0lEQVQ4y6WUW0sDMRCFP9f1Ulupdq3WS7XerZcuVtzaolXBF0UUn/T//xIZOYG4xF2oAyFkkj2ZnHNmoTxmgWOgCyzwj5jS3AROgQGwldubKKyyKyAD0kkAZoAIqOupK0ADSDRbbsmjozDs4AXQAz6B5cCZKvAFXALnwHoR4A6wIdDVAF+RZgMZA3fAKMSrW6wBQ41mgQBVifQIHBUJtSvubHRK6JkG5oH90Gak0g+83ImUjUqATawnifkTbQG95lQzE7+o6s0S0Gd5ddsBdiRCI6f4IXAD7AFxAeBIfv1wvPV1Q5xrOcvf6vkh4t36QTbqO3LrgQoiKViTmf+KRT21JqygQEbwm+fFroj3q4olyHtZt5i5z4B7oOLxOZbqiXyY6qlZzvS/Yk6APVWVKG8qt9QhbXVTpnPDsj+QfXCtKt2tFZGeenwPVHXL//ob/D4UiGAwcdQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;image03&quot; title=&quot;image03&quot; src=&quot;/static/b2a2ca44b597304dc3eaf57deb3b9e47/2bef9/03.png&quot; srcset=&quot;/static/b2a2ca44b597304dc3eaf57deb3b9e47/6f3f2/03.png 256w,
 /static/b2a2ca44b597304dc3eaf57deb3b9e47/01e7c/03.png 512w,
 /static/b2a2ca44b597304dc3eaf57deb3b9e47/2bef9/03.png 1024w,
-/static/b2a2ca44b597304dc3eaf57deb3b9e47/21b4d/03.png 1280w&quot;
-        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
+/static/b2a2ca44b597304dc3eaf57deb3b9e47/21b4d/03.png 1280w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;자료당 두 개의 위치정보 (링크)를 이용해 셋을 하나로 묶는다.&lt;/li&gt;
 &lt;li&gt;맨 꼭대기를 기준으로 왼쪽 에는 작은 숫자, 오른쪽에는 큰 숫자 카드가 있다고 가정한다.&lt;/li&gt;
