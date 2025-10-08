@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Oct 2025 13:42:42 GMT</lastBuildDate><item><title><![CDATA[[코틀린 입문] 추가적으로 알아두어야 할 코틀린 특성]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide) 강의를 참조하여 작성한 글입니다. 코틀린 이모저모 Type Alias와 as import…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%B6%94%EA%B0%80%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%95%8C%EC%95%84%EB%91%90%EC%96%B4%EC%95%BC-%ED%95%A0-%EC%BD%94%ED%8B%80%EB%A6%B0-%ED%8A%B9%EC%84%B1/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-추가적으로-알아두어야-할-코틀린-특성/</guid><pubDate>Wed, 08 Oct 2025 21:21:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Oct 2025 13:55:32 GMT</lastBuildDate><item><title><![CDATA[[코틀린 입문] 추가적으로 알아두어야 할 코틀린 특성]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide) 강의를 참조하여 작성한 글입니다. 코틀린 이모저모 Type Alias와 as import…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%B6%94%EA%B0%80%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%95%8C%EC%95%84%EB%91%90%EC%96%B4%EC%95%BC-%ED%95%A0-%EC%BD%94%ED%8B%80%EB%A6%B0-%ED%8A%B9%EC%84%B1/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-추가적으로-알아두어야-할-코틀린-특성/</guid><pubDate>Wed, 08 Oct 2025 21:21:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
@@ -887,16 +887,16 @@ targetFruitName &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQoz51Sy0rDUBDN54mR1sYXigvFldpHGts0Qou4bKAPH1UXWlGhFBcV/JbmYaBJpSbErzgyF3JJSqPg4jDJPXfO3Jk5wpqlQDLLoBh9R//x83mkcUI8mbBunSRAXBRzMZH5O5GOEBfbsCoQjWMsRxgfIWMUsWLkkTVL2LSqLK6aJYhGnt0lLmfKXJQJZs0iDpwzdPwXXPkD9MM3PIQj3IcjPH2/49IfoD69hj57ZPxt8MpiLxiynH2nwYrwF1KFbVuFPGmi5nWheRdozvpoTHsouzrkiY7dj1NWtOZ1UHXbqLgtaF4XqtfGjq3xV/IZ0kHGKLAWqJ2l8SG2bBWtr2eWfP55xwSIjyCyWOCz5S1LC4ZNBfacOm6CIW+PWqY5JpeiLFhKiiVIlAYfX0CapSQrJvibz5I2Uv70Z6rgf/EDHOsWLULro5gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVQoz51Sy3LCMAz0/38WkBexE549lQCNEydhptBAz9uRPAYnHdpODxprpUjaVSR0FMBZGc7g47/YuEaME2Uw/dHeZpMHdjVeUzGYFkxhcoVus0Yt5zCZZGxUyj7Fus3KxjOJah4/Z2gbTnB62eJ994pel/g8dbg1xr5di2tdMabc1dRoVwsm4bMU5DhAcuitZcrT2ZIIzSJjdmSEbS7hurF04ctt10uWQpikNnnGzVheEkEnEUymUKcJdBxyUxoyYHgHcWiltQ3O+wKXfcE+SSR5faXxcTzgXOwYU/xyPKDXerDLQUOjJDNwP+FhyuaU5HUQ62aZs0/fftuhC/x2MgPzzude73b4n4N+duBfEs24R4/6hrYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;banner&quot;
         title=&quot;banner&quot;
-        src=&quot;/static/e163e788b6402e2d8f80c986b29ee7b2/8c557/banner.png&quot;
-        srcset=&quot;/static/e163e788b6402e2d8f80c986b29ee7b2/6f3f2/banner.png 256w,
-/static/e163e788b6402e2d8f80c986b29ee7b2/01e7c/banner.png 512w,
-/static/e163e788b6402e2d8f80c986b29ee7b2/8c557/banner.png 700w&quot;
+        src=&quot;/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png&quot;
+        srcset=&quot;/static/d2f1db1734ce6bdaf587f7d63a88cd29/6f3f2/banner.png 256w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/01e7c/banner.png 512w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png 700w&quot;
         sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
