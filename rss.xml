@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 01 Nov 2025 05:09:41 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 구조론] 불 대수]]></title><description><![CDATA[본 포스팅은 인프런의 만들면서 쉽게 배우는 컴퓨터 구조를 참조하여 작성한 글입니다. 불 대수 개요 컴퓨터의 역사에서 알아본 것처럼 19세기까지 컴퓨터는 수동식이나 기계식으로 1…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EB%A1%A0-%EB%B6%88-%EB%8C%80%EC%88%98/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-구조론-불-대수/</guid><pubDate>Sat, 01 Nov 2025 14:06:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Nov 2025 04:05:40 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 구조론] 불 대수]]></title><description><![CDATA[본 포스팅은 인프런의 만들면서 쉽게 배우는 컴퓨터 구조를 참조하여 작성한 글입니다. 불 대수 개요 컴퓨터의 역사에서 알아본 것처럼 19세기까지 컴퓨터는 수동식이나 기계식으로 1…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EB%A1%A0-%EB%B6%88-%EB%8C%80%EC%88%98/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-구조론-불-대수/</guid><pubDate>Sat, 01 Nov 2025 14:06:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
@@ -5804,6 +5804,15 @@ numbers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;DDR5도 대역폭을 높이려면 2개를 사용하여 쿼드채널로 구성하는 것이 유리하다.&lt;/p&gt;
 &lt;h3&gt;메인보드&lt;/h3&gt;
 &lt;p&gt;PS/2, VGA, Type C, HDMI, USB 3.0, USB2.0등이 소켓처럼 장착되어 있는데 고급진 용어로 인터페이스라고 불린다. 인터페이스란 즉, 컴퓨터와 주변기기를 연결시켜주는 접점의 역할을 한다.&lt;/p&gt;
+&lt;h3&gt;추가 알아 본 사항&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;QPI와 FSB: 메모리와 CPU를 연결하는 버스의 일종으로 요즘의 시스템에서는 FSB 대신 QPI(QuickPath Interconnect)를 사용한다.&lt;/li&gt;
+&lt;li&gt;DMI 4.0 8 GT/s: DMI(Direct Media Interface)는 CPU와 PCH(Platform Controller Hub)를 연결하는 인터페이스로, PCIe와는 다른 독립적인 버스이다. 8 GT/s는 Giga Transfers per second를 의미하며, 하나의 전송 당 크기는 프로토콜에 따라 다르지만, 보통 PCIe에서는 1 Transfer가 1비트입니다. 따라서 8 GT/s는 대략 1GB/s의 전송 속도로 이해될 수 있다.&lt;/li&gt;
+&lt;li&gt;CPU와 메모리 클럭 동기화: 흔히 CPU 클럭과 메모리 클럭은 동기화되지 않는다. 각각 고유의 클럭 속도로 동작하며, 메모리 컨트롤러와 타이밍 메커니즘이 있어서 이는 원활하게 동작할 수 있게 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DMI는 메인보드의 PCH와 연결을 하는 CPU만 사용하는 PCIe 버스이다.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;잘못된 정보가 있을 시, 댓글 부탁드립니다.&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[2025년 1분기 회고(feat. 중요한 것은 포기하지 않는 마음)]]></title><description><![CDATA[2025년 1분기 회고(feat…]]></description><link>https://sungbin.kr/%EC%A4%91%EC%9A%94%ED%95%9C-%EA%B2%83%EC%9D%80-%ED%8F%AC%EA%B8%B0%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EB%A7%88%EC%9D%8C/</link><guid isPermaLink="false">https://sungbin.kr/중요한-것은-포기하지-않는-마음/</guid><pubDate>Sun, 06 Apr 2025 18:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
