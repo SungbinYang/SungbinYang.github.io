@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Nov 2025 23:43:15 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] 코드 Edit]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/intellij-코드-Edit/</guid><pubDate>Mon, 03 Nov 2025 08:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Nov 2025 22:52:28 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] 포커스]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%ED%8F%AC%EC%BB%A4%EC%8A%A4/</link><guid isPermaLink="false">https://sungbin.kr/intellij-포커스/</guid><pubDate>Tue, 04 Nov 2025 07:47:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFH0lEQVQ4y3WTa1ATVxSAz2ZBSQgJAUFtRbQj9cVjExGBGVp1sNXWalEeUbJGUSsoVgoisLugiS9EYeoIODAyDj7AV1sQh44DQ2krbbU6jk5bf5ShyvhGiSGSRLJ7TycRHdrRH9+cs3fv+faeu/cCYVhaYlggDPs5YdjnhDFcIYzhnKRlyyUtm0MYQypGrVS/0Bkhm73o7cfZQcE79AreEavgnaAqstNjCq2gKbJBYKENQGJYGdGyQLTsSYkxoPg/XIwBHbpVP8xL3DlqXkE/aPL75so5Oyo4+6BvwbOl6mIC75UgNT6/jxpXYAEgjMEtGycxhn7Usoi61SLqVrtw1uohjM5wkdnrhwZjN6I0Z1O96jC+r9iOfcoSRDeqEoIa/oXwDj8Egfl9EJb3gAZJy4LEGNa7Zc6oleKNaYvJ9emfkesRy/D3qFTyU2Qa+T4qnXSEpyG7uNo2Kusm+mX8Kvmt/U1SZfxCAnPv47hC26mgnNujI7b0AiCTDi7G0IY6I3bPSBKVtDcCwCuIO9IyGaFlNBkekyj3HMrL8z4o+bRrMjeIU766e5358k6Yu+VpImMYwllr8FZkqruITAidiAfKy7GyqgoTPkh4JSKLPv2EZGSs8eTU8MdCko6TyG39Q7rN3ajN6XkMLu2q7Q6dEZ1zvnBdYwzEGyjiq/TFrkuX0Gq1YvjM8Ncrrq6uxq6uLk8uk9Ee8dQldWRuTi/5cONNaXLR3Rdgi8640Tc7Ex/FbJU6dWuJ72gfT0Febh42NTV5ch+fl2NlZWV4/vz5YaHME2cvqiTJm/4k0/O7Mbi47wk8npkfem++wXx/CYstsZlEMUruaWVrXh42NzeP3E80mUzY1tb2H+HCxFJM2PYPCRYeYDD/5B441s2AIRPNiSVjsG1dtCgDGZHL5djZ2YkWiwVDQkIwOzsba2pqsKenBw8dOvRSSHshBYDhSVUYarZIY7mHGMhbusFREDzVURjgEIUg7Ng8XXJPDg2d5Cmsq6vDuLg4jI6OxgsXLmBFRQWq1WqPkKIoTwxacRwnmG3SGK4PNYL1D3ByAZXOIg2KxUHO9qyZxNvL6/VxeSvDMo9QfwLHm+2ShnuKan7gKji4wImOQk27WBKArcYEpMDnjTKapj1QI2RuAvSNGGQeEv05C/oJzy8B4RWAz1YAmoK/bkzSI02pCKONJO5WY2JiMD4+HsOmhL1hpS/Fav0ZDDSLooqzolKwt8OdzXPo51vLwCWgd+m87Q/95H64/8B+qb6+Hmtra0lDQwPJzMp82zYQP/1ZojETUckNoIJ3tEDV4hOyxpR2OJfWsHD3gn1IU54r5v45rmHEETIyAs+zUn+OqM3o9OVsbuG3UJl0lK5ZfgwOL6svrVh6BDfNLXFkzTfjhsQ9uPajfWhYVIYfJ5eLEcYaKcx4DEOMp8lY43ckwNgiqVa1ulR5vagsdqKCt6Ocd9ZCZ+IuWJPeChXLj18pS2nEshVNuDe9xbmbvdhauv7HDQaho23BjssYa/oLI0y3XVNMj8QQ0zMx2GTHgB0uVBU70Jcf7FAITqOcd6pgX3IjlCY3Ru5NOSXuTD1ztTjldH7u8hNh7bmPoDSrC/AIQnzRz1uiuBu2MO5vDOF60X2IA7in99VF/QeVnHWWssgCCsEJct4JsCv1jJtp5tSzCUeX1MCOtG+A1zfBwaUnqVxjsxcCQpxwGcKFW5Mm83fa3uUfXAvinxr9Bau/WhgApTAI/sIAKAQH7Rb+C55z7Q0dffsdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png&quot;
+        srcset=&quot;/static/7f3c4c668ea513e0950e70c83ed0a8d8/6f3f2/banner.png 256w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/01e7c/banner.png 512w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png 1024w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/c1b63/banner.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 포스팅은 인프런의 &lt;a href=&quot;https://inf.run/doaZn&quot;&gt;IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드&lt;/a&gt; 강의를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;포커스 에디터&lt;/h2&gt;
+&lt;p&gt;이번에는 포커스 관련 단축키를 알아보도록 하겠다. 아래의 코드를 가지고 한번 알아보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sungbin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;chap2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FocusEditor&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;안녕하세요. 반갑습니다. IntelliJ IDEA Ultimate&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;page8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;간격을 넓히기 위한 코드2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;단어 별 이동&lt;/h3&gt;
+&lt;p&gt;만약 커서가 맨 앞에 있는데 이것을 가운데로 빠르게 가고 싶은 상황이 있을 것이다. 이런 경우 우리는 마우스를 이용하거나 좌/우 방향키로 일일이 한땀한땀 이동 할 것이다. 하지만 이것은 매우 비효율적인 방식이다. 따라서 이것을 편하게 하기 위해 단축키를 제공해준다. 맥 기준으로 &lt;code&gt;option + 좌/우 방향키&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;단어 별 선택&lt;/h3&gt;
+&lt;p&gt;위의 단축키를 이용해서 단여별로 선택해서 하고 싶은 경우도 있을 것이다. 물론 마우스로 드래그를 해도 되지만 마우스를 이용하면 생산성이 떨어진다. 따라서, 이것도 인텔리제이에서 단축키를 제공해주는데 맥 기준 &lt;code&gt;option + shift + 좌/우 방향키&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;라인 첫/끝 이동&lt;/h3&gt;
+&lt;p&gt;커서가 맨 앞에 가있다고 해보자. 그래서 우리는 다음줄에 무언가를 입력하고 싶다고 하자. 그러면 우리는 커서를 해당 문장 끝에 두고 엔터를 칠 것이다. 하지만 이것도 마우스를 이용하면 생산성이 떨어진다. 그래서 인텔리제이에서 단축키를 제공해준다. 맥 기준 &lt;code&gt;Fn + 좌/우 방향키&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;라인 전체 선택&lt;/h3&gt;
+&lt;p&gt;위의 단축키를 응용한 버전으로 라인 전체를 선택하는 단축키도 인텔리제이에서 제공해준다. 맥 기준 &lt;code&gt;Fn + Shift + 좌/우 방향키&lt;/code&gt; 혹은 &lt;code&gt;command + shift + 좌/우 방향키&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;Page up / Page down&lt;/h3&gt;
+&lt;p&gt;첫 라인에서 우리는 아래 메서드를 찾고 싶어서 이동해야할 때가 있다. 그러면 우리는 마우스 휠을 이용해서 확인하거나 키보드로 한땀 한땀 이동할 것이지만 매우 비효율적이다. 이를 위해 인텔리제이에서 단축키를 제공한다. 윈도우 키보드에 보면 &lt;code&gt;Home&lt;/code&gt; 키나 &lt;code&gt;End&lt;/code&gt;키인데 맥에서는 해당 키가 존재하지 않는다. 맥에서는 그래서 &lt;code&gt;Fn + 위/아래 방향키&lt;/code&gt;로 대체해서 제공한다.&lt;/p&gt;
+&lt;p&gt;그러면 단축키들을 정리해보자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;단어별 이동
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;option + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Ctrl + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단어별 선택
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;option + shift + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Ctrl + Shift + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;라인 첫/끝 이동
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;Fn + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Home, End&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;라인 전체 선택
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;Fn + 좌/우 방향키&lt;/code&gt;, &lt;code&gt;command + shift + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Shift + Home/End&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Page up / down
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;Fn + 위/아래 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Page up / down&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;포커스 특수키&lt;/h2&gt;
+&lt;h3&gt;포커스 범위 한 단계 씩 늘리기&lt;/h3&gt;
+&lt;p&gt;해당 단축키는 은근 유용하다. 어떤 범위를 선택할 때 유용하게 사용되는데 맥 기준 &lt;code&gt;option + 위/아래 방향키&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;포커스 뒤로/앞으로 가기&lt;/h3&gt;
+&lt;p&gt;우리가 어떤 것을 작성할 때 뒤로가기나 앞으로 가기를 유용하게 사용하는 것처럼 포커스도 이전 포커스로 이동하는 것이 가능하다. 해당 기능은 단일 파일뿐만 아니라 여러 파일에서 사용이 가능하다. 예를 들어 A라는 파일에 포커스를 두었다가 B라는 파일에 포커스가 갔고 해당 단축키를 통해 이전 포커스로 이동하려고 한다면 A 파일에 포커스로 이동이 가능하다는 것이다. 맥 기준 단축키는 &lt;code&gt;command + [ or ]&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;멀티 포커스&lt;/h3&gt;
+&lt;p&gt;우리가 코드를 작성하다 보면 공통적으로 여러 라인을 같은 것으로 수정해야할 때가 있다. 특히 문자열 같은 곳에서 말이다. 이럴 때 우리는 멀티 포커스 기능을 사용하면 되는데 맥 기준 단축키는 &lt;code&gt;option + option + 위/아래 방향키&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h3&gt;오류 라인으로 자동 포커스&lt;/h3&gt;
+&lt;p&gt;우리는 코드를 작성하다 보면 오류 라인으로 바로 이동하게끔 하고 싶은 경우가 있을 것이다. 인텔리제이는 해당 기능에 대한 단축키를 제공해주는데 맥 기준 &lt;code&gt;F2&lt;/code&gt;이다.&lt;/p&gt;
+&lt;p&gt;그러면 단축키를 정리해보자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;포커스 범위 한 단계씩 늘리기
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;option + 위/아래 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + w(위)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Shift + w(아래)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;포커스 뒤로/앞으로 가기
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;command + [, ]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Ctrl + Alt + 좌/우 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;멀티 포커스
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;option + option + 위/아래 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Ctrl + Ctrl + 위/아래 방향키&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;오류 라인 자동 포커스
+&lt;ul&gt;
+&lt;li&gt;맥/윈도우/리눅스: &lt;code&gt;F2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ] 코드 Edit]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%EC%BD%94%EB%93%9C-Edit/</link><guid isPermaLink="false">https://sungbin.kr/intellij-코드-Edit/</guid><pubDate>Mon, 03 Nov 2025 08:38:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
