@@ -1,0 +1,810 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[프론트엔드] Javascript · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/679e31e602d8124ad5e58b902628b280/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/Javascript/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[프론트엔드] Javascript"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/679e31e602d8124ad5e58b902628b280/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[프론트엔드] Javascript"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/679e31e602d8124ad5e58b902628b280/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-8bd3326d799737bed84d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-3fa8deb48819dbe669b2.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-7f5def86146fc29c9ead.js"/><link as="fetch" rel="preload" href="/page-data/Javascript/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[프론트엔드] Javascript</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->프론트엔드</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 11월 11일<!-- --> · <!-- -->12<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">프론트엔드<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (4개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css iuahyr">.css-iuahyr{margin-bottom:0.5rem;}.css-iuahyr::marker{font-weight:600;color:#9195F6;}.css-iuahyr::after{content:'- 12분';margin-left:0.2rem;font-size:0.8rem;}.css-iuahyr>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-iuahyr>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-iuahyr e1k9d3a00"><span>[프론트엔드] Javascript</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[프론트엔드] HTML</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[프론트엔드] 프론트엔드에 대해</span></li><style data-emotion="css p3ifdu">.css-p3ifdu{margin-bottom:0.5rem;}.css-p3ifdu::marker{font-weight:600;color:#9195F6;}.css-p3ifdu::after{content:'- 2분';margin-left:0.2rem;font-size:0.8rem;}.css-p3ifdu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-p3ifdu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-p3ifdu e1k9d3a00"><span>[프론트엔드] 백엔드 개발자에 의한, 백엔드 개발자를 위한 프론트엔드</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><blockquote>
+<p>해당 포스팅은 인프런의 <a href="https://inf.run/DQ8mU">백엔드 개발자에 의한, 백엔드 개발자들을 위한 프론트엔드 강의 - 기본편</a>를 참조하여 만들었습니다.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1ElEQVQoz7WSuQrCQBRF8znigmtia6eNlV+hlR9g44KIC2jtkqUQFMFawUaIxqXzg46Mk0AUDRZaXOa+7b43b0bJmPBLKH4jbTwHP9l+/2uO8i45oUuu+iD8HtdMSBkSr6JvJ8zNIalDZOJiKmOCR6cQGoNmQdYKmFAgNoPiCnonqO6gfYSmDV0HhhdoHaTdsMG4QWktG6ifBOMzKCyhsoXyBjoO9E9SpG7LBrU9DM4wukJ+IWsCdyj2IiYVEN29Kz+4e4Zd39c7VL9E4Cv/5R/+QvAOhzA9n1MS5MEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title="banner"
+        src="/static/679e31e602d8124ad5e58b902628b280/8c557/banner.png"
+        srcset="/static/679e31e602d8124ad5e58b902628b280/6f3f2/banner.png 256w,
+/static/679e31e602d8124ad5e58b902628b280/01e7c/banner.png 512w,
+/static/679e31e602d8124ad5e58b902628b280/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>Java와 비교하며 배우는 Javascript 기본 문법들</h2>
+<p>지금부터 자바스크립트 문법에 대해 알아보도록 하겠다. 자바스크립트 문법에 앞서서 실습 환경은 개발자 도구를 통해서 알아보도록 하겠다. 여기서는 단순히 코드만 보여주겠지만 직접 실습을 해보면 좋을 것 같다.</p>
+<h3>변수와 상수</h3>
+<p>자바에서는 변수와 상수를 정의할 때 타입과 함께 정의를 하였지만 자바스크립트는 타입을 안 적어줘도 괜찮다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>위와 같이 정의를 하면 변수 a에 1을 대입한 것과 같다. 그러면 이제 정수가 아닌 문자열 변수를 정의해보자.  문자열 변수를 정의하는 방법은 아래와 같다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token string">"자바스크립트"</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>그러면 여러분이 위의 실습을 통해 변수를 정의하고 엔터를 치면 아래와 같이 <code>undefined</code>라고 나오는 것을 확인 했을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 964px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.734375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA30lEQVQoz+2P0U6EMBBF+zVAbWlhhWXXsBA6heAahBqzL/r/v3FNm4CrD8bEffThpOfOTCctG8cRK4tz6HsL6h/x/PoO059hLWFZFhARhmGAc27zaZowzzOstSF7Z4YMTqcadV2jaRq0bQsannCeL3i5vIXBrus+e0Sb+7oxZsve2b44QCmN3f0OQgporaFUilQKVNUeZVlCKYU8z5FlWej7c+U6e2eFrlAURxwejpBSIkkScM4DcRx/yb+BpSqFlAJCiHD5mnXoe/0nGOd3iKIovOYWsPVbt+J/4d8XfgD0dVK38IchigAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title="image01"
+        src="/static/19b01e73c59267bed2b231c137a6c54b/72aae/01.png"
+        srcset="/static/19b01e73c59267bed2b231c137a6c54b/6f3f2/01.png 256w,
+/static/19b01e73c59267bed2b231c137a6c54b/01e7c/01.png 512w,
+/static/19b01e73c59267bed2b231c137a6c54b/72aae/01.png 964w"
+        sizes="(max-width: 964px) 100vw, 964px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 개발자 도구 창에 <code>3 + 5</code>라고 작성해보자. 그러면 아마 아래와 같이 숫자 8이 나오는 것을 볼 수 있을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA5ElEQVQoz62OzW6DMBCE/TbYBpOYX1Xiz4CRwZBKOeSU93+NqbxNe+qlIodPM95dj4Zt24Z5nuGcw77v6PsBbr/DuhsGY2g2TROWZSFvjMG6rvDe05/wPo6Dbqy1YNbOqOsafd+jaRqMk8XsPnF/POH9gdEYdF2HYRgwjiPatqWQ4M1rF8KChgxW6Q9cdYm8yCGlRJqmkIJDXy/IsgxJkkApRfz4oH/NAyzTOYqihNYaQghwziGkJCUvxL9gVV2jrEqoRCGO49OwS5ojiqLfRmdhQgoKjDj/1pOwd7ajhvzV7F2BX9PGF89envg6AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title="image02"
+        src="/static/b1cdfc5ab507dcfbe6efdb77f2c82e2e/2bef9/02.png"
+        srcset="/static/b1cdfc5ab507dcfbe6efdb77f2c82e2e/6f3f2/02.png 256w,
+/static/b1cdfc5ab507dcfbe6efdb77f2c82e2e/01e7c/02.png 512w,
+/static/b1cdfc5ab507dcfbe6efdb77f2c82e2e/2bef9/02.png 1024w,
+/static/b1cdfc5ab507dcfbe6efdb77f2c82e2e/e996b/02.png 1050w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 이 숫자 8과 <code>undefined</code>의 차이를 좀 알아보자. 개발자 도구에서 엔터를 쳤을 때 나오는 이 값은 해당 명령문에 대한 반환값을 의미하는 것이다. 즉, 3과 5를 더했을 때 숫자 8이 나오는 반환 값이 존재하므로 개발자 도구에 숫자 8이 나오는 것이고 변수에 값을 할당에서 정의하는 행위는 반환값이 없으므로 <code>undefined</code>라고 나오는 것이다. 잠시 후에 알아 볼 함수를 정의하는 것도 반환값이 없다면 <code>undefined</code>라고 나올 것이고 결과 값이 없다면 그 값이 개발자 도구창에 나올 것이다.</p>
+<p>그러면 여기서 1가지 의문이 들 것이다.</p>
+<blockquote>
+<p>자바처럼 변수 할당하는 것은 비슷한데 자바스크립트는 타입이 없나요?</p>
+</blockquote>
+<p>위의 물음에 일반적으로 타입이 없다라고 말씀하시는 분들도 계시지만 필자의 생각으로는 자바스크립트에도 타입은 존재한다라고 말할 수 있을 것이다. 그 이유는 바로 <code>typeof</code>라는 키워드 때문이다. 위의 선언된 변수에 대해서 실습을 해보도록 하겠다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">typeof</span> a<span class="token punctuation">;</span> <span class="token comment">// number</span>
+<span class="token keyword">typeof</span> b<span class="token punctuation">;</span> <span class="token comment">// string</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div>
+<p>이런 이유로 자바스크립트에도 여전히 타입은 존재하고 그 타입을 알려면 <code>typeof</code>라는 키워드를 통해 알아야 한다.</p>
+<p>다음으로 상수에 대해 알아보자. 자바에서 상수를 선언할 때는 <code>final</code> 키워드를 통해서 상수를 선언하였는데 자바스크립트에서는 <code>const</code>라는 키워드를 사용한다. 상수 변수 네이밍 규칙은 자바와 동일하다. 그러면 한번 상수를 정의해보자.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>그리고 자바스크립트도 자바처럼 상수에 값을 변경하려고 하면 안된다. 만약 변경하려고 한다면 아래와 같은 에러가 발생할 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 24.21875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAk0lEQVQY063PzQ6CMBAE4L6L9AdKt7RAW0SNBY76/o8zhiaejIaDhy8zyexlmfMBxnUQSn2QdX2YkLJgz23BI9+xxIAtJeRxLH2NEbfeYyKDs6XvyGB2Dnm6wmsNdhl65JQw9x7REgIZRKIiGINBawztD2VvEW0H2zRgFec4cY49KyHAhSj57lzKQ/b78rJSCv/0AgEcl5ZIAhPYAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title="image03"
+        src="/static/902d60b04b690da2f48e75cd6d00cc98/2bef9/03.png"
+        srcset="/static/902d60b04b690da2f48e75cd6d00cc98/6f3f2/03.png 256w,
+/static/902d60b04b690da2f48e75cd6d00cc98/01e7c/03.png 512w,
+/static/902d60b04b690da2f48e75cd6d00cc98/2bef9/03.png 1024w,
+/static/902d60b04b690da2f48e75cd6d00cc98/71c1d/03.png 1536w,
+/static/902d60b04b690da2f48e75cd6d00cc98/332b4/03.png 1826w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>로그</h3>
+<p>자바스크립트도 자바처럼 로그를 찍을 수 있다. 자바에서는 lombok의 <code>log</code>나 <code>System.out.println</code>을 통하여 로그 출력문을 작성할 수 있었지만 자바스크립트는 아래처럼 <code>console.log</code>를 통해 로그를 찍을 수 있다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>혹은 변수에 있는 값을 출력하고 싶다면 아래와 같이 해주면 된다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 숫자 3 출력</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div>
+<p>그런데 독자들이 실습을 하면서 1가지 의문사항이 생길 수도 있다. 위와 같이 실습을 하면 아래와 같은 화면처럼 값이 출력 되고 <code>undefined</code>라고 찍히는 것도 볼 수 있을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.5625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/ElEQVQoz63Q3WrEIBAFYF+mUcdoYozJJikx5qd/FErf/2FO0aXsRbvQXXrxccaBOReyGCNCCNl2vOH59R1pF9c157Zt53eMWNc1S/O+71iWBdM0YR5HhHnGHAKYa1q0bQdjDLTWsNbm/Ku6qnJ+3zNbN7C2gSICEUEKASnlXYQQYI11aP0A6x1EWkqCJIKgc14jfpm5kGCbb/ERF3weG17GEU/DCXvX4Tj12eIaTEbjsTLXGY3YDwitB/O2wZwOB4/OWtiyvFmtCL3zcFUNpk0FUgoF53jgHIUQ4DdKt1RqCFJgSilwzvOHZmm+VSouitzzs/Aul/t/Krz4AiGvMx5Vf1TYAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/ec8bd3d63c78b2b844c960d32cff53de/2bef9/04.png"
+        srcset="/static/ec8bd3d63c78b2b844c960d32cff53de/6f3f2/04.png 256w,
+/static/ec8bd3d63c78b2b844c960d32cff53de/01e7c/04.png 512w,
+/static/ec8bd3d63c78b2b844c960d32cff53de/2bef9/04.png 1024w,
+/static/ec8bd3d63c78b2b844c960d32cff53de/71c1d/04.png 1536w,
+/static/ec8bd3d63c78b2b844c960d32cff53de/00e09/04.png 1854w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>숫자 3은 <code>console.log</code>를 통해 나온 실행 결과물로 보면 좋을 것이고 <code>undefined</code>는 <code>console.log</code>에 대한 반환 값을 의미하는 것이다.</p>
+<h3>alert</h3>
+<p>다음으로는 <code>alert</code>에 대한 것에 대해서도 알아보겠다. <code>alert</code>에는 브라우저 창에 알림창을 띄워주는 기능을 한다. 이것을 변수와 조합해서 사용할 수 있다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'PI = '</span> <span class="token operator">+</span> <span class="token constant">PI</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div>
+<p>위와 같이 작성하여 실행을 하면 아래와 같은 결과처럼 브라우저에서 기본으로 제공해주는 알림창이 나올 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABiklEQVQ4y5WT2W7CMBBF8wVk8Z61JKUiqIgEKLQqEvCA+v9fdKuZLKIVBfXhyJnYvr4zY3tJGqOsKhRFgSRJIJWCEGIkolFKSEIpHsUvhjljDLzP4wHn0xnH4xGHwwHbty3atsVms8FyucRqtcJiscBsNkNVlajrGuv1Gk3T8LqmbTne7XbY7/fwXBzDWQfnHDucz+fI85zj6XSKqnfvnMXm/YT6dQ0hQhhj2RGhtYZSivGGnxTQxsvlC2VZchrWWsZoAyUl4iSDNha+P0EQBAh8vyPwuzgI4A2biDiOWSxNU47JOR3mtEZqLVQYQEchjBRQUfQDLQS0lJ1glmWcJkHfWV6w6CBMzQnDcHTxN2EnSEK0mdyQS4pppDrSPIn5fpcWjfcYa0gbdV9LKrhSmutIc1EUjYKP8IYucac0iagOpfmO/VuQu9i7vMWQ8mQyeZjumPJ1p2/Br6N/MfRyyPEtaI13z93vw7KnZ5TVy9j9W3j3nF0LGq1giwXy+oMvN9U87GtLJRkMfAOmCkzMZTAZuAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title="image05"
+        src="/static/4dbdd05d654136a2dcad969c86b2b5f7/2bef9/05.png"
+        srcset="/static/4dbdd05d654136a2dcad969c86b2b5f7/6f3f2/05.png 256w,
+/static/4dbdd05d654136a2dcad969c86b2b5f7/01e7c/05.png 512w,
+/static/4dbdd05d654136a2dcad969c86b2b5f7/2bef9/05.png 1024w,
+/static/4dbdd05d654136a2dcad969c86b2b5f7/71c1d/05.png 1536w,
+/static/4dbdd05d654136a2dcad969c86b2b5f7/a878e/05.png 2048w,
+/static/4dbdd05d654136a2dcad969c86b2b5f7/f7171/05.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>논리 연산자</h3>
+<p>다음으로 논리 연산자에 대해 알아보자. 자바스크립트도 자바처럼 논리 연산자를 가지고 있다. 단 차이가 있다면 등호 연산자에서 <code>==</code>를 쓰냐 <code>===</code>를 쓰냐 차이가 존재한다. 자바스크립트에서는 등호 연산자로 <code>==</code>과 <code>===</code>를 제공하는데 <code>===</code>을 쓸 경우 타입까지 같은지 체크를 해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 42.578125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAtUlEQVQoz7WOzQrCMBCE8zb5RZGaIG2pJtZYA60KPfv+bzGyASuIXko9DPmyuzMM67oObdui73ukdIEPJwzjAzHdEGPMc+89hmFASgkhhMwk8pGfmG5oz5pmD2st6rqGcw4+tDgcz7jex2woyzKL9lVVTfz6k4hpTsyssyi2BZTWUEpBKQkpBYzRMMZA6/f7jT9v2Ga9g9ErCMEhpZwkhJglxjnHksqBc9v8bEiwVPD/Gi4V+AQqAhVBzqOXxQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title="image06"
+        src="/static/c4fa1e16cb64606a68f21fabf44b40e6/2bef9/06.png"
+        srcset="/static/c4fa1e16cb64606a68f21fabf44b40e6/6f3f2/06.png 256w,
+/static/c4fa1e16cb64606a68f21fabf44b40e6/01e7c/06.png 512w,
+/static/c4fa1e16cb64606a68f21fabf44b40e6/2bef9/06.png 1024w,
+/static/c4fa1e16cb64606a68f21fabf44b40e6/c6ff8/06.png 1088w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>만약 서로 다른 타입으로 <code>===</code> 비교를 진행하였다면 아래처럼 <code>false</code>를 반환할 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.546875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAnElEQVQoz62O3QqDMAyF+zS2tcP1RyuIF9rUbrC9/+scMYgMrwZ68ZGTE3ISkVLCPM9MLh+83l9sHhEhUcKyLEefcwZtEKGUwv44jhiGAdM0MSLGiLbrYK2F9wGx7+G9g3P/EULYdz0jrAtofYRWEkopqL1qrZmzVif/dy6lhGiaJ+r6cQRdRRhTo6oqbrYLVxHGGBZ3fLd/eG/gCsjm1d3G+Bo5AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title="image07"
+        src="/static/0053d26371f1cc57ef66d22d721e8a17/2bef9/07.png"
+        srcset="/static/0053d26371f1cc57ef66d22d721e8a17/6f3f2/07.png 256w,
+/static/0053d26371f1cc57ef66d22d721e8a17/01e7c/07.png 512w,
+/static/0053d26371f1cc57ef66d22d721e8a17/2bef9/07.png 1024w,
+/static/0053d26371f1cc57ef66d22d721e8a17/71c1d/07.png 1536w,
+/static/0053d26371f1cc57ef66d22d721e8a17/6fa81/07.png 1856w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그런데 만약 서로 다른 타입이라고 하더라고 값이 논리상 같아 보인다면 <code>==</code>를 쓰면 <code>true</code>가 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.65625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA60lEQVQoz61Q226DMBTL1ywkgQQaaAVBXAbTgsRlVFX3uv//CU9JxdT2bWMPlu2cyMcJsdZiw7qu6PsOb8OMj+sX2t5isBbLsqBtW4zjiHmeH/Q0TWiaxt9xnrhhnucwxqAoCtR1jbZ7xzCdcb58outeUVUVyrL07Ob3evObJmmWQusDVKzAGEMURRCcIRQcSRJDKeXPpJSen/WzJ1rnOGYGXHBwzsH4jR0CxvyS34DoNMPpeEKmwp+gPSD6UEAnBkLwfwp0DdMUWoqH5/45MJYZZKhBA+r/IAiCXSCUUlD6ghvvhw/c2+q+4Te5dzbR/aLwBQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title="image08"
+        src="/static/3caa3af3fe482afcfde3c47969c4ec96/00d43/08.png"
+        srcset="/static/3caa3af3fe482afcfde3c47969c4ec96/6f3f2/08.png 256w,
+/static/3caa3af3fe482afcfde3c47969c4ec96/01e7c/08.png 512w,
+/static/3caa3af3fe482afcfde3c47969c4ec96/00d43/08.png 1000w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기서 우리가 원하는 것은 자바처럼 타입이 다르면 다르다라고 <code>false</code>를 반환하기를 원할 것이다. 그래서 우리는 자바스크립트를 작성해서 비교 연산을 진행하려면 <code>==</code>보다는 <code>===</code>을 사용하는 것을 추천한다.</p>
+<p>만약 다름을 비교하려면 <code>!==</code>를 사용하면 된다. 해당 연산자는 타입까지 체크를 해준다. 만약 값만 같은지 다른지 여부를 보려면 <code>!=</code>를 해주면 된다.</p>
+<h3>조건문</h3>
+<p>자바스크립트에서도 자바와 같이 조건문을 제공해준다. 그러면 바로 실습을 해보자.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'number는 1입니다.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'number는 1이 아닙니다.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>간단한 내용이니 여기서 조건문은 여기서 마무리해보도록 하겠다.</p>
+<h3>배열과 반복문</h3>
+<p>자바스크립트에서 배열은 아래와 같이 선언할 수 있다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>위와 같이 선언하면 비어있는 배열 하나가 생성된 것이다. 그런데 여기서 자바와 다른 점이 존재한다. 자바같은 경우 배열이 한번 정해지면 그 사이즈를 변경할 수 없다. 하지만, 자바스크립트는 중간의 사이즈를 변경할 수 있다. 마치 자바의 컬렉션의 <code>ArrayList</code>와 같은것과 생각하면 된다. 그럼 위에서 선언한 배열에 값을 넣으려면 어떻게 해야할까? 바로 아래와 같이 작성하면 된다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 42.96875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAApElEQVQoz62O2wrCMBBE8ze5NAptzU2EqkmaBuqb//8rI10Q7KvNw2FmZ2EYlnJCzhkxJdTXG6WumOcZMUaUUkhrraTffFmWnd9IKWGaJjBnrjDWwTkHH264P57krbWkxpjd/avbz3u/88yODv0wQGsNITghpfwbFtwZIYxQnaZAKXUIdhlOsLZHp/XhMio0Y+NCJQWkFBCiDYxzjpZQYat128IP43MUn4Q1NZIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title="image09"
+        src="/static/3dec00b1c708e5aedb879e2e2258bc09/2bef9/09.png"
+        srcset="/static/3dec00b1c708e5aedb879e2e2258bc09/6f3f2/09.png 256w,
+/static/3dec00b1c708e5aedb879e2e2258bc09/01e7c/09.png 512w,
+/static/3dec00b1c708e5aedb879e2e2258bc09/2bef9/09.png 1024w,
+/static/3dec00b1c708e5aedb879e2e2258bc09/71c1d/09.png 1536w,
+/static/3dec00b1c708e5aedb879e2e2258bc09/a8c87/09.png 1538w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기서 유심히 볼만한 부분은 <code>push</code> 함수는 반환 값이 <code>undefined</code>가 아닌 해당 배열의 사이즈를 반환한다라는 것을 볼 수 있다. 그러면 배열을 출력해보자.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [10, 20, 30]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>주석에 달아논 것처럼 출력이 이쁘게 잘 되는 것을 볼 수 있을 것이다. 또한, 몇번째 인덱스에 어떤 값이 들어가는지도 확인이 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.578125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEUlEQVQ4y+XSTUvDQBAG4Dl48NB6UytehGp2N5+kaWibkGySjbYIMQdFRRCLYPFXiOCtf/qVjS1ea9qbh4d3B2YGBpZkJiFlilxdYXpdQ6kCeZ43iqJorOuyLJFlGZRSjTRNEUUR4jhGkiRNTWEwhj8I4LoufN+H53lwHGcjulfP6Fn91kmj0Mdw6EMIASH4KtthjIHC0EMQDiBMC6a1HS4EaBLYGAU2HMFg8wvY3Fjlpn77TeMcZFw+QZSPOJP3OJ7ctNKLavSLB/TGFWjvbon92yWo+txO/QWqPkBHs3ecTt9wWL7iZLbAQT5HJ5uj+0cd+YJu+gxa324a/YbV2s8OMhgH47tD+u9wznfmHy78Bq47sXZoQUVsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title="image10"
+        src="/static/af17e02aa4b974ffd47f4e5dc30fb855/2bef9/10.png"
+        srcset="/static/af17e02aa4b974ffd47f4e5dc30fb855/6f3f2/10.png 256w,
+/static/af17e02aa4b974ffd47f4e5dc30fb855/01e7c/10.png 512w,
+/static/af17e02aa4b974ffd47f4e5dc30fb855/2bef9/10.png 1024w,
+/static/af17e02aa4b974ffd47f4e5dc30fb855/71c1d/10.png 1536w,
+/static/af17e02aa4b974ffd47f4e5dc30fb855/00e09/10.png 1854w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>자바스크립트도 자바처럼 배열의 몇번째 인덱스에 접근하는 것은 같다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 20</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>그리고 배열의 길이를 알 고 싶을 때는 <code>length</code>를 이용하면 배열의 길이를 알 수 있다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>또한, 배열을 자를 수도 있다. 아래와 같이 <code>splice</code>를 사용하면 되는데 첫번째 인자로는 짜르기 시작할 인덱스 위치고 2번째 인자로는 몇개를 짜를지를 적어주면 된다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [20]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>이렇게 하면 1번째 인덱스가 잘려나가고 기존 배열에는 <code>[10, 30]</code>이 남을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 26.953125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAVklEQVQY063OSwrAIAyE4dzGPErFRKF6/3tNaUHoWrv4YVYfQzUqxhUoJUPVoKrLiQjI3TH6QHhbg8wgwojWceYCsuN45ZQSmHk7eqCJzb0T/fHq+/AGuU6UKAGiZCAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title="image11"
+        src="/static/47489b383aa64e143e45c4df83ae3cbb/2bef9/11.png"
+        srcset="/static/47489b383aa64e143e45c4df83ae3cbb/6f3f2/11.png 256w,
+/static/47489b383aa64e143e45c4df83ae3cbb/01e7c/11.png 512w,
+/static/47489b383aa64e143e45c4df83ae3cbb/2bef9/11.png 1024w,
+/static/47489b383aa64e143e45c4df83ae3cbb/71c1d/11.png 1536w,
+/static/47489b383aa64e143e45c4df83ae3cbb/fb937/11.png 1820w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 배열과 반복문 조합을 알아보도록 하겠다. 아래와 같이 배열을 정의하고 반복문을 돌려보자. 반복문의 문법은 자바와 거의 동일하다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>이렇게 하면 배열을 순회하면서 해당 인덱스에 맞는 원소가 하나씩 출력이 될 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.609375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/0lEQVQoz62R62qEMBBG8zKr0VyMk4sLFRSNor3Q93+aryTbCttSWml/HIZ8CYfJDItLxBxnxBixPr5if3pBjDPWdc3Ztm25LsuSsyPf91yHYUDf95imCeM4gjnyaI1DYxq44OFDgFIqo7U+6oHSR54wxty9YZYsnE2SBlo3EKJGXd+oqupbPt+nM+ccjFqLYK8wrQURoXM1iFpIKQ/xb0li1qgGjgJCIHhvYamG1urHDr92LG5CKRSEEJCizpVXZ0XpqyUehgXkr2BS6mz/aDtJz1JxjiE+w3c9mE7LUPr0vO5nx0Gug9IGrHrfTlmWf6K4XFAUBViaQwqS9D94A0vNMkkWDkeXAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/a0f6905382a7780d099fd4a533203065/2bef9/12.png"
+        srcset="/static/a0f6905382a7780d099fd4a533203065/6f3f2/12.png 256w,
+/static/a0f6905382a7780d099fd4a533203065/01e7c/12.png 512w,
+/static/a0f6905382a7780d099fd4a533203065/2bef9/12.png 1024w,
+/static/a0f6905382a7780d099fd4a533203065/71c1d/12.png 1536w,
+/static/a0f6905382a7780d099fd4a533203065/ca3c3/12.png 1850w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>함수</h3>
+<p>다음으로 자바스크립트의 함수를 선언하는 방식에 대해 알아보자. 자바스크립트에서 함수를 선언하는 방법은 <code>function</code> 키워드를 이용하면 된다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">addTwoNumber</span><span class="token punctuation">(</span><span class="token parameter">one<span class="token punctuation">,</span> two</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> one <span class="token operator">+</span> two<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div></div>
+<p>위의 함수는 두 인자를 받아서 더하는 것을 반환하는 함수이다. 이제 실제 호출을 해보자. 호출하는 방법은 직접 함수 시그니쳐를 적어서 호출이 가능하고 함수를 변수에 할당할 수 있다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token function">addTwoNumber</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.03125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAn0lEQVQoz+2PQQrDIBBFvY0m2phRQ4WiQ+kidNH7H+eXERqodJO0yy4eo3/g8UcxM7gySqm43las9weYK0opDdm/3rXWRp/nnLe98n5GPJ0R4wVhyZg8wVoHYwyGYdhmj+Q9kiuaCSllzBSQUgIRwTnXluM47qIJQ4iIcWmtRCRYa3fLNuE0eWhtPp5wBCWNtNbtI/Nb3oQ/b/gXHhI+ARFdShPrdZfhAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title="image13"
+        src="/static/98d5671fd229e4bc83a3fa767ac852e3/2bef9/13.png"
+        srcset="/static/98d5671fd229e4bc83a3fa767ac852e3/6f3f2/13.png 256w,
+/static/98d5671fd229e4bc83a3fa767ac852e3/01e7c/13.png 512w,
+/static/98d5671fd229e4bc83a3fa767ac852e3/2bef9/13.png 1024w,
+/static/98d5671fd229e4bc83a3fa767ac852e3/71c1d/13.png 1536w,
+/static/98d5671fd229e4bc83a3fa767ac852e3/cc6fe/13.png 1860w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>또한 자바스크립트는 함수를 마치 변수처럼 취급할 수 있다. 마치 자바의 람다처럼 활용할 수 있다라는 것이다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">addTwoNumber</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">one<span class="token punctuation">,</span> two</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> one <span class="token operator">+</span> two<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div></div>
+<p>이를 실행하면 아래와 같이 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 34.765625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAsUlEQVQoz6WOWwqDMBBFsxvzUpNUqyiVTIy0Bfe/nVsmUOlXofbjMJeb5EzEuq6gFEExIt93PJ47UiKsOSOlhG3bwHc455xLZrjnblkWzPMMIkKMEcK3ARc3oR9u6K8jQjfAOQdjDKy1ZX7LdV0fHSO89xiHCa3z0FpDa1OmUupnpJQQIQQQRYzjULYpJU/JDqFzHn3Xg8VN05SDMz/kN0VojEVVVQdc/oNg+1v0KT7LC0g21pap7cglAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image14"
+        title="image14"
+        src="/static/a1e2d01a5911f34a9e5944df17bd0956/2bef9/14.png"
+        srcset="/static/a1e2d01a5911f34a9e5944df17bd0956/6f3f2/14.png 256w,
+/static/a1e2d01a5911f34a9e5944df17bd0956/01e7c/14.png 512w,
+/static/a1e2d01a5911f34a9e5944df17bd0956/2bef9/14.png 1024w,
+/static/a1e2d01a5911f34a9e5944df17bd0956/71c1d/14.png 1536w,
+/static/a1e2d01a5911f34a9e5944df17bd0956/ca3c3/14.png 1850w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이처럼 자바스크립트는 함수를 변수처럼 사용할 수 있다. 이를 이용하면 함수를 파라미터에 넣는 행위도 가능해진다. 아래의 코드를 입력해보자.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">wrapperFunction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">func</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그리고 아래와 같이 호출을 하는데 <code>addTwoNumber</code>를 마치 변수처럼 넘겨주면 실행이 잘 되는 것을 볼 수 있다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token function">wrapperFunction</span><span class="token punctuation">(</span>addTwoNumber<span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.6875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABPUlEQVQoz52RyW4CMRBE/TFhbI+XsT07DAPMTjhEiYjE//9IRXYChxwS4PBU7ZbVrmqTYejR9x36rsN0fMPyeoLvTdOEYRiwLEvQcRwxz3Po+/rab9sW4253q4kzKTK3QVFvUVZr5EUNay2UUn8ipQxqjAm11jpAEp0gS0sobSCERCwEhBDgnD8MYwwkTR26vkOeZ+ElztlTw24DjbEoyxIudZBKgTOOOI6fwg8liTQo8x3yukVR1iiqKuzmUaexV+8wlgo2zaGthnEOXEpEnOMlirBi7G78fQ851RUuy4zLccHnOOKj73AeB5yaDfbG3M203mKfZiCHLMf70OM8T0GPTYNDnmGfOjSJRpMkd6BxKCo01oIIZUJMb9dHja72Kb0/MqVQNgMTEoT/LNN/OaP0m9/n/2AMNFqBUoovmF5WrOJ8YaYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image15"
+        title="image15"
+        src="/static/fca3c47035ba5d7696533d862429051c/2bef9/15.png"
+        srcset="/static/fca3c47035ba5d7696533d862429051c/6f3f2/15.png 256w,
+/static/fca3c47035ba5d7696533d862429051c/01e7c/15.png 512w,
+/static/fca3c47035ba5d7696533d862429051c/2bef9/15.png 1024w,
+/static/fca3c47035ba5d7696533d862429051c/71c1d/15.png 1536w,
+/static/fca3c47035ba5d7696533d862429051c/d698c/15.png 1846w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 세부동작을 살펴보자. wrapperFunction을 호출할 때 인자로 함수를 넣어줬다. 그러면 그 함수는 내부에 func를 호출하는 부분에서 call이 된다. 이처럼 자바스크립트는 자바와 다르게 함수를 1급시민으로 간주한다. 간단히 말하면 변수처럼 함수를 쓸 수 있다라고 생각하면 좋을 것 같다.</p>
+<h2>JSON</h2>
+<p>JSON은 Javascript Object Notation의 약자로 쉽게 말해 자바스크립트 객체 표기법을 의미하는 것이다. 그런데 여기서 주목할 점은 표기법이라는 점이다. 즉, <strong>자바스크립트에서 객체를 표기하는 방법을 빌려온 것이지 분명 자바스크립트 객체와는 다르다는 점</strong>이다. JSON은 서로 다른 언어로 작성된 애플리케이션 사이에 데이터를 전송하기 위한 일종의 표준처럼 사용되고 있다. JSON과 보통 비교되는 대상은 XML인데 XML은 무겁다는 단점도 있고 요즘은 잘 사용하지 않으니 설명은 생략하겠다.</p>
+<div class="gatsby-highlight" data-language="json"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"양성빈"</span><span class="token punctuation">,</span>
+    <span class="token property">"age"</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    <span class="token property">"address"</span><span class="token operator">:</span> <span class="token string">"서울시 강남구"</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>JSON 문법을 보면 위와 같이 되어 있다. JSON은 key와 value로 나뉜다. 위의 코드를 보면 name이라는 key와 "양성빈"이라는 value가 묶여 있듯이 말이다. 즉, key와 value가 쌍으로 존재한다라는 것이다. 그리고 key와 value 사이에는 콜론이 위치하고 그리고 하나의 key와 value 쌍 사이에는 ,로 나눠주고 있다. 이런 이유로 마지막 key와 value에는 ,가 없다.</p>
+<p>또한, key에는 문자열 형태만 올 수 있고 값에는 문자열이나 숫자 혹은 다른 값들이 올 수 있다. 그리고 몇가지 문법적 특징이 있는데 이건 더 복잡한 JSON 예제를 보면서 이야기 해보도록 해보자.</p>
+<div class="gatsby-highlight" data-language="json"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"firstName"</span><span class="token operator">:</span> <span class="token string">"Yang"</span><span class="token punctuation">,</span>
+    <span class="token property">"lastName"</span><span class="token operator">:</span> <span class="token string">"Sungbin"</span><span class="token punctuation">,</span>
+    <span class="token property">"isAlive"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"age"</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    <span class="token property">"height"</span><span class="token operator">:</span> <span class="token number">175.4</span><span class="token punctuation">,</span>
+    <span class="token property">"address"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"streetAddress"</span><span class="token operator">:</span> <span class="token string">"21 2nd Street"</span><span class="token punctuation">,</span>
+        <span class="token property">"city"</span><span class="token operator">:</span> <span class="token string">"NewYork"</span><span class="token punctuation">,</span>
+        <span class="token property">"state"</span><span class="token operator">:</span> <span class="token string">"NY"</span><span class="token punctuation">,</span>
+        <span class="token property">"postalCode"</span><span class="token operator">:</span> <span class="token string">"10021-3100"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"phoneNumber"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"home"</span><span class="token punctuation">,</span>
+            <span class="token property">"number"</span><span class="token operator">:</span> <span class="token string">"212 555-1234"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"office"</span><span class="token punctuation">,</span>
+            <span class="token property">"number"</span><span class="token operator">:</span> <span class="token string">"646 555-4567"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"children"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"lootoNumbers"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"spouse"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위의 JSON 예시에서는 앞서 살펴본 예시보다 복잡하다. 여기서는 앞에서 설명 안한 문법적인 특징들이 몇가지 존재한다. 위의 isAlive라는 key를 보면 value값으로 문자열도 아니고 숫자도 아닌 boolean형 값이 있다. JSON에서는 value값으로 boolean형 값도 가능하다. 또한 숫자에서 정수형과 실수형 모두 가능하고 또한, JSON의 값으로 또 다른 JSON을 포함하는게 가능하다. 또한 배열도 값으로 가질 수 있다. 또한 spouse라는 key에 value값으로 null이 나오고 있는데 값으로 null도 가능하다.</p>
+<p>그러면 이런 JSON의 문법적 특징을 외워야 할까? 전혀 외울 필요는 없다고 생각한다. 그냥 눈으로 보면서 익숙해지는게 좋을 것이다.</p>
+<h3>자바스크립트로 JSON 다루기</h3>
+<p>이제 자바스크립트의 객체와 JSON이 서로 다르다는 것을 확인해보자. 이걸 확인하려면 둘 사이에 각각 변환을 해보면 된다. Javascript의 객체를 JSON 문자열로도 바꿔보고 그리고 JSON 문자열을 Javascript 객체로도 변경해보면 뭐가 다른지 한 눈에 알 수 있을 것이다. 여기서 용어를 알고 넘어가면 좋을 것 같은데 Javascript의 객체를 JSON으로 만드는 행위를 <strong>직렬화</strong>라고 표현한다. 자바스크립트 객체를 전송하기 위해서는 이런 직렬화 과정이 필요하다. 여기에서 <code>JSON.stringify</code>라는 함수가 사용된다. 이 함수를 사용하면 자바스크립트 객체를 JSON으로 변환해준다. 그리고 반대 과정을 하는 것을 <strong>역직렬화</strong>라고 표현한다. 이 과정에서는 <code>JSON.parse</code>라는 함수가 사용된다.</p>
+<blockquote>
+<p>📝 용어 정리</p>
+<ul>
+<li>직렬화: 특정 프로그래밍 언어의 객체를 메모리에서 파일이나 네트워크등 다른 곳으로 전송하기 위해 데이터를 변환하는 것을 말한다.</li>
+<li>역직렬화: 직렬화의 반대 과정</li>
+</ul>
+</blockquote>
+<p>우리가 이후 Ajax로 데이터를 주고 받을 때 이 직렬화, 역직렬화 과정이 필요하기 때문에 반드시 알고 있어야 한다. 그럼 이제 실습을 해보자. 먼저 자바스크립트의 객체를 만드는 과정을 살펴보자.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"양성빈"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">30</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>자바스크립트 객체를 만들때 JSON과 달리 key값은 문자열로 안 하고 그 값을 그대로 작성해줘도 좋다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAtUlEQVQoz62P2wqDMBBE8zXGNHdt1ShIEi9gwf//nCnGFvrQh2r7cHaWXXaYJeM4wvuAECKmZcVyXzHEiG0+DAOmaUr63m+7eZ4RY0Tf9+i6DiEEeO9BrCnQ3ErUpYGSElprcM6/RkqZVAiRIFopuNqiMBKUUlCaIc/zw9AsSxBjDJxrULUO1pZQyhxK+OJatZBKgwghU9ScXcAYS5xJyLlIt2Qr25v7u7+wezwN6alUn/i74QPXM/NptkosiQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image16"
+        title="image16"
+        src="/static/90b8b26d9b58219239041718d6ab4927/2bef9/16.png"
+        srcset="/static/90b8b26d9b58219239041718d6ab4927/6f3f2/16.png 256w,
+/static/90b8b26d9b58219239041718d6ab4927/01e7c/16.png 512w,
+/static/90b8b26d9b58219239041718d6ab4927/2bef9/16.png 1024w,
+/static/90b8b26d9b58219239041718d6ab4927/71c1d/16.png 1536w,
+/static/90b8b26d9b58219239041718d6ab4927/28e7f/16.png 1848w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그럼 선언한 자바스크립트 객체를 JSON으로 직렬화해보겠다.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>이렇게 하면 아래와 같이 잘 변환된 것을 알 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 906px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 18.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAbklEQVQY05XJXQrCMBhE0azG7ycRoyi0Ykpile5/RVdC6bt5ODMME1qdqS9nWyPvNrEslZwznhIxdnFIuK8beX7y+Hy5lcq1VHJpXErD0xkzw9z3/kMQc0SUkygigpihndq+B4UeetC9j1NVh/0AW894hMIR+aQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image17"
+        title="image17"
+        src="/static/93694847caa0bbf7d6fae41cd2cef06d/6029f/17.png"
+        srcset="/static/93694847caa0bbf7d6fae41cd2cef06d/6f3f2/17.png 256w,
+/static/93694847caa0bbf7d6fae41cd2cef06d/01e7c/17.png 512w,
+/static/93694847caa0bbf7d6fae41cd2cef06d/6029f/17.png 906w"
+        sizes="(max-width: 906px) 100vw, 906px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 이제 다시 역직렬화를 통해 다시 JSON 문자열을 자바스크립트 객체로 변경해보자.</p>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">let</span> json <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>json<span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div>
+<p>위와 같이 작성하면 역직렬화가 된 것을 알 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABSUlEQVQ4y6WSy27bMBBF+TE1KYriS29FEipLthGk8P9/zilIJJugC7lZHAwx5NwZDK84joPtes3c35+8fzw5jp3b7Ua6ezweOSbu93vOJ77yy7qyryvHvrNtG6KtW6ahY+pqQgjUdYNzDmvtKbz3VFWFcz6fhXeecYg00aGkREpJURSnUUrlKOUl14o01dD3tONACBHnAmVZYow5TXrfdBPWeUSIkWlq6YdIqDtKYzEvCiacD5TGIGJoaMaZcZmZ5pa2q6k+u76E1uiiQPi6wbcD2geMdxhnUYVGph1pfRqV9qgUYus79nnJXOeFpW1Zm4at7xmdo7eW4QRLNzKGiEjFf36/8bxd2ceRtxCYvMtxcOfEElOMeQBhrMVYQ+Ec2lQU2vBLSi5ScVEvkGskotRl9k/yYPLUl6/+F5F+6LvIT0T/KfiTCf8CIg6OtRI1dooAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image18"
+        title="image18"
+        src="/static/c2b748ffa93bfe30ab81a569423d2065/2bef9/18.png"
+        srcset="/static/c2b748ffa93bfe30ab81a569423d2065/6f3f2/18.png 256w,
+/static/c2b748ffa93bfe30ab81a569423d2065/01e7c/18.png 512w,
+/static/c2b748ffa93bfe30ab81a569423d2065/2bef9/18.png 1024w,
+/static/c2b748ffa93bfe30ab81a569423d2065/71c1d/18.png 1536w,
+/static/c2b748ffa93bfe30ab81a569423d2065/ec5f6/18.png 1852w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>XHR을 활용한 AJAX 요청 보내기</h2>
+<p>다음으로 XHR을 이용해서 AJAX 요청을 보내는 방법에 대해 알아보자. 우리가 만든 API 서버와 상호작용하는 부분이니 자세히 살펴보도록 하겠다. 일단 용어부터 살펴보면 좋을 것 같다. "XHR을 활용한~"이라는 문구에서 XHR은 뭔가 일종의 도구처럼 느껴지고 XHR이라는 도구를 이용해서 AJAX 요청을 보낼 수 있다라는 의미처럼 느껴진다.</p>
+<p>XHR은 자바스크립트에서 Ajax 요청을 보낼 수 있도록 제공해주는 내장 객체이다. 여기서 내장 객체라는 말은 기본 라이브러리라고 보면 좋을 것 같다. 그러면 XHR과 Ajax는 무엇의 줄임말인지 알아보자. XHR은 XMLHttpRequest의 줄임말이고 Ajax는 Asynchronous Javascript and XML의 줄임말이다. 여기서 보면 둘다 XML이라는 용어가 보이는 것을 알 수 있다. 원래 이 XHR과 Ajax가 처음 정의되었을 때는 데이터 전송 포맷으로 XML이 주로 사용되었다. 따라서 여기 이름에 각각 XML이라는 말이 들어가져 있으나 현재에는 XML보다는 JSON을 주로 전송하고 있다.</p>
+<p>아무튼 XHR은 XML을 포함한 Http 요청을 보낼 수 있는 객체라는 의미인데 Ajax는 무슨 의미일까? 여기서 Asynchronous라는 말은 비동기라는 의미이기에 직역하면 비동기 자바스크립트와 XML이라는 의미가 된다. 여기서 핵심적인 단어는 이 비동기라는 말이다. Ajax에서의 비동기는 여러가지 의미를 가지고 있는데 Ajax 요청이 완료되기 전까지 Javascript 코드가 대기 중인 상태가 아니라 완료되면 실행될 수 있는 로직을 지정하는 부분이 있는데 바로 이 부분이 비동기적 특성을 가지고 있다.</p>
+<p>아무튼 Ajax를 사용하면 웹 페이지를 새로고침 없이 서버에서 데이터를 가져와서 화면을 갱신해줄 수 있다. 이를 통해 더 나은 사용자 경험을 제공해줄 수 있는 것이다. 이제 본격적으로 실습을 해보자.</p>
+<p>먼저 서버쪽의 RestController를 만들어보자.</p>
+<div class="gatsby-highlight" data-language="kotlin"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-kotlin line-numbers"><code class="language-kotlin"><span class="token keyword">package</span> me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>controller
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>GetMapping
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RestController
+
+<span class="token annotation builtin">@RestController</span>
+<span class="token keyword">class</span> NoParameterAjaxRestController <span class="token punctuation">{</span>
+
+    <span class="token annotation builtin">@GetMapping</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/get-with-no-parameter"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">getWithNoParameter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> String <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string-literal singleline"><span class="token string">"파라미터가 없는 GET 요청"</span></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위와 같이 컨트롤러를 정의하였다. 다음으로 html과 javascript 코드를 정의해보자.</p>
+<div class="gatsby-highlight" data-language="html"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-html line-numbers"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ko<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./no-parameter-ajax.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">onReadyStateChange</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">AJAX_REQUEST</span><span class="token punctuation">.</span>readyState <span class="token operator">===</span> XMLHttpRequest<span class="token punctuation">.</span><span class="token constant">DONE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">AJAX_REQUEST</span><span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">AJAX_REQUEST</span><span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'request failed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token constant">AJAX_REQUEST</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token constant">AJAX_REQUEST</span><span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> onReadyStateChange<span class="token punctuation">;</span>
+<span class="token constant">AJAX_REQUEST</span><span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/get-with-no-parameter'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">AJAX_REQUEST</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그러면 한번 코드를 살펴보도록 하겠다. restController로 ajax요청을 받을 수 있게 정의를 해두었다. 그런데 사실 ajax 요청을 받을 수 있는 컨트롤러가 존재하는 것은 아니다. 그냥 일반적인 컨트롤러이다. <code>/get-with-no-parameter</code>로 GET 요청을 보냈을 때 "파라미터가 없는 GET 요청"이라는 응답이 나가도록 설계가 되었다.</p>
+<p>다음으로 js코드를 살펴보도록 하겠다. js코드를 보면 먼저 함수 하나가 선언되어 있다. onReadyStateChange라는 함수가 하나 선언되어 있다. 그리고 아래쪽으로 가보면 AJAX_REQUEST라는 상수가 하나 선언되어 있다. 그리고 그 상수에 XMLHttpRequest 즉, XHR 객체를 <code>new</code>라는 연산자로 객체를 생성하여 넣어주고 있다. 그리고 아래쪽을 보면 AJAX_REQUEST.onreadystatechange라는 변수가 있는데 해당 변수에 함수를 넣어주고 있다. 여기서 onreadystatechange라는 변수는 특별한 의미를 가지고 있는데 이 ajax request 즉, XMLHttpRequest에 readyState라는 상태 값이 있는데 이 XHR 객체가 어떤 상태인지 예를 들면, Ajax 요청을 시도 했는지, 이 Ajax 요청에 대한 응답이 왔는지, 이런 것들을 기록을 하는 상태 값이다. 해당 상태 값에 변화가 생겼을 때 여기 있는 onreadystatechange라는 곳에 등록된 함수가 실행이 될 준비를 하는 것이다.</p>
+<p>그리고 그 다음 줄을 보면 <code>AJAX_REQUEST.open</code>을 통해서 GET 방식으로 해당 URL에 요청을 보내겠다라고 준비를 하는 단계이다. 그리고 실제 요청을 보내는 것은 <code>AJAX_REQUEST.send()</code> 함수를 호출할 때 비로소 Ajax 요청을 보내는 것이다. 그제서야 우리가 선언했던 함수가 실행이 되는 것이다. 그리고 readyState같은 경우 요청이 완료가 될 때까지 총 4번의 과정을 거친다. 그런데 우리가 관심을 가지는 부분은 4번이 바뀌는 동안에 요청이 완료된 상태만 관심을 가지기 때문에 우리가 정의한 함수에 <code>AJAX_REQUEST.readyState === XMLHttpRequest.DONE</code>와 같이 조건문을 작성해준 것이다. 그러면 실제 실행을 해보면 아래와 같이 우리가 작성한 API와 html, js코드가 잘 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABz0lEQVQ4y6WTXY+aQBSGua8XCuyata4IXcCKwqAIA4j2anvRpAnVtvEjq25sxY0X+0/6f/3gbRjNtk27jWknefLOuXnmzOQMJ14IuCqVUCwWIYgicrkcXpzInSgUCuAFATzP/yCrTwiCAFEUcVksgvuSfEWySrBarbBcLjGbzTCZTDCdTjEejzEajfCm34fruqCUgvoBAt8/7imF53kswzBEL4rAbXc7bLfbJ3a7Hfb7PSOrs5Uka1iEIIx6CKM+goywC0o9dpDnUXQ6DtqeDw5/WWl6YLm4X+CVUoVlWXitqTBNC23HQavtoNVqw7ZtELMJww3BpWmK59gfjsK79SNkEqJq+SgZLupNCzYhsIiNRqMBw6ijXj/CPd9disNJGH/8jPzlFaQbHS/lG6iaDk3TGLqu/8JZwuHgA0SehyJXIV1fM1GtVvsjZwkHgwEbDVmWUalUnoRZR/8kHA6HbM4URYEkSf/fYRzHyOfzkKQKyuUyVFX97e0ysoPOEs7nc9R0He2OC0JsmKbJRijLnyGEnCfcbDboOA7eD+/wabzA7e1b9iuiKEKv12PZ7XZZniVcrx9ATAP9+AHvkm/wgwiU+mg2TXZVwzAQBAGTfgc+5YZPElq6igAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image19"
+        title="image19"
+        src="/static/04557ecb79249ae4b5753a9fee8f4d69/2bef9/19.png"
+        srcset="/static/04557ecb79249ae4b5753a9fee8f4d69/6f3f2/19.png 256w,
+/static/04557ecb79249ae4b5753a9fee8f4d69/01e7c/19.png 512w,
+/static/04557ecb79249ae4b5753a9fee8f4d69/2bef9/19.png 1024w,
+/static/04557ecb79249ae4b5753a9fee8f4d69/71c1d/19.png 1536w,
+/static/04557ecb79249ae4b5753a9fee8f4d69/a878e/19.png 2048w,
+/static/04557ecb79249ae4b5753a9fee8f4d69/f7171/19.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 이제 조금 더 복잡한 예제를 들어보겠다.</p>
+<div class="gatsby-highlight" data-language="kotlin"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-kotlin line-numbers"><code class="language-kotlin"><span class="token keyword">package</span> me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>model
+
+<span class="token keyword">data</span> <span class="token keyword">class</span> <span class="token function">Bookmark</span><span class="token punctuation">(</span>
+    <span class="token keyword">val</span> name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    <span class="token keyword">val</span> url<span class="token operator">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>위와 같이 북마크 모델을 선언하고 아래와 같이 북마크 조회 API와 등록 API를 작성해보자.</p>
+<div class="gatsby-highlight" data-language="kotlin"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-kotlin line-numbers"><code class="language-kotlin"><span class="token keyword">package</span> me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>controller
+
+<span class="token keyword">import</span> me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>model<span class="token punctuation">.</span>Bookmark
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>GetMapping
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>PostMapping
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestBody
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RestController
+
+<span class="token annotation builtin">@RestController</span>
+<span class="token keyword">class</span> BookmarkAjaxRestController <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">val</span> bookmarks <span class="token operator">=</span> mutableListOf<span class="token operator">&lt;</span>Bookmark<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token annotation builtin">@GetMapping</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/bookmarks"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">getBookmarks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> List<span class="token operator">&lt;</span>Bookmark<span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> bookmarks
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation builtin">@PostMapping</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/bookmark"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">registerBookmark</span><span class="token punctuation">(</span>
+        <span class="token annotation builtin">@RequestBody</span> bookmark<span class="token operator">:</span> Bookmark
+    <span class="token punctuation">)</span><span class="token operator">:</span> String <span class="token punctuation">{</span>
+        bookmarks<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>bookmark<span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> <span class="token string-literal singleline"><span class="token string">"registered"</span></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그리고 html과 js코드를 작성해보자.</p>
+<div class="gatsby-highlight" data-language="html"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-html line-numbers"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ko<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token special-attr"><span class="token attr-name">onsubmit</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token keyword">return</span> <span class="token function">addBookmarkRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>즐겨찾기 이름 : <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>즐겨찾기 URL : <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">getBookmarkListRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>즐겨찾기 목록 가져오기<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bookmark-list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- 여기에 즐겨찾기 목록이 나옵니다. --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./bookmark-ajax.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<div class="gatsby-highlight" data-language="js"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">addBookmarkRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> name <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'input[name=name]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> url <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'input[name=url]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> requestObject <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span> name<span class="token punctuation">,</span> <span class="token literal-property property">url</span><span class="token operator">:</span> url<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> requestJson <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>requestObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">onReadyStateChange</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> currentAjaxRequest <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAjaxRequest<span class="token punctuation">.</span>readyState <span class="token operator">===</span> XMLHttpRequest<span class="token punctuation">.</span><span class="token constant">DONE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAjaxRequest<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"즐겨찾기가 등록되었습니다."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'request failed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> ajaxRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    ajaxRequest<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> onReadyStateChange<span class="token punctuation">;</span>
+    ajaxRequest<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'POST'</span><span class="token punctuation">,</span> <span class="token string">'/bookmark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ajaxRequest<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">'Content-Type'</span><span class="token punctuation">,</span> <span class="token string">'application/json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ajaxRequest<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>requestJson<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getBookmarkListRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">onReadyStateChange</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> currentAjaxRequest <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAjaxRequest<span class="token punctuation">.</span>readyState <span class="token operator">===</span> XMLHttpRequest<span class="token punctuation">.</span><span class="token constant">DONE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAjaxRequest<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> bookmarkListDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#bookmark-list'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                bookmarkListDom<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">const</span> bookmarks <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>currentAjaxRequest<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                bookmarks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">bookmark</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                    <span class="token keyword">const</span> liNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">const</span> textNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createTextNode</span><span class="token punctuation">(</span>bookmark<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">' - '</span> <span class="token operator">+</span> bookmark<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    liNode<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>textNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    bookmarkListDom<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>liNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'request failed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> ajaxRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    ajaxRequest<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> onReadyStateChange<span class="token punctuation">;</span>
+    ajaxRequest<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/bookmarks'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ajaxRequest<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>코드를 그러면 살펴보자. 등록 API부터 보자. 다른건 이전이랑 비슷한데 여기서 핵심은 <code>@RequestBody</code>로 Bookmark 객체를 받는 다는 것을 알 수 있다. 이 부분이 Ajax 요청의 body에 json으로 이 bookmark에 대한 body를 받는 것이다. 조회 API는 이전과 동일하니 설명을 생략하겠다.</p>
+<p>다음으로 프론트 코드에 대해서 살펴보자.</p></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/Javascript/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-3fa8deb48819dbe669b2.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-17ce83b7f594c2c0c1fe.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2b2b484591700b0ae13f.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-7f5def86146fc29c9ead.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-7f5def86146fc29c9ead.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-3fa8deb48819dbe669b2.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-8bd3326d799737bed84d.js" async=""></script></body></html>
