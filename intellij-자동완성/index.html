@@ -1,0 +1,468 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[IntelliJ] 자동완성 · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/intellij-자동완성/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[IntelliJ] 자동완성"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[IntelliJ] 자동완성"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-8bd3326d799737bed84d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-3fa8deb48819dbe669b2.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-7f5def86146fc29c9ead.js"/><link as="fetch" rel="preload" href="/page-data/intellij-자동완성/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[IntelliJ] 자동완성</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->IDE</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 12월 7일<!-- --> · <!-- -->3<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">IntelliJ<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (5개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css rweb5b">.css-rweb5b{margin-bottom:0.5rem;}.css-rweb5b::marker{font-weight:600;color:#9195F6;}.css-rweb5b::after{content:'- 3분';margin-left:0.2rem;font-size:0.8rem;}.css-rweb5b>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-rweb5b>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 자동완성</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[IntelliJ] 검색</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 포커스</span></li><style data-emotion="css kco6hv">.css-kco6hv{margin-bottom:0.5rem;}.css-kco6hv::marker{font-weight:600;color:#9195F6;}.css-kco6hv::after{content:'- 8분';margin-left:0.2rem;font-size:0.8rem;}.css-kco6hv>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-kco6hv>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-kco6hv e1k9d3a00"><span>[IntelliJ] 코드 Edit</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 소개</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFH0lEQVQ4y3WTa1ATVxSAz2ZBSQgJAUFtRbQj9cVjExGBGVp1sNXWalEeUbJGUSsoVgoisLugiS9EYeoIODAyDj7AV1sQh44DQ2krbbU6jk5bf5ShyvhGiSGSRLJ7TycRHdrRH9+cs3fv+faeu/cCYVhaYlggDPs5YdjnhDFcIYzhnKRlyyUtm0MYQypGrVS/0Bkhm73o7cfZQcE79AreEavgnaAqstNjCq2gKbJBYKENQGJYGdGyQLTsSYkxoPg/XIwBHbpVP8xL3DlqXkE/aPL75so5Oyo4+6BvwbOl6mIC75UgNT6/jxpXYAEgjMEtGycxhn7Usoi61SLqVrtw1uohjM5wkdnrhwZjN6I0Z1O96jC+r9iOfcoSRDeqEoIa/oXwDj8Egfl9EJb3gAZJy4LEGNa7Zc6oleKNaYvJ9emfkesRy/D3qFTyU2Qa+T4qnXSEpyG7uNo2Kusm+mX8Kvmt/U1SZfxCAnPv47hC26mgnNujI7b0AiCTDi7G0IY6I3bPSBKVtDcCwCuIO9IyGaFlNBkekyj3HMrL8z4o+bRrMjeIU766e5358k6Yu+VpImMYwllr8FZkqruITAidiAfKy7GyqgoTPkh4JSKLPv2EZGSs8eTU8MdCko6TyG39Q7rN3ajN6XkMLu2q7Q6dEZ1zvnBdYwzEGyjiq/TFrkuX0Gq1YvjM8Ncrrq6uxq6uLk8uk9Ee8dQldWRuTi/5cONNaXLR3Rdgi8640Tc7Ex/FbJU6dWuJ72gfT0Febh42NTV5ch+fl2NlZWV4/vz5YaHME2cvqiTJm/4k0/O7Mbi47wk8npkfem++wXx/CYstsZlEMUruaWVrXh42NzeP3E80mUzY1tb2H+HCxFJM2PYPCRYeYDD/5B441s2AIRPNiSVjsG1dtCgDGZHL5djZ2YkWiwVDQkIwOzsba2pqsKenBw8dOvRSSHshBYDhSVUYarZIY7mHGMhbusFREDzVURjgEIUg7Ng8XXJPDg2d5Cmsq6vDuLg4jI6OxgsXLmBFRQWq1WqPkKIoTwxacRwnmG3SGK4PNYL1D3ByAZXOIg2KxUHO9qyZxNvL6/VxeSvDMo9QfwLHm+2ShnuKan7gKji4wImOQk27WBKArcYEpMDnjTKapj1QI2RuAvSNGGQeEv05C/oJzy8B4RWAz1YAmoK/bkzSI02pCKONJO5WY2JiMD4+HsOmhL1hpS/Fav0ZDDSLooqzolKwt8OdzXPo51vLwCWgd+m87Q/95H64/8B+qb6+Hmtra0lDQwPJzMp82zYQP/1ZojETUckNoIJ3tEDV4hOyxpR2OJfWsHD3gn1IU54r5v45rmHEETIyAs+zUn+OqM3o9OVsbuG3UJl0lK5ZfgwOL6svrVh6BDfNLXFkzTfjhsQ9uPajfWhYVIYfJ5eLEcYaKcx4DEOMp8lY43ckwNgiqVa1ulR5vagsdqKCt6Ocd9ZCZ+IuWJPeChXLj18pS2nEshVNuDe9xbmbvdhauv7HDQaho23BjssYa/oLI0y3XVNMj8QQ0zMx2GTHgB0uVBU70Jcf7FAITqOcd6pgX3IjlCY3Ru5NOSXuTD1ztTjldH7u8hNh7bmPoDSrC/AIQnzRz1uiuBu2MO5vDOF60X2IA7in99VF/QeVnHWWssgCCsEJct4JsCv1jJtp5tSzCUeX1MCOtG+A1zfBwaUnqVxjsxcCQpxwGcKFW5Mm83fa3uUfXAvinxr9Bau/WhgApTAI/sIAKAQH7Rb+C55z7Q0dffsdAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title="banner"
+        src="/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png"
+        srcset="/static/7f3c4c668ea513e0950e70c83ed0a8d8/6f3f2/banner.png 256w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/01e7c/banner.png 512w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png 1024w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/c1b63/banner.png 1200w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 포스팅은 인프런의 <a href="https://inf.run/doaZn">IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드</a> 강의를 참조하여 작성한 글입니다.</p>
+</blockquote>
+<h2>자동완성</h2>
+<h3>스마트 자동완성</h3>
+<p>우리는 코딩을 하다가 뭔가 자동으로 완성되는 기능도 필요함이 느껴질 때가 있을 것이다. 바로 아래와 같이 특정 인스턴스 타입의 변수를 선언했는데 해당 타입의 생성자를 어떤걸 쓸지 고민일 경우가 대표적이다. 그럴 때는 우리는 맥 기준 <code>Ctrl + space</code>를 입력했는데 이것은 해당 문법에 해당하지 않는 다양한 케이스들이 나와서 선택하기 난감할 때가 존재한다. 그럴 때는 스마트 자동완성 기능을 사용하면 되는데 맥 기준 <code>Ctrl + shift + space</code>를 사용하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACY0lEQVQ4y22S6Y7bNhSF9QRJ06QBimYWS+ImURK1y5Ylb+OZuhk3xaRF3/9JvkLy1EWK/PhwAfLy3MNDejeJwXeGT7Hk51jwkwn5EAl+jCRvI8UPVvMxt3x0lg9ZzJtY8iZWvLOad6nkbRLwPlG8t3Lu9Yp6JC5WmKwjjAqCqECmDTKpsc2WdLUnHfbE7UhUr9FVj67WmLon7SdatOswriMqezzfN4Qiw9qW27uI+0XM3f2lWtPi8g22HIhtizE1SlVXpJyoUbpG66kWeIFICGSOyVv8MMEP0wvTkHSJa7Yk+ZrIdkS2RUU1OmpQUTPXfzFxSzgLBhlC1bPdQGQEoZsRssAVG4rVnrLeseyfaJZPlM0DebnDFduZ1I2kbiDLN2hT492GGmFLFjrhJhDcCsVNKLkT+uLE1BjbsX18Ybt/oe3PV7FJxETtq8uWUOZ4t0oj85xPyucXtbhyowKUqeZmqSvabk/RHDF2hdTlvDYxDZyY+mbBUJRYt+d+kbDw0yt+kF2zmQ6uhwf64TdsNnyT3TcZToI6rnDNjlC61wdJuPcjFr695Cnc3JjlPWk+ouMObRqkmlzm896EUAV+mOEV1cjz5z95OP7O7vDM9vjCev/CcDgzHk7kxfjdK05xXKivNZAOr13uOX3+yuF4Ztw8EZcnVPEF3Rxw3QqbrK4Z/R81OX0Vu2RY4D3szpye/+LX01eOj3/Qr4903Q5rO4Ssvi9mLg+V2JqmGEiyjiht8EWKV9Ybhs0jy/5Au9wS12d08zd2fcI2NUKWCF0i1H9MH9y6JUXV07Yjy3ZLnneEOucfYoOSUwFyEgcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title="image01"
+        src="/static/2ebd25a96185b81ef8ab5a51e9fa9a97/2bef9/01.png"
+        srcset="/static/2ebd25a96185b81ef8ab5a51e9fa9a97/6f3f2/01.png 256w,
+/static/2ebd25a96185b81ef8ab5a51e9fa9a97/01e7c/01.png 512w,
+/static/2ebd25a96185b81ef8ab5a51e9fa9a97/2bef9/01.png 1024w,
+/static/2ebd25a96185b81ef8ab5a51e9fa9a97/71c1d/01.png 1536w,
+/static/2ebd25a96185b81ef8ab5a51e9fa9a97/a878e/01.png 2048w,
+/static/2ebd25a96185b81ef8ab5a51e9fa9a97/f7171/01.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>스태틱 메서드 자동 완성</h3>
+<p>우리는 스태틱 메서드를 사용할 때도 뭔가 자동완성이 되면 좋겠다라는 욕구가 생길 때가 있다. 대표적으로 <code>assertThat</code>이라는 테스트 코드의 스태틱 메서드를 작성할 때가 그런데 그럴 때는 맥 기준 <code>Ctrl + space</code>를 2번 입력해주면 자동으로 완성을 해준다.</p>
+<h3>Getter/Setter/생성자 자동완성</h3>
+<p>우리는 엔티티와 같은 클래스를 만들 때 <code>getter/setter/생성자</code>를 만들어야 하는 경우가 많다. 그럴 때 우리는 한땀 한땀 만들지 않고 인텔리제이의 기능을 이용하면 된다. 먼저 <code>command + n</code>을 입력하면 아래와 같이 무엇을 만들지 선택하는 팝업이 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB8ElEQVQ4y4WS3VLbMBBGc9lCypQQ61+WLNux4zg1CU0DvemU93+n07ETGCilXJxZraT5ZvfbnS1zhwiGhdN8dYovVjK3ikur+Oz0xFV0XAXHPLdcnO8uveEil3zygrnXzJ3mwhlmMbW4WOKLGmkD0gWEDQgX8eWavO7Imw5bNrjU4MsWkxpMqlFVQlYBHUpMKLFFzUxIw1I4dF6wzAzLzJ6isFidiL7B5Su0TmhVnNDnqNIJfcbEUdAiVMTEikw6MnFCqBzvV5RlT6q2+LzB+dUkPsWn8zkf35VNzG6kRvpIZhwLKblRioVSLLXB+Zrb/U/a7g73JPgOk6ApmC2NRhWRa5txbc7YjIURGJs4HB+53f/ChxY1tmrSu0gVmGlTEFOPkPkbxk/3D48cjr+nCsbc2PIVL+8mQWUCJjaTf0txGsbImI+fht0DTbvHuvqN2N9IHZgZV+BDPSWZ9IhpMIZMWIQMSB1fEP5DRCh/2sPd7kjf39FtdnT9gaY70Gz2tJuBEJsPvRtte/awqjuG2wP9dk+7/oYrBnS8w5QbQlVPq6Nt+rDd55b7bs+wOzIMP+i331k1W6qqw/sapdM7gyj/UeV5KEVqadot9WpDVa9x5R5T3qOrDTqGqV2l4yvGdRp9z+MKF2pCWBHyGm0L/gBBOF8EEVsWpgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title="image02"
+        src="/static/cc75ea83ddbd718733bd08c5581c3c17/2bef9/02.png"
+        srcset="/static/cc75ea83ddbd718733bd08c5581c3c17/6f3f2/02.png 256w,
+/static/cc75ea83ddbd718733bd08c5581c3c17/01e7c/02.png 512w,
+/static/cc75ea83ddbd718733bd08c5581c3c17/2bef9/02.png 1024w,
+/static/cc75ea83ddbd718733bd08c5581c3c17/71c1d/02.png 1536w,
+/static/cc75ea83ddbd718733bd08c5581c3c17/a878e/02.png 2048w,
+/static/cc75ea83ddbd718733bd08c5581c3c17/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기서 먼저 <code>getter/setter</code>를 선택하면 아래와 같이 나오는데</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACNElEQVQ4y2WSyW4bVxBFuUxk2Y5CsvvNY09sNkdFsjwA9iKr/P//nKAfqQleHKD6AnVf1a1erJyh8oq/jeQvI/ioaz5qwQct+NPIwqdg+OQNt05zc9U+WMWNq/nDVtxaya2R3BjFIqQBEzI2ttTaUxmPcAnhIiZvcO2I60dMHjC5x+YBlXpUahFNom480meUz+jYsqhqxaoySBdZrRWrtWa5kixXCi0TwfYY2yFERIiAFPEN6YK8osJsqKlEQIWGdW2KudIe7TLW9bTtnnY4kpsdIW4wriv6/MhcF+xFEzqxWNaS2gbWyrCsBXdVhU8dp/sf7I/f6IYTqdmT2wO52RPSRDec8XFEm/Zi/GyoIouVkogYuNNr7nTFZ7nEpo6n7/9xOP+iHx/pN1fGV7RpkDIiVXqhFp6FVLG8WtWOSnjWlcX7gYenfzne/2SYvjLuvrG5Uurpa5luNlE6v1AMhfKo0F/z0yzXCqEjPm7LWiFtr/Urs6ZMg1L5vaH0LJSJWN+Wj0pY1rVG6UjKe2LaEfPM/g27kunzinPfhVD6y394On1hmu4ZtyfG6YHUnejGe9phjwsbrO8Lzg90/ZlhfMTYBvGSYXzNsGlHDscHpt2ZYbPHxAPCHal9hw6xBF8mER4h/PUQEaXf5/ey8jSeOZy+cDg8Mu3+oet3NO0W6+bQ829NM7P+9roXrkeJaaAfdrTdlqbdYPIZmZ+QeYsMvqwlZHjHPN2cuwsdxrd43+HnAXTkf2tCZLzvnhPXAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title="image03"
+        src="/static/c126826a66e0907f82e1657dedfa6943/2bef9/03.png"
+        srcset="/static/c126826a66e0907f82e1657dedfa6943/6f3f2/03.png 256w,
+/static/c126826a66e0907f82e1657dedfa6943/01e7c/03.png 512w,
+/static/c126826a66e0907f82e1657dedfa6943/2bef9/03.png 1024w,
+/static/c126826a66e0907f82e1657dedfa6943/71c1d/03.png 1536w,
+/static/c126826a66e0907f82e1657dedfa6943/a878e/03.png 2048w,
+/static/c126826a66e0907f82e1657dedfa6943/f7171/03.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>원하는 필드를 선택 후 ok를 클릭하면 자동으로 생성을 해준다.</p>
+<p>다음으로 생성자를 만들어보자. 생성자도 <code>command + n</code>을 입력하여 Constructor를 클릭해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACDElEQVQ4y32S2W4TQRBF5xGCiSDY0/s6mz0zjmOTmE3iAYn//6SDph1BiAgPR6Xqrr5dW7X2ljpobqzinZW8NYKVkbwxktdWFa6j5TpYVt5w9Xj2xmmuvOCVq1k5xcqqclfFvMXGBpc6hAkIG6hNoLYR1+zw3YgfRkwzYPOAa7boPKBzh2wzog2o0KBDi889VS0069qifGK90aw3pthNbTAqE/0W5weUyiiZLqhHK/MFldAqk1y3CBpqGdGxZSMsm/pCLT3W9aQ8kZoJ6wes7y+4R574y6fRD1QfhEK4yEZbboTgg5TcCMla6RL45etP7s8/CGnCuu6P2DMWweR6qrVWyBR5bza813+4MQJtG+5O39jN50vZOr+INg3RdlRKJ2KeqYX/CyFDCbo/fy+izve/Hz7lrzOdqKQO6DiU/q3rZUCmsPjGthxP39iO9yXD52LPWZKotE240CFUYCMcdRnMZcpLgDIZbTNSJ4SKJe7fRGrpLnt4PH5inj8yTkfG+YFhfGCYTmynAyEOyGVN/tO/pW2LLRm23cjh7oF5f2K7u8WmAzp+RDcTLrel7PJI5Yuwyi+XrALVPJ44HD9xOJyZ9/f0w562HfG+p2n35HYi5h1NN9MOt8X/d5aPPUx5y7Dd0/UTbbfDNidU8xnVzsShx8dlobtiQ97hQo82ufTdxx4bOkLoCb5DmcQv6wNgkCsMgjAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/32ae7e9f72ae616d3e4bb80d1cc56546/2bef9/04.png"
+        srcset="/static/32ae7e9f72ae616d3e4bb80d1cc56546/6f3f2/04.png 256w,
+/static/32ae7e9f72ae616d3e4bb80d1cc56546/01e7c/04.png 512w,
+/static/32ae7e9f72ae616d3e4bb80d1cc56546/2bef9/04.png 1024w,
+/static/32ae7e9f72ae616d3e4bb80d1cc56546/71c1d/04.png 1536w,
+/static/32ae7e9f72ae616d3e4bb80d1cc56546/a878e/04.png 2048w,
+/static/32ae7e9f72ae616d3e4bb80d1cc56546/f7171/04.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 원하는 필드를 선택해서 다중 생성자를 만들수도 있고 선택을 하나도 하지 않고 select none을 클릭하면 기본 생성자를 만들어 준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACF0lEQVQ4y42Sy27bMBBFtWwTN0gaW+JLJEWKki1bjuw8WhRo+/9fdQrRdtIGWXRxQGhGvJy5M8XSGkqn+Gokt0bwRVcstOBaCz4bmbnxhhtnWFjN1Tl2XSuubMWnumRRSxZG5lzhQ4/xkbpJlNpRGpfPynjquMGmAdsPmLjGhJ46rtGhR4WEaANV65AuolyLDR1FWSmWpUHahuVKsVxp7s+nlgFve4ztEKJBCI+UzRsinJANSgaaOs2CmlJ6lG9ZVSaLK+VQdUCbltiOdOuJEHdYt0bXCVN3J+yZuqO2fX68uK8kVe1ZKcN9JbgrS6zv2E8/6TbPpP5w5kjbHYhpypyE3sRnwabuKJZaIhrPnV5lbtUSYT3j9Itu84IPO5o4vmOP0hGpGqQKmfnbm0QxB+dLZWUzq6rOyfniHP+IOadMfBV6RTUUQnmk61hm/04DkTr8h2CLUvEfwUo4Cqk9bdpnP+ahrCqN1A0h7vFh/KDdkdDuc3WzQCVPCOmphD3t4ePjD/b7J4btgWF8IaQJG7f4OOD8BmN7XDPQD8+M02+G3fe8AUJePGxeHyjaNPAwPbPdHVmv95hmQtiJ0iaUO+3d/ONcQb6oL0N459/csnQUu+HIdPjGw8MLu/GJrhtp0xZrO+Q7jy7M8ct03zh72IQ1/XokdVvatMHEIzJ+R8Yt0rvc1lzd38zV1S7lfTUu4VyHsyl7/wepiGMwJwdTngAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title="image05"
+        src="/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/2bef9/05.png"
+        srcset="/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/6f3f2/05.png 256w,
+/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/01e7c/05.png 512w,
+/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/2bef9/05.png 1024w,
+/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/71c1d/05.png 1536w,
+/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/a878e/05.png 2048w,
+/static/b2a1f3eb2c595c6fe6b40c71cf497bb3/f7171/05.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Override 메서드 자동완성</h3>
+<p>아래와 같은 인터페이스가 있다고 해보자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>chap4</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+    <span class="token keyword">void</span> <span class="token function">buy</span><span class="token punctuation">(</span><span class="token class-name">Long</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">void</span> <span class="token function">drive</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">boolean</span> <span class="token function">isWishList</span><span class="token punctuation">(</span><span class="token class-name">String</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그리고 아래와 같이 <code>Child</code> 클래스를 만들어서 <code>Parent</code> 인터페이스를 구현해보자. 그러면 인터페이스에서 정의한 메서드 시그니쳐를 구현해야 하는데 이것을 일일이 적으면서 하면 매우 비효율적이다.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>chap4</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">implements</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>그럴 때 인텔리제이에서 단축키를 제공해주는데 맥 기준 <code>Ctrl + i</code>를 입력하면 아래와 같이 오버라이딩할 메서드를 선택할 수 있고 선택하여 구현해주면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMElEQVQ4y2WSSW/bMBBGfcxaJLUlUVxF7ZstL1kQIMmlRU+99f//lleITtw0OTwMyCG/+WbIxcpqYif5rlNutOBaJVwpwaUSnGvBmRJcO8U3p7k0kvN5f86blAuTcGYirozgSgsudMoiy1t0VmB8RaIciXbE2pEYjy17XD2QtSO+HsNaFg0qUJNWBaLKkFkZ7uu8YhEnklWskdaziiSrSLFcHaOzLbnr8bbD2gZjW4xpTljTHrFtOKt0MQsqYnGsEiX6KC4dqfakMkeZiizvyHyHNhVKl2EvVXnIfyROHYtlkpKYjEhqlongNo6xWcW0e6Ufn6iaPXV7CJT17sQsPItIVZxIhGOxkinCZ9yqiFsVc5Mug+DT629+/PrD4fEn/eaZYXoJjHPcPB9dfhacHabSk+UjcWIDUWJCMi83+GJ9ip+Zz7y3KlX+z6GQDpk1b/NTLGMZ5jMXcX4I8QvFiNQlUhZfHUrtMa4Ki1gYoliG1+qHB8p6++bof5ez69nZ7Gi+dyQL98M/3O0eGccDw7CjG++pmwP7uxf69R7nO4xrj9iGstnRDQ8oUyJS/9a2PxVYlFXPtL1nXO9puw3aTwi7JdIlsTLEsWUV6dOMZ0Saneb2peWx3zPtHpmmB8b1HXWzpih6mnZiMz0ybu7ZHp7w5YAvBrrxgC/6D+7eeXsUn7c07ZqqHiirDl3sEf4B1++oNyNFNVB3G6yv0a6mqNfYrEG7CuuP0bkaZ+fP7vkLZE1msPkLk+oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title="image06"
+        src="/static/0d962e7e6f2f2b8f73f422b771e2871e/2bef9/06.png"
+        srcset="/static/0d962e7e6f2f2b8f73f422b771e2871e/6f3f2/06.png 256w,
+/static/0d962e7e6f2f2b8f73f422b771e2871e/01e7c/06.png 512w,
+/static/0d962e7e6f2f2b8f73f422b771e2871e/2bef9/06.png 1024w,
+/static/0d962e7e6f2f2b8f73f422b771e2871e/71c1d/06.png 1536w,
+/static/0d962e7e6f2f2b8f73f422b771e2871e/a878e/06.png 2048w,
+/static/0d962e7e6f2f2b8f73f422b771e2871e/f7171/06.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>정리</h3>
+<ul>
+<li>스마트 자동완성
+<ul>
+<li>맥: <code>Ctrl + shift + space</code></li>
+<li>윈도우/리눅스: <code>Ctrl + shift + space</code></li>
+</ul>
+</li>
+<li>스태틱 메서드 자동완성
+<ul>
+<li>맥: <code>Ctrl + space * 2</code></li>
+<li>윈도우/리눅스: <code>Ctrl + space * 2</code></li>
+</ul>
+</li>
+<li>Getter/Setter/생성자 자동완성
+<ul>
+<li>맥: <code>command + n</code></li>
+<li>윈도우/리눅스: <code>Alt + Insert</code></li>
+</ul>
+</li>
+<li>Override 메서드 자동완성
+<ul>
+<li>맥: <code>Ctrl + i</code></li>
+<li>윈도우/리눅스: <code>Ctrl + i</code></li>
+</ul>
+</li>
+</ul>
+<h2>Live Template</h2>
+<h3>Live Template 소개</h3>
+<p>우리는 지금까지 인텔리제이를 학습하면서 Live Template 기능을 사용했다. 바로 <code>sout</code>이나 <code>main</code>같은 것으로 말이다. 이렇게 단축어를 몇개 입력하여 자동완성을 해주는 것을 LiveTemplate이라고 한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACHklEQVQ4y42S2VITQRRA5wsQCqVKBbPM9Do9mS09C5BAQEiCRgtLSl78/884ViYQFHzg4dRd+vZd+nZwlBiGqebQSd5bwTsTsW8Fe1byZo1THOQJB1nC2zRmJ5bsxor9xLIXK3asZN8p9p1k12mCwk9x+QkyHhPFBaF9IC5J6jNG7SWj8wWumWH9BFW2pNUZZXOOGjWIpEKlDSarscUxwTC0SFlgredTz9IfxPT7MYNhQhI3+PKSvL0gSY+JbY0xFVp7lPYYW2HWPltjbY0yJcEgdEidk6QNvaFjECb0h46hSMmKM9qTG+p2ga+uGdfXVO2is9N8yiibMMqmHWtb2YogDFMiNcaNJwiVEUYZodigjEfbCm1rtPFIM37weVSnP+I7IpER9COHdBWhyelHtqMXWQaR2wY+sk7+t/6cSOYER1oiy5yPus8H3dtyqIcoO0ab6kXil4X8U8JQ5Nj8vHu3/mBDb+C6pTwGvgYT15uEJvbk1QyhciKZIWSKkCNEpxdd0GsQqmAYpQSln7L6esd8cct8ecv8yz3Lb79Zfr9nMpt31aUeP1vCv2zOfddQ0J5csrj5weXVisn0GlMsENkK5WeM6gbrWtQrRt+O/PlixfLrHcubn1zNbzk5vaJpZzjXINX4v5e3C9EbKTv5sJT1yOvO1p3W7TlxtUJVv3CTJXHlEbJE6BKhnjBxRZIfkxanuKwly05JR233K/4Ajz2QBgd7W9EAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title="image07"
+        src="/static/6c2756631e07ee1297df469e18368f72/2bef9/07.png"
+        srcset="/static/6c2756631e07ee1297df469e18368f72/6f3f2/07.png 256w,
+/static/6c2756631e07ee1297df469e18368f72/01e7c/07.png 512w,
+/static/6c2756631e07ee1297df469e18368f72/2bef9/07.png 1024w,
+/static/6c2756631e07ee1297df469e18368f72/71c1d/07.png 1536w,
+/static/6c2756631e07ee1297df469e18368f72/a878e/07.png 2048w,
+/static/6c2756631e07ee1297df469e18368f72/f7171/07.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>또한 해당 문맥에 사용이 가능한 Live Template 목록을 볼 수 있는 단축키가 존재하는데 맥 기준 <code>command + j</code>를 눌러주면 목록을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACXUlEQVQ4y22S647bNhBG9QYbBEaDNhdfJJEUqQspWTfLtrxxdn1psu0GXSB/+v6PcQrJ62za5sfBcEjim2+G9D5kBt9GvE8kvxrBLzpkogWvjeTGKF4lEW/ylDcuZWJjbmLJqzhikhpex4obLZkkikkix7ueW24xriM0BYHO8a+YgqTqyZo9aX8kaXbocoMqWpKyxzU9Km0IkwqZ1qiswuQrvPkiQsicSC/5MNXM5obZzDBfJCSmoSz25O1HkqxD6xqlygtRRaTr7wxnMlrizf0YqRxx2jBdxMz9hNkixg8zMtfTdGeq5kBZ31O3J7r+kbo9k9gNqd2SjnFD5rZIU+P5fkaoSsxyTSAtfmDxwwtKV1i7ITLNSOpuyasjidshVIGMytHVhZJAOLxZECPiCj9yTAPNLNDP0YyCLu+J4pY425IVe1x5P64HgeH8R0bB90ogCsdbNeM3Nf3OO7VA6XIUvDoYnLnyQGK3494gchEuXwR9kaNdz3QeM/uB4VGuLYUyHxHPwpH5v7vI1AQix4viClfuCKUjEJZQZIQiJRzX+TjLofIL/80vDAWD0OItq54vn584HB85nB45/P6N08PfnP74xub28NzW8l/DH6JQF+Q1Xh9l1X3ieP7K/u4L6+09UX5C2AdEeUtSNUS6IZQv85JqEKx+2vLg0rv7+MD58xOn81/cHf6kW99R1zsy25K5DlusqZpbdFKR2tWYD3/24q4ci4jnIqPDouzZ9Pe03Z663WGqB2T5RLY9YlcNSi9JXYuIHMO8dVpjkprYrkjzNXHWktmOLG2Resk/G9OSetfqI18AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title="image08"
+        src="/static/337a93a16cd3ed44855b3f2b37a8c2bd/2bef9/08.png"
+        srcset="/static/337a93a16cd3ed44855b3f2b37a8c2bd/6f3f2/08.png 256w,
+/static/337a93a16cd3ed44855b3f2b37a8c2bd/01e7c/08.png 512w,
+/static/337a93a16cd3ed44855b3f2b37a8c2bd/2bef9/08.png 1024w,
+/static/337a93a16cd3ed44855b3f2b37a8c2bd/71c1d/08.png 1536w,
+/static/337a93a16cd3ed44855b3f2b37a8c2bd/a878e/08.png 2048w,
+/static/337a93a16cd3ed44855b3f2b37a8c2bd/f7171/08.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Live Template 추가하기</h3>
+<p>그러면 우리가 실제로 커스텀하게 라이브 템플릿을 등록해보도록 하자.</p>
+<div class="gatsby-highlight" data-language="java"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">me<span class="token punctuation">.</span>sungbin<span class="token punctuation">.</span>chap5</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">jakarta<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Entity</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">jakarta<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">GeneratedValue</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">jakarta<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">GenerationType</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">jakarta<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Id</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">AccessLevel</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">Getter</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">NoArgsConstructor</span></span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Getter</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span><span class="token punctuation">(</span>access <span class="token operator">=</span> <span class="token class-name">AccessLevel</span><span class="token punctuation">.</span><span class="token constant">PROTECTED</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Comment</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span><span class="token constant">IDENTITY</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>우리가 엔티티 클래스를 정의할 때 클래스 위에 정의한 어노테이션들을 반드시 정의해줘야 한다. 반드시까지는 아니지만 자주 사용하는 어노테이션이다. 이것을 라이브 템플릿에 한번 등록해보도록 해보자.</p>
+<p>먼저 <code>command + shift + a</code>를 사용해 Action 검색 창을 띄우고 Live Templates라고 검색하여 들어가도록 하자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.0625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACX0lEQVQ4y22SS3PbNhRGuXbjvCwJJECAJAA+JFIkRb1iRY7GddpFu+j//zWnI1JO3UwWZy6GBA4uPiCYpxqRKh605JOOeB+H3McR7+KIOy25M5IPmeFDanifau709P3exLy7/o8j7o3kXkf8phVBYktUkiNUilAJixsiTjFuifE1Ztmi/RJlS6LUE9sS4yoi4wm1IzIOaRwq9QTzRUQoU6TKeJhJZgvFbC55mEuUstisJslXKO2RyqFiTyQtYZSNVUr7pqYEc6GIVEJs3CQTioXQ7DdPHLcXuvrI0DyyKgaa5Z6hncZKeSJlx01eEVfhdbGQFmULRGRYCMM8TPjj9Dd/fvuHpj3Tdd/ouie6/sJ2953t7mXs6mdElBDMQkWoLQtpmAl5Q9H1X3m6/MX28IwtBly5xZc71sMLzeYZbUpMUqFvmGSJVJbgsxKIzPBRPtz4zCc5p+m/MOwvVPWBzPfYvB+Fy/WZsj6NWf6fnDBKCUSUotJqym8R/6jdcGZ//J1qdcDmG1wxjNKmf2bVXm4X4SZeM7weWWpL4qopv9AgIo0INW3/yOPX79TrI5lryfxEXu1H+bWbq+A/0nF9YN2SYXOkbXe03Y5uONF0X+iHE6fzC0U1kNrmDTXWd7eLyN5gEWFCUJQNXb+nbgbKao1Me8Kkp6r39MOZVXMYpZlbj0Ln2lH49rm8Mma4rrf0myNdf2C93lEUDd6vcHmLzbtRZP1VchWuqIqeLKt/8Wzc1GHmqrGzvKjx+ZLYDUh3xFQdSe6n46gMGVtU7MYaa0ec5Ji0IDYekxQYk4/z/gUFXmvuiD57qgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title="image09"
+        src="/static/e678c511ec91df2292760e2d8613219c/2bef9/09.png"
+        srcset="/static/e678c511ec91df2292760e2d8613219c/6f3f2/09.png 256w,
+/static/e678c511ec91df2292760e2d8613219c/01e7c/09.png 512w,
+/static/e678c511ec91df2292760e2d8613219c/2bef9/09.png 1024w,
+/static/e678c511ec91df2292760e2d8613219c/71c1d/09.png 1536w,
+/static/e678c511ec91df2292760e2d8613219c/a878e/09.png 2048w,
+/static/e678c511ec91df2292760e2d8613219c/f7171/09.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 다양한 Live Template 목록들이 그룹핑되어서 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACL0lEQVQ4y2WS23KbMBRFeU3r6fTiGHRBFwQCDBjbiZN0envpU6f//zurI6VtkvZhDZLgbM7eR8XWaHZW8r4WvNUVG7FjI0teyZIrVfFKC95YndkYlc+utOB1LXmtRd5vasFGp28lhQsD2nWU2iG0Qzct0rYI22K6CRNnmvmEjTO6HVGhx7R7XNwjbUdVB4RJNQHlO4rrUlAKi1SO7bVinC508UjoVg7rPYf1gdCueD/j/PTiWdcRITxSNhkhXRJUVNKgTWC7U7T9hRDP+LCwzB8J3REXZlzzkvReJ8EkpkKmTIK7sqaUHtVESmGY1y8cL9+J/Q2f734wTB+zQNMe/mHNgpXwWTRRVoZiWymqumGnDNtSEsc74nDLGG/49vCTaf1K25/p+pv/MG6kNj3GDhmhGor3sqTylrfyA+/kNdbvcc1EExYO8ydCPOUOrZ8yz21rE7NVpVuU7qhEslxZlBtyftelzkUpn3/zSkNKpPUjh/8zrCyF1B4bxpxfInWXC5rlWfFCP94w7G9p2uVvp1K3ObdSuMyuqilcM3A+3bOuF6b5jE/2muVxss+mm0SM29PGE3G8ZdjfYf2YbT4NxVJ0cWI9XpiXM/1wyFmUMuTJC+XyFFPRH1JeyWoaRlpL9cyysBTz/syaOjzesRxuif2BtpvRdfeYjwwvSGePP/EvroyQvzNMlvthIXXadiM6nJDhnrpf0eF3sXzqsEp3VgdqFzG+R9sOayPWdAjl+QWntmkIanUKwQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title="image10"
+        src="/static/a0c6eac0dc1319927a00282d5fe9f8d7/2bef9/10.png"
+        srcset="/static/a0c6eac0dc1319927a00282d5fe9f8d7/6f3f2/10.png 256w,
+/static/a0c6eac0dc1319927a00282d5fe9f8d7/01e7c/10.png 512w,
+/static/a0c6eac0dc1319927a00282d5fe9f8d7/2bef9/10.png 1024w,
+/static/a0c6eac0dc1319927a00282d5fe9f8d7/71c1d/10.png 1536w,
+/static/a0c6eac0dc1319927a00282d5fe9f8d7/a878e/10.png 2048w,
+/static/a0c6eac0dc1319927a00282d5fe9f8d7/f7171/10.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>우리도 일단 그룹을 만들고 거기다가 커스텀 Live Template을 등록해보자. 위의 + 버튼을 클릭 후 2번째 그룹을 만드는 창을 클릭한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACKklEQVQ4y22SyW7bMBRFtc3QIk0dSxxEiqImyxpsJ7YLtClaoKui//87pyBtN0mRxQEH6V2+e8lkYTRLK7nPBXc644NcciNTrmXKlcq41oKPVkdujYp7V1pwk0tutIjr21xwq8O/kqTwHbqoyXQRUUWFtBXCVph6jWlHymGLbQZ0tUL5FlP1FE2PtDVZ7hEm1HiUq0keUkEqLFIVLB4UXb+nbjZU9cw0fWGcjvhqxrmBwq3fjHneIIRDyjIiZBEEFZk0aONZLBVVt8c3O4pyYD0d6YdDnP+P8yM6CAYx5SNpEFymOal0qLIhFYZhfmaz/0XTPvLj+Q+P+584P+HrDb6eX7GJgplwUTSQZoZkkSmyvGSpDItU0qwONKsn2nrLt/1v+uk7LnY0nRnPTBjbkZs2jgGhSpJ7mZI5y538zCf5gHV9zKj0I/Pw9Z/9dy2bJlpVukLpmkwEy5lFFV3M7yHV2BC4H18Vn9YXq6dv4/sZZpZEaof1q5hf4CLgzl1caFePdP0TZTXGQ8NhUlcxt1QUkWWWkxRlx257ZJ73rIddFLLlSOGHE+dOg4gpeqpmGzPu+gPWraLNl0uxJHWzZt7sGcYdbTfFLFLp480LVcRbDEUXQl7BariMMJfqlWVhSYZ+xxw63BwYpyeadqKqB3Ren/KR/g1h73SIe/NkhDxnGCy33UjotKpXaL9F+iN5O6P9uVi+dJiFN6s9edFgXIu2NdY2WFMjlOMvlyZo9WNThv0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title="image11"
+        src="/static/06d4895f34bca56be7d15b3ef4922743/2bef9/11.png"
+        srcset="/static/06d4895f34bca56be7d15b3ef4922743/6f3f2/11.png 256w,
+/static/06d4895f34bca56be7d15b3ef4922743/01e7c/11.png 512w,
+/static/06d4895f34bca56be7d15b3ef4922743/2bef9/11.png 1024w,
+/static/06d4895f34bca56be7d15b3ef4922743/71c1d/11.png 1536w,
+/static/06d4895f34bca56be7d15b3ef4922743/a878e/11.png 2048w,
+/static/06d4895f34bca56be7d15b3ef4922743/f7171/11.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>필자는 spring이라는 그룹을 만들었고 해당 그룹에 라이브 템플릿을 등록하자. 똑같이 + 버튼을 클릭하여 Live Template을 등록하고 엔티티 헤더에 들어갈 어노테이션을 등록하자. 이후에 해당 라이브 템플릿을 어느 환경에서 사용할지를 선택해준다. 하단의 Define 버튼을 눌러주면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVUlEQVQ4y1WS2ZKbMBBFeU1mkspiG20gQIAwFsbGW6Y8U5WH/P8vnZTkqSwPp5pFurp91dmqNGys4lsh+WIEn9SGJ5XzUed80IKPRvLJGj5bw3Op07cPRvJUKJ6MTO/PheTZxLWKrHIDuuoQpkrEZ2XbRNntsH7CTQu2D5h2i3aesh2p+hFlO0ThkGVc79B1R7beSIS0KF2xWmuG8ULXH3DdzH7+wTy/MPoTTTNR1TvqOjxqEyiKHilrlGoSUlVk61wjVIkpHauNphsuuH6hdhNhd8PvflC3e6om/Ef8b6JgFNMukUfBTV6Qqxrd9OSyJMxvHC6/8MOZc3hjO73SDxeqZkfT7v/SzUlQyDqJRnJRkq2ERhQNG12yyjX9eKUfzgz+xHl6Ywh3/Hij6Q7J1UNwTpR2oCh9qhGpG7JvKkfUli/qO1/VGluPDzex5e2NbbjT+tMfsVhjhrFtU/apVW1atOkQMrYsLLoaUn7r3CQx2wT6YeF4esWPL9TuITSGK2O4MU4vjOEluYot/8lQWDJlaqzbpvwiUTCe7oeFw/HOEF7pt9fkrvOnJHi5/uSw3JPDjSiTs1xWbERBVjcDy/HGPF/YhYW6mbDNhGsnvH9k1b7feozD+xPH4xvT4Y6ttkns76VYsq7fMR8uhGnBDxPKtAjl0s0LVT1OFzbViHrPqyj7lJ3S/4yNtGRhXJijw8OVaX+m93vaLmCK7r8ZU+pBciPrlN2/IyPVe4ZVMyRn0anrthi3oNyNws8Y1zw2vjtNxJk1jqLqKWuPsR3W9tiyQ+qa37Apawlt90FRAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/bc61ce212431ea4a8c9970230ee73056/2bef9/12.png"
+        srcset="/static/bc61ce212431ea4a8c9970230ee73056/6f3f2/12.png 256w,
+/static/bc61ce212431ea4a8c9970230ee73056/01e7c/12.png 512w,
+/static/bc61ce212431ea4a8c9970230ee73056/2bef9/12.png 1024w,
+/static/bc61ce212431ea4a8c9970230ee73056/71c1d/12.png 1536w,
+/static/bc61ce212431ea4a8c9970230ee73056/a878e/12.png 2048w,
+/static/bc61ce212431ea4a8c9970230ee73056/f7171/12.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVElEQVQ4y1WSW1PbMBSE/UqBTi8hti6WLMvyJbbjEBIghfap//8vfR0pIUwfdo58xme1u0fZymjWVvKjFHzTBfdyza3M+SJzblTBFy24t5qvVnNnVOrdaMFtKbnVIn3flYI7Hf+VZJXv0VWg0FWCqhqkbRC2wYQR0834eY9tJ3QzoHyHaTZU7QZpA0XpESbOeJQLZA+5IBcWqSpWD4p+cyS0O3xY2C6vLMuJTfdEXc9UbsS56VrLskUIh5R1gpBVJFQU0qCNZ7VWNP0R3+5xfmY7nRjGV1yzUNVT6jk/UfnzWUfCSKZ8Qh4J13lJLh2qbsmFYVp+szv+peuPHOc/DNMb7fBCVY+J5Ew8UTdLIiyES6QReWHIVoWiKGvWyrDKJe3wTNsf6LsnDonwF914og67T5WpbjG2pzRdqhFC1WQ/ZE7hLN/kT77LB6zbYN2YMlzmE9P8TugPF7vzldSHHaXtklWlG5QOFCJaLiyq6lN+D7lO1qyb6IY9u6d3xvHtou7TcrS7mU9JVbR8zbCwZFI7rB9SfhFxMA6F9pFpfmWY3unG16uyqL4JC4fnP5S2ZZ2bpCwXFeuiJKvqnv3jC8tyZJz2uHrG1hO+Wej7fdpwc9l6jKNpH+k3z2x3b1g3JKLPpViy0I4suyPTvKfrt+cspE+bz6U9316ca0TMK25XmzadP+wmy8KSTZs9S1S4e2beHmi7LU2Ijzb898akPCP2Ym4f+FAn5CXDaLnrZ6LSJgxo/4j0L5TdgvaXYVldFRbxzWpPWbUY16FtwNoWawJCOf4BrnVqVgyNLBUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/e4dc24c79e26fe76df003d1f1fc9b14d/2bef9/13.png"
+        srcset="/static/e4dc24c79e26fe76df003d1f1fc9b14d/6f3f2/13.png 256w,
+/static/e4dc24c79e26fe76df003d1f1fc9b14d/01e7c/13.png 512w,
+/static/e4dc24c79e26fe76df003d1f1fc9b14d/2bef9/13.png 1024w,
+/static/e4dc24c79e26fe76df003d1f1fc9b14d/71c1d/13.png 1536w,
+/static/e4dc24c79e26fe76df003d1f1fc9b14d/a878e/13.png 2048w,
+/static/e4dc24c79e26fe76df003d1f1fc9b14d/f7171/13.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이후 적용하면 우리가 설정한 Live Template이 잘 적용됨을 알 수 있다.</p>
+<h3>정리</h3>
+<ul>
+<li>Live Template 목록보기
+<ul>
+<li>맥: <code>command + j</code></li>
+<li>윈도우/리눅스: <code>Ctrl + j</code></li>
+</ul>
+</li>
+</ul></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intellij-자동완성/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-3fa8deb48819dbe669b2.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-17ce83b7f594c2c0c1fe.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2b2b484591700b0ae13f.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-7f5def86146fc29c9ead.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-7f5def86146fc29c9ead.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-3fa8deb48819dbe669b2.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-8bd3326d799737bed84d.js" async=""></script></body></html>
