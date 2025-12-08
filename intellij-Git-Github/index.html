@@ -1,0 +1,863 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[IntelliJ] Git&amp;Github · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/intellij-Git-Github/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[IntelliJ] Git&amp;Github"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[IntelliJ] Git&amp;Github"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-8bd3326d799737bed84d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-3fa8deb48819dbe669b2.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-7f5def86146fc29c9ead.js"/><link as="fetch" rel="preload" href="/page-data/intellij-Git-Github/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[IntelliJ] Git&amp;Github</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->IDE</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 12월 8일<!-- --> · <!-- -->4<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">IntelliJ<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (8개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[IntelliJ] Git&amp;Github</span></li><style data-emotion="css rweb5b">.css-rweb5b{margin-bottom:0.5rem;}.css-rweb5b::marker{font-weight:600;color:#9195F6;}.css-rweb5b::after{content:'- 3분';margin-left:0.2rem;font-size:0.8rem;}.css-rweb5b>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-rweb5b>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 디버깅</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[IntelliJ] 리팩토링</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 자동완성</span></li><li class="css-1hda2e5 e1k9d3a00"><span>[IntelliJ] 검색</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 포커스</span></li><style data-emotion="css kco6hv">.css-kco6hv{margin-bottom:0.5rem;}.css-kco6hv::marker{font-weight:600;color:#9195F6;}.css-kco6hv::after{content:'- 8분';margin-left:0.2rem;font-size:0.8rem;}.css-kco6hv>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-kco6hv>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-kco6hv e1k9d3a00"><span>[IntelliJ] 코드 Edit</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 소개</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFH0lEQVQ4y3WTa1ATVxSAz2ZBSQgJAUFtRbQj9cVjExGBGVp1sNXWalEeUbJGUSsoVgoisLugiS9EYeoIODAyDj7AV1sQh44DQ2krbbU6jk5bf5ShyvhGiSGSRLJ7TycRHdrRH9+cs3fv+faeu/cCYVhaYlggDPs5YdjnhDFcIYzhnKRlyyUtm0MYQypGrVS/0Bkhm73o7cfZQcE79AreEavgnaAqstNjCq2gKbJBYKENQGJYGdGyQLTsSYkxoPg/XIwBHbpVP8xL3DlqXkE/aPL75so5Oyo4+6BvwbOl6mIC75UgNT6/jxpXYAEgjMEtGycxhn7Usoi61SLqVrtw1uohjM5wkdnrhwZjN6I0Z1O96jC+r9iOfcoSRDeqEoIa/oXwDj8Egfl9EJb3gAZJy4LEGNa7Zc6oleKNaYvJ9emfkesRy/D3qFTyU2Qa+T4qnXSEpyG7uNo2Kusm+mX8Kvmt/U1SZfxCAnPv47hC26mgnNujI7b0AiCTDi7G0IY6I3bPSBKVtDcCwCuIO9IyGaFlNBkekyj3HMrL8z4o+bRrMjeIU766e5358k6Yu+VpImMYwllr8FZkqruITAidiAfKy7GyqgoTPkh4JSKLPv2EZGSs8eTU8MdCko6TyG39Q7rN3ajN6XkMLu2q7Q6dEZ1zvnBdYwzEGyjiq/TFrkuX0Gq1YvjM8Ncrrq6uxq6uLk8uk9Ee8dQldWRuTi/5cONNaXLR3Rdgi8640Tc7Ex/FbJU6dWuJ72gfT0Febh42NTV5ch+fl2NlZWV4/vz5YaHME2cvqiTJm/4k0/O7Mbi47wk8npkfem++wXx/CYstsZlEMUruaWVrXh42NzeP3E80mUzY1tb2H+HCxFJM2PYPCRYeYDD/5B441s2AIRPNiSVjsG1dtCgDGZHL5djZ2YkWiwVDQkIwOzsba2pqsKenBw8dOvRSSHshBYDhSVUYarZIY7mHGMhbusFREDzVURjgEIUg7Ng8XXJPDg2d5Cmsq6vDuLg4jI6OxgsXLmBFRQWq1WqPkKIoTwxacRwnmG3SGK4PNYL1D3ByAZXOIg2KxUHO9qyZxNvL6/VxeSvDMo9QfwLHm+2ShnuKan7gKji4wImOQk27WBKArcYEpMDnjTKapj1QI2RuAvSNGGQeEv05C/oJzy8B4RWAz1YAmoK/bkzSI02pCKONJO5WY2JiMD4+HsOmhL1hpS/Fav0ZDDSLooqzolKwt8OdzXPo51vLwCWgd+m87Q/95H64/8B+qb6+Hmtra0lDQwPJzMp82zYQP/1ZojETUckNoIJ3tEDV4hOyxpR2OJfWsHD3gn1IU54r5v45rmHEETIyAs+zUn+OqM3o9OVsbuG3UJl0lK5ZfgwOL6svrVh6BDfNLXFkzTfjhsQ9uPajfWhYVIYfJ5eLEcYaKcx4DEOMp8lY43ckwNgiqVa1ulR5vagsdqKCt6Ocd9ZCZ+IuWJPeChXLj18pS2nEshVNuDe9xbmbvdhauv7HDQaho23BjssYa/oLI0y3XVNMj8QQ0zMx2GTHgB0uVBU70Jcf7FAITqOcd6pgX3IjlCY3Ru5NOSXuTD1ztTjldH7u8hNh7bmPoDSrC/AIQnzRz1uiuBu2MO5vDOF60X2IA7in99VF/QeVnHWWssgCCsEJct4JsCv1jJtp5tSzCUeX1MCOtG+A1zfBwaUnqVxjsxcCQpxwGcKFW5Mm83fa3uUfXAvinxr9Bau/WhgApTAI/sIAKAQH7Rb+C55z7Q0dffsdAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title="banner"
+        src="/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png"
+        srcset="/static/7f3c4c668ea513e0950e70c83ed0a8d8/6f3f2/banner.png 256w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/01e7c/banner.png 512w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png 1024w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/c1b63/banner.png 1200w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 포스팅은 인프런의 <a href="https://inf.run/doaZn">IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드</a> 강의를 참조하여 작성한 글입니다.</p>
+</blockquote>
+<h2>Git 기본 기능 사용하기</h2>
+<p>인텔리제이에서 Git을 사용하는 방법에 대해 살펴보도록 하자.</p>
+<h3>Git View On</h3>
+<p>먼저, Git에 대한 기본적인 기능들이 있는 UI를 어떻게 볼 수 있는지 살펴보도록 하자. 그것을 우리는 Git View On이라고 한다. 인텔리제이 상단에 <code>View</code>탭에 들어가서 <code>Top Window</code>를 클릭하면 여러가지 기능들이 있는 메뉴바가 나오는데 여기서 Git을 선택하거나 혹은 단축키로 맥 기준 <code>command + 9</code>를 클릭하면 아래와 같이 Git 터미널 창같은 것이 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACO0lEQVQ4y4WS6W7UWBBG+w0Gfgxiabu93sW7fb30td1JJiR0CGlQggLSaN7/NQ5qE0Aa9TA/jnR1S3VUX6lWyTSQjQ3p0KJMzTpROGnCWgr+9D2eOWv+WL/hRZHwPNc8yyQv6wLPdrwyJS/qnNemwOlrXrYVq8rs0KWlaEfq7YwTaTYyQ5cGN9I4oSLQJbqdUN2M7kZUZRHFljjvifIeUQzIsiNpLKswTAijCtPOJJnh1ZsA15PkzYwvOtyoJUh7ajOhVIeULVJ1y1vpX2jdI7Vh5YcZUlV03YhODWs3ZhNmKPsZ3zziVA8E5h4zXFJUZxTV7iRldYZIelYbPyMSFXUz0pgR11O4niDLSnxf4DghrhsRS4NK+v8mHYhEfYxcEAhDUo9keYsfpDieQqWGMC5wNhrXT5G6/b0weRIKWaOznsJMtP1MXrZsAoXKDF6gcTdqmfqYIpbNbwnjktVxkVU3kZuBcrDIxhLXlrK1iDTHCzWenywNxymFOs2xFsYVq6bdcXP7wMXlB3Zne7YXj5T2nqadUSLF2ahF+D3y8P+R2+6cw6ev3N49cnf4wsf7f7g9/M2wu6YwW4Ss8ILs5w7l8Uz+Jfvxtwin6Yqb9w9cXt0x765R9Z6oPBCbC/J+IM3sSckpFuHVXwfe3z1yc/uZ6/090+4dW3tJntvlgOWJRvk01VLXHeL41k9C052zO99jp7cM9oKs/4jovqLHPaqpEbIlVma5wx/opCevR8pmJqssVTVTFnZZyzckw5GiaI2ejAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title="image01"
+        src="/static/58400d2715b052a871717485d9d2d114/2bef9/01.png"
+        srcset="/static/58400d2715b052a871717485d9d2d114/6f3f2/01.png 256w,
+/static/58400d2715b052a871717485d9d2d114/01e7c/01.png 512w,
+/static/58400d2715b052a871717485d9d2d114/2bef9/01.png 1024w,
+/static/58400d2715b052a871717485d9d2d114/71c1d/01.png 1536w,
+/static/58400d2715b052a871717485d9d2d114/a878e/01.png 2048w,
+/static/58400d2715b052a871717485d9d2d114/f7171/01.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACKklEQVQ4y32S/W7bNhRH9QJDkzp12yS2JVHiNylKtKLGTTwMHdb3f6IziHaCFdj2x8GFdHUPfyRVPXpLHS0PTvPZSDa651ZLbozig1P8ZiXb0fN5DNx4zW3QbAfP3eC4cYoPVrLxio2XpV99fzmznI6kKZJyJE6BMHr8GAnL7wzPP5jOP7HHV/TxBTOf0Om5IONCHxfU8A2dFlw+UaUhkMeIUw3edIVgBN5IvJmZl58cX//kOL+g9YxWM0pf0P/EzCiTqdp+oDMn9k3ksNJG9k2gEYk4nhmXv8inHzw9/0FMZ2J6/VeGdEbaJ6pD49AmY9xM3Toa4QttF9D26bJySfR0ef4v3EInR6p97VB6YEjP7JtVFqjbS1Vm/n/JL1yFUmdiOqHMRN2GImqKMNKrzNqX+ngllyHRj++9tfZqKog+USmdceE7bZ8uMhFL7cvgwONesT8Y9rUpPdGvC0VaETjUFtENZUeX4wqXSxFy+mWrh9Yj1UjXGT5+/Mrd3X1hs7lHqUBKM11n+fK1QciRTuVS1/mqfV/BXxNehTKx23VFst3u+LTdsbl7QEpPCLkI7x8E63zTxZK+CL3N76I36qtQiEvCN25vv5SEzo1F+Ljrr9+767kHKq0z66/zlnLlUDt6mUqaptV0vUPqSN2o8s77kU6YknC9yLYfSy0J8/BCpxJSTwVtM709YuxMXWvq1iBkRJp1yNIKi7UTNkxIk1DuiPcL1mQ6NfI3sqV/R5sGnNAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title="image02"
+        src="/static/d4b6153088fc13731fe10b0d810dfd14/2bef9/02.png"
+        srcset="/static/d4b6153088fc13731fe10b0d810dfd14/6f3f2/02.png 256w,
+/static/d4b6153088fc13731fe10b0d810dfd14/01e7c/02.png 512w,
+/static/d4b6153088fc13731fe10b0d810dfd14/2bef9/02.png 1024w,
+/static/d4b6153088fc13731fe10b0d810dfd14/71c1d/02.png 1536w,
+/static/d4b6153088fc13731fe10b0d810dfd14/a878e/02.png 2048w,
+/static/d4b6153088fc13731fe10b0d810dfd14/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위의 화면을 보면 다양한 기능들을 제공해주는데 먼저 로컬 저장소의 브랜치와 원격 저장소의 브랜치 목록을 볼 수 있으며 git graph처럼 그래프도 이쁘게 보여준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMElEQVQ4y42Se2/TMBRH8wUQj5at26BL6vgR23HeaRe6FZhA8P0/0EH2ugkkhPjj5FpO7vH9Jck2TlIEzY2TbGzJ2ghWVclbK3ntNK+s4qLzXHY1b7zhbW24aDzrxvHGaV5bxcprVl6l+9n98Qfj8oht7tBhRoUZWc/oZo+fT7R3j/T337HjPWY8Uk0Lpr1LqLBHhj26OWDaPW5YyKawsHz+ST18wdUnXHigcguibHBmYtp/Zzg+Mk5HjJkS+oz5nWpCVwNZKQM2TuVGpJmQZkSonl3ZULdH+sMPptM37o5fCe0Dob3/K033gLIzmVBtmiYvHMXOU+xqhG6QdqSy8/nkyIyx/8DtKVVHVvkDTf8Z6xcqt0/Nxs2JtLbzf3IWhmZhnL8SuhPKDBSiZidCiiz1kPaUGc8MqUnI7uVerFL3CSEbsnjRZkyCPEYWdaoyNTZ82Gq2txXbvKIQASEDUgd2ouY2t0+va+fJdy71ZlK1OL+k5rjxJKzRuqMsK969u2K9vk6sVtdoXdO2E2Vp2VwVCNVR6iHVKM606bH+KX+cMopjjcKPH0WSvH//IRHXSnnqekjC6xtxfj5QlOFJWLuB28K9xH2OrOLXFxXr9c0fwjihc91ZWLItHNvCJkeKHCd8Fj6zzW0SKuWS8JkYPwq969JhRtcMzYLzI8b15MKT9c0nSt0iTY8yPdoO6PjLxINyzeUm5+qqSGw2OaJ0ONdT+Z62PzDPDxzmE117SJ5f24aBU6qKHu8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title="image03"
+        src="/static/27c2139da243c7e61a95bb03ff4b056a/2bef9/03.png"
+        srcset="/static/27c2139da243c7e61a95bb03ff4b056a/6f3f2/03.png 256w,
+/static/27c2139da243c7e61a95bb03ff4b056a/01e7c/03.png 512w,
+/static/27c2139da243c7e61a95bb03ff4b056a/2bef9/03.png 1024w,
+/static/27c2139da243c7e61a95bb03ff4b056a/71c1d/03.png 1536w,
+/static/27c2139da243c7e61a95bb03ff4b056a/a878e/03.png 2048w,
+/static/27c2139da243c7e61a95bb03ff4b056a/f7171/03.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>또한, 뭔가 로컬 저장소에 변화가 생기면 왼쪽 탭의 깃 관련 버튼을 누르면 위와 같이 저장소에 대한 변화도 한번에 확인이 가능하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACRElEQVQ4y4WS63LbNhBG+QRN7CixbMcyKYC4EAAvoERSsqQmcdr0X9//aU4GmNw802l+nFnMgDz7LZfFfTCIwfIQNHde8a6pWTnFtdO89oY/nOZmbFnHlqu24bq13PSBd33gyhteOc2qtayC4SpYimV5ph3PaLdHNhHpRkQTEW4kTB/oD8/E09804xm7e8LujpjukFHtjAozul0w3YyLR4pdODKdv2DbA6Y5oMyEVCNbEXBmYj9/YTw/s5tOGLN/if2JtRPajhRaD9h2oh9P7KePNH7GuJlaR0J/Ii7/sLv8xeH0kba/0Pbn/6QbLmg3U0g9UG0D83Th0+d/mZfP+QHtJ0wz5e7a7FEpUTP9DzO1GiisX/DdGRsmQjdTbj2V7NBNGuF3kp/YZkbqSOHCIcft4hO76UIlAkL1iHqg1iPKJHbfGJFqeHGXavo8CVF3FFL11Criu5nl+Ik+PrGVLTJLO95vNJtHy6a0VKJF1C21avPSHssGIbs8Vbl1OUyR5rbNggsz3XCkEp7HypOWJaXl+vqW1eqO1eqeN2/u0DrQ93vqumG9LhFqQOox1yQutIl5sylRSpa6JJLw4UFkydu37zPprJQnhBEpG+7uBdu6y+8lstA3I4+V+xbbZ1mqKo0sbE72qzAldG7ICZNwU7lMcqS/JSfclO6HLJFGVnpAKZeF30njJ6H3Q26mlWfsjjR+h3aRUniKLhwxLm0wvkgo646yNNysS25vK9a3VT4L6XAuYv1AHxfm+U+W6QNxWJC65ytAC4LyUht5lAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/c34f86272e0b6a45dda3326574903a74/2bef9/04.png"
+        srcset="/static/c34f86272e0b6a45dda3326574903a74/6f3f2/04.png 256w,
+/static/c34f86272e0b6a45dda3326574903a74/01e7c/04.png 512w,
+/static/c34f86272e0b6a45dda3326574903a74/2bef9/04.png 1024w,
+/static/c34f86272e0b6a45dda3326574903a74/71c1d/04.png 1536w,
+/static/c34f86272e0b6a45dda3326574903a74/a878e/04.png 2048w,
+/static/c34f86272e0b6a45dda3326574903a74/4b7ac/04.png 3444w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이런 로컬 저장소 변화 탭에서 파일 하나를 오른쪽 마우스 클릭을 하면 여러가지 기능을 할 수 있는데 여기서 <code>show diff</code>를 클릭하면 아래와 같이 변경점을 UI상으로 확인이 가능하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACcklEQVQ4y1WT63LbNhSE+QZpbDmJnFi8gARAXHgDKVGyYqluO+2fdDrT93+WrwV8mcmPnQMQZ3d2ccDs3inE0PLgFFvbcGdqNqbhxkg+GMXd6Pg0OLZjz21n+eg1n0bPprd8tDr1bHzLrVP84jTZuv5ONz8h7UxtJoSZqNqR2gbs8Yo9PjOefmNZ/6Bbn7GHK9P5mX45I2ygihwbkN2CDY9ksz+x//4ndrpg3HeMP6PNihAdYbpi7RGllwStF1pzwNmVOfyKbhekCgnpvA1kSo7YYUX5Pao9INs9Ui+UomMKV3z/iGxntInnS6rGrcz7Z2x3RJmXbxGVGsmEHBB1T14YispRVo5KdSgzE8I1kaNQJCayPSTX43Ch1Xu0ekGrD1i1kLV2pRsvGH+itYdElmZh6M6E4YnGzGi7R9klIfbIv2aaf/cUf4/sfnh2Pzryf3q684EsOhjDlX680OhAKXyClGNy0MQ70vMrAnUzUYSO5hqQl5n80ZOfPPnZU/UdWS0HlJ4p6+4lsvCp1nJEND0PO8Uub9kVbbpX0XTIuqfKPfk3Q10MlDtPuXOUpSdr5IB1R6qmf3dXVB6lRuq65eZmy2Zzn3B7e49SnmFYqBvDl22JiH0qIORIIRyZ0hPGHZKjqu6Tq1ij4MODSCJ3d98S4lpKh/eBujbcfxWv/d17wsybQF7atHmbcl45ZJy+aNlsvv4kGB1aO74L7krLrjRJI6ZLDndvT+Y18ovgiJQ2Cb4hxo+Czk0pcqs7Qn/CuvgSJgphyYbuhLYzUfinoTQ9RaH5/KVguy0T4lrUFqV7KmGQquewXtnvnxjCifb/P+U/EXaBU1UBQkcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title="image05"
+        src="/static/c194bd96c3c09d02a7f6be27b7b63c2f/2bef9/05.png"
+        srcset="/static/c194bd96c3c09d02a7f6be27b7b63c2f/6f3f2/05.png 256w,
+/static/c194bd96c3c09d02a7f6be27b7b63c2f/01e7c/05.png 512w,
+/static/c194bd96c3c09d02a7f6be27b7b63c2f/2bef9/05.png 1024w,
+/static/c194bd96c3c09d02a7f6be27b7b63c2f/71c1d/05.png 1536w,
+/static/c194bd96c3c09d02a7f6be27b7b63c2f/a878e/05.png 2048w,
+/static/c194bd96c3c09d02a7f6be27b7b63c2f/f7171/05.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>또한, Git Graph에 커밋 하나를 클릭하면 왼쪽 창에 해당 커밋에 어떤 파일이 변경이 되었고 누가 작업을 했으며 해당 커밋에 대한 정보가 상세하게 잘 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACRklEQVQ4y32R627cNhBG9QJFnKxv27h7kcQ7JVGUVtrVyt7AufX9X+gEoh3DaIv+OBiCnPlm5mO2dpK80Tx4ydoJbkzJygo+WskHp/jDSm5bz11bceU1HyvNbeO5bhxXTvHBSlZesfIyvWfH0zfq/gnle0obKWwkX6Lr8MMXwukr8fEHtn9E9zPmMKHDKSHrEVGPqOaIDiOum8j66sQw/8TFC9Y/Yv2MtkfyosbpA4fxB938lf4wo/UhoV7R7zEHlOnIlGzx4YiqRpQZkXZA6AOFCNTtTHf6m/7yndP8TB2eqMPjf9KEp1SbFTJQiIbtzrLLfaJQNcJ2GDu8dl4Y0PZ/cCOlbMm0HanCE7aaMG5MxdoNL6Tk8R/FI+Zfd+8Eq+bMcPxJ3V6QumdfVMm/fVFTiDYlvScvG/ZlnSwR7+6FailFIFsO1h1T0rLuIrjLHb6aiP0z1p/w9TlRhwshXoj9hTZecHZM70L3r81qMiEC1p2Sj4vYi6DHmA6tG25vN9zf7xJ3d1uci3TdhFI1m42mGb5j6hntJoplZaUj1o9v6yzCS5Sy5eEh59OnNdfXnxPLWQiH95GiMNyvc2yccONILl42zCrbsd27t3UXtrlHLr9fmCR0c/OQWK3+RKkK51rK0vLXRqHCgIyR3ARy0ZBp07F5FdzuffJvicuEUrq36X5PuAh635LnmmJvGYYvxHbG24F9XpEFPyFtxLgebRcOacpSNOx2mrv7Hev1PrH4WJQO5zqMb7FVx3h+5nz+RtdMSBX5BWNlhFJG0s3TAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title="image06"
+        src="/static/c5781087f8a28af300f7da9f57614e16/2bef9/06.png"
+        srcset="/static/c5781087f8a28af300f7da9f57614e16/6f3f2/06.png 256w,
+/static/c5781087f8a28af300f7da9f57614e16/01e7c/06.png 512w,
+/static/c5781087f8a28af300f7da9f57614e16/2bef9/06.png 1024w,
+/static/c5781087f8a28af300f7da9f57614e16/71c1d/06.png 1536w,
+/static/c5781087f8a28af300f7da9f57614e16/a878e/06.png 2048w,
+/static/c5781087f8a28af300f7da9f57614e16/f7171/06.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>또한, 해당 커밋에 대해 다양한 기능도 제공하니 한번씩 실습을 해보면 좋을 것 같다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACZ0lEQVQ4y22Sa27cRhCEeYLEiqwochQvySHnzeGQnCW5D+46kBHn/hf6gp2FHCTwj0IDje7qqkIXn7xCRMMfXvHiWp5sw0fb8ouVfPCan5zieex4HjoeOsNDMPwaPU+958EpfraSx07z6BUfvKFY16+EdEG6RGNHhB2pzYBwE918JR7eGLe/sGlDpzMmHdH9IUOGhbZbUGFFxwU3HilSd2TevuHGK9Zv2O6Mtiu1CDi9Z798Y9reSPMZrff/hfkXxswoM1EoOeDiiupujQVpZlq9p2kjYTgzHf5m2r6ynv4kxAshbj9EP1xQdqYQMiKanl1pKWtPVXuECrR2wtgFbRI+rPhwQJmEMjPa/ggLjRwojFsJwxXbHTFuQd0suPkOOyP1xJTOjGmjEj4v5UP/I7ztZkLrV4bpC/1wpdUTlehyfnXTI3XKQ308cji9YVyiEoFGjrRqQqqJph3yzA2i7SkaGVE6UTXhbll0ud76tej4/bUlxANpvtCqAdF0NG1HVVlE7XH+mDMXcshCilZGnD9Qt30meye0do9zIy8vdVbUqIld5ejCzDxvWDvweWfolzdMOKH9kUaNFEqPWH/3f7Mp2phteb9izMjnnc5kjUr5UBcWluVKH1d2pcPNJ3Q/Udcx7xfe3i+/231X2N4UV5LHx08ou8f3J+omou2AMYG61rzuGmSaETFSOk8pLYXW43fCe3XsKo9SA1J6Pj69ZlVdv1LWHc7foogIYahLnT8gxAVrRsraUgS/ouyItgltp6zmprJpe8pS8/xbSRyOzOuXHEUr+5yt9SPajYz7jX26MIUjSk/8A2dDh+4pSPoJAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title="image07"
+        src="/static/5746f855125a30b236f7e72b7b38012d/2bef9/07.png"
+        srcset="/static/5746f855125a30b236f7e72b7b38012d/6f3f2/07.png 256w,
+/static/5746f855125a30b236f7e72b7b38012d/01e7c/07.png 512w,
+/static/5746f855125a30b236f7e72b7b38012d/2bef9/07.png 1024w,
+/static/5746f855125a30b236f7e72b7b38012d/71c1d/07.png 1536w,
+/static/5746f855125a30b236f7e72b7b38012d/a878e/07.png 2048w,
+/static/5746f855125a30b236f7e72b7b38012d/f7171/07.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로, 깃 관련 터미널에 콘솔 버튼을 눌러보자. 그러면 내가 해당 프로젝트에 어떤 작업을 했는데 git 관련 로그가 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2ElEQVQ4y5WS2U7cMBSG5wkKFEGF1Asmi+3YjuPsyyTDWqjUvv/rfFXMTEURrejFp986m8/x8ebKCiKv+GoFVyblIks41ymfteDESD5pwWWV86XMOcszznLFZWG5KCynRnKiBee54txKTq1iM4yPuGaPNA2Jroh1RbSqqcm7G/z4QLU8oZsF1cxk7YTyY0C4ntT1yGJA+R5TT2yafKJbnjHVDdou6HxG6YEodhjV0vbP1PMDTTujVBuQBw1kR+2QWc1GihLrB2S+GnpE1pGqliT1uHKmHr/T7L8xzvc4v8f55V2Kco/UHZtYeOK04HpruI4s28gSS0eqazLdhQ7WjmTWofQ/MD2JKNlkZsAWC6tmpkeuI5guEM66+yCHgmviNP9kmH6QyoptnLONHVHiQsAL1avzC2vsWxLh2UhZsZuemHZPDOMDw/QYyIuJopxpu7ug3XAf6A8xTXeHKyZk1iBUEzQUTEWJrxbKeh+S6/Y2BFs34fyOqr4JWje3wXf0rzlvxw4jR0kR3mq95TWr7Wh/zy9U+zvm+NahoJTlXzb4Pwt51aHK/uzoI5uVx6+kjlO8fKtQsHQ7jBvDElZssUOo+rC5+l0y02H9hKtmbDFS+B2FG8NifgG18Y9vns6O+AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title="image08"
+        src="/static/de7903e59bb11f02afa56bbbaf7631ed/2bef9/08.png"
+        srcset="/static/de7903e59bb11f02afa56bbbaf7631ed/6f3f2/08.png 256w,
+/static/de7903e59bb11f02afa56bbbaf7631ed/01e7c/08.png 512w,
+/static/de7903e59bb11f02afa56bbbaf7631ed/2bef9/08.png 1024w,
+/static/de7903e59bb11f02afa56bbbaf7631ed/71c1d/08.png 1536w,
+/static/de7903e59bb11f02afa56bbbaf7631ed/a878e/08.png 2048w,
+/static/de7903e59bb11f02afa56bbbaf7631ed/f7171/08.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Git Option Popup</h3>
+<p>다음으로 Git에 대하여 보다 상세한 기능들에 대해 살펴보도록 하자. 맥 기준 <code>Ctrl + v</code>를 입력하면 아래와 같은 팝업창이 나오고 해당 팝업 메뉴를 보면 우리가 익숙하게 사용한 Git관련 작업들이 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACN0lEQVQ4y32Sy24cOQxFaxm/khmnSyVRz5Lq1d1220aCIMgkwGAWs5z//5sTSN0JvEhmcUCUWLy8JNj96Q0qCvfO8IfT3NmBW6u5sZorZ7iymrfJ8S55brw03kbHXXBcX/K33nDrNNdO6Kb5gZBXjBsZXETZCy7hy544H0nbIzavSF6QPCPxjA6lYcKExIIdZ7rRT5T1EZs2rF8Qv2BsoR88VjKlnMjrA7msiMkNc4kirykYSXTaBFwsaJ/RtqBtZpARpQM+rsTpRJwP5GnDx98T4tZqO2UCSnt2vbBTll5ZlPFomzCSiWnj+eULx4dPWDe1N7Hllwwm0okrhLjH+hmxlwJXGtokxnzk73/+4/OXf/Fh+x/B6SxoXSGOe0La0JLoB9f2V10PJjVX8/qBPD1h6jp0bNRmlR/fVayuqRtMwMjYRNrIg2ux/nAeP3F8+ot1/7E16Ieac+eccm2ytnMTWm036ID1U3N0dncWtC5j6/kMgdPLV55evrHrHd6PlGnDusSut4TpgIQZqcJ1ZCMR8QVVHenQbFe33k9YO1Ibrtszh+MH1OCJaWaa9oQ4NUFbZkxIKHWu63ztpOzPcX84rOO8v+958+aW66s7bm7etaiUQcS3eN8P6DyiYmDnLDsjZ4fvLyfzmmV75PT8kXk9sm4P+FgwNrHuT5Rpj1KC6oUxLy1X17NTQpfiwiABLbFRi7QbyfORaTkwlo08HwjjjLEjMW/EccH6iLhEygs5r6RQTy7yHZOMXES64KXqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title="image09"
+        src="/static/24b67e8b171947173f202d5ff079d585/2bef9/09.png"
+        srcset="/static/24b67e8b171947173f202d5ff079d585/6f3f2/09.png 256w,
+/static/24b67e8b171947173f202d5ff079d585/01e7c/09.png 512w,
+/static/24b67e8b171947173f202d5ff079d585/2bef9/09.png 1024w,
+/static/24b67e8b171947173f202d5ff079d585/71c1d/09.png 1536w,
+/static/24b67e8b171947173f202d5ff079d585/a878e/09.png 2048w,
+/static/24b67e8b171947173f202d5ff079d585/f7171/09.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Git History</h3>
+<p>여기서 4번째의 History를 살펴보면 해당 파일에 대한 Git에 대한 history를 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACV0lEQVQ4y22S246cRhCGeQPbcZzI0ka7y6Eb+gA0dEPDDMzseGMnF7lIIkVR3v89PgtmfIi0F5+qoLr++tXVyXstSJuSOyN4rwveVTlvVcEbJXitJa9NyU/O8HNr+aFWvLElP9Z6Z6u/UoK3RvLOXs8mcXqm9itSe3LVkamOVDly3dPNz7jDB9SwoMNCteFnmuGE8QuFHRH1SNlEaj+hupnE24lh+YTuTiizoOyRUkXSzGLNjGtXhOiR0u9sedet+HDe87IMyDIgpKeQHYkUDtNGpB2R1YioBooykOYNtjngw4VSDUg1XGMVaLuVxh0Rpb/VApUaMCqSZKIlyxseHjWPmeUxtWSyJlc9xs407bVxExKVx6rIIf5KiJfd1ZchlRrx5kBS6UjtzlQmUsj+OlWPVGbE+ZXWndF2RptpP+PqhUP8yDg/f3W4sQmWpScp9YBtj4zT7yzrHyg9cv+oSbMaXUdat6LtRLUN0XFvbNxhZ7szWfmbkY5ctCSuPzEfPzFPH7k8/UnXn1FmuonEr0LKXDH1ca/b9oDeFzjsgoVoEdKRdH5hOf1GGM9suah6sqLZp+XCfce3b1H2DNOFNqwUqkfqgDSBTLYkrZsZpyc6f6RxMw+p4SHVt/gC95r72lD815P+67j7S/PL34a7fwz3B0MShpUhXt2F4bQ72Rr3jb/AVktljQwDRe8p+v6K92S6JRniE2E80fVHxviErLoXBb/82wWzmlIOSBGQMtziQF44knXensCF3i/YJpLm9f+aXxLeNmrdTN0fMe1E0x5omgmpPJ8BNSmOYRrIi0MAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title="image10"
+        src="/static/7c76561f852c64ee4fd8048d4352bcaa/2bef9/10.png"
+        srcset="/static/7c76561f852c64ee4fd8048d4352bcaa/6f3f2/10.png 256w,
+/static/7c76561f852c64ee4fd8048d4352bcaa/01e7c/10.png 512w,
+/static/7c76561f852c64ee4fd8048d4352bcaa/2bef9/10.png 1024w,
+/static/7c76561f852c64ee4fd8048d4352bcaa/71c1d/10.png 1536w,
+/static/7c76561f852c64ee4fd8048d4352bcaa/a878e/10.png 2048w,
+/static/7c76561f852c64ee4fd8048d4352bcaa/f7171/10.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACYElEQVQ4y02SyY4cRwxE66rRjG31UpX7XlnVqxojt4QRdLHhs///b56R2R7ZhwATJBiMIHP4ZCWjV2yM5DcjeNETz1rwUQuejOTJKn4Jhl+95dlpPlrFi9Mdrf5BC56t5MVKnoxiKPMZlxakiUzGMzZoz2QCoZ7x9YTOCyYv6LSg0ozLB0xcEDYjXEa6gkszOs4M0RbyckGHFW0rylakzuxHgzUzwa9IGZEydQgRCWElpUN/K5X+q0nPIKTD+IywCaEzQieEiuwni3WVEA+MwjOJgNQJqRI+rDi/9LfSuedbNDozjNIxCstur9iPumOUlkkHtCnU5cbt9TvH8x1lClYVarmQygkh44NQJbTOJFMZlMk4f0DbuVvtU03uzS4sLOvv/PHn39y//YWPJ7ypLOVK2/27wgcKSkUGaRI2LPh4wPmZcTLsmtLJoF3p+c+3N06Xr9hmUydcqB2TDEgVETJ0jMIx+LgwLxdyPlLrFecr2pauWLXmeOT2+oP1eMeFhxNlC9bP/YhtQCObpKPdYwipshyupHIg5hWpH5Omf3er3czn1x+cLm99DS3XjpbnEz6tCB1pLqXJTO3KPhTyfKARu1C63XfLLTYFx/MXTud7b9jtFDtnEN8T41tgc7ds75bNN8u2GoaUl66uEaa8dmWNaLOTfNqKn9juJdu9YrMV7CaNShkR4/+QGI1jyOVAKish1q5Uat8J5/XC6fqF9XTjdH0llgMu1p73cUWK9w+df8ZJeIalnin1SEgL1mdG8bDq09Kbcz1SljMhryhXiOXYd2d86QNa9L7iXPt2kX8AyjliJN23j4wAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title="image11"
+        src="/static/92503a89517a9c1f0f13aeabde6e884e/2bef9/11.png"
+        srcset="/static/92503a89517a9c1f0f13aeabde6e884e/6f3f2/11.png 256w,
+/static/92503a89517a9c1f0f13aeabde6e884e/01e7c/11.png 512w,
+/static/92503a89517a9c1f0f13aeabde6e884e/2bef9/11.png 1024w,
+/static/92503a89517a9c1f0f13aeabde6e884e/71c1d/11.png 1536w,
+/static/92503a89517a9c1f0f13aeabde6e884e/a878e/11.png 2048w,
+/static/92503a89517a9c1f0f13aeabde6e884e/f7171/11.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Git Branch</h3>
+<p>다음으로 <code>Ctrl + v</code>를 입력하고 브랜치 관련 메뉴를 클릭하면 아래와 같이 브랜치들이 쭉 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACg0lEQVQ4y0WS6W7cNhSF9Qat07hBiiSe0UZR3ESJpDTSLHHsNO3fFiiKvv97fIFY1/1xcIm7HJ67FL9oQTVIPmrBe9Vw39e87RveqJY73fGjkfw8Gt55yxvbc2cl907x1inulOCHvuUn03FvO+6MpFiWZ2y40qpA3Y9U/UgpPbWaGNdn/PpEHy+oeEHGMzKccOmGDhcaM9PaGeEWXDjRjytFMCvp8g013uj1hd6c6fqFsjJYs+GHK207IUTIaNqJcbwS4ufs77qI6CLtHhMjhWg9algQJiHkTCsTTRcpa4d1Z0L8QtenVwgZGcYrzp9pu/Dqk31C9wtF1Q5UtePhqDhWmmOpqYSl7ie0WXH+kgv3olZGTL+wLV+Jy1NW9T/hTNRnCqkWrN/bPSFegp2a6fSMjzeUPmXVQiaOjUPLmW35lXl9flW4YyeUXaDoVML6C356xLqNsjYcjoqysii7oMyJTp84VpZDZWjFiPMbbtzyzIQMNN2U31UzUPjpxnr+xpyeOK+/57ntanfs6nOyTDl5H8s+ol4vmGFD5QUmWjFRtwON8BRTvHK5/UacH5nSLf+4F9etz7brAsqs1GJCqvSiaCSdnhj2c5MTQkU6nah3wmHcmE+PjOGM8yuHUnMo1YvV+XzK2nKsDFXrKI+WB6Np/pmo/vZ8+EPx8U/Nh780n86aIqYrafnMGC6EdKNuXSbaCfYWPx16Ho462x2Ho6YUFhETTQg0YfoXMVDpgWIni+mWFc7LI0KOr+qUTbhxb9dh/QkfNsrG5AV1IiHaiBDxxSbqxlOc16/M6xemcMG4Jbf3H6HoR3oTM6E0CaknDpXOmzZ+xY4bajjhhg1n97MLfAdyi45MwokzsQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/26438ded3fee521a8af8b11802bb8472/2bef9/12.png"
+        srcset="/static/26438ded3fee521a8af8b11802bb8472/6f3f2/12.png 256w,
+/static/26438ded3fee521a8af8b11802bb8472/01e7c/12.png 512w,
+/static/26438ded3fee521a8af8b11802bb8472/2bef9/12.png 1024w,
+/static/26438ded3fee521a8af8b11802bb8472/71c1d/12.png 1536w,
+/static/26438ded3fee521a8af8b11802bb8472/a878e/12.png 2048w,
+/static/26438ded3fee521a8af8b11802bb8472/f7171/12.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 <code>New Branch</code>를 클릭하면 새로운 브랜치를 만들 수 있다. 아래처럼 <code>checkout branch</code>옵션을 체크하면 브랜치를 만듬과 동시에 체크아웃이 가능하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACM0lEQVQ4y22SW2/cNhBG9VrHThvvSiI5vFMid33ZICjcwm1eiub//6UTkE6cC/JwMANS/OabGU3vnGYJhlur+cMqbmTlWhRvRHFlNVfO8DZafg+Oay+8cYYbL4N+/5sorp3mxmmurGHa9gd8bmibWG1g6UhgtZFYHwj1HikNWxqSGybv+HLGpoZyBeUL2m/4vCNpZ0puo7RHJJ4QVzGuoqUwLxZnd0I4oVVC605GqUSMJ3I+j9yYPM7HnQ5MSntsKCiXUVJQklEmMa8O5ysp32OkvKJNJsQTPrSRjzN5iVYK06I9i3IcZ8O8yGDRjlUi1nWHbRToj5XJONmo2yN5u0fp9FpEpJBtZTK24MMZcftodVS1ZRBTw/mGc3WID3e2DsE++68OX9gwJjFpm3GxEdIZH3aW1XJchOMs7O3Cv3994uPT/zz/+R8fnz5xVz9g+xJiZdURbRJKx8GiPFNIjb09UsodtV7woSJuGw676zgKNcr+nsfLM2W/jJm5WMcSe97FVu3p+5hirrTzhbydSeWEljhm2j/oTm+PmsNsRnx3WDksgpZE2e8J+YSSRO9S28LatxziRtnPdGEft5d2vzCv9keUZZ6Fo7eofzLLc+T2yXF4ctz+7ThUy5RLG+66YC6nV2dfRX4uMKJ2mFxQKaNS+kJmsZ6pbGfydiKmOpxqCb90973gsjqMLmj17afWurCqwNTqA1u9I+aGC4VF/fj4V8LKBFzc8aliw0YIFe/3MdvPkBhdvPprKMoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title="image13"
+        src="/static/20b574bfdb4e192a3129ab43cc4b0ded/2bef9/13.png"
+        srcset="/static/20b574bfdb4e192a3129ab43cc4b0ded/6f3f2/13.png 256w,
+/static/20b574bfdb4e192a3129ab43cc4b0ded/01e7c/13.png 512w,
+/static/20b574bfdb4e192a3129ab43cc4b0ded/2bef9/13.png 1024w,
+/static/20b574bfdb4e192a3129ab43cc4b0ded/71c1d/13.png 1536w,
+/static/20b574bfdb4e192a3129ab43cc4b0ded/a878e/13.png 2048w,
+/static/20b574bfdb4e192a3129ab43cc4b0ded/f7171/13.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>브랜치를 만들고 나서 Git 콘솔창을 보면 정상적으로 만들어짐을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACEUlEQVQ4y42S2W7bMBBF9QNtmqbbQ4vGsiRqIamdWizZamwHLgL0///mFKSdIGkLpA8HlwKHl3eG8r5kEX4e81VGfNMJH5OAmyTgOg25zgRXmeBTqfhcKt7rlPcq4UanvFMxb9OQN7ZWRnxQgisZ4w2bI7mZibVxhLIhkA2hamnHI/XmiOwWlNkhLe2Mae+43/xi6X8ymiO7/kRlJnQz42VJiR8UrHz1At9XSDlQ1wtC1ESiRoiGMKqY6j2H5kSrtuh0cCSxwegZ79ZP+b7KuPXlC1ZrhdIjeTkTJQ0iaRFpSxg3qHJD1S0EcU2UtIRJQ5IaZNrjBVFJKCpnsFpr/EA7XYc5Wk/kxY5E9iSZpUNmA53ZM21P7pI4NcQXXYcFXmyL8hmrFpfkUpCXW9ruQFEt6GKLKma6as/YHdlsT6SyPxs6Omw4z36M0wP95oFQ1C6pTekHubvRD88auHWBiCq0Hoizlsfugqhy6hIKUTKO9wzjETPs6YY9/XBA5XZ+E4354dT0d3T9ZX880JgFnY+IpCGKG6dBVOCFUUnbLnT9HdN0zzgesb+SLiaKauuM6mZxxlWzo27P66Kcn7V7xrUcBDnazjE1qMw4fZzj83latUme+EeNM7Qtu83U/FX054HXOD/K0wz+79BjWhFfcMmtXgybYkYVI1L1l9eqX6EitaMpR3Q1IfOBotiQ68E9zG8NWJCTMhfHlQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image14"
+        title="image14"
+        src="/static/fc8851d32679ea2d67c68155f7c437f5/2bef9/14.png"
+        srcset="/static/fc8851d32679ea2d67c68155f7c437f5/6f3f2/14.png 256w,
+/static/fc8851d32679ea2d67c68155f7c437f5/01e7c/14.png 512w,
+/static/fc8851d32679ea2d67c68155f7c437f5/2bef9/14.png 1024w,
+/static/fc8851d32679ea2d67c68155f7c437f5/71c1d/14.png 1536w,
+/static/fc8851d32679ea2d67c68155f7c437f5/a878e/14.png 2048w,
+/static/fc8851d32679ea2d67c68155f7c437f5/f7171/14.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이후에 <code>main</code>브랜치로 체크아웃을 하고 싶다면 <code>Ctrl + v</code>를 입력 후, 브랜치 메뉴로 가서 브랜치 목록에 아래와 같이 <code>main</code> 브랜치를 클릭 후, 체크아웃을 진행하면 쉽게 가능하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACNklEQVQ4y31S2W7cMAz0D7Ro0hMF2iS+JOuybFmy7PVe2Wy6fWj//2+mELObJkDRhwEhkRySQ2ZfFUNuG3xTDN/bBp9EhfeiwrWocaU43imOz73Bl87gvZG4NgIfWokr0+CtqPGmqXClGD4aRrHZtDqi9WtwHQiVGlDKAZXy8PMRbj5ChR2030L5LaRfIwz3+LH6jX38iZU/YhdP6P0C49bIRNMhLy3ucv0KeaGh1ATndmDMoWYOjA0o6x4rd8DDcILXa2gRYcQEzgOCWSO7zQVu7iRuc/UKd4WGNjNstwYTHlwEQs0HKLtCP+5Rcoe68aibgXxKRGQV61Gx7kxikJeGbFG1MO0CpRciYSmRDxBNwBgOWDYn+qNCZ1vUFlkjI7TdQKgJXIwUdAm03RbSrMDkhJp73BQaRkTM4xGrzQlCxefOU25qLmtURD/sYfs9KuZo1NRlXrbUZVF1qJsRRWVpiqps0ZoZjQwo645Ikq7JpviM8x4h7AnjdCDE6QGqndF2C6SZwGSkIknrsrYYwg6920AlXzOcJRnIl1V1R2RxOmBZHjHPR6RTMnZBd0kSI25zTR1yMWB3/wvj9IjO7WjsJ4lG6jgryxZajlAiwMhA9qWONXfnsTqk4ukd4p6gTKT3JZYIGeto9bTFs32Jv6KnQoG08+MWY9yDC0faXvxPhI17PouXyf9CihFqhO3SUjwtIZFcihNh3y7QdobUEU836f6DnsSXyp8voAVXHtYuaEnrAX8Af/2OlU90dokAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image15"
+        title="image15"
+        src="/static/5c95d10e51af1deef6f093cfc3636518/2bef9/15.png"
+        srcset="/static/5c95d10e51af1deef6f093cfc3636518/6f3f2/15.png 256w,
+/static/5c95d10e51af1deef6f093cfc3636518/01e7c/15.png 512w,
+/static/5c95d10e51af1deef6f093cfc3636518/2bef9/15.png 1024w,
+/static/5c95d10e51af1deef6f093cfc3636518/71c1d/15.png 1536w,
+/static/5c95d10e51af1deef6f093cfc3636518/a878e/15.png 2048w,
+/static/5c95d10e51af1deef6f093cfc3636518/de720/15.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Commit</h3>
+<p>다음으로 커밋을 진행해보자. 커밋을 진행하기 위해서는 <code>Ctrl + v</code>를 통해 메뉴창을 열고 Commit을 누르면 왼쪽처럼 메뉴바가 나오지만 더 쉬운 방법으로는 <code>command + k</code>를 누르면 자동 커밋창이 열린다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+ElEQVQ4y41SW27bMBDUCdo8kLQFWhiJRVJ8ixJFUZJlO7aRtL3/faYg7SRwWjT5GMyCXA5mOVt8lRR3huG7pPgmStzwJa55iStBcSEZPgmG20bji9O41BxXhuO2VrixCpeS4bOguNYVrhXDhapQrFc/4cc9uI1gOoDqAKI6EBNQhw3csIebn6D9FsKvofwMlnptBNE9SHpjelQ2QDYjCis7SDOBMA9CW1DmURKH+6WBViPi+Bth/Yhh3EHpFYSMkGrIUGrMkCfmskOxuBf4seBY3Ess7p4hcLc0UHaEG36h2z1i2myhzPRfEN6hYKwF5x5laUFIDUocKHWoZEAlOjD+HvxLXZIahTUTnNtC6QlSRggRwEUPlcaSPSoRPgQue5S0QWHMgNgf0LZ7cB5AypNL4kBok5sIS+zOkM6O581LvSQ2jdygCw/owhYh7hDiHv2whzIjTD3Bhy2sW53udvkujgf48ABjxzwyrXzmZRqZUJcF43DAPD9hmh4xrZ5g3QznN+jjHq3fZoHEbXes62b+a+zkvKC0xtSuMbRrRL+Bb9fZXfoTqWPm1Jw+PTl5xXk4L4KschAq7VbMnPCvND8SzFGQtyDVa/Ssel+E8XDW++w2C7b1DK76o0sd8zJLO0Ho4ZRe+wZN3k9lB5hmgqqHHF5avxTMH6nZkI3wszhnAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image16"
+        title="image16"
+        src="/static/35f6b6c75debd80f14a0a756b8819444/2bef9/16.png"
+        srcset="/static/35f6b6c75debd80f14a0a756b8819444/6f3f2/16.png 256w,
+/static/35f6b6c75debd80f14a0a756b8819444/01e7c/16.png 512w,
+/static/35f6b6c75debd80f14a0a756b8819444/2bef9/16.png 1024w,
+/static/35f6b6c75debd80f14a0a756b8819444/71c1d/16.png 1536w,
+/static/35f6b6c75debd80f14a0a756b8819444/a878e/16.png 2048w,
+/static/35f6b6c75debd80f14a0a756b8819444/f7171/16.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 아래와 같이 커밋 메세지를 작성하고 <code>commit anyway and push</code> 버튼을 클릭한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACO0lEQVQ4y4WS6W6bQBRGeYIucRanabwAs8/AAMbgIDtp003q+z/PqZimVlW16o+DkO7w3XMvky2dZFsp7pxgaUsudcHClLy1gjdO8cpKrpvATRN46w0XwXBdey5rl+qvrWThFQsveeM02TR9pR0/YusRFXpk6BG+R4SeuH+iOXyiOX4j9E+4/pHQn9DxkJDVgKgGVD2i44DrHsgaP1DHJ3w44MKIrw4Yt6cUDVb39PsvdNNH+v0JYwaU2qF0n9C/Y3qU6cjWueV+bVhv3ZnV1pIXFVVzpJu+M3z6xvHDM1U8UcXjX6mbE9LuyUrZIFTDJg9si5/kokbYHcYNaDuz/z9uYM7KqnqibZ+wfsTXUwoRqkWa3T8+/nsTcw6MEw/TV3bDM8PDF0I9pbFn00I06dDv5GWdKERE/FErRE02P6Tq2BYVq41hk/uECw90/TPWH3DVhK8mqvhIbE803YkYj1g7YN0BoXuKuVkRyEpRY/2Uuv7a4WyodYdSgevrFcvlOnFzs8a5lq47IKTnfqWpx8+YasL4iVJ1ZEq3aXdJ+WWUOVzKyHotuLi45fLyLjG/C+EIoaUoDMvbHL0bEbY+/9QsuB3bwpOX1YthlYpSNilwsXjH1dX7xGJxl6y9bylLy937MklsCn+eLhmuNu68u3QXNzYZKuXPdr8M9Rzo5mkMKvd0dkSXMd3d9daStfO4KiJ0i9Qt2u4QZoeQkbywLG+33L6wXG4oSod1LcY11O3IMDzSdROV3yNU5AfiNoOKrn6V7AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image17"
+        title="image17"
+        src="/static/c7722ce1186b263f8d9b2d4abd8d9121/2bef9/17.png"
+        srcset="/static/c7722ce1186b263f8d9b2d4abd8d9121/6f3f2/17.png 256w,
+/static/c7722ce1186b263f8d9b2d4abd8d9121/01e7c/17.png 512w,
+/static/c7722ce1186b263f8d9b2d4abd8d9121/2bef9/17.png 1024w,
+/static/c7722ce1186b263f8d9b2d4abd8d9121/71c1d/17.png 1536w,
+/static/c7722ce1186b263f8d9b2d4abd8d9121/a878e/17.png 2048w,
+/static/c7722ce1186b263f8d9b2d4abd8d9121/f7171/17.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 push에 대한 팝업이 나올 것이고 push를 진행해주면 자동으로 원격저장소에 반영이 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACOElEQVQ4y1WT2W7bMBBF9dpE3mJLJIc7qdWynTgBghZB0f//qltwnLjpwwEpCnM4wyGrnSW0nvBkJLZGYq0Fai3xqCUejMIPo7AOFptg8Wg1aqex9oZ5NAoPWqG2hNoqPFhCNQxn+G6GcgnSRgjziY3weUboTwjTBTbNMGmCTSPI9yDfQboMaTOUyyCfoWOPypkEsgMERQgVISmhEQ6HRkOrhJTOCP2MVESUoVSEUokh+k6GooDq0BL2jcKh1cy+IViX4eKIkBfk6Q3H6ztO5ytCOMKHGT6W8QjrRlg/Mc5PUDqjEspDkkfTGrTS4tAQhvkV55cPdMMVebhiGF/x/PwHy/kD4/IT0/KLxYoiSOc7xVVp2/FO2nS8KFWEcSN8XBDSiSnzPL6hm96Quhfk/oVjVCn1Luz+CX2cYdwASYHLLiWk7sKymM9MSAsCb7Lwt7EDWuEgpYcoKI9WulKy49QbadEI8ykcEfPlnuGdfLpv4v0EoxPIdNzQVjmOr4R00LZHI25CboqfWHjL7vI/6bZWYlph4boF5HqQ7SFUQFVabfxwT7mInRuQ+wuXHdOJz/TGwI16vv6G8wNW6ydQ7iCM46ZyhtYEnnynZCmkxX4vUNdbrFY36noDKQ1seQBCY/fUsmjfEh8VCxV5Fnzdw6+7qJTnoBULd1ivdiwnsjCm/CO05YrlI3x5OcpzbOVdqd3xXSwoHSAK0kEqi+2uwXbb8LjZHngTYwLIeBgXMc4n9MMR0fcc/xeOWF1snpVofQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image18"
+        title="image18"
+        src="/static/5844b85364cb523e1a769c43978139c8/2bef9/18.png"
+        srcset="/static/5844b85364cb523e1a769c43978139c8/6f3f2/18.png 256w,
+/static/5844b85364cb523e1a769c43978139c8/01e7c/18.png 512w,
+/static/5844b85364cb523e1a769c43978139c8/2bef9/18.png 1024w,
+/static/5844b85364cb523e1a769c43978139c8/71c1d/18.png 1536w,
+/static/5844b85364cb523e1a769c43978139c8/a878e/18.png 2048w,
+/static/5844b85364cb523e1a769c43978139c8/f7171/18.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>또한, 커밋을 진행할 때 다양한 옵션을 줄 수 있다. 인텔리제이에서는 아래와 같은 옵션을 주며 실무에서는 보통 <code>reformat</code>이나 <code>rearrange</code>를 사용한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACWUlEQVQ4y22T6W7bOBSF9QaTxPHUTjqOFi7iJmq1Ldtt0cxg3v+NvgHppiiK+fGBkHjv4Tm6VLFziqrTfHaSnRVs24YnK3kuS7bbVzbbFzbPiT0PSvIULX9GzzY6HpzmD6vYBM3GKx58S3G5/st0+RsTz+hwRIUjwi/YcGQcvyDbkUb2NDLS9hfC8hWdauMZGU7I1NOdaOMRN14onBlpw4rUM1JNKD1Tix6jRtbT9yz0VjnK2mPsCefWO37F+0vG/ViNWyjK2nIoLWXtfvJWO6qm43R+p48rVRPugu6Ejzd8d/0fbkizUEg9oNohNySRWnRZQKieYboR+0t2mfalntBmQZv5N5aMkD2FC2e6/gvWr9lB2lBmxpkj6/mdOd5wcqJuAqqdc01rE8dfOOX3Qg0UvrswLu90wzdUO2V3yWUiPWs9otSPwaghr7WICDUi9ZhFPkhJihRNt3Mu+oid1tYs+dQknISkGmjtGeOPWL+g02FqwPoLsl1yTUpRCBmx/vqLoM9Tdf5EjCcOb4a30lCWlqrumKYb6/od52eqOhBP/2C6K8ZfEXqiSCf5eL1bFvFnJKV6qkrx+Lhjs3nJPD5+QgiD9wNN0/JpV9HOK8ImMyF/riK4Obv6mG6dIqcB6IHDQbDZvLLd/sV2+5nn51e0DoQwIYTl5bWhabrcf08XksORQ3m/uPkOVi7fS6n63JScJaHE09OeVgecSw4NTeOZ4jWnEfnbO4ohxdV9/sVUO9LaGWlnjF2QKrB/qdntK/b7it2upBEO50ZsGInjhTisWD9jzJB1/gOTlIAZvZp/ZwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image19"
+        title="image19"
+        src="/static/db52a22438d4802cfa1b3678516ef536/2bef9/19.png"
+        srcset="/static/db52a22438d4802cfa1b3678516ef536/6f3f2/19.png 256w,
+/static/db52a22438d4802cfa1b3678516ef536/01e7c/19.png 512w,
+/static/db52a22438d4802cfa1b3678516ef536/2bef9/19.png 1024w,
+/static/db52a22438d4802cfa1b3678516ef536/71c1d/19.png 1536w,
+/static/db52a22438d4802cfa1b3678516ef536/a878e/19.png 2048w,
+/static/db52a22438d4802cfa1b3678516ef536/f7171/19.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Push</h3>
+<blockquote>
+<p>⚠️ 주의</p>
+<p>여기서 주의 할 점은 파일을 생성되면 commit과 push를 동시에 진행이 안된다. 이 점은 유의해야 하며 push와 commit을 따로 진행해야 한다. push의 단축키는 맥 기준 <code>command + shift + k</code>이다.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.0625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACE0lEQVQ4y1WT227bMBBE9dzGbYIkkkjxLupmy3YSGEiL9v9/6xRLOXH6MFjxsrOzO1T16Dua0PHoNA9W8cO07Izizii+W803q/mZHPfRc+cNO294iJ776LZzo9i5jp3TfHcdVR5XbBxRNtGaSFMQqE0k9As+H3DjiokTJs7YNBH6AzZOtLZHCVxG+x4TMpXWjufG8VybT9SNodWB4BdSPBDinhD2eD/j3IS1Y4nOzVhZX78701M91ZoNXcFjrWlbx/rym2V9Jw1n8vjKevzF+fSXcb4wzJcSjR1QOqG7vqDRgarVnlY5nkRdY3luDHXriP2RlE8lhrQS05FxfWdYLgzThX58LSRCqLqNtFGeSqqI5M4Mtws64aXVtG5kV9INMoLtrDP5i8JMqwKVcWO55MJS5lY3tlSSPSG6YVN5W5+Ksqb1hUggnVVaB4Z8oM97QpxxYcL6rchN1fofuagXiLJWRZTeIORVqzx9Xsl5JaU9zo14P9HnE+P8xjC90efztcCmejm8czz/Qbr7akppuRBGeR5LiTHM2DKbSHutXNppPHXjigpJ/pjfBzZTApXuAqmXlg/kYS2I/b4kGJuLYjHOh+kGP30+GXVV92mKNolpOjEvLwzjkShqpXW/JZe5eokLMQn2JcqeFkK1zU6MLKaEYsBcLklyIZBfzA1o018vhy1eIUZ0NuOjqM1oE9Da02jPP1ImZGi5MQSIAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image20"
+        title="image20"
+        src="/static/3d3ddf6dd549fcf9c216b97b1c6ded85/2bef9/20.png"
+        srcset="/static/3d3ddf6dd549fcf9c216b97b1c6ded85/6f3f2/20.png 256w,
+/static/3d3ddf6dd549fcf9c216b97b1c6ded85/01e7c/20.png 512w,
+/static/3d3ddf6dd549fcf9c216b97b1c6ded85/2bef9/20.png 1024w,
+/static/3d3ddf6dd549fcf9c216b97b1c6ded85/71c1d/20.png 1536w,
+/static/3d3ddf6dd549fcf9c216b97b1c6ded85/a878e/20.png 2048w,
+/static/3d3ddf6dd549fcf9c216b97b1c6ded85/f24c5/20.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>pull</h3>
+<p>우리가 실무에서 작업을 하다보면 다른 작업자들과 작업을 같이 한다. 하지만 경우에 따라 다른 사람이 작업한 것을 내려받아서 사용해야 할 때가 존재한다. 그럴 때는 우리는 <code>git pull</code>을 이용하고 해당 기능은 아쉽게도 단축키가 존재하지 않는다. 따라서 Action 검색을 통해 git pull이라고 검색하고 사용해야 한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACD0lEQVQ4y22T2W7bQAxF9dokTYM2tqTZOKsWa7MdO2nqLkCLAv3/H7rFjBwFRvJwQA6GvLgUR9mdLLEmhs+iwB3P8ZHluOE5rnmBK1HiAy9wqwVuSeJassQnLXFLAld8vr+RJW5ErGfIQt1DuRqlsiikQb5gQa4FhQ5UD5C2gUjU0L6DNA0K5RKl8mDkIExAxjlhlSus1mLh/oxSNbRuIakGFwFCVpCqBpcBUlbpPiJTbMCFQ3a/ZviyYrhf84V1LrEbnrEfT9iP33CYvqNvH7Htn3Hc/UDfHMC5B+PugrzUyPKSUDBKQqtcJPKCcDz+wf7hN6bpJ7bbX4mYHx7/4eHwFyWzFyTBgpBx6ZaRmPBzAXfop69o+yOU3oBMl4i58Vv45gjG7TsOk6CHtrG4TZbjN1wXCt34hO3+BOtHGDvAuAHWTwjNAa7aoSh1qn8hnmNfVpQK1rYJYxpoHd167B5O6IYnaNsnsUjMQ3NMRIGSmURxjvksSHC+S/jQw/ke1m2w25/Qj0+L0Gsc4asdFNXvjxxVq3pE004I1QBtWpjo9uzqRegC10OqKom8WQpjGsbEkTeJl9y42DhcCEe8n2Bs/7rhxaGfHTJukkDwPYLr4OwGJOdHLNRbrO5A1M6uEgbrgpK7+H4zq2tICpAqQFIFpStwVc1bjIVpi7QQm+MCBAVoW4PIgwuD+MfljPAfnQpnFCsNyjwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image21"
+        title="image21"
+        src="/static/129e0472ce4ca6585aea9137fdd2aab4/2bef9/21.png"
+        srcset="/static/129e0472ce4ca6585aea9137fdd2aab4/6f3f2/21.png 256w,
+/static/129e0472ce4ca6585aea9137fdd2aab4/01e7c/21.png 512w,
+/static/129e0472ce4ca6585aea9137fdd2aab4/2bef9/21.png 1024w,
+/static/129e0472ce4ca6585aea9137fdd2aab4/71c1d/21.png 1536w,
+/static/129e0472ce4ca6585aea9137fdd2aab4/a878e/21.png 2048w,
+/static/129e0472ce4ca6585aea9137fdd2aab4/f7171/21.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>정리</h3>
+<ul>
+<li>Git View On
+<ul>
+<li>맥: <code>command + 9</code></li>
+<li>윈도우/리눅스: <code>Alt + 9</code></li>
+</ul>
+</li>
+<li>Git Option Popup
+<ul>
+<li>맥: <code>Ctrl + v</code></li>
+<li>윈도우/리눅스: <code>Alt + 백틱</code></li>
+</ul>
+</li>
+<li>Git History
+<ul>
+<li>맥: <code>Ctrl + v => 4</code></li>
+<li>윈도우/리눅스: <code>Alt + 백틱 => 4</code></li>
+</ul>
+</li>
+<li>Branch
+<ul>
+<li>맥: <code>Ctrl + v => 7</code></li>
+<li>윈도우/리눅스: <code>Alt + 백틱 => 7</code></li>
+</ul>
+</li>
+<li>Commit
+<ul>
+<li>맥: <code>command + k</code></li>
+<li>윈도우/리눅스: <code>Ctrl + k</code></li>
+</ul>
+</li>
+<li>Push
+<ul>
+<li>맥: <code>command + shift + k</code></li>
+<li>윈도우/리눅스: <code>Ctrl + shift + k</code></li>
+</ul>
+</li>
+<li>pull
+<ul>
+<li>맥: <code>Ctrl + shift + a => git pull</code></li>
+<li>윈도우/리눅스: <code>Ctrl + shift + a => git pull</code></li>
+</ul>
+</li>
+</ul>
+<h2>Github 연동하기</h2>
+<p>그러면 만약 새로운 환경에서 인텔리제이와 내 프로젝트와 Github을 연동하는 방법에 대해 살펴보도록 하겠다.</p>
+<h3>기존 프로젝트 Github에 연동하기</h3>
+<p>먼저 Action 검색을 열어서 <code>share project on Github</code>을 검색한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACO0lEQVQ4y3WTbW/bNhRG/XVLOhRLLVF81RslWZIt2V5iO26aBt0wtNj//ztnIO1sKJp+OCBICgfPvbxa3FlF4iS/64z3SvBOpdwqwY0S/KqzyG9OR26M5CbsrebWqnj3ixLcmox3JnwrWfi2o6gLjDOY3KBdQKNzi/MDqmiRrkY6T2ZrhKkwZUfRjghbRcK5LT2q8Cy0sWhTkKYpQmRXBEkqsLbB+xGRFRdkgdWeuhzwzZosK5CyJMsuiMyxWKYaZWoSYfmQ6MgytWyGA/N4ZLs+sh1P9M2O9eqB/XRmGg503YTSNVkQqhKpKrSqWNwtFVJZjK34kCiWacDwcv7G86d/2EyfmOdnpisPx28cTl+xromyIAqrUjWFblgESSYt1lXcReEl5Xb/xP3xC4XfUjY7qnZP1ezop2c2uxdc3v4gzLVnESRCWtRrwkRF4bQ9c376m832I83qnrKeo3C9+5Nh/owx/o2EnkWSGhKZI10b+7gUJpY8zydOH/9iWB+o/ExZT5R+plk9cL97oaz6t4UhUXoVhnKDLLDZPjLvn1iNB1bDA11/T93uaYdHTuevVPXwE6EwSNNce6euD6Pphj8YN8eY6jVdKLvpT/TrxzhObwqlKlCu/U8U1kQY8nKkqDYX6s1lX46U5UhVr+OovSlUpkLlq1jmqzSgbUPdbmm6fexhELpyYOV39N2Orp8vcxiG+iqOQm0rTN4gdfFdykCYfCFzRPY/4e/I85aun3Blh7Y1zjU463Gm5l+iuGiyJ8P8SAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image22"
+        title="image22"
+        src="/static/2dd8e13706ccef8e45208f282657eb92/2bef9/22.png"
+        srcset="/static/2dd8e13706ccef8e45208f282657eb92/6f3f2/22.png 256w,
+/static/2dd8e13706ccef8e45208f282657eb92/01e7c/22.png 512w,
+/static/2dd8e13706ccef8e45208f282657eb92/2bef9/22.png 1024w,
+/static/2dd8e13706ccef8e45208f282657eb92/71c1d/22.png 1536w,
+/static/2dd8e13706ccef8e45208f282657eb92/a878e/22.png 2048w,
+/static/2dd8e13706ccef8e45208f282657eb92/f7171/22.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 연동을 진행하면 된다. 만약 이미 연동이 되어 있다면 아래와 같이 나올 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAklEQVQ4y22TW2/cIBCF/drmoqrZtYG5AAZs7y2bhzaKVKlS1f//m04Fe0ujPIzGA+LjzBzcPSmh9w7f2eIbGTzQgHsyuCODr2xbPHjGo2fciWv1ozLulXDHFl/I4F4sHsTiqzh0ZV4Qc4R4gQQBez6HwpcdOM5wPsP5AqsZRhNkXBCnHYykVtd1HQsoFnQsCpaIYRhgjD2HwTBYqEzIeQ9rI6wdW1aXUcYdpunQaufG894IYz269cAgyeiNYtXzLQaByIQx7UCc4SjBuBHKBXncYd4c27qtQBrbPlNC97QmOPIQTXjqCfWC9TmLTojjtqlwLrXDFVjSHj7Mra6gmokyIk/oVj3BkkL9Dbi6AKWcDtJJxWDDVWGIywdgQuSCrkKMU1BVuK4gOgF7gsYNXn78xtvPP3h7/Yvt9hVyVqh+/hzYD4LeBTg/tzmujbSo33W2Ghbk/Izj8Rf2hzewy5jyAansYaopH4FVyeBiA7b5DXLKRk4tXy5qZgmUCuZ8QGkuf6KwHnQyXWd3iVrXtpoplK5OV2BVWObnz1t2FEF+vkJupgiYM1jm6yHjYgNWU1jLrWW6uFzQkSRQ2DTA6p3LvRGEuME0v8DHLdQvEL8ghV1TuGxf2oXtUZ+VtmfD9VcKExzH/4A1WxdbmHe5vskQZizbI8K4gDXD+wleC7wU/AOIsV1qaujTmAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image23"
+        title="image23"
+        src="/static/cb71ab545b70b35dcb9b60b8155b130e/2bef9/23.png"
+        srcset="/static/cb71ab545b70b35dcb9b60b8155b130e/6f3f2/23.png 256w,
+/static/cb71ab545b70b35dcb9b60b8155b130e/01e7c/23.png 512w,
+/static/cb71ab545b70b35dcb9b60b8155b130e/2bef9/23.png 1024w,
+/static/cb71ab545b70b35dcb9b60b8155b130e/71c1d/23.png 1536w,
+/static/cb71ab545b70b35dcb9b60b8155b130e/a878e/23.png 2048w,
+/static/cb71ab545b70b35dcb9b60b8155b130e/f7171/23.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>필자는 독자들을 위해 어떻게 화면이 나오는지 보여주기 위해 새로운 프로젝트를 만들어서 진행해보도록 하겠다. 먼저 Action 검색을 해서 <code>share project on Github</code>을 입력하면 아래와 같이 나올 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABhElEQVQ4y32S61LkIBCFeYWdhHAJNOQGJFFHx9Ld93+xswXGMRlHf3x1ugv60NU0M6OBHRTMoNFmRg0zmUIbMhY2EdzsSmyiLUqzh4lU8nxuk4VJBLaeHzEsEf0cMS6pMK0JwxxAYSy4OMLH6ZpnfArwMWznE1wY0c0RzFiCIQ8lJbRSRZUUkEKgqvWPnCqFU7XFW84bAybbHspFcGHBJW24onXTFqpGoy585FyYu9TSgjWS0FIoBVy04FuREAbaeEjtYd0IQ2OJM6X407jZaraYSd3B+gVc2uulimuo1uPp+R+WhzeEdMEwnTGFF4TwcjTM8WaWlQlJyKbNzrB0qKgY9dMZfniE7x+Kum75ZriHfcxFH1/cDHNXMVyQwitSfMU6/73b4cHwMNR9h5JALsJRROcS+m7FurwjpcuvH8P2Jrd6qtWBP7Usenv3YLif3W2nv3N/hZhUhJrrq1HdfF421737ia+aL5gy+Yfp5rW2bD1vdvG9RW5aSE3Q1kObDlp7/Ae3xFXZo8gASgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image24"
+        title="image24"
+        src="/static/0c3cc1334fbe4d26090783e1cdbb8db0/2bef9/24.png"
+        srcset="/static/0c3cc1334fbe4d26090783e1cdbb8db0/6f3f2/24.png 256w,
+/static/0c3cc1334fbe4d26090783e1cdbb8db0/01e7c/24.png 512w,
+/static/0c3cc1334fbe4d26090783e1cdbb8db0/2bef9/24.png 1024w,
+/static/0c3cc1334fbe4d26090783e1cdbb8db0/71c1d/24.png 1536w,
+/static/0c3cc1334fbe4d26090783e1cdbb8db0/a878e/24.png 2048w,
+/static/0c3cc1334fbe4d26090783e1cdbb8db0/f7171/24.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기에 repository 이름과 설명을 작성하고 <code>Add Account</code> 버튼을 클릭한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABkklEQVQ4y32S3XKcMAyFeYYFg/9twMYsyZZupp1pLjJ5gL7/85yOBewAm/TiG0m2dSzLKnTQML2A7iVUJkjoqAk1ZAzMaOGujnydDFl79dDJUpz3zWigR4vi5ccN/ZTQjQlhGon4ktBdI2zsYYcAl0mRfCIG+HGAX9ccrfdox4RCGwttPQTnkEKQFbwBbzjKSn7LpRS4lMeY1RoFVx2ES2CNAeN2xZGtakWUtURFLDFr9JdU3KCouYWyAyWwRoHtkrj0hHEB2oZHTMmbcL3mrH7BZQvjJzBuHodKJiGUx23+g+n1N4bxDX2cEYc7UrofBbO/imVbNMIii9Y7wWwb4R5CbX97YNvp8PRzC4plUx5vJEGLMPxEF2b0YUYXZ6TxF9Lw9vzsveChqfsKuYXzCcpEQtsBr7d3fH7+xXz/ABd+7bt+rvAsttlLJVCyhUvFad11Ca5dpuLLCve9O1f6NBZ5hOgC+e0Z+pSt9KWfmsYn2635/5u/85lC6PzD9pSgaOrZTvycvMVcWkjjIXULKT3+AWJRVoYoBQqJAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image25"
+        title="image25"
+        src="/static/2db30d4c8126ad012911007a5010f73d/2bef9/25.png"
+        srcset="/static/2db30d4c8126ad012911007a5010f73d/6f3f2/25.png 256w,
+/static/2db30d4c8126ad012911007a5010f73d/01e7c/25.png 512w,
+/static/2db30d4c8126ad012911007a5010f73d/2bef9/25.png 1024w,
+/static/2db30d4c8126ad012911007a5010f73d/71c1d/25.png 1536w,
+/static/2db30d4c8126ad012911007a5010f73d/a878e/25.png 2048w,
+/static/2db30d4c8126ad012911007a5010f73d/f7171/25.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 토큰 방식과 일반 방식이 있는데 토큰 방식으로 인증을 추천하긴 한다. 하지만 간단히 하고 싶다면 일반 Id/Password를 입력하는 방식도 좋다. 독자들이 원하는 방식으로 진행하면 좋을 것 같다.</p>
+<blockquote>
+<p>보안 상, ssh를 이용한 방식을 적극 권한다.</p>
+</blockquote>
+<p>이렇게 인증을 하면 아래와 같이 나올 것이고 share 버튼을 클릭한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABjUlEQVQ4y32S6Y6rMAyFeYUpgSxkBRJKKJ1F6mju+z/YucKlLXSWH59sJ/axlbiwycDGBiZq6NgQJhlCDwsWdnTwk4c+2jsuB5jRkb/c29FSXOTzjHYc0B4TunxENw7o8xJHmNgRNvZwqb/7i/VDhEvxfmbpLKHQxkFbDykEpJRXKzgEFyiZ+pVDKXEot7FCVTcohG4hXULFDSphVxwqbsHqhihrBUZc44rrH2HCoKilg7KJCireUJeliHMNpQNEE2BchLY9hPIEFd+E67Vm9QupArTPNOEtqawUVBNwfvtCPl2Qjh/o4itiescwvO8FF38VW2zBpYVQAbV4CNKE0pFQ25/h2hPhuxku7Js/U1zfRe07roLLVHm84HX+h2m8YBo/MQwf3ybcCe4edTehhfUDQshI/Yy+m3GavpCnz2veXxM+i91sySQOTOClFHhhgvwDk99yd4Lbt3ue9E9+WSH6lG1HVmtan8Xe9u6B3uRtaqpHTiGb/Q9XqyDZrf/TItcNhDJQxkNqD6U8/gOUGlY4VSFYmAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image26"
+        title="image26"
+        src="/static/c10483e9bc002c6e34505cf9e732c001/2bef9/26.png"
+        srcset="/static/c10483e9bc002c6e34505cf9e732c001/6f3f2/26.png 256w,
+/static/c10483e9bc002c6e34505cf9e732c001/01e7c/26.png 512w,
+/static/c10483e9bc002c6e34505cf9e732c001/2bef9/26.png 1024w,
+/static/c10483e9bc002c6e34505cf9e732c001/71c1d/26.png 1536w,
+/static/c10483e9bc002c6e34505cf9e732c001/a878e/26.png 2048w,
+/static/c10483e9bc002c6e34505cf9e732c001/f24c5/26.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 바로 커밋을 진행할 지 물어본다. 필자는 바로 커밋을 진행해볼려고 한다. 바로 커밋 메세지를 작성해주고 add를 눌러주면 자동으로 커밋을 진행해주고 원격 repository가 생성되고 push가 됨을 알 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABp0lEQVQ4y4WS626cMBCFeYZyswdfMAYb2F2SjZRUVVdqFanv/0inGi8bQUnUH59mRjMcz7HJVN9AeQJ1MtH0BDWoRBMYDT0a2MmmXEWdoplaqGhSzX09aqjRIDstC/wc4cYAP4/o5xHDaYSfAkzoEzYOaOPwUTPtGNDG8NG3oYebIjJtLBgSAiQlpBCQooaoBfJC4lu+J88JeUFrveZrXVYKmVQO0kaUtUYpTKISFkWtIcnC+Rldf4bzJ2gbUQmNom5Q1upAITSyShg0KqKoCCUPVk2KXNfS4nq5Ybn8Rohv6PzlLlhtBKv7N8WaZ4IctDmlDbeDKRcab8s7pumGtjvBdWfwAjtBnl3FOGa1MGDRfwc5596P6x+cl3f4cIX3C6S0yJMb9SkZf8j2HmLbyJaflp+I83c4v8D7C4S0hw13grvVN4N5SSDl8fL6C+P8iiG+oA/XTy0fNtyJVWq3oe+fk9D56Ybl+fZ/weOr7W0/YCG2+zjwS0EhDYqSNgLq8DiPe87Xu2ZypqTdoUz6sY827s2vtpFNC60dnPWgpgXpFqQciFr8BYHXWBSyvUinAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image27"
+        title="image27"
+        src="/static/9204d7d88a79193d01cfb34dc251550f/2bef9/27.png"
+        srcset="/static/9204d7d88a79193d01cfb34dc251550f/6f3f2/27.png 256w,
+/static/9204d7d88a79193d01cfb34dc251550f/01e7c/27.png 512w,
+/static/9204d7d88a79193d01cfb34dc251550f/2bef9/27.png 1024w,
+/static/9204d7d88a79193d01cfb34dc251550f/71c1d/27.png 1536w,
+/static/9204d7d88a79193d01cfb34dc251550f/a878e/27.png 2048w,
+/static/9204d7d88a79193d01cfb34dc251550f/f7171/27.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.0625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACIUlEQVQ4y3VSa1PbMBA0iR35JTu2LMmWXyTBgZQAJbRlKMN0Wjp9fOj//znb0Zl4Oh34sNbpfLunW8nRzRl0s4WuB9T9DuvtLdrVHqbbQZRrZOqU/qt6IJTtFtIMUOUGpr2ANGcoqs0IM8A5PP3G4eEXDvc/cPPxO/aHr3h384Vwcf2Eze4Bw+UjtvsRw+Vnyts6W3919w37D894/+knbh//wCnrDkJWKJRBmklEPCMEUTrFLOCYuT7B8yLwtMBSaATxkmKqTXKo0sBhLKLCKMnQ9hvEiQDzY3gsIvhhgoUfU46FCYq+g2pOIcsOQje0uizCyZzBsaDPiYeQZzjf30GZUwjVIF5KhElBpFRU0PUa690N1P058q4G5zk1sM1mboCT+TiBY8c5Cvbrc2TSkFicSsiqQ5JpREkxggukiUZeGMSpwNwLSMSe7miJYz1yHJe69auB/LRd3UUIIQ3CeAl3EdD4NsdCjmWuKG8F/hd1Zi6jjSXU7YoMtrEVzWVFxOPesz4GnE6e6xYzL3hN0J8Eq7oHT8VEzIuKrFi87O1qLykrDDLVwGWjf28Kaj2OaMkkEPBJnAXJdOP2yWjTww85/CB6XdAe3RZPBnsBRF5CFfU01khYIM8FVl0DKTKkPIbrvSE4dfJ8MMahrlbQtxswn1OOCI4LWbUYdtcQqgbP9MuzeUXweJMWNu/a7kmMuY3/yfNlAW068ti+BMs9Cv4F3gc16cynevcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image28"
+        title="image28"
+        src="/static/ce1355c0ebec5775639e5b21c7fdcb6b/2bef9/28.png"
+        srcset="/static/ce1355c0ebec5775639e5b21c7fdcb6b/6f3f2/28.png 256w,
+/static/ce1355c0ebec5775639e5b21c7fdcb6b/01e7c/28.png 512w,
+/static/ce1355c0ebec5775639e5b21c7fdcb6b/2bef9/28.png 1024w,
+/static/ce1355c0ebec5775639e5b21c7fdcb6b/71c1d/28.png 1536w,
+/static/ce1355c0ebec5775639e5b21c7fdcb6b/a878e/28.png 2048w,
+/static/ce1355c0ebec5775639e5b21c7fdcb6b/f24c5/28.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Github 프로젝트 clone 받기</h3>
+<p>깃헙 프로젝트 클론 받는 법은 간단하다. 인텔리제이 창을 열어서 clone repository 버튼을 클릭한다. 그리고 url 방식으로 다운 받을지 혹은 자기 깃헙의 repo에 클론을 받을지 선택하고 클론을 진행하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7klEQVQ4y42SaW7bMBBGdYQmsjZKlKhdXhTZSb3UTtHsaZsCPUGdGE3vf4RXiF4SNwv640EkNXz8MBhjcPdI9XVFcnWPurxHXfzaI75ckt6sSK4fUJdLTXK1pHt7T//biv733xS3K+ofj/Tu/mCEvsKxPFzLIRABtmljHXbobDl49j0wd5gfTCzTQbgSz/ZRYYIUIUaUVEhV4AURcd5Dxj2EzLG8EMsNsT2FK2KNI9QaT+l/livpOIHGtH1MJ8AI4xw/iBG+JK8GCFkwnnxhurih7s8Ydqd8rBecDObU5ZijaqKJ0x6mJbCcYA9DRhmeiJAyJS9roqTk0/ya84ufNMNTLR/UU7K8IUlrTZo1yLDYCTu2j2UHGsN2pT60RYzKaoKooCxq8nJIkh0xmZ1RVCOiuI9KB6hkQJzWiCDbF24TtpsWx40IZI7thgRRpS9mxZDJ7Jzh8VxL4qSlFR7hyzeE28VaLHSRjCotaIWz+QXD44Xet4+o/xE+P2ilMio3CRsm0zO6/fH6gbxZJ03rd4RtM5023UZoCULVJcka8vKYZrRgdHLK6OQzzeiUuplTdse65t2E20PdTy/C28ye5yc72vkLVUWaNy8Sbu8bT6Knl9pC0/Je5bDjcmA6ev1aGGNvjv6J/zaSl71fJ/wLkulny0sLc+sAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image29"
+        title="image29"
+        src="/static/ed83770ce93a842010531307fac29c73/2bef9/29.png"
+        srcset="/static/ed83770ce93a842010531307fac29c73/6f3f2/29.png 256w,
+/static/ed83770ce93a842010531307fac29c73/01e7c/29.png 512w,
+/static/ed83770ce93a842010531307fac29c73/2bef9/29.png 1024w,
+/static/ed83770ce93a842010531307fac29c73/71c1d/29.png 1536w,
+/static/ed83770ce93a842010531307fac29c73/a878e/29.png 2048w,
+/static/ed83770ce93a842010531307fac29c73/de720/29.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intellij-Git-Github/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-3fa8deb48819dbe669b2.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-17ce83b7f594c2c0c1fe.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2b2b484591700b0ae13f.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-7f5def86146fc29c9ead.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-7f5def86146fc29c9ead.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-3fa8deb48819dbe669b2.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-8bd3326d799737bed84d.js" async=""></script></body></html>
