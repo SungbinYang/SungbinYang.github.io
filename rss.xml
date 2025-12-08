@@ -1,4 +1,329 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Dec 2025 06:50:14 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] Git&Github]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드 강의를 참조하여 작성한 글입니다. Git 기본 기능 사용하기 인텔리제이에서 Git을 사용하는 방법에 대해 살펴보도록 하자. Git View On 먼저, Git…]]></description><link>https://sungbin.kr/intellij-Git-Github/</link><guid isPermaLink="false">https://sungbin.kr/intellij-Git-Github/</guid><pubDate>Mon, 08 Dec 2025 15:30:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Dec 2025 07:26:38 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] 플러그인]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8/</link><guid isPermaLink="false">https://sungbin.kr/intellij-플러그인/</guid><pubDate>Mon, 08 Dec 2025 16:15:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFH0lEQVQ4y3WTa1ATVxSAz2ZBSQgJAUFtRbQj9cVjExGBGVp1sNXWalEeUbJGUSsoVgoisLugiS9EYeoIODAyDj7AV1sQh44DQ2krbbU6jk5bf5ShyvhGiSGSRLJ7TycRHdrRH9+cs3fv+faeu/cCYVhaYlggDPs5YdjnhDFcIYzhnKRlyyUtm0MYQypGrVS/0Bkhm73o7cfZQcE79AreEavgnaAqstNjCq2gKbJBYKENQGJYGdGyQLTsSYkxoPg/XIwBHbpVP8xL3DlqXkE/aPL75so5Oyo4+6BvwbOl6mIC75UgNT6/jxpXYAEgjMEtGycxhn7Usoi61SLqVrtw1uohjM5wkdnrhwZjN6I0Z1O96jC+r9iOfcoSRDeqEoIa/oXwDj8Egfl9EJb3gAZJy4LEGNa7Zc6oleKNaYvJ9emfkesRy/D3qFTyU2Qa+T4qnXSEpyG7uNo2Kusm+mX8Kvmt/U1SZfxCAnPv47hC26mgnNujI7b0AiCTDi7G0IY6I3bPSBKVtDcCwCuIO9IyGaFlNBkekyj3HMrL8z4o+bRrMjeIU766e5358k6Yu+VpImMYwllr8FZkqruITAidiAfKy7GyqgoTPkh4JSKLPv2EZGSs8eTU8MdCko6TyG39Q7rN3ajN6XkMLu2q7Q6dEZ1zvnBdYwzEGyjiq/TFrkuX0Gq1YvjM8Ncrrq6uxq6uLk8uk9Ee8dQldWRuTi/5cONNaXLR3Rdgi8640Tc7Ex/FbJU6dWuJ72gfT0Febh42NTV5ch+fl2NlZWV4/vz5YaHME2cvqiTJm/4k0/O7Mbi47wk8npkfem++wXx/CYstsZlEMUruaWVrXh42NzeP3E80mUzY1tb2H+HCxFJM2PYPCRYeYDD/5B441s2AIRPNiSVjsG1dtCgDGZHL5djZ2YkWiwVDQkIwOzsba2pqsKenBw8dOvRSSHshBYDhSVUYarZIY7mHGMhbusFREDzVURjgEIUg7Ng8XXJPDg2d5Cmsq6vDuLg4jI6OxgsXLmBFRQWq1WqPkKIoTwxacRwnmG3SGK4PNYL1D3ByAZXOIg2KxUHO9qyZxNvL6/VxeSvDMo9QfwLHm+2ShnuKan7gKji4wImOQk27WBKArcYEpMDnjTKapj1QI2RuAvSNGGQeEv05C/oJzy8B4RWAz1YAmoK/bkzSI02pCKONJO5WY2JiMD4+HsOmhL1hpS/Fav0ZDDSLooqzolKwt8OdzXPo51vLwCWgd+m87Q/95H64/8B+qb6+Hmtra0lDQwPJzMp82zYQP/1ZojETUckNoIJ3tEDV4hOyxpR2OJfWsHD3gn1IU54r5v45rmHEETIyAs+zUn+OqM3o9OVsbuG3UJl0lK5ZfgwOL6svrVh6BDfNLXFkzTfjhsQ9uPajfWhYVIYfJ5eLEcYaKcx4DEOMp8lY43ckwNgiqVa1ulR5vagsdqKCt6Ocd9ZCZ+IuWJPeChXLj18pS2nEshVNuDe9xbmbvdhauv7HDQaho23BjssYa/oLI0y3XVNMj8QQ0zMx2GTHgB0uVBU70Jcf7FAITqOcd6pgX3IjlCY3Ru5NOSXuTD1ztTjldH7u8hNh7bmPoDSrC/AIQnzRz1uiuBu2MO5vDOF60X2IA7in99VF/QeVnHWWssgCCsEJct4JsCv1jJtp5tSzCUeX1MCOtG+A1zfBwaUnqVxjsxcCQpxwGcKFW5Mm83fa3uUfXAvinxr9Bau/WhgApTAI/sIAKAQH7Rb+C55z7Q0dffsdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png&quot;
+        srcset=&quot;/static/7f3c4c668ea513e0950e70c83ed0a8d8/6f3f2/banner.png 256w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/01e7c/banner.png 512w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png 1024w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/c1b63/banner.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 포스팅은 인프런의 &lt;a href=&quot;https://inf.run/doaZn&quot;&gt;IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드&lt;/a&gt; 강의를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;플러그인&lt;/h2&gt;
+&lt;p&gt;인텔리제이에는 진짜 막강한 플러그인들이 존재한다. 그런 플러그인을 어떻게 검색하고 설치하고 추천 플러그인들에 대해 살펴보자.&lt;/p&gt;
+&lt;h3&gt;플러그인 설치&lt;/h3&gt;
+&lt;p&gt;Action 검색을 하여 &lt;code&gt;plugins&lt;/code&gt;라고 검색을 해보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSUlEQVQ4y2WTSW8jNxhEdQxseILAkrq5NLfe1FYv3kaylskMxnJyyf//Oy8g5ZFj5FAHEsRjkVXf7NZo5kbyhxb8rnJuZMa1zLlSgistuSokX6zmiy24LiTXhUjrG6O40jm/qTzt3Zh4XjBbdT1Nt8KVJbYsMcGjnUU7h2t6XL1GmBJpa4SpyE2JsjWFaylsg7YNxrXYUGPDiplzhhAshcowOqeIUkukzCiKihDWSBXIcocQnlx6WnPH1/KZ0U+0dk1ne7SsCEXDLJcGqSvmS8kiU8yXiiwveBp2PE0Hnu+PfJ2+0Xcbpn7H5vFPpn6L9x0iXiR9klQlLgJvlwpdeIRyCRa1yAq+b//iZXOi7/dM45FxOjKMBx4fvvP3/h/Kao0QIYGilCrxuj4DhTIYW3KbYDpB+2nL9LhHmxXG333I3fFj+EG7mlC6QsiQdAY2H8DC/AJGl5rx/oXd/pXV3TMu9PhyuGjXH3Ghu7j7BJwvJLm0KNu8P/cMHKYth29v9OP2AkrgMPB2f8L6VQJ9BtbMFrlG6IqlsO9AfQHuDieG6YW2e6Ksp4vTn+PPVJn/AxtmEaRs+56yvjjsxw3744n1sMH6Nb7sEzDqdP+KD90nYEo5OsylowhrFnlxeXIER2e7wxvTw4FQTfhqTO7KauL14fWcsvxIOSoTlpnSsUshVSXVJrnUaNOe/y6c/87YDm0aGj/Qt0/UzZBq8ytlIUuy3DIT2iO1S8HM/1ObGNYyN2QXWZa5RQqfJiiOmXEN2lTYOH6mRijPvy6iaJ8Ft/m4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;image01&quot;
+        src=&quot;/static/fb1568c25abc877305fdb3f07ac3de3b/2bef9/01.png&quot;
+        srcset=&quot;/static/fb1568c25abc877305fdb3f07ac3de3b/6f3f2/01.png 256w,
+/static/fb1568c25abc877305fdb3f07ac3de3b/01e7c/01.png 512w,
+/static/fb1568c25abc877305fdb3f07ac3de3b/2bef9/01.png 1024w,
+/static/fb1568c25abc877305fdb3f07ac3de3b/71c1d/01.png 1536w,
+/static/fb1568c25abc877305fdb3f07ac3de3b/a878e/01.png 2048w,
+/static/fb1568c25abc877305fdb3f07ac3de3b/f7171/01.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그러면 이미 설치된 플러그인들과 Maretplace로 검색을 해볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACfklEQVQ4y22T227bOBRFjT7N5NamsWSJpEiKom6WZceOlThO0rrtNMjDYDBv0///kVWITgsU04eNIwLE0j5nH06utGKqBZcq5a1MOBczzmTCqUw4UWnQuZZcaMVpJsL5wijOtQrff453s5QLnXKSCSZN21G1DcY5cu8xvkYYj8orfLvCN0uMn6OLFmHLIGmro0xFZiqMrTGuxLiGibUa5wxKxmglKesbfLWhqjfMm1t8cY1zC5aLHevVA0W5ovDLY7VzGt3RmgVKeFxWMUmERmSeaZQSzRTLzYGy3nJ995GXf77x/PIfh0//8nD/wuP+mcf9X2xunlit9yhdMUstM5EjZIEdgVexRGU5qbRMY0W/PtAtD/S3jxye/2a/f2HYfWUYPjNvtzTtDb5c4fwSlVWkwgWYlAW5Ko/AVBoyU3AVSdr+ibrbMW8+sNl8pu0G6vlAWV9zGUWcnp3zfhoTxeIn7EfN1atDMQK1Cw7zoscWPU29Ztg+UbUDi+Weur3hj7MT3ryZkBcVrpwTzbL/A6eRIBEGacowQ+M6bN5R9gObu8MxnMUuOH33Pubd5RSpcpT2v3cYJRlp5olT8wpckLsFphmYXz9R+BVNd8ty/cDu4UvQcHfg7v4Tznck6TGQn8ARJE3NVSSIkyzAbICu6IKzLS6MYMNmuWe7/kDf7+n6e3L3K9COoSTCkrmO0WkUK+JZFpyONSysbY4tCUea5ljd4Iuewi9+aXfULDVMpHLMhAsDnsbyVeLYft6gTUumazLdoHRNblrqsqesFiRJHoBHFcwSwyRVFqFsCGaEjaAfGi+Mfx2XNxkXODFI4dDZ8ZlpW4VwtKnQuiSVOd8BPBVriDKbPwIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;image02&quot;
+        src=&quot;/static/1b0a2d88601524cb692ba42826765d3b/2bef9/02.png&quot;
+        srcset=&quot;/static/1b0a2d88601524cb692ba42826765d3b/6f3f2/02.png 256w,
+/static/1b0a2d88601524cb692ba42826765d3b/01e7c/02.png 512w,
+/static/1b0a2d88601524cb692ba42826765d3b/2bef9/02.png 1024w,
+/static/1b0a2d88601524cb692ba42826765d3b/71c1d/02.png 1536w,
+/static/1b0a2d88601524cb692ba42826765d3b/a878e/02.png 2048w,
+/static/1b0a2d88601524cb692ba42826765d3b/f7171/02.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;마켓플레이스에서 검색해보면 수 많은 플러그인들이 존재하는데 여기서 어떤 플러그인들이 좋은지 확인하려면 &lt;code&gt;show all&lt;/code&gt; 버튼을 클릭하고 sort by라는 팔터에서 다운로드를 누르면 어느 플러그인이 많이 설치가 되었고 검증이 되었는지도 확인이 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAChUlEQVQ4y22TSW8bRxBGCZ8cLYllcbZeZ6Z7Ns5CcySKpEQpTJTYl+QU+Ob//zdeMEPHCeAcPnyNqsZDVaFqcaslSy24UQk/yYgrEXIlIi4mqYQfVMK1kfxoFJdKzLHpPcUuZMxbGXGpYq51MucWddNRNjWpc6TOo12FSD0yK3HNGt+sMb5BuwaRFrOmnExLpC1RtsSkFTYvsHnNIk01eW7RMkQrQVGO+HKkrDb07QMu6/F+YN3v+TA84vxA7vrZnV1Rm5bGdijhyXXJIhYGqT3LICGIFMP4M0V1z/rhhT//+sLvHz+zO7yy2Rw5Pn7iePiN8e6ZYfOIMiVRkhKJDCkd6QS8DSVKZyQyZRkq+s2JdjjRPxw5ffyDw+ETD/tXxrsXVs2WurnDl2tyP6B0QSJyhHRI6clUcQYm0qCt4zaQNP2Rqt2zql8Yx19pui1Vc4/zPTdBwOXVNe+XIUEovsEm/x5o3Fxh5npSN1BXG7b3z5TNlm54omrueHt1wZs3CzJXkhcrwsh8D1wGkkhYpC3mGdqsJc1afL9l3J0oq5FVt6Npt7x7H/LuZolUOcr4/68wiBWJ8oSJPQPzlizvsPWW1YdnnF9Ttw8Mmyf2T68cnl7Z7k7sDr+Qu5Y4yf4zw5LFBJK25jYQhLEmy1vSvCPL17Tdnqa9n9ekrkbG4cD95oW+f6TtD/Pff4EOO1UYixSdtwSxJgglYTS5mt1OC5vW59ZETpJkpKbGuw7nu2/tTj4pSiyLaR7THgWRZhnKrxJf51ljbIM2FdrUKFOR2Yaq6CnKjjjOZuBZjii2LBKVIVRKLOwMm0D/aPowK7HnBY4tUuQYfT4zk06n57HT+ZmCRGb8DdhiaxVvVCRKAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;image03&quot;
+        src=&quot;/static/3cdc808d32b91378ba35e7f905c3dfa5/2bef9/03.png&quot;
+        srcset=&quot;/static/3cdc808d32b91378ba35e7f905c3dfa5/6f3f2/03.png 256w,
+/static/3cdc808d32b91378ba35e7f905c3dfa5/01e7c/03.png 512w,
+/static/3cdc808d32b91378ba35e7f905c3dfa5/2bef9/03.png 1024w,
+/static/3cdc808d32b91378ba35e7f905c3dfa5/71c1d/03.png 1536w,
+/static/3cdc808d32b91378ba35e7f905c3dfa5/a878e/03.png 2048w,
+/static/3cdc808d32b91378ba35e7f905c3dfa5/f7171/03.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;추천 플러그인&lt;/h3&gt;
+&lt;p&gt;그러면 대표적으로 플러그인 몇개를 설치해보도록 하겠다. 먼저 설치할 플러그인은 &lt;code&gt;ignore&lt;/code&gt;이다. 해당 플러그인은 .gitignore파일과 같이 ignore파일에서 뭔가 자동완성 및 사용자가 보기 편한 UI까지 제공해주는 플러그인이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACi0lEQVQ4y1WTyY7bRhRFtQzcToKgJZGsmcV51EBK6sFqqx3HiRMYyCbwwqv8/0ecgJTbSRYXRRbeO7z1LmtxaxRLI/hJRfwoA16LNa9lwI0MeaWiWd8byQ9GcaPE/D49T3uvVMh3MuRGTzXX2kVZteRVifWeOE2xaYFwKdJl+LKfpZMSlZTIuEDGOWpeC6TNUTbHuALrM6wvWThn8N6i5BqjJFkxkGR72urA2D7QpgNNPnDYvKGsBqyrcXGDi1sSW1Pahsq2KJHidc4iFAahU5ariFWg6PcX0mLgeHzPX3/+zcdfPvPp4xeenz4xDm+py4E03+HTHqkzgsgRiBghE9wEvF1LlI6JpGO5VnS7C01/oT+eOf/8O8e7D4x37xnGZ5r6QFUPVM2BohpQOicSfoZJmRCr7AqMpEHbhNuVpO7O5NUd2/GB+8d3ZMV+bi7rkeHhV3bHC223o+kGjC2IosnMCzB/AVq0SWaHcdoR+56s3zLcP9Fv39Bt7qnbI88f/uDxfGG73dNtRozNCSP/f+ByJQiFRdpsnqHzDTZuyNuB8fREmu2o2xNNd6LfnWg3I2W9pW4H9ORQ/NdhxmIVKiKdso7sV2CLcTWn0zvenn8jK0ea7mEGbnbX1brrR6dQphlG0v/rcAJJW3C7EqxDTezbubhoRrbjmbo9UDVH8nLPbnjkcPdMUR0omyMurgmja8JzypPDUDi0b1iFmtVasg707HSap3Y51pXfGqZmrXOSpCXNOqRKv6U8KYgsC6k8gfCsAs1yLb9KzFAblxhboU0xS5kCb2uKrCfLW8Iwvh55VkIQWhaRihHKzcFMsAn0oqlg1vTzTgotUniMvl4z43KUSbHT9TMZkYz5B+Ohb76YfW0AAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;image04&quot;
+        src=&quot;/static/dc8b5ca26ca259fd94d757cbcd04b3d4/2bef9/04.png&quot;
+        srcset=&quot;/static/dc8b5ca26ca259fd94d757cbcd04b3d4/6f3f2/04.png 256w,
+/static/dc8b5ca26ca259fd94d757cbcd04b3d4/01e7c/04.png 512w,
+/static/dc8b5ca26ca259fd94d757cbcd04b3d4/2bef9/04.png 1024w,
+/static/dc8b5ca26ca259fd94d757cbcd04b3d4/71c1d/04.png 1536w,
+/static/dc8b5ca26ca259fd94d757cbcd04b3d4/a878e/04.png 2048w,
+/static/dc8b5ca26ca259fd94d757cbcd04b3d4/f7171/04.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;기존 플러그인 설치 전은 아래와 같이 되어 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABzUlEQVQ4y42Q607bQBBG8waUitJKVVVycbz3XdtrO7YDMUQgVKlV3/9lTrUORFwrfhzN7I89883MfljF3Eu+65yvMuNMZHyWa05Vzok+8K10nAfDqZGcGsF5sHxJby04UTlnVnBmcz4ZwawbRuq+J1SRECO2LFDeonyg3f9m2P9h3P+l2Owx9YitR3xzg2uup97EHa4ecfUOH6+YFcFRlR4jVzi9xqoMK5dokVFVI9vLe8rqCqVbhKwRskGI+kDqH5CyJdqBWSYKlOm4mCvmS/MEi/UDl7tfuLBlLSK5qsnl20jVUJiB2c+5wdg0LZL6JLpYHCjjSNffosxm+iRU8xrZTIOkail0n4QaIQuc3zwRHmqorqnbG7TtjsKX4inhc6F5V+iLS/rt/Zui/wg1WV6i/UDq0/2SMFHGHf32brrfe9JXwkXmkXZglccp1WLlmC/dVEM10g13WN9/PGEuanx1M8mWmT+yWHlie8umv0Pq9uPCtaiwcc985Y6rPt6wiNeEavds5Un8hjwNLZNQ6YZMNFOiR9GhOqzf4osrcvkiVULUB2TN+mFAUB0zoSK5rFitXwotKX1Kl+XVM1JCE3pcuUX7Dh8GvOvIVeQfE5SL1RnMWZIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image05&quot;
+        title=&quot;image05&quot;
+        src=&quot;/static/262db9e3d4b702be0e53456a19e1bf37/2bef9/05.png&quot;
+        srcset=&quot;/static/262db9e3d4b702be0e53456a19e1bf37/6f3f2/05.png 256w,
+/static/262db9e3d4b702be0e53456a19e1bf37/01e7c/05.png 512w,
+/static/262db9e3d4b702be0e53456a19e1bf37/2bef9/05.png 1024w,
+/static/262db9e3d4b702be0e53456a19e1bf37/71c1d/05.png 1536w,
+/static/262db9e3d4b702be0e53456a19e1bf37/a878e/05.png 2048w,
+/static/262db9e3d4b702be0e53456a19e1bf37/f7171/05.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;하지만 플러그인을 설치하면 아래와 같이 UI자체에서도 바뀐 것을 알 수 있을 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB20lEQVQ4y42S2W7UMBhG5wlo0QC9AKmzxXscx9kmy6SlI3rBDe//NAcl00JLU4mLI9uyffzZv1ffnOY2VXw1ghudsFYH1lrw0Qg+zEhu8pTPmePaKq6d5Evm+JRZrq3kygjWTrJ2giurWI3jmeF+JFY1sW7IypJQlfiiIIxnytMD7ekRG3tEdpxRoZsR/ojwDSo7IrOGtBhYxTyjLgOpPuCtxFtBqvdYlRBjT98PhLxG6RIpC6QsEbKYmfqXcYmSFYXrWCUqYFzLZmvY7t0fdgdPLE/8evxJ23zHpB3O94tY3+OzgehPrG63DueqOcHU3+5TNrup9VTNPee7H4Rwwr4r7Oa5SVi44SJUOseH4xthKEaqpsekNUKVSF29izY1uWlfCLPXws3ek8eW+3GcF0tdo8wy0tRo25DbjtVma0lkjg0Dm5fCnScvO9q+J1HVZaOu3sqmhKb6K9wePNK17GV8uurLK9/RDyPp9C0WZIvCvYjYcMftXOX0wpwwpT4+MA4j2tb/LxSqwJdndofsTcJYjlRlj1SXTc8FWBKbZ6GxNYmqF4UhdNRFv5xKPaErxHxIQ5iqrOz0HQoO4l9hilARqQoSGUlk8UScn8DlHT4OuKwlhJ7Mt2hT8RtglovBELC3egAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image06&quot;
+        title=&quot;image06&quot;
+        src=&quot;/static/3af6d68f5e362ab4aba0c59c9884ed25/2bef9/06.png&quot;
+        srcset=&quot;/static/3af6d68f5e362ab4aba0c59c9884ed25/6f3f2/06.png 256w,
+/static/3af6d68f5e362ab4aba0c59c9884ed25/01e7c/06.png 512w,
+/static/3af6d68f5e362ab4aba0c59c9884ed25/2bef9/06.png 1024w,
+/static/3af6d68f5e362ab4aba0c59c9884ed25/71c1d/06.png 1536w,
+/static/3af6d68f5e362ab4aba0c59c9884ed25/a878e/06.png 2048w,
+/static/3af6d68f5e362ab4aba0c59c9884ed25/f7171/06.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;또한, ignore파일을 직접 만드는 기능도 생기며 다양한 종류의 ignore파일을 만들 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACFElEQVQ4y3WR627TQBBG8wRQVKB/2tIk7t69a3t9Sex10tC0gEC8/9scZPcipKY/jtYra87OzLe4yjVLL7m0t1zojHOVca4Fn4zgw4zkosz5EhxnVnHmJF+D43OwnFnJRyM4d5JzJ/hoFYuUHoj9d1w1ULYbQtNQNDU+1hS7IzEdaNMRU/WIsJlRRT8j/AbhO1TYIENHHhOL3HpyP7Ba5xh1i1UrrFqixZqqGhhSoiw7tK6RMiJljZBxZvp+utco2RBdz0Kogrrdk4kSX/RU9R6bb2fqZs/fh19suwMm73F+OIn1Az4kKj+yyG4DfbpH6khs9twdfuP8huU6YFzNYTxSFiP2XWE//5uE0SUWmSzo+sM8clUnhvEBl7dc3xgyEYjNVNAhVI3Uzbto01KaLYu1KGiHe4xrqOqR3d3P+by6sWhTsht3aNvORcq0J5GmRduO0vaTMLBJR0KxpagGxv0P8rDh+sai7NT9gFBPslPSuUPT/Cecd3jE+ZYqpllYxsRync8j98M4PyDe6fCNcAplOxwpqkTd7hh3jzjfcXmtUaYgDSPGdu+O/EY4XbrdH4zbUMaBtHvEF1tWmUfpkhj716KXAE6JzYvQ2JZMNqyyMKc8jTztUqgKbSrqqj/dlXpGN8/r6CimlLVtWK0dNys3i5722XH1zbDKcqSK3MqJ6vWcUndlj68SLmwpioHgt2jT8A/v+ZKO3L/7wAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image07&quot;
+        title=&quot;image07&quot;
+        src=&quot;/static/09b8c70fd8ae018dec0926ae14f9e81f/2bef9/07.png&quot;
+        srcset=&quot;/static/09b8c70fd8ae018dec0926ae14f9e81f/6f3f2/07.png 256w,
+/static/09b8c70fd8ae018dec0926ae14f9e81f/01e7c/07.png 512w,
+/static/09b8c70fd8ae018dec0926ae14f9e81f/2bef9/07.png 1024w,
+/static/09b8c70fd8ae018dec0926ae14f9e81f/71c1d/07.png 1536w,
+/static/09b8c70fd8ae018dec0926ae14f9e81f/a878e/07.png 2048w,
+/static/09b8c70fd8ae018dec0926ae14f9e81f/f7171/07.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다음으로 살펴 볼 플러그인은 &lt;code&gt;bashSupport&lt;/code&gt;라는 플러그인이다. 해당 플러그인을 설치하면 shell 파일에서 자동 완성 기능과 실행 기능을 제공해준다. 물론 UI도 사용자가 보기 편하게 확인할 수 있다. 하지만 문제는 해당 플러그인이 어느순간부터 유료로 변경이 되었다. 필자는 구매를 하지 않았지만 구매를 해보고 싶다면 구매를 해도 좋을 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACUElEQVQ4y2WSSW8bORBGfU3iCRBYvXBtNntRqzfJasmrEien8QC+TAJkToPB/P8f8YKmlMRODh+KRbAevyLr7MIoFkbyTgveqoRzEXMuE17LhFcq5fW8n2n+sCqs38y5nXMd8vnMuRFBc37WrHrqVUPmPXlZklVLpCuReYVZduiioVytMUWDyMog6SqkqxG2JDUeYYsQtas5c87gfYZWMVYrquVEUW8ZVldM4z3Dasd+vGc73NF317TNPqhr9jjXolSJ1hVG13i75CyVFmlKFpEgSjTj9oFyuWO6+8jXf/7n89N//P30Lw+HJz4c/uJm95GmnqjrS6xboUyFtjXGLnEz8CJWaJMjlGMRa4bLT/TjB9q7Rw5/fuFweOT6/pFp/4nN5p715paxv6FvrzCmJhU5QnqkKshUeQQKZTFZwUWkWA0HmvaWqt8ybG9ouytW3RVNM1Ev1/iqJy/7ELWpfsDm1p2ungFtERzmxYAvR5zvcL4P+RyzvGW9vWWc7sjLDl8NodWfwOIIXESKVGaorApvOBfOAFcMAZYX/Y84rHeM64mmHVg2wy8OT8Ao1QhTEovsCPTdCfBT8wV1s2V//cC0e8+0Pyov2vCGL4AzSGUNF5EkTg35qdXnyvKOolozjNdstu+5nB5Ybw7h7G/AVDqM74hSQxQr4sQEp1FiULrAmgIhHEnqiGJ7arFEmxqly98/RWlPIn1wt4jVM2myrKbITw9/KpzXQubB2feReTE2Qh9nMBFH4NHdUalwp2L3QlJ5jKuwrkbbMlyc2SrsfwOfnGyPGhmrFgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image08&quot;
+        title=&quot;image08&quot;
+        src=&quot;/static/16e865bc31c3d83326d3629551fc513a/2bef9/08.png&quot;
+        srcset=&quot;/static/16e865bc31c3d83326d3629551fc513a/6f3f2/08.png 256w,
+/static/16e865bc31c3d83326d3629551fc513a/01e7c/08.png 512w,
+/static/16e865bc31c3d83326d3629551fc513a/2bef9/08.png 1024w,
+/static/16e865bc31c3d83326d3629551fc513a/71c1d/08.png 1536w,
+/static/16e865bc31c3d83326d3629551fc513a/a878e/08.png 2048w,
+/static/16e865bc31c3d83326d3629551fc513a/f7171/08.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다음은 &lt;code&gt;Material Theme&lt;/code&gt;이다. 해당 테마는 IDE의 기본 테마를 이쁜 테마로 변경을 할 수 있다. 하지만 이 플러그인도 유료이다. 필자는 구매해서 사용을 하였고 &lt;code&gt;Draculra&lt;/code&gt; 테마로 변경을 해서 사용 중이니 참고 바란다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACa0lEQVQ4y22TS2/bRhSFvY3hpigsiZwX58G3SNESLcmWlNiS06SJF0E27d8o+v8XX0HKBRy4i4PLwcz9cObM5cW1UUyM5Dct+FVFXIkZVzLiUka8UzHvtOC91fySKC61GPU+eVkrwaWKuTJi1LB3UdUtRV1h0xSfZdi8RLoM5Qts1ZJkNeV8hUlrhM2RrkD7cpSwGZEJiCQlTlK0L7hwzhCCRasZiVbkZU9W9BRlTz3fkmZLinJFt7ijrTe40OB8gw8tSVKidT7K6IKQlFzEMkGZjMlUMI00i9UjebWhajZs97/TdDtC2tEt9jwcv7NdPxKyG2xoMbZEmxydFCPcDcDrmUIbj1COyWwAHmmXR4p2R7d+pJpv8L6hrm5Z9h9ZLvfUzYa8XKFMjhAeIQNSpViVnYFCJRibcj1V1IsPlPN7qnbP05e/OD394HD/jc3tib4/0C13rG4PFNUL8AWmVIbT+Stgko4OfbrAhQVNd8fnr3/y8fidfnVi++EPnv/5m6obcu3Gc/8LnEwVkbQom48ZDoHb4YrzNf36AZd2pH5BXa9p7h8IxQ0utIT8ZszwDXAaa4TOmAl7Bg6vGNoxp83dJ9puT1Xesur2nE7fOD09j/XT8ZlFuyGK3c/AAaRsxfVUMosNPpwdDqHX7Za8XJKm3ejwbndiv//MYfeFh8NX6rp/C4ylw4SGaWyYzhSzyIxOhzyl9BgdiIUjGhTbc/MwKrZA6eztlZUORDKM7iYz9Uoa5wpSX5ybZDo2Dt+x8MSxH+uw/mlshD7PYCTOwMHdfxqcCenH+lpSBYwrSIbfMMmwtsAmOVJ5/gV5UW8SQMcDaQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image09&quot;
+        title=&quot;image09&quot;
+        src=&quot;/static/e7f219040961879d32096d857ff345fb/2bef9/09.png&quot;
+        srcset=&quot;/static/e7f219040961879d32096d857ff345fb/6f3f2/09.png 256w,
+/static/e7f219040961879d32096d857ff345fb/01e7c/09.png 512w,
+/static/e7f219040961879d32096d857ff345fb/2bef9/09.png 1024w,
+/static/e7f219040961879d32096d857ff345fb/71c1d/09.png 1536w,
+/static/e7f219040961879d32096d857ff345fb/a878e/09.png 2048w,
+/static/e7f219040961879d32096d857ff345fb/f7171/09.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다음 추천 할 플러그인은 &lt;code&gt;Claude Code&lt;/code&gt;이다. 요즘 AI 시대인 만큼 AI Agent들을 많이 사용한다. 필자는 특히 &lt;code&gt;Claude&lt;/code&gt;를 많이 이용하는 중인데 인텔리제이에서도 이것을 인지하고 베타버전으로 Claude Code 플러그인을 제공해준다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACc0lEQVQ4y22TS2/jNhRGvZ1BOkURWxJFUqTekmU9bCt27PgRJ2gGM0AH6KJd9P//j1NImgKTtosDkSDuwcfLq9m9lsy1zy9K8LN0uRMOd77LR9/lg/T4IAWfjOKnQPJRiZFPwff9eO5xpwV32hvPZkW5IisLTBwTJgkmzfFtggwzbFFjs4q07NBxibApwqSoMB8Z1l4QI0yCCGJ0mDGzVhNFBiUdAiVJ8w1JtiHPN9TLHWnUkKQtbX2ga44URY8NK2y4IjAFWufoICcICmJTMPP8AKkT5gvBwlXU6ytp/kC53vF4eaXtnlhvz2w2F55PX3g7fyXLt4RJg9IZwo/wZYxUCUZnzO4didIhQlrmziB8pmiuvDy98ufvf/H69gen6zd2u1/p2iNde6BpHimWPVKno1DICCljrEwmoZAB2sTcLyRlfSJbHtg2W87HZ6r6SLs+061PHHY3+u1lFJZl/z6hTLAq/UEYxGPCMK6xUUNWtfT7E936zKo5ULcHDvvbyLo/0XQHVPA/wvlC4voGadKxhyasMOGKourod0fKak9R7SirB87Pn3l9+43r7Qv97oo2OUKE74ULTyFUgiPMKLRRhY1WxOWa/vFG0z6NCQcu18+8vHxl/3hj058wtsD7t3AQSVNwv/BxPE04CitstqFqDiyrB/KyZ1nvqJs9XfNE255Yby/ESY0n7Huh51t0VLHwNAtH4rh6TLpwNb4folWE65mJoVgNI5KODzKs/9NDORT40Zhu7sgfUFibEYdD4+OxyPcnwXDNASGiaWy+S80wNkJNM+iKSTilmxiuI/xw/P7DsB9+hCDM0SYdCYIJIUP+BhKscIK2bzi8AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;image10&quot;
+        src=&quot;/static/51edb91ee097c124d8d0e87cf06cf92b/2bef9/10.png&quot;
+        srcset=&quot;/static/51edb91ee097c124d8d0e87cf06cf92b/6f3f2/10.png 256w,
+/static/51edb91ee097c124d8d0e87cf06cf92b/01e7c/10.png 512w,
+/static/51edb91ee097c124d8d0e87cf06cf92b/2bef9/10.png 1024w,
+/static/51edb91ee097c124d8d0e87cf06cf92b/71c1d/10.png 1536w,
+/static/51edb91ee097c124d8d0e87cf06cf92b/a878e/10.png 2048w,
+/static/51edb91ee097c124d8d0e87cf06cf92b/f7171/10.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;설치를 진행하면 아래와 같이 사용이 가능한데 단순히 플러그인만 설치한다고 되는 것은 아니고 아래와 같이 &lt;code&gt;npm&lt;/code&gt;으로 설치를 진행해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-g&lt;/span&gt; @anthropic-ai/claude-code&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고나서 설치한 플러그인으로 열어야 하는데 IDE의 우측 상단에 클로드 아이콘을 클릭하면 아래와 같은 화면이 나올 것이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;물론 아이콘을 누르고 설정 및 인증을 해줘야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB90lEQVQ4y4WS207bQBRF/QUNKqg8FJWEOJ77jO+XsTEEhKpK7f9/zqrihFYVgT4s7Zmj0dY5Z09yYxW3TvJVZ1yrlEuZ8lntuFAZn3TGykiuC8+VN6yM4NJpvgS76ErtWGnBlRNc2owLI0jm+ZnpcaZsWsq2I9Q1rsixRUmYnqnnJ7rpBV1GMt8j8wGVx0Uz351qPSL0uGoiKYtAU+c4leKNwJsMp7dYJWjbJ572L8T4SF7c4/204E7q/f2fewgzXf5AspMFyg6sN5rN1v4ldTjf87zf0zYjQrfID9Cmp7Ajye3GYl2D1DXrO8dm61jfHUw9oYh0ccS4FqGaD1G6o9ADybe1Qcgc51tubtU/hnn1QD/M+HxAqP93WJqRZCcKjK1phxd8uF/Gvds6tqlHyIq67JCqIs0KdqI8SypKMlGhZE2idUOej/zY/6Kp9zjbE9tHunpe6j5EQj6Sh4hUDZmszyJUzS4rSKSssH7g5/wd53qs7SmLCesGtO0wtkfbY12b7t3RDzuUoiYxtqOqZoyPOB8XA7XspHvDOaPXUJazqEjcYaRyxvqIND3qYGiHk75F2+GIO76xYcQVM758QKmGpPQTO1l9mODZruTrl2mPf9ScRrYh4sKIMi1pdkiteifNYz2T1bJbX03YfMAVkeAj3g9IVfMbT1+O+0MhvrAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/a059194e79599e84b0c3d3f5fe9ffa35/2bef9/11.png&quot;
+        srcset=&quot;/static/a059194e79599e84b0c3d3f5fe9ffa35/6f3f2/11.png 256w,
+/static/a059194e79599e84b0c3d3f5fe9ffa35/01e7c/11.png 512w,
+/static/a059194e79599e84b0c3d3f5fe9ffa35/2bef9/11.png 1024w,
+/static/a059194e79599e84b0c3d3f5fe9ffa35/71c1d/11.png 1536w,
+/static/a059194e79599e84b0c3d3f5fe9ffa35/a878e/11.png 2048w,
+/static/a059194e79599e84b0c3d3f5fe9ffa35/f7171/11.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 외의 수많은 플러그인들이 존재하는데 독자가 검색을 해서 본인과 맞는 플러그인 설치를 해보면 좋을 것 같다. 플러그인 추천 모음집과 같은 블로그도 많으니 하단의 블로그도 참고해보면 좋을 것 같다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ 참고&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://be-a-developer.tistory.com/entry/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4IntelliJ-IDEA-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%B6%94%EC%B2%9C-%EB%AA%A8%EC%9D%8C#google_vignette&quot;&gt;https://be-a-developer.tistory.com/entry/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4IntelliJ-IDEA-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%B6%94%EC%B2%9C-%EB%AA%A8%EC%9D%8C#google_vignette&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ] Git&Github]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드 강의를 참조하여 작성한 글입니다. Git 기본 기능 사용하기 인텔리제이에서 Git을 사용하는 방법에 대해 살펴보도록 하자. Git View On 먼저, Git…]]></description><link>https://sungbin.kr/intellij-Git-Github/</link><guid isPermaLink="false">https://sungbin.kr/intellij-Git-Github/</guid><pubDate>Mon, 08 Dec 2025 15:30:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
