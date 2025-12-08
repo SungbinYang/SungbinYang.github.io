@@ -1,0 +1,551 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[IntelliJ] 디버깅 · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/intellij-디버깅/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[IntelliJ] 디버깅"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[IntelliJ] 디버깅"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/7f3c4c668ea513e0950e70c83ed0a8d8/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-8bd3326d799737bed84d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-3fa8deb48819dbe669b2.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-7f5def86146fc29c9ead.js"/><link as="fetch" rel="preload" href="/page-data/intellij-디버깅/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[IntelliJ] 디버깅</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->IDE</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2025년 12월 8일<!-- --> · <!-- -->3<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">IntelliJ<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (7개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css rweb5b">.css-rweb5b{margin-bottom:0.5rem;}.css-rweb5b::marker{font-weight:600;color:#9195F6;}.css-rweb5b::after{content:'- 3분';margin-left:0.2rem;font-size:0.8rem;}.css-rweb5b>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-rweb5b>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 디버깅</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[IntelliJ] 리팩토링</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 자동완성</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[IntelliJ] 검색</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 포커스</span></li><style data-emotion="css kco6hv">.css-kco6hv{margin-bottom:0.5rem;}.css-kco6hv::marker{font-weight:600;color:#9195F6;}.css-kco6hv::after{content:'- 8분';margin-left:0.2rem;font-size:0.8rem;}.css-kco6hv>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-kco6hv>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-kco6hv e1k9d3a00"><span>[IntelliJ] 코드 Edit</span></li><li class="css-rweb5b e1k9d3a00"><span>[IntelliJ] 소개</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFH0lEQVQ4y3WTa1ATVxSAz2ZBSQgJAUFtRbQj9cVjExGBGVp1sNXWalEeUbJGUSsoVgoisLugiS9EYeoIODAyDj7AV1sQh44DQ2krbbU6jk5bf5ShyvhGiSGSRLJ7TycRHdrRH9+cs3fv+faeu/cCYVhaYlggDPs5YdjnhDFcIYzhnKRlyyUtm0MYQypGrVS/0Bkhm73o7cfZQcE79AreEavgnaAqstNjCq2gKbJBYKENQGJYGdGyQLTsSYkxoPg/XIwBHbpVP8xL3DlqXkE/aPL75so5Oyo4+6BvwbOl6mIC75UgNT6/jxpXYAEgjMEtGycxhn7Usoi61SLqVrtw1uohjM5wkdnrhwZjN6I0Z1O96jC+r9iOfcoSRDeqEoIa/oXwDj8Egfl9EJb3gAZJy4LEGNa7Zc6oleKNaYvJ9emfkesRy/D3qFTyU2Qa+T4qnXSEpyG7uNo2Kusm+mX8Kvmt/U1SZfxCAnPv47hC26mgnNujI7b0AiCTDi7G0IY6I3bPSBKVtDcCwCuIO9IyGaFlNBkekyj3HMrL8z4o+bRrMjeIU766e5358k6Yu+VpImMYwllr8FZkqruITAidiAfKy7GyqgoTPkh4JSKLPv2EZGSs8eTU8MdCko6TyG39Q7rN3ajN6XkMLu2q7Q6dEZ1zvnBdYwzEGyjiq/TFrkuX0Gq1YvjM8Ncrrq6uxq6uLk8uk9Ee8dQldWRuTi/5cONNaXLR3Rdgi8640Tc7Ex/FbJU6dWuJ72gfT0Febh42NTV5ch+fl2NlZWV4/vz5YaHME2cvqiTJm/4k0/O7Mbi47wk8npkfem++wXx/CYstsZlEMUruaWVrXh42NzeP3E80mUzY1tb2H+HCxFJM2PYPCRYeYDD/5B441s2AIRPNiSVjsG1dtCgDGZHL5djZ2YkWiwVDQkIwOzsba2pqsKenBw8dOvRSSHshBYDhSVUYarZIY7mHGMhbusFREDzVURjgEIUg7Ng8XXJPDg2d5Cmsq6vDuLg4jI6OxgsXLmBFRQWq1WqPkKIoTwxacRwnmG3SGK4PNYL1D3ByAZXOIg2KxUHO9qyZxNvL6/VxeSvDMo9QfwLHm+2ShnuKan7gKji4wImOQk27WBKArcYEpMDnjTKapj1QI2RuAvSNGGQeEv05C/oJzy8B4RWAz1YAmoK/bkzSI02pCKONJO5WY2JiMD4+HsOmhL1hpS/Fav0ZDDSLooqzolKwt8OdzXPo51vLwCWgd+m87Q/95H64/8B+qb6+Hmtra0lDQwPJzMp82zYQP/1ZojETUckNoIJ3tEDV4hOyxpR2OJfWsHD3gn1IU54r5v45rmHEETIyAs+zUn+OqM3o9OVsbuG3UJl0lK5ZfgwOL6svrVh6BDfNLXFkzTfjhsQ9uPajfWhYVIYfJ5eLEcYaKcx4DEOMp8lY43ckwNgiqVa1ulR5vagsdqKCt6Ocd9ZCZ+IuWJPeChXLj18pS2nEshVNuDe9xbmbvdhauv7HDQaho23BjssYa/oLI0y3XVNMj8QQ0zMx2GTHgB0uVBU70Jcf7FAITqOcd6pgX3IjlCY3Ru5NOSXuTD1ztTjldH7u8hNh7bmPoDSrC/AIQnzRz1uiuBu2MO5vDOF60X2IA7in99VF/QeVnHWWssgCCsEJct4JsCv1jJtp5tSzCUeX1MCOtG+A1zfBwaUnqVxjsxcCQpxwGcKFW5Mm83fa3uUfXAvinxr9Bau/WhgApTAI/sIAKAQH7Rb+C55z7Q0dffsdAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title="banner"
+        src="/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png"
+        srcset="/static/7f3c4c668ea513e0950e70c83ed0a8d8/6f3f2/banner.png 256w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/01e7c/banner.png 512w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png 1024w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/c1b63/banner.png 1200w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 포스팅은 인프런의 <a href="https://inf.run/doaZn">IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드</a> 강의를 참조하여 작성한 글입니다.</p>
+</blockquote>
+<h2>디버깅</h2>
+<p>디버깅이란, 우리가 작성한 코드의 흐름이나 혹은 외부 라이브러리를 파볼때 유용한 기능이다. 그러면 인텔레지이에서 본격적으로 디버깅 기능에 대해 알아보도록 하겠다. 디버깅을 하기 위해서는 먼저 Break Point를 찍어야 한다. 그러면 코드의 흐름이 쭉 이어지다가 해당 포인트에 멈추게 된다. 인텔리제이에서 찍는 방법은 라인 넘버를 클릭하면 빨간 색 점이 생길 텐데 그것이 브레이크 포인트가 생긴 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.0625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACR0lEQVQ4y42S2W7bSBBF+QUDT+x4LMuxaIrqhb1xa1JcbNnJzFPy/79zAlKKEyADzDwcVBUKuF19q5K0tOS14dFr7q3k1gg+WskHq7iymuvSsIklm7bkryZwHQxXXnFVCf6sDvwRcq4bwU114IM3JKGeMWWPLUf2qmKv6wsNJj7jpzf89Bk3nHDHN+r5DRMnxNAguoq8a1Bjg2hrdDmQZJkm3Xt03ZEJS5oa0ifDU+awRU8dnvHxFVfOVGGk0B1StigRUfKMvOS+6BdBSy4binYgE34VWsjygHEjZXuinb5Q9Z+J8ZVQzig3Iu0RZY/vUdmB2j+TpLlB2EgqHI97xS7Xa8yEoy4nvsx/8+3lKy/9K1M50ZmOaCJxjT/pbc9oJ5I7veWh3rFx99wUN9yaWz6aGzZmiypa6mbmOJyo6hlvewrdYnRLUURM0WJ/1KqlMQPJtvi0Cu5nxbbZcufuuXMb7t0j2nZn7/oTPr5gqxEVjhg/oqtlmRMuHLHhiCp6KjOR7JRiH0p2XrBzBx7kEw8y5ZM8IIsOqSNCReSCjqhlKbpD6XMtL7U2PY2dSQrTE8oTWebJssBT3rDbR/JDhdaBXNYcfiEXF+SZg6jee1q2JNq01Is/YcD6ntz9Q+q+4quZvnII3SFU+59I3bIXJYlQDeJ9/OVLDVrXa37QPaqIqKL7XyxTJsGN6wvq4tfZkx/i/y629tXF29Xjdo25qEjscv22R9se45YNDpiwbG/CuIGDbH5Dmw5bDvhqwoQjoZwIfljP7DvihYrpSCrm/wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title="image01"
+        src="/static/f29c51f14873c3de9b27bd9fce8fda92/2bef9/01.png"
+        srcset="/static/f29c51f14873c3de9b27bd9fce8fda92/6f3f2/01.png 256w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/01e7c/01.png 512w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/2bef9/01.png 1024w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/71c1d/01.png 1536w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/a878e/01.png 2048w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/f24c5/01.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>디버그 모드로 실행하기 - 즉시 실행</h3>
+<p>이제 디버그 모드로 실행하는 방법을 알아보자. 디버그 모드는 디버그하려는 해당 메서드를 실행할 때 찾을 수 있는데 아래의 테스트 코드처럼 해당 테스트 코드의 실행 버튼을 클릭하면 2번째 항목에 디버깅 모드로 실행한다라는 옵션창이 있을 것이다. 그것을 클릭하면 된다. 단축키로는 <code>command + shift + d</code>이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQUlEQVQ4y3WT2XLTQBBF9QNAWBIwtlFsLbNLM9pteQnFI///PYfSOElBAQ+n1KOa7rp9uyfZOsXeKza2ZGUK7lXOR13wXhe8VSXvreRzsDwEy31teWcEb03BXV1wV+W8cRkffM6HKufOSJLQXbDNhGtmMtWQ64Ys0qLHM+76HXd8wowzuj+j+hnRTZjTiD70FFOHmBvk0GLamSTLNOnOocLAvrQ8PprIbm/RdsQOF6w/UbkjQnQRKXpE2SNE/xwPSDmgVEuyzyxZ2aD7I5mo2O1dZJ/XKDdFdaF/ogoz0gxI/TdCDygz4u1MkuaG0vbsRM23TJLmmjRX7AoTC/j+TNWcKF2PsiNCdpSyQ6hnlrPqYuGgDyQruWXdpKzcmk/qngfzwL35xMquqfxIN15p+wtSteRloPJnQnvF1ecYLzh/xocrfXUh2aiUddiSnRTrbsMX95UvbsVXt0W7jsP8g3H6Th2OaHtTpe2EMn9i7AGrR5JUSLLakzpB6go2YsdGPLIVBWJpub3ghxOmntBLkjtiqwmh+ldevMxKT7IEPjyRZXVkl3ek2UCxDErV1OFEGM7YcMR3T3h/xTdTbP93CtGQ5TWJ0C1Nc6KqD9hqoHA/eHQ/oy9jcOSii8UL0cakG+3rcMrXIfXkhScpZUup+kiUr1qUaqJXhRz/uSb/Y1GahOpEIW9jv3ky/OGP+NfeLf9lTylvd24Knwu6+ohxU3wVy9dUB6yfqRaqY0x4afMFbcbo6bKftj7g/UxdHWJXvwDFconQMjgKCgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title="image02"
+        src="/static/702b411db13c3f45a39b0af17ccd5e76/2bef9/02.png"
+        srcset="/static/702b411db13c3f45a39b0af17ccd5e76/6f3f2/02.png 256w,
+/static/702b411db13c3f45a39b0af17ccd5e76/01e7c/02.png 512w,
+/static/702b411db13c3f45a39b0af17ccd5e76/2bef9/02.png 1024w,
+/static/702b411db13c3f45a39b0af17ccd5e76/71c1d/02.png 1536w,
+/static/702b411db13c3f45a39b0af17ccd5e76/a878e/02.png 2048w,
+/static/702b411db13c3f45a39b0af17ccd5e76/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이렇게 실행하면 아래와 같이 코드의 흐름이 브레이크 포인트에 멈춰서 아래 무언가가 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.84375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLElEQVQ4y32S2W7bMBBF9QdFnK4PdbRQkrmIErVRm2s7QRG0j/3/fzmFZCMt2rQPF3d4NRzOXE2wt4qkknw2OZ90yjsleKtSdirjjcq5s5KPjeVDbXnniu383mnumwO7QrCTMTsnuC8Fd0YSuPaIchO56RCqJrkhVg2qO1LMF+zyRDGfMcOFcjlj/Ew2taSdI21rsqkmbWqkmwjiWJJmDm169g+KMNKEoSaKC4z2NOUXyu6CqRaqakZKj5QdtvAUxmPt8MK1HQnC2HCQbhP2oSFKClYtEhapPGW1UA9nXHema45UdkQZjzI9UvcofWVtPHWxXAuKzKHqgSS3W2erlqQVxk2405n28kQ9n7DtiPUTph9QTU9WtmTVFQfX49YOH9YRRUne9oSpJowMqxYLiyoGnD/hj49U/QlTTUjrkcWAtMMWq/W8aasVLYHISuruzLh8x7kjSVqS5g6RVZu3SntsM2PciCo6MtVwUB154TkYj9YtUrekWb1NFRjjWcZnlumZ2X+ltDOXyw+a9pE4rbZu96HiYUWkXxC+xNeJosQQi5JA2Z7p/I1uutCMJ6piwOgRkTdbwmtYf9xrWL0P0twidEkiDWEmEZklTyuSbB273gqLvP4tbogSe92EP4qtHJhDy/62d1F8TQwTc+W/oG8w/+wySLJy82dN3LxZL0b/v7R+++XlLb49Gmg7Ic1wgyeXDbnuNn6t6Nq9SEsOpkUWHblq0LpDyWbbjp8CAoZmXsOU/wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title="image03"
+        src="/static/86b97627de7acdb1ab57155128d22238/2bef9/03.png"
+        srcset="/static/86b97627de7acdb1ab57155128d22238/6f3f2/03.png 256w,
+/static/86b97627de7acdb1ab57155128d22238/01e7c/03.png 512w,
+/static/86b97627de7acdb1ab57155128d22238/2bef9/03.png 1024w,
+/static/86b97627de7acdb1ab57155128d22238/71c1d/03.png 1536w,
+/static/86b97627de7acdb1ab57155128d22238/a878e/03.png 2048w,
+/static/86b97627de7acdb1ab57155128d22238/4b7ac/03.png 3444w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>디버그 모드로 실행하기 - 이전 실행</h3>
+<p>그러면 만약 다른 함수로 포커스를 두고 이전에 실행한 코드를 디버그 모드로 실행하려면 어떻게 해야할까? 이건 이전에 이전 실행과 같다. 단축키로 <code>command + d</code>를 누르거나 IDE의 우측 상단의 빨간색 버튼을 클릭하면 된다.</p>
+<h3>Resume</h3>
+<p>그러면 디버그 모드의 창에 대해 살펴보도록 하자. 위의 사진에 우측을 보면 이것을 우리는 stack trace라고 한다. 즉, 해당 break point까지 코드 흐름이 흐르기까지 어떻게 코드가 변경되고 거쳐왔는지 알 수 있는 역사라고 보면 좋을 것 같다.</p>
+<p>다음으로 Thread&#x26;Variable이라는 창이 있는데 우리는 회사 코드라던지 외부 라이브러리를 분석해볼 때 해당 창을 보고 코드가 어떻게 변화하는지 쉽게 알 수 있다.</p>
+<p>그러면 이제 디버그 모드만의 기능을 알아보도록 하겠다. 먼저, Resume기능이다. 해당 기능은 아래의 사진처럼 초록색 버튼을 클릭하면 되는데 해당 기능은 다음 break point로 이동하는 기능이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACJ0lEQVQ4y3WT2W7bMBBF9QdtErRBUSexFkriKpJavQlxCvSt//85p5Ds7u7DwQyXuQSHl8mTlWS+ZmNKPmnBB1nwoAR3SvBOldzZmsdoeQyWD96s449B89DW3JuCe5lxFwruXcF7U5PEfkaHPZUdKHQkVxcy1aL6E/Z4xh2/YA+v2P0bcX7DTifKQ4cYAkUfKQ8R0UZk2JNkuaQQHm0Gnl8U21Sz3WrSzGD0SNvMuP4V4w/4Zo+UA1L2ODNizYhz0yXaieh2JGluqGVYF563hjS3bDNDWjikGmn8iTCdCf2Zvp1p3B5lJpQZkXpEXqM2E9EeSZbiXHhUGMkrR5pdBJc56/e080z/eqbbn/DtSBhGXDdgQkft4k+U74h2IlmumAqP7Cey6iL2kiqywmHtwNROzLsjYxzpdMRLT5Aer8Iao2wIC3WDqQJJIRpq3WKbPUI0q5CoI0UZEFVE2R2uO6LjAelGhOmp9UjpdtR2QtkBaXqKqiMvPYlWPdPSnzjTxgPGTJxO3/Bh5iXVbDaCz1eWfPNU3uTpuVpvl9SmYzx9pZ1m/HDE6gGtJnIRSXN3k6Vwm+kbGBJRWXLtyGrNtpQUpaMSgbwMFFX7D6Lq1rYsbrhFYuqO59V3ljT7cfrv6L/yy/i/gnnZ8LJV68alZ2th+iu/VXRxwnVPes2vhyZ6MardIc20mrRSLZXukbqnlO36Y/4Qyw2rM0y3vnClW7TuUXJpSeA7dGSEoIFpr74AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/3b9e09a13f08e2b9480598b0753d18d5/2bef9/04.png"
+        srcset="/static/3b9e09a13f08e2b9480598b0753d18d5/6f3f2/04.png 256w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/01e7c/04.png 512w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/2bef9/04.png 1024w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/71c1d/04.png 1536w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/a878e/04.png 2048w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/f7171/04.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQElEQVQ4y3WS647TPBCGcweIBb6D2G3TxDnZjh3bObhpWrpC8AOJ+7+cBzUpaAXLj0eeGY1G83reZGckedfwpCv+VwUfpOC9LHiQJW9kxVvT8F8w/OsNH1y75v84xbtQ89AKHpqMByd4ZwVvdUPi+jPSzVR6QEhPfieTATmcaU/PmOUz7emKjs/Y5YqeTpRzTzE4it5Tzp4ieBo3k2RZQ1E6lB7Z7SXpQZGmikPWotVEsBfscKXtFpw9IZsJ2QyYdqLVE9ZEzO1tI94cSdJMUzcOYyK7VHPIW261TBhqFTHujDs+043PhHChNfNar9VEKUcqNa00OuLaZRsoSof0kbwy62brwMJi9MA8zczxzDEcOfmRyzRwmXpOfSB6z2gdve6I1hPbSLK/SRSWqh9JC0V60OwPklxYjJ8J88Lx0xU/n/FxwQwTph8ww4gdR+wtDhtKBxJRWvxw5bh8w7kzeWEpao+oHEXpkTpiwoL2M40eKWRP1YyUOq5SpRpo1IAoA3nRkWg1copfOB2/Mo+f10Nczt/p3GWV/vhU8vFx4xY/7ioed/f4BU/7au1PmnZgWr4Q4oVuWGjlgFRHssJtF7+Rbe/+zq/aS9aaJikqQ64MWa3Yl/Vqn85+QtT9eulM2D+4OeFvJLru2a2+M6RZS1V7VN2Tlw5RhY3Sb9zzgzAccv36wLy07FO5rv1T0i6Vm7RM/8ZPifqF/Ht870mUmVdTbkxUTaBSI7UMa8NrW4iyo9Y9t/+vZECpAdkEisrxAya+hmJKPwbjAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/315c7c8fa92496fcc2d27b6e8987a7c1/2bef9/05.png"
+        srcset="/static/315c7c8fa92496fcc2d27b6e8987a7c1/6f3f2/05.png 256w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/01e7c/05.png 512w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/2bef9/05.png 1024w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/71c1d/05.png 1536w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/a878e/05.png 2048w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/f24c5/05.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Step Over</h3>
+<p>다음은 Step Over이다. 해당 기능은 아래 사진처럼 보라색 화살표 버튼을 클릭하면 되고 해당 기능은 다음 라인으로 넘어가는 기능이다. 즉, break point를 찍지 않더라도 다음 라인으로 넘어가서 코드의 흐름을 볼 수 있는 기능이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMUlEQVQ4y3WS2ZKcOBBF+QNPt8N2OHopNgFaWQRCRRW92BHzNv//OWcCqHmZbj+cSG03lVfK5MlK8q7h0VT81IJvsuSrEtwpwRdVcWcbfgyWH73lW2f2+fde89U33JuSe5lz15fcu5K/TEMyTC/ofqG2gVIPFOogVx41rdjrO+36G3t5wy2/GV5+4eJKdRkRoUdMnvriEeOA6heSvJCUokObwPNJkWaaNNVkucHoGd+utOMbprvQtQtSBqSccGbGmpnW3aKNDO5MkhWGRvY4F3lODVlhSXNDVjoaNeP6lf78Thfe8f4FaxcaHWnMTK0CjZ73sTKR3l5JNnEhOlQ/U9SOLD8SbmttG4nLmeW6EsOZ8zjychlZ4kjwI2PvGdqBVncMbmAykWSzmIkOOUXy+kh2ytReoXYRH66cr28M4UrXR1w3YduA7WbcRhswbsLYCSU9SSlaGuWx7UJVdeSlQzQDou4R9bBbceMVM1yQdkbokUYFKhtvVieknihrv7tKtJ6YxzeCf8V3C1rPrNd/8MPKKdM8PFU8PIqDp4rHD9R7fDrVu7ukMSNx/RsfX2mnC04HrF4oKk9WuE/ZhGmuP8GQiNpSaEfeaNJKUtcdWgZEM1FWw27l/xyJ7ackphl53vvOkuXH7afbbR85Ktl69I8Ji6rllKr94PZm/4lP2RE/Ex37t/PZbXzTJdotKHtGmojcm9VT6+PnKuk/VJMWhrLq2N5e2UCtPdvHbi1T1j3/AuKUhUQdqpuzAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title="image06"
+        src="/static/5320486080382166df8a3fa04afb87f0/2bef9/06.png"
+        srcset="/static/5320486080382166df8a3fa04afb87f0/6f3f2/06.png 256w,
+/static/5320486080382166df8a3fa04afb87f0/01e7c/06.png 512w,
+/static/5320486080382166df8a3fa04afb87f0/2bef9/06.png 1024w,
+/static/5320486080382166df8a3fa04afb87f0/71c1d/06.png 1536w,
+/static/5320486080382166df8a3fa04afb87f0/a878e/06.png 2048w,
+/static/5320486080382166df8a3fa04afb87f0/f7171/06.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Step Into</h3>
+<p>다음은 Step Into 기능이다. 해당 기능은 break point를 찍지는 않았지만 해당 코드 내부로 들어가서 어떻게 동작이 이루어지는지 궁금할 때 사용하는 기능이다. 해당 기능은 아래의 사진처럼 노란색 버튼을 클릭하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAklEQVQ4y5WS+2rbMByF/QZdW1oYtInvujuyFd8Sp2lL2dhg7/8437CT0m50hf3xIZB+OhzpnOjeKVIvubMlX03Bjcq51gWXuuBCC75YwW1tufWGS6e4sIIbr7luJFc250qlXPqcqyrni5VETfuAqXcI15GbhkyfSHXADY+E5xf89EQ1PWL6J1S3R3UjYmop+5qyC4gpILuACXuiNFPkhcfYjtVaEyeGODYkqUPpjmo70Wz3uM0Ou5nQqkeILaJsEeINKTuU3hIlmUWqmqoaWMWWJHPEqSXNq0XQ+wN1+4g2Iz7saMIOY3uEbJGqRZxRqsebPdF8OSs9uhnIRLU4W/YKj/N7qnGi2R+xYUA3PbJuETP+T1TT4d1AtDwxrxDbjrgwxIllnRiSrELbgTocCcMRXfVI1yHtP3A9uaiJ8nJDvT0yTj9p6geyYkMhG0pRU4hmeVYpt+RlQ/EJpQjkpScypmPafeNh/4NpfMHansP0i9AciFPD3Uos3J+5+4v7d+v8VZGyHePhO+34jGt2VKbDmpH1+S9PmFP6nzHPzIKlrCg3DYV1pEojpEeKsBzOif8vkVMtq8Se031z9Vqfj/hUMCs3rGK9WF4nJ9tz0u9F34u/1mqeXebPrVifzyNT7dBuRNkBNRdWB4Rpl7Q/chNndklT2i3adQgTMKZFq7DU5jfvJIMxZnnG0QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title="image07"
+        src="/static/c42f607ce448c3b413119ea5cf577ed3/2bef9/07.png"
+        srcset="/static/c42f607ce448c3b413119ea5cf577ed3/6f3f2/07.png 256w,
+/static/c42f607ce448c3b413119ea5cf577ed3/01e7c/07.png 512w,
+/static/c42f607ce448c3b413119ea5cf577ed3/2bef9/07.png 1024w,
+/static/c42f607ce448c3b413119ea5cf577ed3/71c1d/07.png 1536w,
+/static/c42f607ce448c3b413119ea5cf577ed3/a878e/07.png 2048w,
+/static/c42f607ce448c3b413119ea5cf577ed3/f7171/07.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Step Out</h3>
+<p>다음은 Step Out이다. 해당 기능은 안으로 들어와서 내부 동작을 확인했고 이제 나가고 다시 원래 break point로 돌아가고 싶을 때 사용하며 Step Into 버튼 바로 옆의 버튼을 클릭하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLElEQVQ4y3WS2W7bMBBF9QltEgRB28SSZYriIlKidlle0qAIUKD//zmnkOxuaftwMOSAvHOHnGjjDWmleSwkH2zGvRbcmYwbI3lncm685qHxPNSe+8rx3inug+WuUdw6wa1OuQmC21LwvtBEVXNAlxPStux0IL2y1TW6PeDmZ9z8QjGdsMMzfj5h+z3Z1CDaCtEE5BQQdVh1omSrEFmFsR1PG02cWOLYkGwLrOkJ/oBrz9hyT+n3KNWjVIsregrb49xAUQxrDG4kireWXFVr4im2JGnBkkt2DqV7fDkThjNVe6atj3g3os2Ath3KdGhzicb2BDtfBNOsQoeBNHerszUnSmw1UZ3ONM8vhP2JohkJ04AfekzTkfmGrLyQVx3V4nCTGOKdR9YdsdCr2CbRJKlDFwNlf6Q/fKbsjthyQvse7XqUH1Duul4oenLVEO0yT2jPjPNXQnUiFR6RB4SsyGTA2AFf77FhQhcdmWnIdYcsBpTtMbZBmwYh67WryNqeeXxlP75yGL/g3Mhh/kZdH1ncf3zM+PhJXMn49PgWucbHJ7l2F6miYzi+0oxnym7GLQ+sBrYirG3/ovgZl4vx1vzJ8nSLoJCO1Di2uSHOFLvMIUXFLqvYyfqfLBNwKfA3kc0bnta5cyuX6vY3F2/3l9x/BdPMs4n1enBztf3D/v8uXSbhej65rq9FI+MmlB2u9EhVI027xn+JxqllJzz58ruuQ+oaY1q0qtfJ+A5PP4W4AZizdQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title="image08"
+        src="/static/21f574205b67ecc32eec0f5017558e03/2bef9/08.png"
+        srcset="/static/21f574205b67ecc32eec0f5017558e03/6f3f2/08.png 256w,
+/static/21f574205b67ecc32eec0f5017558e03/01e7c/08.png 512w,
+/static/21f574205b67ecc32eec0f5017558e03/2bef9/08.png 1024w,
+/static/21f574205b67ecc32eec0f5017558e03/71c1d/08.png 1536w,
+/static/21f574205b67ecc32eec0f5017558e03/a878e/08.png 2048w,
+/static/21f574205b67ecc32eec0f5017558e03/f7171/08.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그 외의 다양한 기능들이 있다. 그것은 Step Out의 햄버거 버튼을 누르면 다양한 기능이 있으니 한번씩 사용 바란다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPUlEQVQ4y3WSaW7kNhBGdYOMPTAGg9hubZTEVStJSa12ujNAlhvk/hd5gdQTZNYfDywQrKrvY1XyYiV51/BsKj5qwZMsea8ED0rwi6p4sA0fBsuH3vLUGd7Zhqde835seDQljzLnoS95dCXvTEMy+Dd0v1LbQKkHCnUnVyPKX7DbDbd9wp6vmOVGu10xcaM6T4jQU/qB6jwgxgHZryR5ISlFhzaB15MizTRpqslyg9GRsX2j9VdMd6ZrV5QMSOlxNmJNpHXz/bQzg1tIssLQyB7nZl5TQ1ZY0tyQlY5GRVx/oV9udOHGNL7h3EqjZxoTqVWg0fGIlZnp7UayJxeiQ/WRonZk+b3gfudcZF4X1u3CEhZC71mjZ4meME5M/cjQDrS6Y3AD3swku8VMdMgwk9f3YqdMk5ct2s2MYWPZrgxho+1mTBuwO13E7bQB4zzGepQcSUrR0qgR4xZE1R6Wd3X7vagGlFlw44YZzkgbqPREowKVnT9b9UjtKevxyEu09sTpih9/Y+ou9N3Gn3//w+XyF4Vo+fVZ/M9LxfN31Mf5cqoPd0ljJuLlD6blSuc3lI0s6yekjuSiOxRnhfuKPTHN9Q8wJKJ2FNqRN5qTqGlUT1xuKBMpq/Gw8i37BtwbfU9i5cTrsXeONDNIOTH6N0Q9fKHEfKPK/LxgUbWcUnU8fE0lVTPg441ctD9N/G8TdnYRR/y5aaLdirIL0sw0OiD1xLz8fkzvRwXTwlBWHfvfKxuo9cg+2H1lyrrnXxR5hrDzahLiAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title="image09"
+        src="/static/3fc1a539dc1f7a13b18b702ceb6734e6/2bef9/09.png"
+        srcset="/static/3fc1a539dc1f7a13b18b702ceb6734e6/6f3f2/09.png 256w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/01e7c/09.png 512w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/2bef9/09.png 1024w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/71c1d/09.png 1536w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/a878e/09.png 2048w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/f7171/09.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Conditional Expression</h3>
+<p>해당 기능은 아래의 사진처럼 반복문의 특정 값에 디버깅을 보고 싶을 경우를 사용한다. 원하는 디버깅 포인트를 찍고 그 디버깅 포인트를 오른쪽 마우스 클릭을 하면 아래와 같이 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACJElEQVQ4y3WS127bMBhG9QRp2gwgTmxrc4qa1PDIQu76/s9zCslu0aTuxQEJQTr8qe8L1oUiriRPNufBZNyplBud8V1nXOmcH6XivrLc15a7ynJtBbeV5qaRfCsSroqEmyrjxqVcG0nQdM/oeoewnlQ3JGdi3aLbI+X+HXd8p5iOaH9E9XuknxAHTzbUyKmnOA7Yoce0e4I4VmR5jbE9m60mjAxhaAhjS6EHyvoVVR0R0iNEixDdidwjRY8Q/rz3CNkQRIlFqhrnRjahJUoKwsQSpQ5jB0r/Qj29YssJqf2CUB7xe1X+z/NUNATzJElWoeuBWLhlsjA2xGmJsiO23DO+/OT4/kE37tFuQpgBYcZPSDuehZEhmoXDjkQ4orggydwiLO3E6HbsumeO/pnRjXjTX2SwA0bUBGFSLCemsmUTKpRsOUwfCNWSZSVxqJCqoaoOaOXRsr1Ah1EdWVYRrMSWTZOyMmtu5T1rHWPUsPyGecokb7DlDlcdTtfT/X8YSOcJH9WWVfVIvBesuhUruyYyGWudkso5rANN94a2A1IPyDmEr+h+Ic1rgo3MiCrLthZsypiV2vKg1jzpCGVPL0r1d6L9P/tPQjnf372c+hedajMHEyfuy0efpZdYhKaYMM0bUVoudZlrs41Oa666i4JFLM8oT74cdBZaN6KLCaE6ctks6QrjMcWAczusm8hEQybaMw3K9Nh6h2sOS+HnBpTu5PgFmFOIIThHPmIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title="image10"
+        src="/static/871dafc800e4c54b0caf760652cadfd1/2bef9/10.png"
+        srcset="/static/871dafc800e4c54b0caf760652cadfd1/6f3f2/10.png 256w,
+/static/871dafc800e4c54b0caf760652cadfd1/01e7c/10.png 512w,
+/static/871dafc800e4c54b0caf760652cadfd1/2bef9/10.png 1024w,
+/static/871dafc800e4c54b0caf760652cadfd1/71c1d/10.png 1536w,
+/static/871dafc800e4c54b0caf760652cadfd1/a878e/10.png 2048w,
+/static/871dafc800e4c54b0caf760652cadfd1/f7171/10.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 여기서 마치 자바코드를 작성하듯이 사용하면 되는데 여기서 사용할 수 있는 scope는 디버깅 포인트로 찍은 그 라인에서 접근이 가능한 변수, 메서드, 객체등 모두 사용이 가능하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACR0lEQVQ4y3WS2ZLUOBBF/QXA0DQRFFSVd+2yJW/lrqW7aYIXHpj5/485hF1FxDAMDyekF53MVN5k6xR5K/lkaz6YintVcqcr/tIVr3TN20bxvrW8D5b71vLGCt61mrsoee0KXrmCu7bizpe8MZIk9hd0eEDYgVJHihu57tDdmeb4GX/+jJvP6OGMGo/IYUacBqopIOcRd56whxHTHUnyXFHVAWNHdntNmhnS1JDmFqcnmvCIak4IOVDXHUL0V+oBKQbEwu1ey0iSFRapAt4f2KWWrHCkhSUvPcYdaMcn4vyMa48oc0CZCanHX1DmSrkIl06KqkWHiVz4tbN9ZiiqBh8uhP6F08vffP32D09fvhOGF2x7wYXHG5cVH58QeiBZRswW4fRAITxZ7igqT1Z4VB2IMtI3B0Y/EmWgqZr/pa0bZOlJ0sIhzEQpO3apQqmO88MXpO6oqoY8VUgZadsTWvZo2f2BnqpqSTZizy6WbMyWd/KenckJzYwyEWl7pJmwfsa3J4Q5IPT4ByZKEUg+qj2b9iP5UbDpN2zslsxUbHVJtYzoT8T+GW2XZUxINfzObTllHUh2siJrLfsg2DU5G7Xng9rySWco+3OTw/rhUl8fi39JxH+FUvYY/3jNX3aNzbKYvPDUsqde8ree/fpYqPG32PwiNG7GxGeysiHNr4Fe5Et0fHgg9GficKYbL7h2RprhJh7WYut5K7QKrT+g3YxQ/Zp0oTqEGTBuJMQjcThh/LhSq4h2E87P2HamiSdsM68JaPzV8QMv3YlaVf+RogAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title="image11"
+        src="/static/c7091fb14af7e6acc87c8562ddf65a8a/2bef9/11.png"
+        srcset="/static/c7091fb14af7e6acc87c8562ddf65a8a/6f3f2/11.png 256w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/01e7c/11.png 512w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/2bef9/11.png 1024w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/71c1d/11.png 1536w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/a878e/11.png 2048w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/f7171/11.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACFUlEQVQ4y42S2Y7TQBBF/QcjJgKBNJN4b/dmu73HiRNm5gF44P8/54A7Zht44OFIJXfV1b2uCvalIq4lDybng854K1N2KuONyrnTgrfO8K42vG8s96XivpS8c4ZdW3BvUnYyYecydlXGnSkIXHdBuRlhelLVkGzEqkV3C/X5hXJ5xs4XZHdGj2fkMCPOPfnYoKeR8jJhp5GqWwjiWJLlDm0G9gdFGGnCUBPGBqtGKndF1Qui6MnzFiG6G3mPEDfyvEcWA509EUSJoZCOspzYh4YosV4sSku0naiGj7jjE9bNaDtS6AGhVvo/kHrEmRPBOpzmDtVMJKIkim+CcVoiZI8xR6bzF65Pz0zHGbOKyn5j8M5X1lqKluCwRlyHu4EwU+xDzSFSJGmNdWd0P1PNV5rTQjOfcJ4zdjwi2wHhego3UDQDiaoJ0rzCdVem0xf6/hljj6TCkRcOITsy1Xhy1ZLJDbUhm1+oxs8Fxgwsp8+ey/wJVy0s56907dVHf9wXnodH8RePG77eC98fFLqnHV6omwu2PqFlj7UL1j1R6Ik4rYizGv9r4ldEvxHfLiNIk5KHQ8E+VJ4krRBFTaEr0rz0TX7rif0vAis7DttWo+SXwGuhf337p2CSV97ZGukWy/gIP+q/xLaz+tkfbfX2HuhyRpppY0TIFqF7tB2869eOwmS925rCdCg7IHSL1j1q3f73LX8DS4iEO+TRMZQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/7013590e231168f959a844f226563945/2bef9/12.png"
+        srcset="/static/7013590e231168f959a844f226563945/6f3f2/12.png 256w,
+/static/7013590e231168f959a844f226563945/01e7c/12.png 512w,
+/static/7013590e231168f959a844f226563945/2bef9/12.png 1024w,
+/static/7013590e231168f959a844f226563945/71c1d/12.png 1536w,
+/static/7013590e231168f959a844f226563945/a878e/12.png 2048w,
+/static/7013590e231168f959a844f226563945/f7171/12.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Evaluate Expression</h3>
+<p>다음은 Evaluate Expression 기능이다. 아래와 같이 햄버거 버튼을 클릭하면 아래와 같이 창이 뜨는데 여기서 Evaluate Expression 버튼을 클릭하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACK0lEQVQ4y4WS6WrcQBCE9QQhPmIIeFdaXXNqdIyO0Z6xCf6T93+eL0hrOwcm+VFU0zDVVT0dbSpF2kgebclXU/BF5dzpghtd8EmX3Deah8by0FbcOs2tUzy0hnuvuLM5tyrlpsm5dTmfjSTq+jO63SPsQK47slek2iPaGT0d0eGI6gN5PVJ0A2U3ovY9om/JfE02OYq+wXQHojRVFGWLsSPbWJPsDEli2KUVSg34/gkfLlTNHudOuOpEVQVE2SPFgJIDSgxoOSKVJ9plFqlanAtsE8suq0hSS1bUSDvhwxPj8ZkmXBiOL/ThO+PhjOtnnA/U/bxiqUvridbHZYNuJzLhVmdXwQbb7JHjTD2fcOGAmQPNfEI2M7KdUG14h2gGtOmJloi7okGNgVRUxDtLvPSyCqUnlLlC6nFlbWakmpBq/ANaB7w5EOVLNO0xbkbKjrxsyEX7zoXoyEX3znl57f2NUnqU7ImMHQjjN4b+zOTPODtxuvzAtUd2mWOzlWziX9jGis1W8LgVK/9ex6klKrWnG59w3QFTz0gzMEzn61Q1IXR45wV56UnSal1LkprrVbzVi2CxuIglcWLYxGpd7OH0gmuO68csu1ycvmF5dO19jKhS/Wo1zd061dWHNXLdnsny+iqQ2pX/J7YKZmXNNtGr5YVL2eKHyz/dLP1l+Br79Sri14GRcXt0NaNsQJrlNHrC/hlthw8Fk8yyXobt0dWIMB5jBrTyFKLlJ6t0hRoq72cGAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title="image13"
+        src="/static/11249b31c1e6cc5c85ec09fe2d08ae51/2bef9/13.png"
+        srcset="/static/11249b31c1e6cc5c85ec09fe2d08ae51/6f3f2/13.png 256w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/01e7c/13.png 512w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/2bef9/13.png 1024w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/71c1d/13.png 1536w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/a878e/13.png 2048w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/f7171/13.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그것을 클릭하면 아래와 같이 나오는데</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACIElEQVQ4y4WS2W7bMBBF9QctnARBgdjaxVXUSi124qQpij72/7/mFJQNtwVa5OFAs5Gcq5no4DR5q9hbwRdT8qAL7nXJTld8MoKHzvDY1Tz2NXeNYecUj73lflTc1SU7lbHrCnZNwWeriLrxBd0dEdZT6J78SqZ7RLei52f0fEKNM0UzUXaeqvOo44gYW/K+IZ8d5dBg+iNRminKqsPYiUOsSVJDkhjSrEYpzzB+ZVheqdsjzr3g6sCCqEak8CjpUcKj5YRUA1GSWaTqcG7hEC7Ka0IsLxukmRnXd6bnb7TrG9P5B/74nel0xo0rblhoxnUj2JW9XphXLbqbyYXbOguxsmyo+5Wy9dhhxQ4LZduh+hHZLshuRnXLDdF6tPFEcWpIqw41LaRVTZxaQixIl3ogLxqy3G1UVU8lBoQckWr6C60XRnMiKoI0PWDcipQ9RdVQyp68dGSFu8ivgt+SFTVpUW+KSjlQiv43ckCKgchYzzK94f0r83DG2ZXX80+cO22dpqG70GXhNjvEnvYV+4Pg6SD++oZcJPRIP73j+hO2PWKMp9UnhFk32YdYso/FNixtF3TYhkSTZJffciP4mSXKc8c+VlvRpdBeJp1bDonisOUuxH8cDDX/IjJqIM7sVVL9IckH+Sivmq2z8PqlA7tJuNn/4VZ/3Yr4Go+MO6LscmVGqB5hPMqMtyW/vG5vftgMYUdU7RFhQ4xHqzD1jl/paIIH0+hjwgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image14"
+        title="image14"
+        src="/static/06f4cd4db3f1649792938c3ca22ade2e/2bef9/14.png"
+        srcset="/static/06f4cd4db3f1649792938c3ca22ade2e/6f3f2/14.png 256w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/01e7c/14.png 512w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/2bef9/14.png 1024w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/71c1d/14.png 1536w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/a878e/14.png 2048w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/28fe3/14.png 3446w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기서 해당 브레이크 포인트에서 연산이 가능한 코드들을 통해 확인이 가능하다. 아래의 예시는 진짜 데이터가 잘 들어갔는지 조회해보는 기능이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPElEQVQ4y3WS2W7bMBBF9QVFk3RBgcSytXAXTYmULNmJk27oY///a04hujUaoH244Doz9wxZPHSaKijuneCTbXmvG+5My41peWME74LlQ3B87DvuvOHWaz70lndRc+cabnXFTWi49Q1vraIY0hnTH5FupDED9W9VJiL7BTs/YuZHdJpp9hNiGBHDhD4m5NhTxz317BEpYOOJoqo0reixbmJTGrY7y3Zr2VUdWo/E9Jk4P9OFI94/4btHum5GioSSI0qNaDli1ITSkWJXO5Tu8X5ms3Xs6o5t5ajbPcodSMsXpqevhOWF6fyD8fid6XTGpwUfZ/ZpyVrnwkWKHCwCpj9QS5+drXttu8f1M41PmOGAHQ40oUcPCRVmVH9A9/NVMowYmyhWxF0b0NNMJTvKnaNcsXcWHxaMm5AmUTcBIQeEjEiVUHp6JWNmoj1RNCuaiVi/oNRAIwKtGqgbT+cX0uEbXf9EqyJCp3xetyGvWzlcJVREyUhh3cg8vTCmM4d4xruF5/NPOn+kaj378EwthovrylFuDfcPgoeN5H4jX41lZSmkiQzTZ3x/woUj1o4Ec0LoOVcOw3N2c0lo8/inJa9UXQoWTe15KBWbrclaN9eXLneGVvaE4YVWJarGI9QFeU243vmXCqcTZeVywN8HFzzNZqsz0upA2wllUi7234S12GdnV5TKZYTL2ly13skkpb4Uu6L/nq9xK7L1R0y3oN2cJXVE2hFtx384uFDkn+ESppuQNua+Gx1zi34BgnuDmGzaps0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image15"
+        title="image15"
+        src="/static/76fb376079167927139661289a55da9b/2bef9/15.png"
+        srcset="/static/76fb376079167927139661289a55da9b/6f3f2/15.png 256w,
+/static/76fb376079167927139661289a55da9b/01e7c/15.png 512w,
+/static/76fb376079167927139661289a55da9b/2bef9/15.png 1024w,
+/static/76fb376079167927139661289a55da9b/71c1d/15.png 1536w,
+/static/76fb376079167927139661289a55da9b/a878e/15.png 2048w,
+/static/76fb376079167927139661289a55da9b/f24c5/15.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Watch</h3>
+<p>다음은 watch기능이다. Evaluate Expression은 어플리케이션을 다시 시작하면 기존에 작성했던 것이 날라가는 단점이 존재한다. 그래서 뭔가 실시간으로 변화되는 모습이 보기 힘들다. 이것을 위해 만들어진 것이 watch 기능이다. 아래와 같이 우측 하단에 버튼을 클릭해 watch를 클릭한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACIUlEQVQ4y5WS2W6cQBBF+YIoHieWIsWeYe2VpqGBaWbGq6zkKW/5/185EcxmP+bhqIoSXG4tyX2tyLzkp634YUq+q4JbXXKjS77oim9ec+ctd61l5TQrp7hrDd+C5NYWrFTGjS9YuYKvRpJ0wxOm3SHqkcJ05PpIpgOindDxsKCGSNGMlN1A1Y2oXY8YWvLQkEdH2XtM2JNkuaIoPcaOPKw1m9Sw2RjSrEapgdC/EuIztd/h3COuPlDXEVH1SDFcUHJEqkCS5hapWpyLPGwsaV6zySx52SDtlhBfGQ9v+PjMcPhFH98Z90+4fsKFSNNPNH1c8sp2JMePPbrdkgu3ODvXrN8hx4lmesTFPWaK+OkR6Sdku0W1cUG2EeEHtOlJ5hbT0qPGSCZq1qllPdfyGqW3KHNELjGizbTUpRo/oXUkmD1JMbemA8ZNSNkxPxeiXVouKn+k9Nd8oaUQ3fLeQnVEikBizEAcXxj6Z7bhia7Z8f72l3H7m6LqyApPVl5JC7eM5CPzHirZLSaSSge68RXX7peZKdVTixGhI9JMC+d8jqXoL6LzWNLckReONhwohScp84b7teRho1nPpIZ1Zo7xxOZjnpmr2Mnh3O4sKOazqVXPOrNkhTv98f84C768/WE7vZPkVXN0d3FgL47OTj7F01ld3c+5ppQtQnUkxu3Q9YSycWG2LcyAMsMnsYuj3C6XIG2PrkeECcyLVfNSqoZ/lkeFZqPPz7wAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image16"
+        title="image16"
+        src="/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/2bef9/16.png"
+        srcset="/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/6f3f2/16.png 256w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/01e7c/16.png 512w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/2bef9/16.png 1024w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/71c1d/16.png 1536w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/a878e/16.png 2048w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/f7171/16.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 우리가 실시간으로 변화되는 것을 보고 싶은 변수나 객체를 적어준다. 그러면 실시간으로 확인이 가능하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACL0lEQVQ4y1WS227bOBRF9QWDNm0DFJhGsi6keBElkRIl23UTo0WAeZ7//5ZViI4d52HhkJvk4bllPzpFObT8awXfTcM3VfNFN3zWDf9owddB8zhYHkfLg9M8OMXjaPgaWr7YmgdV8nmoeXA1n0xL5udfmPGA7CK18VT6QqkDctyj158JNa3UfaTxM8JH1GFCzgNV6KnWDjENmHAkKytF3QwYG3nKNcXOUBSGsuxQesbPZ/z+BTsecP0J507YbkXICdnOtIlIqyJSBbJdZWnViHMrT4VlV3UUpaVsemQbWPwz+/hCCCfW5Q9LOLOPR3w/491M6CNhiMm22pNtjysxoP1KJd3N4ab1/Z7eB+a4MMXIEAPLvBA2bZ7x3uP9mJgmz9gFsnxnyGuHnCJFo8kLw6btKofu9rRuTUi3JKvcHtmtbywIe6HtVrw9ktWiZ5yeWY//EeffaLtQi+GNkaYZqZt3m9biwnZ+1YTwKBnIjJn5eXjleHjltH8lDCfO5/+Z4p+U/hbtVoKiNG/YD5SNo6zdZV91ZEIFxvmFbjig3Zo6OPbPNCqyq7fL/R2XGt/q3AyE+JtxOtPIkPSsqXp+5Iq80DwVGiE9Rk9UWzoyXBA+2Ur4m7Or3UZLyPGmZZ2ayLfQ6/cO57eU7lN8X1+jvC/JdZ9Vok+RpW5f67Wz5LuPD+9Jn97dT+u3zzLjDmk8lF0T27RLM6PM/CG9m7PKpglo7YTuItIEtsZqtZVn5C9xRYVZy9iHCQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image17"
+        title="image17"
+        src="/static/58d2d560bba7bb4ed0e2c787371750ab/2bef9/17.png"
+        srcset="/static/58d2d560bba7bb4ed0e2c787371750ab/6f3f2/17.png 256w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/01e7c/17.png 512w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/2bef9/17.png 1024w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/71c1d/17.png 1536w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/a878e/17.png 2048w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/f7171/17.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>정리</h3>
+<ul>
+<li>Debug 모드로 실행하기 (현재 위치의 메서드)
+<ul>
+<li>맥: <code>Ctrl + shift + d</code></li>
+<li>윈도우/리눅스: 없음</li>
+</ul>
+</li>
+<li>Debug 모드로 실행하기 (이전에 실행한 메서드)
+<ul>
+<li>맥: <code>Ctrl + d</code></li>
+<li>윈도우/리눅스: 없음</li>
+</ul>
+</li>
+<li>Resume
+<ul>
+<li>맥: <code>command + option + r</code></li>
+<li>윈도우/리눅스: <code>F9</code></li>
+</ul>
+</li>
+<li>Step Over
+<ul>
+<li>맥: <code>F8</code></li>
+<li>윈도우/리눅스: <code>F8</code></li>
+</ul>
+</li>
+<li>Step Into
+<ul>
+<li>맥: <code>F7</code></li>
+<li>윈도우/리눅스: <code>F7</code></li>
+</ul>
+</li>
+<li>Step Out
+<ul>
+<li>맥: <code>shift + F8</code></li>
+<li>윈도우/리눅스: <code>shift + F8</code></li>
+</ul>
+</li>
+<li>Evaluate Expression(브레이크된 상태에서 코드 사용하기)
+<ul>
+<li>맥: <code>option + F8</code></li>
+<li>윈도우/리눅스: <code>Alt + F8</code></li>
+</ul>
+</li>
+<li>watch (브레이크 이후의 코드 변경 확인하기)
+<ul>
+<li>맥: 없음</li>
+<li>윈도우/리눅스: 없음</li>
+</ul>
+</li>
+</ul></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intellij-디버깅/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-3fa8deb48819dbe669b2.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-17ce83b7f594c2c0c1fe.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2b2b484591700b0ae13f.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-7f5def86146fc29c9ead.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-7f5def86146fc29c9ead.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-3fa8deb48819dbe669b2.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-8bd3326d799737bed84d.js" async=""></script></body></html>

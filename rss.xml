@@ -1,4 +1,533 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Dec 2025 05:09:47 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] 리팩토링]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드 강의를 참조하여 작성한 글입니다. 리팩토링 - Extract…]]></description><link>https://sungbin.kr/intellij-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/</link><guid isPermaLink="false">https://sungbin.kr/intellij-리팩토링/</guid><pubDate>Sun, 07 Dec 2025 14:01:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Dec 2025 02:41:58 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] 디버깅]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%EB%94%94%EB%B2%84%EA%B9%85/</link><guid isPermaLink="false">https://sungbin.kr/intellij-디버깅/</guid><pubDate>Mon, 08 Dec 2025 11:28:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFH0lEQVQ4y3WTa1ATVxSAz2ZBSQgJAUFtRbQj9cVjExGBGVp1sNXWalEeUbJGUSsoVgoisLugiS9EYeoIODAyDj7AV1sQh44DQ2krbbU6jk5bf5ShyvhGiSGSRLJ7TycRHdrRH9+cs3fv+faeu/cCYVhaYlggDPs5YdjnhDFcIYzhnKRlyyUtm0MYQypGrVS/0Bkhm73o7cfZQcE79AreEavgnaAqstNjCq2gKbJBYKENQGJYGdGyQLTsSYkxoPg/XIwBHbpVP8xL3DlqXkE/aPL75so5Oyo4+6BvwbOl6mIC75UgNT6/jxpXYAEgjMEtGycxhn7Usoi61SLqVrtw1uohjM5wkdnrhwZjN6I0Z1O96jC+r9iOfcoSRDeqEoIa/oXwDj8Egfl9EJb3gAZJy4LEGNa7Zc6oleKNaYvJ9emfkesRy/D3qFTyU2Qa+T4qnXSEpyG7uNo2Kusm+mX8Kvmt/U1SZfxCAnPv47hC26mgnNujI7b0AiCTDi7G0IY6I3bPSBKVtDcCwCuIO9IyGaFlNBkekyj3HMrL8z4o+bRrMjeIU766e5358k6Yu+VpImMYwllr8FZkqruITAidiAfKy7GyqgoTPkh4JSKLPv2EZGSs8eTU8MdCko6TyG39Q7rN3ajN6XkMLu2q7Q6dEZ1zvnBdYwzEGyjiq/TFrkuX0Gq1YvjM8Ncrrq6uxq6uLk8uk9Ee8dQldWRuTi/5cONNaXLR3Rdgi8640Tc7Ex/FbJU6dWuJ72gfT0Febh42NTV5ch+fl2NlZWV4/vz5YaHME2cvqiTJm/4k0/O7Mbi47wk8npkfem++wXx/CYstsZlEMUruaWVrXh42NzeP3E80mUzY1tb2H+HCxFJM2PYPCRYeYDD/5B441s2AIRPNiSVjsG1dtCgDGZHL5djZ2YkWiwVDQkIwOzsba2pqsKenBw8dOvRSSHshBYDhSVUYarZIY7mHGMhbusFREDzVURjgEIUg7Ng8XXJPDg2d5Cmsq6vDuLg4jI6OxgsXLmBFRQWq1WqPkKIoTwxacRwnmG3SGK4PNYL1D3ByAZXOIg2KxUHO9qyZxNvL6/VxeSvDMo9QfwLHm+2ShnuKan7gKji4wImOQk27WBKArcYEpMDnjTKapj1QI2RuAvSNGGQeEv05C/oJzy8B4RWAz1YAmoK/bkzSI02pCKONJO5WY2JiMD4+HsOmhL1hpS/Fav0ZDDSLooqzolKwt8OdzXPo51vLwCWgd+m87Q/95H64/8B+qb6+Hmtra0lDQwPJzMp82zYQP/1ZojETUckNoIJ3tEDV4hOyxpR2OJfWsHD3gn1IU54r5v45rmHEETIyAs+zUn+OqM3o9OVsbuG3UJl0lK5ZfgwOL6svrVh6BDfNLXFkzTfjhsQ9uPajfWhYVIYfJ5eLEcYaKcx4DEOMp8lY43ckwNgiqVa1ulR5vagsdqKCt6Ocd9ZCZ+IuWJPeChXLj18pS2nEshVNuDe9xbmbvdhauv7HDQaho23BjssYa/oLI0y3XVNMj8QQ0zMx2GTHgB0uVBU70Jcf7FAITqOcd6pgX3IjlCY3Ru5NOSXuTD1ztTjldH7u8hNh7bmPoDSrC/AIQnzRz1uiuBu2MO5vDOF60X2IA7in99VF/QeVnHWWssgCCsEJct4JsCv1jJtp5tSzCUeX1MCOtG+A1zfBwaUnqVxjsxcCQpxwGcKFW5Mm83fa3uUfXAvinxr9Bau/WhgApTAI/sIAKAQH7Rb+C55z7Q0dffsdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png&quot;
+        srcset=&quot;/static/7f3c4c668ea513e0950e70c83ed0a8d8/6f3f2/banner.png 256w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/01e7c/banner.png 512w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/2bef9/banner.png 1024w,
+/static/7f3c4c668ea513e0950e70c83ed0a8d8/c1b63/banner.png 1200w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당 포스팅은 인프런의 &lt;a href=&quot;https://inf.run/doaZn&quot;&gt;IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드&lt;/a&gt; 강의를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;디버깅&lt;/h2&gt;
+&lt;p&gt;디버깅이란, 우리가 작성한 코드의 흐름이나 혹은 외부 라이브러리를 파볼때 유용한 기능이다. 그러면 인텔레지이에서 본격적으로 디버깅 기능에 대해 알아보도록 하겠다. 디버깅을 하기 위해서는 먼저 Break Point를 찍어야 한다. 그러면 코드의 흐름이 쭉 이어지다가 해당 포인트에 멈추게 된다. 인텔리제이에서 찍는 방법은 라인 넘버를 클릭하면 빨간 색 점이 생길 텐데 그것이 브레이크 포인트가 생긴 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.0625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACR0lEQVQ4y42S2W7bSBBF+QUDT+x4LMuxaIrqhb1xa1JcbNnJzFPy/79zAlKKEyADzDwcVBUKuF19q5K0tOS14dFr7q3k1gg+WskHq7iymuvSsIklm7bkryZwHQxXXnFVCf6sDvwRcq4bwU114IM3JKGeMWWPLUf2qmKv6wsNJj7jpzf89Bk3nHDHN+r5DRMnxNAguoq8a1Bjg2hrdDmQZJkm3Xt03ZEJS5oa0ifDU+awRU8dnvHxFVfOVGGk0B1StigRUfKMvOS+6BdBSy4binYgE34VWsjygHEjZXuinb5Q9Z+J8ZVQzig3Iu0RZY/vUdmB2j+TpLlB2EgqHI97xS7Xa8yEoy4nvsx/8+3lKy/9K1M50ZmOaCJxjT/pbc9oJ5I7veWh3rFx99wUN9yaWz6aGzZmiypa6mbmOJyo6hlvewrdYnRLUURM0WJ/1KqlMQPJtvi0Cu5nxbbZcufuuXMb7t0j2nZn7/oTPr5gqxEVjhg/oqtlmRMuHLHhiCp6KjOR7JRiH0p2XrBzBx7kEw8y5ZM8IIsOqSNCReSCjqhlKbpD6XMtL7U2PY2dSQrTE8oTWebJssBT3rDbR/JDhdaBXNYcfiEXF+SZg6jee1q2JNq01Is/YcD6ntz9Q+q+4quZvnII3SFU+59I3bIXJYlQDeJ9/OVLDVrXa37QPaqIqKL7XyxTJsGN6wvq4tfZkx/i/y629tXF29Xjdo25qEjscv22R9se45YNDpiwbG/CuIGDbH5Dmw5bDvhqwoQjoZwIfljP7DvihYrpSCrm/wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;image01&quot;
+        src=&quot;/static/f29c51f14873c3de9b27bd9fce8fda92/2bef9/01.png&quot;
+        srcset=&quot;/static/f29c51f14873c3de9b27bd9fce8fda92/6f3f2/01.png 256w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/01e7c/01.png 512w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/2bef9/01.png 1024w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/71c1d/01.png 1536w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/a878e/01.png 2048w,
+/static/f29c51f14873c3de9b27bd9fce8fda92/f24c5/01.png 3454w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;디버그 모드로 실행하기 - 즉시 실행&lt;/h3&gt;
+&lt;p&gt;이제 디버그 모드로 실행하는 방법을 알아보자. 디버그 모드는 디버그하려는 해당 메서드를 실행할 때 찾을 수 있는데 아래의 테스트 코드처럼 해당 테스트 코드의 실행 버튼을 클릭하면 2번째 항목에 디버깅 모드로 실행한다라는 옵션창이 있을 것이다. 그것을 클릭하면 된다. 단축키로는 &lt;code&gt;command + shift + d&lt;/code&gt;이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQUlEQVQ4y3WT2XLTQBBF9QNAWBIwtlFsLbNLM9pteQnFI///PYfSOElBAQ+n1KOa7rp9uyfZOsXeKza2ZGUK7lXOR13wXhe8VSXvreRzsDwEy31teWcEb03BXV1wV+W8cRkffM6HKufOSJLQXbDNhGtmMtWQ64Ys0qLHM+76HXd8wowzuj+j+hnRTZjTiD70FFOHmBvk0GLamSTLNOnOocLAvrQ8PprIbm/RdsQOF6w/UbkjQnQRKXpE2SNE/xwPSDmgVEuyzyxZ2aD7I5mo2O1dZJ/XKDdFdaF/ogoz0gxI/TdCDygz4u1MkuaG0vbsRM23TJLmmjRX7AoTC/j+TNWcKF2PsiNCdpSyQ6hnlrPqYuGgDyQruWXdpKzcmk/qngfzwL35xMquqfxIN15p+wtSteRloPJnQnvF1ecYLzh/xocrfXUh2aiUddiSnRTrbsMX95UvbsVXt0W7jsP8g3H6Th2OaHtTpe2EMn9i7AGrR5JUSLLakzpB6go2YsdGPLIVBWJpub3ghxOmntBLkjtiqwmh+ldevMxKT7IEPjyRZXVkl3ek2UCxDErV1OFEGM7YcMR3T3h/xTdTbP93CtGQ5TWJ0C1Nc6KqD9hqoHA/eHQ/oy9jcOSii8UL0cakG+3rcMrXIfXkhScpZUup+kiUr1qUaqJXhRz/uSb/Y1GahOpEIW9jv3ky/OGP+NfeLf9lTylvd24Knwu6+ohxU3wVy9dUB6yfqRaqY0x4afMFbcbo6bKftj7g/UxdHWJXvwDFconQMjgKCgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image02&quot;
+        title=&quot;image02&quot;
+        src=&quot;/static/702b411db13c3f45a39b0af17ccd5e76/2bef9/02.png&quot;
+        srcset=&quot;/static/702b411db13c3f45a39b0af17ccd5e76/6f3f2/02.png 256w,
+/static/702b411db13c3f45a39b0af17ccd5e76/01e7c/02.png 512w,
+/static/702b411db13c3f45a39b0af17ccd5e76/2bef9/02.png 1024w,
+/static/702b411db13c3f45a39b0af17ccd5e76/71c1d/02.png 1536w,
+/static/702b411db13c3f45a39b0af17ccd5e76/a878e/02.png 2048w,
+/static/702b411db13c3f45a39b0af17ccd5e76/f7171/02.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 실행하면 아래와 같이 코드의 흐름이 브레이크 포인트에 멈춰서 아래 무언가가 나오는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.84375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLElEQVQ4y32S2W7bMBBF9QdFnK4PdbRQkrmIErVRm2s7QRG0j/3/fzmFZCMt2rQPF3d4NRzOXE2wt4qkknw2OZ90yjsleKtSdirjjcq5s5KPjeVDbXnniu383mnumwO7QrCTMTsnuC8Fd0YSuPaIchO56RCqJrkhVg2qO1LMF+zyRDGfMcOFcjlj/Ew2taSdI21rsqkmbWqkmwjiWJJmDm169g+KMNKEoSaKC4z2NOUXyu6CqRaqakZKj5QdtvAUxmPt8MK1HQnC2HCQbhP2oSFKClYtEhapPGW1UA9nXHema45UdkQZjzI9UvcofWVtPHWxXAuKzKHqgSS3W2erlqQVxk2405n28kQ9n7DtiPUTph9QTU9WtmTVFQfX49YOH9YRRUne9oSpJowMqxYLiyoGnD/hj49U/QlTTUjrkcWAtMMWq/W8aasVLYHISuruzLh8x7kjSVqS5g6RVZu3SntsM2PciCo6MtVwUB154TkYj9YtUrekWb1NFRjjWcZnlumZ2X+ltDOXyw+a9pE4rbZu96HiYUWkXxC+xNeJosQQi5JA2Z7p/I1uutCMJ6piwOgRkTdbwmtYf9xrWL0P0twidEkiDWEmEZklTyuSbB273gqLvP4tbogSe92EP4qtHJhDy/62d1F8TQwTc+W/oG8w/+wySLJy82dN3LxZL0b/v7R+++XlLb49Gmg7Ic1wgyeXDbnuNn6t6Nq9SEsOpkUWHblq0LpDyWbbjp8CAoZmXsOU/wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image03&quot;
+        title=&quot;image03&quot;
+        src=&quot;/static/86b97627de7acdb1ab57155128d22238/2bef9/03.png&quot;
+        srcset=&quot;/static/86b97627de7acdb1ab57155128d22238/6f3f2/03.png 256w,
+/static/86b97627de7acdb1ab57155128d22238/01e7c/03.png 512w,
+/static/86b97627de7acdb1ab57155128d22238/2bef9/03.png 1024w,
+/static/86b97627de7acdb1ab57155128d22238/71c1d/03.png 1536w,
+/static/86b97627de7acdb1ab57155128d22238/a878e/03.png 2048w,
+/static/86b97627de7acdb1ab57155128d22238/4b7ac/03.png 3444w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;디버그 모드로 실행하기 - 이전 실행&lt;/h3&gt;
+&lt;p&gt;그러면 만약 다른 함수로 포커스를 두고 이전에 실행한 코드를 디버그 모드로 실행하려면 어떻게 해야할까? 이건 이전에 이전 실행과 같다. 단축키로 &lt;code&gt;command + d&lt;/code&gt;를 누르거나 IDE의 우측 상단의 빨간색 버튼을 클릭하면 된다.&lt;/p&gt;
+&lt;h3&gt;Resume&lt;/h3&gt;
+&lt;p&gt;그러면 디버그 모드의 창에 대해 살펴보도록 하자. 위의 사진에 우측을 보면 이것을 우리는 stack trace라고 한다. 즉, 해당 break point까지 코드 흐름이 흐르기까지 어떻게 코드가 변경되고 거쳐왔는지 알 수 있는 역사라고 보면 좋을 것 같다.&lt;/p&gt;
+&lt;p&gt;다음으로 Thread&amp;#x26;Variable이라는 창이 있는데 우리는 회사 코드라던지 외부 라이브러리를 분석해볼 때 해당 창을 보고 코드가 어떻게 변화하는지 쉽게 알 수 있다.&lt;/p&gt;
+&lt;p&gt;그러면 이제 디버그 모드만의 기능을 알아보도록 하겠다. 먼저, Resume기능이다. 해당 기능은 아래의 사진처럼 초록색 버튼을 클릭하면 되는데 해당 기능은 다음 break point로 이동하는 기능이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACJ0lEQVQ4y3WT2W7bMBBF9QdtErRBUSexFkriKpJavQlxCvSt//85p5Ds7u7DwQyXuQSHl8mTlWS+ZmNKPmnBB1nwoAR3SvBOldzZmsdoeQyWD96s449B89DW3JuCe5lxFwruXcF7U5PEfkaHPZUdKHQkVxcy1aL6E/Z4xh2/YA+v2P0bcX7DTifKQ4cYAkUfKQ8R0UZk2JNkuaQQHm0Gnl8U21Sz3WrSzGD0SNvMuP4V4w/4Zo+UA1L2ODNizYhz0yXaieh2JGluqGVYF563hjS3bDNDWjikGmn8iTCdCf2Zvp1p3B5lJpQZkXpEXqM2E9EeSZbiXHhUGMkrR5pdBJc56/e080z/eqbbn/DtSBhGXDdgQkft4k+U74h2IlmumAqP7Cey6iL2kiqywmHtwNROzLsjYxzpdMRLT5Aer8Iao2wIC3WDqQJJIRpq3WKbPUI0q5CoI0UZEFVE2R2uO6LjAelGhOmp9UjpdtR2QtkBaXqKqiMvPYlWPdPSnzjTxgPGTJxO3/Bh5iXVbDaCz1eWfPNU3uTpuVpvl9SmYzx9pZ1m/HDE6gGtJnIRSXN3k6Vwm+kbGBJRWXLtyGrNtpQUpaMSgbwMFFX7D6Lq1rYsbrhFYuqO59V3ljT7cfrv6L/yy/i/gnnZ8LJV68alZ2th+iu/VXRxwnVPes2vhyZ6MardIc20mrRSLZXukbqnlO36Y/4Qyw2rM0y3vnClW7TuUXJpSeA7dGSEoIFpr74AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;image04&quot;
+        src=&quot;/static/3b9e09a13f08e2b9480598b0753d18d5/2bef9/04.png&quot;
+        srcset=&quot;/static/3b9e09a13f08e2b9480598b0753d18d5/6f3f2/04.png 256w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/01e7c/04.png 512w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/2bef9/04.png 1024w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/71c1d/04.png 1536w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/a878e/04.png 2048w,
+/static/3b9e09a13f08e2b9480598b0753d18d5/f7171/04.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQElEQVQ4y3WS647TPBCGcweIBb6D2G3TxDnZjh3bObhpWrpC8AOJ+7+cBzUpaAXLj0eeGY1G83reZGckedfwpCv+VwUfpOC9LHiQJW9kxVvT8F8w/OsNH1y75v84xbtQ89AKHpqMByd4ZwVvdUPi+jPSzVR6QEhPfieTATmcaU/PmOUz7emKjs/Y5YqeTpRzTzE4it5Tzp4ieBo3k2RZQ1E6lB7Z7SXpQZGmikPWotVEsBfscKXtFpw9IZsJ2QyYdqLVE9ZEzO1tI94cSdJMUzcOYyK7VHPIW261TBhqFTHujDs+043PhHChNfNar9VEKUcqNa00OuLaZRsoSof0kbwy62brwMJi9MA8zczxzDEcOfmRyzRwmXpOfSB6z2gdve6I1hPbSLK/SRSWqh9JC0V60OwPklxYjJ8J88Lx0xU/n/FxwQwTph8ww4gdR+wtDhtKBxJRWvxw5bh8w7kzeWEpao+oHEXpkTpiwoL2M40eKWRP1YyUOq5SpRpo1IAoA3nRkWg1copfOB2/Mo+f10Nczt/p3GWV/vhU8vFx4xY/7ioed/f4BU/7au1PmnZgWr4Q4oVuWGjlgFRHssJtF7+Rbe/+zq/aS9aaJikqQ64MWa3Yl/Vqn85+QtT9eulM2D+4OeFvJLru2a2+M6RZS1V7VN2Tlw5RhY3Sb9zzgzAccv36wLy07FO5rv1T0i6Vm7RM/8ZPifqF/Ht870mUmVdTbkxUTaBSI7UMa8NrW4iyo9Y9t/+vZECpAdkEisrxAya+hmJKPwbjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image04&quot;
+        title=&quot;image04&quot;
+        src=&quot;/static/315c7c8fa92496fcc2d27b6e8987a7c1/2bef9/05.png&quot;
+        srcset=&quot;/static/315c7c8fa92496fcc2d27b6e8987a7c1/6f3f2/05.png 256w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/01e7c/05.png 512w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/2bef9/05.png 1024w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/71c1d/05.png 1536w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/a878e/05.png 2048w,
+/static/315c7c8fa92496fcc2d27b6e8987a7c1/f24c5/05.png 3454w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Step Over&lt;/h3&gt;
+&lt;p&gt;다음은 Step Over이다. 해당 기능은 아래 사진처럼 보라색 화살표 버튼을 클릭하면 되고 해당 기능은 다음 라인으로 넘어가는 기능이다. 즉, break point를 찍지 않더라도 다음 라인으로 넘어가서 코드의 흐름을 볼 수 있는 기능이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMUlEQVQ4y3WS2ZKcOBBF+QNPt8N2OHopNgFaWQRCRRW92BHzNv//OWcCqHmZbj+cSG03lVfK5MlK8q7h0VT81IJvsuSrEtwpwRdVcWcbfgyWH73lW2f2+fde89U33JuSe5lz15fcu5K/TEMyTC/ofqG2gVIPFOogVx41rdjrO+36G3t5wy2/GV5+4eJKdRkRoUdMnvriEeOA6heSvJCUokObwPNJkWaaNNVkucHoGd+utOMbprvQtQtSBqSccGbGmpnW3aKNDO5MkhWGRvY4F3lODVlhSXNDVjoaNeP6lf78Thfe8f4FaxcaHWnMTK0CjZ73sTKR3l5JNnEhOlQ/U9SOLD8SbmttG4nLmeW6EsOZ8zjychlZ4kjwI2PvGdqBVncMbmAykWSzmIkOOUXy+kh2ytReoXYRH66cr28M4UrXR1w3YduA7WbcRhswbsLYCSU9SSlaGuWx7UJVdeSlQzQDou4R9bBbceMVM1yQdkbokUYFKhtvVieknihrv7tKtJ6YxzeCf8V3C1rPrNd/8MPKKdM8PFU8PIqDp4rHD9R7fDrVu7ukMSNx/RsfX2mnC04HrF4oKk9WuE/ZhGmuP8GQiNpSaEfeaNJKUtcdWgZEM1FWw27l/xyJ7ackphl53vvOkuXH7afbbR85Ktl69I8Ji6rllKr94PZm/4lP2RE/Ex37t/PZbXzTJdotKHtGmojcm9VT6+PnKuk/VJMWhrLq2N5e2UCtPdvHbi1T1j3/AuKUhUQdqpuzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image06&quot;
+        title=&quot;image06&quot;
+        src=&quot;/static/5320486080382166df8a3fa04afb87f0/2bef9/06.png&quot;
+        srcset=&quot;/static/5320486080382166df8a3fa04afb87f0/6f3f2/06.png 256w,
+/static/5320486080382166df8a3fa04afb87f0/01e7c/06.png 512w,
+/static/5320486080382166df8a3fa04afb87f0/2bef9/06.png 1024w,
+/static/5320486080382166df8a3fa04afb87f0/71c1d/06.png 1536w,
+/static/5320486080382166df8a3fa04afb87f0/a878e/06.png 2048w,
+/static/5320486080382166df8a3fa04afb87f0/f7171/06.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Step Into&lt;/h3&gt;
+&lt;p&gt;다음은 Step Into 기능이다. 해당 기능은 break point를 찍지는 않았지만 해당 코드 내부로 들어가서 어떻게 동작이 이루어지는지 궁금할 때 사용하는 기능이다. 해당 기능은 아래의 사진처럼 노란색 버튼을 클릭하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAklEQVQ4y5WS+2rbMByF/QZdW1oYtInvujuyFd8Sp2lL2dhg7/8437CT0m50hf3xIZB+OhzpnOjeKVIvubMlX03Bjcq51gWXuuBCC75YwW1tufWGS6e4sIIbr7luJFc250qlXPqcqyrni5VETfuAqXcI15GbhkyfSHXADY+E5xf89EQ1PWL6J1S3R3UjYmop+5qyC4gpILuACXuiNFPkhcfYjtVaEyeGODYkqUPpjmo70Wz3uM0Ou5nQqkeILaJsEeINKTuU3hIlmUWqmqoaWMWWJHPEqSXNq0XQ+wN1+4g2Iz7saMIOY3uEbJGqRZxRqsebPdF8OSs9uhnIRLU4W/YKj/N7qnGi2R+xYUA3PbJuETP+T1TT4d1AtDwxrxDbjrgwxIllnRiSrELbgTocCcMRXfVI1yHtP3A9uaiJ8nJDvT0yTj9p6geyYkMhG0pRU4hmeVYpt+RlQ/EJpQjkpScypmPafeNh/4NpfMHansP0i9AciFPD3Uos3J+5+4v7d+v8VZGyHePhO+34jGt2VKbDmpH1+S9PmFP6nzHPzIKlrCg3DYV1pEojpEeKsBzOif8vkVMtq8Se031z9Vqfj/hUMCs3rGK9WF4nJ9tz0u9F34u/1mqeXebPrVifzyNT7dBuRNkBNRdWB4Rpl7Q/chNndklT2i3adQgTMKZFq7DU5jfvJIMxZnnG0QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image07&quot;
+        title=&quot;image07&quot;
+        src=&quot;/static/c42f607ce448c3b413119ea5cf577ed3/2bef9/07.png&quot;
+        srcset=&quot;/static/c42f607ce448c3b413119ea5cf577ed3/6f3f2/07.png 256w,
+/static/c42f607ce448c3b413119ea5cf577ed3/01e7c/07.png 512w,
+/static/c42f607ce448c3b413119ea5cf577ed3/2bef9/07.png 1024w,
+/static/c42f607ce448c3b413119ea5cf577ed3/71c1d/07.png 1536w,
+/static/c42f607ce448c3b413119ea5cf577ed3/a878e/07.png 2048w,
+/static/c42f607ce448c3b413119ea5cf577ed3/f7171/07.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Step Out&lt;/h3&gt;
+&lt;p&gt;다음은 Step Out이다. 해당 기능은 안으로 들어와서 내부 동작을 확인했고 이제 나가고 다시 원래 break point로 돌아가고 싶을 때 사용하며 Step Into 버튼 바로 옆의 버튼을 클릭하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLElEQVQ4y3WS2W7bMBBF9QltEgRB28SSZYriIlKidlle0qAIUKD//zmnkOxuaftwMOSAvHOHnGjjDWmleSwkH2zGvRbcmYwbI3lncm685qHxPNSe+8rx3inug+WuUdw6wa1OuQmC21LwvtBEVXNAlxPStux0IL2y1TW6PeDmZ9z8QjGdsMMzfj5h+z3Z1CDaCtEE5BQQdVh1omSrEFmFsR1PG02cWOLYkGwLrOkJ/oBrz9hyT+n3KNWjVIsregrb49xAUQxrDG4kireWXFVr4im2JGnBkkt2DqV7fDkThjNVe6atj3g3os2Ath3KdGhzicb2BDtfBNOsQoeBNHerszUnSmw1UZ3ONM8vhP2JohkJ04AfekzTkfmGrLyQVx3V4nCTGOKdR9YdsdCr2CbRJKlDFwNlf6Q/fKbsjthyQvse7XqUH1Duul4oenLVEO0yT2jPjPNXQnUiFR6RB4SsyGTA2AFf77FhQhcdmWnIdYcsBpTtMbZBmwYh67WryNqeeXxlP75yGL/g3Mhh/kZdH1ncf3zM+PhJXMn49PgWucbHJ7l2F6miYzi+0oxnym7GLQ+sBrYirG3/ovgZl4vx1vzJ8nSLoJCO1Di2uSHOFLvMIUXFLqvYyfqfLBNwKfA3kc0bnta5cyuX6vY3F2/3l9x/BdPMs4n1enBztf3D/v8uXSbhej65rq9FI+MmlB2u9EhVI027xn+JxqllJzz58ruuQ+oaY1q0qtfJ+A5PP4W4AZizdQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image08&quot;
+        title=&quot;image08&quot;
+        src=&quot;/static/21f574205b67ecc32eec0f5017558e03/2bef9/08.png&quot;
+        srcset=&quot;/static/21f574205b67ecc32eec0f5017558e03/6f3f2/08.png 256w,
+/static/21f574205b67ecc32eec0f5017558e03/01e7c/08.png 512w,
+/static/21f574205b67ecc32eec0f5017558e03/2bef9/08.png 1024w,
+/static/21f574205b67ecc32eec0f5017558e03/71c1d/08.png 1536w,
+/static/21f574205b67ecc32eec0f5017558e03/a878e/08.png 2048w,
+/static/21f574205b67ecc32eec0f5017558e03/f7171/08.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 외의 다양한 기능들이 있다. 그것은 Step Out의 햄버거 버튼을 누르면 다양한 기능이 있으니 한번씩 사용 바란다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPUlEQVQ4y3WSaW7kNhBGdYOMPTAGg9hubZTEVStJSa12ujNAlhvk/hd5gdQTZNYfDywQrKrvY1XyYiV51/BsKj5qwZMsea8ED0rwi6p4sA0fBsuH3vLUGd7Zhqde835seDQljzLnoS95dCXvTEMy+Dd0v1LbQKkHCnUnVyPKX7DbDbd9wp6vmOVGu10xcaM6T4jQU/qB6jwgxgHZryR5ISlFhzaB15MizTRpqslyg9GRsX2j9VdMd6ZrV5QMSOlxNmJNpHXz/bQzg1tIssLQyB7nZl5TQ1ZY0tyQlY5GRVx/oV9udOHGNL7h3EqjZxoTqVWg0fGIlZnp7UayJxeiQ/WRonZk+b3gfudcZF4X1u3CEhZC71mjZ4meME5M/cjQDrS6Y3AD3swku8VMdMgwk9f3YqdMk5ct2s2MYWPZrgxho+1mTBuwO13E7bQB4zzGepQcSUrR0qgR4xZE1R6Wd3X7vagGlFlw44YZzkgbqPREowKVnT9b9UjtKevxyEu09sTpih9/Y+ou9N3Gn3//w+XyF4Vo+fVZ/M9LxfN31Mf5cqoPd0ljJuLlD6blSuc3lI0s6yekjuSiOxRnhfuKPTHN9Q8wJKJ2FNqRN5qTqGlUT1xuKBMpq/Gw8i37BtwbfU9i5cTrsXeONDNIOTH6N0Q9fKHEfKPK/LxgUbWcUnU8fE0lVTPg441ctD9N/G8TdnYRR/y5aaLdirIL0sw0OiD1xLz8fkzvRwXTwlBWHfvfKxuo9cg+2H1lyrrnXxR5hrDzahLiAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image09&quot;
+        title=&quot;image09&quot;
+        src=&quot;/static/3fc1a539dc1f7a13b18b702ceb6734e6/2bef9/09.png&quot;
+        srcset=&quot;/static/3fc1a539dc1f7a13b18b702ceb6734e6/6f3f2/09.png 256w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/01e7c/09.png 512w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/2bef9/09.png 1024w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/71c1d/09.png 1536w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/a878e/09.png 2048w,
+/static/3fc1a539dc1f7a13b18b702ceb6734e6/f7171/09.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Conditional Expression&lt;/h3&gt;
+&lt;p&gt;해당 기능은 아래의 사진처럼 반복문의 특정 값에 디버깅을 보고 싶을 경우를 사용한다. 원하는 디버깅 포인트를 찍고 그 디버깅 포인트를 오른쪽 마우스 클릭을 하면 아래와 같이 나온다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACJElEQVQ4y3WS127bMBhG9QRp2gwgTmxrc4qa1PDIQu76/s9zCslu0aTuxQEJQTr8qe8L1oUiriRPNufBZNyplBud8V1nXOmcH6XivrLc15a7ynJtBbeV5qaRfCsSroqEmyrjxqVcG0nQdM/oeoewnlQ3JGdi3aLbI+X+HXd8p5iOaH9E9XuknxAHTzbUyKmnOA7Yoce0e4I4VmR5jbE9m60mjAxhaAhjS6EHyvoVVR0R0iNEixDdidwjRY8Q/rz3CNkQRIlFqhrnRjahJUoKwsQSpQ5jB0r/Qj29YssJqf2CUB7xe1X+z/NUNATzJElWoeuBWLhlsjA2xGmJsiO23DO+/OT4/kE37tFuQpgBYcZPSDuehZEhmoXDjkQ4orggydwiLO3E6HbsumeO/pnRjXjTX2SwA0bUBGFSLCemsmUTKpRsOUwfCNWSZSVxqJCqoaoOaOXRsr1Ah1EdWVYRrMSWTZOyMmtu5T1rHWPUsPyGecokb7DlDlcdTtfT/X8YSOcJH9WWVfVIvBesuhUruyYyGWudkso5rANN94a2A1IPyDmEr+h+Ic1rgo3MiCrLthZsypiV2vKg1jzpCGVPL0r1d6L9P/tPQjnf372c+hedajMHEyfuy0efpZdYhKaYMM0bUVoudZlrs41Oa666i4JFLM8oT74cdBZaN6KLCaE6ctks6QrjMcWAczusm8hEQybaMw3K9Nh6h2sOS+HnBpTu5PgFmFOIIThHPmIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image10&quot;
+        title=&quot;image10&quot;
+        src=&quot;/static/871dafc800e4c54b0caf760652cadfd1/2bef9/10.png&quot;
+        srcset=&quot;/static/871dafc800e4c54b0caf760652cadfd1/6f3f2/10.png 256w,
+/static/871dafc800e4c54b0caf760652cadfd1/01e7c/10.png 512w,
+/static/871dafc800e4c54b0caf760652cadfd1/2bef9/10.png 1024w,
+/static/871dafc800e4c54b0caf760652cadfd1/71c1d/10.png 1536w,
+/static/871dafc800e4c54b0caf760652cadfd1/a878e/10.png 2048w,
+/static/871dafc800e4c54b0caf760652cadfd1/f7171/10.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 여기서 마치 자바코드를 작성하듯이 사용하면 되는데 여기서 사용할 수 있는 scope는 디버깅 포인트로 찍은 그 라인에서 접근이 가능한 변수, 메서드, 객체등 모두 사용이 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACR0lEQVQ4y3WS2ZLUOBBF/QXA0DQRFFSVd+2yJW/lrqW7aYIXHpj5/485hF1FxDAMDyekF53MVN5k6xR5K/lkaz6YintVcqcr/tIVr3TN20bxvrW8D5b71vLGCt61mrsoee0KXrmCu7bizpe8MZIk9hd0eEDYgVJHihu57tDdmeb4GX/+jJvP6OGMGo/IYUacBqopIOcRd56whxHTHUnyXFHVAWNHdntNmhnS1JDmFqcnmvCIak4IOVDXHUL0V+oBKQbEwu1ey0iSFRapAt4f2KWWrHCkhSUvPcYdaMcn4vyMa48oc0CZCanHX1DmSrkIl06KqkWHiVz4tbN9ZiiqBh8uhP6F08vffP32D09fvhOGF2x7wYXHG5cVH58QeiBZRswW4fRAITxZ7igqT1Z4VB2IMtI3B0Y/EmWgqZr/pa0bZOlJ0sIhzEQpO3apQqmO88MXpO6oqoY8VUgZadsTWvZo2f2BnqpqSTZizy6WbMyWd/KenckJzYwyEWl7pJmwfsa3J4Q5IPT4ByZKEUg+qj2b9iP5UbDpN2zslsxUbHVJtYzoT8T+GW2XZUxINfzObTllHUh2siJrLfsg2DU5G7Xng9rySWco+3OTw/rhUl8fi39JxH+FUvYY/3jNX3aNzbKYvPDUsqde8ree/fpYqPG32PwiNG7GxGeysiHNr4Fe5Et0fHgg9GficKYbL7h2RprhJh7WYut5K7QKrT+g3YxQ/Zp0oTqEGTBuJMQjcThh/LhSq4h2E87P2HamiSdsM68JaPzV8QMv3YlaVf+RogAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image11&quot;
+        title=&quot;image11&quot;
+        src=&quot;/static/c7091fb14af7e6acc87c8562ddf65a8a/2bef9/11.png&quot;
+        srcset=&quot;/static/c7091fb14af7e6acc87c8562ddf65a8a/6f3f2/11.png 256w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/01e7c/11.png 512w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/2bef9/11.png 1024w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/71c1d/11.png 1536w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/a878e/11.png 2048w,
+/static/c7091fb14af7e6acc87c8562ddf65a8a/f7171/11.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACFUlEQVQ4y42S2Y7TQBBF/QcjJgKBNJN4b/dmu73HiRNm5gF44P8/54A7Zht44OFIJXfV1b2uCvalIq4lDybng854K1N2KuONyrnTgrfO8K42vG8s96XivpS8c4ZdW3BvUnYyYecydlXGnSkIXHdBuRlhelLVkGzEqkV3C/X5hXJ5xs4XZHdGj2fkMCPOPfnYoKeR8jJhp5GqWwjiWJLlDm0G9gdFGGnCUBPGBqtGKndF1Qui6MnzFiG6G3mPEDfyvEcWA509EUSJoZCOspzYh4YosV4sSku0naiGj7jjE9bNaDtS6AGhVvo/kHrEmRPBOpzmDtVMJKIkim+CcVoiZI8xR6bzF65Pz0zHGbOKyn5j8M5X1lqKluCwRlyHu4EwU+xDzSFSJGmNdWd0P1PNV5rTQjOfcJ4zdjwi2wHhego3UDQDiaoJ0rzCdVem0xf6/hljj6TCkRcOITsy1Xhy1ZLJDbUhm1+oxs8Fxgwsp8+ey/wJVy0s56907dVHf9wXnodH8RePG77eC98fFLqnHV6omwu2PqFlj7UL1j1R6Ik4rYizGv9r4ldEvxHfLiNIk5KHQ8E+VJ4krRBFTaEr0rz0TX7rif0vAis7DttWo+SXwGuhf337p2CSV97ZGukWy/gIP+q/xLaz+tkfbfX2HuhyRpppY0TIFqF7tB2869eOwmS925rCdCg7IHSL1j1q3f73LX8DS4iEO+TRMZQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image12&quot;
+        title=&quot;image12&quot;
+        src=&quot;/static/7013590e231168f959a844f226563945/2bef9/12.png&quot;
+        srcset=&quot;/static/7013590e231168f959a844f226563945/6f3f2/12.png 256w,
+/static/7013590e231168f959a844f226563945/01e7c/12.png 512w,
+/static/7013590e231168f959a844f226563945/2bef9/12.png 1024w,
+/static/7013590e231168f959a844f226563945/71c1d/12.png 1536w,
+/static/7013590e231168f959a844f226563945/a878e/12.png 2048w,
+/static/7013590e231168f959a844f226563945/f7171/12.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Evaluate Expression&lt;/h3&gt;
+&lt;p&gt;다음은 Evaluate Expression 기능이다. 아래와 같이 햄버거 버튼을 클릭하면 아래와 같이 창이 뜨는데 여기서 Evaluate Expression 버튼을 클릭하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACK0lEQVQ4y4WS6WrcQBCE9QQhPmIIeFdaXXNqdIyO0Z6xCf6T93+eL0hrOwcm+VFU0zDVVT0dbSpF2kgebclXU/BF5dzpghtd8EmX3Deah8by0FbcOs2tUzy0hnuvuLM5tyrlpsm5dTmfjSTq+jO63SPsQK47slek2iPaGT0d0eGI6gN5PVJ0A2U3ovY9om/JfE02OYq+wXQHojRVFGWLsSPbWJPsDEli2KUVSg34/gkfLlTNHudOuOpEVQVE2SPFgJIDSgxoOSKVJ9plFqlanAtsE8suq0hSS1bUSDvhwxPj8ZkmXBiOL/ThO+PhjOtnnA/U/bxiqUvridbHZYNuJzLhVmdXwQbb7JHjTD2fcOGAmQPNfEI2M7KdUG14h2gGtOmJloi7okGNgVRUxDtLvPSyCqUnlLlC6nFlbWakmpBq/ANaB7w5EOVLNO0xbkbKjrxsyEX7zoXoyEX3znl57f2NUnqU7ImMHQjjN4b+zOTPODtxuvzAtUd2mWOzlWziX9jGis1W8LgVK/9ex6klKrWnG59w3QFTz0gzMEzn61Q1IXR45wV56UnSal1LkprrVbzVi2CxuIglcWLYxGpd7OH0gmuO68csu1ycvmF5dO19jKhS/Wo1zd061dWHNXLdnsny+iqQ2pX/J7YKZmXNNtGr5YVL2eKHyz/dLP1l+Br79Sri14GRcXt0NaNsQJrlNHrC/hlthw8Fk8yyXobt0dWIMB5jBrTyFKLlJ6t0hRoq72cGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image13&quot;
+        title=&quot;image13&quot;
+        src=&quot;/static/11249b31c1e6cc5c85ec09fe2d08ae51/2bef9/13.png&quot;
+        srcset=&quot;/static/11249b31c1e6cc5c85ec09fe2d08ae51/6f3f2/13.png 256w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/01e7c/13.png 512w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/2bef9/13.png 1024w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/71c1d/13.png 1536w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/a878e/13.png 2048w,
+/static/11249b31c1e6cc5c85ec09fe2d08ae51/f7171/13.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그것을 클릭하면 아래와 같이 나오는데&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACIElEQVQ4y4WS2W7bMBBF9QctnARBgdjaxVXUSi124qQpij72/7/mFJQNtwVa5OFAs5Gcq5no4DR5q9hbwRdT8qAL7nXJTld8MoKHzvDY1Tz2NXeNYecUj73lflTc1SU7lbHrCnZNwWeriLrxBd0dEdZT6J78SqZ7RLei52f0fEKNM0UzUXaeqvOo44gYW/K+IZ8d5dBg+iNRminKqsPYiUOsSVJDkhjSrEYpzzB+ZVheqdsjzr3g6sCCqEak8CjpUcKj5YRUA1GSWaTqcG7hEC7Ka0IsLxukmRnXd6bnb7TrG9P5B/74nel0xo0rblhoxnUj2JW9XphXLbqbyYXbOguxsmyo+5Wy9dhhxQ4LZduh+hHZLshuRnXLDdF6tPFEcWpIqw41LaRVTZxaQixIl3ogLxqy3G1UVU8lBoQckWr6C60XRnMiKoI0PWDcipQ9RdVQyp68dGSFu8ivgt+SFTVpUW+KSjlQiv43ckCKgchYzzK94f0r83DG2ZXX80+cO22dpqG70GXhNjvEnvYV+4Pg6SD++oZcJPRIP73j+hO2PWKMp9UnhFk32YdYso/FNixtF3TYhkSTZJffciP4mSXKc8c+VlvRpdBeJp1bDonisOUuxH8cDDX/IjJqIM7sVVL9IckH+Sivmq2z8PqlA7tJuNn/4VZ/3Yr4Go+MO6LscmVGqB5hPMqMtyW/vG5vftgMYUdU7RFhQ4xHqzD1jl/paIIH0+hjwgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image14&quot;
+        title=&quot;image14&quot;
+        src=&quot;/static/06f4cd4db3f1649792938c3ca22ade2e/2bef9/14.png&quot;
+        srcset=&quot;/static/06f4cd4db3f1649792938c3ca22ade2e/6f3f2/14.png 256w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/01e7c/14.png 512w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/2bef9/14.png 1024w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/71c1d/14.png 1536w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/a878e/14.png 2048w,
+/static/06f4cd4db3f1649792938c3ca22ade2e/28fe3/14.png 3446w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;여기서 해당 브레이크 포인트에서 연산이 가능한 코드들을 통해 확인이 가능하다. 아래의 예시는 진짜 데이터가 잘 들어갔는지 조회해보는 기능이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPElEQVQ4y3WS2W7bMBBF9QVFk3RBgcSytXAXTYmULNmJk27oY///a04hujUaoH244Doz9wxZPHSaKijuneCTbXmvG+5My41peWME74LlQ3B87DvuvOHWaz70lndRc+cabnXFTWi49Q1vraIY0hnTH5FupDED9W9VJiL7BTs/YuZHdJpp9hNiGBHDhD4m5NhTxz317BEpYOOJoqo0reixbmJTGrY7y3Zr2VUdWo/E9Jk4P9OFI94/4btHum5GioSSI0qNaDli1ITSkWJXO5Tu8X5ms3Xs6o5t5ajbPcodSMsXpqevhOWF6fyD8fid6XTGpwUfZ/ZpyVrnwkWKHCwCpj9QS5+drXttu8f1M41PmOGAHQ40oUcPCRVmVH9A9/NVMowYmyhWxF0b0NNMJTvKnaNcsXcWHxaMm5AmUTcBIQeEjEiVUHp6JWNmoj1RNCuaiVi/oNRAIwKtGqgbT+cX0uEbXf9EqyJCp3xetyGvWzlcJVREyUhh3cg8vTCmM4d4xruF5/NPOn+kaj378EwthovrylFuDfcPgoeN5H4jX41lZSmkiQzTZ3x/woUj1o4Ec0LoOVcOw3N2c0lo8/inJa9UXQoWTe15KBWbrclaN9eXLneGVvaE4YVWJarGI9QFeU243vmXCqcTZeVywN8HFzzNZqsz0upA2wllUi7234S12GdnV5TKZYTL2ly13skkpb4Uu6L/nq9xK7L1R0y3oN2cJXVE2hFtx384uFDkn+ESppuQNua+Gx1zi34BgnuDmGzaps0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image15&quot;
+        title=&quot;image15&quot;
+        src=&quot;/static/76fb376079167927139661289a55da9b/2bef9/15.png&quot;
+        srcset=&quot;/static/76fb376079167927139661289a55da9b/6f3f2/15.png 256w,
+/static/76fb376079167927139661289a55da9b/01e7c/15.png 512w,
+/static/76fb376079167927139661289a55da9b/2bef9/15.png 1024w,
+/static/76fb376079167927139661289a55da9b/71c1d/15.png 1536w,
+/static/76fb376079167927139661289a55da9b/a878e/15.png 2048w,
+/static/76fb376079167927139661289a55da9b/f24c5/15.png 3454w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Watch&lt;/h3&gt;
+&lt;p&gt;다음은 watch기능이다. Evaluate Expression은 어플리케이션을 다시 시작하면 기존에 작성했던 것이 날라가는 단점이 존재한다. 그래서 뭔가 실시간으로 변화되는 모습이 보기 힘들다. 이것을 위해 만들어진 것이 watch 기능이다. 아래와 같이 우측 하단에 버튼을 클릭해 watch를 클릭한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACIUlEQVQ4y5WS2W6cQBBF+YIoHieWIsWeYe2VpqGBaWbGq6zkKW/5/185EcxmP+bhqIoSXG4tyX2tyLzkp634YUq+q4JbXXKjS77oim9ec+ctd61l5TQrp7hrDd+C5NYWrFTGjS9YuYKvRpJ0wxOm3SHqkcJ05PpIpgOindDxsKCGSNGMlN1A1Y2oXY8YWvLQkEdH2XtM2JNkuaIoPcaOPKw1m9Sw2RjSrEapgdC/EuIztd/h3COuPlDXEVH1SDFcUHJEqkCS5hapWpyLPGwsaV6zySx52SDtlhBfGQ9v+PjMcPhFH98Z90+4fsKFSNNPNH1c8sp2JMePPbrdkgu3ODvXrN8hx4lmesTFPWaK+OkR6Sdku0W1cUG2EeEHtOlJ5hbT0qPGSCZq1qllPdfyGqW3KHNELjGizbTUpRo/oXUkmD1JMbemA8ZNSNkxPxeiXVouKn+k9Nd8oaUQ3fLeQnVEikBizEAcXxj6Z7bhia7Z8f72l3H7m6LqyApPVl5JC7eM5CPzHirZLSaSSge68RXX7peZKdVTixGhI9JMC+d8jqXoL6LzWNLckReONhwohScp84b7teRho1nPpIZ1Zo7xxOZjnpmr2Mnh3O4sKOazqVXPOrNkhTv98f84C768/WE7vZPkVXN0d3FgL47OTj7F01ld3c+5ppQtQnUkxu3Q9YSycWG2LcyAMsMnsYuj3C6XIG2PrkeECcyLVfNSqoZ/lkeFZqPPz7wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image16&quot;
+        title=&quot;image16&quot;
+        src=&quot;/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/2bef9/16.png&quot;
+        srcset=&quot;/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/6f3f2/16.png 256w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/01e7c/16.png 512w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/2bef9/16.png 1024w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/71c1d/16.png 1536w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/a878e/16.png 2048w,
+/static/ccd3c7555a4c2d7d91f6fb8fe572fe3c/f7171/16.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 우리가 실시간으로 변화되는 것을 보고 싶은 변수나 객체를 적어준다. 그러면 실시간으로 확인이 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACL0lEQVQ4y1WS227bOBRF9QWDNm0DFJhGsi6keBElkRIl23UTo0WAeZ7//5ZViI4d52HhkJvk4bllPzpFObT8awXfTcM3VfNFN3zWDf9owddB8zhYHkfLg9M8OMXjaPgaWr7YmgdV8nmoeXA1n0xL5udfmPGA7CK18VT6QqkDctyj158JNa3UfaTxM8JH1GFCzgNV6KnWDjENmHAkKytF3QwYG3nKNcXOUBSGsuxQesbPZ/z+BTsecP0J507YbkXICdnOtIlIqyJSBbJdZWnViHMrT4VlV3UUpaVsemQbWPwz+/hCCCfW5Q9LOLOPR3w/491M6CNhiMm22pNtjysxoP1KJd3N4ab1/Z7eB+a4MMXIEAPLvBA2bZ7x3uP9mJgmz9gFsnxnyGuHnCJFo8kLw6btKofu9rRuTUi3JKvcHtmtbywIe6HtVrw9ktWiZ5yeWY//EeffaLtQi+GNkaYZqZt3m9biwnZ+1YTwKBnIjJn5eXjleHjltH8lDCfO5/+Z4p+U/hbtVoKiNG/YD5SNo6zdZV91ZEIFxvmFbjig3Zo6OPbPNCqyq7fL/R2XGt/q3AyE+JtxOtPIkPSsqXp+5Iq80DwVGiE9Rk9UWzoyXBA+2Ur4m7Or3UZLyPGmZZ2ayLfQ6/cO57eU7lN8X1+jvC/JdZ9Vok+RpW5f67Wz5LuPD+9Jn97dT+u3zzLjDmk8lF0T27RLM6PM/CG9m7PKpglo7YTuItIEtsZqtZVn5C9xRYVZy9iHCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image17&quot;
+        title=&quot;image17&quot;
+        src=&quot;/static/58d2d560bba7bb4ed0e2c787371750ab/2bef9/17.png&quot;
+        srcset=&quot;/static/58d2d560bba7bb4ed0e2c787371750ab/6f3f2/17.png 256w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/01e7c/17.png 512w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/2bef9/17.png 1024w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/71c1d/17.png 1536w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/a878e/17.png 2048w,
+/static/58d2d560bba7bb4ed0e2c787371750ab/f7171/17.png 3456w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;정리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Debug 모드로 실행하기 (현재 위치의 메서드)
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;Ctrl + shift + d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debug 모드로 실행하기 (이전에 실행한 메서드)
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;Ctrl + d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Resume
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;command + option + r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;F9&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step Over
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;F8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;F8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step Into
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;F7&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;F7&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step Out
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;shift + F8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;shift + F8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Evaluate Expression(브레이크된 상태에서 코드 사용하기)
+&lt;ul&gt;
+&lt;li&gt;맥: &lt;code&gt;option + F8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: &lt;code&gt;Alt + F8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;watch (브레이크 이후의 코드 변경 확인하기)
+&lt;ul&gt;
+&lt;li&gt;맥: 없음&lt;/li&gt;
+&lt;li&gt;윈도우/리눅스: 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ] 리팩토링]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드 강의를 참조하여 작성한 글입니다. 리팩토링 - Extract…]]></description><link>https://sungbin.kr/intellij-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81/</link><guid isPermaLink="false">https://sungbin.kr/intellij-리팩토링/</guid><pubDate>Sun, 07 Dec 2025 14:01:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
