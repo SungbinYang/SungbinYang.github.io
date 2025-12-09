@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Dec 2025 07:26:38 GMT</lastBuildDate><item><title><![CDATA[[IntelliJ] 플러그인]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8/</link><guid isPermaLink="false">https://sungbin.kr/intellij-플러그인/</guid><pubDate>Mon, 08 Dec 2025 16:15:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 09 Dec 2025 15:33:57 GMT</lastBuildDate><item><title><![CDATA[[Gradle] Introduction]]></title><description><![CDATA[Gradle이란 무엇인가? Gradle은 주로 Java 또는 Scala 프로젝트에 사용되는 강력한 빌드 자동화 도구이며, 다양한 언어의 프로젝트도 지원을 한다. Gradle…]]></description><link>https://sungbin.kr/Gradle-Introduction/</link><guid isPermaLink="false">https://sungbin.kr/Gradle-Introduction/</guid><pubDate>Wed, 10 Dec 2025 00:22:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvklEQVQoz2PgtnT4T03MgE2Qy8IejJH56PIkGwiiOc3twDQPkjiPFX5DGXAaZmH/X9DW5T+7me1/FmOr/2ymNmA5ZmMrsBwuQ7G6kMPM7r+Yk+d/75yi/85pOf9dMnL/2ydn/o+pqv/vmVP4X8jeDe56ogwEKRa2d/vvlpn33y4p439AYdl/37zi//4Fpf+Disr/CzuQYCCyl9lNbf6zmdj8ZzGx/s8KxcxGZHgZXSEPEs1j5UhapNAkHQ4qAwEq8lPBNhR+nAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/b10b2722bcfd624886758da9e851bdc4/5a190/banner.png&quot;
+        srcset=&quot;/static/b10b2722bcfd624886758da9e851bdc4/6f3f2/banner.png 256w,
+/static/b10b2722bcfd624886758da9e851bdc4/01e7c/banner.png 512w,
+/static/b10b2722bcfd624886758da9e851bdc4/5a190/banner.png 800w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Gradle이란 무엇인가?&lt;/h2&gt;
+&lt;p&gt;Gradle은 주로 Java 또는 Scala 프로젝트에 사용되는 강력한 빌드 자동화 도구이며, 다양한 언어의 프로젝트도 지원을 한다. Gradle은 빌드 툴이므로 코드를 컴파일하고, 바이너리를 패키징하고, 테스트를 실행하고, 아티팩트를 게시하는 등의 작업을 자동화하여 소프트웨어 빌드, 테스트 및 배포 프로세스를 단순화한다. Gradle은 기본적으로 실행을 할 때 소스 코드와 테스트 코드를 가져와 app.jar와 같은 실행 파일이나 테스트 커버리지 리포트 등을 생성한다.&lt;/p&gt;
+&lt;h3&gt;선언적 빌드 스크립트&lt;/h3&gt;
+&lt;p&gt;Gradle은 빌드 프로세스의 단계를 정의하기 위해 Groovy 또는 Kotlin으로 작성된 빌드 스크립트를 사용한다. 이 스크립트들은 소프트웨어 빌드 및 배포에 필요한 태스크(Tasks)를 명시한다. Gradle의 선언적 언어는 태스크와 의존성을 쉽게 기술할 수 있게 해주어, &apos;어떻게(How)&apos;보다는 &apos;무엇을(What)&apos; 달성하고자 하는지에 집중할 수 있게 한다. 또한, 빌드 프로세스와 구성을 기술하기 위해 특별히 맞춤화된 언어인 DSL을 사용한다.&lt;/p&gt;
+&lt;h3&gt;Groovy DSL&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-groovy line-numbers&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;plugins &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    id &lt;span class=&quot;token string&quot;&gt;&apos;java&apos;&lt;/span&gt;
+    id &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot&apos;&lt;/span&gt; version &lt;span class=&quot;token string&quot;&gt;&apos;3.2.0&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+group &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;com.example&apos;&lt;/span&gt;
+version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0.0.1-SNAPSHOT&apos;&lt;/span&gt;
+
+repositories &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-web&apos;&lt;/span&gt;
+    testImplementation &lt;span class=&quot;token string&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-test&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+test &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;useJUnitPlatform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Groovy DSL은 Gradle이 제공하는 원조 DSL로, Groovy 언어로 작성된다. 대부분의 기존 Gradle 빌드 스크립트는 Groovy 문법과 규칙을 따른다. 또한, Groovy DSL 스크립트는 &lt;code&gt;build.gradle&lt;/code&gt;이라는 파일명으로 정의된다. Groovy는 문법이 간결하여 빌드 구성을 읽기 쉬운 형식으로 표현하기 좋다.&lt;/p&gt;
+&lt;h3&gt;Kotlin DSL&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-kotlin line-numbers&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;plugins &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;java&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;org.springframework.boot&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; version &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;3.2.0&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+group &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;com.example&quot;&lt;/span&gt;&lt;/span&gt;
+version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;0.0.1-SNAPSHOT&quot;&lt;/span&gt;&lt;/span&gt;
+
+repositories &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;implementation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;org.springframework.boot:spring-boot-starter-web&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;testImplementation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;org.springframework.boot:spring-boot-starter-test&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+tasks&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;useJUnitPlatform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Gradle은 Kotlin을 스크립팅 언어로 사용하는 Kotlin 기반 DSL도 지원한다. Kotlin DSL 스크립트는 &lt;code&gt;build.gradle.kts&lt;/code&gt;라는 파일명으로 정의된다. Groovy와 유사하지만 문법적으로 약간의 차이(예: 큰따옴표 사용, 함수 호출 괄호 등)가 있다.&lt;/p&gt;
+&lt;h3&gt;의존성 관리&lt;/h3&gt;
+&lt;p&gt;Gradle은 Maven Central 및 JCenter와 같은 리포지토리와 통합되어 외부 라이브러리(의존성)를 지정하고 버전을 관리할 수 있게 해준다. 이렇게 함으로 의존성을 자동으로 해결(resolve)하고 로컬에 캐시(cache)하여 빌드 성능과 신뢰성을 향상시킨다.&lt;/p&gt;
+&lt;h3&gt;증분 빌드&lt;/h3&gt;
+&lt;p&gt;Gradle은 마지막 빌드 이후 변경된 태스크만 실행하는 &apos;증분 빌드&apos;를 수행한다. 이 기능은 특히 대규모 프로젝트에서 빌드 프로세스 속도를 크게 높여줍니다. 즉, 체크섬(checksums)과 타임스탬프를 사용하여 특정 태스크를 다시 실행해야 하는지 여부를 판단하여 체크섬이 다르면 실행을 다시 하여 빌드하고 아니면 그대로 둔다.&lt;/p&gt;
+&lt;h3&gt;멀티 프로젝트 빌드&lt;/h3&gt;
+&lt;p&gt;Gradle은 여러 하위 프로젝트(subprojects)나 모듈이 있는 복잡한 프로젝트를 처리할 수 있다. 각 하위 프로젝트는 고유한 의존성과 태스크를 가질 수 있지만, 하나의 단일 빌드 스크립트의 일부로서 함께 빌드될 수 있다. 이는 대규모 애플리케이션, 마이크로서비스 또는 모듈러 아키텍처를 가진 소프트웨어에 특히 유용하다.&lt;/p&gt;
+&lt;h3&gt;사용자 정의 및 확장 가능성&lt;/h3&gt;
+&lt;p&gt;Gradle은 풍부한 API와 플러그인 시스템을 제공하여 태스크를 커스터마이징하거나 자신만의 플러그인을 만들 수 있다. Java 코드 컴파일, 테스트 실행, JAR 파일 패키징 등 일반적인 작업을 위한 플러그인들이 이미 제공된다. Gradle의 유연성 덕분에 안드로이드 앱부터 웹 애플리케이션까지 광범위한 프로젝트 유형을 지원할 수 있다.&lt;/p&gt;
+&lt;h3&gt;빌드 스캔&lt;/h3&gt;
+&lt;p&gt;빌드 스캔은 빌드에 대한 상세한 인사이트를 제공하는 기능이다. 빌드 성능, 의존성, 태스크 실행 시간 등에 대한 정보를 포함하여 빌드 프로세스를 최적화하는 데 도움을 준다. 이 스캔 결과는 다른 사람과 공유할 수 있어, 팀 환경에서 문제를 진단하기가 더 쉬워진다.&lt;/p&gt;
+&lt;h3&gt;지속적 통합 및 배포 (CI/CD)&lt;/h3&gt;
+&lt;p&gt;Gradle은 Jenkins, CircleCI, Travis CI와 같은 도구를 사용하여 CI/CD 파이프라인에 쉽게 통합될 수 있다. 헤드리스(headless, GUI 없이) 방식으로 태스크를 실행할 수 있는 능력 덕분에 자동화된 빌드, 테스트 및 배포에 매우 적합하다.&lt;/p&gt;
+&lt;h3&gt;설치&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 846px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.3125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtUlEQVQ4y42TyXLbMBBE+TGOtVGyJG4ANxBctVC2zCRVueSQQ/7/EzrVI0clOapIhykOQLDn9QzoNF2H/jCg27whMy10YmHMFsPrbxTVAWm+xcs6w5exj9E0vBtOahrU7QFl3SPSFrNFiOUqhTUDll4uQn/FnifBfcGyeYOxezTdEYEqsfYNVl6OqRtfHXxETASN7fH9xy+8f/2JdjMg1DW80GLlmzPhpdg9YSeKGyTZBkm+QVbskJqt5HF2Cr5fB8XjlovyAFKSzI9KEQhVBS+wCFSFpWcwnkU3BW8VcOK0O9t0X+Iri3xO3Ogu1aWwY8oeebFH1R5RyYB6scpB8dr4oZWDTyPvPPHL/LK4CNKWihuxS0rapW2Ss5867aCTVnL2mP3OzE7OzRZa2nFFyENZsUdu9yjrVyEkHclJzYstfdW1CLMA1+pjbzpX14JBWCFStQQ/UEkrFCRizuFwyiSiG+b+x7W6aVlvdzDDEXnXixCrkoAk82WKiaswnWuxx2DO4P7NoQRxgbTsoLMKSlssVgruXKHIv+F5ciL4X/wjOOJiEmIsGwHGs/BE5eqHfrXPd/EPpZfE55kBFScAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;image01&quot;
+        src=&quot;/static/b907d0bc261ef1d7e65a048e3fbf7654/5b481/01.png&quot;
+        srcset=&quot;/static/b907d0bc261ef1d7e65a048e3fbf7654/6f3f2/01.png 256w,
+/static/b907d0bc261ef1d7e65a048e3fbf7654/01e7c/01.png 512w,
+/static/b907d0bc261ef1d7e65a048e3fbf7654/5b481/01.png 846w&quot;
+        sizes=&quot;(max-width: 846px) 100vw, 846px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;설치는 매우 간단하다. 맥 기준으로 아래와 같이 homebrew를 이용하면 쉽다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; gradle&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[IntelliJ] 플러그인]]></title><description><![CDATA[해당 포스팅은 인프런의 IntelliJ를 시작하시는 분들을 위한 IntelliJ…]]></description><link>https://sungbin.kr/intellij-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8/</link><guid isPermaLink="false">https://sungbin.kr/intellij-플러그인/</guid><pubDate>Mon, 08 Dec 2025 16:15:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
