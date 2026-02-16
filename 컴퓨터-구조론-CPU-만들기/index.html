@@ -1,0 +1,526 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[컴퓨터 구조론] CPU 만들기: 산술논리연산장치(ALU) · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/d2f1db1734ce6bdaf587f7d63a88cd29/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/컴퓨터-구조론-CPU-만들기/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[컴퓨터 구조론] CPU 만들기: 산술논리연산장치(ALU)"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/d2f1db1734ce6bdaf587f7d63a88cd29/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[컴퓨터 구조론] CPU 만들기: 산술논리연산장치(ALU)"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/d2f1db1734ce6bdaf587f7d63a88cd29/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-8bd3326d799737bed84d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-3fa8deb48819dbe669b2.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-7f5def86146fc29c9ead.js"/><link as="fetch" rel="preload" href="/page-data/컴퓨터-구조론-CPU-만들기/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[컴퓨터 구조론] CPU 만들기: 산술논리연산장치(ALU)</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->cs</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2026년 2월 16일<!-- --> · <!-- -->4<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">컴퓨터 구조론<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (6개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[컴퓨터 구조론] CPU 만들기: 산술논리연산장치(ALU)</span></li><style data-emotion="css zsnwin">.css-zsnwin{margin-bottom:0.5rem;}.css-zsnwin::marker{font-weight:600;color:#9195F6;}.css-zsnwin::after{content:'- 13분';margin-left:0.2rem;font-size:0.8rem;}.css-zsnwin>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-zsnwin>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-zsnwin e1k9d3a00"><span>[컴퓨터 구조론] 컴퓨터의 기초가 되는 하드웨어 만들기</span></li><style data-emotion="css 13xotzt">.css-13xotzt{margin-bottom:0.5rem;}.css-13xotzt::marker{font-weight:600;color:#9195F6;}.css-13xotzt::after{content:'- 7분';margin-left:0.2rem;font-size:0.8rem;}.css-13xotzt>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13xotzt>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13xotzt e1k9d3a00"><span>[컴퓨터 구조론] 비트</span></li><li class="css-zsnwin e1k9d3a00"><span>[컴퓨터 구조론] 불 대수</span></li><style data-emotion="css 2r5mz2">.css-2r5mz2{margin-bottom:0.5rem;}.css-2r5mz2::marker{font-weight:600;color:#9195F6;}.css-2r5mz2::after{content:'- 5분';margin-left:0.2rem;font-size:0.8rem;}.css-2r5mz2>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-2r5mz2>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-2r5mz2 e1k9d3a00"><span>[컴퓨터 구조론] 컴퓨터 구성 요소</span></li><li class="css-2r5mz2 e1k9d3a00"><span>[컴퓨터 구조론] 컴퓨터 구조 개요</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVQoz51Sy3LCMAz0/38WkBexE549lQCNEydhptBAz9uRPAYnHdpODxprpUjaVSR0FMBZGc7g47/YuEaME2Uw/dHeZpMHdjVeUzGYFkxhcoVus0Yt5zCZZGxUyj7Fus3KxjOJah4/Z2gbTnB62eJ994pel/g8dbg1xr5di2tdMabc1dRoVwsm4bMU5DhAcuitZcrT2ZIIzSJjdmSEbS7hurF04ctt10uWQpikNnnGzVheEkEnEUymUKcJdBxyUxoyYHgHcWiltQ3O+wKXfcE+SSR5faXxcTzgXOwYU/xyPKDXerDLQUOjJDNwP+FhyuaU5HUQ62aZs0/fftuhC/x2MgPzzude73b4n4N+duBfEs24R4/6hrYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title="banner"
+        src="/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png"
+        srcset="/static/d2f1db1734ce6bdaf587f7d63a88cd29/6f3f2/banner.png 256w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/01e7c/banner.png 512w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>본 포스팅은 인프런의 <a href="https://inf.run/PnrRu">만들면서 쉽게 배우는 컴퓨터 구조</a>를 참조하여 작성한 글입니다.</p>
+</blockquote>
+<h2>컴퓨터 만들기 개요</h2>
+<p>이전 포스팅에서 우리는 컴퓨터를 만드는데 필요한 지식과 부품들을 살펴보았다. 이번 포스팅부터는 본격적으로 컴퓨터를 만들어 볼 예정이다. 우리가 만들 컴퓨터의 구조는 폰 노이만 구조이다. 폰 노이만 컴퓨터 구조는 입출력 장치, 계산을 담당하는 중앙처리장치 그리고 데이터와 프로그램을 저장하는 메모리로 구성되어 있다. 여기서 우리가 가장 먼저 만들어 볼 장치는 중앙처리장치(CPU)이다.</p>
+<p>CPU는 크게 산술논리연산장치와 제어장치 2가지로 나눠진다. 산술논리연산장치는 계산을 담당하고 제어장치는 제어를 담당하는데 제어장치는 가장 복잡하므로 나중에 만들어 볼 예정이다. 이번 포스팅에는 산술논리연산장치를 먼저 만들어보고 다음 포스팅에서는 메모리를, 그 다음에는 제어장치를 만들어 컴퓨터를 완성할 예정이다.</p>
+<p>산술논리연산장치에서 산술연산은 덧셈과 뺄셈을 구현할 것이다. 곱셈과 나눗셈도 하드웨어로 구현할 수 있지만 그렇게 하면 회로가 너무 복잡해지고 컴퓨터의 동작을 이해하기 어려워진다. 그래서 우리는 이 연산들을 소프트웨어로 처리할 예정이다. 따라서 하드웨어는 덧셈과 뺄셈만 구현할 예정이다. 논리연산에서는 두 데이터를 비교하는 비교기와 데이터가 0인지 확인하는 제로 비교기를 만들어 볼 예정이다.</p>
+<h2>반 가산기</h2>
+<p>우리는 먼저 2개의 비트를 더하는 가산기를 만들어 볼 예정이다. 2개의 비트를 더하려면 입력이 2개가 필요하다. 그러면 출력은 몇개가 필요할까? 보통은 1개라고 생각하기 마련이지만 사실 출력이 하나 더 필요하다. 두 비트를 더할 때는 덧셈결과를 표현하는 비트 1개와 자리올림수를 표현하는 비트 1개가 필요하기 때문이다. 그러면 본격적으로 회로를 구현해보자.</p>
+<p>먼저 2개의 입력핀 IN_A와 IN_B를 생성한다. 그리고 덧셈 결과를 나타 낼 출력핀 하나를 만들어 이름을 Sum으로 변경한다. 마지막으로 자리 올림 수를 위한 출력핀을 하나 더 만들어 이름을 Carry로 변경한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVQ4y62SW0sCURSF509HvWQPouL4h4IekggCsZcMUkgnL8WIOhdH59zPin2UaUgKtDYsGBZnf/s23tn5Ba4uK2j6PprNJur1OiqVCmq1mvuuVqtoNBpotVrwff9XUb7XH7yAM47/Cq/bbSOKUkgpwBhzklJCawWlJJRShciP4wRZxiCEKLzde408z+H1eveYz5dFBWstjNHYboHJLIRUovCtNVitEiwWBNPk7n3r3lARbzzuYzgcuY4otDGwViNNgdfgA1LxAkhBwCRRpSLfgAdLcB0aGGNdF+UkEmMcnJsDvwDG6RrpOsMmz5ELjpxzB6RxyiOVE3/yaZdeMJ5AbBg6qwfcrK/RFZ392PYoUdCRvLunN/RmW9w+B2gPZnicLqG0caOfBBxNQ2yFRTAJ8R5GyJiB0vp04NdeiqvsOsSJQEomg/ZmrIVU+m/AOf2ocYYoSd214ySF1scfhUTAT69I4KYHki9SAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title="image01"
+        src="/static/7fb54e2fb4691ef1a38c836a702b6b47/2bef9/01.png"
+        srcset="/static/7fb54e2fb4691ef1a38c836a702b6b47/6f3f2/01.png 256w,
+/static/7fb54e2fb4691ef1a38c836a702b6b47/01e7c/01.png 512w,
+/static/7fb54e2fb4691ef1a38c836a702b6b47/2bef9/01.png 1024w,
+/static/7fb54e2fb4691ef1a38c836a702b6b47/71c1d/01.png 1536w,
+/static/7fb54e2fb4691ef1a38c836a702b6b47/a878e/01.png 2048w,
+/static/7fb54e2fb4691ef1a38c836a702b6b47/f7171/01.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 본격적으로 회로를 완성해보자. 먼저 덧셈결과를 표현할 회로를 어떻게 만들지 확인해보도록 하겠다. IN_A가 0이고 IN_B가 0일 때 덧셈 결과는 0이다. IN_A가 0이고 IN_B가 1일 때 덧셈 결과는 1이다. IN_A가 1이고 IN_B가 0일 때 덧셈결과는 1이다. IN_A가 1이고 IN_B가 1일 때 덧셈결과는 0이고 자리올림이 발생한다. 여기서 자리 올림은 잠시 제외하고 덧셈 결과에만 집중을 하겠다. 그러면 해당 진리표가 XOR 게이트 진리표와 동일한 것을 알 수 있다. 그러면 XOR 게이트에 두 입력핀을 연결해보자. 그리고 XOR 게이트의 출력을 출력핀에 연결하자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABkUlEQVQ4y62R227TQBRF/dEIHgqVKM6Vv4Ef6CNC4iUqDlFC06oVSmL5MvZ4fJnLQrYboyCKVMqRtjRzRrNm7zPei5evOD97zWQ6ZTKZ4Ps+Z2/OufBH+KMxby/eMRpPmM3fM53NH9VsPscfz/C2N9/5X6UBb/XtK3GcdA1rDaqsKKsaazRaNxhtsMZ261ZCZEhZo7V+6GmapsFZwyEp8NbrNZvNpn9B6w6ojaYo4PZ+RyJj8lKC612kaU4UaawF51wna/vDKK/wgiBgsViglCLPM1KRYawhE7DZ/iDMDgTXAbv9jqwS7A4haWo6wAB0R2CNt91es1wuu4O2jLE0bUzbOjYdPE5jZCFpTEOhFFVlB9gpsMK7uvrCfh+iVEFZl6iqjWzpM7oh6mm5PwJjWePd3t0hIsHl/SUfww98Up874OmF0/3vOgKTosE7fohQAtlISlcPDv8GeRS4Wq2QUpLECUmUYI3rge4fgUIIym5uBucsxtrnAYcxPzRb2LMih3FKlOa0TvM8JxXi6Q7tL+BPYE3dn76K6+8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title="image02"
+        src="/static/8e0376886d7731f0b5b21976acf6dd48/2bef9/02.png"
+        srcset="/static/8e0376886d7731f0b5b21976acf6dd48/6f3f2/02.png 256w,
+/static/8e0376886d7731f0b5b21976acf6dd48/01e7c/02.png 512w,
+/static/8e0376886d7731f0b5b21976acf6dd48/2bef9/02.png 1024w,
+/static/8e0376886d7731f0b5b21976acf6dd48/71c1d/02.png 1536w,
+/static/8e0376886d7731f0b5b21976acf6dd48/a878e/02.png 2048w,
+/static/8e0376886d7731f0b5b21976acf6dd48/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 자리 올림을 처리해보자. 두 입력에 따른 자리 올림 진리표를 만들어보자. IN_A와 IN_B가 모두 1일 때 자리올림이 발생하고 그 외에는 0이다. 따라서 해당 진리표는 AND 게이트와 동일하다는 것을 알 수 있다. 즉, 두 입력 핀에 AND 게이트와 연결하고 자리올림 출력핀을 AND 게이트 출력과 연결하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABnUlEQVQ4y62T227UMBCG89AILgoVKumeHgeeoHeIC7RcpGIpu9qyoDbZHJw42XV8yIfshbaqSiUoI43Gku3P//wjR8+ev+D46CXjyYTxeEwcxxy9OuYkPiU+HfH65A3xaMRkOmM8nYX6UE5nM+LRlGi9XvK/wgBRknwiy7ZorVFKIduWveqx1mCtRbQC0VbkVU4jG+q6put6jDEYo0P1dwdnSavOA89JkiTAWimpG4k2FudAa8Om3HAlrkiLFFFX5GVJWfr9gWE4pF/7yKUiurz8xnJ523avDcYamhqSxYov1ws+rxds8y2NakizHCFsOHsDHA7AwgNXq69BoW/Ph1dnrKXr4DqrEF1FIYrQgbaabrdDKXcDuwsMCpPzj2RZzm6/Q/V79kphjPPvP2L/8CCwkD3RxXKJyGvOfpzxbvuW9/sPGOt+eeNwgwv1LuB+/gaWnSaaz+f0qictU75nG9TQByCPAP4IbDVR0zRhCLrXWG0ZHAcg/wD0Cu+7Y517GtD74y+HOgxhwk8C5qWgEDL8ACkloq7/3kN36+FP4JrcdQNaJHgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title="image03"
+        src="/static/5632a9eb512e4f53d84712e6cc95dcfe/2bef9/03.png"
+        srcset="/static/5632a9eb512e4f53d84712e6cc95dcfe/6f3f2/03.png 256w,
+/static/5632a9eb512e4f53d84712e6cc95dcfe/01e7c/03.png 512w,
+/static/5632a9eb512e4f53d84712e6cc95dcfe/2bef9/03.png 1024w,
+/static/5632a9eb512e4f53d84712e6cc95dcfe/71c1d/03.png 1536w,
+/static/5632a9eb512e4f53d84712e6cc95dcfe/a878e/03.png 2048w,
+/static/5632a9eb512e4f53d84712e6cc95dcfe/f7171/03.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>해당 가산기는 반쪽짜리 가산기이다. 지금 만든 가산기는 자리올림이 없는 두 비트만 더할 수 있다. 따라서 여러 비트를 더할 때 자리 올림이 없는 최하위 비트에서만 사용할 수 있다. 나머지 비트들은 이전 자릿수 올림까지 더해야 하므로 3개의 입력을 처리할 수 있는 가산기가 필요하다.</p>
+<h2>전 가산기</h2>
+<p>전 가산기는 반 가산기를 활용해 쉽게 구현할 수 있다. 반 가산기는 2비트만 더하고 자리 올림이 없어서 입력 2개와 출력 2개로 구성된다. 반면 전 가산기는 자리올림까지 계산해야 하므로 입력이 3개이며 출력은 반 가산기와 동일하게 2개이다. 그러면 본격적으로 전 가산기를 만들어보자.</p>
+<p>입력 핀 3개를 만들어 각각 IN_A, IN_B, IN_C로 이름을 지정한다. 이제 이전에 만든 반 가산기를 배치하겠다. 그리고 Sum과 Carry라는 이름의 출력핀 2개를 만든다. 그런 다음에 반 가산기의 두 입력에 입력핀 A와 B를 연결한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABk0lEQVQ4y62Sy07bQBSG/dJVxQKEKmLqkG32WcEDtHkBdu0qy6KCFJeWGGxHsZ3Y47l9aMa15NBUoioj/RrpzJnvXIOjd+85OT4liiKvURhyfHLKWRgSnn/kw9nI3+OLCdF4QnRxQOOJfx+djwl+LGOwvMmRQFCWJVJKtNZerZSIVmKtxlrb2drWq/czxmCMQimJUsrbMZokLwl6uvvsjjYGqSxFKUnXKbt6x9CnbmrW64KyVLgvzmZM9zctagIXzRk7oEVpg9KWNKuJk3sury6ZzWbM53Om0yk3N994fMy4vd2itQ+zD3zZB/eoNPx6qEnSlDzLiOOY1WrFcrlECOH9lDLe948Mq+2WqqrY1TWiFTSt8MAsb8jy/GDz+2r6ynpgXjYE3+/u2GQbrh+u+Zx94kvzFa3NIGOzpx4ylPnd/7wSBIvFwk8wyRN+Pt0jbOv72EU+DPgr0GXo1satghQSLTXW4IG8AnQQ+LI/bm3+C+jK6kZvBmtj9pr+amDVEGTrgnxTURSFn/amKP89w8GUnwFrDd0j2lKI/wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/de09f14156c25f4ffbab251960c68adf/2bef9/04.png"
+        srcset="/static/de09f14156c25f4ffbab251960c68adf/6f3f2/04.png 256w,
+/static/de09f14156c25f4ffbab251960c68adf/01e7c/04.png 512w,
+/static/de09f14156c25f4ffbab251960c68adf/2bef9/04.png 1024w,
+/static/de09f14156c25f4ffbab251960c68adf/71c1d/04.png 1536w,
+/static/de09f14156c25f4ffbab251960c68adf/a878e/04.png 2048w,
+/static/de09f14156c25f4ffbab251960c68adf/de720/04.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음 반 가산기를 복사해 두번째 반 가산기를 배치한다. 첫번째 반 가산기의 Sum 출력과 입력 C를 두번째 반 가산기의 입력으로 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABtElEQVQ4y62SX0sbURDF93sLLcVSqImJtTQG6odoQYxC8+B78L0EY4KmyUqyzf517507+yu7JrWbWkTogcPA3JlzDzPjvdrZ4c3rXVrtFu12m1arxe7bd7xvNGjut9hrNNlr7nNw+JH2h0MOnqE3Hl1jcsP/ghdGEcYYnHM4EawI97lBVSiKAnWKtaaqqepEkIp2TUGsxVqLcxZvo1w2l9CiwIqSJsrdckEYr2oOsiyrPi/rN3TqmM0WBIHiqWrtUbXAOiUKhRt/xvm3M446R/R6PY4/H3NydlIJl6Jlb8kS8/mS6dQ8Onx0CqLKcumYTOcEP5dcXV9x++OW8WTM8GZIEAe1njRLEXGIFHhxHBMnCWmakpu8ohVHFDmmc5/EJOSak0lWURB65z06nzqcnp7S7Xbp9/trM4r3fTgkuAu4nF/y1f/CRXpBJOmW7XqMoojJZILv+1UMw/Bh/qp4g8GAKIxYJStG0xGZ3mPWQ9+e7yb3FDa1XqlerlysYHNbuSi3zJbQU8Ib/pn/aykPZ+OeFfwXPVVXDad2NlLPvUhwEawIwoRVGJIkcRVzY38f+0sFfwGDydh7FMCvpAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title="image05"
+        src="/static/9404ce3b506e7d6273ce40d5c474a239/2bef9/05.png"
+        srcset="/static/9404ce3b506e7d6273ce40d5c474a239/6f3f2/05.png 256w,
+/static/9404ce3b506e7d6273ce40d5c474a239/01e7c/05.png 512w,
+/static/9404ce3b506e7d6273ce40d5c474a239/2bef9/05.png 1024w,
+/static/9404ce3b506e7d6273ce40d5c474a239/71c1d/05.png 1536w,
+/static/9404ce3b506e7d6273ce40d5c474a239/a878e/05.png 2048w,
+/static/9404ce3b506e7d6273ce40d5c474a239/59733/05.png 3442w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>두번째 반 가산기의 Sum이 최종 덧셈 결과이므로 이를 출력핀 Sum과 연결한다. 다음은 Carry를 완성해보자. 자릿수 올림은 두 경우에 발생할 수 있다. 첫째, A와 B를 더할 때, 둘째 A와 B의 덧셈 결과와 C를 더할 때이다. 이 두 자릿수 올림을 처리하기 위해 OR 게이트를 추가하고 Gate Size를 Narrow로 변경해 작게 해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.84375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6UlEQVQ4y62SS0/bQBSF/asrpBakQl7QbVG2kA3dp+IHsCosWiEQQomTNg+wg/OyncyMx/Z8lScQJVRVK7VHOvLII3333DvXebOzw967Xaq1GtVqlVKpxNvdPfZLZUrlCu/3DyhXqhwefaB2ePRbF/cHlRrO8GHA/1ICOLc335hOZ/aHyXOkUtbGZBhjyLKMJEmsdZKQ57l1qjVpmlonWoPJGM0inLu7O1qtFlJK4jgmjCK0zokiTTANWMrlVoowDJnP5/ZcgAsJKRj5IT1P4riuS6fTsRdaa4SQ6DQnGAt6/oCzT2c0Thucn59Tr9e5+nqFUsomf0lrTNEejKYCp9vtcn19bdsrlGY5aWZ49ARe8IQ/8ul87zB4GOB2XbpeF5WodeICGC9i8izFGy9x2u49nuezXC5QWiGUssDxROEHI2QmUblCZMJ+4yTm5PSERqNBs9nk+OMxt/c3TCYz3N4C50e/RzyLuXi84PO4yRdxaVOu9dzO+gwETwHD4RDf9+n3+3ZUhWYLidNut1fDFiGxjpFGWWAxgtV8zJZfHmJTL/XGkVzNUCrJIlqghMLkqznyCvQauu0VclIAiz3arJoVO/YH4K8FNoA8v66FGvP8yrlt5K+BZgM4ns6ZzGO7sMViz8PwnxL+BJim0ZQy86X3AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title="image06"
+        src="/static/7d4775d6e3e6f8d7624fc7064c8485cf/2bef9/06.png"
+        srcset="/static/7d4775d6e3e6f8d7624fc7064c8485cf/6f3f2/06.png 256w,
+/static/7d4775d6e3e6f8d7624fc7064c8485cf/01e7c/06.png 512w,
+/static/7d4775d6e3e6f8d7624fc7064c8485cf/2bef9/06.png 1024w,
+/static/7d4775d6e3e6f8d7624fc7064c8485cf/71c1d/06.png 1536w,
+/static/7d4775d6e3e6f8d7624fc7064c8485cf/a878e/06.png 2048w,
+/static/7d4775d6e3e6f8d7624fc7064c8485cf/de720/06.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>첫 번째 반가산기의 Carry와 두 번째 반 가산기의 Carry를 OR 게이트의 입력 핀과 연결한다. 마지막으로 OR 게이트의 출력을 최종 Carry 출력핀과 연결하면 끝이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB30lEQVQ4y62Sz08TQRiG9+9WDxJioFKqF3vDRA54IZ4Q/gKCgYMROJiUtoFly+62dHd22Zn9MTOP2UFIa8SDOsmbL9+XL0/emXe8Z89fsLqyQrfbdVpf7/ByZZW1TofO6w1era3T2eiy2XtLt/fmSW22dbOHF0yu+Z/HOzv7SpKkrrHGIFWJKkus1Vhj0VpTVZVTXVcYbRak76sxWGsoS4V3fn7OYDBAKUWe54gso64NIquJ51MKWSw5SLKEtEhJZYqQgiRPSEVKnhfc3ZV4LWw0Grnluq6RSlE3lulMchn67HzcYfvDNvuf9+n3+5x8O8FiUaWi1jWiyJjEAXGcEEUl3nA45PT0FGutgzba0DSWYCK5mcaEUchwPMQPfC5GF4wn4yXHs3SGKARY0LppHX4nimKklFRNhSxLGm2Z3SrCaYTSCmVKirpwzo6Oj+i/67O3t8fW1nt2P+06aHgj3VN5l76PzCWH00MOkn2+yGO0tsvR2Z8ClFRcXV0RRRH+tc98Pn9cawP0giBwTXgbklUZylbu2u0T3KdnH9X2vzsPew4Yx7EbRmFELnLnpNEaFkC/qgUs6mHugMYuX08b4xz+CfiUHPA+XYtZTLkF8pfAWSKYpzlCCPexU5H9k8MfmhLTLaH+RpwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title="image07"
+        src="/static/db74bede65a738664b0013cec07c4e17/2bef9/07.png"
+        srcset="/static/db74bede65a738664b0013cec07c4e17/6f3f2/07.png 256w,
+/static/db74bede65a738664b0013cec07c4e17/01e7c/07.png 512w,
+/static/db74bede65a738664b0013cec07c4e17/2bef9/07.png 1024w,
+/static/db74bede65a738664b0013cec07c4e17/71c1d/07.png 1536w,
+/static/db74bede65a738664b0013cec07c4e17/a878e/07.png 2048w,
+/static/db74bede65a738664b0013cec07c4e17/efcdd/07.png 3450w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>산술논리연산장치(ALU)</h2>
+<p>이번에는 컴퓨터의 계산 처리를 담당하는 ALU를 만들어보겠다. 우리가 만들고 있는 컴퓨터는 8bit이므로 ALU의 두 입력 값도 8bit로 구성하겠다.</p>
+<p>먼저 입력핀을 배치하고 Data Bits를 8로 설정하겠다. 해당 입력핀을 2개 만들고 각각 IN_A와 IN_B로 설정하겠다. 또한 비트 별 계산을 위하여 Splitter로 비트를 분리하겠다. 세부 설정은 생략하고 아래 그림 처럼 진행을 해주면 좋을 것 같다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABjUlEQVQ4y62T7U7bMBiFc9cbP2CbRrqkcD3bHQz4N2mim5AWtUkgUJqvJnEa2/EzxaVQSjWkba90pNh+/fj4yHHevD3g3eERnu/jex6u63J49J7j0Qh35PHh4zHu6BPjk1P88Qn++HSvhnXXG+MkScL/KgU45xdfGaBVVVGWBVme0646tJKUheBncEUQ/rLrQgi6rkNJidyR0Yp53uCEccj9YkHf9yilEKJFSoUxPVlWMItDopuI+f2cNEvXm42x/YM230Ol1Qonvo5J0/TRdjecqDRaa+pmcNVQNzVN09C2Lb1ZQ7b1DBjNQuI4fspB9xbY94rb24xvP75zeXVJWS7ttV8FTqdTJpMJdV0jVYdYrSwQhmbQD9fa1C7sBXAWRYil4GxxxpfiM+fiwrrcNNpN/fPMtkEvgElyYwd32R1Vt6Q1a4fbwe+C9js0ZHWHEwSBBcZRTJkXw/wW0PwRtAvMG4nTCGGBUkk7OWT2T8CHpB+DV1o/Ac1fAOdpQVGu/5LhWRTlcm+Gr2kD/A0S9N1/1umvqQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title="image08"
+        src="/static/afc3ba0e48904b8fa629a63e42a0e4bd/2bef9/08.png"
+        srcset="/static/afc3ba0e48904b8fa629a63e42a0e4bd/6f3f2/08.png 256w,
+/static/afc3ba0e48904b8fa629a63e42a0e4bd/01e7c/08.png 512w,
+/static/afc3ba0e48904b8fa629a63e42a0e4bd/2bef9/08.png 1024w,
+/static/afc3ba0e48904b8fa629a63e42a0e4bd/71c1d/08.png 1536w,
+/static/afc3ba0e48904b8fa629a63e42a0e4bd/a878e/08.png 2048w,
+/static/afc3ba0e48904b8fa629a63e42a0e4bd/f24c5/08.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 각 입력 비트를 터널과 연결하자. 아래와 같이 만들면 되니 직접 만들어보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABnUlEQVQ4y62Sf2/TMBCG87ERSLAhRram2+eBP4ugrE0nUSZtQrTQjGZatbUs8fLLsf1MdonW0RYkxEmnS3zKc++9sffk6TN2X+zQCgKCVgvf93m+s8uev4+/f8DLV3uuBu0jgvbh1mwfHvH6IMCLL2P+V0jA+3w6RAjhDozWFEVJXpQoVSPSki+TEZPphCzLKMsSKeVaVlJitGK2SPFG4xFxfEme59wJwW2SUitNnmeE4QmdD+/ovO/Q6/cIByHz+dwN11q7NMa4auMmyfEm0Xdms5lr1LUkLwpkrVBKOVW1rJGVdOrsUPvcQGxdA/6ILojjBx+V0iht3MeDkwG9sEf3uOsU9sP+I4UbgVEUcXZ27nysZOX8swqNsX5KxhdTzr8t+1alVd5ANq78dTxG/BR8vOnyNn3DcdZzHi6nWyVLFU2srrsROBx+oqoqruZXxNdTSlP9Urju06qq1WyAC1HgpWnq1pClREmF7T0AzVbIVuDvl1Np/Qj4J9BGoHEvzaGhtmoboPkH4PUi4TYRJEni/uTyYqs13/6WDfAeJpLZAd2n47QAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title="image09"
+        src="/static/344d0077cd8d665dc8246f0e8e573d41/2bef9/09.png"
+        srcset="/static/344d0077cd8d665dc8246f0e8e573d41/6f3f2/09.png 256w,
+/static/344d0077cd8d665dc8246f0e8e573d41/01e7c/09.png 512w,
+/static/344d0077cd8d665dc8246f0e8e573d41/2bef9/09.png 1024w,
+/static/344d0077cd8d665dc8246f0e8e573d41/71c1d/09.png 1536w,
+/static/344d0077cd8d665dc8246f0e8e573d41/a878e/09.png 2048w,
+/static/344d0077cd8d665dc8246f0e8e573d41/de720/09.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 이 입력들을 이전에 만든 전 가산기와 연결하겠다. 이것도 아래와 같이 만들면 되니 한번 따라 해보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB40lEQVQ4y62SbU8aURCF92c3bdJqU4sC+nvaT2gVZAGTWiKlqYusAoEI6O7CvtyXfZp7LVYhffnQSU7m3ruZM+fMrPPi5Su232xRLJUoFYsUCgVeb22zU9ilsLvH23c7NpfKB5TK+79Fef+A93slnOFoyP8KAThf2udEUWQfcq1JkpQ4SVFKEoUp3/qX9Ad9lsslaZoihNhAJgS5VkzmIc6ld8lwOCKOYxZRxH0QIpUmjpc0m2ccVT9xdHKE23BptprMZjPbXGttkee5zSamQYzT96+YTCb2g5SCOEkQUqGUsqqkkIhMWHWmqTmvSEzeILzxrxkOf81RKW1hiltnLdymS61eo+7WaTQbf1fo+z6dzlc7x0xkVqGxnOdmngLvekC312URLUiz1Cp/qmyD8LvnEd1FnE5rfAw/UI9dpNTPtqdzbbEe65ZnYYJzfv6ZLMsYz8YMbgcIJO3uBafuKaPRiKtej063Q++mx3HtGM/z7IguOhdMp9OHMf0knEcJThiG1oZIBUootIJlkmAaVU+qVCoVxuOxLfCvfQ4rh1SrVdrt9qM6/ZRw3YbpplS+YW9V9CfLljC3l9VjjjRqpVGqkNJAPhu+uRtH68t5JLydB9wHEUEQ2E0//NjqmZ1/wYrwB+9H0AeSk7yOAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title="image10"
+        src="/static/7248542404767a8e93e3f31bf5882edd/2bef9/10.png"
+        srcset="/static/7248542404767a8e93e3f31bf5882edd/6f3f2/10.png 256w,
+/static/7248542404767a8e93e3f31bf5882edd/01e7c/10.png 512w,
+/static/7248542404767a8e93e3f31bf5882edd/2bef9/10.png 1024w,
+/static/7248542404767a8e93e3f31bf5882edd/71c1d/10.png 1536w,
+/static/7248542404767a8e93e3f31bf5882edd/a878e/10.png 2048w,
+/static/7248542404767a8e93e3f31bf5882edd/de720/10.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위와 같이 7번 비트까지 만들어주면 완성이 된다. 독자가 스스로 한번 해보자. 아마 아래와 같이 연결이 될 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABcUlEQVQ4y6WT3W6bQBCFeeoqF0mbRsRAnqd9hUS9rCIrvWgrWgMBLGMMGJb94at2kS0lUaSkXunojGZWR2dnZr0PZ2d8PL8gCEPCIMD3fc4vPuEvAq4XAZefr/CvF4TRDUEYvYowivAXEV6apjw/Qio2VcV7jwK8+/vvNE3jEpMxDGIkL0oefjxQbSuEEAgx0Pc9wzAghjk+5GzdspKCYrvH+/X7J9alTXZdx7besUpSynVJ9pg5pFlKlmUO9m5e5Ee2uaIsKB4z1rsBL/4Tk+c50zQhpaQfBF23d7F1NI6jc3FgC1t7znIUbNoRL1mtSJPk2AetDWKUaK1fhVLqBTMZNq3Ai+OY5XJJ0zaMUtDbPjlB5S6+BVIpJqNnh3+ThKZquC1v+Vp94W7/jdEKqv8UtJbdU9GISdCbEx3aYVgwzT00ejpd0O3gYTmPQ3m7oHoqaJxDY8wsqPRpDtdV7X5KXde0bUtd72bBdw9FubX5B2Bq2Vvg4mxnAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title="image11"
+        src="/static/e2a693655e6f6f86d3409c75794f4cf7/2bef9/11.png"
+        srcset="/static/e2a693655e6f6f86d3409c75794f4cf7/6f3f2/11.png 256w,
+/static/e2a693655e6f6f86d3409c75794f4cf7/01e7c/11.png 512w,
+/static/e2a693655e6f6f86d3409c75794f4cf7/2bef9/11.png 1024w,
+/static/e2a693655e6f6f86d3409c75794f4cf7/71c1d/11.png 1536w,
+/static/e2a693655e6f6f86d3409c75794f4cf7/a878e/11.png 2048w,
+/static/e2a693655e6f6f86d3409c75794f4cf7/f7171/11.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이렇게 8비트 덧셈을 위한 핵심 회로가 완성이 되었다. 다음으로 출력핀을 설정하겠다. 입력이 8비트이므로 출력도 8비트로 구성하고 이름을 Sum으로 변경하자. 그 다음 Splitter를 설치하여 Facing을 North로 Fan Out과 Bit Width In을 8로 Appearance를 Centered로 Spacing을 6으로 설정하고 Sum 출력핀과 연결한다. 다음으로 각각 Full Adder의 Sum 결과를 핀 순서대로 연결한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB5klEQVQ4y61Ra4vTQBSdf62ia/3Qltb2j7TQD4tL2QWli8LirtjHtmu7Im2azZMkNdkkTTKZyZEZbE2liIgXDnfmvs+95MnTZ6icvESz2USj0UC9XkelUkGtXpP/V5Uqnp+8QLVWRbvdRqvVkii/d2g2X4OYpon/KeTj9RVE0TAM4fs+giCAZVtQ1gqKopBBaZpCszToto7VaoUsy6SdUgrDNqAaKhRFQRzHIKqmwnFdcM5lgEheqkucnp2i1+thMBhIPV/MYTomLt5doNvt4vLyEp1OB7fTW9ns/O05+v0+iKZr8DxvPzLNKVBATqHrOizLgm3bez9nXDISNkM3wBiTdqFFLHlQVWia9iuBc+Qs3/9dz8V0NsVwNMRwPMRoMpLTLu7n+DK/k2varUZoslLWmM3uEEYRUpohSRPZTTgFxKSO68BxHGw2G7mryWSMxf03mKYLxvKDWPJ1qSAKYrw3P+CNd4br5AaM8X3QMdluY0RRAi7ZFpKVEFnwam5grIb4tLJxs7bw+cFFXiooIBJ2KDcpisPG4qhkSwtEaY6UFqAUiBOGvET5GMrFy8jzHOR3WtIhLveHgscgqIt9kh099rMjzdk/FeS8QJJQEMsL4PkhvvsB/EehHw+O8rfTZRnHZpPiB9H4zUuF7VjEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/2ed806c954234588605c04b20112db78/2bef9/12.png"
+        srcset="/static/2ed806c954234588605c04b20112db78/6f3f2/12.png 256w,
+/static/2ed806c954234588605c04b20112db78/01e7c/12.png 512w,
+/static/2ed806c954234588605c04b20112db78/2bef9/12.png 1024w,
+/static/2ed806c954234588605c04b20112db78/71c1d/12.png 1536w,
+/static/2ed806c954234588605c04b20112db78/a878e/12.png 2048w,
+/static/2ed806c954234588605c04b20112db78/f24c5/12.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이것으로 ALU의 덧셈 구현이 완료되었다. 이제 뺄셈을 구현해보자. 뺄셈은 덧셈을 통해 간단히 구현할 수 있다. 바로 2의 보수를 활용하면 된다. 먼저 ALU의 뺄셈을 위한 입력핀을 추가하겠다. 입력 핀을 배치하고 이름을 Substraction의 약자인 SU로 지정한다. ALU는 이 입력 핀이 0일 때 덧셈, 1일 때 뺄셈을 수행한다. 2읭 보수는 모든 비트를 반전시키고 LSB에 1을 더하는 로직이다. 뺄셈일 때 SU핀이 1이기 때문에 SU핀을 0번 비트로 계산하는 Full Adder의 Carry로 연결한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.84375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACF0lEQVQ4y4VTa2/aMBTNH+6kDnUPqV37ZQwG/TUd40OH1G3ASIcoqBLwYaWMBkJw3kCw8/CZbJYo7bTtSkeRr4+P77nXUV6+eo3Tkzcol8solUooFt/i9OwMxXdFmTt6cYSDZwcoFAo4fH4ocXxyjPPqOSqVCqrVaoZy+T0UXdfxr/B8D4vFAktjCcMwIPjr9fqvfKWjtjOS67pwHAeMMURRhDAM5ZqQFSzLgmmaWK1WMif2noJSCmWmzUBME0mSSJHdbie/CU9k7n56j28dFVdfr9Bqt9Dr9XA3uQPnXO7nIc4p2lyTt6cRRiHiOH5kI9hx6M4ScZJkOcERovkQzpSHnzNompYlxU2UhdhsN9CXulyLEJXbvo25PkcQBPvLwxC2Z0M3dGy3W8lVptMphsOhFGARA2MUtrPB0jTwpfUZ9XodzWYTjUYDxCK4Hd2iVquh3Wrj8tOltD/+McbFhwuoqgpl+jBD4AdQrQ7q7keogQpgb0X0RAxCTNkkprTJKJPTFjmB1LbneSCEiGezkAniEvjMB+VUHhTlp2RBvOnfoN/v4/r7NbrdLgaDAUbjkexbyhNfZTKZyIX2oMG13UcNT6eXzwkB8SZ1nYAxLt3seXw/5W2uwVxs8iQ7nCKtNj9VnuSfTcqLofyuNSMLsaeCedFUhPMU+/045qA0grKyXDjeGp7nyr/F970/LP8PwjalMRyH4Rc2cMs3SpkCIQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title="image13"
+        src="/static/d7b95289f2c979c531284199a5349499/2bef9/13.png"
+        srcset="/static/d7b95289f2c979c531284199a5349499/6f3f2/13.png 256w,
+/static/d7b95289f2c979c531284199a5349499/01e7c/13.png 512w,
+/static/d7b95289f2c979c531284199a5349499/2bef9/13.png 1024w,
+/static/d7b95289f2c979c531284199a5349499/71c1d/13.png 1536w,
+/static/d7b95289f2c979c531284199a5349499/a878e/13.png 2048w,
+/static/d7b95289f2c979c531284199a5349499/46c38/13.png 3448w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 SU핀이 1일 때 IN_B의 값을 반전시키려고 한다. SU핀이 0일 때는 IN_B의 원래 값을 1일 때는 IN_B의 반전된 값을 사용해야 하는데 해당 로직을 진리표로 작성해보면 XOR 게이트의 진리표와 정확히 일치한다. 따라서 XOR 게이트로 쉽게 구현이 가능하다. 바로 아래와 같이 말이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSElEQVQ4y4WSe08aQRTF91M3TVpNY7CAjenX0TS09VFcrZhFUEQQYYHyWB/7YNllZnZ/zY4VafuHNznJTGbmzLnnHuPN27esv18jXyiQz+fJ5XK8W1tnI7dJbvMjHzY2yBeKbG9/prj1iXxxS6PwD4rFLXL5Isbw15DXKgVCNX/1ngKMqnVKEMxIkgQlJeE8Yh7FSCk0Wq02X0pf2S3tcHB4wPGxyXXrGiklQoglEiVxvDlGt3vLeDxe/iKkZCHkUtr5eZXDH4ccmUca2dqqWlrAKrK6DxYYjUaDDHEcEwQBrucjpGIWB4SLkPawTaN7SdO+otapc3F7gT22NUFGlKbpkvDOjzGazSZnZ2copUhUwmIhNKE3dxFSEEYhnd6QsmVSu6oxcSa4vrsk1FYppdu5D2KMwaBPr9fT6oQSRHGMShIi8TKENAGh5F8DeFa1Wo4XYbRubgi9EPPOZNfbwZwf4/kxt6MulWqF0WiE67rcdG6wRzbWhUWr3cLzPGzbpmN3qDXrtNtNeqN7DMuyiKOYycOEgTMgThdEcaY0on5Zp1QqYZomlUoFmUgm0wn7B/ucnPykXC7j3DlMnSl7e9/4Xj7F8H1feyAWAiUUWSdSe7LSiuPQ7Xa1on6/r6H3fVv7/lwPM4HxXziTRA8lm576Q+z5nm65Z/doXjepnle5vGxg9wf6jtJ+pjyGAiPNNs+jT1Ot7plwNRKrNZsFeF7I09HL26m7wJjeuzx6gTb5KYfeknA1uFpJFq2VD5JELbMoRUJvFPEbJFvEzxBvQyIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image14"
+        title="image14"
+        src="/static/d5511cb31371bf5736d92cfb09a84304/2bef9/14.png"
+        srcset="/static/d5511cb31371bf5736d92cfb09a84304/6f3f2/14.png 256w,
+/static/d5511cb31371bf5736d92cfb09a84304/01e7c/14.png 512w,
+/static/d5511cb31371bf5736d92cfb09a84304/2bef9/14.png 1024w,
+/static/d5511cb31371bf5736d92cfb09a84304/71c1d/14.png 1536w,
+/static/d5511cb31371bf5736d92cfb09a84304/a878e/14.png 2048w,
+/static/d5511cb31371bf5736d92cfb09a84304/f7171/14.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>뺄셈 기능이 완성되었다. 이렇게 덧셈과 뺄셈 기능을 완성했으니 산술 연산은 끝이다! 지금부터는 제어장치가 ALU를 컨트롤하기 위해 추가회로를 구성해보도록 하겠다. 가장 먼저 ALU의 출력을 제어하기 위한 입력 핀을 추가하겠다. 입력핀을 배치하고 이름은 Enable Output의 약자인 EO로 변경하겠다. 그 다음 Controll Buffer를 추가하고 Data Bits를 8로 설정한 뒤 Sum과 Splitter 사이에 배치해준다. 그리고 Control Buffer의 Enalbe 핀을 EO 핀과 연결한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACKUlEQVQ4y42SW0/bQBCF/aOrFokGCkmawB9ClJdQqaUOCIIg9IEklnOVE4xvxJe9+KvsNKFQpHako9Xuzp45c2aN91tb7Hys0Gg2aTQa1Go1tis77NWqfKpXeffxA9v7FXY/71Gp77JdrVBt1mkeHL7AweEh+/UmxmQ64a3Q5OXqpHMsb8i926Pn9hmF483d65CAcd25IIqe0FqjlCRJUsIkIpExKBCpZDJx6fa6eI8eMpWkaYoQGVIIlFQopdBKMvdjDMvqM51Oywp5niMyiZdEPCaPxHG8qZ6Tk8qUaBmVeaUiJYmzGD8Kyp78WGLY9hDbtjcPhVA4vo/lDDg6OcI0zRJn52fYC5tT85TWaYtOp0PrawvLsfh2+Z2Tk2POr39idLtd2u02SZKUWC5jtF4p8Dwfy7Lo9/tlu0XEy5jBYFCeTSerzqRQTMZD7npDjOLy/r6H67plO+HTE0Iq8lxvVI/GIy6vrjhrm1xcXnBze8Pt3S3DkY3SamOBnyiM3mBAHMaYrsmX6JgfsYlUukwqBrUe1nKZ4Ty4OK7DbDZj8TBnvghQijKncHkRJhiFF2mS4jw6jBdj0jz7rXBFWKxrBesopqqkREpd2rMihIcwxQjDsEwQmUAJRdHpa8K10jXWRVbQG4VulGG8/pxK6zcV/oln8ud9QegtBUZebNaHeY4s1P6D8K8ChSV5ztzPMOaujxdEBEFAFEX4QfCC8H9Q5EqhsWcJvwBZtM2SAO3bfAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image15"
+        title="image15"
+        src="/static/1c4fd0589d6142834631f0c24860bd9c/2bef9/15.png"
+        srcset="/static/1c4fd0589d6142834631f0c24860bd9c/6f3f2/15.png 256w,
+/static/1c4fd0589d6142834631f0c24860bd9c/01e7c/15.png 512w,
+/static/1c4fd0589d6142834631f0c24860bd9c/2bef9/15.png 1024w,
+/static/1c4fd0589d6142834631f0c24860bd9c/71c1d/15.png 1536w,
+/static/1c4fd0589d6142834631f0c24860bd9c/a878e/15.png 2048w,
+/static/1c4fd0589d6142834631f0c24860bd9c/f7171/15.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이렇게 하면 EO핀이 1일 때만 ALU의 계산 결과가 출력되도록 제어할 수 있다. 다음으로 추가할 것은 컨트롤 플래그이다. 제어장치가 ALU의 결과를 판단할 수 있도록 2개의 간단한 플래그를 만들어 보겠다. 첫번째는 Carry Flag로 ALU 계산 결과의 MSB 비트에서 캐리가 발생했는지를 알려주는 플래그이다. 두번째는 Zero Flag로 ALU의 계산 결과가 0인지 확인하는 논리연산 플래그이다.</p>
+<p>먼저 Carry Flag부터 만들어 보겠다. 출력핀을 만들고 이름을 Carry Flag의 약자인 CF로 지정하고 7번 비트를 계산하는 Full Adder의 Carry핀과 연결하면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABuklEQVQ4y62SW2/aQBBG/bOrPLSJ1IRr+n/6BG3hBXoRgigQELINwQ0pBGObjXftPdWaxFzaKH3oSJ/WOyuf/XZmrDcnJ5y9O6VcqVAplykUCrw9PeO8UKRQLPH+/IJiqUz18gOV6uWLMucXpSrWbDbjf4UCrE7nG2EYkaYpSZIQbQRCPKKUQkqJUjJbX5NOFPOHEGs8HuF5XnaD1prHWBJLlX2bS3bSTzreb3Mm7v0Nlm07uK6b2zawfaBZX9MOGGH1ej3a7TZCCMRGEEUbpEp2DvXO5d9c/wEcjkbc3AxZLB8IopDVOiCWW6BO95xw6BidFSmH50DPm4JM+LFuUYs+8l1+JdV7nUtV1qBEJXnOwGMVE8fqwOEvU8NG16HjhtSubD4PZ3wZuFz3+1mjulddnDuHyXJCrVnDcRymkynd6y625+D7mwz0DFysBZZ9+5Mw1oxdD2/uM18E1OqfaDabtFqt/Nm2Y1Ov12k0Ggz6g9zr/pMz4FMxXoy8Zkdx3CgTy0BgaZ2av/Kk6bCZRTPkRs/AJE22tTzK50ANd0uBdb/0WfkBvu8TBAErf304Nv8gY0rJFPs25DdVA9c4cEWO4QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image16"
+        title="image16"
+        src="/static/f9d00e58947dbe430c4be3789553b264/2bef9/16.png"
+        srcset="/static/f9d00e58947dbe430c4be3789553b264/6f3f2/16.png 256w,
+/static/f9d00e58947dbe430c4be3789553b264/01e7c/16.png 512w,
+/static/f9d00e58947dbe430c4be3789553b264/2bef9/16.png 1024w,
+/static/f9d00e58947dbe430c4be3789553b264/71c1d/16.png 1536w,
+/static/f9d00e58947dbe430c4be3789553b264/a878e/16.png 2048w,
+/static/f9d00e58947dbe430c4be3789553b264/de720/16.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 Zero Flag를 설정해보겠다. 출력핀을 만들고 이름을 Zero Flag의 약자인 ZF로 변경한다. 이 출력핀은 계산 결과가 0일 때 활성화 되어야 하므로 계산 결과를 담고 있는 모든 비트를 터널로 가져온다. 또한 모든 출력이 0일 때 활성화 되어야 하므로 NOR 게이트를 활용하도록 하겠다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6ElEQVQ4y32S3W7aQBCF/dgRVVPXBJTUSR+nfYD2or3gAohTMEEiTmSMA47X//vnU+0aE+I2rLTalXb2mzMzxzjr9WB9MvHFtmHbNobDIT6emxheXsH8bOGs9wHnpgmrP4B1MYDVv4Bp9fV5ffMV9vWN3uo+uLRh+L6P91ZRlJgvXPyZu3CXC9w6Dtz7BWaLOWJC/omXAIzxeIQsyyGlhBBCQ8qKQnAOzjkYYwg2MTa7DZ78J4RhiCAIsNvloJSDM6ZjpODYJSWM5fIe63WgM9R1jYoyUMb1XSVRZ3cx1iTSMfs4oMZLzmA4zh1msxnKskSaJohJAsaFousPLbiFU0oxuZ3gMXxEmqZNqTppjTjnMFzXxWQyfs3Ohd71EfBYrVLm3DnwQx9ZnoFzAc6l/qsVep6H1WqFNEvBOEVRVTqoC2y36qu7cBE8B7oqQnKUJdfAKKUwVp6HIinwc/MD31++4VfxG0LIQ3+OFTb9Y5hOp3jwHw6TbvscZRTGdrvd0yNE2Q5lTf+r8ACkDKPRCN7aQ0ziN29a4eGTrLWR1NupkpW1oihCkiWvkz6ectcWQkpw8T6wG98AmymTgitgQ2+zKNgphV0btb1WNtsSBuM5IohJCkKI9pXyIRfyJPAtfD99JuEFFf4CccTYm0iowSUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image17"
+        title="image17"
+        src="/static/36fc2d04b53559312be4f7e7fbba33d2/2bef9/17.png"
+        srcset="/static/36fc2d04b53559312be4f7e7fbba33d2/6f3f2/17.png 256w,
+/static/36fc2d04b53559312be4f7e7fbba33d2/01e7c/17.png 512w,
+/static/36fc2d04b53559312be4f7e7fbba33d2/2bef9/17.png 1024w,
+/static/36fc2d04b53559312be4f7e7fbba33d2/71c1d/17.png 1536w,
+/static/36fc2d04b53559312be4f7e7fbba33d2/a878e/17.png 2048w,
+/static/36fc2d04b53559312be4f7e7fbba33d2/f24c5/17.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 NOR 게이트의 출력을 AND 게이트에 연결해주면 8입력 NOR 게이트의 결과가 나온다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4klEQVQ4y42SgU7bMBRF89UT2sY26IDQ/dD2BavENFhBqLQqdLTpCunSOmnixLF9Jjtqx4CiWbqyZMvH9933glc7O7x7u8tRGBKGIa1Wi9dvdtlrfWS/dcD7D3scHB5x3P5EeNzequN2m/2DkCCKIh4ubSw/zi8YDAf0+ldkq5T/XTUQnHe/s8pzf2CtJZeSq0Gf6XTK7fiWOM5QqkYp9aKsromFJLi8vGA4HCKlJMsyROoAmrpeQ8zGgfvwORlj3S3JShE4mJM7coC8kNTaeOD1zTXzRezLrlSFNhpjzEZbgd1u92+GDmYMpZScdk8Z/RohCkE0j1ikC7TVTxw3QEhWFcF4PGY0GpGmKVVdUUjpG1NVFf1Bn9n9jExmGIx3GTvHMiNZCnS9BjaxzNOSYDAckouczrzDF/GZr3mnAZYlvasecRIjVoJCFaQqJc5iH02a5b6af4BZSXB2dkYpS+6SOybxBGkrD3RNOvl2ws3kxruarWYs8yXWpW0fl/zAoStVa42qFFq50GmaohSTaEIiEgpZNNk5lnGQ55pC05THw6mNQdX6ydD6h9a8ODaLXBFYZ2lt21pqrb3WpXhtAW2A1vq390tFcP97yUJkCCH8YC+F8A7XwKduzLN7rQw/Z5I/bv/XMznWgnIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image18"
+        title="image18"
+        src="/static/0c35ef35489d66ba061abbc89ce44ded/2bef9/18.png"
+        srcset="/static/0c35ef35489d66ba061abbc89ce44ded/6f3f2/18.png 256w,
+/static/0c35ef35489d66ba061abbc89ce44ded/01e7c/18.png 512w,
+/static/0c35ef35489d66ba061abbc89ce44ded/2bef9/18.png 1024w,
+/static/0c35ef35489d66ba061abbc89ce44ded/71c1d/18.png 1536w,
+/static/0c35ef35489d66ba061abbc89ce44ded/a878e/18.png 2048w,
+/static/0c35ef35489d66ba061abbc89ce44ded/f7171/18.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/컴퓨터-구조론-CPU-만들기/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-3fa8deb48819dbe669b2.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-17ce83b7f594c2c0c1fe.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2b2b484591700b0ae13f.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-7f5def86146fc29c9ead.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-7f5def86146fc29c9ead.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-3fa8deb48819dbe669b2.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-8bd3326d799737bed84d.js" async=""></script></body></html>
