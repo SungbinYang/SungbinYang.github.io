@@ -1,0 +1,421 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><style data-href="/styles.06884e94fa8e7f768648.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 4.4.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[컴퓨터 구조론] 제어장치가 없는 컴퓨터 · Sungbin</title><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/d2f1db1734ce6bdaf587f7d63a88cd29/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/컴퓨터-구조론-제어장치가-없는-컴퓨터/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[컴퓨터 구조론] 제어장치가 없는 컴퓨터"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/d2f1db1734ce6bdaf587f7d63a88cd29/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[컴퓨터 구조론] 제어장치가 없는 컴퓨터"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/d2f1db1734ce6bdaf587f7d63a88cd29/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link as="script" rel="preload" href="/webpack-runtime-8bd3326d799737bed84d.js"/><link as="script" rel="preload" href="/framework-96f35882fb1b7fa32ef9.js"/><link as="script" rel="preload" href="/b633362c-429f9f687c864375c1ce.js"/><link as="script" rel="preload" href="/63a121f2-37023b2342386794d0fe.js"/><link as="script" rel="preload" href="/f3fee096-8a3be85b266f9ba6922d.js"/><link as="script" rel="preload" href="/3e15977f-5148ca5d1a687341b4e3.js"/><link as="script" rel="preload" href="/aec3edcd-33ff14c394bc1bedc44a.js"/><link as="script" rel="preload" href="/2425c7c2-8c4925ac74b0ebf7da0a.js"/><link as="script" rel="preload" href="/d0007318-557f95e6f5b855c64727.js"/><link as="script" rel="preload" href="/cc76255b-3222831408842f40a1cb.js"/><link as="script" rel="preload" href="/1593e758-7868fce8d5ccd9520ad2.js"/><link as="script" rel="preload" href="/48aa8186-67735c86ae4015d55662.js"/><link as="script" rel="preload" href="/app-3fa8deb48819dbe669b2.js"/><link as="script" rel="preload" href="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js"/><link as="script" rel="preload" href="/component---src-template-post-tsx-7f5def86146fc29c9ead.js"/><link as="fetch" rel="preload" href="/page-data/컴퓨터-구조론-제어장치가-없는-컴퓨터/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2580406332.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3810308631.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[컴퓨터 구조론] 제어장치가 없는 컴퓨터</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->cs</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2026년 2월 18일<!-- --> · <!-- -->3<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">컴퓨터 구조론<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (8개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css rweb5b">.css-rweb5b{margin-bottom:0.5rem;}.css-rweb5b::marker{font-weight:600;color:#9195F6;}.css-rweb5b::after{content:'- 3분';margin-left:0.2rem;font-size:0.8rem;}.css-rweb5b>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-rweb5b>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-rweb5b e1k9d3a00"><span>[컴퓨터 구조론] 제어장치가 없는 컴퓨터</span></li><style data-emotion="css iuahyr">.css-iuahyr{margin-bottom:0.5rem;}.css-iuahyr::marker{font-weight:600;color:#9195F6;}.css-iuahyr::after{content:'- 12분';margin-left:0.2rem;font-size:0.8rem;}.css-iuahyr>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-iuahyr>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-iuahyr e1k9d3a00"><span>[컴퓨터 구조론] 메모리 만들기</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[컴퓨터 구조론] CPU 만들기: 산술논리연산장치(ALU)</span></li><style data-emotion="css zsnwin">.css-zsnwin{margin-bottom:0.5rem;}.css-zsnwin::marker{font-weight:600;color:#9195F6;}.css-zsnwin::after{content:'- 13분';margin-left:0.2rem;font-size:0.8rem;}.css-zsnwin>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-zsnwin>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-zsnwin e1k9d3a00"><span>[컴퓨터 구조론] 컴퓨터의 기초가 되는 하드웨어 만들기</span></li><style data-emotion="css 13xotzt">.css-13xotzt{margin-bottom:0.5rem;}.css-13xotzt::marker{font-weight:600;color:#9195F6;}.css-13xotzt::after{content:'- 7분';margin-left:0.2rem;font-size:0.8rem;}.css-13xotzt>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13xotzt>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13xotzt e1k9d3a00"><span>[컴퓨터 구조론] 비트</span></li><li class="css-zsnwin e1k9d3a00"><span>[컴퓨터 구조론] 불 대수</span></li><style data-emotion="css 2r5mz2">.css-2r5mz2{margin-bottom:0.5rem;}.css-2r5mz2::marker{font-weight:600;color:#9195F6;}.css-2r5mz2::after{content:'- 5분';margin-left:0.2rem;font-size:0.8rem;}.css-2r5mz2>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-2r5mz2>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-2r5mz2 e1k9d3a00"><span>[컴퓨터 구조론] 컴퓨터 구성 요소</span></li><li class="css-2r5mz2 e1k9d3a00"><span>[컴퓨터 구조론] 컴퓨터 구조 개요</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css ifrico">.css-ifrico{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-ifrico{padding:1rem;}}@media screen and (max-width: 1308px){.css-ifrico{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-ifrico{width:calc(100vw - 8px);}}.css-ifrico p>img{width:100%;}.css-ifrico p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-ifrico p,.css-ifrico table,.css-ifrico ul,.css-ifrico blockquote,.css-ifrico ol{font-size:1rem;margin:0 0 2rem;}.css-ifrico center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-ifrico p+center,.css-ifrico iframe+center{margin-top:-1rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-ifrico h1>a,.css-ifrico h2>a,.css-ifrico h3>a,.css-ifrico h4>a,.css-ifrico h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-ifrico h1:hover>a,.css-ifrico h2:hover>a,.css-ifrico h3:hover>a,.css-ifrico h4:hover>a,.css-ifrico h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-ifrico h2:not(:first-of-type),.css-ifrico h3:not(:first-of-type),.css-ifrico h4:not(:first-of-type){margin-top:3rem;}.css-ifrico h1,.css-ifrico h2,.css-ifrico h3,.css-ifrico h4,.css-ifrico h5{margin:0 0 1.25rem;}.css-ifrico h1,.css-ifrico h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-ifrico h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-ifrico h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-ifrico ul,.css-ifrico ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-ifrico ul ul,.css-ifrico ol ul{margin-top:8px;}.css-ifrico ul ul,.css-ifrico ol ul,.css-ifrico ul ol,.css-ifrico ol ol{margin-bottom:0;}.css-ifrico ul{list-style:disc;}.css-ifrico ol{list-style:decimal;}.css-ifrico ul li{margin-bottom:0.5rem;}.css-ifrico ul li::marker{font-weight:600;color:#9195F6;}.css-ifrico ol li{margin-bottom:0.5rem;}.css-ifrico ol li::marker{font-weight:600;color:#9195F6;}.css-ifrico li>a{white-space:inherit;word-wrap:break-word;}.css-ifrico li{color:#000;}.css-ifrico li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico li code * span{white-space:inherit;}.css-ifrico li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico iframe{margin-bottom:2rem;}.css-ifrico div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-ifrico div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-ifrico div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-ifrico div[class*='markdown-wrapper']{padding-left:1rem;}}.css-ifrico pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-ifrico pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico pre>code * span{white-space:inherit;}.css-ifrico pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-ifrico p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-ifrico p>code * span{white-space:inherit;}.css-ifrico p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-ifrico img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-ifrico img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-ifrico blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-ifrico blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-ifrico blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-ifrico blockquote{padding-left:1rem;}}</style><section class="css-ifrico e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVQoz51Sy3LCMAz0/38WkBexE549lQCNEydhptBAz9uRPAYnHdpODxprpUjaVSR0FMBZGc7g47/YuEaME2Uw/dHeZpMHdjVeUzGYFkxhcoVus0Yt5zCZZGxUyj7Fus3KxjOJah4/Z2gbTnB62eJ994pel/g8dbg1xr5di2tdMabc1dRoVwsm4bMU5DhAcuitZcrT2ZIIzSJjdmSEbS7hurF04ctt10uWQpikNnnGzVheEkEnEUymUKcJdBxyUxoyYHgHcWiltQ3O+wKXfcE+SSR5faXxcTzgXOwYU/xyPKDXerDLQUOjJDNwP+FhyuaU5HUQ62aZs0/fftuhC/x2MgPzzude73b4n4N+duBfEs24R4/6hrYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title="banner"
+        src="/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png"
+        srcset="/static/d2f1db1734ce6bdaf587f7d63a88cd29/6f3f2/banner.png 256w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/01e7c/banner.png 512w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>본 포스팅은 인프런의 <a href="https://inf.run/PnrRu">만들면서 쉽게 배우는 컴퓨터 구조</a>를 참조하여 작성한 글입니다.</p>
+</blockquote>
+<h2>컴퓨터 조립하기</h2>
+<p>이번에는 지금까지 만든 모듈을 활용해서 컴퓨터를 조립해보겠다. 물론 아직까지 제어장치를 만들지 않았기 때문에 제어장치와 그와 관련된 프로그램 카운터는 없지만 우리가 수동으로 계산할 수 있는 컴퓨터의 모습은 구현할 수 있다. 지금부터 모듈을 연결해보겠다.</p>
+<p>가장 먼저 컴퓨터의 연산을 담당하는 ALU를 설치해주도록 하겠다. 그리고 가장 먼저 클럭을 연결해주도록 하겠다. 터널을 배치하여 이름을 CLK로 변경하고 ALU의 CLK핀과 연결해둔다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.84375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABs0lEQVQ4y6WTS2/TUBCF/ftZVAhUxKIVVTewYoFQi5AodhGwKK3yKIlTpEjEaSy5oYkbu7bv60P35qHUDcqCkY7GdzxzZuZc29s9PmP/U5t9P+RVELJ3csnu0TkvPjbZeXfGk7ff2Xn/g2fHDZ4eXfD8Q4OXJz85OO1y+CXkIOiy97nD4WnovNe9bPJnNAQUGAlKoKUAzDymBBgF6AVsfLNl9yVeo9mgE/YoK+GCQmkqqVDaoLReean04jx/XoeQytXGtxle71fIcDikLEvyPCfLc5dgjMaY+TTWL6G1fgTbxFoyzfGiaEAcx0gpqaqSLL+nEtKtJoQgSZLFu4qiKDaSPiQcDBiNRisdSikc4bKw3++7hlEUkaapy9lCGNFutxG5ADtYhVtZL5JsM9/3CYKAyWTygHB92hVhp9cjjmL8oc+b36/5mn1zQi+T67ZVw1arhagE15NrrpIrJjpdXcqywGpoUZ+qTnhjCcfjMUIKyrxEFtJ9anPCzTf6L1gb3xV49ZVst3XCOvH6ua6hI9Ta/iELvYxBKvV/E97cTpmmM+7SlNlsxjR9rOE2LDUcpwV/AXjh54Akx3ocAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title="image01"
+        src="/static/9f10e377284d37807e88a0e77a5b364d/2bef9/01.png"
+        srcset="/static/9f10e377284d37807e88a0e77a5b364d/6f3f2/01.png 256w,
+/static/9f10e377284d37807e88a0e77a5b364d/01e7c/01.png 512w,
+/static/9f10e377284d37807e88a0e77a5b364d/2bef9/01.png 1024w,
+/static/9f10e377284d37807e88a0e77a5b364d/71c1d/01.png 1536w,
+/static/9f10e377284d37807e88a0e77a5b364d/a878e/01.png 2048w,
+/static/9f10e377284d37807e88a0e77a5b364d/de720/01.png 3452w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 이 CLK 터널에 신호를 주는 클럭을 연결해야 한다. 우리가 만들었던 Clock0를 설치해준다. 그리고 이 클럭의 CLK_OUT 핀을 터널 CLK를 만들어 연결해준다. 다음 새로운 터널을 만들어 이름을 HLK라고 변경하고 CLOCK0의 HLT 핀과 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABuUlEQVQ4y6WSS2/TQBSF/ftZVAjES2pBsIEVC5DKQ2pl09BFRUhTyDSy2JAHDzvEGSep7Xl94AktSWjogitdjebqzKczRze486rJ9t4HdsJTHkRdtvc/cmu3ye3XbbaeHXHt6SFbz99x40WL67vvufnymLv7goeR4H4o/LudUPDooMu9vQ7Bp1gwz0aABafBKKxWgAOrcbpczOt7rfHn5VVUmqB13GYicz9wDpSxVNqgtFkRV0pjrMNYizarrYzxj1NZEDQaDYQQ5HnObDbz8PrhKE2JojccNBrUmrIsPdhae2nXzn9MS4JWq0mnIyiKAmctZ0Xp3TjnSJKEUyEYj8copRYa5/4N/Pb9qxf6L+NQRl8A6+r1eqRpSr/fR0q50eUFcDAYeLGr6gDxXee3EMFwOCQMQ6IoIsuyFeCy27o8sBvHJF8SwkHIk8+PeTs79EGfi9frygxPTtpUZcUwGxInMZmV3qFzf8Raa9/rrtaB41lFMBqNUFpRzkt0of2qLYBuo5tNwGyuCNa/VO/ZMnAdvHxfzfA30NrFUvqhc2hj/s9hOp4wkVNyKZlOp0zk3xle1eYc+CvDn+gv5S8NBBLKAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title="image02"
+        src="/static/aef2d3ac166cfb1c0eaade6c22a41815/2bef9/02.png"
+        srcset="/static/aef2d3ac166cfb1c0eaade6c22a41815/6f3f2/02.png 256w,
+/static/aef2d3ac166cfb1c0eaade6c22a41815/01e7c/02.png 512w,
+/static/aef2d3ac166cfb1c0eaade6c22a41815/2bef9/02.png 1024w,
+/static/aef2d3ac166cfb1c0eaade6c22a41815/71c1d/02.png 1536w,
+/static/aef2d3ac166cfb1c0eaade6c22a41815/a878e/02.png 2048w,
+/static/aef2d3ac166cfb1c0eaade6c22a41815/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이렇게 하면 HLT 터널로 클럭을 멈출 수도 있고 클럭 신호는 ALU의 클럭으로 들어간다. 이제 메뉴의 Simulate -> Manual Tick Half Cycle을 클릭하거나 command + t를 눌러 클럭을 동작시켜보자. 이제 다른 핀들을 연결해보겠다. 새로운 터널을 만들어 이름을 SU로 변경하고 ALU의 SU핀에 연결해준다. 터널을 복사하여 이름을 EO로 변경해주고 ALU의 Enable Out핀에 연결해준다. FI핀도 같은 방식으로 연결해주고 ZF도 연결해준다. CF도 연결을 진행해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABy0lEQVQ4y6WS22sTURCH9+/3oYjiDUxFn/TFB4V6AcOuCUk1qdoY02UNUk2axmRzWXdjds/t0z3bhiamIjgwHM7hNz++mTnOrRcH7JbblFyfe57P3XKbG3sH3Hx5yM6Tt1x5XGPnaZNrz95zde8d159/4Ha5w32vw67boeQeUXI7PKj43Hn1CcfvtAhPeoAGJCiBlgIwoCVGpmBkcbea/Nwey0zi7O+/oXPkF3IDqVBkUiGkWhNnQiKV3ppCKTCGcbTEabfbxHFsi4wxLNPMisIwpFKp8LpSoVqtkqbpSqO1/iNz8kmc4jSbTSaTyYokJxNCWlGv16cbBExnU6SUDIYD4iTearoyrNdrNBoNW5T8TIiSuGhFCvr9kI+tz4ThmF6vx/D7EKXV3wm7X7qcDk8RCwFL0EtTzM8YS3V8/BXXdfE8jyiKbBfnJhdJ87CGfhAwGozwTjwefXtILalbQnNWsBnb6NYIW61DsjTjZNYnGAXMdGQJjSmESilLmucm1abhNMlw8m0KKUgXKXIp7VcrDM2lNJcZzhYCZ7MlpfWa4abxxfv6DM8MtS4WYB/zRSj1f4Tj6Zx5FPMjiuwHn0frM/yXVOeGv2f4C/d744t1y94uAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title="image03"
+        src="/static/75b86b927d9abad0f9fb0311d34bcd03/2bef9/03.png"
+        srcset="/static/75b86b927d9abad0f9fb0311d34bcd03/6f3f2/03.png 256w,
+/static/75b86b927d9abad0f9fb0311d34bcd03/01e7c/03.png 512w,
+/static/75b86b927d9abad0f9fb0311d34bcd03/2bef9/03.png 1024w,
+/static/75b86b927d9abad0f9fb0311d34bcd03/71c1d/03.png 1536w,
+/static/75b86b927d9abad0f9fb0311d34bcd03/a878e/03.png 2048w,
+/static/75b86b927d9abad0f9fb0311d34bcd03/f7171/03.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 ALU의 피연산자로 사용되는 두 입력 핀과 계산 결과인 Sum만 연결해주도록 한다. 먼저 출력핀 Sum은 바로 버스와 연결되기 때문에 아래로 선을 뽑아서 버스를 만들어주겠다. 다음으로 ALU의 피연산자 A를 연결해주도록 하겠다. ALU 피연산자 A는 레지스터와 연결된다. 먼저 메모리 폴더에서 레지스터를 선택하여 ALU 근처에 설치를 해주고 이름을 Register_A로 변경해준다. 이 레지스터의 입력은 버스와 바로 연결해주고 클럭은 터널을 통해 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7UlEQVQ4y6WSa2sTURCG9/8jiKgVxBZLP+hHQdBeoE1aUKEm2CSkaRuSrY2lSdPsLdmze26P7NkkmmJFcOBlmdnhOTPvOd7a9lc29ptsVDq8Pjxjfb/F2scaL/ZOePz+mEfvvvDkQ53nuw2ebn/j2c4JLw/abFbbbB2esnnYYb3SZuuow6uDNt719z6zyS1lKNASoyRgwWqkmKGzFCszTC7K+gMhcoXX7/VptlpIrV1rrrSTNgZjLWfnF+zs7jk1mk2UNk5SKYJQk4oyx1pGkcBrtY4Jw3h5StmssfbXJFJKlFLLPMsygiCg1TxlMgnnVctdkuFdXJzT6/VKmFJkWe6AxhiSZEpwd4fW2kGvrq+I4og4jknTlCSJEULMD58D67U6tVqNNEuJpzFBFDqgkhLfv6FebzMc3jAYDPAvfQcbDockSVLOZa2zZwnsdruuUQsNRV1CLpVrKCb2/Uuq1apTAXPmC+HWLmDFJsYBKYHtTofR9YjKjwpv/Td8mn52PlpjVnxcxAJwX8sJG40GMpcMJgPOR2cEJppfStlY+FdMWugh2AI4meZ44/HYNYtZhhLKrb245b8B/gQMZhLv/krKmBXgffDv+aqHc6BL5j+KryqeyP9MeDsJCaOEOIrcUwijVQ//RYtnE0wlPwFGo+I3p53GPwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title="image04"
+        src="/static/d4e15c91ba536291799872a5b5bc435b/2bef9/04.png"
+        srcset="/static/d4e15c91ba536291799872a5b5bc435b/6f3f2/04.png 256w,
+/static/d4e15c91ba536291799872a5b5bc435b/01e7c/04.png 512w,
+/static/d4e15c91ba536291799872a5b5bc435b/2bef9/04.png 1024w,
+/static/d4e15c91ba536291799872a5b5bc435b/71c1d/04.png 1536w,
+/static/d4e15c91ba536291799872a5b5bc435b/a878e/04.png 2048w,
+/static/d4e15c91ba536291799872a5b5bc435b/f24c5/04.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 레지스터A의 입력을 활성화하는 터널을 만들어 이름을 AI로 하고 레지스터의 WE핀에 연결해준다. 그리고 레지스터A의 출력은 ALU의 IN_A에 연결해주고 Control Buffer를 만들어 레지스터 A의 출력과 버스와 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACBElEQVQ4y6WSbWsTQRSF8/8FEbVCsWDpF/0ogpZaa0yLIhRb0sQ0JI3Zjd10m6TZtySzmZd9dCZtGosFwYEDM8OdZ86cO6W17UOe71bZKJ/yotJk42OdtXffePa+ysM3hzx4/ZVHb494ulPl8fYxT3aqrJcbbFZO2dpvsrnfZKPcYOugyfred0p+t03QPQMjAQ1aYpSdF1Bo5GyCzmeYuXCye2DuaDHEXFHqeh79i9BtmKJgrrSTNsat22cddj/sOZ2c1LgaR0RxTBRFnAcxF+EVSZa584NEUOp0Oniet7xFa4NUmqIo3HomBOPxmDiOydIMIQRaa4bDEfVaG8/vkSSJq73Kcgv8Qb1eRymFlNIBLNAYwySb8tPzyfMcMRN0e12SNHHwMLyk3+8ThhfMpbwF1mrHNBoN0ixlKqbEWeqASkk8L+T46JTB4JIgCPB7vqsLw5Akid0rrBEbj83cAVvtBsPRyPXDSYFUyhXYYs/zqVQqTmmaLsIXwrm2w0KNMbcOm602/V6fT+dlXvkv+Tz5gtKGwphljqvDHv6blg6rJ1XkXBJEAa1Bi8gk101ZFNoGWKdW5vqS+4DjyZzSaDRCKkk+zVFCuW910+X73NwHjKaS0t0n2YBXgXfBq+vV+RJojLbJLjZt17T+P4fDcUycZKRJQpZlxMmfGf6Lbr5N9DvDX+b034VzheAAAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title="image05"
+        src="/static/4b420455a5d3af4595354fed00295d8b/2bef9/05.png"
+        srcset="/static/4b420455a5d3af4595354fed00295d8b/6f3f2/05.png 256w,
+/static/4b420455a5d3af4595354fed00295d8b/01e7c/05.png 512w,
+/static/4b420455a5d3af4595354fed00295d8b/2bef9/05.png 1024w,
+/static/4b420455a5d3af4595354fed00295d8b/71c1d/05.png 1536w,
+/static/4b420455a5d3af4595354fed00295d8b/a878e/05.png 2048w,
+/static/4b420455a5d3af4595354fed00295d8b/f7171/05.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 터널을 만들어 이름을 AO로 지정하고 Control Buffer의 Enalbe핀에 연결해준다. 이렇게 구성한다면 버스에 있는 데이터를 AI핀으로 레지스터 A에 저장할 수 있고 AO핀을 이용하여 A의 데이터를 버스에 출력할 수도 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/ElEQVQ4y6WSa08TQRSG+/9NjFE0IWIk/AJjAgYFsRjRaIS0KhS2sLu1td2V7m3a7m1mH51ZihvCBxIneZM5J2eeeefMaa1sfebpTpdn70543u6x9vY7j7e+8uR1h/svv3DvxScebB6yst3h4asjHm13WN07Zr19wsZ+j/X9Hmt7x2y877G6+4OWa5+SJSFQARJUgSqLOq4kxWKGzBaoPDXSOVA3VK80L2lZ/T624zJfLEiEIBZz8lIhlUJVFVb/nDc7u0bd7jemQUgYxYRRxHAUMZ5MiYUwQD9OabkDl8vLS5OQZUmW5eRFSVVVJrdIU4IgIIoiRCJI0wwpJeOxT7djYdsDojg2tVOR0RoNRziOc21bw7SUUszEnJ+OS5ZlpIsUe2ATJzFRFGJZNhcXv3DdCXle/AOe9y3OzixUpaioyGVJKRVlUeA4E44OT/B9j9FohH5NIhImkwlCJKbPUtaX670BDgYDPM8z/2GUQ1FKqCrKssRxXNrttlGSJHXz09S41ku3pgZeOTy1+ky9gAP/A1vhJgezj8ZhpR1f9bG59OHbdO3Q931T6AmP4WxIpGLjcHmz/gDtVEvHy/xtwGCW0zJFeuYa49UE3lUaGM4LWjefpeevCbwJbsbNfQNYB8tkKeX/OfwdRESxIIljhBBmSGvg3WFyCfzbwz8x4+FUelPNnAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title="image06"
+        src="/static/9733b662297fba3bb4c469c02ca1ce8a/2bef9/06.png"
+        srcset="/static/9733b662297fba3bb4c469c02ca1ce8a/6f3f2/06.png 256w,
+/static/9733b662297fba3bb4c469c02ca1ce8a/01e7c/06.png 512w,
+/static/9733b662297fba3bb4c469c02ca1ce8a/2bef9/06.png 1024w,
+/static/9733b662297fba3bb4c469c02ca1ce8a/71c1d/06.png 1536w,
+/static/9733b662297fba3bb4c469c02ca1ce8a/a878e/06.png 2048w,
+/static/9733b662297fba3bb4c469c02ca1ce8a/f7171/06.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 ALU의 피연산자 B입력을 연결해주도록 하겠다. ALU 피연산자 B는 레지스터 B와 연결해줘야 한다. 아까의 과정을 거치면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACJklEQVQ4y52S2W/TQBCH8/8jIcRRqaJVBS/wiJA4WqAkkTgqaFrHOZpeaUpCjqaO17G99q7XH/KmJIinwkijWY9nP838dkprb7+zvnPIxsc2W5UjNnYbPHq9z9qOw92X37jz4iv3XtV4uO1w/80BD7Yd1ndbPKm22Sq32Cy32Sy3eFo94vFui9L5aRMxGUGuAQ2ZwmgF5JBnqDgkS2JMKq0XOTCQm0Us6m5MJprSUafB9Hq2TKosJ1UZmTFkJufk9Ix37z9Yr9ddrr0ZM18w8336A5/h6BoRBPbuREhKrutSq9WQMmE+nzMPQ5TOyG0HIKXE8zx832cezG1dlmWMRhMc55hut4fvC1s7DRJKjUaTVquJUgqtNUmaLoGBCOidd0mSBBlLupddhBAI36fb/cHFxZhe7wqlshXw5MRFiGA5cqoVOjPEcYTjdNjbc5hMxvT7A3qXPTvFcDhkNBoyHnt0On3CMFwBXfcLh46LilLIwMjcAqWMiaLQgiqVCtVq1Y5cWBRFDIcjzs4u2d8/sHEBlJSa7TaD3k/K/TLPe8/4FH7G5BDHMUGw6rywQpI0TRcSSGllimPJdOqtOqy7dbTSDGYDjifHzIywHRbCF8BCs+JBCi++f3sxehDM7TmKYwv0QkVpOp2itCKJErTUdrUWj5JzW1vU5gvg3z+1MUugMeZWXuzsElgkuLlcRJ1l/ww0fwKvPB9fzAmEsLr4Qiz38H86/AUc1NokJ162dQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title="image07"
+        src="/static/9a9eb3438c8d7fe55cb5a31a729dda72/2bef9/07.png"
+        srcset="/static/9a9eb3438c8d7fe55cb5a31a729dda72/6f3f2/07.png 256w,
+/static/9a9eb3438c8d7fe55cb5a31a729dda72/01e7c/07.png 512w,
+/static/9a9eb3438c8d7fe55cb5a31a729dda72/2bef9/07.png 1024w,
+/static/9a9eb3438c8d7fe55cb5a31a729dda72/71c1d/07.png 1536w,
+/static/9a9eb3438c8d7fe55cb5a31a729dda72/a878e/07.png 2048w,
+/static/9a9eb3438c8d7fe55cb5a31a729dda72/f24c5/07.png 3454w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이렇게 ALU와 관련된 핀은 모두 연결되었다. 이제 이 회로에서 ALU를 이용하여 계산을 해보도록 하겠다. 바로 아래와 같이 진행을 하면 되니 독자가 직접 해보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTElEQVQ4y42S227TQBCG/f5XcENBQuX0CkUCFbWkFVVok4o2oTnHiUMOjk+xk9ixd+0P7bpJkeCCkUY7szvzz8y/Yxx9rnF81uBNpc27yw7H502OPtV5dXrPs5Mbnp/UePmlyeuvLX2+OL3X9ofLNu8vWry9aPO2ovyOtg1r1CNeeUABCJAZhcge/ZzZZEy//cCg02JmmSBTKCQUuXouTx2LzjW6vR5ja6L9PC9IhdQqZU5egL10uL6pUavXGZojXM8jWIUsbJtGc0S3Z+G4rs4PozWGaZpMJiWgLiJz0kwcqgaBz2azIY5jglXAbrdDZIKhZfKjdctg1GOz3epYFWc0m02q1SphGOoLVUUo0DSl37do/+w8FpJ0B12WzpL5fM50+gvfjxhbHlLIJ8BGo47r+shcImTGNok1oOpIjVi9uaZSqXB2foa9sHWi7wdMZ1P6wwH12zttHwD7/R5D0ywJVpqCzEtAPZ4UOI6D67qHTpIkwfM8/MBnNDYZT8Z/AA6H+E7AlfONj/4JV5uq/hwFppJUUJLExEnJYRRGemRVRMUkcaLpUqJoMuxlOcY8muNKhyAPyYSkKAqEEGRZisgkjufTnrSZewvd7XYbE222uKGrgfc8G5Zlacee2SRRrD93D6hUXUgJfpAQpRG7YnfYiKHlUnuo6QJKVAOG7/vaWa/X7NIdMi8OgHmel7pfXr3rhf5AJZ3Bgu9313iu9wSojLKTUoSUfwP+Q9V7HKeaWwWkfD3y0luxCteaWNXlKoz+C1Dpfvn39CjA30b52AkkzxK9AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title="image08"
+        src="/static/81f86f66e677d4b6c41f83ec5fad892e/2bef9/08.png"
+        srcset="/static/81f86f66e677d4b6c41f83ec5fad892e/6f3f2/08.png 256w,
+/static/81f86f66e677d4b6c41f83ec5fad892e/01e7c/08.png 512w,
+/static/81f86f66e677d4b6c41f83ec5fad892e/2bef9/08.png 1024w,
+/static/81f86f66e677d4b6c41f83ec5fad892e/71c1d/08.png 1536w,
+/static/81f86f66e677d4b6c41f83ec5fad892e/a878e/08.png 2048w,
+/static/81f86f66e677d4b6c41f83ec5fad892e/4b7ac/08.png 3444w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 RAM과 레지스터 2개를 설치해주면 끝이다. 메모리 폴더에서 RAM을 선택하여 CPU 외부 오른쪽에 설치를 진행해준다. 그리고 Address Bit Width를 4로 설정해주고 Trigger를 High Level로 변경하여 우리가 이전에 만들어 보았던 RAM과 동일하게 만들어준다. 추가로 이름을 RAM16bytes로 Label Visible을 yes로 해서 이름을 표시해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 526px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 116.015625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAADE0lEQVQ4y42VZUv1QRTE7xf1y/hGxBeiImK32GJjYHd3d3dj6zz8RvaiFx9w4bD/uzE7Z07ciGLGzc2N6uvr1dLSopqaGo2Ojvq7qqpKfX19mp+f12/j4+PDFrm+vtbp6ant4uJCm5ubqq2tNUhzc7OGhoY8l5WVGbSzs1Pn5+c6Ozuzce/5+Vmfn59fgAMDAzo4ONDW1pY2NjZ0eHionZ0dVVZWRoG7uro0MjKi3t5enZyc+FHO7+7uanZ2Vuvr62b5/v6uCC+/vLzo4eHBi3t7e37t6OjIl5AA5ldXV/6OHff39yYSBcSd19dXvzY9Pa3FxUVv/G+wF4zBYz8Ai4qKhI6Ivba2po6ODv9m8+7uzgweHx+jwgetMMbl5eVPwLa2Ns3NzSk1NVWtra0qKSlRRUWFdWPOy8tTcXGxtre3DRLL8Pb2NqohnjooaIW4q6urmpycFGsw5vf4+LgGBwe9/tvgLkEKIzI8PKyenh5Hj4CEKPMdZgyNuYh7zOytrKyosbHRd5eWluxhpLS01IdYPD4+VmJiouLi4jzjPi4XFhaqoKDAc35+vqqrqx110g3mpFhGRoZdj7A5MTFh93glISFB8fHxSkpKMkBOTo7BAAIcI5CQICPITTwkW+wyh8fGxqzF8vKyUlJSlJaWZpDc3FxlZ2cbhO/MzEwbe8gAASqHUoXY29vbF0P0wGVmmHAZKYgubHCdAuAi1dPU1OSSQ29yt66uzoAuPfyHOpUBIGDJycnKysqyLunp6Z4BDgHs7+/3eQJFSeIujcSAHJyamorWMYlMiZFfYQ7fJDFJH7xBdx4gXzEDQnVmZsabITC/GfoGI12IKOuw7e7uVkNDw1eloM/CwoJdCG0sGExi18I6rQuWJD3u0tqiGlLDbJJX+/v7fzLOcodK+gFYXl7uskPgUBV/MQBxmzKlQoi+AUkNNKT4Q4n9xWCJZ2hIHKJBgSG5hMCI/V347/Nv6zQQotze3u6gOLEB5DU69tPT05+M/sj/CPUMGfKQYLn00IF++J1FSJPYdPltH/1pxKHB/gOWWUgZ1Lt14wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title="image09"
+        src="/static/0fc33fcd8c7816ec83640e59efbb44b7/2d7ab/09.png"
+        srcset="/static/0fc33fcd8c7816ec83640e59efbb44b7/6f3f2/09.png 256w,
+/static/0fc33fcd8c7816ec83640e59efbb44b7/01e7c/09.png 512w,
+/static/0fc33fcd8c7816ec83640e59efbb44b7/2d7ab/09.png 526w"
+        sizes="(max-width: 526px) 100vw, 526px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 터널 2개를 만들어 이름을 RI, RO로 변경하고 RI는 RAM의 Store 핀에 RO는 RAM의 load핀에 연결해준다. 그리고 RAM의 데이터 입력핀과 버스와 연결을 해준다. 이제 Control Buffer를 RAM의 출력핀과 연결해주고 Control Buffer의 출력과 버스와 연결한다. 이 Control Buffer의 Enable 핀은 RO와 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 928px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 91.40624999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACvklEQVQ4y61U6U4iYRCcd/ZZNBL1j0REEhQVXTYGoxwiwzVcAsN9yCUC4kYGAWtTnQwR90g22SaVfMdMdXV1D8pyucRXLJYLLBb/iOVC3lXwn0NJp9P4jEwmg3AsDF/Yh4AaEIS1MNSkClVTEUlFcJ+4h1/1C3jvU32IalE8ZB+gTKdTmJgZM0x+TKCWVOgtHflmHrl6Dt/93+G+duPi5hLn3nME4gEUmgW5FzQKUHUVw9EQyuPjI0x02h0UK0VoJQ1zY45ep4fxcIxQMASH3YFL9yVOnCfQ4hpGzyP0uj0Yb4aUWhlUMFvMoFQqFRDlchm1ag21Rg2OCweuvdcYPA8k69v0DcPhEC8vL5hMJvjg7+MDr6+vaHfaQqh3dUxn0/WmvM/eoVd1+DN+eL55kMvlEAgEkM/nMRqN0Ol0MJ/PpZsM2tTtdmVd7pcxfZ9CYcv5ECP/kIdl34L9oFUa5Pf7EQwGBaqq4urqCrVabSVgPB5jMBjIOl1Pw5gbUDweDzRNQyKRwO3NLVxuF2znNiEoFAqo1+s4OzvD3d2dnFExE9EmJmWyUCgE740XsVgMSr/flwxUSm8YjWoDx8fH0HVdHt7Y2IDFYsHe3h52d3exubmJSCQiVthsNlHKkMF+enpabUjKKJVLOD09RbFYFFVbW1vY2dnB9vY2rFYrjo6OpCp6zDWb9VdCdtzlcsmQ07NoNCrlUFU2m0W1WpXzZDIJu92+TmiW/JXQ6XSKr81mE61WS8BZ5Z5k9JZJWPJvCc2P/DNhPB4XNSzdRKlUErApVH54eLhO2Ov1VoTm+LAZJGTJVEU1jUZjBe6pmCUfHBzIjJocCif/axiGIWPCLnLOOLxM/Bn0nn6Gw+H1fxvOkVmWWQ737CA95KylUqlfwHPesxqWb76r0FgqME0nuG6323LOz+1P4L35vPnuTztPGXjolLmpAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title="image10"
+        src="/static/31648a79f7bf2e9a3908676bb9b0deb1/cc488/10.png"
+        srcset="/static/31648a79f7bf2e9a3908676bb9b0deb1/6f3f2/10.png 256w,
+/static/31648a79f7bf2e9a3908676bb9b0deb1/01e7c/10.png 512w,
+/static/31648a79f7bf2e9a3908676bb9b0deb1/cc488/10.png 928w"
+        sizes="(max-width: 928px) 100vw, 928px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 RAM의 주소를 지정하는 레지스터인 Memory Address Register를 만들어주겠다. 메모리 폴더에서 레지스터를 선택하여 설치해주고 Trigger를 HighLevel로 이름을 MAR로 설정한다. 그리고 터널 2개를 만들어 하나는 클럭 이름으로 변경하고 다른 하나는 MI로 변경하여 레지스터에 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 194px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 136.08247422680412%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEX0lEQVRIx31VSU8bSRTuH4DgwoErEgeWcAUJcYMDSFEkJKRwSMgZhUNOLAcOSGYGCLbHZjEglrBZIMaYHcw2ZrHZCViMiAZMgllziMTurbu/0at2texA8qR2lavrffW9975XLQSDQZAFAgE2ZmdnY3nZwebz835cXspwOIK4vQXW1gK4upLhdgdhNsvweCQAQUiSrPoL9CPLMrgR4OLiCpu/eyfh/XsgNxfY25ORnw/o9cDoKPDihTKSiaIyEo7AkX0+3xOGWq0PubkSCgv9MJmA0lI6QIZeL+PlS8BqJaQAgkEZfr8/kiFnSYArKwpDt1vE9+8yTk8Bl0th4fEA+/tgqfj8mTN7hiE/gQAdDkdoA7Gm0+8AeHFzcwNRfIQo3ocSJLHcEZDKkLN7jmEgoBTsy5f/MDQ0DJvNBovFim/fTkK5k9iB4f6CJEmhl+ITQJ7Xra0taLVaaDQaGAwG7O3tsXVSCPkRGPcX+CRcNhyQm8vlgtFoRG1tLRobG3FwcKC+44BcfowhLXCmSpWX2fzo6Ig96+vrGBoawuTkJCwWC3Z2dnB4eIjj42PVTwXkE57UrKwsxoDCLCkpQX9/P3p7e9HX14fu7m6YzWZ0dXWx9dLSUoyNjakVJvAnws7MzMTIyAhzWFhYYOzCQyRbWlpi7IhpRkYGWlpamAIYQ0o8IRNDYpueno7o6GjExcVhYGAAU1NTaGtrw/29IhUqyODgIKxWK4aHhxEbG4uoqCjm43Q6FYbh4j49PcXl5SU6OztZzghwY2ND3UOHUj4pgtXVVZSVlaGhoQFpaWmIiYmBQKfMzs7C5/dBlET4A0oup6en1eLwlPw8rq2tser39PSwsBMSEiBsb28zOWwsbUTkaW5ujrEje3h4wMXFBXvCJUYMSZ/t7e2or69HSkoKBONfRrgOXHj751t0ODpQO1ELu9OOjzUfUVFRgdbWVlbd6upqBhAOSAx1Oh06OjpY2ElJSRCqNFXY2t1C4R+FMNlN0Nv0sP1jg06rg6ZKw0Ki7iBBLy4uRnTQz4DJyckQ7u7uYPnbgoXJ+YiQ7XY7yyPli/acn5/D7XZHtOmzgMXFxcjJycHR12O26fZBkcfo6KhaFC5+bl6v99eA19fXWHU6Yf70SemYkN4mp6ZYUUjcxIx0SGLmeuRFeQKY//o1Hq+uMJKWhn/fvMHOq1foNhhQ/OEDBvr7UVNTg5OTE5ydnTHGHo9HbVMS8hPA/f197O7uoq2+nsoH748fbDOJl4pADAmMV5dfBmTkR5KLABwfH0d5eTl2Q3f8Y+h0Ejut03veZtSK1Of0n7qIqk9tyXXIADc3N9lVxDpAkiCJosqC9JeXlweTyYS6ujpWPAqRpKTX6xlYU1MTY0d6ZTrk9DlI+HVORswKCgrQ3NyMoqIixorY0EPA1CkEVllZidTUVAiU4PCPDB9JKhx4YmKCtSJFMzMzoz70jaF1SgHlOzExMfI+fG4ML8LvjAjEx8fjfwLCE+7vJ1rGAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title="image11"
+        src="/static/ed89ad6c8ca0d29e170e89ddaf7b2de0/2bf95/11.png"
+        srcset="/static/ed89ad6c8ca0d29e170e89ddaf7b2de0/2bf95/11.png 194w"
+        sizes="(max-width: 194px) 100vw, 194px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>우리의 RAM은 16바이트로 주소의 수가 16개밖에 되지를 않는다. 따라서 주소는 4비트로 표현한다. 이러한 이유로 MAR이 8비트이지만 LSB를 포함한 하위 4비트만 것이다. Splitter를 배치하여 레지스터의 출력과 연결한다. 그리고 Splitter를 하나 더 설치하여 하위 4비트와 연결해준다. 그리고 이 Splitter를 RAM의 Address 핀과 연결해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 646px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 119.53125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAABYlAAAWJQFJUiTwAAADW0lEQVQ4y61V70/aUBTl792nzX1YFrMPW5YsxCVbYlzAmQwXjGPKD4mIIKVUoaVKKUWgEH9EDOJEwBLNFEHPcl8tsmWSbdlNLu17pefde+65t7abmxv8T7PRT71eRyKRQDKZxMbGxl+7mBIH9wyQ53nkcjk0m00G/qd+dHSExrcG1jJrCEpBRLYiJiAhE9i/Wv44j85V5z5lAqQTyfr9PohXy7vdLlqt1oPeOeuAz/Ho9rtonbZMwPX1dRwfHzNAC6jX67F1LBaDz+eDIAiIx+PgOI5d2X2cg5AQMOWegjfgRTQSvY/wV0CKlIyKdX5+PjLl6nkVC/4FzLpm7yMcTpncipAA6bDb21u2R040kJVKJfACD07noOkaAr6ACSiK4oNFISldXFz89lkkEoF73o1P0ieE5TC4KAfbyckJ40hRsqjXv+Hg4BCHh4eoVqtoNBoIBALsRVVVWRa0X6vVsLe/h8+znzHt+ohnrmfI7GRQq9ZgU9UsnM5pxGIrKJUy0DQJm5tpiKKEbDYLl8uFiYkJzMzMMK1SNul0mrksy5DTMjKbGfi9fgSDQTPlbFaGorRRKACqCtxRxExRFAZMkY2yaDQKr9drcShAFOvguC7W1i5hGES+iZpKpZgKqABk19fXg8KR05osFAphfn7eqvIGDOMUghCGrivsD1RVMkqLClMulwcqoGeWW/IKh8NYXFw0AbkYB4fDiWJRB8fxcDidaJ42B8KWJAm6rrM1yWa4kyx5LS8vY25uDrZ8XkN5V2eVpIobHQPjz8cx/mYcnnUP3HNuVvWclhsZIb3PIpyemYZQSCEpJqFkzHSdH5x4+vop7D47vnz9wuRCshkV4crKislhJBTCfoxHIh5n+rq6usLk+0mMvRqDR/RAkiVUD6rQNG1khKurq/B4PLBVymV8b7eRU1U4HA74/X68e/sOj18+wW5712wxvYTt7e2RgMQhAxzWEvUs8bhT3sGjF49QaVTYfrFURD6fH5kyVZkVZXj+Wdbv9cHJHOodc2BUKpWBDh+ydrvNRptt+DRLrAPwuwu1HGmR+KUXDcP4yc/OznB5eck+CTbigQCGeWGp9HuDLlhaWoLdbsfW1hYbZzRsh53GH+2zj9RwhL+6RTh1SYEa/W4Aj/qM/gCHF9AIdYfTIAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title="image12"
+        src="/static/1acb088cdc9ebcaff03d3b5b5d850115/27524/12.png"
+        srcset="/static/1acb088cdc9ebcaff03d3b5b5d850115/6f3f2/12.png 256w,
+/static/1acb088cdc9ebcaff03d3b5b5d850115/01e7c/12.png 512w,
+/static/1acb088cdc9ebcaff03d3b5b5d850115/27524/12.png 646w"
+        sizes="(max-width: 646px) 100vw, 646px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>다음으로 RAM에 저장된 데이터를 가져올 때 상위 4비트는 명령어 부분, 하위 4비트는 주소부분이기 때문에 상위 4비트는 0으로 만들고 하위 4비트만 가져와야 한다. 이 부분도 Splitter를 이용할 것이다. Splitter를 설치하여 버스와 연결해준다. Splitter를 복사하고 하위 4비트와 연결을 해주고 상위 4비트는 Constant를 가져와 0으로 세팅을 해준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 85.546875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAABpUlEQVQ4y5WUW0vjUBzE8z33Yd0P4Ns+ufgi6jdYsYqIFg1ilaV1YUvjtcEoUSlUXNBF6j1ZW221kbQ9yU+SXqja6HFg4J+TZM7M5KJ4nocMfd8P2Wu9e1a6L47iZzZVEFCr1SJZr9cJIC04tTBFOp3uSU3TSCQSmKYZigohPhZc/buK4zrhDcFCE36LcH9/RyajhXOj0fi4w9x5jspTpRPLdWs8PgocRyAEZDLrGIYh73CvsMfD00PbEPH4L6anbTQN/qRhYGAW276U7lHZL+y/EJyYmENVb9jago11GB1ZxLIuIgXfRO449JqCsdg8qnrNyTHsHrgMDv/kv3UtFbnjsOyU8UTT4tjYPKmVq3CeMWN8/fGF8m1ZXtAsmLieSxvj4ypLS4VwHvo9TN/gNyrFinzkyfgkaxtr6Fmd5eUE/f3fOTtrbpDMJdk83Azr8Hy5r0U5/XdK8bZItVoln8+TSiVDse2jbfRjHa9Vrvyn14VSqYRh7LRe4npktHcjB0UHDGBZFtlsVtpRT4ftgwC2baPruvQT7dlhlOB7v7XuqK/PPQMWWBDKY4nbLAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title="image13"
+        src="/static/70e34593fa196e51087b89178d15cb37/f058b/13.png"
+        srcset="/static/70e34593fa196e51087b89178d15cb37/6f3f2/13.png 256w,
+/static/70e34593fa196e51087b89178d15cb37/01e7c/13.png 512w,
+/static/70e34593fa196e51087b89178d15cb37/f058b/13.png 630w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 이 Splitter를 MAR의 D핀과 연결을 해준다. 이렇게 되면 RAM에 저장된 명령어를 해석할 때 상위 4비트는 명령어 부분이므로 0으로 변경하고 하위 4비트값만 MAR에 저장하게 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.6875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB8UlEQVQoz22SDW+aUBiF/f9/ozFxWTKTrTNxyaKpQ0UrnYK0CsUCgqAVAT/4UDjLfa2YZpKc5Obl8HDvPaeUZRnyPMetJ8d5zt5fdOthjItKzJQkCQ6HwydFhwhJlCCJE2SnDHmW45geEccxzeIoJl8cR5+BDKZpGhzHKeQ6Lub2HKIqQlIk1Bt11H7X0BE6kFUZoiJC0zUs3SVmbzN4nlfstMT+6LouDYIgoDUz2I4N/i+P1fsKL9MXSLIEZ+lgE2ywTw/woxWe5RD1+hxB4F+Bm40PXZ8hz09QFJWA23CLRruJ+8Y9hsIQk8kEi8WCPtptd9gEPt7sV3B/Zij//AUveL8COa6FdnsEywrx9DTA4+MA6/UawkjAQ+cBg8EA5XIZ1WoVrVYLw+EQoijiVVMxGo1heDqSNKHACLjbhRCECQxjDdPUYRhGkV6P7xGwUqmQms0mOt1O4XGc865ZYEUo4/EYgtDH129fcFe9g2VaZGJ3y3EcFEWBaZrQdZ2OzfM8hZimKSzr7D2dTlegs7BhGya+136gK3Xhe37RvV6vR0DbtgnKAP1+vwCx+X89LEqc5wh3Id0PC4bVZzqdQpZlgrI1kyRJBGTHvgkMwxBxFNERfN+Hqqo4Ho/Y7/dUeCYq88ea+aIoolIz3yWMC/Afkfs0dvhd9ZwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image14"
+        title="image14"
+        src="/static/3b0a00a371582f51130bda245581b5e9/2bef9/14.png"
+        srcset="/static/3b0a00a371582f51130bda245581b5e9/6f3f2/14.png 256w,
+/static/3b0a00a371582f51130bda245581b5e9/01e7c/14.png 512w,
+/static/3b0a00a371582f51130bda245581b5e9/2bef9/14.png 1024w,
+/static/3b0a00a371582f51130bda245581b5e9/71c1d/14.png 1536w,
+/static/3b0a00a371582f51130bda245581b5e9/9c701/14.png 1774w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>마지막으로 명령어를 저장하는 레지스터인 IR를 만들어 보겠다. IR은 MAR과 반대 개념으로 8비트로 구성된 명령어와 주소에서 상위 4비트 명령어만 가져와 저장한다. 메모리 폴더에서 레지스터를 선택하여 배치한다. 그리고 D핀을 버스와 연결해주고 터널을 만들어 이름을 CLK로 변경하여 CLK핀과 연결해주고 터널을 복사하여 II로 이름을 변경하여 레지스터의 WE핀과 연결한다. 이제 Splitter를 만들어 레지스터의 출력과 연결한다. 그리고 터널 4개를 만들어 각 자릿수를 나타내는 이름으로 IR4, IR5, IR6, IR7로 변경해 4,5,6,7번 핀에 연결한다. IR4~7 터널은 지금 당장 사용되지 않지만 명령어 부분이므로 이후 제어장치 입력으로 사용될 예정이다.</p>
+<p>Splitter를 하나 더 설치해주고 기존 Splitter의 하위 4비트와 연결해주고 상위 4비트는 명령어 부분이기 때문에 Constant 0과 연결해준다. 마지막으로 Control Buffer를 설치하여 Splitter와 연결하고 버스와 연결해준다. 마지막으로 IO라는 이름의 터널을 만들어 Control Buffer의 Enalbe핀과 연결해주면 완성이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACNUlEQVQ4y32S6W8SQRiH+f/90BiParSx0cT4rYkaq7GNiLW0hVLkWCiHwrYcu+wB7MLe+5gZSlOrdpJf5njfeeY370zm8cciz/cqbGUbvPja5Nlelc3dUzY/V9h4V+DeTp6N90Ue7J5x/0OJh59+8GS/zna2zstcg+1cg60vCq++NXm6XyfTbSn4MwtIII0gDlYiBSJIwtW6iEvd1RIyJ4UipmXJqUTECWEUEUYxcZLKuej9IMRxXWaOg2FbGLaJPZvhOEuZG8UxS88nUygUqNVquK5LEAR4nkecxPR6fXK5HKWzEpZtMh6PmegGzVaTw+NDOp023Z5Ks61KM3Gc4Ps+mdNiDlW9lEABWywWKy0XTPQJ2ZMspfNTzhttqoqCYUzI5/McHR2haRpLf0GSJFISWKsdStvrFsfxtVsBbnVbTCxDHnYxuJCH6JrGcDjENAyiKLoNPKZcruC6jgyuQcvl6pClF1Fvd9AtjdFoJGNis8gVEgaEroFKo0G/rzIYDFBVVYLWStOEIEho9Xp0tQ6dXx3CIJSb15C/gNVKRbqybRtd11eu/gCmKN2fEtjqtGXuTdBNoIhljKs6iKuIOq2BYRjIceTFjEcT7IXJcDSQLv4HDMOQzO2vmaapBI6GJqY1Zad6wJtylkvNxJ17eL53N1AMSFO5kF71AlivK1SVOq/LWR59f8vByTGKotx5ZQnUzSnT2ZzpdIrjOMznMxkQ1xcv78znzOwpruPI73TzZf9Vw98RINS8+V2vnQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image15"
+        title="image15"
+        src="/static/6e577488d02ab71e2530f6a9d9fb9999/2bef9/15.png"
+        srcset="/static/6e577488d02ab71e2530f6a9d9fb9999/6f3f2/15.png 256w,
+/static/6e577488d02ab71e2530f6a9d9fb9999/01e7c/15.png 512w,
+/static/6e577488d02ab71e2530f6a9d9fb9999/2bef9/15.png 1024w,
+/static/6e577488d02ab71e2530f6a9d9fb9999/71c1d/15.png 1536w,
+/static/6e577488d02ab71e2530f6a9d9fb9999/a878e/15.png 2048w,
+/static/6e577488d02ab71e2530f6a9d9fb9999/f7171/15.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/컴퓨터-구조론-제어장치가-없는-컴퓨터/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7b05682e3655fba37948.js"],"app":["/app-3fa8deb48819dbe669b2.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-761f28f8d0a06f05d514.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-17ce83b7f594c2c0c1fe.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-1ff6a41539a3b7a0f927.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2b2b484591700b0ae13f.js"],"component---src-template-post-tsx":["/component---src-template-post-tsx-7f5def86146fc29c9ead.js"]};/*]]>*/</script><script src="/polyfill-7b05682e3655fba37948.js" nomodule=""></script><script src="/component---src-template-post-tsx-7f5def86146fc29c9ead.js" async=""></script><script src="/386142cf738b86b246078cd67abf8098b07f27c7-c2f146ac4a2834844fc5.js" async=""></script><script src="/app-3fa8deb48819dbe669b2.js" async=""></script><script src="/48aa8186-67735c86ae4015d55662.js" async=""></script><script src="/1593e758-7868fce8d5ccd9520ad2.js" async=""></script><script src="/cc76255b-3222831408842f40a1cb.js" async=""></script><script src="/d0007318-557f95e6f5b855c64727.js" async=""></script><script src="/2425c7c2-8c4925ac74b0ebf7da0a.js" async=""></script><script src="/aec3edcd-33ff14c394bc1bedc44a.js" async=""></script><script src="/3e15977f-5148ca5d1a687341b4e3.js" async=""></script><script src="/f3fee096-8a3be85b266f9ba6922d.js" async=""></script><script src="/63a121f2-37023b2342386794d0fe.js" async=""></script><script src="/b633362c-429f9f687c864375c1ce.js" async=""></script><script src="/framework-96f35882fb1b7fa32ef9.js" async=""></script><script src="/webpack-runtime-8bd3326d799737bed84d.js" async=""></script></body></html>
