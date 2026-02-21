@@ -1,4 +1,234 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 21 Feb 2026 03:49:54 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 구조론 이론] 데이터]]></title><description><![CDATA[본 포스팅은 인프런의 개발자를 위한 컴퓨터공학 1: 혼자 공부하는 컴퓨터구조 + 운영체제를 참조하여 작성한 글입니다. 0과 1로 숫자를 표현하는 방법 컴퓨터가 이해하는 것은 오직 0과 1뿐이다. 그러면 컴퓨터는 어떻게 숫자 3과 숫자…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EB%A1%A0-%EC%9D%B4%EB%A1%A0-%EB%8D%B0%EC%9D%B4%ED%84%B0/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-구조론-이론-데이터/</guid><pubDate>Sat, 21 Feb 2026 12:13:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 21 Feb 2026 05:34:02 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터 구조론 이론] 명령어]]></title><description><![CDATA[본 포스팅은 인프런의 개발자를 위한 컴퓨터공학 1: 혼자 공부하는 컴퓨터구조 + 운영체제를 참조하여 작성한 글입니다. 소스 코드와 명령어 아래의 코드가 있다고 해보자. 해당 C…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EB%A1%A0-%EC%9D%B4%EB%A1%A0-%EB%AA%85%EB%A0%B9%EC%96%B4/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-구조론-이론-명령어/</guid><pubDate>Sat, 21 Feb 2026 14:15:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVQoz51Sy3LCMAz0/38WkBexE549lQCNEydhptBAz9uRPAYnHdpODxprpUjaVSR0FMBZGc7g47/YuEaME2Uw/dHeZpMHdjVeUzGYFkxhcoVus0Yt5zCZZGxUyj7Fus3KxjOJah4/Z2gbTnB62eJ994pel/g8dbg1xr5di2tdMabc1dRoVwsm4bMU5DhAcuitZcrT2ZIIzSJjdmSEbS7hurF04ctt10uWQpikNnnGzVheEkEnEUymUKcJdBxyUxoyYHgHcWiltQ3O+wKXfcE+SSR5faXxcTzgXOwYU/xyPKDXerDLQUOjJDNwP+FhyuaU5HUQ62aZs0/fftuhC/x2MgPzzude73b4n4N+duBfEs24R4/6hrYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;banner&quot;
+        src=&quot;/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png&quot;
+        srcset=&quot;/static/d2f1db1734ce6bdaf587f7d63a88cd29/6f3f2/banner.png 256w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/01e7c/banner.png 512w,
+/static/d2f1db1734ce6bdaf587f7d63a88cd29/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;본 포스팅은 인프런의 &lt;a href=&quot;https://inf.run/6vJaw&quot;&gt;개발자를 위한 컴퓨터공학 1: 혼자 공부하는 컴퓨터구조 + 운영체제&lt;/a&gt;를 참조하여 작성한 글입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;소스 코드와 명령어&lt;/h2&gt;
+&lt;p&gt;아래의 코드가 있다고 해보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-c line-numbers&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;stdio.h&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;해당 C언어 코드가 과연 컴퓨터가 알아들을 수 있을까? 물론 이 언어 그 자체로는 컴퓨터는 알아듣지 못한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;근데 우리가 코드를 실행하면 잘 결과가 나오는데 알아듣는거 아니에요?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그것은 이 자체로 컴퓨터가 언어를 알아듣지 않고 변환과정을 거쳐서 컴퓨터가 알아 들을 수 있는 명령어로 변환하기 때문이다. 그럼 이에 대해 한번 알아보자.&lt;/p&gt;
+&lt;h3&gt;고급 언어와 저급 언어&lt;/h3&gt;
+&lt;p&gt;우리가 프로그램을 만들 때 사용하는 프로그래밍 언어는 컴퓨터가 이해하는 언어가 아닌 사람이 이해하고 작성하기 쉽게 만들어진 언어이다. 컴퓨터는 이 언어를 이해하지 못한다. 이렇게 사람을 위한 언어를 &lt;strong&gt;고급 언어&lt;/strong&gt;라고 표현한다. 반대로 컴퓨터가 직접 이해하고 실행할 수 있는 언어를 &lt;strong&gt;저급 언어&lt;/strong&gt;라고 표현한다. 그리고 이 고급 언어를 저급 언어로 변환해야 컴퓨터가 이해하고 실행을 하는 것이다. 그럼 한번 정리해보겠다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;고급 언어
+&lt;ul&gt;
+&lt;li&gt;종류: C, C++, Java...&lt;/li&gt;
+&lt;li&gt;개발자가 이해하기 쉽게 만든 언어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;저급 언어
+&lt;ul&gt;
+&lt;li&gt;종류: 기계어, 어셈블리 언어&lt;/li&gt;
+&lt;li&gt;컴퓨터가 이해하고 실행하는 언어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그러면 저급 언어의 기계어부터 한번 살펴보자. 기계어는 다음과 같이 0과 1로 구성된 언어이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 460px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.734375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeS1CKP/xAAWEAADAAAAAAAAAAAAAAAAAAAAICH/2gAIAQEAAQUCWn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAADAAAAAAAAAAAAAAAAAAAAIEH/2gAIAQEABj8CWn//xAAbEAABBQEBAAAAAAAAAAAAAAAAESFhofABsf/aAAgBAQABPyFsg2QXmQebHmyHo//aAAwDAQACAAMAAAAQE8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAdEAACAgIDAQAAAAAAAAAAAAABEQBBIWExcdHw/9oACAEBAAE/EGB5C79RhYR36iLHzuI6ghpYQ4waj//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image01&quot;
+        title=&quot;image01&quot;
+        src=&quot;/static/8b55f3ab906ae2e153f7a58f76bbeb79/e41a8/01.jpg&quot;
+        srcset=&quot;/static/8b55f3ab906ae2e153f7a58f76bbeb79/e4a55/01.jpg 256w,
+/static/8b55f3ab906ae2e153f7a58f76bbeb79/e41a8/01.jpg 460w&quot;
+        sizes=&quot;(max-width: 460px) 100vw, 460px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;컴퓨터는 위와 같이 구성이 되어야 실행을 해주는 것이다. 물론 위와 같은 2진수를 16진수로도 표현해도 컴퓨터가 해석하고 실행을 해준다. 하지만 위와 같은 형태를 사람이 해석하기에는 매우 어렵다. 그래서 그나마 사람이 읽기 편한 형태로 번역한 언어가 존재하는데 바로 그것을 &lt;strong&gt;어셈블리어&lt;/strong&gt;라고 표현한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;asm&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-asm line-numbers&quot;&gt;&lt;code class=&quot;language-asm&quot;&gt;LOADA 15
+SUB 14 // 피제수 -= 제수
+JMPC 7 // 피제수가 제수보다 크면 RAM의 7번 주소로 점프
+JMPZ 7 // 피제수와 제수가 같으면 RAM의 7번 주소로 점프
+LOADA 13
+OUT
+HLT
+STOREA 15 // 현재 레지스터A의 값을 피제수로 업데이트
+LOADI 1 // 몫 += 1
+ADD 13
+STOREA 13
+JMP 0
+
+0 // 몫
+3 // 제수
+7 // 피제수(결과는 나머지)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;컴파일 언어와 인터프리터 언어&lt;/h3&gt;
+&lt;p&gt;그러면 이제 고급 언어를 살펴보도록 하겠다. 개발자들이 고급언어로 작성한 소스코드는 결국 저급 언어로 변환되어 실행이 되어야 한다. 그러면 고급 언어는 어떻게 저급언어로 변환을 할까? 여기에는 크기 2가지 방식이 존재한다. &lt;strong&gt;컴파일&lt;/strong&gt;방식과 &lt;strong&gt;인터프리터&lt;/strong&gt;방식이 존재한다. 컴파일 방식으로 작동하는 프로그래밍 언어를 컴파일 언어, 인터프리터 방식으로 작동하는 프로그래밍 언어를 인터프리터 언어라고 표현한다.&lt;/p&gt;
+&lt;p&gt;컴파일 언어는 컴파일러에 의해 소스 코드 전체가 저급 언어로 변환이 된다. 즉, 컴파일 언어로 작성된 소스 코드 전체가 저급 언어로 변환되는데 이 과정을 &lt;strong&gt;컴파일&lt;/strong&gt;이라고 한다. 그리고 이런 컴파일을 해주는 장치를 &lt;strong&gt;컴파일러&lt;/strong&gt;라고 한다. 컴파일러는 개발자가 작성한 소스 코드 전체를 쭉 훓어보며 소스 코드에 문법적인 오류는 없는지, 실행 가능한 코드인지 불필요한 코드는 없는지 검사를 진행하고 소스코드 처음부터 끝까지 저급 언어로 컴파일을 한다. 그리고 컴파일러를 통해 저급 언어로 변환된 코드를 &lt;strong&gt;목적 코드&lt;/strong&gt;라고 한다. 컴파일 언어는 소스 코드 전체를 훓어서 만약 오류가 발견하면 실행을 하지 않고 그 자체로 중단한다.&lt;/p&gt;
+&lt;p&gt;다음으로 인터프리터 언어를 살펴보자. 인터프리터 언어는 인터프리터에 의해 한줄씩 실행을 한다. 소스코드 전체가 저급언어로 변환될 때까지 기달리지 않고 한줄씩 실행을 한다. 그러다가 에러가 발생하면 실행 도중에 중단을 한다. 그리고 이렇게 인터프리터 언어를 저급 언어로 변환해주는 장치를 &lt;strong&gt;인터프리터&lt;/strong&gt;라고 표현한다.&lt;/p&gt;
+&lt;p&gt;그러면 이런 생각이 들 것이다. 과연 컴파일 언어와 인터프리터 언어는 칼로 자르듯이 명확하게 구분할 수 있는 개념일까? C, C++과 같이 명확하게 구분할 수 있는 언어도 있으나 현대의 많은 프로그래밍 언어 중에는 컴파일 언어와 인터프리터 언어 간의 경계가 모호한 경우가 많다. 대표적으로 인터프리터 언어로 알려진 Python도 컴파일을 하지 않는 것은 아니며 Java의 경우 저급 언어가 되는 과정에서 컴파일과 인터프리트를 동시에 수행한다.&lt;/p&gt;
+&lt;h2&gt;명령어의 구조&lt;/h2&gt;
+&lt;p&gt;이번에는 하나의 명령어를 자세히 들여다보면서 연산 코드, 오퍼랜드, 주소 지정 방식이라는 개념에 대해 학습해보도록 하겠다.&lt;/p&gt;
+&lt;h3&gt;연산 코드와 오퍼랜드&lt;/h3&gt;
+&lt;p&gt;우리가 누구한테 명령을 한테 이렇게 말할 것이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;철수야, 노트북좀 가져와줄래?&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;컴퓨터도 마찬가지다. 명령어는 &lt;strong&gt;무엇을 대상으로, 어떤 동작을 수행해라&lt;/strong&gt;라는 구조로 되어 있다. 명령어는 연산 코드와 오퍼랜드로 구성되어 있다. 연산 코드는 MSB 포함한 비트들을 나타내고 나머지가 오퍼랜드라고 봐도 무방하다. 연산 코드는 수행할 연산을 의미한다. 그리고 연산에 사용할 데이터를 오퍼랜드라고 의미한다.&lt;/p&gt;
+&lt;p&gt;오퍼랜드에는 실제 수행할 데이터가 직접적으로 들어가져 있는 경우도 존재하면 해당 데이터가 있는 메모리 주소 값을 표현하기도 한다. 또한 명령어 종류에 따라 오퍼랜드가 하나도 없을 경우도 있고 많으면 3개인 경우도 존재한다. 이럴때 오퍼랜드가 하나도 없는 명령어를 &lt;strong&gt;0-주소 명령어&lt;/strong&gt;라고 하고, 오퍼랜드가 하나인 명령어를 &lt;strong&gt;1-주소 명령어&lt;/strong&gt;, 두 개인 명령어를 &lt;strong&gt;2-주소 명령어&lt;/strong&gt;, 세 개인 명령어를 &lt;strong&gt;3-주소 명령어&lt;/strong&gt;라고 말한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;오퍼랜드에는 실제 데이터 혹은 메모리의 주소가 들어 있을 수 있는데 많은 경우 메모리의 주소가 들어가져 있다. 이 때문에 우리는 오퍼랜드를 주소 필드라고도 부른다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;다음은 연산 코드를 살펴보도록 하겠다. 연산 코드의 종류는 매우 많지만 가장 기본적인 연산 코드 유형은 크게 4가지로 존재한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 전송&lt;/li&gt;
+&lt;li&gt;산술/논리 연산&lt;/li&gt;
+&lt;li&gt;제어 흐름 변경&lt;/li&gt;
+&lt;li&gt;입출력 제어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;연산 코드에는 정말 많은 코드들이 존재하는데 아래 정리를 해두었으니 암기는 하지 말고 한번 이해해보도록 하자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 전송
+&lt;ul&gt;
+&lt;li&gt;MOVE: 데이터를 옮겨라 (레지스터 -&gt; 레지스터)&lt;/li&gt;
+&lt;li&gt;STORE: 메모리를 저장해라&lt;/li&gt;
+&lt;li&gt;LOAD(FETCH): 메모리에서 CPU로 데이터를 가져와라&lt;/li&gt;
+&lt;li&gt;PUSH: 스택에 데이터를 저장하라&lt;/li&gt;
+&lt;li&gt;POP: 스택에 최상단 데이터를 가져와라&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;산술/논리 연산
+&lt;ul&gt;
+&lt;li&gt;ADD / SUBSTRACT / MULTIPLY / DIVIDE: 덧셈 / 뺄셈 / 곱셈 / 나눗셈을 수행하라&lt;/li&gt;
+&lt;li&gt;INCREMENT / DECREMENT: 오퍼랜드에 1을 더하라 / 오퍼랜드에 1을 빼라&lt;/li&gt;
+&lt;li&gt;AND / OR / NOT: AND/ OR / NOT 연산을 수행하라&lt;/li&gt;
+&lt;li&gt;COMPARE: 두 개의 숫자 또는 TRUE / FASLE 값을 비교하라&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;제어 흐름 변경
+&lt;ul&gt;
+&lt;li&gt;JUMP: 특정 주소로 실행 순서를 옮겨라&lt;/li&gt;
+&lt;li&gt;CONDITIONAL JUMP: 조건에 부합할 때 특정 주소로 실행 순서를 옮겨라&lt;/li&gt;
+&lt;li&gt;HALT: 프로그램의 실행을 멈춰라&lt;/li&gt;
+&lt;li&gt;CALL: 되돌아올 주소를 지정한 채 특정 주소로 실행 순서를 옮겨라 (함수 실행)&lt;/li&gt;
+&lt;li&gt;RETURN: CALL을 호출할 때 저장했던 주소로 돌아가라&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;입출력 제어
+&lt;ul&gt;
+&lt;li&gt;READ(INPUT): 특정 입출력 장치로부터 데이터를 읽어라&lt;/li&gt;
+&lt;li&gt;WRITE(OUTPUT): 특정 입출력 장치로 데이터를 써라&lt;/li&gt;
+&lt;li&gt;START IO: 입출력 장치를 시작하라&lt;/li&gt;
+&lt;li&gt;TEST IO: 입출력 장치의 상태를 확인해라&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;주소 지정 방식&lt;/h3&gt;
+&lt;p&gt;명령어의 오퍼랜드 필드에 메모리나 레지스터의 주소를 담는 경우가 많다. 그런데 아래와 같은 의문이 들 수도 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;왜 오퍼랜드 필드에 메모리나 레지스터의 주소를 담는가? 그냥 사용할 데이터를 직접적으로 담으면 안되나?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;바로 명령어 내에서 표현할 수 있는 데이터 크가가 제한되기 때문이다. 직접적으로 저장되면 오퍼랜드가 할당된 크기밖에 데이터들을 표현을 못하지만 주소 값으로 하면 더 확장되기 때문에 해당 방식들을 많이 채택한다. 또한 연산 코드에 사용할 데이터가 저장된 위치, 즉 연산의 대상이 되는 데이터가 저장된 위치를 &lt;strong&gt;유효 주소&lt;/strong&gt;라고 한다.&lt;/p&gt;
+&lt;p&gt;이런 명령어 주소 지정 방식에는 여러가지가 존재한다. 일단 명령어 주소 지정 방식이란 연산에 사용할 데이터가 저장된 위치를 찾는 방법을 말한다. 즉, 유효 주소를 찾는 방법이다. 해당 방식은 다양한 명령어 주소 지정 방식들이 아래와 같이 존재한다. 한번 살펴보자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;즉지 주소 지정 방식
+&lt;ul&gt;
+&lt;li&gt;연산에 사용할 데이터를 오퍼랜드 필드에 직접 명시&lt;/li&gt;
+&lt;li&gt;가장 간단한 형태의 주소 지정 방식&lt;/li&gt;
+&lt;li&gt;연산에 사용할 데이터의 크기가 작아질 수 있지만 빠름&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;직접 주소 지정 방식
+&lt;ul&gt;
+&lt;li&gt;오퍼랜드 필드에 유효주소를 직접적으로 명시&lt;/li&gt;
+&lt;li&gt;유효주소를 표현할 수 잇는 크기가 연산코드만큼 줄어든다. (단점)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;간점 주소 지정 방식
+&lt;ul&gt;
+&lt;li&gt;오퍼랜드 필드에 유효주소의 주소를 명시&lt;/li&gt;
+&lt;li&gt;앞선 주소 지정 방식들에 비해 속도가 느림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;레지스터 주소 지정 방식
+&lt;ul&gt;
+&lt;li&gt;연산에 사용할 데이터가 저장된 레지스터 명시&lt;/li&gt;
+&lt;li&gt;메모리에 접근하는 속도보다 레지스터에 접근하는 것이 빠름&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;레지스터 간접 주소 지정 방식
+&lt;ul&gt;
+&lt;li&gt;연산에 사용할 데이터를 메모리에 저장&lt;/li&gt;
+&lt;li&gt;그 주소를 저장한 레지스터를 오퍼랜드 필드에 명시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;소스 코드가 명령어가 되기까지&lt;/h2&gt;
+&lt;p&gt;그러면 우리는 C언어를 통해서 소스코드가 명령어가 되기까지의 과정을 한번 살펴보도록 하겠다. 아래의 C언어 코드가 있다고 하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-c line-numbers&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;stdio.h&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello World!\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;C언어는 컴파일 언어이기 때문에 컴파일 과정을 거쳐서 실행파일이 된다. 그런데 엄밀히 과정을 나타내면 아래와 같은 과정을 거친다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전처리 과정&lt;/li&gt;
+&lt;li&gt;컴파일 과정&lt;/li&gt;
+&lt;li&gt;어셈블 과정&lt;/li&gt;
+&lt;li&gt;링킹 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그러면 과정 하나씩 살펴보도록 하겠다. &lt;code&gt;test.c&lt;/code&gt;파일이 있다고 해보자. 해당 과정을 전 처리과정을 전처리기를 통해 거치면 &lt;code&gt;test.i&lt;/code&gt;라는 파일이 된다. 전 처리과정에서 하는 것은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;본격적으로 컴파일 하기 전에 처리 할 작업들&lt;/li&gt;
+&lt;li&gt;외부에서 선언된 다양한 소스코드, 라이브러리 포함 (e.g. #include)&lt;/li&gt;
+&lt;li&gt;프로그래밍의 편의를 위해 작성된 매크로 변환 (e.g. #define)&lt;/li&gt;
+&lt;li&gt;컴파일 할 영역 명시 (e.g. #if, #ifdef)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 &lt;code&gt;test.i&lt;/code&gt;파일이 된 코드를 컴파일러를 통해서 컴파일을 한다. 컴파일 과정에서 다음과 같은 과정을 거친다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전처리가 완료되어 여전히 소스코드&lt;/li&gt;
+&lt;li&gt;전처리 완료된 소스코드를 저급언어(어셈블리어)로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 &lt;code&gt;test.i&lt;/code&gt;가 컴파일 과정을 통해 &lt;code&gt;test.s&lt;/code&gt;라는 어셈블리 언어 파일이 되었다. 이제 해당 파일을 어셈블 과정을 거쳐야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어셈블리어를 기계어로 변환&lt;/li&gt;
+&lt;li&gt;목적 코드를 포함하는 목적 파일이 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그리고 마지막으로 링킹 과정을 통하여 최종 실행파일이 된다. 링킹 과정에서는 다른 c언어 파일이라던지 외부 라이브러리들을 연결 시켜주는 작업을 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;목적 파일과 실행파일의 차이는 무엇일까? 목적 파일과 실행 파일은 둘다 기계어로 이루어진 파일이다. 하지만 목적 파일과 실행 파일은 다르다. 목적 파일은 링킹을 거친 이후에 실행 파일이 된다.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터 구조론 이론] 데이터]]></title><description><![CDATA[본 포스팅은 인프런의 개발자를 위한 컴퓨터공학 1: 혼자 공부하는 컴퓨터구조 + 운영체제를 참조하여 작성한 글입니다. 0과 1로 숫자를 표현하는 방법 컴퓨터가 이해하는 것은 오직 0과 1뿐이다. 그러면 컴퓨터는 어떻게 숫자 3과 숫자…]]></description><link>https://sungbin.kr/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EB%A1%A0-%EC%9D%B4%EB%A1%A0-%EB%8D%B0%EC%9D%B4%ED%84%B0/</link><guid isPermaLink="false">https://sungbin.kr/컴퓨터-구조론-이론-데이터/</guid><pubDate>Sat, 21 Feb 2026 12:13:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
     &gt;
