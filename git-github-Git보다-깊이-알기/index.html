@@ -1,0 +1,492 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><meta name="generator" content="Gatsby 5.16.1"/><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/d0f998e1e6906731cdea7146bcf67520/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/git-github-Git보다-깊이-알기/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[Git &amp; Github] Git보다 깊이 알기"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/d0f998e1e6906731cdea7146bcf67520/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[Git &amp; Github] Git보다 깊이 알기"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/d0f998e1e6906731cdea7146bcf67520/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><style data-href="/styles.225c8d7d6398aeb4f3bd.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[Git &amp; Github] Git보다 깊이 알기 · Sungbin</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[Git &amp; Github] Git보다 깊이 알기</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->git</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2026년 4월 6일<!-- --> · <!-- -->6<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">git<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (6개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css qzksl6">.css-qzksl6{margin-bottom:0.5rem;}.css-qzksl6::marker{font-weight:600;color:#9195F6;}.css-qzksl6::after{content:'- 1분';margin-left:0.2rem;font-size:0.8rem;}.css-qzksl6>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-qzksl6>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-qzksl6 e1k9d3a00"><span>[Git &amp; Github] 인트로</span></li><style data-emotion="css 13xotzt">.css-13xotzt{margin-bottom:0.5rem;}.css-13xotzt::marker{font-weight:600;color:#9195F6;}.css-13xotzt::after{content:'- 7분';margin-left:0.2rem;font-size:0.8rem;}.css-13xotzt>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13xotzt>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13xotzt e1k9d3a00"><span>[Git &amp; Github] git 시작하기</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[Git &amp; Github] 시간 여행하기</span></li><li class="css-1hda2e5 e1k9d3a00"><span>[Git &amp; Github] 차원 넘나들기</span></li><li class="css-13xotzt e1k9d3a00"><span>[Git &amp; Github] Github 시작하기</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[Git &amp; Github] Git보다 깊이 알기</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css 3ypioh">.css-3ypioh{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-3ypioh{padding:1rem;}}@media screen and (max-width: 1308px){.css-3ypioh{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-3ypioh{width:calc(100vw - 8px);}}.css-3ypioh p>img{width:100%;}.css-3ypioh p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-3ypioh p,.css-3ypioh table,.css-3ypioh ul,.css-3ypioh blockquote,.css-3ypioh ol{font-size:1rem;margin:0 0 2rem;}.css-3ypioh table{width:100%!important;max-width:100%!important;border-collapse:collapse!important;border-spacing:0!important;border-radius:8px!important;overflow:hidden!important;box-shadow:none!important;border:1px solid #EAEAEA!important;background:#ffffff!important;display:table!important;table-layout:auto!important;}.css-3ypioh table thead tr{background:#EAEAEA!important;}.css-3ypioh table th{padding:12px 16px!important;color:#000!important;font-weight:600!important;text-align:left!important;border:none!important;border-bottom:2px solid #999!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table td{padding:10px 16px!important;color:#111!important;text-align:left!important;border:none!important;border-bottom:1px solid #EAEAEA!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table tbody tr{background:#ffffff!important;-webkit-transition:background 0.15s ease!important;transition:background 0.15s ease!important;}.css-3ypioh table tbody tr:nth-of-type(even){background:#FAFAFA!important;}.css-3ypioh table tbody tr:hover{background:#EAEAEA!important;}.css-3ypioh table tbody tr:last-of-type td{border-bottom:none!important;}.css-3ypioh table th[style],.css-3ypioh table td[style]{color:inherit!important;background:inherit!important;}.css-3ypioh table tr[style]{background:inherit!important;}.css-3ypioh center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-3ypioh p+center,.css-3ypioh iframe+center{margin-top:-1rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-3ypioh h1>a,.css-3ypioh h2>a,.css-3ypioh h3>a,.css-3ypioh h4>a,.css-3ypioh h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-3ypioh h1:hover>a,.css-3ypioh h2:hover>a,.css-3ypioh h3:hover>a,.css-3ypioh h4:hover>a,.css-3ypioh h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-3ypioh h2:not(:first-of-type),.css-3ypioh h3:not(:first-of-type),.css-3ypioh h4:not(:first-of-type){margin-top:3rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{margin:0 0 1.25rem;}.css-3ypioh h1,.css-3ypioh h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-3ypioh h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-3ypioh h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-3ypioh ul,.css-3ypioh ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-3ypioh ul ul,.css-3ypioh ol ul{margin-top:8px;}.css-3ypioh ul ul,.css-3ypioh ol ul,.css-3ypioh ul ol,.css-3ypioh ol ol{margin-bottom:0;}.css-3ypioh ul{list-style:disc;}.css-3ypioh ol{list-style:decimal;}.css-3ypioh ul li{margin-bottom:0.5rem;}.css-3ypioh ul li::marker{font-weight:600;color:#9195F6;}.css-3ypioh ol li{margin-bottom:0.5rem;}.css-3ypioh ol li::marker{font-weight:600;color:#9195F6;}.css-3ypioh li>a{white-space:inherit;word-wrap:break-word;}.css-3ypioh li{color:#000;}.css-3ypioh li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh li code * span{white-space:inherit;}.css-3ypioh li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh iframe{margin-bottom:2rem;}.css-3ypioh div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-3ypioh div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-3ypioh div[class*='markdown-wrapper']{padding-left:1rem;}}.css-3ypioh pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-3ypioh pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh pre>code * span{white-space:inherit;}.css-3ypioh pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-3ypioh p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh p>code * span{white-space:inherit;}.css-3ypioh p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-3ypioh img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-3ypioh blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-3ypioh blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-3ypioh blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-3ypioh blockquote{padding-left:1rem;}}</style><section class="css-3ypioh e17f2jor0"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA8ElEQVR42sWSzUqCURCGvQs3/uRPQuB9ZKugTz8zxHDTQrBNX+EmQVIUgtDSRHBhZBtL6Q4fZxxFqAQXhouXOfPOzHPO4Rwf2Si7lO8fgTGLbgTO46Jlvogi98DWqtwhXCSsLxffANQBbSokrTEjef5oDbpMLoFSc0Jw6re5dNAO8eeVX2/h8QpmXfBS8NGCm2N4KkG7DKOa1YZVeMjDZwc61wIN/QTKzpkw9O/gvQljkXcCkzb0PGgW4esZBhWpN+CtDtMX+O4L/H7DCdXUnRR8FrBco3oLX67uSO4EzV+tVdnItq8c++25+/s2uwHOATGl/Ws6Yx2LAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title=""
+        src="/static/d0f998e1e6906731cdea7146bcf67520/8c557/banner.png"
+        srcset="/static/d0f998e1e6906731cdea7146bcf67520/6f3f2/banner.png 256w,
+/static/d0f998e1e6906731cdea7146bcf67520/01e7c/banner.png 512w,
+/static/d0f998e1e6906731cdea7146bcf67520/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>해당 포스팅은 인프런의 <a href="https://inf.run/VyuWK">제대로 파는 Git &#x26; GitHub - by 얄코(Yalco)</a> 강의를 참조하여 작성한 글입니다.</p>
+</blockquote>
+<h2>Git을 특별하게 만드는 것</h2>
+<p>이번 포스팅은 Git을 보다 깊이 알아보는 시간을 가져보도록 하겠다. 이번에는 깃이 이전에 존재했던 다른 VCS 제품들과 어떻게 다른지, 2가지 큰 차이점을 알아 볼 예정이다. VCS란 깃과 같은 'Version
+Control System'이다. VCS가 버전을 관리하는 방식은 크게 2가지가 존재한다. 델타 기반 방식과 스냅샷 방식이다.</p>
+<p>깃 이전 시대의 VCS는 델타를 기반으로 한 방식을 사용했다. 예를 들어 파일 3개가 저장되었던 첫 시점이 버전1로 기록이 된다. 이 상태에서 파일A와 파일C를 수정하는 작업을 한 뒤에 이를 다음 버전 커밋한다라고
+해보자. 그러면 각각 파일A와 파일C에서 델타1이라는 버전이 생긴다. 여기서 델타는 각 파일의 변경 내역을 말한다. 즉 델타 방식의 각 버전은 이전 버전으로부터 <strong>무엇이 바뀌었는지</strong> 를 저장하는 것이다. 그리고
+다음 버전에서는 파일C만 수정되어서 해당 파일의 변경사항만 저장되고 다음 버전에서는 파일A와 B, 마지막 버전에서는 파일B와 C가 수정되었다면 해당 변경사항이 기록이 되는 것이다. 그리고 마지막 이전 버전을
+<code>checkout</code>으로 방문한다고 해보자. 그러면 각 파일의 초기 상태부터 시작해서 이후 모든 버전들의 모든 델타를 차례로 적용해나가는 식으로 마지막 이전 버전의 파일 내용을 연산하게 된다. 이 버전에서 어느 줄을
+추가했고 이 버전에서 어느 부분을 어떻게 바뀌었고 혹은 어떻게 삭제했는에 대한 변경사항을 하나하나씩 반영해나가는 것이다. 하지만 델타 방식은 한계점이 명확히 존재한다. 프로젝트가 수 많은 버전들로 구성이 되어있다면
+수 많은 버전들의 델타들을 연산해야 하기 때문에 버전이 많아질수록 부하가 커지게 된다.</p>
+<p>깃은 델타방식이 아닌 스냅샷 방식으로 버전들을 관리한다. 파일A, 파일B, 파일C가 있다고 가정해보자. 이후 두번째 버전에 파일 A와 C가 변경이 되었다고 해보자. 스냅샷 방식에서는 스냅샷을 찍는 것처럼 프로젝트의
+전체 상태를 저장한다. 즉, 델타만 저장하는 것이 아닌 내용이 변경된 파일 자체를 새로 저장하는 것을 말한다. 수정되지 않은 파일의 경우는 중복되는 용량을 차지하지 않도록 이전 버전으로부터의 링크만 담는다. 이는
+델타를 합산하는 방식이 아니기 때문에 사진 보관함에서 스냅샷을 꺼내듯 어느 버전으로든 프로젝트 상태를 바로 되돌릴 수 있다. 또한 깃은 내부적으로 압축 및 중복 제거를 하기 때문에 실제 저장 효율또한 매우 좋다.
+이와 같은 스냅샷 방식 덕분에 git의 각종 기능들이 빠르고 안정적으로 수행할 수 있는 것이다.</p>
+<p>VCS는 팀원들이 코드 관리 내역을 공유하고 협업하는 방식에 있어서도 크게 2가지로 나뉜다. SVN등 git 이전 세대들의 VCS들이 많이 사용하는 방식은 중앙 집중식 버전 관리를 사용한다. 이는 이름에서 유추할 수
+있듯이 중앙에 있는 서버를 중심으로 협업을 이루는 것이다. 중앙 집중식에서는 프로젝트의 관리 내역들이 이 중앙 서버에 저장된다. 팀원들은 특정 버전으로 체크아웃을 하거나 다른 브랜치로 이동하거나 할 때 이 중앙
+서버로부터 해당 상태의 프로젝트를 내려받아야 하는 것이다. 새로운 커밋을 할 때도 매 번 이를 일일이 중앙 서버로 올려보내야 한다. 이처럼 중앙 서버에 의존적이기 때문에 네트워크 문제등으로 인해 중앙 서버와의 연결이
+끊어지거나 원활하지 않으면 팀원 모두가 제대로 작업할 수 없는 상황이 발생한다.</p>
+<p>반면 깃은 분산 방식을 사용한다. 이는 모든 팀원이 각자 깃 저장소를 가지고 있는 것이라고 말할 수 있다. 즉 중앙 서버에 의존적이지 않는 것이다. 깃허브등의 원격 저장소를 두고 협업할 때도 각 관리내역이 모든
+팀원들의 로컬로 다운받아지기 때문에 팀원들은 로컬 저장소에서 원하는 모든 깃 관련 작업을 수행하고 각자 원하는 시점에만 푸시 및 풀을 통해 다른 팀원들과 동기화를 할 수 있다. 로컬에서 진행되기 때문에 브랜칭이나
+병합과정도 빠르고 자유롭다. 이렇게 깃은 스냅샷 방식과 분산 방식을 사용하여 사용자들이 빠르고 유연하게 버전을 관리할 수 있도록 해준다.</p>
+<h2>Git의 3가지 공간</h2>
+<p>이번에는 깃에서 작업물을 <code>add</code>하고 <code>commit</code>할 때 내부적으로 어떻게 동작하는지 알아보도록 하자.</p>
+<p>앞에서는 깃을 조금 더 쉽게 이해하기 위해 타임캡슐이라는 비유를 사용했다. <code>add</code>는 변경사항을 타임 캡슐에 담는 것이라고 하였고 <code>commit</code>은 타임 캡슐을 땅속에 묻는 것이라고 하였다. 이번에는 이 과정들을
+보다 정확한 용어로 알려드리도록 하겠다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.8125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABm0lEQVR42k2RzW7TQBSF/arsERs2ZYGE4BnYICGBxIYdKP1LSVuitDWkqeMkTZqWhkZKbY9jkjh2/N/4Y+wUiZn5dO+cke7cM6NkK4PEM0h9s2QdCB7SBVMcrAeBkRoSE1PmjlTnWYpIwAwz7v2kjMV+kVEOZTmqYfT2sa++Yfar+L+/E3kDztFprM7YmeyxZxxQ907QaNMJljRdqI1nbA8mHI7nqAsYrnKQS+E4IDnycXcFcc2DHxHxbEyPDt28Rzvvokl0ulxJhqkvi0LbB20p8XLO5QW/gscOs1NBeGLhHI6IVZNPr655uXXKk2cHvD9SGZSle1QnFzx/c8zW6yZPX2iodrYp6uZcyMK69L10YxQ7/4KR7XA9+4yZVaj3v7JdbfC2csbuuDDekVZ16q7Gh7rKx/0R7yoWzXlOS3ZW8FNavglyHCdECTyVOGyh6w3ceRPWLdL1LXfcMCz7G3ApKeadVCYE3Mq36q/g8pGO7PRefsrsT4SSrzfenWmCMCKmVoxlRQgrxBYhU3tDkReasIKSf/r/50X8C8Ie/ZcRbJrCAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title=""
+        src="/static/38042ef4e8e8b40ae37260ae09dfdb41/2bef9/01.png"
+        srcset="/static/38042ef4e8e8b40ae37260ae09dfdb41/6f3f2/01.png 256w,
+/static/38042ef4e8e8b40ae37260ae09dfdb41/01e7c/01.png 512w,
+/static/38042ef4e8e8b40ae37260ae09dfdb41/2bef9/01.png 1024w,
+/static/38042ef4e8e8b40ae37260ae09dfdb41/c1bea/01.png 1388w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>깃으로 관리되는 파일들은 <code>gitignore</code>된 것을 제외하고 위의 그림에서 나오는 3개의 영역 중 하나에 속하게 된다. 바로 <strong>Working Directory</strong>, <strong>Staging Area</strong>, *
+<em>Repository</em>* 영역이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.84375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABaklEQVR42pWT2XKCQBBF+QBEtplhAFlEtiRqNC+m8pKqVP7/k266h+ASsYwPp9i6Dn2bxvJ8jZkjYdsh7JkYsAM4cwHXUwY/0AhFcrz2/AgzqrHPcByBgOqsdrXHfvuBKO6hotYQyiVRQvwi1dIg5EAoyiv4vlQVrFWxwef7N8pqh3TxgkW2NpIgzI74wciCuktMIs9P6Vl+AddYcfqMmLrTZ/Ab/xYzzjwyuF5sxEFYXNVYSg8xI90duSXkDl3vdodGKGRFkv5fQh6FjmuqqSafPywMRUEz7mjW7WPCccCM51NMiscR+Zq7ZPHUB5kW0jx13CJJO8RJhyJfo8xfkSVrpPkTZFxBCloROawSH6NoBa1rKF6bv0JlhA2yvCdpa4RNdUBbHrDs36CKGkKcdnRk7NqSsr6IO0bmqGPcOa0J47oJfC+7Ob9ByO3S7knVnP6Usxnx+UgwMbsr4W77hbrZmHW4V3wPjv4DHEVQxm8ER2gAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title=""
+        src="/static/575a3c730be63ea440bacf6d9d5f77c3/2bef9/02.png"
+        srcset="/static/575a3c730be63ea440bacf6d9d5f77c3/6f3f2/02.png 256w,
+/static/575a3c730be63ea440bacf6d9d5f77c3/01e7c/02.png 512w,
+/static/575a3c730be63ea440bacf6d9d5f77c3/2bef9/02.png 1024w,
+/static/575a3c730be63ea440bacf6d9d5f77c3/71c1d/02.png 1536w,
+/static/575a3c730be63ea440bacf6d9d5f77c3/a878e/02.png 2048w,
+/static/575a3c730be63ea440bacf6d9d5f77c3/28fe3/02.png 3446w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위의 vscode화면을 보자. <code>secrets.yaml</code>과 같이 <code>gitignore</code>에 제외한 파일을 제외하고는 나머지 파일들은 깃 저장소에 커밋되어 마지막 버전의 상태를 갖고 있는 파일들을 repository라는
+영역에 속하게 된다. 앞서 배운 <code>.git</code> 폴더에는 이 repository 영역의 데이터가 들어가져 있는 것이다. 쉽게 말해 repository에는 커밋되어 있는 것들이 들어가져 있다고 생각하면 좋을 것 같다.</p>
+<p>그러면 본격적으로 실습을 해보도록 하자. 아래와 같이 새로운 파일을 만들어보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABVUlEQVR42tWTy26DMBBF2ScpD+MXJjwCwQGVliqbSM2mi/7/J92OnVClQolUddXF0YyMOWDmEsSxxuZJYL1OvwkjhSiWCENBvUDCFFia+d7hrm02jPZeWK0YopCDc4PAdkdM0xk6H6BND0VkxYCiGqB0Cy53kKrxCOpnuKh/IGnN7Q/a6hXn90+UzRvM9hl5MSLlFdK0BKPKqCas8Lj+Hgm77AuMGbArR0h9oLewnpTXD29+RCC1hSCJIuHMn4RctCTp/5nwdhBxskWU5FSJeHt3OPP6UkjfU2cWJj8gMwdUNLC6mlCYEXk5QJoWglN0hItP46tSLbTeU3SapVB6YYei7ClG1gttc4KtT9j1R8iKssnrRQ5TH7HKCZvFkV2m3FHn44Zx5okigyR+nMfAvbbOeopORzLrSa+BdviQX2E363eF0/iBffdC0v2vJ+oeMv+Gc/0CYoFRapzymxkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title=""
+        src="/static/6f70cf6ef99fb1c5791c888f36188e8b/2bef9/03.png"
+        srcset="/static/6f70cf6ef99fb1c5791c888f36188e8b/6f3f2/03.png 256w,
+/static/6f70cf6ef99fb1c5791c888f36188e8b/01e7c/03.png 512w,
+/static/6f70cf6ef99fb1c5791c888f36188e8b/2bef9/03.png 1024w,
+/static/6f70cf6ef99fb1c5791c888f36188e8b/71c1d/03.png 1536w,
+/static/6f70cf6ef99fb1c5791c888f36188e8b/a878e/03.png 2048w,
+/static/6f70cf6ef99fb1c5791c888f36188e8b/efcdd/03.png 3450w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이후에 기존에 파일들도 한번 아래처럼 원하는데로 수정을 해보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABfElEQVR42q1Ty07DMBDMndI6duJH7DybxElLKAiEKsSBC///ScMmbVGhqFDEYbRWvJrs7IyDMDS4nkvMZtEH5kyBMQ0uLESUQOkccewwX8RYMAkWKsyuBfXucEVgdBfFFoFvHnGzeYGxa5hkhYSqKwa0t09o1o/0zcOmPbSpIVX1gViWn6B1Rb0NgrrYYPv8hqy8h3M3cOkATSR5vabGHKHIwHkKQVVE+Vlw6gmsXaHKByjTkTQPKVtY51EtW4Rh+iPJVwTKEInyJKnbw+9llReTTYSxrImkPyLs6KKYxv83wigu/kR2ZkIyg4zgIp0q45bgpp1yfpg824PMoHpQdEpIxiRjVFxHEepQkGFlfofMDnD5CspSfGLasdxHiKrWNYxpoNTylHB02iQtsryn/PmJ0C+38OUWVf8AVdQU8vIkh4c1fSuZi53knVyHRZhMYMyCh+fNCqRe0kQ9pG6nyIw4NmU8HyB+YVawGV7RtLfTs7nU0fEnY16Ppb8D3ylSWvXSzeAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title=""
+        src="/static/e5dad44d11314369fe22f1f60f014e18/2bef9/04.png"
+        srcset="/static/e5dad44d11314369fe22f1f60f014e18/6f3f2/04.png 256w,
+/static/e5dad44d11314369fe22f1f60f014e18/01e7c/04.png 512w,
+/static/e5dad44d11314369fe22f1f60f014e18/2bef9/04.png 1024w,
+/static/e5dad44d11314369fe22f1f60f014e18/71c1d/04.png 1536w,
+/static/e5dad44d11314369fe22f1f60f014e18/a878e/04.png 2048w,
+/static/e5dad44d11314369fe22f1f60f014e18/efcdd/04.png 3450w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이렇게 새로 생긴 파일은 깃이 추적하지 않는 파일이다. 즉, 위의 도식도를 보면 Working Directory에 Untracked 파일로 볼 수 있다. 단, 이미 한번이라도 커밋한 기록이 있는 파일들을 수정을 하면
+이전에 한번 Tracked를 한 적이 있기 때문에 Working Directory의 Tracked 상태로 되는 것이다.</p>
+<p>그러면 한번 특정 파일들만 <code>add</code>를 한번 해보자. 그리고 <code>git status</code> 명령어를 입력해보면 아래와 같이 나올 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.3125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA2ElEQVR42nWPwUrDQBRFu7MRRZMmrYlpZiA1k0y0SSZtIi7UiCAFcePGgv//G6dDoIKgi8NdvMu5vEnbPfEy7OhtNs0DZbmltvnYf/Lc7S1fDP2eofvm7X3H60dPmpZcx4qZL/ADOeaRiRAFqjLkZoOqDVLfchWumIcCN4g4Ob3EOfNwzj2mzhxnGnHhxrje8pfoRyhlSVa1FG2Hajes1sauZyRCj8TLfBxYLFKCuRzxA/GnbBQmUmPsm9u7e9aqocpqtG5ReUNeGLS9CdsJoxu8WfKv6Cg8AD3zcJ5SjleEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title=""
+        src="/static/5a9c9bd64800bd4f53472322fb2510bb/2bef9/05.png"
+        srcset="/static/5a9c9bd64800bd4f53472322fb2510bb/6f3f2/05.png 256w,
+/static/5a9c9bd64800bd4f53472322fb2510bb/01e7c/05.png 512w,
+/static/5a9c9bd64800bd4f53472322fb2510bb/2bef9/05.png 1024w,
+/static/5a9c9bd64800bd4f53472322fb2510bb/71c1d/05.png 1536w,
+/static/5a9c9bd64800bd4f53472322fb2510bb/912fc/05.png 1934w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이 말은 즉, 2개의 파일이 Staging 영역으로 <code>add</code>와 동시에 올라갔다는 것이고 나머지는 아직 Working Directory라는 의미이다. 그러면 한번 정리해보도록 하겠다.</p>
+<h3><strong>Working directory</strong></h3>
+<ul>
+<li>untracked: Add된 적 없는 파일, ignore 된 파일</li>
+<li>tracked: Add된 적 있고 변경내역이 있는 파일</li>
+<li><code>git add</code>명령어로 Staging area로 이동</li>
+</ul>
+<h3><strong>Staging area</strong></h3>
+<ul>
+<li>커밋을 위한 준비 단계
+<ul>
+<li>예시: 작업을 위해 선택된 파일들</li>
+</ul>
+</li>
+<li><code>git commit</code>명령어로 repository로 이동</li>
+</ul>
+<h3><strong>Repository</strong></h3>
+<ul>
+<li><code>.git directory</code>라고도 불림</li>
+<li>커밋된 상태</li>
+</ul>
+<p>이제 한번 다음 실슴을 진행해보자. <code>tigers.yaml</code>을 삭제하고 <code>git status</code>를 해보자. 그러면 아래와 같이 삭제한 것도 working directory에 추적을 하고 있음을 알 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 11.71875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAcUlEQVR42nXMzwrCIADA4b3BSgtE2qyZ4WRNxhClP1TQYe//Qr9unerwXb8qTheer4WUH8zpTilvyrzQuyvB3nBjRgePUkfk1iA3v61Fw84Eqs4OTOdMHBL+FLFu5GADZt+jdEdda8SqQcj2b/YNW88HN6M32BU4WqYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title=""
+        src="/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/2bef9/06.png"
+        srcset="/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/6f3f2/06.png 256w,
+/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/01e7c/06.png 512w,
+/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/2bef9/06.png 1024w,
+/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/71c1d/06.png 1536w,
+/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/a878e/06.png 2048w,
+/static/bf94ff736fe2c6efbc56a1a20a4ae1f3/88820/06.png 2564w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>즉, 파일의 삭제가 <code>working directory</code>에 있다라는 것이다. 그러면 <code>git reset --hard</code>로 다시 원복을 하고 아래의 명령어를 작성하고 <code>git status</code>를 해보자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> <span class="token function">rm</span> tigers.yaml</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 12.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAm0lEQVR42n3MywqCQACFYR+hNEZpaCaxRh1CGs3CsIIIylwE7brQc1QIPfppMNyFi4+zOr+xP5yQLbfIVzts1gVu5UurcD2+cS8+eFyeOFcl1CKFEDEYD2BaDFaP/2UkcQ4ZJpByBt9XiKIMlAYgxINtj+BonHpwHLc+tMXqoFRzhNMUXEzQp2OwYQhiu+iaA33+6ZhML28NNcEvyBVWoNFuJCUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title=""
+        src="/static/083d50abc99e36af53368ed8d0826c7b/2bef9/07.png"
+        srcset="/static/083d50abc99e36af53368ed8d0826c7b/6f3f2/07.png 256w,
+/static/083d50abc99e36af53368ed8d0826c7b/01e7c/07.png 512w,
+/static/083d50abc99e36af53368ed8d0826c7b/2bef9/07.png 1024w,
+/static/083d50abc99e36af53368ed8d0826c7b/71c1d/07.png 1536w,
+/static/083d50abc99e36af53368ed8d0826c7b/a878e/07.png 2048w,
+/static/083d50abc99e36af53368ed8d0826c7b/03692/07.png 2440w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 삭제되었던 변경 이력이 스테이징 영역으로 올라간 것을 알 수 있다. 그러면 다음 실습을 위해 <code>git reset --hard</code>를 해주자. 그리고 <code>tigers.yaml</code> 파일을 <code>zzamTigers.yaml</code>
+이름으로 변경해보자. 그리고 <code>git status</code>를 해보자. 그러면 아래와 같이 <code>tigers.yaml</code>이 삭제되고 <code>zzamTigers.yaml</code>이 새로 생성된 이력을 볼 수 있을 것이다. 즉, 파일 이름 변경은
+컴퓨터 입장에서 기존 파일을 삭제하고 똑같은 내용의 새로운 파일을 생성하는 것과 같다라는 것을 알 수 있을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAk0lEQVR42n2OSQ6CQAAEeYGELeqMLMomoIxgQBINAT158f+/KSfe5VCHTiWVNprrg2l+0w8zXT9y61/cuw/n44TKn5TNiGxKpMhwvQjHDf+jvZEkNa0aUKeOKr+QpDVRXBBEORtxwDQF1srHcoLlmPbeOsYIwhJVtMR+jpQpQViw8wuifYXQ+/fKC5djGtv22cqML0skUpPbQmcQAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title=""
+        src="/static/014635c2aec59862b491f8b2e4a2c3ce/2bef9/08.png"
+        srcset="/static/014635c2aec59862b491f8b2e4a2c3ce/6f3f2/08.png 256w,
+/static/014635c2aec59862b491f8b2e4a2c3ce/01e7c/08.png 512w,
+/static/014635c2aec59862b491f8b2e4a2c3ce/2bef9/08.png 1024w,
+/static/014635c2aec59862b491f8b2e4a2c3ce/71c1d/08.png 1536w,
+/static/014635c2aec59862b491f8b2e4a2c3ce/a878e/08.png 2048w,
+/static/014635c2aec59862b491f8b2e4a2c3ce/742d3/08.png 2550w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 지금 상태에서 <code>git reset --hard</code>를 해보자. 그러면 뭔가 이상하게 <code>tigers.yaml</code>은 복구가 되었지만 <code>zzamTigers.yaml</code>은 그대로 남아 있는 것을 알 수 있다. 이유는
+<code>reset</code>은 기존에 있는 파일을 복구하는데만 있다. 그래서 <code>Untracked</code>상태는 따로 별도 작업을 하지 않은 것이다. 즉, <code>reset</code>은 깃이 관리하는 파일들만 뭔가 해준다라는 것으로 받아들일 수 잇을
+것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 137.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAABYlAAAWJQFJUiTwAAABU0lEQVR42u2S3XKCMBSEeQYtgqC0SlVACCK2iBASrdrR2p/3f5ntwbE3nemM8bLDxc4kF/nO7slqZp8hdz2k3hyl/ETJj4hiDsueoucw2P1ISVrLmEAOAlRRBr5+R57vkC4EHkdz6J0xDHOiJK1tetgPIuySEnL3hao6gFdHZMsXchnA7HpK0nSiLtwUGeMoxREVKV/tMU8F7N70PFUJaBgjDHwBf7ZBlpGWW4LJm2BnYB15e4lcyBPk+oSifIWQb3DumbrDNj3YuDHKcImEHNZRVwQc+8/QyX3X8tWB2yEjhxXt7wNFtgcvDnCoTp32SC2yMfkBxlhFT/DXAqHkmAqO+ziBk8xgWlfCKIk9DOtf9jBzQozdEIYfwg6ooIyhH8ZnXe2OBlsPAbQuXVrkUu/Q8nUqp05lviNdzkqR62L/Ne3qqL8/5ZZHDbABNsAG+A+B34EuAjB+LXCwAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title=""
+        src="/static/16d3d81449af13eca4ce7a298551d5c7/f4b77/09.png"
+        srcset="/static/16d3d81449af13eca4ce7a298551d5c7/6f3f2/09.png 256w,
+/static/16d3d81449af13eca4ce7a298551d5c7/01e7c/09.png 512w,
+/static/16d3d81449af13eca4ce7a298551d5c7/f4b77/09.png 770w"
+        sizes="(max-width: 770px) 100vw, 770px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이제 다음으로 아래의 명령어를 통해 <code>tigers.yaml</code> 파일을 <code>zzamTigers.yaml</code>로 변경해보자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> <span class="token function">mv</span> tigers.yaml zzamTigers.yaml</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>이후에 <code>git status</code>를 해보면 파일을 삭제하고 새로운 파일이 생성된 것이 아닌 <code>rename</code>만 된것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 11.71875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAdklEQVR42nXMuw6CMABAUb6gQSAReTXio0bSpIFSXajGkODs4ODk///EZTBx0uGsJ2it5+InrB0w5szJjtyHN75/cu1e3MYHbnLI6kheKLJcsUw3xIn8Kai3msY4DrpjrTRy11DUe0SYfogVoShZRCVRXH39C2fUBDinu8ZX0gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title=""
+        src="/static/25645ab4bf7292f986fa40d07bc0c503/2bef9/10.png"
+        srcset="/static/25645ab4bf7292f986fa40d07bc0c503/6f3f2/10.png 256w,
+/static/25645ab4bf7292f986fa40d07bc0c503/01e7c/10.png 512w,
+/static/25645ab4bf7292f986fa40d07bc0c503/2bef9/10.png 1024w,
+/static/25645ab4bf7292f986fa40d07bc0c503/71c1d/10.png 1536w,
+/static/25645ab4bf7292f986fa40d07bc0c503/a878e/10.png 2048w,
+/static/25645ab4bf7292f986fa40d07bc0c503/742d3/10.png 2550w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 다음으로 이미 스테이징 영역에 있는 파일들을 워킹 디렉토리로 옮기는 방법에 대해 알아보자. 아래의 명령어를 사용하면 스테이징에 있던 파일들을 워킹 디렉토리로 내릴 수 있다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> restore <span class="token parameter variable">--staged</span> <span class="token string">"(파일명)"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><code>--staged</code> 옵션을 빼면 working directory에서도 제거가 된다.</p>
+<p>다음으로 reset의 옵션들을 상세히 보겠다. 우리는 이제까지 <code>--hard</code> 옵션만 사용했었는데 더욱 자세히 보자.</p>
+<ul>
+<li>--soft: <code>repository</code>에서 <code>staging area</code>로 이동</li>
+<li>--mixed (default): <code>repository</code>에서 <code>working directory</code>로 이동</li>
+<li>--hard: 수정사항 완전히 삭제</li>
+</ul>
+<h2>HEAD</h2>
+<p>지금부터 우리는 HEAD에 대한 개념을 알아보도록 하겠다. 보다 정확하게 알기 위해 실습을 통해 진행해보도록 하겠다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYUlEQVR42u2T607EIBCF+xq72zulUGgpvarVvUVjjL7/8xwH3N1solET//rjy7RwOJmBmSAvKrATpawRJwxRzCgWSLMSScqR5YJiSf/Cr5+JiDDKaU8gFxpc1Ah2xxcM0xb98ghLqGEPOz7A2BvU7eRp7AxtRv+tmuGC6e4w3R4w9EdM8yvG5Q1BT4c1bcpqQcFHhHyHSi9I8wKrTYJ1mGJ9jlesiCznVFVDmUufZUIxsP0CXY9g3CCihdQ8o+n34CTcJCUiEn5G+nJzeQ+hJm/KhUGlOgRS9ZRdh6KdkegekX2Cmg7gakZcWCS8+5K4aCHNFnYgxh1qQ1dk5g/DSg9UosSGLjiMc3/RIT3Mdzite0TdTKia2Xs4rgyrkyH7FU7LeA2pBl+hr5T4s6E7ezb7N5TUsJkX/ganZVxfDMWJQFFTu/4ppYGb64xRc9Ps/kRCc17K1reNrCd0NJqmGfEOraN3AYpNiZEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title=""
+        src="/static/a1b2f1d64f2c940f70a7fdb080c102e6/2bef9/11.png"
+        srcset="/static/a1b2f1d64f2c940f70a7fdb080c102e6/6f3f2/11.png 256w,
+/static/a1b2f1d64f2c940f70a7fdb080c102e6/01e7c/11.png 512w,
+/static/a1b2f1d64f2c940f70a7fdb080c102e6/2bef9/11.png 1024w,
+/static/a1b2f1d64f2c940f70a7fdb080c102e6/71c1d/11.png 1536w,
+/static/a1b2f1d64f2c940f70a7fdb080c102e6/a878e/11.png 2048w,
+/static/a1b2f1d64f2c940f70a7fdb080c102e6/f7171/11.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.3125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABsElEQVR42oWRz4rTUBTG+1w+geALuJJ5AN2KC0EXs5lNn2CWgouiKzv+KUM7zoiDFp2hMmBF7B+mTXLTmFjTJDe59+dJ0kpHBT+48B049zvfd07DWkv1gA0vDGXF+5Fh76Xh+Iup6t+9RUHVMR5QPNnFPmtiWg+xF0c0WMPaYkMxpuan3yz3nmZ0P1cT0KYejDWUHXZ0jm09QD++T/7oLmZwSCMMQ1zPp9Of4LiKxWIhfFrxn5FP78OIMPDxlWJ80sb3HDzlMXrTln8u/koz6R8R/4iqoY0iz0nTjOn8O0makkt9dvGVOF4JL5h5S9JMC9csnRk6y8SgJfEUVotTiR9cjtFpUguyhXI/JVxnju/7aBH3wksyEdFao8SxiuecOh3eqR4nswOG4fmVv40/xUosl0uiKCIIAtr9lkR0q5jds+e8HXe43bvOne4Ndl5dY//Tbr13a/52uEEZu9wlW5ff5plNSUmqV5Bf+ftPwRJxHMthHKYHUzmEz0ItmPQmJK8T7C1xtGMxN2XAi3Wy4j+CJVI5khookpW4WQkfKrKhHKUpYk2D2TPYj2vBOjG/AFP3pvT/xwfdAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title=""
+        src="/static/5c31a203e4c543e2bae8bb8a4d05bd28/2bef9/12.png"
+        srcset="/static/5c31a203e4c543e2bae8bb8a4d05bd28/6f3f2/12.png 256w,
+/static/5c31a203e4c543e2bae8bb8a4d05bd28/01e7c/12.png 512w,
+/static/5c31a203e4c543e2bae8bb8a4d05bd28/2bef9/12.png 1024w,
+/static/5c31a203e4c543e2bae8bb8a4d05bd28/58354/12.png 1396w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위와 같이 실습 환경을 구축해보자. 어떤 파일이든지 상관은 없다.</p>
+<p>깃의 HEAD란 현재 속한 브랜치의 가장 최신 커밋을 뜻한다. <code>git switch</code>로 브랜치를 이동할때마다 해당 브랜치의 최신 커밋으로 이동하고 HEAD도 그 위치를 한다. 이를 통해 정말로 최신 커밋이
+HEAD인것을 인지할 수 있다.</p>
+<p>그러면 HEAD를 옮겨보도록 하자. 깃에는 최신 커밋이 기본적으로 HEAD라고 했다. 하지만 HEAD 자체를 옮길 수도 있다. 아래의 명령어를 한번 실행해보자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout HEAD^</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>그러면 아래와 같이 커밋 해시가 뜨는데 확인해보면 최신 커밋의 이전 커밋으로 이동하게 되는 것을 볼 수 있게 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 24.609375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6UlEQVR42n2QS0vDQBRGu3djk5qkeds8Jsm0zcNYM0JbpWBxK4j//5ccx1moiHRxuA+4h487203PHI5nQ9cr+vbAk3rnqN44qQ+a/Z7o1BKKhiRu8IMCy46xF8m/zKS8Z9tObLYPtJ3STHTDpHc7atnjLFKurwKseczcii7KjLAoO6p6MKyyNd4yJ4wqg+vl2DcJCyc19ZLoW1iKHlH1WrYhvZUEkcDzM/yw0H2B62ZY1k+qr4R/+b3XCVsaOSI1tbxD1hODPDOsXxjlK6V6JBwbHGdlDoJQ6PSCpZ/rf5bmp66XmTkISz4BE/2LsNEJDmUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title=""
+        src="/static/5931cfbee4650ecc4e2897bc64a1f248/2bef9/13.png"
+        srcset="/static/5931cfbee4650ecc4e2897bc64a1f248/6f3f2/13.png 256w,
+/static/5931cfbee4650ecc4e2897bc64a1f248/01e7c/13.png 512w,
+/static/5931cfbee4650ecc4e2897bc64a1f248/2bef9/13.png 1024w,
+/static/5931cfbee4650ecc4e2897bc64a1f248/71c1d/13.png 1536w,
+/static/5931cfbee4650ecc4e2897bc64a1f248/a878e/13.png 2048w,
+/static/5931cfbee4650ecc4e2897bc64a1f248/24c79/13.png 2510w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기서 <code>^</code>나 <code>~</code>의 갯수만큼 이전으로 이동하게 된다. 따라서 아래처럼 하면 3칸 이전으로 이동하게 되는 것이다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout HEAD^^^</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>혹은 더욱 간단하게 아래와 같이 해도 무방하다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout HEAD~3</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>물론 커밋 해시를 알고 있다면 아래처럼 커밋해시로 직접 이동을 해도 상관은 없다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout <span class="token string">"커밋 해시"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>만약 이렇게 <code>checkout</code>을 통해 이동을 했는데 만약 <code>Ctrl + Z</code>처럼 뒤로가기를 하고 싶다면 아래처럼 사용하면 바로 이전 상태로 가게 된다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout -</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>또한 해당 브랜치에 HEAD를 사용해서 reset이 가능하다. 커밋 해시를 모르는데 특정 시점으로 reset을 하고 싶은 경우 아래와 같이 진행하면 편할 것이다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> reset HEAD^ <span class="token parameter variable">--hard</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<h2>fetch vs. pull</h2>
+<p>이번에는 깃의 <code>fetch</code>와 <code>pull</code>에 대해 보다 자세하게 살펴보도록 하겠다. 저번에는 원격 저장소의 커밋을 가져올 때 풀 명령어만 사용했었다. 사실 이 풀은 패치를 포함하는 과정이다.</p>
+<p>패치란 원격 저장소의 최신 커밋을 로컬로 가져오되, 로컬의 다른 브랜치에는 영향을 주지 않는 작업이다. 쉽게 생각해서 업데이트된 내용을 일단 살펴보기만 하기 위해 다운만 받는다고 생각하면 좋을 것 같다. 이처럼
+패치된 작업을 merge 또는 rebase로 로컬 브랜치에 적용하는 것은 풀이다. 풀 방식은 2가지 방식 중에 하나를 선택했다는 것을 기억할 것이다. 즉, 풀을 실행하면 패치가 자동으로 실행된 다음에 설정한 바에
+따라 머지 또는 리베이스까지 이어지는 것이다.</p>
+<p>그러면 본격적으로 한번 실습을 진행해보겠다. 원격 저장소에 파일을 수정해보자. 그 이후 로컬에 가서 해당 수정사항을 pull 받기 전에 잘 되어있는지 fetch를 통해 확인할 수 있다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> fetch</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>이후 잘 적용이 되었는지 아래의 명령어로 원격 저장소 브랜치에 접속해서 확인 후에 잘 적용되어 있으면 pull을 받는것이 공식이다. 이것은 실무에서도 많이 사용하니 잘 숙지해주자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout origin/main</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>다음으로 원격 저장소에 브랜치를 하나 만들자. 이후 fetch를 통해 새로 만든 원격 저장소 브랜치를 받아오면 아래와 같이 원격 저장소 브랜치로 접속이 가능하다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> checkout <span class="token string">"origin/(브랜치명)"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>다른 방식으로 아래와 같이 하는 방식도 존재한다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> switch <span class="token parameter variable">-t</span> <span class="token string">"origin/(브랜치명)"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>이 2개의 차이는 다음과 같다. <code>git checkout origin/브랜치명</code>은 detached HEAD 상태가 됩니다. 로컬 브랜치를 만들지 않고 해당 커밋만 직접 가리키므로, 여기서 커밋하면 어떤 브랜치에도
+속하지 않게 됩니다. <code>git switch -t origin/브랜치명</code>은 원격 브랜치를 tracking하는 로컬 브랜치를 자동 생성하고 거기로 전환합니다. -t(--track)가 git checkout -b 브랜치명
+origin/브랜치명과 동일한 효과가 된다.</p>
+<h2>Git의 각종 설정</h2>
+<h3>help</h3>
+<p>이번에는 깃에서 유용한 각종 설정들을 하는 방법에 대해 알아보도록 하겠다. 그 전에 <code>git help</code> 명령어를 잠시 집고 넘어가겠다. 이는 깃의 사용법 가이드를 확인할 수 있는 명령어이다. 해당 명령어를 사용하면
+기본적인 명령어들과 설명이 나온다. 만약 깃의 모든 명령어들을 조금 더 보고 싶다면 아래와 같이 a 옵션을 주면 된다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> <span class="token builtin class-name">help</span> <span class="token parameter variable">-a</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>만약 특정 명령어의 설명과 옵션을 보고 싶다면 아래의 명령어를 입력해주면 된다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> <span class="token string">"(명령어)"</span> <span class="token parameter variable">-h</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<h3>global 설정과 local 설정</h3>
+<p>config를 --global과 함께 지정하면 전역으로 설정이 된다. 만약 해당 프로젝트에만 설정을 하고 싶다면 생략하거나 --local을 해주면 된다. 실무에서는 거의 할 일이 없지만 만약 해당 시스템 전체로 하고
+싶은 경우라면 --system으로 설정을 해주면 된다. 그러면 각각 적용해서 아래의 명령어로 어떤 설정들이 어느 환경에 적용되어 있는지 살펴보자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> config <span class="token punctuation">(</span>--global / <span class="token parameter variable">--system</span> / --local<span class="token punctuation">)</span> <span class="token parameter variable">--list</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<h3>단축어 설정</h3>
+<p>우리는 깃 명령어들을 단축어를 적용할 수 있다. 아래의 명령어를 통해 자기 자신만의 단축어로 적용해보자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.<span class="token string">"(단축키)"</span> <span class="token string">"명령어"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/git-github-Git보다-깊이-알기/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-e39b8d18c097fa22020f.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-bcbf5ef0e682a09d5f19.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-8b8cb94cb94763a0cc53.js\"],\"component---src-pages-posts-tsx\":[\"/component---src-pages-posts-tsx-77cb599b6d677de96a5a.js\"],\"component---src-pages-resume-tsx\":[\"/component---src-pages-resume-tsx-24a3e9c9de948d5f619c.js\"],\"component---src-template-post-tsx\":[\"/component---src-template-post-tsx-c46475c746e289ebb127.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="c383b8f7593f8e30cb2c";</script><script src="/webpack-runtime-34eda6e2544c2d2475cb.js" async></script><script src="/b633362c-18f38218541865050e97.js" async></script><script src="/63a121f2-cc600fa3be5d8ad5a67c.js" async></script><script src="/3e15977f-2d43cd4edfa117bc12b9.js" async></script><script src="/aec3edcd-f46d0566a4d152be50d1.js" async></script><script src="/2425c7c2-7ed3b7b860ba265f0576.js" async></script><script src="/d0007318-684b54fbdb5f0e47b4ef.js" async></script><script src="/cc76255b-cead784b89386693197e.js" async></script><script src="/1593e758-b67a97fabbcf1e458edd.js" async></script><script src="/48aa8186-2679e7820beef45a0960.js" async></script><script src="/d265142c-7af400a571c4b046073a.js" async></script><script src="/47ad6cec-ab5ba5ed1778e89f03d7.js" async></script><script src="/app-e39b8d18c097fa22020f.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
