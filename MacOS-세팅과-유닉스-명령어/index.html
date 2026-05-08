@@ -1,0 +1,913 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><meta name="generator" content="Gatsby 5.16.1"/><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/2af117e1e6f792cc0a8dd76b39ef0da4/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/MacOS-세팅과-유닉스-명령어/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="MacOS 세팅과 유닉스 명령어"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/2af117e1e6f792cc0a8dd76b39ef0da4/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="MacOS 세팅과 유닉스 명령어"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/2af117e1e6f792cc0a8dd76b39ef0da4/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><style data-href="/styles.225c8d7d6398aeb4f3bd.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">MacOS 세팅과 유닉스 명령어 · Sungbin</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">MacOS 세팅과 유닉스 명령어</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->mac</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2026년 5월 8일<!-- --> · <!-- -->10<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">mac<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (2개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css 1f0z9r6">.css-1f0z9r6{margin-bottom:0.5rem;}.css-1f0z9r6::marker{font-weight:600;color:#9195F6;}.css-1f0z9r6::after{content:'- 19분';margin-left:0.2rem;font-size:0.8rem;}.css-1f0z9r6>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1f0z9r6>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1f0z9r6 e1k9d3a00"><span>AI 시대의 MacOS</span></li><style data-emotion="css 13selu">.css-13selu{margin-bottom:0.5rem;}.css-13selu::marker{font-weight:600;color:#9195F6;}.css-13selu::after{content:'- 10분';margin-left:0.2rem;font-size:0.8rem;}.css-13selu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13selu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13selu e1k9d3a00"><span>MacOS 세팅과 유닉스 명령어</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css 3ypioh">.css-3ypioh{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-3ypioh{padding:1rem;}}@media screen and (max-width: 1308px){.css-3ypioh{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-3ypioh{width:calc(100vw - 8px);}}.css-3ypioh p>img{width:100%;}.css-3ypioh p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-3ypioh p,.css-3ypioh table,.css-3ypioh ul,.css-3ypioh blockquote,.css-3ypioh ol{font-size:1rem;margin:0 0 2rem;}.css-3ypioh table{width:100%!important;max-width:100%!important;border-collapse:collapse!important;border-spacing:0!important;border-radius:8px!important;overflow:hidden!important;box-shadow:none!important;border:1px solid #EAEAEA!important;background:#ffffff!important;display:table!important;table-layout:auto!important;}.css-3ypioh table thead tr{background:#EAEAEA!important;}.css-3ypioh table th{padding:12px 16px!important;color:#000!important;font-weight:600!important;text-align:left!important;border:none!important;border-bottom:2px solid #999!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table td{padding:10px 16px!important;color:#111!important;text-align:left!important;border:none!important;border-bottom:1px solid #EAEAEA!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table tbody tr{background:#ffffff!important;-webkit-transition:background 0.15s ease!important;transition:background 0.15s ease!important;}.css-3ypioh table tbody tr:nth-of-type(even){background:#FAFAFA!important;}.css-3ypioh table tbody tr:hover{background:#EAEAEA!important;}.css-3ypioh table tbody tr:last-of-type td{border-bottom:none!important;}.css-3ypioh table th[style],.css-3ypioh table td[style]{color:inherit!important;background:inherit!important;}.css-3ypioh table tr[style]{background:inherit!important;}.css-3ypioh center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-3ypioh p+center,.css-3ypioh iframe+center{margin-top:-1rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-3ypioh h1>a,.css-3ypioh h2>a,.css-3ypioh h3>a,.css-3ypioh h4>a,.css-3ypioh h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-3ypioh h1:hover>a,.css-3ypioh h2:hover>a,.css-3ypioh h3:hover>a,.css-3ypioh h4:hover>a,.css-3ypioh h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-3ypioh h2:not(:first-of-type),.css-3ypioh h3:not(:first-of-type),.css-3ypioh h4:not(:first-of-type){margin-top:3rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{margin:0 0 1.25rem;}.css-3ypioh h1,.css-3ypioh h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-3ypioh h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-3ypioh h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-3ypioh ul,.css-3ypioh ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-3ypioh ul ul,.css-3ypioh ol ul{margin-top:8px;}.css-3ypioh ul ul,.css-3ypioh ol ul,.css-3ypioh ul ol,.css-3ypioh ol ol{margin-bottom:0;}.css-3ypioh ul{list-style:disc;}.css-3ypioh ol{list-style:decimal;}.css-3ypioh ul li{margin-bottom:0.5rem;}.css-3ypioh ul li::marker{font-weight:600;color:#9195F6;}.css-3ypioh ol li{margin-bottom:0.5rem;}.css-3ypioh ol li::marker{font-weight:600;color:#9195F6;}.css-3ypioh li>a{white-space:inherit;word-wrap:break-word;}.css-3ypioh li{color:#000;}.css-3ypioh li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh li code * span{white-space:inherit;}.css-3ypioh li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh iframe{margin-bottom:2rem;}.css-3ypioh div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-3ypioh div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-3ypioh div[class*='markdown-wrapper']{padding-left:1rem;}}.css-3ypioh pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-3ypioh pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh pre>code * span{white-space:inherit;}.css-3ypioh pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-3ypioh p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh p>code * span{white-space:inherit;}.css-3ypioh p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-3ypioh img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-3ypioh blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-3ypioh blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-3ypioh blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-3ypioh blockquote{padding-left:1rem;}}</style><section class="css-3ypioh e17f2jor0"><blockquote>
+<p>해당 포스팅은
+인프런의 <a href="https://inf.run/ijAW9">맥북 처음 샀을 때 꼭 해야 할 세팅 A to Z (Claude Code · Homebrew · Agentic Coding 포함 | macOS 올인원)</a>를
+참조하여
+만들었습니다.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR42o1S3ytDcRTfizIbw/X715NWS9Ii5MfMXDbZ0ooJoRAPpORBUR55EEpJLUkSSS1aeeDBgyf/yf21qzX3ztvHufcuKzP28Ol8z/nW55zz+RwTz5YgA4OlBrLl7M88DVNGcaAYXG8+wQzeUwS+n+Ayg+uhWr+VUAiur4BgyYGQyARfBeT1EchrXggj1RACdZBXPHjfDEIYbYDgr0VsoROx+U5qaPuDUFuBJhIC9VAjp0g+30K5PYZ6H0bidBvJlwjUx0sodyf4fI1CeTgDT821IXQJ/pqQ99VADDZCmu+AONkEaboF4lQzpNRbmnVSvRm8tzxFmG1lbUrSRgw5IM21QxiuothKTSr1RuKY3dD0eyPbPxoOlYHrzkPiYhefb0943wohvrcE5foQH1f7FA+g3BxBjZ4jEd4B5yrIcPtXl6W5NjJlCOKEA+K4HfKGH9KME7HFLt2w+N4y5FXWcPpfQgLnthrd6UR41jgjzTCjbtb/OLclxzvU9WFofSZ90CSFERnjrefMr4RfN4TasyQgUvoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title=""
+        src="/static/2af117e1e6f792cc0a8dd76b39ef0da4/8c557/banner.png"
+        srcset="/static/2af117e1e6f792cc0a8dd76b39ef0da4/6f3f2/banner.png 256w,
+/static/2af117e1e6f792cc0a8dd76b39ef0da4/01e7c/banner.png 512w,
+/static/2af117e1e6f792cc0a8dd76b39ef0da4/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>📦 외부 앱 및 앱스토어 설치 (Rectangle)</h2>
+<p>이번에는 외부 앱과 앱스토어 앱을 설치하는 방법에 대해 알아보자.</p>
+<p>먼저 애플리케이션을 다운받아보도록 하자. 애플리케이션을 다운받는데는 2가지 방식이 존재한다. 하나는 외부에서 만든 애플리케이션을 우리에게 가져오는 방식이다. 일단 가장 첫번째로는 맥이 설치해준 사파리 혹은 브라우저에
+들어가보도록 하자. 화면은 아마 다음과 같을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADN0lEQVR42k2Ty28bZRTFR2IBKvErfo5nxuPHjD3jsWM7dhwnqR3HSR0CDXETIbFDqaA8FxSVpGRTNiy6QAI1oASxgAgJxIr0P0CVWIJYoFBQF2WLRKUg1j/uTFmwOPruXN177vnOd0fJGjZFp02x0sa0GqR15zEMl4yPXPV/+C9nehJ7pLQyCbVEMmuRVC1S0qf0RpssX3qBweoOS8MJ8/3LLCxvyblJT9Be2GC290wAP27756Lk+9sSj2l1x8wNJnT6W7QvbqJohkk2a5BVs+h6jnLFlW+dfL5ERtWwKx5evYnrzWCXqxRLZTkrFAolzHyBdFp683WSOQtD+pVQKEIkHGVqKowqBCsra9RqfrMTnP3+MvPzC7Tbc8wKypJvtto4rke93iCRTBMOhQThIFbi8SSxWDwg9It7vUV0Ub179RVOvvqW4+Njvjw54ejomDt3DtnamogqNRi+uNQPbhOJxAIkkxkUPzE9nQgS+XyRanWGdEbDsiq4oqJUsmmIkqZA1wwsuyLWGKRSGapyg3gixYWnQyIoQkoGKaqq41SqeLUmOVN8yZlUnKr4UwqKTdtBd2po4qVmldGENCte6VoO13FZGa2xsHhRbOhIf1EUSkG+YFEoSrGRlytkxHCTZCqFoijsfvE1e/cfsnf2kM3DT1l/doI9M0dtOsrtg3c5/wce/fWIv8/PWbu0LgrlhX3mfNFG002mxVPfgmg0FhDWP/yYmz/9ys0fz7h8+yNZlRFufR79wlO8/fI1/vjznF9++52zBw8YDFcfE+YLdqAwq/mEYnBYoWQ+SacWx+p26a2OZS9HeO0e9dYsrdkOnltje7jGZ9f3OXrtdQ7feJOG4/mEOYxcMbi2qhXIGVG8isL2OMTVnazky6jZAnFZibRqkEjlZKjKE1NRnhevv9++ws+7u9zfv0FfhgihLp5ZwcLGpuNsbO7wyeffMBRVU5Ew3aLFS6Muz3WWGdRmOb17l+9OT/nh3j2uXd+jujSiKEvuv4W/MUqh5MrfIYvsNESpTW9pjVffeo/V8RX5Sxo03CYbgyErC6t0ZrrsH7zPOzcOuHXrAzYmL2JW5yjZ0t9ap9wa8y+X2KuRaXdNQQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title=""
+        src="/static/ba4277599ff6c2e4586c073fb5e4a9ee/2bef9/01.png"
+        srcset="/static/ba4277599ff6c2e4586c073fb5e4a9ee/6f3f2/01.png 256w,
+/static/ba4277599ff6c2e4586c073fb5e4a9ee/01e7c/01.png 512w,
+/static/ba4277599ff6c2e4586c073fb5e4a9ee/2bef9/01.png 1024w,
+/static/ba4277599ff6c2e4586c073fb5e4a9ee/71c1d/01.png 1536w,
+/static/ba4277599ff6c2e4586c073fb5e4a9ee/a878e/01.png 2048w,
+/static/ba4277599ff6c2e4586c073fb5e4a9ee/f7171/01.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>여기서 우리는 하나의 프로그램을 다운로드 받을 것이다. 바로 창을 자유롭게 움직일 수 있는 프로그램을 설치할 것이다. 지금 현재 상태로는 마우스나 트랙패드로 왔다 갔다 해야하는 불편한점이 있는데 설치 할 프로그램을
+통하면 자유롭게 이동이 가능하다. 바로 <strong>Rectangle</strong> 라는 프로그램이다. 설치 사이트는 아래와 같다.</p>
+<blockquote>
+<p><a href="https://rectangleapp.com/">https://rectangleapp.com/</a></p>
+</blockquote>
+<p>여기서 다운로드를 받아보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABqElEQVR42q2S3SvDURjHzyWKaVjbJEOIosxL4mI3KMlfYLJhUsaEpEVyqd35D+TSnZIrLhTJhQvKjW0iLzMvv2l+e/m97OucMyvTtiSnPn1Pz3Oe7+855/cQrc4EQ2UjdMZaFJeakFeoR16Rnmt+kSEjBRojCrUVKNHXUKqhK69DGa3XlFWBjM+44XC6MeVaxtjkIkYcc7A55mGbmOc6PDYLq92FITvV0VmqLppbgJ1ibrOgobkTNfVmdFkGMD69AhIWP/AmCEgkEvjNSp0ThBB6evvR0tIBg9GEIesIFFkGyV6Y1EgkikvvDU4eBYQkJc1YoI08v7xwwuEwjxOWyNSdoqhcd3b30WdbBNk4gOf8gcdkNfttsnaoKMluNre20T44AbJ6hLXDu78bsquydXp6BufSOiyeY+xdPCU/9hdDSZK/jEUEgwE8398iRn9g2gP/1lBVVWoU4bDHfn19w2PgCULoHbFolMfZmYyG7K0yIUkSZDoGbC+KIqLUiO1Z7HvuJyTXvMXjcW7ElJmkyDWzxOe/RjauvH6KD16fP41cNaSptRv/ySchk1oCFNHRvAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title=""
+        src="/static/f7f0f46055cbfe5d462c3d9c21aa0a01/2bef9/02.png"
+        srcset="/static/f7f0f46055cbfe5d462c3d9c21aa0a01/6f3f2/02.png 256w,
+/static/f7f0f46055cbfe5d462c3d9c21aa0a01/01e7c/02.png 512w,
+/static/f7f0f46055cbfe5d462c3d9c21aa0a01/2bef9/02.png 1024w,
+/static/f7f0f46055cbfe5d462c3d9c21aa0a01/71c1d/02.png 1536w,
+/static/f7f0f46055cbfe5d462c3d9c21aa0a01/a878e/02.png 2048w,
+/static/f7f0f46055cbfe5d462c3d9c21aa0a01/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그러면 위와 같이 dmg 파일이 다운로드 받아질 것이다. 이것을 실행시켜보자.</p>
+<blockquote>
+<p>dmg 파일은 윈도우의 exe 파일과 같으며 무언가를 실행시키기 위한 응용 프로그램 형태라고 생각하면 좋을 것 같다.</p>
+</blockquote>
+<p>그러면 아래와 같은 창이 뜰 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 936px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.546875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABtUlEQVR42q2Sz0vbcBjG8w94Gbu7w1rqVdilK+3Jy2CIo4wdtsPYUU/Cbp6FXXYYQ9jBkydBDxM3GA73S9RDBR2i5EfTRGxsFE2tpmmXNJ8l0Wbp2GAT3/CEl7xfnjzv93mE0buDjBRvMXDvDiP3h8nn8+RyOQqFAtlslkwmQyqVIp1O/xMESZYJIUsyoigiB72iKBHC/n8hcM0ldDodQvi+3zPofv8TogrO+5dIzmKFrueh6FU2KgaV40aC2k+8Ix5qtstZ2wv6xA+SCsNaKX1n+OlzbrxeoX9OpXHauCToJWwERC82T3m1YzNTdphVm9g/OvEZwQuUhTW/+JGhB8+4OfmNvqkyVVGCr5/h4D2rh29ZMDaYLtWpNduMl855tHTAww8GY2t16i0vVh8QXrAvf1mlMFSk78kbbk8scW5ZcHICjonVNjGadXTLxXFdXi5v8/hdheKCytgnI1IdE3Z3d5wWO7si61syavXory6G92bsaexbNprVpHbW6jE0IgzXVlUVTdPQdS3Ik4Rpmr/c7D7+xZ1WND3IrYRaVjCq+7Ex4exqOfwtYj0uX0eYuyvbts1PhRlbXmPG6hYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title=""
+        src="/static/be9ef97cebe522d0c4b952e9c8004157/6d2da/03.png"
+        srcset="/static/be9ef97cebe522d0c4b952e9c8004157/6f3f2/03.png 256w,
+/static/be9ef97cebe522d0c4b952e9c8004157/01e7c/03.png 512w,
+/static/be9ef97cebe522d0c4b952e9c8004157/6d2da/03.png 936w"
+        sizes="(max-width: 936px) 100vw, 936px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>윈도우랑은 다르게 Rectangle라는 프로그램이 왼쪽에 위치해 있고 오른쪽에 Applications 폴더가 존재한다. 맥은 설치할 프로그램을 오른쪽으로 드래그 하면 끝이다.</p>
+<blockquote>
+<p>Applications은 우리가 설치한 모든 어플리케이션이 담겨져 있는 폴더이다.</p>
+</blockquote>
+<p>그러고나서 Applications 폴더로 들어가거나 검색을 해보자. 트랙패드에 다섯 손가락을 오므리거나 검색으로 Rectangle을 검색해서 실행하면 다음과 같이 나올 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 486px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 102.734375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEXUlEQVR42l1USW9bVRR+0A0Sw4I2iYfnN09+nofYiZMQx67txIntOHXSOPPkNGmCG7W0pUxqxSCBFMESiUXXSF3Akg0s4OewgLBDgo9z70sCYfHpnPfuud8557vnXkFSNUiKCplsiKxiWAhpJsE4twRVR0hWroLFq8YlJIqXdROCrBsQKcAvilDIvz7kg6QTKYfpgQhZ0guwxF5C2ktrlhtFdbqOcCQGQdJ0HvDR56f49ocf8ejZp9AdFyLboP9b4X8JJUW7QmhQfGFiEo4b8QiffXGK5y++w+nX3+D7n35GtdHEUFCETGQSa5fLol0l/B945dSpwIIP+ie49+gxPjn9EvtHb6Nan4MoyTBMGxppyqSQLkk1rrdK/zTqQCOrGyYUzdNZYJVsbG1jdW0NlVoVx/0+RsbG+QbTdqBbNvcZiXQOttmg/2z9AhqRshiBZcyNjGKyWMRoYQzFqRIisTgsJ+wFml6FjOQCbLNJ6yzGJhgUZ1Acq5af8qA/gAGfH4O+IAaGAvCJId5aMCQjIEoIUPt+siJ9i5LC/wVDEvzUnT8YupSB6SiEozGsrG+gTgfRnG+j1V7AUreLiWIJc602Gq15zDVbaN/qoFypcqysrmN5ZRW9/TtY7q4gQhwiJZA9wji2d3vY7e1z4t7hMQ7vP6bD6ePo3n1s7x+iNttA784B1/c2EbSIvHd8gvbqJgrFMuxInGbXmwjBTWXRXV3D5vYOFjqL6Gz2UN7qo/f+Z1juv4tW7wSFagNLK2u4e3SMrZ1dTDfb6Nx9B7HmOoZyN6FNtaAWKpCdKATFifHBDVK5IpulRB6ByjJulG/DV+liqLQIJTfFK2CaynQosh2Bb2wWwfoGpLlNDNbW4Z+chxxOQDDjaaSzw0hmc0iRjb9Vg97Ygtrcgb3Qg0G+W6wjlsoglkwhPZxDJJOHUV2C3TmAdWsfN2obGCRCiRHqbgypTJZAZEkiHy8hPNWAMTkLbWIG4VIT0UIRCVp3Ywm4cQKRm6NlWMUGwuUWnPI8tHwJkuVCsMIRXl00kUIqneV+MptHnAiilIB9x4kgQWtp8iNEyPwU20PrbJ96flOYHIJh04ASqWbRraABteiCO/RquDTcbKQceknYELM1zSJLMCk+HEvS6cYuYRIPIxUYEcugsjtL0On+6ha7ITaHfm5VTYUm+8/hg6kGYCgeTIKuiB6hTsx2JAqbKmGVqnSajJD5ZtjlT5Ou0f11c/BN7HEMjO/h1fwe3izsYWhsB4PjPQSy81BVehyYPtn8KNeEvWlrG1uYrs9yvTLDI8jkRvg798rOLxCeAsKTv/DGx0DtOaCf0vcHf3v4EPBRIiFKo5DJj3DCfGEcrYUOSrUZpGg80hx5OI6D17sv8NKTPyE8+A2vvXeG/Fdn8D09w7WHv+Plh3/g2oNfEcgv0hxSWzZVwMB8lenn0mtDQnttR0hHTwYpfZNQgZis4Hp8Gv70DKRUhf7VoERyMHQV/wBDSKwvl+3HjwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image04"
+        title=""
+        src="/static/e6bf493777189310f5c2ffdae6b6d7fb/4ee7f/04.png"
+        srcset="/static/e6bf493777189310f5c2ffdae6b6d7fb/6f3f2/04.png 256w,
+/static/e6bf493777189310f5c2ffdae6b6d7fb/4ee7f/04.png 486w"
+        sizes="(max-width: 486px) 100vw, 486px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 540px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 121.484375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAABYlAAAWJQFJUiTwAAADYklEQVR42p1VSU9TURTuxpUbXQnI1L729b2+qa99nYG2tKUTQwGhWKCIU8QYoqLGsCIu3JpIYmJi3Ji48E8YYuJPMP4A1/4D/TzndhAa6sDi67nv3Hu/e8/w3boO41U83RnC/s5laJECzHAE3oAJWQ/Cp1mQCb4+4HW9cIU0G4atw7Q1WmQL56hXERiXA8KO+dQu2MfwKPrphGOqjnG/BbcSpIUqQvEJbN++g5nqPEpzNZTnF5GdKWN+eRW50iwqC8uorzexcKV+OiH/+LQW+FQ9FMXGtRvYvH4T9Y2msI3mNu492BOkjJWrGyhU5k8N29XrkFQDI5JfgEMc9sjCuv0BjLTT0PrW+t+wF1wQBo9VKwwrmhQ39/P834pymrMDH5HW1u+gtH+IC++/YLz5BLLkhbd92H8RSlQs1Y6itnYbE/dfwPXuOy7dfQlFkiBpZyI0IBshFCuriG8dwHXwFQP1Z1Bk79kIW6QmLCcJK13DYGkXkpODV+FiWH8n5Btx27A9PuZquqk/fT66mV8VfjfB0wbP87oThOwIBB0Y4Rg0OyLAVe3AdOJU6RSsSEKM7ViSJBqDQXNhEoJihrqkLl+g1dCR5BSmixVM5YqkjAopZAm5YhUZUgmjWlsm5SyiUJ5DltYl0tOITWaEeiw6pCPFbsidEESYZCeyBVSIlDfmy7MoztaQzheFXzHsbqiiwdWW0k6E3M1Jm5THrIrOxt6cdciO51sQ8oDVYJMagoRQPCXyyblyEpOtfNE4SPnjHIdiqW5ued5yEmKNRnuYSxDyZDKTE+Gk8yWx0UmmkSlUhC+ayiCVySM+maXvvJAiH84+zn2SLH9zdN2QRXsI0PWVACTJjZFxN4YJo24PWQ9GyLJP8krtlGjdNHg6IZ9oTFKArNLjGqniwq1P8OwewXh0BPn+EYKPjxB48BHK3mdcbHygtXa7EPRQ9FUKE5K0hpLrOP8cCL76gck3QOI1kH3L9idsGp97+I3kF6I9+r+9hx5qg1FzCoNGGgN6GkNGBoM6Y0p8j+rx/n8BvWTc9ZYTg26aMCwDVtCCbugI6BrCThjRWAzReEsxfyTkfHBBWF5rm9fEU79Ub6CxtS3+V9Y2tjC3tILVRhPLa+vUAaV/e21aIf8Op/My8wt+vLn7hfwLX8sADUBbUo8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image05"
+        title=""
+        src="/static/75a2355188b25a449e91e78138de7f1c/07484/05.png"
+        srcset="/static/75a2355188b25a449e91e78138de7f1c/6f3f2/05.png 256w,
+/static/75a2355188b25a449e91e78138de7f1c/01e7c/05.png 512w,
+/static/75a2355188b25a449e91e78138de7f1c/07484/05.png 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위의 화면처럼 나오면 여기서는 권한을 설정해줘야 한다. 왜냐하면 아이폰을 쓰시는 독자면 알겠지만 맥도 마찬가지로 애플리케이션마다 권한을 부여할 수 있게끔 되어 있다. 그래서 Rectangle도 시스템 설정 열기를
+클릭하여 권한을 열어줘야 한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABuElEQVR42o2SW2+bQBCF+R0tl+WOzf1mwICpYhrbsZ3aqSJFfa3Uh/7/99OZbS01UVT14dOyA3v2nBmUObERDiZUy4SmG9AMA4ZpIspzBHGMrK4xbbdIqwrCcWB53iucIJC4iwVs2iuOYyMIA3i+j4CKjEMv/OUSJYlVTYNV172ibltJs14jSlMsoggenyNh5Xh5wuF4RkxuWNSnomlZaMcNdscT1n2PjkjJcVYUkvy2liViEkyyDHfzLEWVl+c9rtd7uimHLgR0ivyRom/HFtfDjLJpsSKXIV0YJYlc/37mlQVP5zM8dijGJ/hRAlVTpaAhqJ/CwGbV43F+wDBt0FDM2+G3cJ3dXy5f4LKgf/yJbrpDGIXQ2KGwyKWOrN1hOrxgmgYMFJ+jvQ87zHH6+g3LsoJSXL9js/0M13PlhFlQkEOv6JB+OmDoO3TDIGO955BZxinGyw8U4wQlO3co25pcid89pMiG0OGVOxTTM/p+RUMhQXKTkuhbuF7QcB5PD4iqEsr9fi978EFV/wgSpiV7w1O8TZa/+RdZXiCuKTLfUtMUGbavkVPDsumn9WH7/4/puojLAr8A5Fg25A4M7HUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image06"
+        title=""
+        src="/static/9a9a95b7e68108931c6bf9a13e91fe79/2bef9/06.png"
+        srcset="/static/9a9a95b7e68108931c6bf9a13e91fe79/6f3f2/06.png 256w,
+/static/9a9a95b7e68108931c6bf9a13e91fe79/01e7c/06.png 512w,
+/static/9a9a95b7e68108931c6bf9a13e91fe79/2bef9/06.png 1024w,
+/static/9a9a95b7e68108931c6bf9a13e91fe79/133ae/06.png 1424w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 646px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 89.84375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAAClklEQVR42o1US28SURRmb1JtCwwMj5mhA6QWpkgLM1AeAxRom7RAmraLLmxM6saVKxf+Ak3c+CN0oXFj4r9q4s6V+bzfsZdgH6aLL+dxz5w578jrko8XRwZO9pNwCx4c24Jl/UU2m0UmkxH6UERG7lM0K3FUSzGk0jaSyQQSiYSiSaTTaTFKpVLimCBPPUFZ87QjjRTLJUymJwh7Q+ztjdHv93F4eIjpdIrZbIYwDDGZTBAEgejPzs5wcHCA8/NzwcXFBWq1muh6vZ5yWChgMOiLo93dXaHHx8fiqNFooFqtYmdnBxsbGyKPx2ORO50OhsMhRqOR2GjbCMNmioRhGJKSaZqSMnmmQllT2jE1vuvv9DekERrqJhDb29vodrsI/ABBo4lWpws/aAjfHwxRq/vqPZQoWYZyuSy11E2M3OySbdtwHEdRB7lUFMbqEszYE6Tjj5FNLCMbX4KTMeHkcsrOnjuad/mmw8w1sqaB5cFbtN78wLNXX5B/+Q3u5VdYl98R8/bVe1TZWbfH5s55stSfzRgenX7G6affCD9ewXv/E/UPV3Df/cKK/xx2UkVrOQ90qJFOYmklhuWVKKLRKFYVEkYcVobNsu4e7P85zLsuuq0Get02wk4LvbCNasWTGt+3QXOHi53WOlc5bLfbauD31KwO5jNHh/eunnam10iPALut10nPJGdNv2vQbjEQGWxG4vu+zCDBKJrNJjY3N0VPSrler8sGaVvKpJxHz/PuT1kfAl2nu+Rb43atkwhZE0bFv5BubW3J3xkJdZVKRXjqeQj4ViqVZEu443wnP4+QdSgWi8jn80KJtbU1rK+vy7HgmvFw8JowRdoRBXVYNE/7f1LWd20R1OfUivGHmrIkizY3y/EH22AWk9TpfLAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image07"
+        title=""
+        src="/static/076b710701570057b826cdb4f10b5624/27524/07.png"
+        srcset="/static/076b710701570057b826cdb4f10b5624/6f3f2/07.png 256w,
+/static/076b710701570057b826cdb4f10b5624/01e7c/07.png 512w,
+/static/076b710701570057b826cdb4f10b5624/27524/07.png 646w"
+        sizes="(max-width: 646px) 100vw, 646px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 472px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 123.4375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE3UlEQVR42pVUS29bVRC+KQsW0IdEiWP7Pn2vr1/X7zh+xI/Yju3Ujp3YiZO6sZO0Udr0BaLvFiEaJFBL1UqoK1SQYANrNiz5A7BHYs8ONd0AG9DHnGPTJEIIsfg058yZ852ZOTMjiLICh1PEhN0Oh80Gp90BUdMhHYCoapDITpLlERSIikp61yFIpBNESUYslUepuYrg2mUYy1tQDM/QiJEdItyHqGik1w+BE5reALrn72DtxkOc/OonHPn2V6iNPkSHHaLuPkCoHiY8+KB2gNDt9aN55hKaG9fw+uPvITz7GVJjC6LdBtFlDMmUf3oocQ/3MbQhQheFV1lYx1x3B6/d/g7CBz9CLvch2cchjfLyn5D3Icjk7mRmFoVaF2/2nuBY7ynUUAoyJZ+dyUT6fyDI5K5M8bsML1TdA81F+eBJJ+9kFoprHzxP+/p/IXTxH3OQuwp9gkR500wv/bQbmtvzErJmcGi6SQ+bUNhe1Q9gRDiVymD7/A42zm3h0pW3cHptgPWz53D17Xdw8cpVDDbPotXu4MLFy9ymv7GJBw8fodaYh80pUWQm/nZKVAwIKinYT5t+Cy4PhU17Bn8oDLcvwNesuL1WCAbZ6R4fgtE4XBQFi8ouynBKwxQ5GWE4Nolef4BsoYhydQ7NxQ5q9QbmyIPibBW5Yol0bcyUZ0nXROVUA+3lLkehNIvtnYuITiYxLpKHmmdIuNRdRSI9zQkaC23kZkojwgrSOeqiao2jMneKHiij3lwgu0XuQK0+T9EFyVtW3G4IvmCYXltBKptDiQjbS13kibDDvFhaRou8W2gvYeV0D/X5FqbzBTRaCzwKlluvFYaNwpbpM1lqhFAsgc2tC+hvbqHT7aFQrlGIy8iXqljorKDe6uBUs43B2W0Kd57WizADYTgUnUNy0adQycn084xUMHQNUxEvYpaBiN+FoEfhCHtVWKYMr+6kvUo2PkQDOsI+DT5dhKnZ+ZmHpKFMwFAn6MeJ0GnlcbJ8G+MVhjuwVe/iePEWTpTvkbyNo4UbOEY4MXOd1jdJdxNvMPvaXdjn3sUEyfEq3avchBZMQXh15wcIHwHC7p/UxyTvA+pTIPoMiH8GZL8cyuCnQOYLQPoESHwOOJ6Q7fvA2C678wfnODr4BsKx1a8xdut3HLn2C45cf45XbuxB3H2B6KMXCH38AoEHe3B/uAfbe8/5Wry/B2V3D8fv7WHs2nN+h90du/UbTrYe07ShtjLiRejxMozJWbiiRdgDOUxYBditGYz7s7TPQyG9GC5BCs9AihSh0t5MzMKdqHCY8QIM0z2sw3QqiWQygXg8hmajjq1zm1gfrGGw1sOg38Pmeh+r3SV02i1srK+h1WzgTG8V1WoZiSm6n04iRRyBcHRYh7FEEpHJKUTiCWRyBV6stXqTF3ejtUgFXadOKiE1nefFzLqKFXgyk0U0MYX4VJpkCt6ABUGjAesn0kAoyl/wUc+y3mY6rxWEbvp4/3qo1/105g0EuWTnFtkHIzF+LxCKwCA7gSnYS6npHEc6m0eCJlA2P4M07ZPTWSr8bSyvnEYmW+AtmsxMv7RlktknSR+h9AlsyjBSi8AkmyTWSIYITMcuslRER2nZx+E9i4iHrB4YpKp7OL7YeOJ7Nkxp8GqkYyEdhn8ESgvZs5D/ArfRQq5nhEt6AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image08"
+        title=""
+        src="/static/cec2badb9577af612f4796c218ebcfe8/3c5de/08.png"
+        srcset="/static/cec2badb9577af612f4796c218ebcfe8/6f3f2/08.png 256w,
+/static/cec2badb9577af612f4796c218ebcfe8/3c5de/08.png 472w"
+        sizes="(max-width: 472px) 100vw, 472px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 권장 설정을 클릭해주면 된다. 이후에 아래와 같이 팝업이 뜨는데 Mac 기능 끄기를 클릭해주면 Rectangle 기능만을 온전히 사용이 가능하다. 이렇게 설정까지 해주면 아래와 같이 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABiElEQVR42nVS2XKCQBD0M/JiJSZIUJdDUC65RETFUPn/r+lMr3hW5WFq2d2enu5eRsfUhuXa+LQUjLmt62umLmUtYCgfXpQhykoEyeaGecI91GhsKk3GzeR7jg9zdlvfpxbeTB9ja4mFu4QThLBsb7i74649mtAYmD9FjbdOEOUl3HWMVZojLrayFlB+eFNAnB+lSMsazipCKMrDrMBSzqYLB6O7XBtJuUVeNxq0qXZozz3K5gBXGknEmnsB8l2Lcn/UxHV7Qtv1iDbFMyHBiUzdHc+IRSWVHvpfFNJMq7wnjpajvNIDmeu++5GeTu9N5T4qVHriWqxSPtVmoparPRAa80vOtBoNQ2sh2x46pFUN81HhRGcYI9s28ONUgyuxRUJnsEwcHyBIMsm3Qig2m9NZu0pIqB4JZXIQbzQhVTK7PTMUUi9MBoU2FpIhB/OMlYpVPhB7Xx5F6Ux4uRIFXGuxwgF8dRKygflp5foPyCXD/pK77HWGnMoPEvL7au2/H/j62q+YK+4Plgc845kSLRMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image09"
+        title=""
+        src="/static/80246fcbda79b7fe20fd64f13c11c1cf/2bef9/09.png"
+        srcset="/static/80246fcbda79b7fe20fd64f13c11c1cf/6f3f2/09.png 256w,
+/static/80246fcbda79b7fe20fd64f13c11c1cf/01e7c/09.png 512w,
+/static/80246fcbda79b7fe20fd64f13c11c1cf/2bef9/09.png 1024w,
+/static/80246fcbda79b7fe20fd64f13c11c1cf/71c1d/09.png 1536w,
+/static/80246fcbda79b7fe20fd64f13c11c1cf/1d499/09.png 1632w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>그리고 이 프로그램은 필자가 자주 쓰기에 로그인 시 실행을 위해 설정에 들어가서 로그인 시 실행 체크박스를 체크해주면 좋을 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.4375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACBElEQVR42oVUybLaMBDkO3JIAC+ybFnyvuAFG8irpCqX/P/HdGaEWcov8A5dAjFqtbpn2Hx0Cm4UwxERnEAtiOBKhb0IEZkMWX1A048I8wFbW/cam+/e04aQ2HkCW49WX9q9OCshiTTSBt8iIgwM3CCkyyJ7ocN4JnTvZAGcuEbc/ULZNNB5ZQ+w0scBaff4MqEMNF3mhzH2z4QPdXQ4NMjaI6puQN2NiJIcHtkhlLYEjCBO7LpfKftMaH2LkJY16v6IdpyQlA0RakgikTqFWD6zsuF0QXkY4JHCN4SKDmYIyTOpE6i0sET8/QauYRJWb1/wipBN9kNF/h3QHc8o254U9GiGIyke0Q4TfZ5sSHwRk7PPbMHz8xdCMt4P4JoG1fkvTpefuPz+Yw+wgqtv+h7SDeylH+n/ETJoU8bImoEUzuinM62nO2JStQ6AidbhbNZFKslgSBk/jT1SSQFhn8UexwseKr9IWSGtWuRNh4JgiooaWiNQFAT1oOML7Knxb03P61uFTBiTOmNBCtMKopgRlDPcdMBOH+Bno/WW67kD3qQc2h9zmtuckuaE83aEW1ywTWbs0hN+mBmi+qC5nmg8BVmSUWDmVShXhdwSCTU3+xdwilLCFQKu78OjlS3gdLnBFdWsffwUSla3dlJMUS8t8fgX8kJtpyOtrrPeUB2/6lnhP90BxoBp5zo0AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image10"
+        title=""
+        src="/static/978941f413ee3672d73d6766af6c8efe/2bef9/10.png"
+        srcset="/static/978941f413ee3672d73d6766af6c8efe/6f3f2/10.png 256w,
+/static/978941f413ee3672d73d6766af6c8efe/01e7c/10.png 512w,
+/static/978941f413ee3672d73d6766af6c8efe/2bef9/10.png 1024w,
+/static/978941f413ee3672d73d6766af6c8efe/71c1d/10.png 1536w,
+/static/978941f413ee3672d73d6766af6c8efe/807a0/10.png 1652w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이게 바로 외부에서 어플리케이션을 설치하는 방법이다. 다음으로는 AppStore에서 다운받는 방법을 말씀드리도록 하겠다. AppStore 다운받는 방식은 매우 간단하다. 먼저 AppStore에 들어간다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.109375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACzklEQVR42lWSS2/bVhCFGQh27FqmqQcpUqREUaSe1tPUu5L1sCVLTiIphRPHeRkxihYF2kVX3XbZbdH/UHTdVf/d1ysmNdDFwdy5c3HuOTMjNWtlvHIRJ1/E9grUztr0h2Pava8plKu4+RJe8ZRcSUBEr1jBK1VEXvn/+UsuedU2hUaHUq2BWyhTavWoz+bUp5c4fgez2kA/raMJYlXUNTeH6mRRbBc946BnXdRsjoQ4p1wPqdrq4542sETByRVRRFFt+niTKYX5nOx0ilKtspdMsp9K8VRE2dTQ7QRW8oQTVSakG4Q0lYiVQqrUz0hnPYx0RsQceq5A5/KCbx7uefPj96zevsbzhUIrQTimsBeNoKZ1ivYJuhkhEg1zIO4O7TQxL4dUEpYyondJ28F288QFcTLv0V9e8ubbj6xfrSn7VeKmiqxHkS2dffmY0MEBKeOYrHHEkXLMQVwhmskgNVrdoKlG2g6II0mLIz1B3m8GpP6oR7rg8FVSIyysHqkxnoT2kKQQeuSQl40wxYyCrstopoGUL1fEMEqPhLKe5ImiENY1YnkXWfy6r6qEojKSHEYKhQSZ9Iic8RTHPkaJH4oWJJCsTBZT4D/LhjifGCYx0eC4ZRGzs0J1hkjCCvKIqiFHYiixuIBGwjIxnBRa2sQUg5V2ZNYXpByPRrvH4voF44sF57MFXbGTw/mY0dUEvz+kN5qyfLFldnXNuXjTEnetwYTueEG91RGEQtlnQjcg9LsD3t0/cHP3jun8mu39S379/YHf/vjE259eMRjOuPtw//nTyyWb7ZrN5obV9oHhZIa0s5ly3IB0tz7NjlD4bC0UrGj3x3z67pa//rzln7/v+PmXD9T9AVfP14GDrlC7eb7kh/e3bBcb6o0m0vL6ilK1hpl2gj2si6n3RpPA6g7nFxdsX6/Y3qwYz2c024PH+i4ORmP8szNqDQG/w79zzGi5rbPtfQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image11"
+        title=""
+        src="/static/9ac1890dbf4877b3e088117e70901822/2bef9/11.png"
+        srcset="/static/9ac1890dbf4877b3e088117e70901822/6f3f2/11.png 256w,
+/static/9ac1890dbf4877b3e088117e70901822/01e7c/11.png 512w,
+/static/9ac1890dbf4877b3e088117e70901822/2bef9/11.png 1024w,
+/static/9ac1890dbf4877b3e088117e70901822/71c1d/11.png 1536w,
+/static/9ac1890dbf4877b3e088117e70901822/a878e/11.png 2048w,
+/static/9ac1890dbf4877b3e088117e70901822/56dab/11.png 2296w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>들어가서 로그인 되어 있으면 상관없지만 로그아웃이나 처음 여시는 분들은 로그인을 반드시 진행해주자.</p>
+</blockquote>
+<p>여기서 원하는 어플을 검색하여 다운로드만 해주면 된다. 그러면 아까 Rectangle처럼 Applications에 나오는 것을 볼 수 있다.</p>
+<p>다음으로 꿀팁을 알려드리도록 하겠다. 설정에 손쉬운 사용을 들어가서 포인터 제어를 클릭해보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 102.734375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAACo0lEQVR42pVVyW7TUBT1uohdUWkb24nteIhnOx6T2G7ipE2g0KIWMXSDVDFIlVihis9gwQKJr+AHD9fPUIkNcRdHXtg+vme4z9wik8CHKnqijF5fwWFfRl9WoYU5QxhnKBcrjLMpJG0EWTf/C86yVMimDlk1oNALQ4KgqJj4Oaqkgh0mcMMYljeGbnlbwRX1BlGSw7AcqIYJw7TBKxpqmu58cQInSumej5ETwHTDreBuv7zHan1CE4TY5/s4FCUmXXcDRJMCFj1k2C1hF3BKkEPoS4yIHyhERl7S1aYP5NMKk2IOP8q6T2g/+wQvCCDKWktG4AdDaKYLO4ig03TDkQPFsDuBc9fXyCcTyBRGK7cltcMUWVlDs1xKz+pOmL48g+dHrC6tZAWC2MewuEC4vkJVVnAo6c6S02UBiSrzNxCeiA8FCZOqxnJ9CjeI7xfKsl4Rc0Ce2Yy4kdsQT4lwtXmGKJ2yCbuScmo8pyQrePTSYKi3hIQ4L1DVx0gp6eA+KU+eXtEUGQbqiGQPWg8llYVk+2PkxRGT3WxBM+U2cMuLFxiHHkSxB6H3mLBHoYgYuWMmVVR02mGTJd0FnHzzC/rrn3h0+h079TfsHP/AbvAKrusiymZsh00q+ZAqoVIft4FTN7fQNl+xm9/gQfgRD5PP2LOOYToe0tkcxXzJiDt7eL6Yw/Ns+J5FMGGbGgShh9HRJeL1GyRJSvLD7rXxn1xTkiVMP4FsuJB0B7ykQ6XVG1NlZlSfZpc71yZLStJus7rsCwMcEPiByvxo/LP/JNysVbPT28B9KOeQifCANuWf04YOVZMIm5S7JsxSfj67pCnGd4cCO20khXyNEVMoZkfv7iTPjt6RVymrRVNqnv4nzT475RmK07eIYgrFCTsl3KT8GzZBh05HTlPMAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image12"
+        title=""
+        src="/static/e0003854d8a607221608af936e8d2a31/2bef9/12.png"
+        srcset="/static/e0003854d8a607221608af936e8d2a31/6f3f2/12.png 256w,
+/static/e0003854d8a607221608af936e8d2a31/01e7c/12.png 512w,
+/static/e0003854d8a607221608af936e8d2a31/2bef9/12.png 1024w,
+/static/e0003854d8a607221608af936e8d2a31/062c8/12.png 1386w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100.78125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAADSklEQVR42qVUyY7bRhTkxT7m5MAz1jKUSHETKa5ikxRJUfuMxh5llowBA4YNGAbsUy5Brv4FH3ML8gH5xvJ7LWkwPgVxDgUu6K5+9apeKwvXhFfqONUGaJ1paKka2qoOx09gejG8KEU5WyLJSvTNITTLJXjfQbe9/X96KrpuwXY9DOwhTMeD5YzQH9gw3QBiMkXZLBCmxQNZ36SNpgPdtCU0gjqwDuQulO3uBpdX13BcH5qxX9DTTVhEWDVLVFSdF47lNyMcZ3CKS+jFHfT8Bm7zGhe7ewQRqQkTKHc3G9zdbeHSpk5PJ9l9CWcUYbbYIBrn8n3ox3sEjLGENUpghxm8IEK++4TJ+gaKWv0KYxTjRUel3mkSHeqlTST1fIVs0sD2Qgmu0I/GcLJz9NId8s09qZjTfx9BsUIgaijGy98gmnMMvdHBECJU94RFNUNWNkiLGoIwJmPyqkE2XSPI5hDVCjH11xj6mM4XCBIBJbz+iGp5IRvMUjuSUJeL/CSDHwsEJDskBIfvJJugpt5mZBofzElYb6/kesV7WSDKc3SJ5Fhdl3rJrp5RAhjqwJboGY58ckxSIhNU/TBIEIkCSV5JcmW52SKIU5y0zx5VqMGinnFkinqOAUfpIYN7HA/j/8cDZWwCkhCnLEmQi9EDITs6na8RUY84Nix3RNIYLNunImSEqKr5+gLldCGLUKzVO2Szc7mo3TcpOgZJH+xNqdmUKWIxkfGRoAO4hxEVwdPDB0ymczkEkvBi9wuapoZpUAZbz3HWPUW324JLvdlcXmGzfYXpYi3dTcSeiEn5EGlUnElCToIkHL77gvHtH+hP3uJZeI+f4zc4Ga4od76clLSo5MbxoRqXpoEPO8KhDPMaPoCzqnRuv8J4/w9Orv/C0+WfeLL5Gz8Vv8OhXNbUQ5bCEsMHuaXczD1lAoMM4/6JSS2jpqyzBIVIYdkmTHNA0jWoPVW6xzHhJ8fkCM1+dLsQ+J3d5ncZm+bqA7JqSQ0X0k12Vz3E4XFM/g1MzPFSLJrLQJR001gyi6eHme7/B7LHUD5nAjnl6TkR8YTwjdPmSflRwtf5Lcp8hk7fwAualLZK6P2PCkX5nuawkTd2i8g6RNY5zPKPEH4DK4xt4NBTPzoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image13"
+        title=""
+        src="/static/ef9420ba7afa62b24f84907f2b237b67/2bef9/13.png"
+        srcset="/static/ef9420ba7afa62b24f84907f2b237b67/6f3f2/13.png 256w,
+/static/ef9420ba7afa62b24f84907f2b237b67/01e7c/13.png 512w,
+/static/ef9420ba7afa62b24f84907f2b237b67/2bef9/13.png 1024w,
+/static/ef9420ba7afa62b24f84907f2b237b67/4a00e/13.png 1406w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이후에 트랙패트 옵션을 클릭하여 아래 이미지처럼 진행해주자. 그러면 드래그할때 꼭 누르고 움직이지 않고 세 손가락으로 드래그가 가능해진다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 884px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.234375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACKUlEQVR42p1Su47TUBT0L6BdUSAE2SSOH9dvO3Hid+LYwYkCWaQt0O4iOgokJAQl+w8UFBT0NNvR8XPDOTcExIqXKEb2fZw5M3OuohoWTMeH6QYQBP43bA+a5WJk2v8AC6rpQUQ5dNuHwgT1qsNqsyU8RN12KBZLRNMUOpHKZr9FAMu20IvWOLu6RrM9g8JqpmmBrFogTnIJXlte+HMxq3fD7+BzdiRsB0O/RH35FrOqJYW0mc9rLEllPl9i0T4gdLKAmzEZ2zctG8ISEqyqr2pk1aE1KQxXePzmIxbdjhRSQV7V0rY/noIz1YSz7y5VBUiyDE6xg1o9gzZ/il56jovnr9GtN3QnhOf7CMMAThBB4e7hZIYwTiCIXDVsScjgDBlhPIUZFRiNW2iTBoOgxvr0CdKyonNP2vZ9F8KjoehkazzL5BCSosI0KxEROXc7kPI0dZqmYZowhCD7e8tDas5R9L0C1cUVJnkDhW1l5UJivlyhrFuZZTRNZIYH6wewox/qfdmkFzQ4ffVhn6HlR0TUSnU1DUS+QSq4ScbDccMJZb1G021k5mXdYLXeIi8K+K6gBs4+Q75oEzEPhYn0bypugve9KIYTjuEGE4plLGuFT/9RAp3epdLXTJyMDML+O9DFH8F3eqqOe4MRQcPJcITh/dvo3T2G2r8D5W8Ev4JKQ5rQ44+TFAMvw/H5JxgvPuPo0bv/J4zpNaR5IQmPLq9hvPyCW7v3+ArLdJ5zHxs5fQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image14"
+        title=""
+        src="/static/33c1ca264789cc70a36ff2f413b8b0e0/136a2/14.png"
+        srcset="/static/33c1ca264789cc70a36ff2f413b8b0e0/6f3f2/14.png 256w,
+/static/33c1ca264789cc70a36ff2f413b8b0e0/01e7c/14.png 512w,
+/static/33c1ca264789cc70a36ff2f413b8b0e0/136a2/14.png 884w"
+        sizes="(max-width: 884px) 100vw, 884px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>📜 macOS 추천 앱 리스트</h2>
+<h3>1. Raycast</h3>
+<p>🔗 <a href="https://www.raycast.com">https://www.raycast.com</a></p>
+<p>macOS의 Spotlight를 대체하는 생산성 런처입니다. 단축키 하나로 다양한 작업을 빠르게 실행할 수 있습니다.</p>
+<ul>
+<li>앱 실행</li>
+<li>계산 / 번역</li>
+<li>클립보드 검색</li>
+<li>시스템 제어</li>
+<li>확장 기능 실행 (GitHub, Notion, Jira 등)</li>
+</ul>
+<h3>2. Rectangle</h3>
+<p>🔗 <a href="https://rectangleapp.com">https://rectangleapp.com</a></p>
+<p>창 정렬(Window Management) 앱입니다. 단축키를 통해 창을 빠르게 정렬할 수 있습니다.</p>
+<ul>
+<li>좌우 반 분할</li>
+<li>상하 분할 / 4분할</li>
+<li>전체화면</li>
+<li>다른 모니터로 이동</li>
+</ul>
+<h3>3. AppCleaner</h3>
+<p>🔗 <a href="https://freemacsoft.net/appcleaner/">https://freemacsoft.net/appcleaner/</a></p>
+<p>앱을 삭제할 때 남는 잔여 파일까지 함께 제거해주는 완전 삭제(Uninstall) 앱입니다.</p>
+<ul>
+<li>Library 설정 파일</li>
+<li>캐시 / 로그</li>
+<li>플러그인</li>
+</ul>
+<h3>4. Maccy</h3>
+<p>🔗 <a href="https://maccy.app">https://maccy.app</a></p>
+<p>클립보드 히스토리 관리 앱입니다. 복사 기록을 계속 저장해줍니다.</p>
+<ul>
+<li>복사 기록 검색</li>
+<li>텍스트 / 이미지 저장</li>
+<li>단축키로 빠르게 붙여넣기</li>
+</ul>
+<h3>5. Clipy</h3>
+<p>🔗 <a href="https://clipy-app.com">https://clipy-app.com</a></p>
+<p>클립보드 히스토리 관리 앱입니다. 스니펫(Snippet) 기능이 강력합니다.</p>
+<ul>
+<li>복사 기록 저장 및 검색</li>
+<li>자주 쓰는 텍스트를 스니펫으로 등록</li>
+<li>메뉴바에서 바로 접근</li>
+</ul>
+<h3>6. Keka</h3>
+<p>🔗 <a href="https://www.keka.io">https://www.keka.io</a></p>
+<p>macOS에서 가장 많이 사용하는 압축 관리 앱입니다.</p>
+<ul>
+<li>zip, 7z, tar, rar, gzip 지원</li>
+<li>암호화 압축 생성</li>
+<li>분할 압축 지원</li>
+<li>Windows 압축 파일의 깨진 한글 파일명 문제 해결</li>
+</ul>
+<h3>7. Zen Browser</h3>
+<p>🔗 <a href="https://zen-browser.app">https://zen-browser.app</a></p>
+<p>Firefox 기반의 오픈소스 생산성 브라우저입니다. Arc Browser의 후계자로 주목받고 있습니다.</p>
+<ul>
+<li>Workspace 기반 탭 관리</li>
+<li>사이드바 UI</li>
+<li>Split View (탭 분할 보기)</li>
+<li>개인정보 보호 중심 설계</li>
+<li>Firefox 확장 프로그램 호환</li>
+</ul>
+<h3>8. AltTab</h3>
+<p>🔗 <a href="https://alt-tab-macos.netlify.app">https://alt-tab-macos.netlify.app</a></p>
+<p>Windows처럼 창 단위로 앱을 전환할 수 있게 해주는 앱입니다.</p>
+<ul>
+<li>창 미리보기 썸네일</li>
+<li>빠른 창 전환</li>
+<li>단축키 설정</li>
+</ul>
+<h3>9. Shottr</h3>
+<p>🔗 <a href="https://shottr.cc">https://shottr.cc</a></p>
+<p>macOS 최고의 스크린샷 캡처 도구 중 하나입니다.</p>
+<ul>
+<li>스크롤 캡처</li>
+<li>모자이크 / 픽셀 측정</li>
+<li>OCR (텍스트 추출)</li>
+<li>빠른 캡처 편집</li>
+</ul>
+<h3>10. Hidden Bar</h3>
+<p>🔗 <a href="https://github.com/dwarvesf/hidden">https://github.com/dwarvesf/hidden</a></p>
+<p>상단 메뉴바 아이콘을 깔끔하게 정리해주는 앱입니다.</p>
+<ul>
+<li>불필요한 아이콘 숨기기</li>
+<li>필요한 아이콘만 표시</li>
+</ul>
+<h3>11. KeyClu</h3>
+<p>🔗 <a href="https://github.com/Anze/KeyCluCask/">https://github.com/Anze/KeyCluCask/</a></p>
+<p>애플리케이션의 단축키를 한 번에 확인할 수 있게 도와주는 프로그램입니다. 유료 버전은 <a href="https://ergonis.com/en/keycue">KeyCue</a>를 추천합니다.</p>
+<h3>12. Dropover</h3>
+<p>🔗 <a href="https://dropoverapp.com">https://dropoverapp.com</a></p>
+<p>파일을 드래그하면 임시 선반(Shelf)을 생성해주는 앱입니다.</p>
+<ul>
+<li>여러 파일 정리</li>
+<li>다른 앱으로 한 번에 이동</li>
+<li>복사 및 공유 편의</li>
+</ul>
+<h3>13. Amphetamine</h3>
+<p>🔗 <a href="https://apps.apple.com/app/amphetamine/id937984704">https://apps.apple.com/app/amphetamine/id937984704</a></p>
+<p>맥이 자동으로 절전 모드에 들어가는 것을 방지하는 앱입니다.</p>
+<ul>
+<li>대용량 다운로드 중 화면 유지</li>
+<li>장시간 렌더링 작업</li>
+<li>발표 중 화면 꺼짐 방지</li>
+</ul>
+<h3>14. Notion Calendar</h3>
+<p>🔗 <a href="https://www.notion.so/product/calendar">https://www.notion.so/product/calendar</a></p>
+<p>Google Calendar 기반의 생산성 캘린더 앱입니다.</p>
+<ul>
+<li>미팅 예약 자동화</li>
+<li>Notion 페이지와 연동</li>
+<li>깔끔한 UI</li>
+<li>메뉴바에서 오늘 일정 확인</li>
+</ul>
+<h3>15. Numi</h3>
+<p>🔗 <a href="https://numi.app">https://numi.app</a></p>
+<p>메모처럼 계산하는 계산기입니다. 환율, 단위 변환, 수식 계산을 자동으로 처리합니다.</p>
+<ul>
+<li><code>$100 to KRW</code></li>
+<li><code>10cm + 20cm</code></li>
+<li><code>3kg in pounds</code></li>
+</ul>
+<h3>16. IINA</h3>
+<p>🔗 <a href="https://iina.io">https://iina.io</a></p>
+<p>macOS에서 가장 인기 있는 동영상 플레이어입니다.</p>
+<ul>
+<li>mpv 기반으로 대부분 코덱 지원</li>
+<li>가볍고 빠름</li>
+<li>macOS 디자인과 잘 어울리는 UI</li>
+</ul>
+<h3>17. Karabiner-Elements</h3>
+<p>🔗 <a href="https://karabiner-elements.pqrs.org">https://karabiner-elements.pqrs.org</a></p>
+<p>키보드 키 리매핑 도구입니다.</p>
+<h3>18. BetterTouchTool</h3>
+<p>🔗 <a href="https://folivora.ai">https://folivora.ai</a></p>
+<p>트랙패드/마우스 제스처 커스터마이징 앱입니다.</p>
+<h3>19. MonitorControl</h3>
+<p>🔗 <a href="https://github.com/MonitorControl/MonitorControl">https://github.com/MonitorControl/MonitorControl</a></p>
+<p>외부 모니터의 밝기·볼륨을 조절할 수 있는 앱입니다.</p>
+<h3>20. Stats</h3>
+<p>🔗 <a href="https://github.com/exelban/stats">https://github.com/exelban/stats</a></p>
+<p>CPU·메모리·네트워크를 메뉴바에서 모니터링할 수 있는 앱입니다.</p>
+<h3>21. Proxyman</h3>
+<p>🔗 <a href="https://proxyman.io">https://proxyman.io</a></p>
+<p>HTTP 네트워크 디버깅 도구로, 개발자에게 필수적인 앱입니다.</p>
+<h3>22. TablePlus</h3>
+<p>🔗 <a href="https://tableplus.com">https://tableplus.com</a></p>
+<p>DB GUI 클라이언트입니다.</p>
+<h3>23. Obsidian</h3>
+<p>🔗 <a href="https://obsidian.md">https://obsidian.md</a></p>
+<p>마크다운 기반 지식 관리 앱입니다.</p>
+<h3>24. Hand Mirror</h3>
+<p>🔗 <a href="https://handmirror.app">https://handmirror.app</a></p>
+<p>메뉴바에서 카메라를 빠르게 확인할 수 있는 앱입니다.</p>
+<h3>25. Dato</h3>
+<p>🔗 <a href="https://sindresorhus.com/dato">https://sindresorhus.com/dato</a></p>
+<p>메뉴바에서 캘린더와 세계시간을 표시해주는 앱입니다.</p>
+<h2>💻 Git, Xcode(커맨드 라인 툴)</h2>
+<p>이제는 command line tool이라는 것에 대해 학습해보도록 하겠다. 여기서 2가지 키워드가 나올텐데 첫번째는 Xcode이고, 두번째는 Git이다. Xcode와 Git에 대해서는 학습하지 않을 건데
+Xcode와 Git을 사용하려면 Command Line Tool이라는 것이 기본적으로 설치가 되어야 한다.</p>
+<p>한번 그러면 command line tool이 무엇인지 알아보자. 그러면 아마 아래의 Apple 공식 홈페이지가 뜨는 것을 알 수 있을 것이다.</p>
+<blockquote>
+<p><a href="https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/">https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/</a></p>
+</blockquote>
+<p>해당 내용을 번역기를 켜서 읽어보면 다음과 같이 알 수 있다. command line tool이라는 패키지는 Xcode 외부에서 작업하거나 Unix 스타일 명령을 사용하여 앱을 빌드하는 경우 명령줄 도구 설치를
+하는데 유용하다고 되어 있다. 이것을 왜 설치해야하냐면 해당 command line tool은 여러가지 툴과 같은 커맨드라인 툴과 함께 번들로 제공된다라고 적혀져 있다. 이것이 무슨 말이냐면 macOS에서 사용할
+때는 모든 설치 파일을 다 개발을 위한 설치 파일을 내장해두지 않았다. 그 이유는 우리가 macOS를 샀는데 macOS로 개발을 할 지, 안 할지를 모르기 때문이다. 이러한 이유로 개발 툴까지 다 내장해놓은 상태라면
+운영체제 용량이 늘어나기 때문에 굉장히 슬림한 형태로 일단 운영체제를 설치해두고 실제로 이 사람이 개발과 관련된 업무를 하려고 할 때는 이런 command line tools를 설치하라고 Apple이 만들어 둔
+것이다. 그래서 iterm2를 설치를 했을 때도 아마 자동 설치를 진행해줬을 것이다. 단, 그때 설치를 스킵하신 분들은 아래의 명령어를 입력하면 된다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">xcode-select <span class="token parameter variable">--install</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>위와 같이 입력하면 실행은 안되지만 command line tools를 설치하라는 팝업이 떴을 것이다. 그것을 설치해주면 된다. 이 소프트웨어를 설치하면 뭔가 여러가지를 설치를 진행해주는데 그 중에 우리는 몇가지만
+살펴보도록 하겠다. 이 부분에서 우리가 배워야 하는 것 중에 하나가 <code>git</code>이다. <code>git</code>은 소스코드 버전관리 분산 시스템이라고 부르며 해당 command line tools를 설치하면 해당 <code>git</code>도 자동으로
+설치해준다.</p>
+<blockquote>
+<p>자동으로 git이 설치되는 것은 좋으나 당연히 최신 버전은 아니다. 이것은 <a href="https://git-scm.com/install/mac">git 공식 사이트</a>에서 최신버전 설치 명령어를 입력하여 설치를 하여도
+무방하나 사실 실무에서도 최신 버전을 굳이 다운 받을 이유는 없다. 왜냐하면 최신 버전을 받으면 보안도 빡쎄지고 ssh 인증등 조금 복잡한 절차도 존재하기 때문이다.</p>
+</blockquote>
+<h2>📝 뭐를.. 동의하라는데요? (Xcode license)</h2>
+<p>가끔씩 애플에서 개발 툴에 대한 라이센스가 변경되었거나, 최초에 라이센스에 동의하지 않은 경우 아래와 같은 메세지가 뜰 때가 존재한다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.921875%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxklEQVR42oWM22qDQABETRv6Fl0VKqLuLW5cjTE1avP/X3a6GPpW6MNhBmY40TY9mC93Vv9kbheWbmN2C3c744qOrvRM9os2dJkotNA0iUalBiVe6MzuyLBFT9szyo5Hv7IMK4O8svXf3PSN0UzYz5Y6aZCZRqZBmOtAkOR2T5W9OIdfIyTR7AbGi8dWNaauKOMiHBRNWtOWjvwj53Q4Eb/FxIf/ify1ZXBnvHE4aTCFoas9KldUSbULxbtAHAXpMd37b/7FDwGraQKhdnYiAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image15"
+        title=""
+        src="/static/2fb941d6f899153e3322228047615d67/2bef9/15.png"
+        srcset="/static/2fb941d6f899153e3322228047615d67/6f3f2/15.png 256w,
+/static/2fb941d6f899153e3322228047615d67/01e7c/15.png 512w,
+/static/2fb941d6f899153e3322228047615d67/2bef9/15.png 1024w,
+/static/2fb941d6f899153e3322228047615d67/d4b10/15.png 1394w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>이 경우에는 터미널에 아래 메시지를 작성한 후, 비밀번호를 입력해서 진행해야한다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">sudo</span> xcodebuild <span class="token parameter variable">-license</span> accept</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<h2>📡 cURL 정의와 활용 (HTTP?)</h2>
+<p>이번에는 <code>curl</code>이라는 소프트웨어와 HTTP에 대해 학습해보도록 하자. HTTP는 우리가 웹 개발을 할 때 많이 사용하는 프로토콜이다 보니까 HTTP에 대해서는 깊게 다루지는 않을 것이다. <code>curl</code>을 통해서
+HTTP를 어떻게 다루는지 예제를 보여주는 식으로 진행하도록 하겠다.</p>
+<p>그 전에 우리가 <code>curl</code>이 무엇인지 알아봐야 할 것이다. 한번 살펴보도록 하자.</p>
+<h3>cURL은 무엇일까?</h3>
+<p>1996년에 다니엘 스텐베리가 만든 다양한 통신 프로토콜을 지원하는 도구이다. 개발 도구를 설치하다 보면 <code>curl something.sh | bash</code> 이 형태를 자주 볼 것이다. 이 명령어의 의미는 curl의
+도구로 특정 쉘 스크립트를 가져와서 bash에서 실행하라는 뜻이다. 이 형태가 굉장히 위험한 형태이다. 왜냐하면 저 shell script 안에 어떤 악성 코드가 있을 지 모르기 때문이다. 물론 우리가 설치하고 있는
+대부분의 소프트웨어들은 공개되어 있거나 큰 규모의 회사에서 만든거기 때문에 상대적으로 안전하다고 볼 수 있지만 혹시라도 개인이 만든 쉘 스크립트나 소속이 모호한 곳에서 만든 것을 잘못 실행하게 되면 운영체제를 직접
+동작하는 거기 때문에 조심해야 한다. 특히 관리자 권한으로 특정 쉘 스크립트를 실행했다고 한다면 크게 문제가 될 수 있다. 그래서 항상 어떤 쉘 스크립트가 실행되는지 눈 여겨서 봐야 한다. 한번 몇 가지 예제를 보고
+직접 설치해보자.</p>
+<p>해당 <code>curl</code>은 다양한 통신 프로토콜을 지원하는 도구로 command line tools를 설치하면 그 안에 자동으로 내장되어 있다. 그러면 한번 실행을 시켜봐야 할텐데 우리가 왜 이것을 배워야 하는지 알아보고
+실습을 진행해보도록 하자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">curl</span> https://example.com</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>위의 명령을 한번 실행해보자. 이렇게 하면 실제 해당 주소의 전체 html이 응답으로 나오는 것을 볼 수 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 3.90625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAPElEQVR42mNwcQr4b2fv89/cyuW/iZnjfyMT+//Gpg5QbA/k2/03MrYDyjnA5UC0CUjexB4iBsV6Btb/ATt5IUSeoMj0AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image16"
+        title=""
+        src="/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/2bef9/16.png"
+        srcset="/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/6f3f2/16.png 256w,
+/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/01e7c/16.png 512w,
+/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/2bef9/16.png 1024w,
+/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/71c1d/16.png 1536w,
+/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/a878e/16.png 2048w,
+/static/d3aa13bfebdb7c16890cf9e8bb2a93d4/21e9c/16.png 3436w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">curl</span> <span class="token parameter variable">-v</span> https://example.com</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>2번째는 위와 같이 옵션을 줄건데 어떤 옵션이냐면 v 옵션인데 해당 옵션을 적용하면 실제 흐름까지도 보여준다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.3125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA0UlEQVR42qWS2w7CIBBE+zVa7Q3bAqVKrxqNmv7/34zLVk1qfEEfJpBZcphdCGxzgW3OkKpHUfRIsj2ixGAT6a/axk7Vwgu36q2g7e8YjhOq+sTFdSgXB3wVdATsxwkHSpqJA6WrSdXvwLa7wUG1OSIvO2Q7SwX9O9C1O1BCqQee3+dM/BNyupFBq7D8C8ZA216hqpFf1hnrjfTWsmVq10EFzS5KDYN95b7R6zsFUnUoVQtNMzTmjJReWuQNa1c0fJHI7bx33st3Xj6vcVo/ZfAA++MbLQNooqwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image17"
+        title=""
+        src="/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/2bef9/17.png"
+        srcset="/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/6f3f2/17.png 256w,
+/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/01e7c/17.png 512w,
+/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/2bef9/17.png 1024w,
+/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/71c1d/17.png 1536w,
+/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/a878e/17.png 2048w,
+/static/6bf19fbb65d9b85e3d0964a0ec8b0ea9/f7171/17.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>위의 실습은 html을 가져오는 것을 해봤지만 json 데이터도 가져올 수 있고 그 어떤 것도 가져올 수 있다. 이 이야기가 무엇이냐면 우리 컴퓨터에 내장되어 있는 <code>curl</code>이라는 도구로 어떤 것이든 통신할 수
+있다는 말이다. 이 것은 굉장히 무서운 것인데 왜냐하면 우리가 어떤 도메인을 넣느냐에 따라 원격에서 가지고 오는 코드들을 바로 실행시킬 수 있기 때문이다.</p>
+<p>한번 대표적인 예제를 한번 보자.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://claude.ai/install.sh <span class="token operator">|</span> <span class="token function">bash</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>위의 코드는 <code>claude code</code>를 설치하는 명령어인데 해석하면 해당 쉘 스크립트를 curl을 통해 받아와서 bash 환경에서 조용히 실행한다는 의미이다. 이게 얼마나 무서운지 옵션 부분들을 살펴보자.</p>
+<ul>
+<li>f: HTTP 에러가 발생하면 에러를 출력하지 않고 바로 실패 시켜라.</li>
+<li>s: 진행률을 표기하지 않아야 한다.</li>
+<li>S: 실패 시 에러는 보여주되, 평소에는 조용히 해라.</li>
+<li>L: redirect가 여러번 되었을 때 끝까지 따라가서 그것을 실행시켜라.</li>
+</ul>
+<p>듣기만 해도 엄청 무서운 옵션이니 진짜 조심해서 해야 한다.</p>
+<h2>🍺 패키지 매니저와 Homebrew</h2>
+<p>이번에는 패키지 매니저에 대해 학습해보자. 그리고 우리가 macOS에서 가장 많이 쓰는 Homebrew라는 것을 알아보도록 하자.</p>
+<h3>Package Manager</h3>
+<p>패키지 매니저는 소프트웨어를 설치, 업데이트, 삭제, 관리하는 도구이다. 보통 프로그램을 설치하려면 웹 사이트에 접속하여 설치 파일을 다운로드 하고 실행하고 업데이트 관리까지 해야 한다. 하지만 이런 과정을 패키지
+매니저가 대행해준다고 보면 쉬울 것 같다. 즉, 패키지 매니저를 사용하면 해당 과정을 명령어 1줄로 대체가 가능해진다.</p>
+<p>그러면 우리는 macOS에서 가장 많이 사용하는 패키지 매니저를 배워야 할텐데 그것이 바로 <code>Homebrew</code>이다.</p>
+<blockquote>
+<p>Homebrew는 Max Howell이라는 개발자가 창시한 macOS용 패키지 매니저이다.</p>
+</blockquote>
+<p>Homebrew를 설치하는 과정은 매우 간단하다.</p>
+<ul>
+<li>설치 스크립트 다운로드</li>
+<li>시스템 환경 확인
+<ul>
+<li>macOS 버전</li>
+<li>CPU 아키텍쳐</li>
+</ul>
+</li>
+<li>Homebrew 디렉토리 생성
+<ul>
+<li>Intel: /usr/local</li>
+<li>Apple Silicon: /opt/homebrew</li>
+</ul>
+</li>
+<li>설치 확인
+<ul>
+<li><code>brew --version</code></li>
+</ul>
+</li>
+</ul>
+<p>위의 과정을 바로 아래와 같이 하면 된다.</p>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">/bin/bash <span class="token parameter variable">-c</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="token variable">)</span></span>"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<h3>Homebrew 추천 패키지</h3>
+<p>Homebrew를 설치했다면 추천 패키지도 아래와 같이 있으니 한번 살펴보자.</p>
+<ul>
+<li>git: <code>brew install git</code></li>
+<li>wget: <code>brew install wget</code></li>
+<li>htop: <code>brew install htop</code></li>
+<li>node: <code>brew install node</code></li>
+<li>python: <code>brew install python</code></li>
+<li>ripgrep: <code>brew install ripgrep</code></li>
+<li>tree: <code>brew install tree</code></li>
+<li>neovim: <code>brew install neovim</code></li>
+<li>tmux: <code>brew install tmux</code></li>
+<li>jq: <code>brew install jq</code></li>
+</ul>
+<h2>🤖 Claude Code &#x26; Codex 설치</h2>
+<p>이번에는 claude code와 codex를 설치해보도록 하겠다.</p>
+<h3>Claude Code</h3>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">brew <span class="token function">install</span> <span class="token parameter variable">--cask</span> claude-code</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>위와 같이 명령어 딸깍만 해주면 된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA5UlEQVR42u3TzVKDMBAH8LxGwVHowUITIAlhQ+WjpdZ68P2f5+8SqeOM3uTgwcNvNrPZ3RwyK5KHLe7uU6TpDt6ckT1WiKMEcbwNoihFtEmwYdHNnPsiXsxnocoDLt2EwZ9AdMXr9Ia+u8K3F7SHF5B/hqMTGjoHjibY+ghjR1R6gDYjGwLDhNYdyA2oTQ9VeLhmhHVzUc9N/RL5vh7ZEM7adCjKFlJ5qJuiRcFEUT4hk4Rs75FLz5GQ/+Bbnmv38qNnJhU/MA/MluK1/A/8iwPzz6+nVYhd3mBNwvKWhM2wHSrze++IWY/MJEGMSwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image18"
+        title=""
+        src="/static/2967a249887cc0d093208f93d9584066/2bef9/18.png"
+        srcset="/static/2967a249887cc0d093208f93d9584066/6f3f2/18.png 256w,
+/static/2967a249887cc0d093208f93d9584066/01e7c/18.png 512w,
+/static/2967a249887cc0d093208f93d9584066/2bef9/18.png 1024w,
+/static/2967a249887cc0d093208f93d9584066/71c1d/18.png 1536w,
+/static/2967a249887cc0d093208f93d9584066/a878e/18.png 2048w,
+/static/2967a249887cc0d093208f93d9584066/f7171/18.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Codex</h3>
+<div class="gatsby-highlight" data-language="shell"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">brew <span class="token function">install</span> <span class="token parameter variable">--cask</span> codex</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>codex도 마찬가지다.
+물론 <a href="https://chatgpt.com/ko-KR/codex/?utm_source=google&#x26;utm_medium=paid_search&#x26;utm_campaign=GOOG_X_SEM_GBR_Codex_CDX_BAU_ACQ_PER_MIX_ALL_APAC_KR_EN_111325&#x26;c_id=23219700864&#x26;c_agid=204690243028&#x26;c_crid=807898942277&#x26;c_kwid=kwd-21294781&#x26;c_ims=&#x26;c_pms=1009872&#x26;c_nw=g&#x26;c_dvc=c&#x26;gad_source=1&#x26;gad_campaignid=23219700864&#x26;gbraid=0AAAAA-I0E5fCxZNv60Uvz5CFbUL8Jh20h&#x26;gclid=Cj0KCQjwk_bPBhDXARIsACiq8R3HyqkI1gp-HAnSqXq-0Mr92uIFiqAV0X3dwD_EDP3OtcjOaM_9bPQaAlgGEALw_wcB">codex 공식 사이트</a>
+로 가서 데스크톱 앱을 직접 다운로드 받아도 무방하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABW0lEQVR42p2S23KCMBRF+YGKM50CwQsXhQBBW21tFdSqxU4f+v+/s5uTNk4F9YGHPYecISv7XAwWcjhBDBYmuLcZOp07mKbZSt1uF8ai+oYoDsjKI3wu4FgWmOuCMdZKRl4eEL+swd/e4UUJbOsBjsOknFYynrafeN59YbI5SmD6C2RNoCWda90ETjcVpusKoqzgxedA27ZPGg6H8H0fQRDAlS3R+QYwW+0RLzZIlvszIP3c7/cVhJQkCYQQSqPRCJ7nqUcaQIJxDfzrITWXSqOLs9kMeZ4jyzKlNE1VpNx8Pj+5PQH567YB1CW7vZ5yR07JjY49mR8MBio2HN4EytepZ3QxDEMFDGSkM+XZheHdBNZVB1wFxov1VeClSer8pRUy0uUOQipdHRp7SCXrntG3Fp2pfBpa3aXxuD1iUn4ooF9bG4LRNGmynHOlKIpU/8bjMYqiUPD/U/4BHJVf12tiiWkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image19"
+        title=""
+        src="/static/b34eb758612d4dcbb6ac1414919a2642/2bef9/19.png"
+        srcset="/static/b34eb758612d4dcbb6ac1414919a2642/6f3f2/19.png 256w,
+/static/b34eb758612d4dcbb6ac1414919a2642/01e7c/19.png 512w,
+/static/b34eb758612d4dcbb6ac1414919a2642/2bef9/19.png 1024w,
+/static/b34eb758612d4dcbb6ac1414919a2642/71c1d/19.png 1536w,
+/static/b34eb758612d4dcbb6ac1414919a2642/a878e/19.png 2048w,
+/static/b34eb758612d4dcbb6ac1414919a2642/f7171/19.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>📂 유닉스 명령어 (파일/폴더)</h2>
+<p>이번에는 Unix 명령어를 알아보도록 하자. 우리가 사용하고 있는 macOS는 운영체제 종류 중에 UNIX라는 운영체제를 따르고 있다. 그래서 기본적으로 UNIX 명령어를 지원하고 있고 이것은 운영체제의 터미널을
+통해서 직접 명령을 내리는 그런 형태라고 보면 좋을 것이다. 만약 독자들이 컴퓨터 공학을 전공하지 않았다면 운영체제의 수업을 듣지 못하였을 것이다. 운영체제는 생각보다 많은 업무를 하고 있다. 파일 및 하드웨어
+관리를 하며 뭐 인터럽트라던지 프로세스를 관리한다던지 메모리를 할당한다거나 가상 메모리 체계를 관리한다던지가 있다. 그 중에 하나가 우리가 지금 하고 있는 키보드, 마우스 이런거를 하드웨어를 통해서 컨트롤을 하고
+우리가 또 명령을 내리면 그거에 대한 프로세스를 순서를 매긴다던가 그거에 대한 CPU 자원을 할당하는 업무를 하고 있다. 그런 역할을 할 때 우리는 중간중간 운영체제가 가지고 있는 API를 호출을 해서 그거에 대한
+기능을 수행하는 그 어떤 것이 존재하는데 그것이 바로 운영체제의 쉘이라는 터미널 안에서 명령어를 치면서 하는 그런 기능들인 것이다. 대표적으로 디렉토리를 만든다던가 파일을 복사하거나 파일을 수정하거나 파일을 보는
+것들이 있을 것이다. 그러면 하나씩 한번 명령어를 살펴보자.</p>
+<h3>pwd</h3>
+<p><code>pwd</code>는 현재 작업 중인 디렉토리 경로를 살펴보는 명령어이다. 주요 옵션으로는 다음과 같다.</p>
+<ul>
+<li>P: 심볼릭 링크를 실제 경로로 해석</li>
+<li>L: 논리 경로 유지 (기본)</li>
+</ul>
+<h3>ls</h3>
+<p><code>ls</code>는 파일과 폴더 목록을 확인하는 명령어이다. 주요 옵션으로는 다음과 같다.</p>
+<ul>
+<li>l: 상세 정보 표시</li>
+<li>a: 숨김 파일 포함</li>
+<li>h: 읽기 쉬운 크기 단위</li>
+<li>t: 수정 시간 순 정렬</li>
+<li>R: 하위 디렉토리 재귀 출력</li>
+</ul>
+<h3>cd</h3>
+<p><code>cd</code>는 작업 디렉토리를 이동하는 명령어이다. 옵션은 별도로 없으며 자주 쓰는 패턴은 다음과 같다.</p>
+<ul>
+<li><code>cd ~</code>: 홈 디렉토리 이동</li>
+<li><code>cd ..</code>: 상위 디렉토리로 이동</li>
+<li><code>cd -</code>: 직전 디렉토리 복귀</li>
+<li><code>cd /</code>: 루트 디렉토리 이동</li>
+</ul>
+<h3>mkdir</h3>
+<p><code>mkdir</code>은 새 디렉토리를 생성하는 명령어이다. 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>p: 중간 경로까지 함께 생성</li>
+<li>v: 생성 과정을 출력</li>
+</ul>
+<h3>cp</h3>
+<p><code>cp</code>는 파일 또는 폴더를 복사하는 명령어이다. 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>r/R: 디렉토리 재귀 복사</li>
+<li>i: 덮어쓰기 전 확인</li>
+<li>v: 복사 과정 출력</li>
+<li>p: 권한/시간 정보 보존</li>
+</ul>
+<h3>rm</h3>
+<p><code>rm</code>은 파일과 폴더를 삭제하는 명령어이다.(주의 필요) 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>i: 삭제 전 확인</li>
+<li>r/R: 디렉토리 재귀 삭제</li>
+<li>f: 확인 없이 강제 삭제</li>
+<li>v: 삭제 과정 출력</li>
+</ul>
+<blockquote>
+<p>유닉스 같은 경우는 파일이나 폴더를 삭제하면 휴지통으로 가서 복원도 할 수 없이 완전 삭제되니 유의 바란다.</p>
+</blockquote>
+<h3>touch</h3>
+<p><code>touch</code>는 빈 파일을 생성하고 타임스탬프를 갱신하는 명령어이다. 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>a: 접근 시간만 변경</li>
+<li>m: 수정 시간만 변경</li>
+<li>t [[CC]YY]MMDDhhmm[.ss]: 특정 시간대로 설정</li>
+</ul>
+<h3>cat</h3>
+<p><code>cat</code>은 파일에 대한 내용을 출력해주는 명령어이다. 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>n 파일명 | head -n 라인수: 위에서 특정 라인까지만 출력된다.</li>
+</ul>
+<h3>find</h3>
+<p><code>find</code>는 파일/디렉토리를 검색 및 조건 실행을 할 수 있는 명령어이다. 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>name / iname: 이름으로 검색 (대소문자 무시)</li>
+<li>type f|d: 파일 또는 디렉토리만 검색</li>
+<li>maxdepth N: 탐색 깊이 제한</li>
+<li>mtime -N: N일 이내에 수정된 파일</li>
+<li>exec ... ;: 찾은 결과에 명령 실행</li>
+</ul>
+<h3>grep</h3>
+<p><code>grep</code>은 문자열 검색을 할 수 있는 명령어로 에러 로그 찾기, 특정 키워드 / 설정 탐색에 사용된다. 주요 옵션으로는 다음과 같다.</p>
+<ul>
+<li>n: 줄 번호 표시</li>
+<li>i: 대소문자 무시</li>
+<li>r: 재귀 검색</li>
+<li>v: 해당 패턴 제외하고 검색</li>
+<li>E: 확장 정규식 사용</li>
+</ul>
+<h3>mv</h3>
+<p><code>mv</code>는 이동 및 이름 변경을 할 때 사용하는 명령어로 파일 리네임, 폴더 구조 변경, 로그 로테이션등에 사용된다. 주요 옵션은 다음과 같다.</p>
+<ul>
+<li>i: 덮어쓰기 전 확인</li>
+<li>v: 진행 상황 출력</li>
+</ul>
+<h2>🛠️ Node.js, NPM, 환경변수(path) 설정</h2>
+<p>이번에는 Node.js, NPM, 그리고 환경 변수에 대하여 알아보도록 하겠다.</p>
+<h3>Node.js</h3>
+<p>Node.js는 윈도우, 리눅스, 유닉스, macOS등에서 실행될 수 있는 크로스 플랫폼, 오픈 소스 자바스크립트 런타임 환경을 말한다. Node.js는 V8 자바스크립트 엔진에서 실행되며 웹 브라우저 외부에서
+자바스크립트 코드를 실행한다.</p>
+<blockquote>
+<p>크로스 플랫폼이란 여러 운영체제를 지원해주는 환경이라고 이해하면 좋을 것 같다.</p>
+</blockquote>
+<p>쉽게 풀어보면 Node.js는 공개되어 있는 자바스크립트 프로그래밍 언어가 활용될 수 있는 혹은 실행될 수 있는 그러한 환경인데 이런 환경이 여러 운영체제를 지원한다라고 보면 좋을 것 같다. 이러한 특성때문에 최근에
+Node.js가 각광을 받고 있는 것이다. 다시 정리해보면 Node.js는 웹 브라우저 밖에서 자바스크립트 코드를 실행하게 하는 런타임 환경이다라고 하면 좋을 것 같다.</p>
+<p>그러면 자바스크립트 언어는 무엇일까? 그것에 대해서도 알아보자.</p>
+<h3>Javascript</h3>
+<p>자바스크립트 언어는 객체 기반의 스크립트 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용되며 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. Javascript는 원래부터
+Javascript는 아니였고 근본은 EcmaScript였다. 그래서 요새 사용하고 있는 Javascript를 ECMAScript라고 부른다.</p>
+<p>ECMAScript는 자바스크립트, JScript, ActionScript를 포함한 스크립팅 언어 표준이다. 주로 서로 다른 웹 브라우저 간에 웹 페이지 상호 운용성을 보장하기 위한 자바스크립트 표준으로 알려져
+있다. 이 표준은 Ecma International에서 ECMA-262 문서로 제정되었다.</p>
+<p>ECMAScript는 월드 와이드 웹에서 클라이언트 측 스크립팅에 일반적으로 사용되며, Node.js, Deno, Bun과 같은 런타임 환경을 사용하는 서버 측 스크립팅 및 서비스에도 점점 더 많이 사용되고 있다.</p>
+<h3>왜 대부분 Agent는 Node.js 기반일까?</h3>
+<ul>
+<li>CLI 생태계 최강자</li>
+<li>비동기 처리에 최적화</li>
+<li>프론트엔드 언어와 통일</li>
+<li>크로스 플랫폼 배포 용이</li>
+<li>개발자 친화적</li>
+</ul></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/MacOS-세팅과-유닉스-명령어/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-e39b8d18c097fa22020f.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-bcbf5ef0e682a09d5f19.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-8b8cb94cb94763a0cc53.js\"],\"component---src-pages-posts-tsx\":[\"/component---src-pages-posts-tsx-77cb599b6d677de96a5a.js\"],\"component---src-pages-resume-tsx\":[\"/component---src-pages-resume-tsx-24a3e9c9de948d5f619c.js\"],\"component---src-template-post-tsx\":[\"/component---src-template-post-tsx-c46475c746e289ebb127.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="071d9fee8b012f53a7af";</script><script src="/webpack-runtime-9967d0fe712fc90f196c.js" async></script><script src="/b633362c-18f38218541865050e97.js" async></script><script src="/63a121f2-cc600fa3be5d8ad5a67c.js" async></script><script src="/3e15977f-2d43cd4edfa117bc12b9.js" async></script><script src="/aec3edcd-f46d0566a4d152be50d1.js" async></script><script src="/2425c7c2-7ed3b7b860ba265f0576.js" async></script><script src="/d0007318-684b54fbdb5f0e47b4ef.js" async></script><script src="/cc76255b-cead784b89386693197e.js" async></script><script src="/1593e758-b67a97fabbcf1e458edd.js" async></script><script src="/48aa8186-2679e7820beef45a0960.js" async></script><script src="/d265142c-7af400a571c4b046073a.js" async></script><script src="/47ad6cec-ab5ba5ed1778e89f03d7.js" async></script><script src="/app-e39b8d18c097fa22020f.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
