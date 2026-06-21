@@ -1,0 +1,510 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><meta name="generator" content="Gatsby 5.16.1"/><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/0c1c2e37eb2d69a94839e0f64e5c9d39/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/claude-code-starter-kit-만들기-공식문서/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[Claude Code] Starter Kit 만들기 - 공식문서"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/0c1c2e37eb2d69a94839e0f64e5c9d39/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[Claude Code] Starter Kit 만들기 - 공식문서"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/0c1c2e37eb2d69a94839e0f64e5c9d39/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><style data-href="/styles.225c8d7d6398aeb4f3bd.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[Claude Code] Starter Kit 만들기 - 공식문서 · Sungbin</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[Claude Code] Starter Kit 만들기 - 공식문서</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->claude</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2026년 6월 21일<!-- --> · <!-- -->9<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">claude<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (13개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css 13selu">.css-13selu{margin-bottom:0.5rem;}.css-13selu::marker{font-weight:600;color:#9195F6;}.css-13selu::after{content:'- 10분';margin-left:0.2rem;font-size:0.8rem;}.css-13selu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13selu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13selu e1k9d3a00"><span>[Claude Code] 시작하기 전에</span></li><style data-emotion="css 2r5mz2">.css-2r5mz2{margin-bottom:0.5rem;}.css-2r5mz2::marker{font-weight:600;color:#9195F6;}.css-2r5mz2::after{content:'- 5분';margin-left:0.2rem;font-size:0.8rem;}.css-2r5mz2>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-2r5mz2>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-2r5mz2 e1k9d3a00"><span>[Claude Code] 터미널 익숙해지기</span></li><li class="css-13selu e1k9d3a00"><span>[Claude Code] 개발환경 및 클로드 코드 설치</span></li><style data-emotion="css kco6hv">.css-kco6hv{margin-bottom:0.5rem;}.css-kco6hv::marker{font-weight:600;color:#9195F6;}.css-kco6hv::after{content:'- 8분';margin-left:0.2rem;font-size:0.8rem;}.css-kco6hv>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-kco6hv>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-kco6hv e1k9d3a00"><span>[Claude Code] 클로드 코드 맛보기  및 초기화</span></li><style data-emotion="css iuahyr">.css-iuahyr{margin-bottom:0.5rem;}.css-iuahyr::marker{font-weight:600;color:#9195F6;}.css-iuahyr::after{content:'- 12분';margin-left:0.2rem;font-size:0.8rem;}.css-iuahyr>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-iuahyr>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-iuahyr e1k9d3a00"><span>[Claude Code] Cursor AI IDE 통합</span></li><style data-emotion="css 1f0z9r6">.css-1f0z9r6{margin-bottom:0.5rem;}.css-1f0z9r6::marker{font-weight:600;color:#9195F6;}.css-1f0z9r6::after{content:'- 19분';margin-left:0.2rem;font-size:0.8rem;}.css-1f0z9r6>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1f0z9r6>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1f0z9r6 e1k9d3a00"><span>[Claude Code] 클로드 코드 권한</span></li><style data-emotion="css tupxoa">.css-tupxoa{margin-bottom:0.5rem;}.css-tupxoa::marker{font-weight:600;color:#9195F6;}.css-tupxoa::after{content:'- 17분';margin-left:0.2rem;font-size:0.8rem;}.css-tupxoa>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-tupxoa>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-tupxoa e1k9d3a00"><span>[Claude Code] 슬래시 명령어와 단축키</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[Claude Code] Git과 GitHub</span></li><style data-emotion="css 1ap6lfi">.css-1ap6lfi{margin-bottom:0.5rem;}.css-1ap6lfi::marker{font-weight:600;color:#9195F6;}.css-1ap6lfi::after{content:'- 11분';margin-left:0.2rem;font-size:0.8rem;}.css-1ap6lfi>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1ap6lfi>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1ap6lfi e1k9d3a00"><span>[Claude Code] 설정 파일과 메모리 관리</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[Claude Code] MCP 활용</span></li><li class="css-kco6hv e1k9d3a00"><span>[Claude Code] 모던 기술스택과 개발 워크플로우</span></li><style data-emotion="css 13xotzt">.css-13xotzt{margin-bottom:0.5rem;}.css-13xotzt::marker{font-weight:600;color:#9195F6;}.css-13xotzt::after{content:'- 7분';margin-left:0.2rem;font-size:0.8rem;}.css-13xotzt>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13xotzt>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13xotzt e1k9d3a00"><span>[Claude Code] Starter Kit 만들기 - AI 활용</span></li><style data-emotion="css ikk1gw">.css-ikk1gw{margin-bottom:0.5rem;}.css-ikk1gw::marker{font-weight:600;color:#9195F6;}.css-ikk1gw::after{content:'- 9분';margin-left:0.2rem;font-size:0.8rem;}.css-ikk1gw>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ikk1gw>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ikk1gw e1k9d3a00"><span>[Claude Code] Starter Kit 만들기 - 공식문서</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css 3ypioh">.css-3ypioh{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-3ypioh{padding:1rem;}}@media screen and (max-width: 1308px){.css-3ypioh{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-3ypioh{width:calc(100vw - 8px);}}.css-3ypioh p>img{width:100%;}.css-3ypioh p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-3ypioh p,.css-3ypioh table,.css-3ypioh ul,.css-3ypioh blockquote,.css-3ypioh ol{font-size:1rem;margin:0 0 2rem;}.css-3ypioh table{width:100%!important;max-width:100%!important;border-collapse:collapse!important;border-spacing:0!important;border-radius:8px!important;overflow:hidden!important;box-shadow:none!important;border:1px solid #EAEAEA!important;background:#ffffff!important;display:table!important;table-layout:auto!important;}.css-3ypioh table thead tr{background:#EAEAEA!important;}.css-3ypioh table th{padding:12px 16px!important;color:#000!important;font-weight:600!important;text-align:left!important;border:none!important;border-bottom:2px solid #999!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table td{padding:10px 16px!important;color:#111!important;text-align:left!important;border:none!important;border-bottom:1px solid #EAEAEA!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table tbody tr{background:#ffffff!important;-webkit-transition:background 0.15s ease!important;transition:background 0.15s ease!important;}.css-3ypioh table tbody tr:nth-of-type(even){background:#FAFAFA!important;}.css-3ypioh table tbody tr:hover{background:#EAEAEA!important;}.css-3ypioh table tbody tr:last-of-type td{border-bottom:none!important;}.css-3ypioh table th[style],.css-3ypioh table td[style]{color:inherit!important;background:inherit!important;}.css-3ypioh table tr[style]{background:inherit!important;}.css-3ypioh center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-3ypioh p+center,.css-3ypioh iframe+center{margin-top:-1rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-3ypioh h1>a,.css-3ypioh h2>a,.css-3ypioh h3>a,.css-3ypioh h4>a,.css-3ypioh h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-3ypioh h1:hover>a,.css-3ypioh h2:hover>a,.css-3ypioh h3:hover>a,.css-3ypioh h4:hover>a,.css-3ypioh h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-3ypioh h2:not(:first-of-type),.css-3ypioh h3:not(:first-of-type),.css-3ypioh h4:not(:first-of-type){margin-top:3rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{margin:0 0 1.25rem;}.css-3ypioh h1,.css-3ypioh h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-3ypioh h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-3ypioh h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-3ypioh ul,.css-3ypioh ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-3ypioh ul ul,.css-3ypioh ol ul{margin-top:8px;}.css-3ypioh ul ul,.css-3ypioh ol ul,.css-3ypioh ul ol,.css-3ypioh ol ol{margin-bottom:0;}.css-3ypioh ul{list-style:disc;}.css-3ypioh ol{list-style:decimal;}.css-3ypioh ul li{margin-bottom:0.5rem;}.css-3ypioh ul li::marker{font-weight:600;color:#9195F6;}.css-3ypioh ol li{margin-bottom:0.5rem;}.css-3ypioh ol li::marker{font-weight:600;color:#9195F6;}.css-3ypioh li>a{white-space:inherit;word-wrap:break-word;}.css-3ypioh li{color:#000;}.css-3ypioh li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh li code * span{white-space:inherit;}.css-3ypioh li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh iframe{margin-bottom:2rem;}.css-3ypioh div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-3ypioh div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-3ypioh div[class*='markdown-wrapper']{padding-left:1rem;}}.css-3ypioh pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-3ypioh pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh pre>code * span{white-space:inherit;}.css-3ypioh pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-3ypioh p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh p>code * span{white-space:inherit;}.css-3ypioh p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-3ypioh img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-3ypioh blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-3ypioh blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-3ypioh blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-3ypioh blockquote{padding-left:1rem;}}</style><section class="css-3ypioh e17f2jor0"><blockquote>
+<p>해당 포스팅은 <a href="https://inf.run/vN55k">클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지</a>를 참조하여 작성하였습니다.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABM0lEQVR42mO4meb6HytOd4PgNDckcZiYK07MgEviRpIDENv/v5Hs9P9GitP/m0B8IxEolmgP4RNvoBtQg/P/B82Z/x91Ff6/Wxbx/3au7/9b2d7/79cl/X/QmPb/Vo4vCQYCvXQj1fn/q1XT/z+b3fr//f6N/98f3Pz//d71/z8e2wXEu/+/WDIR7FJs3sfqZZAL75ZFgl0HctX92sT/96rj/t+rigXiuP93SsL+3wRaSnwYglyZYAc28E5h0P/riXb/7xSH/L9TFAw26EaSI4mRkg4Jx5crpgK93fb//b4N/z8c2vL/45Ed/58v6Pl/HWjZzXR3EmMZaCDImw+aM4CRU/D/UWfB/4ftuWBXQ2LZjTQDwRiUZJIdIUkFhIFJ6WaqC3npEDlx3wJ6D4TB3iSQsAEfowVVIr8OEAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title=""
+        src="/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png"
+        srcset="/static/0c1c2e37eb2d69a94839e0f64e5c9d39/6f3f2/banner.png 256w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/01e7c/banner.png 512w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>📄 프로젝트 생성 1 - Next.js, ShadcnUI</h2>
+<p><a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">앞 섹션</a>에서는 <strong>클로드 코드에게 맡겨</strong> 스타터 킷을 만들었다. 이번 섹션은 <em>정반대</em> 길 — <strong>공식 문서를 보고 개발자가 직접</strong> 세팅한다.
+<em>왜</em>
+굳이 손으로 할까?</p>
+<blockquote>
+<p>간혹 유튜브를 보면 <em>"○○ 해줘"</em> 식으로 프로젝트 초기 설정을 <em>전부 AI에게</em> 맡기시더라고요. 그런데 그 과정에서 <em>정말 많은 오류</em> 를 봤습니다.</p>
+</blockquote>
+<h3>왜 공식 문서로 직접 하나</h3>
+<p>AI에게 <em>초기 설정</em> 까지 통째로 맡기면 <em>세 가지</em> 가 걸린다.</p>
+<ul>
+<li><strong>오래된 버전</strong> 으로 설치되거나</li>
+<li><em>효과적이지 않은</em> <strong>디렉터리 구조</strong> 로 세팅되거나</li>
+<li>무엇보다 <strong>토큰을 잔뜩 낭비</strong> 한다</li>
+</ul>
+<blockquote>
+<p>프로젝트 초기 설정은 <em>그렇게 어렵지 않은데</em>, 시작부터 정말 많은 <strong>토큰을 낭비</strong> 했죠.</p>
+</blockquote>
+<p><a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">AI 활용 챕터</a>에서 <em>개발 경험이 있다면 직접 세팅이 낫다</em> 고 했던 그 이야기다. <strong>초기 설정</strong> 은 <em>공식 문서</em> 만 따라가면 <em>오류도
+적고</em>, <a href="/claude-code-%EC%8A%AC%EB%9E%98%EC%8B%9C-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EB%8B%A8%EC%B6%95%ED%82%A4">클로드의
+컨텍스트(토큰)</a>도 <em>아낀다.</em> 그 절약한 토큰을 <em>진짜 개발</em> 에 쓰는 게 영리하다.</p>
+<blockquote>
+<p>자주자주 <em>공식 문서를 들여다보면</em> 익숙해지실 거예요.</p>
+</blockquote>
+<h3>폴더부터 — <code>mkdir</code> &#x26; IDE</h3>
+<p>먼저 터미널에서 <em>프로젝트 폴더</em> 를 만들고 들어가, <a href="/claude-code-cursor-ai-ide-%ED%86%B5%ED%95%A9">IDE</a>로 연다.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token function">mkdir</span> claude-nextjs-starter-kit
+<span class="token builtin class-name">cd</span> claude-nextjs-starter-kit</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div>
+<h3>Next.js 설치 — <code>create-next-app</code></h3>
+<p><a href="/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0">Next.js</a> <strong>공식 문서</strong> 의 안내대로 <code>create-next-app</code> 으로 <em>최신 버전</em> 프로젝트를 생성한다.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">npx create-next-app@latest <span class="token builtin class-name">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>명령을 실행하면 <em>옵션을 묻는다.</em> 강의에서 선택하는 구성은 <em>모던 Next.js의 표준</em> 그대로다.</p>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>선택</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TypeScript</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>ESLint</strong>(린터)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Tailwind CSS</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>App Router</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Turbopack</strong></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ESLint</strong> 는 <em>코드 품질</em> 을 검사해 잠재적 오류를 막는 린터고, <strong>Turbopack</strong> 은 <em>개발 서버 속도</em> 를 끌어올리는 차세대 번들러예요.</p>
+</blockquote>
+<p>하나하나 고르는 게 번거롭다면 <strong><code>--yes</code></strong> 옵션으로 <em>기본값</em> 을 빠르게 적용할 수도 있다. 설치가 끝나면 <em>개발 서버</em> 를 띄워 확인한다.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token function">npm</span> run dev</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><code>localhost:3000</code> 에 들어가 <em>Next.js 기본 화면</em> 이 뜨면 성공이다. (포트가 쓰이고 있으면 <code>3001</code>·<code>3002</code> 등으로 열린다.)</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABBklEQVR42s2S606DQBCFF5CbISHQaGWhrQGkXVxlvdTGS2tCjT4J7/8IpywNTZu0RqU//PFld2ayJ7Mzh0SjCeiIIRhOcBamGMYcl2lRxwz+RQy/H6/PLXpBgvMwW0Ov0A/HiLN7pPkURDx/QDzVPC7Bbl6RF/OaBdjtG8b8pSFlsx1kjt+9g4sFcjFH8bCEmH6imH2BKIqCFlVVN3ddP4GmaTu5DUQBIeQQ+wuu68IwjO8e/k6w7eZogh3YX4iiEJxfYzCI4Hled8EgoEiSBL7fg+M4sO3TboJyu3IplmXVYjZM0/xnM6SUIsuypkPpxz8LtlYpyxJVVTV+1HX95xaSszrml1eWBRyQXqovqAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image01"
+        title=""
+        src="/static/1059b1387b1205b18fd3093d1dfcc00b/2bef9/01.png"
+        srcset="/static/1059b1387b1205b18fd3093d1dfcc00b/6f3f2/01.png 256w,
+/static/1059b1387b1205b18fd3093d1dfcc00b/01e7c/01.png 512w,
+/static/1059b1387b1205b18fd3093d1dfcc00b/2bef9/01.png 1024w,
+/static/1059b1387b1205b18fd3093d1dfcc00b/71c1d/01.png 1536w,
+/static/1059b1387b1205b18fd3093d1dfcc00b/a878e/01.png 2048w,
+/static/1059b1387b1205b18fd3093d1dfcc00b/f7171/01.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3>Tailwind 경고 잠재우기 — <code>.vscode/settings.json</code></h3>
+<p>Next.js와 함께 <strong>Tailwind CSS</strong> 도 깔린다. <code>globals.css</code> 를 열어보면 관련 설정이 보이는데, IDE가 <code>@tailwind</code> 같은 구문을 <em>모르는 규칙(unknown rule)</em> 이라며
+<strong>경고</strong>
+를 띄울 때가 있다.</p>
+<p><em>동작엔 문제없는</em> 경고이니, <strong>워크스페이스 단위</strong> 로 무시하게 설정하면 깔끔하다. 프로젝트의 <code>.vscode/settings.json</code> 에 한 줄 더한다.</p>
+<div class="gatsby-highlight" data-language="json"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"css.lint.unknownAtRules"</span><span class="token operator">:</span> <span class="token string">"ignore"</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div></div>
+<p>이러면 <em>그 프로젝트에서만</em> 해당 경고가 사라진다. <em>불필요한 빨간 줄</em> 에 신경 쓸 일이 없어진다.</p>
+<h3>shadcn/ui 설치 + Git 커밋</h3>
+<p>스타일링 컴포넌트인 <a href="/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0">shadcn/ui</a>도 <strong>공식 문서의 Installation → Next.js</strong> 가이드를 그대로 따른다.</p>
+<p>그런데 설치 전에 <em>짚을 게</em> 있다. <code>create-next-app</code> 은 프로젝트를 만들며 <strong>Git 저장소를 자동 초기화</strong> 해둔다. 그러니 <em>지금까지의 깨끗한 상태</em> 를
+먼저 <a href="/claude-code-git%EA%B3%BC-github">커밋</a>해두자.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"Next.js 초기 설정"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div>
+<p>이제 shadcn/ui를 초기화한다. <em>기본 색상</em> 등을 묻는데, 고르면 <em>여러 파일</em> 이 생성·변경된다.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">npx shadcn@latest init</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<blockquote>
+<p>소스 제어 탭을 잘 보세요. <em>명령어 한 줄</em> 이 우리 프로젝트를 <em>어떻게 변경시키는지</em> 보입니다.</p>
+</blockquote>
+<p>개별 컴포넌트는 <em>이름을 붙여</em> 추가한다. (예: 버튼)</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">npx shadcn@latest <span class="token function">add</span> button</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p>설치와 변경이 끝났으니, <em>다시 한 번</em> 커밋해 <strong>단계를 박제</strong> 한다. 강의가 <em>틈틈이</em> 커밋을 강조하는 건 — <em>명령 한 줄의 영향</em> 을 <em>작은 단위</em> 로 남겨두기 위해서다.</p>
+<h3>정리하며</h3>
+<p>공식 문서로 <em>직접</em> 스타터 킷을 세팅하는 흐름을 정리하면 다음과 같다.</p>
+<ul>
+<li><strong>왜 직접?</strong> → AI에게 통째로 맡기면 <em>옛 버전·나쁜 구조·토큰 낭비</em> → <strong>공식 문서</strong> 가 정확하고 <em>토큰 절약</em></li>
+<li><strong>폴더</strong> → <code>mkdir</code> → <code>cd</code> → IDE로 열기</li>
+<li><strong>Next.js</strong> → <code>create-next-app</code> (TS · ESLint · Tailwind · App Router · Turbopack), <code>npm run dev</code> 로 확인</li>
+<li><strong>Tailwind 경고</strong> → <code>.vscode/settings.json</code> 에 <code>unknownAtRules: ignore</code></li>
+<li><strong>shadcn/ui</strong> → 공식 Installation 가이드 → <code>init</code> → <code>add &#x3C;컴포넌트></code></li>
+<li><strong>Git</strong> → <em>자동 초기화</em> 확인 → 단계마다 <strong>작은 단위로 커밋</strong></li>
+</ul>
+<p>핵심은 <em>"AI를 안 쓴다"</em> 가 아니라, <strong>AI가 잘 못하거나 비싼 일은 직접</strong> 하고 — <em>그 위에서</em> 클로드 코드를 붙인다는 전략이다. 다음 챕터에서는 이렇게 만든 토대 위에, <strong>역할 프롬프트 엔지니어링</strong>
+으로
+클로드 코드를 <em>더 똑똑하게</em> 부려보자.</p>
+<h2>🎭 프로젝트 생성 2 - 역할 프롬프트 엔지니어링</h2>
+<p><a href="#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-1---nextjs-shadcnui">앞 챕터</a>에서 <em>공식 문서로</em> Next.js·shadcn/ui 토대를 깔았다. 이제 그 위에 <strong>클로드 코드를 붙여</strong> 스타터 킷을 채운다. 이때 <em>결과의
+질</em> 을
+가르는 한 끗 — <strong>역할 프롬프트 엔지니어링</strong> 이 이번 주제다.</p>
+<h3>⭐ 역할 프롬프트 — AI를 '전문가'로 변신시키기</h3>
+<p>같은 질문이라도, <strong>누구에게 묻느냐</strong> 에 따라 답이 다르다. AI에게 <em>역할을 부여</em> 하면 — 그냥 <em>범용 코드 어시스턴트</em> 였던 클로드 코드가 <strong>도메인 전문가</strong> 로 <em>변신</em> 한다.</p>
+<blockquote>
+<p>AI에게 <em>역할을 부여</em> 하는 건, 클로드 코드를 <em>일반적인 코드 어시스턴트</em> 에서 <strong>도메인 전문가</strong> 로 바꾸는 핵심 기법이에요.</p>
+</blockquote>
+<p>효과는 <em>네 갈래</em> 다.</p>
+<table>
+<thead>
+<tr>
+<th>효과</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>사고의 폭 확장</strong></td>
+<td>전문가 관점에서 <em>더 넓게</em> 검토</td>
+</tr>
+<tr>
+<td><strong>정확도 향상</strong></td>
+<td><em>복잡한 시나리오</em> 에서 실수가 줄어듦</td>
+</tr>
+<tr>
+<td><strong>톤 조절</strong></td>
+<td>커뮤니케이션 <em>어조</em> 를 역할에 맞게</td>
+</tr>
+<tr>
+<td><strong>집중도 향상</strong></td>
+<td><em>특정 요구사항</em> 에 더 몰입</td>
+</tr>
+</tbody>
+</table>
+<p><em>"청소해줘"</em> 보다 <em>"너는 청소 전문가야, 이 집을 청소해줘"</em> 가 더 나은 결과를 내는 것과 같은 이치다.</p>
+<h3>역할 부여해 요청하기</h3>
+<p>이제 <em>역할</em> 을 입혀 요청한다. <a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">앞 섹션의 기술 스택 명시</a>는 <em>그대로</em> 가져온다.</p>
+<div class="gatsby-highlight" data-language="text"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">당신은 모던 웹 스타터킷 제작 전문가입니다.
+빠르게 웹 개발을 시작할 수 있도록 스타터킷을 개발해주세요.
+
+기술 스택:
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Lucide React</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div>
+<p>물론 <a href="/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C">플랜 모드</a>부터 켠다. <em>바로 코딩</em> 이 아니라 <strong>계획</strong> 을 먼저 받는다. 요청이 <em>틀어졌다면</em> <strong><code>ESC</code></strong> 로 작업을 멈추고 <em>다시</em> 요청하면 된다.</p>
+<h3>계획 보완 — "바퀴를 재발명하지 말라"</h3>
+<p>클로드가 내놓은 초기 계획(shadcn 컴포넌트 설치 → 디렉터리 구조 → 레이아웃·페이지 → 유틸리티 기능)을 <em>그대로 받지 않는다.</em> 한 가지 <strong>원칙</strong> 을 더한다.</p>
+<blockquote>
+<p><strong>바퀴를 재발명하지 말아라.</strong></p>
+</blockquote>
+<p><em>범용적인 기능</em> 을 <em>직접 구현</em> 하게 두면 — 코드가 늘고, 버그도 늘고, 토큰도 샌다. <em>이미 검증된</em> <strong>라이브러리</strong> 가 있다면 <em>그걸 쓰라</em> 고 계획을 보완시킨다.</p>
+<h3>사고 순서까지 — 메타 프롬프트</h3>
+<p>더 나아가, 클로드의 <em>사고 과정</em> 자체를 <em>떠먹여</em> 줄 수 있다. <em>"어떤 웹에나 필요한 컴포넌트·레이아웃 정리 → 컴포넌트 계층 분류 → shadcn 설치·레이아웃 개발"</em> 같은 <strong>사고 순서</strong> 를
+<em>컨텍스트로</em>
+넣는 것이다.</p>
+<blockquote>
+<p>이런 걸 <strong>메타 프롬프트</strong> 라고 해요. <em>프롬프트를 생성하기 위한 프롬프트.</em></p>
+</blockquote>
+<p><a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">CoT가 "단계별로 생각하라"였다면</a>, 메타 프롬프트는 <em>그 단계의 내용</em> 까지 <em>지정</em> 해주는 셈이다. 여기에 <em>"유틸리티는 검증된 유명
+라이브러리를 쓰라"</em> 는 요구를 <strong>명확히</strong> 덧붙인다.</p>
+<h3>ultrathink로 라이브러리 고르기</h3>
+<p>복잡한 <em>선택</em> 이 필요하니 <a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9"><code>ultrathink</code></a>로 <strong>확장 사고 모드</strong> 를 켠다. 그러면 클로드가 <em>검증된 라이브러리</em> 를 골라 계획에
+반영한다.</p>
+<ul>
+<li><strong>Framer Motion</strong> — 애니메이션</li>
+<li><strong>TanStack React Query</strong> — 서버 상태 관리</li>
+<li><strong><a href="/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0">React Hook Form + Zod</a></strong> — 폼 + 유효성 검사</li>
+</ul>
+<p>그런데 계획에 <strong>커스텀 훅을 직접 구현</strong> 하려는 부분이 보였다. 여기서 다시 <em>"바퀴를 재발명하지 말라"</em> 를 적용한다.</p>
+<table>
+<thead>
+<tr>
+<th>직접 구현하려던 것</th>
+<th>검증된 대안</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>useMediaQuery</code></td>
+<td><strong><code>react-responsive</code></strong></td>
+</tr>
+<tr>
+<td><code>useLocalStorage</code></td>
+<td><strong><code>use-local-storage-state</code></strong></td>
+</tr>
+</tbody>
+</table>
+<p>이후 <em>여러 훅을 묶은</em> <strong><code>usehooks-ts</code></strong> 통합 라이브러리까지 분석해, <em>최종 선택</em> 을 내린다.</p>
+<h3>계획이 환각을 막는다</h3>
+<p>왜 이렇게까지 <em>계획에 공을 들일까?</em></p>
+<blockquote>
+<p>계획 없이 요청하면 AI가 <strong>환각(hallucination)</strong> 을 일으킬 수 있어요.</p>
+</blockquote>
+<p>실제 개발에서도 <em>베테랑일수록</em> <strong>분석·설계·계획</strong> 에 시간을 많이 쓴다. <em>코드 구현</em> 만큼이나 — 아니 그 이상으로 — <strong>정보 수집과 계획</strong> 이 중요하다는 이야기다. <em>꼼꼼히 확정한 계획</em> 위에서라야,
+<em>핵심 프레임워크·스타일링·유틸리티 라이브러리</em> 설치가 <em>흔들림 없이</em> 진행된다.</p>
+<h3>개발 실행 &#x26; 남은 오류</h3>
+<p>계획이 확정됐으니 <strong><code>Accept Edit</code> 모드</strong> 로 전환해 실제 개발을 돌린다. 이때 <a href="/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C"><code>Bash</code>·<code>WebFetch</code>·<code>WebSearch</code> 권한</a>을 열어, 클로드가
+<em>문서를 찾아가며</em> 작업하게 한다.</p>
+<p>개발 서버가 뜨면 <code>localhost</code> 에서 <em>메인 페이지·기능 소개·CTA·푸터</em> 까지 <strong>완성된 모습</strong> 을 확인한다. 다만 <em>일부 페이지</em>(기능 메뉴·가격·폼 예제·문서)에서 <strong>오류</strong> 가 보인다.</p>
+<blockquote>
+<p>이건 <em>어쩔 수 없습니다.</em></p>
+</blockquote>
+<p><em>완벽하진 않다.</em> 이 오류는 <strong>다음 챕터</strong> 에서 — <em>명확한 프롬프트 엔지니어링</em> 으로 — 잡는다.</p>
+<h3>정리하며</h3>
+<p>역할 프롬프트 엔지니어링으로 <em>스타터 킷을 채우는</em> 흐름을 정리하면 다음과 같다.</p>
+<ul>
+<li>⭐ <strong>역할 프롬프트</strong> → <em>"당신은 ○○ 전문가"</em> → 사고 폭·정확도·톤·집중 <strong>향상</strong></li>
+<li><strong>요청</strong> → 역할 + <a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">기술 스택 명시</a> + <a href="/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C">플랜 모드</a>(틀리면 <code>ESC</code>)</li>
+<li><strong>계획 보완</strong> → <em>"바퀴를 재발명하지 말라"</em> → 범용 기능은 <strong>검증된 라이브러리</strong></li>
+<li><strong>메타 프롬프트</strong> → <em>사고 순서</em> 자체를 컨텍스트로 주입</li>
+<li><strong><code>ultrathink</code></strong> → Framer Motion · TanStack Query · RHF+Zod, 커스텀 훅은 <code>usehooks-ts</code> 등으로</li>
+<li><strong>계획의 가치</strong> → <em>계획 없는 요청 = 환각</em>, 분석·설계에 시간 쓰는 게 정석</li>
+<li><strong>실행</strong> → <code>Accept Edit</code> + 권한 → 완성 (단, <em>일부 페이지 오류</em> 는 다음 챕터에서)</li>
+</ul>
+<p>핵심은 <em>역할</em> 과 <em>계획</em> 이다. <strong>전문가 역할</strong> 을 입히고, <strong>바퀴를 재발명하지 않는</strong> 계획을 세우면 — 클로드 코드는 <em>훨씬 똑똑한</em> 결과를 낸다. 다음 챕터에서는 <em>남은 오류</em> 를 <strong>명확한 프롬프트
+엔지니어링</strong> 으로 잡아보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABtUlEQVR42pWSe4+aUBDFTXwC4huo4AsFjMqWdX2xStI26W628ft/ntN7Rklta7vZP07mzmXmxzxuwRvNMQkT+OEj3PECHWeKtuMre9HlPL3q19lyQ9hKlhvA9ubwozWCxRaFp9Mrtsc3bNMXPO6/42HzDYskw1KJdvE5w/zhiHl8FButnkWMSzZfEW++YL1/wVP6hvXzDxR0w4Ch69A0Df1+X+kTGo0GTNNEw6wrmeI3lVrNJur1uog5upKh8pl7UU0Brx+oarWKWq0mtlgsolwuo1QqSSDv6ed3jJE8Bbpl/Abk3yqVCmazGbIsQxzHOJ1O2O12SNMUh8MBq9VKzoPBQKDM+SdQv7bebrcxmUzgeR7CMMR+v8d0OkUURfB9H8PhEN1uV2L/zP8LSLE9Vsr2LMvC+XyW+eYdUIy5l3sXeCsuJ6+6qZbyXvy7QMI4K1Z1r8UPAQlghZyl4zhy/jDwtgrOrNfrYblcylI4z//BDOMGSFCr1YLrurJBgqjcpzqdjlRq27b4/AEffV6Epilg/o54yYQgCATCNpk4Ho+lutFoJD7fH58Nt86Yy6I4Zw1J4uEnjbs+IOJBNg0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image02"
+        title=""
+        src="/static/879ef0ce81ae3696a9f5d486cb8e00ba/2bef9/02.png"
+        srcset="/static/879ef0ce81ae3696a9f5d486cb8e00ba/6f3f2/02.png 256w,
+/static/879ef0ce81ae3696a9f5d486cb8e00ba/01e7c/02.png 512w,
+/static/879ef0ce81ae3696a9f5d486cb8e00ba/2bef9/02.png 1024w,
+/static/879ef0ce81ae3696a9f5d486cb8e00ba/71c1d/02.png 1536w,
+/static/879ef0ce81ae3696a9f5d486cb8e00ba/a878e/02.png 2048w,
+/static/879ef0ce81ae3696a9f5d486cb8e00ba/f7171/02.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>🐛 오류 수정과 명확한 프롬프트 엔지니어링</h2>
+<p><a href="#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-2---%EC%97%AD%ED%95%A0-%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81">앞 챕터</a>에서 스타터 킷을 채웠지만, <em>일부 페이지</em> 에 <strong>404 오류</strong> 가 남았다. 이번엔 그걸 <em>잡는다.</em> 더불어 <em>불필요한 메뉴</em> 도 정리한다.</p>
+<blockquote>
+<p>우리 스타터 킷에서 <em>기능</em> 이나 <em>가격</em> 메뉴 같은 건 <strong>없어도 될 것 같거든요.</strong></p>
+</blockquote>
+<p>그런데 오류 수정에 들어가기 전, <em>반드시 짚어야 할</em> 개념이 하나 있다. <strong>명확한 프롬프트 엔지니어링</strong> 이다.</p>
+<h3>⭐ 명확한 프롬프트 — AI는 개발자 대체가 아니다</h3>
+<p>오류를 <em>"알아서 고쳐줘"</em> 라고 던지면 안 된다. 그 전에 <em>클로드 코드의 정체</em> 를 정확히 알아야 한다.</p>
+<blockquote>
+<p>Claude Code는 <strong>AI 도구</strong> 예요. 개발자를 대체해서 <em>혼자 알아서</em> 진행하는 그런 <strong>에이전트가 아닙니다.</strong></p>
+</blockquote>
+<p>즉 클로드 코드는 <em>만능 자율 개발자</em> 가 아니라, <strong>명확한 지시를 받을 때</strong> 일을 잘하는 <em>도구</em> 다. 그래서 <em>무엇을·어디서·어떻게</em> 고칠지 <strong>분명하게</strong> 지시해야 한다. 이건 <em>개인 취향</em> 이 아니라 *
+<em>Anthropic
+공식 가이드</em>* 이기도 하다.</p>
+<table>
+<thead>
+<tr>
+<th>명확한 프롬프트의 3요소</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>명확하게</strong></td>
+<td><em>모호함</em> 없이 무엇을 원하는지</td>
+</tr>
+<tr>
+<td><strong>직접적으로</strong></td>
+<td>돌려 말하지 말고 <em>바로</em> 요구</td>
+</tr>
+<tr>
+<td><strong>상세하게</strong></td>
+<td>작업·대상·워크플로우·<em>최종 목표</em> 까지 명시</td>
+</tr>
+</tbody>
+</table>
+<p>앞 챕터의 <a href="#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-2---%EC%97%AD%ED%95%A0-%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81">역할 프롬프트</a>와 결합하면, 오류 수정 요청은 이렇게 <em>구체적</em> 이어야 한다.</p>
+<div class="gatsby-highlight" data-language="text"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">당신은 웹 개발 전문가입니다.
+현재 웹 애플리케이션에 404 오류가 발생하고 있어요.
+- 네비게이션의 '기능', '가격' 메뉴는 불필요하니 제거해주세요.
+- 나머지 메뉴는 실제 페이지가 존재하는지 확인하고, 깨진 링크를 고쳐주세요.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div></div>
+<h3>"동료에게 보여줘라" 테스트</h3>
+<p>내 프롬프트가 <em>충분히 명확한지</em> 헷갈릴 때가 있다. 강의가 소개하는 <em>간단한 점검법</em> 이 있다.</p>
+<blockquote>
+<p>해당 프롬프트가 명확한지 잘 모르겠다면, 그 프롬프트를 <strong>동료에게 보여주래요.</strong></p>
+</blockquote>
+<p><em>동료가 읽고도</em> <strong>무슨 작업인지 헷갈린다면</strong>, 클로드 코드도 <em>헷갈린다.</em> 반대로 <em>사람이 봐도 명확</em> 하면 AI에게도 명확하다. <strong>"사람이 이해할 수 있게"</strong> — 이게 <em>명확한 프롬프트</em> 의 <em>쉬운 기준</em>
+이다.</p>
+<h3>오류 수정도 플랜 모드로</h3>
+<p>요청이 명확해졌으니, 늘 그랬듯 <a href="/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C">플랜 모드</a>로 <strong>계획부터</strong> 받는다. 그러면 클로드는 <em>바로 고치지 않고</em> — <strong>메뉴와 실제 페이지가 존재하는지</strong> 하나씩
+대조하며 <strong>오류 목록</strong> 을 수집하고, <em>해결 계획</em> 을 세운다.</p>
+<p>이 <em>탐색 → 계획</em> 단계가 <a href="/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0">4단계 워크플로우</a>의 정석이다. <em>오류의 전체 그림</em> 을 먼저 파악해야, <em>놓치는 페이지 없이</em> 한 번에 고칠 수
+있다.</p>
+<h3>결과 확인 &#x26; 작업 분할</h3>
+<p>계획대로 실행하면, <em>기능·가격 메뉴</em> 가 깔끔히 제거되고 <em>문서 페이지</em> 도 <strong>정상 출력</strong> 된다. 그런데 <em>예제 페이지</em> 에서 또 다른 <strong>링크 오류</strong> 가 보인다. 원인을 추적해보니 —</p>
+<p><strong>shadcn/ui의 <code>Select</code> 컴포넌트가 설치되지 않아</strong> 생긴 문제였다. (<a href="#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-1---nextjs-shadcnui">앞서 본 <code>npx shadcn add</code> 로</a> 필요한 컴포넌트를
+그때그때 깔아야 한다.)</p>
+<p>여기서 <em>교훈</em> 이 하나 더 나온다.</p>
+<blockquote>
+<p><strong>복잡한 작업</strong> 은 한 번에 요청하기보다, <em>여러 단계로 나누어</em> 요청하는 게 좋아요.</p>
+</blockquote>
+<p><em>큰 덩어리</em> 를 통째로 시키면 <em>오류 가능성</em> 이 커진다. <strong>작업을 분할</strong> 해 <em>한 조각씩</em> 요청하면, <em>오류도 줄고</em> 진행도 또렷해진다. — <a href="/claude-code-%EC%8A%AC%EB%9E%98%EC%8B%9C-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EB%8B%A8%EC%B6%95%ED%82%A4">컨텍스트 관리</a>
+와도
+맞닿는 <em>효율 전략</em> 이다.</p>
+<h3>정리하며</h3>
+<p>오류 수정과 명확한 프롬프트 엔지니어링을 정리하면 다음과 같다.</p>
+<ul>
+<li><strong>AI는 대체자가 아니다</strong> → 클로드 코드는 <em>명확한 지시</em> 를 받을 때 잘하는 <strong>도구</strong></li>
+<li>⭐ <strong>명확한 프롬프트</strong> → <strong>명확·직접·상세</strong> (Anthropic 공식 가이드)</li>
+<li><strong>점검법</strong> → <em>"동료에게 보여줘서"</em> 이해되면 AI에게도 명확</li>
+<li><strong>오류 수정</strong> → <a href="/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C">플랜 모드</a>로 <em>메뉴·페이지 대조</em> → 오류 목록 → 계획 → 실행</li>
+<li><strong>남은 이슈</strong> → <code>Select</code> 컴포넌트 <em>미설치</em> → 필요한 <a href="#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-1---nextjs-shadcnui">shadcn 컴포넌트</a> 추가</li>
+<li><strong>작업 분할</strong> → <em>복잡한 건 나눠서</em> 요청 → 오류↓ 효율↑</li>
+</ul>
+<p>핵심은 <em>"AI에게 떠넘기지 말고, 명확히 지시하라"</em> 다. <strong>명확·직접·상세</strong> 한 프롬프트와 <strong>작업 분할</strong> — 이 둘이 오류를 <em>빠르고 정확하게</em> 잡는 열쇠다. 다음 챕터에서는 한발 더 나아가, 클로드가
+<em>직접 브라우저를 열어 테스트하고 스스로 오류를 고치는</em> — <strong>AI 자동화</strong> 까지 들여다보자.</p>
+<h2>🤖 Playwright MCP란? - 오류 해결하기</h2>
+<p><a href="#-%EC%98%A4%EB%A5%98-%EC%88%98%EC%A0%95%EA%B3%BC-%EB%AA%85%ED%99%95%ED%95%9C-%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81">앞 챕터</a>에서는 <em>우리가 오류를 발견해</em> 클로드에게 <em>고치라고</em> 시켰다. 그런데 — <em>오류를 찾는 것</em> 부터 클로드가 <strong>스스로</strong> 한다면? 그걸 가능케 하는 게 이번
+주제, <strong>Playwright MCP</strong> 다.</p>
+<blockquote>
+<p>웹 개발을 하고, 브라우저에서 테스트하고, 버그를 발견하던 <em>일련의 과정</em> 을 <strong>클로드에게 위임</strong> 할 수 있는 거죠.</p>
+</blockquote>
+<h3>Playwright MCP란 — 클로드에게 '브라우저'를 쥐여주기</h3>
+<p>먼저 <strong>Playwright</strong> 는 <em>웹 브라우저 자동화 도구</em> 다. <em>크롬·파이어폭스</em> 같은 브라우저를 <em>프로그램으로 제어</em> 해 <strong>테스트 자동화·데이터 수집·화면 캡처</strong> 를 한다.</p>
+<p>그럼 <strong>Playwright MCP</strong> 는? <a href="/claude-code-mcp-%ED%99%9C%EC%9A%A9">MCP</a> 챕터에서 봤듯, <em>클로드가 외부 도구를 쓰게</em> 잇는 <strong>다리</strong> 다. 즉 <strong>클로드가 Playwright를 부릴 수 있게</strong> 해주는
+MCP 서버다.</p>
+<blockquote>
+<p>클로드에게 <em>"어떤 사이트에 접속해 정보를 수집해줘"</em> 하면, 클로드가 <strong>실제로 브라우저를 열고</strong> 그 사이트에 접속해 원하는 정보를 <em>직접</em> 수집해줘요.</p>
+</blockquote>
+<p><a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">앞 섹션에서 스크린샷을 찍어 붙여넣던 것</a>과 비교해보자. 그땐 <em>사람이</em> 캡처해 줬다면, 이제는 <strong>클로드가 직접</strong> 브라우저를 열어 <em>보고·확인하고·고친다.</em>
+<strong>손이 생긴</strong> 셈이다.</p>
+<h3>설치 — <code>claude mcp add</code> (프로젝트 스코프)</h3>
+<p>설치는 <a href="/claude-code-mcp-%ED%99%9C%EC%9A%A9">MCP 설치 흐름</a>과 똑같다. <strong>GitHub에서 <code>playwright mcp</code></strong> 를 검색해 <em>공식 문서</em> 의 <strong>Claude Code 설치 가이드</strong> 를 따른다. <em>팀과
+공유</em> 할 거라 <strong>프로젝트 스코프</strong> 로 깐다.</p>
+<div class="gatsby-highlight" data-language="bash"><div class="markdown-wrapper"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">claude mcp <span class="token function">add</span> playwright <span class="token parameter variable">-s</span> project -- npx @playwright/mcp@latest</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div></div>
+<p><code>-s project</code> 로 설치하면 <a href="/claude-code-mcp-%ED%99%9C%EC%9A%A9"><code>.mcp.json</code> 파일이 생성</a>된다. 이 파일을 <em>커밋</em> 하면, <em>팀원도</em> 같은 Playwright MCP를 <em>그대로</em> 쓸 수 있다.</p>
+<h3>⭐ 오류 해결 4단계 — 수집·분석·해결·반복</h3>
+<p>Playwright MCP로 <em>오류를 잡는</em> 과정은 <strong>4단계 루프</strong> 다. <a href="/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0">4단계 개발 워크플로우</a>와 <em>닮은꼴</em> 이다.</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① 오류 수집</strong></td>
+<td>브라우저로 직접 접속해 <em>에러 정보</em> 를 모은다</td>
+</tr>
+<tr>
+<td><strong>② 원인 분석</strong></td>
+<td><em>라이브러리 누락·404</em> 등 <strong>원인</strong> 을 파악</td>
+</tr>
+<tr>
+<td><strong>③ 오류 해결</strong></td>
+<td>분석대로 <strong>수정</strong> (한 번에 안 될 수 있음)</td>
+</tr>
+<tr>
+<td><strong>④ 테스트 &#x26; 반복</strong></td>
+<td>다시 테스트 → <em>오류가 또 있으면</em> <strong>①로 되돌아감</strong></td>
+</tr>
+</tbody>
+</table>
+<p>핵심은 <strong>반복</strong> 이다. <em>한 번에 완벽</em> 하지 않아도, 클로드가 <em>수집 → 수정 → 재확인</em> 을 <strong>스스로 돌리며</strong> 오류가 <em>없어질 때까지</em> 좁혀간다.</p>
+<h3>실제로 고쳐보기</h3>
+<p>이제 <em>남아 있던 오류</em> 를 잡는다. <strong>예제(Example) 메뉴</strong> 를 클릭해 서브 페이지로 들어갈 때 나는 오류가 대상이다. (<em>푸터의 404</em> 는 <em>무시</em> 하도록 일러둔다 — <a href="#-%EC%98%A4%EB%A5%98-%EC%88%98%EC%A0%95%EA%B3%BC-%EB%AA%85%ED%99%95%ED%95%9C-%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81">작업
+범위를 명확히</a>하는 것이다.)</p>
+<p><a href="/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C">플랜 모드</a>로 계획을 세우면, 클로드가 <strong>Playwright MCP로 브라우저를 열어</strong> <em>에러를 직접 확인</em> 한다. 그러곤 <code>hooks</code> 페이지 수정, <em>미설치였던</em>
+<strong><a href="#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-1---nextjs-shadcnui"><code>Select</code> 컴포넌트</a> 생성</strong> 같은 <em>구체적 계획</em> 을 내놓는다. 실행 후엔 <em>쇼케이스·폼·레이아웃·훅 예제·데이터 패칭·UI</em> 등 <strong>여러 페이지가
+오류 없이</strong> 도는 걸 — 역시 <em>클로드가 직접</em> 확인한다.</p>
+<h3>의미 있는 단위로 커밋 — 현업의 습관</h3>
+<p>오류를 다 잡았으면 <a href="/claude-code-git%EA%B3%BC-github">커밋</a>이다. 여기서 <em>현업 감각</em> 을 하나 더 짚는다.</p>
+<blockquote>
+<p>현업에서는 <strong>커밋 목록</strong> 을 굉장히 중요시해요.</p>
+</blockquote>
+<p>변경을 <em>뭉뚱그려 한 방</em> 에 커밋하지 않고, <strong>의미 있는 단위로 분리</strong> 하는 게 좋다. 이 <em>쪼개는 작업</em> 마저 <strong>클로드에게 맡길</strong> 수 있다. 강의에선 변경분을 <strong>5개 커밋 단위</strong> 로 나눠 정리한다. <em>나중에
+이력을 읽기</em> 좋은, <em>깔끔한 히스토리</em> 가 남는다.</p>
+<h3>마무리 — <code>/init</code>로 마침표</h3>
+<p>마지막으로 <a href="/claude-code-%EC%8A%AC%EB%9E%98%EC%8B%9C-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EB%8B%A8%EC%B6%95%ED%82%A4"><code>/clear</code></a>로 컨텍스트를 비운 뒤, <strong><a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9"><code>/init</code></a></strong> 으로
+<strong><a href="/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC"><code>CLAUDE.md</code></a></strong> 를 생성한다. <em>지금 완성된</em> 기술 스택·프로젝트 구조·컴포넌트 패턴이 <em>그대로</em> 담긴다. 이것도 <em>커밋</em> 하면 끝이다.</p>
+<p>이로써 <strong>공식 문서 섹션</strong> 의 큰 흐름이 마무리된다. 강의가 권하는 <em>접근 방식</em> 은 이렇다.</p>
+<blockquote>
+<p>처음부터 클로드에게 <em>세팅을 통째로</em> 맡기는 것도 좋지만, <strong>주요 기술 스택 설치</strong> 만큼은 <em>공식 문서를 참고해 직접</em> 하고 — 이후 <strong><code>/init</code></strong> 으로 초기화한 뒤 개발을 시작하세요.</p>
+</blockquote>
+<p><em>개발 경험이 있다면</em> 직접 할 부분은 <em>효율적으로</em>, <em>경험이 없더라도</em> <strong>설치만큼은 공식 문서대로</strong> 정확하게 — 이게 <a href="/claude-code-starter-kit-%EB%A7%8C%EB%93%A4%EA%B8%B0-ai-%ED%99%9C%EC%9A%A9">AI 활용</a>과 <em>공식 문서</em>
+두 길을 모두 거친 <em>결론</em> 이다.</p>
+<h3>정리하며</h3>
+<p>Playwright MCP 자동화 테스트를 정리하면 다음과 같다.</p>
+<ul>
+<li><strong>Playwright</strong> = 브라우저 자동화 도구 → <strong>Playwright MCP</strong> = 클로드가 <em>브라우저를 직접 제어</em> 하게 잇는 <a href="/claude-code-mcp-%ED%99%9C%EC%9A%A9">MCP 서버</a></li>
+<li><strong>설치</strong> → <code>claude mcp add playwright -s project -- npx @playwright/mcp@latest</code> → <strong><code>.mcp.json</code></strong>(팀 공유)</li>
+<li>⭐ <strong>오류 해결 4단계</strong> → <em>수집 → 분석 → 해결 → 테스트·반복</em> (오류 없을 때까지 <strong>루프</strong>)</li>
+<li><strong>시연</strong> → 예제 페이지 오류를 <em>클로드가 직접</em> 확인·수정 (<code>hooks</code>·<code>Select</code>)</li>
+<li><strong>커밋</strong> → <em>의미 있는 단위</em> 로 분리 (강의는 5개) — 분리도 클로드에게</li>
+<li><strong>마무리</strong> → <code>/clear</code> → <code>/init</code> 로 <code>CLAUDE.md</code> 생성 → 커밋</li>
+<li><strong>결론</strong> → <em>주요 스택은 공식 문서로 직접</em>, 이후 <code>/init</code> → 개발</li>
+</ul>
+<p>스크린샷을 <em>사람이</em> 찍어주던 단계를 지나, 이제 클로드가 <strong>스스로 브라우저를 열어 테스트하고 고친다.</strong> Playwright MCP는 <em>AI 개발 워크플로우</em> 의 <strong>마지막 퍼즐</strong> — <em>손과 눈</em> 을 달아주는
+조각이다. 이렇게 우리만의 <strong>Next.js 스타터 킷</strong> 이, <em>AI와 함께</em> 완성되었다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.453125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABpUlEQVR42n1R21LCMBTkjTu0hV5oodhauUgLlgIjgoNXRv//g9ZsMNgy6sNOks2ePZuTkjecwLuaoedP0XGuMQhm8MNEng07hG4FYs0jlDDdG1gCphvB8sYIRimi6Qql5f6IbHtEunnDYvWCu/UrkuUT4vSA6eIRtwKT+V5gh3Gywyh+wGi2RZI9Y5EJXXYQte9Y3n8g3X6iVKvXUK/XUa1W0eu5cBwbzUZDckRD7Gu1k6bZbKLVask9OcWz9oSKMPy+IMrlsoQSVCoV6LqG+TxBFEVyT+7HoIp8PVEwVIkUmKjT6YjkPdi2Lffk8pp82oIhO7OASRzHgeu60iQIAgyHQ3nudrsYDAYSStNutwtJz4YkNU2D53lSTJimKdMp8GxZlrxjM66c6a+GKmEYhlKsnsnE/X7/3IDpqFFN/k3IbjTh05hE1/VzKq6GYcim1JAjONOCIQkFNeTLVf1onlPI1xMldlVg9zzIMRmfyM9hoktdsd4oGl6CT+ZPJkmCOI7lzMj9rc8ZUsjZ+L5//kU1J97x95mSpmxCDbUqtdbWsVkH+AJRAkPDOfRJwwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image03"
+        title=""
+        src="/static/3a49fcd84208ed2418e026e9b087f39d/2bef9/03.png"
+        srcset="/static/3a49fcd84208ed2418e026e9b087f39d/6f3f2/03.png 256w,
+/static/3a49fcd84208ed2418e026e9b087f39d/01e7c/03.png 512w,
+/static/3a49fcd84208ed2418e026e9b087f39d/2bef9/03.png 1024w,
+/static/3a49fcd84208ed2418e026e9b087f39d/71c1d/03.png 1536w,
+/static/3a49fcd84208ed2418e026e9b087f39d/a878e/03.png 2048w,
+/static/3a49fcd84208ed2418e026e9b087f39d/f7171/03.png 3456w"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/claude-code-starter-kit-만들기-공식문서/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-ff818955a1de859d5924.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-75c2152344fac4b713b4.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-78565492c3a65b2d6ab7.js\"],\"component---src-pages-posts-tsx\":[\"/component---src-pages-posts-tsx-65cbc1ecee4dce61c821.js\"],\"component---src-pages-resume-tsx\":[\"/component---src-pages-resume-tsx-b11ae0e66dac3e054b2b.js\"],\"component---src-template-post-tsx\":[\"/component---src-template-post-tsx-314f8aa0c628986192a4.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="23770794993c782db25d";</script><script src="/webpack-runtime-13de8ce50465c574b3ba.js" async></script><script src="/b633362c-a6d1ffa7df1757d4798c.js" async></script><script src="/63a121f2-6ad93db4c30b18feab58.js" async></script><script src="/3e15977f-53773e2dffc41bf34ca2.js" async></script><script src="/aec3edcd-5e780537c563d1d4df48.js" async></script><script src="/2425c7c2-f83e4512074bf2456d71.js" async></script><script src="/d0007318-2217dbf53a6a3d7d17db.js" async></script><script src="/cc76255b-3f6ee7c29ecc50d57b53.js" async></script><script src="/1593e758-9d0e09d4f454a0e7a58b.js" async></script><script src="/48aa8186-9b19ce887d4215513a85.js" async></script><script src="/d265142c-0cd45e2c253ccc507fee.js" async></script><script src="/47ad6cec-fc505efda34767a45e10.js" async></script><script src="/app-ff818955a1de859d5924.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
