@@ -1,0 +1,297 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui"/><meta name="generator" content="Gatsby 5.16.1"/><meta data-react-helmet="true" name="description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="image" content="https://sungbin.kr/static/0c1c2e37eb2d69a94839e0f64e5c9d39/banner.png"/><meta data-react-helmet="true" property="og:url" content="https://sungbin.kr/claude-code-이벤트-관리-앱-시작하기/"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="[Claude Code] 이벤트 관리 앱 - 시작하기"/><meta data-react-helmet="true" property="og:description" content="양성빈의 블로그"/><meta data-react-helmet="true" property="og:image" content="https://sungbin.kr/static/0c1c2e37eb2d69a94839e0f64e5c9d39/banner.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="[Claude Code] 이벤트 관리 앱 - 시작하기"/><meta data-react-helmet="true" name="twitter:description" content="양성빈의 블로그"/><meta data-react-helmet="true" name="twitter:image" content="https://sungbin.kr/static/0c1c2e37eb2d69a94839e0f64e5c9d39/banner.png"/><meta data-react-helmet="true" name="google-site-verification" content="1PmwbFiy4YMimCQ6EmhZyUp2c7m23NNnr5NQRRXwQzM"/><style data-href="/styles.225c8d7d6398aeb4f3bd.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Sungbin&#x27;s Blog RSS Feed" href="/rss.xml"/><title data-react-helmet="true">[Claude Code] 이벤트 관리 앱 - 시작하기 · Sungbin</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-8854437638395695",
+                enable_page_level_ads: true
+              });
+          </script><link rel="icon" href="/favicon-32x32.png?v=64afaa923d984d8eeb697e501bbca8ed" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="36x36" href="/favicons/android-icon-36x36.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="48x48" href="/favicons/android-icon-48x48.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/android-icon-72x72.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="96x96" href="/favicons/android-icon-96x96.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/android-icon-144x144.png?v=64afaa923d984d8eeb697e501bbca8ed"/><link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png?v=64afaa923d984d8eeb697e501bbca8ed"/></head><body><div id="___gatsby"><style data-emotion="css-global 19c91lz">@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');:root{--font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;--code-font-family:Menlo,'DM Mono','Roboto Mono',Courier New,monospace;--scrollbar-background:#1e1e1e;--scrollbar-thumb:#666;--scrollbar-thumb-highlight:#9195F6;}html{font-size:16px;height:100%;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb-highlight) var(--scrollbar-background);}@media screen and (max-width: 1024px){html{font-size:14px;}}html::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}html::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb-highlight);border-radius:0;}html,body{font-family:var(--font-family)!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:1rem;}div,article,section{box-sizing:border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:1rem;font:inherit;vertical-align:baseline;}label,input,button,a{-webkit-tap-highlight-color:transparent;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}string{font-weight:600!important;}</style><style data-emotion="css pyz3l8">.css-pyz3l8{-webkit-transition:opacity 0.2s ease;transition:opacity 0.2s ease;opacity:0;}</style><div class="css-pyz3l8 e1l8l1ek0"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><style data-emotion="css 1azakc">.css-1azakc{text-align:center;}</style><header class="css-1azakc ebd5ed87"><style data-emotion="css 1j1kikd">.css-1j1kikd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;}@media screen and (max-width: 1024px){.css-1j1kikd{padding:1.5rem 1rem;}}</style><div class="css-1j1kikd ebd5ed86"><style data-emotion="css 1cdt2kf">.css-1cdt2kf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;padding:0 1.5rem;}.css-1cdt2kf>h1{text-align:left;}</style><div class="css-1cdt2kf ebd5ed81"><style data-emotion="css 1gw8sdl">.css-1gw8sdl{color:inherit;font-size:2.5rem;line-height:1.5;font-weight:800;}white-space:nowrap;strong,bold{font-weight:800;}</style><h1 size="40" class="css-1gw8sdl eye3s1s1">[Claude Code] 이벤트 관리 앱 - 시작하기</h1><style data-emotion="css 1ixtmro">.css-1ixtmro{margin-left:calc(1.5rem - 1px);margin-top:calc(1.5rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css lc9od6">.css-lc9od6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.css-lc9od6>*:not(:first-of-type){margin-left:calc(0.5 * 1rem);}</style><div wrap="wrap" class="css-lc9od6 e9vu7as0"><style data-emotion="css 9xks5q">.css-9xks5q{display:inline-block;vertical-align:middle;border-radius:16px;font-weight:500;line-height:1;cursor:inherit;font-feature-settings:tnum;font-variant:tabular-nums;text-transform:capitalize;white-space:nowrap;background:#000;color:#ffffff;border:1px solid #000;padding:3px 10px;font-size:1rem;}</style><span type="primary" class="css-9xks5q e1tg7sbi0">#<!-- -->claude</span></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 715507">.css-715507{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}@media screen and (max-width: 1024px){.css-715507{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}}</style><div class="css-715507 ebd5ed85"><style data-emotion="css 1u6n871">.css-1u6n871{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}</style><div class="css-1u6n871 ebd5ed84"><style data-emotion="css zdebxm">.css-zdebxm{color:inherit;font-size:1rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="16" class="css-zdebxm eye3s1s1">Written by <a href="/">Sungbin</a></span><style data-emotion="css 69wa56">.css-69wa56{margin-left:calc(1.5rem - 1px);margin-top:calc(0.375rem - 1px);width:1px;height:1px;min-width:1px;min-height:1px;}</style><span x="1" y="0.25" class="css-69wa56 ez28pf0"></span><style data-emotion="css 4f3fw3">.css-4f3fw3{color:inherit;font-size:0.875rem;line-height:1.5;}white-space:nowrap;strong,bold{font-weight:800;}</style><span size="14" class="css-4f3fw3 eye3s1s1">2026년 6월 25일<!-- --> · <!-- -->7<!-- --> min read</span></div><style data-emotion="css 1yvy03y">.css-1yvy03y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:0.5rem;margin-bottom:1.5rem;}</style><div class="css-1yvy03y ebd5ed83"><style data-emotion="css 18zu07s">.css-18zu07s{position:relative;}.css-18zu07s:hover>div:last-of-type{opacity:1;}</style><div class="css-18zu07s emo2hur2"><style data-emotion="css cssveg">.css-cssveg{position:relative;}</style><div class="css-cssveg emo2hur1"><style data-emotion="css 7a8mbj">.css-7a8mbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30px;height:30px;outline:none;border:none;border-radius:15px;cursor:pointer;padding:0;background:#000;color:#ffffff;}</style><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></button></div></div><div class="css-18zu07s emo2hur2"><div class="css-cssveg emo2hur1"><button class="css-7a8mbj ebd5ed82"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg></button></div></div></div></div></div><span x="1" y="1" class="css-1ixtmro ez28pf0"></span><style data-emotion="css 1d3w5wq">.css-1d3w5wq{width:100%;}</style><div class="css-1d3w5wq ebd5ed80"><style data-emotion="css a1pnd7">.css-a1pnd7{text-align:left;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;padding:1.5rem;box-shadow:0 5px 10px rgba(0, 0, 0, 0.12);border-radius:5px;border:none;}</style><div class="css-a1pnd7 e1xjf9tq6"><style data-emotion="css b54kzr">.css-b54kzr{font-weight:600;font-size:1.25rem;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;margin-top:0;margin-bottom:0;}</style><h3 class="css-b54kzr e1xjf9tq5"><style data-emotion="css 16yxw0r">.css-16yxw0r{width:100%;margin-bottom:0;margin-top:0;border:unset;background:unset;padding:unset;margin:unset;font:unset;text-align:unset;-webkit-appearance:unset;-moz-appearance:unset;-ms-appearance:unset;appearance:unset;}</style><button class="css-16yxw0r e1xjf9tq3"><style data-emotion="css ml2823">.css-ml2823{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;cursor:pointer;vertical-align:baseline;padding:1.5rem 0;color:#000;}</style><span class="css-ml2823 e1xjf9tq2">claude<style data-emotion="css mzobh8">.css-mzobh8{-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><span class="css-mzobh8 e1xjf9tq1"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision"><path d="M18 15l-6-6-6 6"></path></svg></span></span></button><style data-emotion="css 153tcrd">.css-153tcrd{font-size:0.75rem;font-weight:400;letter-spacing:normal;margin-bottom:0;display:block;color:#666;}</style><span class="css-153tcrd e1xjf9tq4">시리즈의 글 (25개)</span></h3><style data-emotion="css 10lbtih">.css-10lbtih{font-size:1rem;line-height:26px;overflow-y:hidden;will-change:height;-webkit-transition:height 0.2s ease;transition:height 0.2s ease;}.css-10lbtih>div{margin:1rem 0;}</style><div class="css-10lbtih e1xjf9tq0"><div><style data-emotion="css 6z6c3m">.css-6z6c3m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:1px;max-width:100%;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;box-sizing:border-box;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.css-6z6c3m>section,.css-6z6c3m>div,.css-6z6c3m>article,.css-6z6c3m>header,.css-6z6c3m>footer{gap:calc(1 * 1rem);}.css-6z6c3m:last-of-type{margin-bottom:0;}</style><div class="css-6z6c3m e9vu7as0"><style data-emotion="css 1o02nna">.css-1o02nna{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;list-style:decimal;}</style><ol class="css-1o02nna e1k9d3a01"><style data-emotion="css 13selu">.css-13selu{margin-bottom:0.5rem;}.css-13selu::marker{font-weight:600;color:#9195F6;}.css-13selu::after{content:'- 10분';margin-left:0.2rem;font-size:0.8rem;}.css-13selu>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13selu>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13selu e1k9d3a00"><span>[Claude Code] 시작하기 전에</span></li><style data-emotion="css 2r5mz2">.css-2r5mz2{margin-bottom:0.5rem;}.css-2r5mz2::marker{font-weight:600;color:#9195F6;}.css-2r5mz2::after{content:'- 5분';margin-left:0.2rem;font-size:0.8rem;}.css-2r5mz2>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-2r5mz2>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-2r5mz2 e1k9d3a00"><span>[Claude Code] 터미널 익숙해지기</span></li><li class="css-13selu e1k9d3a00"><span>[Claude Code] 개발환경 및 클로드 코드 설치</span></li><style data-emotion="css kco6hv">.css-kco6hv{margin-bottom:0.5rem;}.css-kco6hv::marker{font-weight:600;color:#9195F6;}.css-kco6hv::after{content:'- 8분';margin-left:0.2rem;font-size:0.8rem;}.css-kco6hv>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-kco6hv>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-kco6hv e1k9d3a00"><span>[Claude Code] 클로드 코드 맛보기  및 초기화</span></li><style data-emotion="css iuahyr">.css-iuahyr{margin-bottom:0.5rem;}.css-iuahyr::marker{font-weight:600;color:#9195F6;}.css-iuahyr::after{content:'- 12분';margin-left:0.2rem;font-size:0.8rem;}.css-iuahyr>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-iuahyr>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-iuahyr e1k9d3a00"><span>[Claude Code] Cursor AI IDE 통합</span></li><style data-emotion="css 1f0z9r6">.css-1f0z9r6{margin-bottom:0.5rem;}.css-1f0z9r6::marker{font-weight:600;color:#9195F6;}.css-1f0z9r6::after{content:'- 19분';margin-left:0.2rem;font-size:0.8rem;}.css-1f0z9r6>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1f0z9r6>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1f0z9r6 e1k9d3a00"><span>[Claude Code] 클로드 코드 권한</span></li><style data-emotion="css tupxoa">.css-tupxoa{margin-bottom:0.5rem;}.css-tupxoa::marker{font-weight:600;color:#9195F6;}.css-tupxoa::after{content:'- 17분';margin-left:0.2rem;font-size:0.8rem;}.css-tupxoa>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-tupxoa>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-tupxoa e1k9d3a00"><span>[Claude Code] 슬래시 명령어와 단축키</span></li><style data-emotion="css ovkdog">.css-ovkdog{margin-bottom:0.5rem;}.css-ovkdog::marker{font-weight:600;color:#9195F6;}.css-ovkdog::after{content:'- 6분';margin-left:0.2rem;font-size:0.8rem;}.css-ovkdog>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ovkdog>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ovkdog e1k9d3a00"><span>[Claude Code] Git과 GitHub</span></li><style data-emotion="css 1ap6lfi">.css-1ap6lfi{margin-bottom:0.5rem;}.css-1ap6lfi::marker{font-weight:600;color:#9195F6;}.css-1ap6lfi::after{content:'- 11분';margin-left:0.2rem;font-size:0.8rem;}.css-1ap6lfi>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1ap6lfi>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1ap6lfi e1k9d3a00"><span>[Claude Code] 설정 파일과 메모리 관리</span></li><style data-emotion="css 1hda2e5">.css-1hda2e5{margin-bottom:0.5rem;}.css-1hda2e5::marker{font-weight:600;color:#9195F6;}.css-1hda2e5::after{content:'- 4분';margin-left:0.2rem;font-size:0.8rem;}.css-1hda2e5>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-1hda2e5>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-1hda2e5 e1k9d3a00"><span>[Claude Code] MCP 활용</span></li><li class="css-kco6hv e1k9d3a00"><span>[Claude Code] 모던 기술스택과 개발 워크플로우</span></li><style data-emotion="css 13xotzt">.css-13xotzt{margin-bottom:0.5rem;}.css-13xotzt::marker{font-weight:600;color:#9195F6;}.css-13xotzt::after{content:'- 7분';margin-left:0.2rem;font-size:0.8rem;}.css-13xotzt>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-13xotzt>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-13xotzt e1k9d3a00"><span>[Claude Code] Starter Kit 만들기 - AI 활용</span></li><style data-emotion="css ikk1gw">.css-ikk1gw{margin-bottom:0.5rem;}.css-ikk1gw::marker{font-weight:600;color:#9195F6;}.css-ikk1gw::after{content:'- 9분';margin-left:0.2rem;font-size:0.8rem;}.css-ikk1gw>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-ikk1gw>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-ikk1gw e1k9d3a00"><span>[Claude Code] Starter Kit 만들기 - 공식문서</span></li><li class="css-1hda2e5 e1k9d3a00"><span>[Claude Code] 클로드 코드 고급 - 커스텀 커맨드</span></li><li class="css-1hda2e5 e1k9d3a00"><span>[Claude Code] 클로드 코드 고급 - 서브 에이전트</span></li><li class="css-13xotzt e1k9d3a00"><span>[Claude Code] 클로드 코드 고급 - 훅(hook)</span></li><style data-emotion="css rweb5b">.css-rweb5b{margin-bottom:0.5rem;}.css-rweb5b::marker{font-weight:600;color:#9195F6;}.css-rweb5b::after{content:'- 3분';margin-left:0.2rem;font-size:0.8rem;}.css-rweb5b>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-rweb5b>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-rweb5b e1k9d3a00"><span>[Claude Code] MCP 서버 설치</span></li><li class="css-2r5mz2 e1k9d3a00"><span>[Claude Code] Notion 기반 온라인 견적서 - 시작하기</span></li><li class="css-ovkdog e1k9d3a00"><span>[Claude Code] 작업 관리 도구</span></li><li class="css-2r5mz2 e1k9d3a00"><span>[Claude Code] 로드맵(ROADMAP.md) 만들기</span></li><li class="css-ovkdog e1k9d3a00"><span>[Claude Code] Shrimp Task Manager 도입</span></li><style data-emotion="css zsnwin">.css-zsnwin{margin-bottom:0.5rem;}.css-zsnwin::marker{font-weight:600;color:#9195F6;}.css-zsnwin::after{content:'- 13분';margin-left:0.2rem;font-size:0.8rem;}.css-zsnwin>span{cursor:pointer;border-bottom:2px solid #9195F6;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#000;-webkit-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}.css-zsnwin>span:hover{background:#9195F6;border-top:2px solid #9195F6;color:#ffffff;}</style><li class="css-zsnwin e1k9d3a00"><span>[Claude Code] MVP 개발 및 배포</span></li><li class="css-ovkdog e1k9d3a00"><span>[Claude Code] 관리자 기능 확장</span></li><li class="css-zsnwin e1k9d3a00"><span>[Claude Code] Supabase 어플리케이션 시작하기</span></li><li class="css-13xotzt e1k9d3a00"><span>[Claude Code] 이벤트 관리 앱 - 시작하기</span></li></ol></div></div></div></div></div></div></header><div><style data-emotion="css 3ypioh">.css-3ypioh{width:100%;max-width:900px;padding:2rem;margin-left:auto;margin-right:auto;width:calc(100vw - 400px);}@media screen and (max-width: 1024px){.css-3ypioh{padding:1rem;}}@media screen and (max-width: 1308px){.css-3ypioh{width:calc(100vw - 408px);}}@media screen and (max-width: 1024px){.css-3ypioh{width:calc(100vw - 8px);}}.css-3ypioh p>img{width:100%;}.css-3ypioh p{color:#111;font-weight:400;line-height:1.6;letter-spacing:-0.02rem;}.css-3ypioh p,.css-3ypioh table,.css-3ypioh ul,.css-3ypioh blockquote,.css-3ypioh ol{font-size:1rem;margin:0 0 2rem;}.css-3ypioh table{width:100%!important;max-width:100%!important;border-collapse:collapse!important;border-spacing:0!important;border-radius:8px!important;overflow:hidden!important;box-shadow:none!important;border:1px solid #EAEAEA!important;background:#ffffff!important;display:table!important;table-layout:auto!important;}.css-3ypioh table thead tr{background:#EAEAEA!important;}.css-3ypioh table th{padding:12px 16px!important;color:#000!important;font-weight:600!important;text-align:left!important;border:none!important;border-bottom:2px solid #999!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table td{padding:10px 16px!important;color:#111!important;text-align:left!important;border:none!important;border-bottom:1px solid #EAEAEA!important;font-size:0.9rem!important;line-height:1.5!important;background:transparent!important;}.css-3ypioh table tbody tr{background:#ffffff!important;-webkit-transition:background 0.15s ease!important;transition:background 0.15s ease!important;}.css-3ypioh table tbody tr:nth-of-type(even){background:#FAFAFA!important;}.css-3ypioh table tbody tr:hover{background:#EAEAEA!important;}.css-3ypioh table tbody tr:last-of-type td{border-bottom:none!important;}.css-3ypioh table th[style],.css-3ypioh table td[style]{color:inherit!important;background:inherit!important;}.css-3ypioh table tr[style]{background:inherit!important;}.css-3ypioh center{color:#666;font-size:0.8rem;font-weight:400;line-height:1.5;letter-spacing:-0.02rem;margin:0 0 2rem;}.css-3ypioh p+center,.css-3ypioh iframe+center{margin-top:-1rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{position:relative;color:#000;line-height:1.2;scroll-margin-top:60px;letter-spacing:-0.02rem;font-weight:600;background:none;}.css-3ypioh h1>a,.css-3ypioh h2>a,.css-3ypioh h3>a,.css-3ypioh h4>a,.css-3ypioh h5>a{color:#000;opacity:0;border:none;position:absolute;top:50%;left:0;-webkit-transform:translate(-100%, -50%);-moz-transform:translate(-100%, -50%);-ms-transform:translate(-100%, -50%);transform:translate(-100%, -50%);padding-right:4px;}.css-3ypioh h1:hover>a,.css-3ypioh h2:hover>a,.css-3ypioh h3:hover>a,.css-3ypioh h4:hover>a,.css-3ypioh h5:hover>a{color:#000;background:none;border:none;opacity:1;}.css-3ypioh h2:not(:first-of-type),.css-3ypioh h3:not(:first-of-type),.css-3ypioh h4:not(:first-of-type){margin-top:3rem;}.css-3ypioh h1,.css-3ypioh h2,.css-3ypioh h3,.css-3ypioh h4,.css-3ypioh h5{margin:0 0 1.25rem;}.css-3ypioh h1,.css-3ypioh h2{font-size:1.8rem;-webkit-filter:brightness(1);filter:brightness(1);}.css-3ypioh h3{font-size:1.4rem;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-3ypioh h4{-webkit-filter:brightness(1.5);filter:brightness(1.5);font-size:1.1rem;padding-bottom:0.25rem;text-transform:uppercase;}.css-3ypioh ul,.css-3ypioh ol{padding-left:1.5rem;box-sizing:border-box;line-height:1.6;}.css-3ypioh ul ul,.css-3ypioh ol ul{margin-top:8px;}.css-3ypioh ul ul,.css-3ypioh ol ul,.css-3ypioh ul ol,.css-3ypioh ol ol{margin-bottom:0;}.css-3ypioh ul{list-style:disc;}.css-3ypioh ol{list-style:decimal;}.css-3ypioh ul li{margin-bottom:0.5rem;}.css-3ypioh ul li::marker{font-weight:600;color:#9195F6;}.css-3ypioh ol li{margin-bottom:0.5rem;}.css-3ypioh ol li::marker{font-weight:600;color:#9195F6;}.css-3ypioh li>a{white-space:inherit;word-wrap:break-word;}.css-3ypioh li{color:#000;}.css-3ypioh li code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh li code * span{white-space:inherit;}.css-3ypioh li code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh iframe{margin-bottom:2rem;}.css-3ypioh div[class*='markdown-wrapper']{font-size:0.9rem;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;margin:1rem -1rem;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;scrollbar-width:8px;scrollbar-color:var(--scrollbar-thumb) var(--scrollbar-background);}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar{background:var(--scrollbar-background);height:8px;width:8px;}.css-3ypioh div[class*='markdown-wrapper']::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:0;}@media screen and (min-width: 1350px){.css-3ypioh div[class*='markdown-wrapper']{margin-left:-3.5rem;margin-right:-3.5rem;margin-bottom:2rem;}}@media screen and (max-width: 1024px){.css-3ypioh div[class*='markdown-wrapper']{padding-left:1rem;}}.css-3ypioh pre{border-radius:0;float:left;margin-bottom:0;margin-top:0;min-width:calc(100% + 1rem);padding:1rem 1rem 1rem 0;-webkit-font-smoothing:subpixel-antialiased;overflow:initial;white-space:pre;font-family:var(--code-font-family);word-wrap:normal;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;tab-size:2;word-break:normal;word-spacing:normal;}.css-3ypioh pre>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh pre>code * span{white-space:inherit;}.css-3ypioh pre>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh .line-numbers-rows{padding-left:1em;padding-top:1em;}.css-3ypioh p>code{font-weight:600;color:#9195F6;white-space:inherit;}.css-3ypioh p>code * span{white-space:inherit;}.css-3ypioh p>code * span:not([class='grvsc-source']){padding-left:0!important;}.css-3ypioh img[class='gatsby-resp-image-image']{box-shadow:none!important;}.css-3ypioh img[class='gatsby-resp-image-image'][alt]:after{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;background:#ffffff;font-weight:200;content:'이미지를 표시할 수 없어요. :(';}.css-3ypioh blockquote{background:#EAEAEA;margin:0 -1rem;margin-bottom:2rem;padding:1rem 1rem;border-left:6px solid #9195F6;}.css-3ypioh blockquote>p{margin-bottom:0;}@media screen and (min-width: 1350px){.css-3ypioh blockquote{margin-left:-3.5rem;margin-right:-3.5rem;}}@media screen and (max-width: 1024px){.css-3ypioh blockquote{padding-left:1rem;}}</style><section class="css-3ypioh e17f2jor0"><blockquote>
+<p>해당 포스팅은 <a href="https://inf.run/vN55k">클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지</a>를 참조하여 작성하였습니다.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABM0lEQVR42mO4meb6HytOd4PgNDckcZiYK07MgEviRpIDENv/v5Hs9P9GitP/m0B8IxEolmgP4RNvoBtQg/P/B82Z/x91Ff6/Wxbx/3au7/9b2d7/79cl/X/QmPb/Vo4vCQYCvXQj1fn/q1XT/z+b3fr//f6N/98f3Pz//d71/z8e2wXEu/+/WDIR7FJs3sfqZZAL75ZFgl0HctX92sT/96rj/t+rigXiuP93SsL+3wRaSnwYglyZYAc28E5h0P/riXb/7xSH/L9TFAw26EaSI4mRkg4Jx5crpgK93fb//b4N/z8c2vL/45Ed/58v6Pl/HWjZzXR3EmMZaCDImw+aM4CRU/D/UWfB/4ftuWBXQ2LZjTQDwRiUZJIdIUkFhIFJ6WaqC3npEDlx3wJ6D4TB3iSQsAEfowVVIr8OEAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="banner"
+        title=""
+        src="/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png"
+        srcset="/static/0c1c2e37eb2d69a94839e0f64e5c9d39/6f3f2/banner.png 256w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/01e7c/banner.png 512w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png 700w"
+        sizes="(max-width: 700px) 100vw, 700px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h2>이벤트 관리 앱 아이디어</h2>
+<p>이번 프로젝트에서는 Claude Code를 활용해 <strong>이벤트 관리 웹 애플리케이션</strong>을 만들어 봅니다. 본격적으로 코드를 작성하기 전에, 먼저 "왜 이 프로젝트를 선택했는지" 그 배경부터 짚고 넘어가려 합니다.
+아이디어를 어떻게 잡느냐가 학습의 재미와 동기 부여에 생각보다 큰 영향을 주기 때문입니다.</p>
+<h3>왜 투두리스트나 블로그가 아닐까?</h3>
+<p>새로운 기술을 배울 때 가장 흔하게 만드는 예제는 투두리스트, 블로그, 게시판입니다. 익숙하고 만들기 쉽다는 장점이 있지만, 한편으로는 <strong>이미 너무 많이 만들어 봐서 동기가 떨어지기 쉽다</strong>는 단점도 있습니다.</p>
+<blockquote>
+<p>"투두리스트나 블로그, 게시판 이러한 프로젝트를 진행하면 동기가 조금 저하될 수 있을 것 같아서요."</p>
+</blockquote>
+<p>그래서 이번에는 조금 다른 접근을 해봅니다. 거창한 서비스가 아니라, <strong>내가 일상에서 실제로 겪은 불편함을 개선하는 아이디어</strong>에서 출발하는 것입니다. 자신이 직접 느낀 문제를 해결하는 프로젝트는 자연스럽게
+몰입도가 높아지고, 그만큼 Claude Code를 학습하는 과정도 훨씬 즐거워집니다.</p>
+<h3>어떤 불편함에서 시작했나</h3>
+<p>이 아이디어는 강사가 평소 모임을 자주 주최하면서 겪은 경험에서 출발합니다. 모임을 직접 열어 본 사람이라면 누구나 공감할 만한 불편함들이 있습니다.</p>
+<ul>
+<li><strong>참석자 관리</strong>: 누가 오는지, 몇 명이 오는지 일일이 챙기기 번거롭습니다.</li>
+<li><strong>공지 전달</strong>: 장소나 시간이 바뀔 때마다 여러 채널로 다시 알려야 합니다.</li>
+<li><strong>참여 여부 확인</strong>: "갈게요 / 안 갈게요"를 메신저로 받다 보면 집계가 흩어집니다.</li>
+<li><strong>비용 정산</strong>: 모임이 끝난 뒤 정산까지 신경 써야 하는 일이 많습니다.</li>
+</ul>
+<p>이런 반복적인 불편함을 하나의 웹 애플리케이션으로 묶어 해결해 보자는 것이 이번 프로젝트의 출발점입니다.</p>
+<h3>이벤트 관리 앱은 어떤 기능을 가질까</h3>
+<p>구체적으로 그려 본 핵심 사용 흐름은 다음과 같습니다.</p>
+<ol>
+<li><strong>이벤트 생성</strong>: 제목, 설명, 장소, 시간, 이미지 등을 입력해 새 이벤트를 만듭니다.</li>
+<li><strong>초대장 공유</strong>: 생성된 이벤트의 공유 링크를 통해 지인들에게 초대장을 전달합니다.</li>
+<li><strong>참여 확인</strong>: 초대받은 사람은 간략한 이벤트 내용과 참여자 목록을 확인하고, '참여하기' 버튼으로 참석 의사를 밝힙니다.</li>
+<li><strong>대시보드 &#x26; 정산(확장)</strong>: 더 나아가면 대시보드를 통한 데이터 관리나 비용 정산 기능까지 확장할 수 있습니다.</li>
+</ol>
+<p>즉, <strong>초대장 발송부터 참여자 관리, 정산까지</strong> 모임 주최의 전 과정을 하나의 앱에서 처리하는 그림입니다.</p>
+<h3>진짜 목표는 'AI 워크플로우' 학습</h3>
+<p>여기서 한 가지 분명히 짚고 넘어갈 점이 있습니다. 이 프로젝트의 목적은 완성도 높은 실제 서비스를 만드는 것이 <strong>아닙니다</strong>.</p>
+<blockquote>
+<p>"하지만 이번 프로젝트에서 중요한 건 Claude Code를 통한 AI 워크플로우죠."</p>
+</blockquote>
+<p>아이디어 자체의 시장성이나 실효성보다, <strong>Claude Code를 활용해 아이디어를 구체화하고 구현해 나가는 AI 개발 워크플로우를 익히는 것</strong>이 핵심입니다. 그러니 아이디어가 다소 투박하거나 상업적으로 완벽하지
+않더라도 그 점은 감안하고 봐주시면 됩니다.</p>
+<blockquote>
+<p>"그렇기 때문에 이러한 아이디어가 실효성이 없어 보여도 이러한 건 감안을 해주시고요."</p>
+</blockquote>
+<h3>정리하며</h3>
+<p>이번 챕터의 메시지를 한 문장으로 요약하면 이렇습니다.</p>
+<blockquote>
+<p><strong>거창하지 않아도 좋으니, 일상 속 작은 불편함을 개선하는 아이디어에서 출발하자.</strong></p>
+</blockquote>
+<p>자신이 직접 겪은 문제를 소재로 삼으면 학습 동기가 살아나고, 그 아이디어를 Claude Code로 구체화하는 과정 자체가 좋은 연습이 됩니다. 다음 챕터에서는 이 아이디어를 바탕으로 <strong>PRD와 ROADMAP을
+만들며</strong> 프로젝트를 본격적으로 구체화해 보겠습니다.</p>
+<h2>이벤트 관리 앱 PRD, ROADMAP 만들기</h2>
+<p>앞에서 아이디어를 잡았다면, 이제는 그 아이디어를 <strong>문서로 구체화</strong>할 차례입니다. 이번 챕터에서는 Claude Code를 활용해 이벤트 관리 앱의 **PRD(Product Requirements Document)
+** 와 <strong>ROADMAP</strong> 을 만들어 봅니다. 머릿속에만 있던 막연한 구상을 AI와의 대화를 통해 정리하고, 개발 순서까지 정해 보는 과정입니다.</p>
+<h3>AI를 '스타트업 기획자'로 세우기</h3>
+<p>가장 먼저 한 일은 AI에게 <strong>역할(Role)을 부여</strong>하는 것입니다. 단순히 "기획서 만들어줘"라고 던지는 대신, 어떤 관점에서 기획해 주길 바라는지 명확히 지정합니다.</p>
+<blockquote>
+<p>"당신은 최고의 스타트업 기획자입니다, 역할을 부여했고요."</p>
+</blockquote>
+<p>그리고 수영, 헬스, 친구 모임 등 다양한 모임에서 발생하는 <strong>공지·참여자 관리·카풀·정산</strong> 같은 복잡한 업무를 효과적으로 다룰 수 있는 웹 MVP 기획을 요청합니다. 이때 한 번에 결과물을 받기보다, *
+*단계별로 진행하며 필요한 것을 질문해 달라**고 요청하는 것이 핵심입니다. 이렇게 하면 plan 모드에서 AI가 스스로 빠진 부분을 채워 나갑니다.</p>
+<blockquote>
+<p>"그러면 plan 모드로 진행해 보도록 할게요."</p>
+</blockquote>
+<h3>질문과 답변으로 기획 구체화하기</h3>
+<p>요청을 받은 AI는 곧바로 문서를 쏟아내지 않고, 기획에 필요한 질문들을 먼저 던집니다.</p>
+<ul>
+<li>타겟 사용자는 누구인가?</li>
+<li>예상 모임 규모는 어느 정도인가?</li>
+<li>핵심 기능의 우선순위는 무엇인가?</li>
+<li>정산·카풀 기능은 어디까지 상세하게 구현할 것인가?</li>
+</ul>
+<p>이 질문들에 답하면서 기획이 점점 또렷해집니다. 이때 한 가지 중요한 원칙은 <strong>MVP의 복잡도를 낮추는 방향으로 답하는 것</strong>입니다. 처음부터 모든 기능을 욱여넣기보다, 최소 기능으로 빠르게 만들어 보고 반응을
+확인하는 편이 학습에도 실전에도 효율적이기 때문입니다.</p>
+<h3>PRD 문서 생성하기</h3>
+<p>기획이 정리되면, 이전 시간에 만들어 둔 <strong>PRD generator 서브 에이전트</strong>를 활용해 PRD 문서를 자동 생성합니다. 만약 원하는 화면 디자인이 있다면, 해당 UI를 캡처해 컨텍스트로 함께 제공할 수도
+있습니다.</p>
+<blockquote>
+<p>"만약에 이러한 UI처럼 모바일 퍼스트 UI/UX를 원한다면 해당 UI를 이렇게 캡처를 하셔서 Claude Code에게 이러한 UI가 반영되도록 컨텍스트로 제공해도 되죠."</p>
+</blockquote>
+<p>문서 생성은 <code>bypass permissions</code> 모드로 빠르게 진행합니다. 그 결과 <strong>'Gather'</strong> 라는 이름의 일회성 이벤트 관리 플랫폼 MVP를 위한 PRD 문서가 만들어집니다. 이 문서에는 사용자
+여정, 기능 명세, 핵심 기능 등이 <strong>표 형식으로 상세하게</strong> 정리되어 있어, 기획 내용을 한눈에 파악할 수 있습니다.</p>
+<h3>PRD 기반으로 ROADMAP 작성하기</h3>
+<p>PRD가 준비되면, 이번에는 <strong>Development Planner Agent</strong> 를 사용해 PRD를 기반으로 <code>roadmap.md</code> 파일을 작성합니다. 생성된 로드맵은 크게 다음과 같이 구성됩니다.</p>
+<ul>
+<li><strong>개요</strong>: 프로젝트의 간략한 요약</li>
+<li><strong>개발 워크플로우</strong>: 작업을 진행하는 방식</li>
+<li><strong>개발 로드맵</strong>: 단계별 실제 작업 목록</li>
+</ul>
+<p>로드맵의 작업 흐름은 대략 <strong>애플리케이션 골격 구축 → 프로젝트 구조 설정 → 타입 정의 → 더미 데이터를 이용한 UI/UX 완성 → 핵심 기능 순차 구현</strong> 순으로 짜여집니다.</p>
+<h3>로드맵 순서 다듬기</h3>
+<p>AI가 만들어 준 로드맵을 그대로 쓰지 않고, <strong>개발 효율을 고려해 순서를 손보는 과정</strong>도 중요합니다. 강의에서는 데이터베이스 스키마 및 Supabase 설정을 <strong>UI/UX 완성 이후</strong>로 미루도록 조정합니다.</p>
+<p>왜 그럴까요? 디자인이 따로 없는 상황이라면, <strong>정적인 페이지로라도 UI/UX를 먼저 빠르게 만들어 보는 것</strong>이 프로젝트 전체를 파악하는 데 유리하기 때문입니다. 화면을 직접 눈으로 본 뒤에 보완할 점을 추가하는
+편이, 문서만으로 진행하는 것보다 훨씬 직관적입니다.</p>
+<blockquote>
+<p>"왜냐하면 우리가 이러한 기획을 파일로 된 기획서로 진행했기 때문에, 정확히 와닿지 않을 수 있거든요."</p>
+</blockquote>
+<p>수정을 요청하면, 데이터베이스 스키마 설정과 Supabase 설정이 <strong>Phase 1의 첫 번째 태스크로 재배치</strong>된 것을 확인할 수 있습니다.</p>
+<h3>정리하며</h3>
+<p>이번 챕터에서는 아이디어를 두 개의 문서로 구체화했습니다.</p>
+<ol>
+<li><strong>PRD generator</strong> 로 제품 요구사항을 정리한 PRD 문서를 만들고,</li>
+<li><strong>Development Planner Agent</strong> 로 그 PRD를 실행 가능한 ROADMAP으로 변환한 뒤,</li>
+<li>개발 효율을 고려해 <strong>로드맵의 순서를 직접 다듬었습니다.</strong></li>
+</ol>
+<p>여기서 핵심은 AI를 단순한 코드 생성기가 아니라 <strong>기획자이자 설계자로 활용</strong>했다는 점입니다. 적절한 역할 부여와 질문-답변을 거치면, 막연한 아이디어도 빠르게 실행 가능한 계획으로 정리할 수 있습니다. 다음
+챕터에서는 이 로드맵을 바탕으로 본격적인 구현에 들어가 보겠습니다.</p>
+<h2>1인 개발자를 위한 아이디어 구체화: 린캔버스</h2>
+<p>PRD와 ROADMAP으로 '무엇을 어떻게 만들지'는 정리했습니다. 그런데 한발 물러서서 보면 또 다른 질문이 남습니다. <strong>"이 아이디어가 과연 비즈니스로서 의미가 있을까?"</strong> 1인 개발자에게 정말 유용한 도구,
+<strong>린캔버스(Lean Canvas)</strong> 가 바로 이 질문에 답하기 위한 것입니다.</p>
+<blockquote>
+<p>"안녕하세요, 이번 시간에는 1인 개발자 분들을 위해서 정말 유용한 도구 하나를 소개해 드리도록 할게요."</p>
+</blockquote>
+<h3>린캔버스란 무엇인가</h3>
+<p>1인 개발자는 다양한 아이디어를 제품으로 만들고 싶어 하지만, 막상 시작하려면 고민이 많아집니다. <strong>이 제품을 누가 쓸까? 수익은 어떻게 낼까? 혼자서 관리할 수 있을까?</strong> 이런 고민은 비즈니스의 모든 영역에
+걸쳐 있습니다.</p>
+<p>린캔버스는 이런 고민을 정리하도록 돕는 도구입니다. 쉽게 말하면 <strong>한 장짜리 사업 계획서</strong>입니다.</p>
+<blockquote>
+<p>"Lean Canvas는 쉽게 말해서 한 장짜리 사업 계획서라고 보시면 돼요."</p>
+</blockquote>
+<p>초기 창업자가 1페이지 분량으로 비즈니스 아이디어를 빠르고 효과적으로 구체화할 수 있도록 돕습니다. 두꺼운 사업 계획서를 몇 주에 걸쳐 쓰는 대신, 핵심 요소만 한 장에 압축해 <strong>빠르게 검증</strong>하는 것이
+목적입니다.</p>
+<h3>무엇을, 어떤 순서로 작성하나</h3>
+<p>린캔버스는 한 장의 문서에 고객이 겪는 문제, 그 문제를 해결하는 솔루션 등 비즈니스의 핵심 요소를 채워 넣으며 아이디어를 검증해 나갑니다.</p>
+<blockquote>
+<p>"이러한 한 장짜리 문서에 고객이 겪고 있는 문제, 그리고 이러한 문제를 내가 어떻게 해결할 수 있는지 솔루션 등 비즈니스를 하는 데 정말 중요한 요소를 이러한 Lean Canvas에 작성해가면서 비즈니스를
+검증하는 거죠."</p>
+</blockquote>
+<p>작성 순서가 중요합니다. <strong>고객이 시장에서 겪는 핵심 문제</strong>에서 출발해, <strong>타겟 고객</strong>을 정하고, 마지막으로 <strong>채널</strong>까지 순서대로 채워 나갑니다. 즉, 기능이나 솔루션이 아니라 <strong>'문제'에서 시작</strong>하는
+것이 핵심입니다.</p>
+<p>또 한 가지, 린캔버스는 한 번 작성하고 끝나는 문서가 아닙니다. <strong>주기적으로 업데이트하며</strong> 고객이 진짜 원하는 비즈니스로 다듬어 나가는 과정 그 자체입니다.</p>
+<h3>예시로 보는 린캔버스: 배달의민족</h3>
+<p>개념만으로는 와닿지 않으니, 익숙한 서비스인 <strong>배달의민족</strong>을 린캔버스로 풀어 보면 이해가 쉽습니다.</p>
+<table>
+<thead>
+<tr>
+<th>구성 요소</th>
+<th>배달의민족 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>고객 문제</strong></td>
+<td>기존 전단지는 보관이 어렵고, 주문할 가게나 메뉴를 찾기 어렵다 (사장님 입장에서는 전단지 절반이 버려진다)</td>
+</tr>
+<tr>
+<td><strong>타겟 고객</strong></td>
+<td>스마트폰에 익숙한 2030 사용자층</td>
+</tr>
+<tr>
+<td><strong>고유 가치 제안</strong></td>
+<td>음식 배달 업체 정보를 스마트폰으로 한 번에 제공</td>
+</tr>
+<tr>
+<td><strong>솔루션</strong></td>
+<td>음식점 확인, 앱 내 주문·결제, 리뷰를 통한 투명한 맛 확인</td>
+</tr>
+<tr>
+<td><strong>경쟁 우위</strong></td>
+<td>사용자 편의성에 맞춘 앱 개발, 20대를 타겟으로 한 마케팅</td>
+</tr>
+</tbody>
+</table>
+<p>이렇게 정리하면 <strong>시장 문제부터 타겟 고객, 해결책, 수익 구조까지</strong> 비즈니스의 핵심을 한눈에 파악할 수 있습니다.</p>
+<h3>린캔버스를 Claude Code와 연결하기</h3>
+<p>여기서 끝이 아닙니다. 작성한 린캔버스를 <strong>Claude Code에게 컨텍스트로 제공</strong>하면, AI가 우리 비즈니스를 한눈에 이해하게 만들 수 있습니다. 강의에서는 앞서 만든 <strong>PRD를 기반으로 린캔버스를
+작성하고, 이를 다시 Claude Code에게 제공</strong>해 비즈니스 맥락을 이해시키는 과정을 보여줍니다.</p>
+<p>문서(PRD·ROADMAP·린캔버스)가 쌓일수록 AI는 우리 프로젝트의 <strong>'무엇을'뿐 아니라 '왜'까지</strong> 이해하게 되고, 그만큼 더 정확한 결과물을 만들어 줍니다.</p>
+<h3>정리하며</h3>
+<p>이번 챕터의 메시지는 분명합니다.</p>
+<blockquote>
+<p><strong>1인 개발이나 창업을 꿈꾼다면, 아이디어를 빠르게 검증하기 위해 린캔버스를 직접 써보자.</strong></p>
+</blockquote>
+<p>린캔버스는 문제에서 출발해 한 장으로 비즈니스를 검증하는 가벼운 도구이며, 한 번에 완성하기보다 <strong>계속 다듬어 나가는 과정</strong>입니다. 그리고 이 문서를 Claude Code에 연결하면, AI가 비즈니스 맥락까지
+이해한 든든한 동료가 됩니다. 다음 챕터에서는 이렇게 다진 기획을 바탕으로 실제 작업 계획을 세워 보겠습니다.</p>
+<h2>Shrimp 초기화 및 작업 계획 세우기</h2>
+<p>기획(PRD·ROADMAP·린캔버스)이 끝났으니, 이제는 그 계획을 <strong>실제로 실행할 작업 단위로 쪼갤</strong> 차례입니다. 이번 챕터에서는 <strong>Shrimp Task Manager</strong>를 활용해 프로젝트를 초기화하고,
+로드맵을 바탕으로 작업 계획을 세운 뒤 서브 태스크까지 분할하는 과정을 살펴봅니다.</p>
+<blockquote>
+<p>"마찬가지로 <code>shrimp-task-manager</code>를 이용해서 개발을 진행해 보도록 하겠습니다."</p>
+</blockquote>
+<h3>프로젝트 초기화: <code>init project rules</code></h3>
+<p>가장 먼저 할 일은 Shrimp이 우리 프로젝트를 이해하도록 <strong>초기화</strong>하는 것입니다. Claude Code에서 <code>init project rules</code> 명령을 입력하면, Shrimp이 **프로젝트 전체 코드를 파악
+**한 뒤 태스크 매니저가 참고할 규칙 파일인 <code>shrimp-rules.md</code> 를 생성합니다.</p>
+<blockquote>
+<p>"그러면 우리 프로젝트 전체 코드를 파악해서 태스크 매니저가 참고할 수 있는 메모리 파일을 생성할 거예요."</p>
+</blockquote>
+<p>이 <code>shrimp-rules.md</code> 는 일종의 <strong>메모리 파일</strong>로, 이후 작업을 진행할 때 Claude Code가 프로젝트의 규칙과 맥락을 일관되게 참고하는 기준이 됩니다.</p>
+<h3>초기 작업 계획 세우기: <code>plan_task</code></h3>
+<p>초기화가 끝나면, 대화를 <code>clear</code> 로 한 번 정리한 뒤 본격적으로 작업 계획을 세웁니다. 이때 사용하는 명령이 <code>plan_task</code> 입니다.</p>
+<p>진행 흐름은 다음과 같습니다.</p>
+<ol>
+<li>앞서 만든 <strong>로드맵</strong>을 확인하고, 1단계 작업부터 계획합니다.</li>
+<li>이때 <strong>로드맵 파일을 컨텍스트로 추가</strong>해 Shrimp이 정확한 기준으로 계획을 세우게 합니다.</li>
+<li><code>list_tasks</code> 로 결과를 확인하면, 작업이 <strong>두 개의 작업으로 나뉘어</strong> 있는 것을 볼 수 있습니다.</li>
+</ol>
+<h3>작업 심층 분석과 서브 태스크 분할</h3>
+<p>여기서 Shrimp의 진가가 드러납니다. <code>plan_task</code> 외에도 다양한 도구가 있어, 단순히 작업을 나누는 것을 넘어 <strong>분석 → 검토 → 분할</strong>까지 이어집니다. MCP에서
+<code>shrimp-task-manager</code>의 스펙을 확인하면 주요 도구들을 볼 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>명령어</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>plan_task</code></td>
+<td>초기 작업 계획을 수립</td>
+</tr>
+<tr>
+<td><code>analyze_task</code></td>
+<td>계획된 태스크를 더 깊이 있게 분석</td>
+</tr>
+<tr>
+<td><code>reflect_task</code></td>
+<td>분석된 태스크를 검토하고 개선</td>
+</tr>
+<tr>
+<td><code>split_task</code></td>
+<td>태스크를 서브 태스크로 분할</td>
+</tr>
+<tr>
+<td><code>list_tasks</code></td>
+<td>현재 태스크 목록을 확인</td>
+</tr>
+</tbody>
+</table>
+<p>첫 번째 작업을 더 깊이 들여다보기 위해 <code>analyze_task</code> 를 실행하면 계획이 한층 정교해지고, 이어서 <code>reflect_task</code> 가 <strong>자동으로 실행되며</strong> 태스크를 검토·개선합니다. 강사도 직접 쪼개려던
+작업을 Shrimp이 알아서 처리하는 모습에 놀라움을 표합니다.</p>
+<blockquote>
+<p>"제가 쪼개려고 했는데, 스스로 똑똑하게 해당 작업까지 수행하고 있네요."</p>
+</blockquote>
+<p>마지막으로 <code>split_tasks</code> 를 실행하면 첫 번째 작업이 <strong>9개의 서브 태스크로 분할</strong>됩니다. 막연했던 1단계 작업이 실행 가능한 작은 단위로 쪼개지는 것입니다.</p>
+<h3>유연한 태스크 관리</h3>
+<p>Shrimp Task Manager의 핵심은 단순한 작업 분리 도구가 아니라는 점입니다.</p>
+<blockquote>
+<p>"이처럼 <code>shrimp-task-manager</code>를 이용하면 단순히 태스크를 분리하는 걸 넘어, 또다시 분석을 하고 작업을 검토하고 서브 태스크를 나누는 등, 유연하게 우리 태스크를 관리할 수 있죠."</p>
+</blockquote>
+<p>필요하다면 <code>split_tasks</code> 를 <strong>반복 사용</strong>해 더 잘게 나눌 수도 있고, Claude Code의 <strong>PLAN 모드</strong>를 활용해 작업 계획을 다시 짤 수도 있습니다. 상황에 맞게 분석·검토·분할을 오가며
+태스크를 다듬어 나갈 수 있는 것입니다.</p>
+<h3>정리하며</h3>
+<p>이번 챕터에서 진행한 흐름을 정리하면 다음과 같습니다.</p>
+<ol>
+<li><code>init project rules</code> 로 프로젝트를 초기화하고 <code>shrimp-rules.md</code> 를 생성하고,</li>
+<li><code>plan_task</code> 로 로드맵 기반 작업 계획을 세운 뒤,</li>
+<li><code>analyze_task</code> → <code>reflect_task</code> → <code>split_tasks</code> 로 심층 분석과 서브 태스크 분할을 수행했습니다.</li>
+</ol>
+<p>기획서가 '무엇을 만들지'였다면, Shrimp은 그것을 <strong>'지금 무엇부터 할지'로 바꿔 주는 도구</strong>입니다. 이렇게 작업이 작은 단위로 쪼개지면, 이제 Claude Code와 함께 하나씩 구현해 나갈 준비가 끝난
+셈입니다.</p></section></div><style data-emotion="css 1aem3cm">.css-1aem3cm{max-width:900px;width:100%;margin:0 auto;box-sizing:border-box;padding:0;}</style><div class="css-1aem3cm etanzsa0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8854437638395695" data-ad-slot="5104795204" data-ad-format="auto" data-full-width-responsive="true"></ins></div><section id="comments"></section><style data-emotion="css 1ylimja">.css-1ylimja{max-width:900px;width:100%;margin:4rem auto;box-sizing:border-box;padding:2rem 2rem;border-top:1px solid #EAEAEA;}.css-1ylimja>p{margin-bottom:1.5rem;font-size:1.8rem;color:#000;}.css-1ylimja>a{border:none!important;outline:none!important;-webkit-transition:none!important;transition:none!important;background:none!important;}.css-1ylimja>a:hover{background:none!important;border-color:none!important;}</style><div class="css-1ylimja e1x2ajq20"><style data-emotion="css toutqs">.css-toutqs{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:50px;height:50px;}</style><div size="50" class="css-toutqs e3bks2o1"><style data-emotion="css 1rrjf5z animation-8013mu">.css-1rrjf5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.2s;animation-delay:-1.2s;-webkit-transform:rotate(0deg) translate(146%);-moz-transform:rotate(0deg) translate(146%);-ms-transform:rotate(0deg) translate(146%);transform:rotate(0deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1rrjf5z e3bks2o0"></div><style data-emotion="css rcjasa animation-8013mu">.css-rcjasa{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1.0999999999999999s;animation-delay:-1.0999999999999999s;-webkit-transform:rotate(30deg) translate(146%);-moz-transform:rotate(30deg) translate(146%);-ms-transform:rotate(30deg) translate(146%);transform:rotate(30deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-rcjasa e3bks2o0"></div><style data-emotion="css 1gsjy2j animation-8013mu">.css-1gsjy2j{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-1s;animation-delay:-1s;-webkit-transform:rotate(60deg) translate(146%);-moz-transform:rotate(60deg) translate(146%);-ms-transform:rotate(60deg) translate(146%);transform:rotate(60deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1gsjy2j e3bks2o0"></div><style data-emotion="css vgd4ml animation-8013mu">.css-vgd4ml{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.8999999999999999s;animation-delay:-0.8999999999999999s;-webkit-transform:rotate(90deg) translate(146%);-moz-transform:rotate(90deg) translate(146%);-ms-transform:rotate(90deg) translate(146%);transform:rotate(90deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vgd4ml e3bks2o0"></div><style data-emotion="css nlaijy animation-8013mu">.css-nlaijy{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7999999999999999s;animation-delay:-0.7999999999999999s;-webkit-transform:rotate(120deg) translate(146%);-moz-transform:rotate(120deg) translate(146%);-ms-transform:rotate(120deg) translate(146%);transform:rotate(120deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-nlaijy e3bks2o0"></div><style data-emotion="css ljpo5z animation-8013mu">.css-ljpo5z{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.7s;animation-delay:-0.7s;-webkit-transform:rotate(150deg) translate(146%);-moz-transform:rotate(150deg) translate(146%);-ms-transform:rotate(150deg) translate(146%);transform:rotate(150deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-ljpo5z e3bks2o0"></div><style data-emotion="css 1lesjdn animation-8013mu">.css-1lesjdn{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.5999999999999999s;animation-delay:-0.5999999999999999s;-webkit-transform:rotate(180deg) translate(146%);-moz-transform:rotate(180deg) translate(146%);-ms-transform:rotate(180deg) translate(146%);transform:rotate(180deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1lesjdn e3bks2o0"></div><style data-emotion="css s8balg animation-8013mu">.css-s8balg{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.4999999999999999s;animation-delay:-0.4999999999999999s;-webkit-transform:rotate(210deg) translate(146%);-moz-transform:rotate(210deg) translate(146%);-ms-transform:rotate(210deg) translate(146%);transform:rotate(210deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-s8balg e3bks2o0"></div><style data-emotion="css q46j30 animation-8013mu">.css-q46j30{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.3999999999999999s;animation-delay:-0.3999999999999999s;-webkit-transform:rotate(240deg) translate(146%);-moz-transform:rotate(240deg) translate(146%);-ms-transform:rotate(240deg) translate(146%);transform:rotate(240deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q46j30 e3bks2o0"></div><style data-emotion="css vl20np animation-8013mu">.css-vl20np{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.29999999999999993s;animation-delay:-0.29999999999999993s;-webkit-transform:rotate(270deg) translate(146%);-moz-transform:rotate(270deg) translate(146%);-ms-transform:rotate(270deg) translate(146%);transform:rotate(270deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-vl20np e3bks2o0"></div><style data-emotion="css 1qbghc9 animation-8013mu">.css-1qbghc9{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.19999999999999996s;animation-delay:-0.19999999999999996s;-webkit-transform:rotate(300deg) translate(146%);-moz-transform:rotate(300deg) translate(146%);-ms-transform:rotate(300deg) translate(146%);transform:rotate(300deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-1qbghc9 e3bks2o0"></div><style data-emotion="css q9vvjz animation-8013mu">.css-q9vvjz{-webkit-animation:animation-8013mu 1.2s linear infinite;animation:animation-8013mu 1.2s linear infinite;position:absolute;width:24%;height:8%;border-radius:5px;background:#333;-webkit-animation-delay:-0.09999999999999987s;animation-delay:-0.09999999999999987s;-webkit-transform:rotate(330deg) translate(146%);-moz-transform:rotate(330deg) translate(146%);-ms-transform:rotate(330deg) translate(146%);transform:rotate(330deg) translate(146%);}@-webkit-keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}@keyframes animation-8013mu{from{opacity:1;}to{opacity:0.15;}}</style><div class="css-q9vvjz e3bks2o0"></div></div><div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div></div><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='G-YLQTEB1PVV',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'G-YLQTEB1PVV', 'sungbin.kr', {"sampleRate":5,"siteSpeedSampleRate":10});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/claude-code-이벤트-관리-앱-시작하기/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-ff818955a1de859d5924.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-75c2152344fac4b713b4.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-78565492c3a65b2d6ab7.js\"],\"component---src-pages-posts-tsx\":[\"/component---src-pages-posts-tsx-65cbc1ecee4dce61c821.js\"],\"component---src-pages-resume-tsx\":[\"/component---src-pages-resume-tsx-b11ae0e66dac3e054b2b.js\"],\"component---src-template-post-tsx\":[\"/component---src-template-post-tsx-314f8aa0c628986192a4.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="23770794993c782db25d";</script><script src="/webpack-runtime-13de8ce50465c574b3ba.js" async></script><script src="/b633362c-a6d1ffa7df1757d4798c.js" async></script><script src="/63a121f2-6ad93db4c30b18feab58.js" async></script><script src="/3e15977f-53773e2dffc41bf34ca2.js" async></script><script src="/aec3edcd-5e780537c563d1d4df48.js" async></script><script src="/2425c7c2-f83e4512074bf2456d71.js" async></script><script src="/d0007318-2217dbf53a6a3d7d17db.js" async></script><script src="/cc76255b-3f6ee7c29ecc50d57b53.js" async></script><script src="/1593e758-9d0e09d4f454a0e7a58b.js" async></script><script src="/48aa8186-9b19ce887d4215513a85.js" async></script><script src="/d265142c-0cd45e2c253ccc507fee.js" async></script><script src="/47ad6cec-fc505efda34767a45e10.js" async></script><script src="/app-ff818955a1de859d5924.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
