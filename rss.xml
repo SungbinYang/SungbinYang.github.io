@@ -1,4 +1,494 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Jul 2026 07:12:35 GMT</lastBuildDate><item><title><![CDATA[[Claude Code] 관리자 기능 확장]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  ROADMAP 버전관리: MVP 이후 이어나가기 지난 시리즈에서 Notion 기반 견적서 웹 의 MVP…]]></description><link>https://sungbin.kr/claude-code-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B8%B0%EB%8A%A5-%ED%99%95%EC%9E%A5/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-관리자-기능-확장/</guid><pubDate>Sat, 25 Jul 2026 16:11:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Jul 2026 08:47:52 GMT</lastBuildDate><item><title><![CDATA[[Claude Code] Supabase 어플리케이션 시작하기]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  Supabase…]]></description><link>https://sungbin.kr/claude-code-supabase-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-supabase-어플리케이션-시작하기/</guid><pubDate>Sat, 25 Jul 2026 17:46:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;해당 포스팅은 &lt;a href=&quot;https://inf.run/vN55k&quot;&gt;클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지&lt;/a&gt;를 참조하여 작성하였습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABM0lEQVR42mO4meb6HytOd4PgNDckcZiYK07MgEviRpIDENv/v5Hs9P9GitP/m0B8IxEolmgP4RNvoBtQg/P/B82Z/x91Ff6/Wxbx/3au7/9b2d7/79cl/X/QmPb/Vo4vCQYCvXQj1fn/q1XT/z+b3fr//f6N/98f3Pz//d71/z8e2wXEu/+/WDIR7FJs3sfqZZAL75ZFgl0HctX92sT/96rj/t+rigXiuP93SsL+3wRaSnwYglyZYAc28E5h0P/riXb/7xSH/L9TFAw26EaSI4mRkg4Jx5crpgK93fb//b4N/z8c2vL/45Ed/58v6Pl/HWjZzXR3EmMZaCDImw+aM4CRU/D/UWfB/4ftuWBXQ2LZjTQDwRiUZJIdIUkFhIFJ6WaqC3npEDlx3wJ6D4TB3iSQsAEfowVVIr8OEAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png&quot;
+        srcset=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/6f3f2/banner.png 256w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/01e7c/banner.png 512w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Supabase란 무엇인가? 사용하는 이유!&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B8%B0%EB%8A%A5-%ED%99%95%EC%9E%A5&quot;&gt;지난 시리즈&lt;/a&gt;에서 관리자 인증을 &lt;em&gt;환경 변수 패스워드&lt;/em&gt; 로 임시 처리하며, &lt;strong&gt;제대로 된 인증은 추후 Supabase로&lt;/strong&gt; 가겠다고 미뤄뒀다. 이제 그 약속을 지킬
+차례다. 그런데 코드를 짜기 전에 — &lt;em&gt;Supabase가 대체 뭐길래&lt;/em&gt; 다들 쓰는지부터 짚고 가자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;쉽게 말해서 Supabase를 사용하면 웹이나 모바일 애플리케이션을 만들 때 필요한 &lt;strong&gt;백엔드 기능들&lt;/strong&gt; 을 &lt;em&gt;정말 쉽게&lt;/em&gt; 구현할 수 있도록 도와줘요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;한 줄 정의 — 백엔드를 &apos;빌려 쓴다&apos;&lt;/h3&gt;
+&lt;p&gt;웹앱을 만들려면 &lt;em&gt;프론트엔드 (화면)&lt;/em&gt; 만으론 부족하다. &lt;strong&gt;회원가입·로그인&lt;/strong&gt; 을 처리하고, &lt;em&gt;데이터를 저장&lt;/em&gt; 하고, &lt;em&gt;파일을 보관&lt;/em&gt; 할 &lt;strong&gt;백엔드&lt;/strong&gt; 가 필요하다. 문제는 — 이걸 &lt;em&gt;직접 다 만들면&lt;/em&gt; &lt;strong&gt;시간이
+어마어마하게&lt;/strong&gt; 든다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[직접 구축]  서버 세팅 + DB 설치 + 인증 구현 + 파일 저장소 + …  → 며칠~몇 주
+[Supabase]   이미 다 준비됨 → 가져다 연결만                      → 몇 시간&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Supabase&lt;/strong&gt; 는 이 &lt;em&gt;백엔드 기능 세트&lt;/em&gt; 를 &lt;strong&gt;미리 만들어 빌려주는&lt;/strong&gt; 서비스다. 흔히 &lt;strong&gt;BaaS (Backend as a Service)&lt;/strong&gt; 라 부른다.&lt;/p&gt;
+&lt;h3&gt;무엇을 주나 — 5가지 핵심 기능&lt;/h3&gt;
+&lt;p&gt;강사가 &lt;em&gt;일상 서비스에 빗대&lt;/em&gt; 하나씩 풀어준다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;기능&lt;/th&gt;
+&lt;th&gt;무엇을&lt;/th&gt;
+&lt;th&gt;비유&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;데이터베이스&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;상품·주문·고객&lt;/em&gt; 데이터를 &lt;strong&gt;PostgreSQL&lt;/strong&gt; 에 저장&lt;/td&gt;
+&lt;td&gt;온라인 쇼핑몰의 상품/주문 정보&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;인증(Auth)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;이메일·소셜(구글/카카오)&lt;/em&gt; 로그인 + &lt;strong&gt;RLS&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;로그인한 사람만 &lt;em&gt;제 데이터&lt;/em&gt; 접근&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;실시간(Realtime)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;변경이 즉시&lt;/em&gt; 다른 사용자에게 동기화&lt;/td&gt;
+&lt;td&gt;채팅 메시지가 바로 뜨는 것&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;스토리지(Storage)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;사진·동영상&lt;/em&gt; 대용량 파일 저장&lt;/td&gt;
+&lt;td&gt;인스타그램 업로드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Edge Functions&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;서버 없이&lt;/em&gt; 커스텀 로직 실행&lt;/td&gt;
+&lt;td&gt;결제 후 영수증 메일·썸네일 생성&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;여기서 특히 강조되는 게 &lt;strong&gt;Row Level Security (RLS)&lt;/strong&gt; 다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이것이 바로 Supabase의 &lt;strong&gt;핵심 기능&lt;/strong&gt; 이라고 할 수 있죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;RLS는 &lt;em&gt;각 사용자가 자신의 데이터에만&lt;/em&gt; 접근하도록 &lt;strong&gt;보안을 자동 처리&lt;/strong&gt; 한다. &lt;em&gt;남의 주문 내역&lt;/em&gt; 이 보이는 사고를 — DB 레벨에서
+막아준다. &lt;a href=&quot;/claude-code-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B8%B0%EB%8A%A5-%ED%99%95%EC%9E%A5&quot;&gt;지난 시리즈의 환경 변수 패스워드&lt;/a&gt;와는 차원이 다른 &lt;em&gt;진짜 인증&lt;/em&gt; 이다.&lt;/p&gt;
+&lt;h3&gt;왜 쓰나 — 네 가지 이유&lt;/h3&gt;
+&lt;p&gt;기능이 많다고 다 쓰는 건 아니다. &lt;em&gt;선택받는 이유&lt;/em&gt; 는 따로 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;개발 속도&lt;/strong&gt; → 백엔드가 &lt;em&gt;이미 준비&lt;/em&gt; 돼 있어 &lt;strong&gt;비즈니스 로직·프론트&lt;/strong&gt; 에 집중. &lt;em&gt;MVP를 몇 시간 만에&lt;/em&gt; 만들었다는 후기까지&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;비용 효율성&lt;/strong&gt; → &lt;em&gt;작은 프로젝트는 무료&lt;/em&gt;, 성장하면 &lt;strong&gt;쓴 만큼만&lt;/strong&gt; 지불 (직접 서버 운영보다 경제적)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;높은 확장성&lt;/strong&gt; → 사용자가 &lt;em&gt;갑자기 100배&lt;/em&gt; 늘어도 &lt;strong&gt;스케일링을 알아서&lt;/strong&gt; 처리&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;뛰어난 개발자 경험 (DX)&lt;/strong&gt; → &lt;em&gt;잘 정리된 문서&lt;/em&gt; · 직관적 API · 쉬운 대시보드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;여기에 &lt;em&gt;전 세계 개발자&lt;/em&gt; 들이 정보를 나누는 &lt;strong&gt;강력한 커뮤니티&lt;/strong&gt; 까지 더해진다. &lt;em&gt;막혔을 때&lt;/em&gt; 검색하면 &lt;strong&gt;답이 이미 있는&lt;/strong&gt; 경우가 많다는 뜻이다.&lt;/p&gt;
+&lt;h3&gt;Claude Code와 왜 잘 맞나&lt;/h3&gt;
+&lt;p&gt;한 가지 덧붙이면 — Supabase는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI 워크플로우&lt;/a&gt;와 &lt;em&gt;궁합이 좋다.&lt;/em&gt; &lt;em&gt;기능이 표준화&lt;/em&gt; 돼 있고 &lt;strong&gt;문서가 탄탄&lt;/strong&gt; 하니, 클로드가 &lt;em&gt;적은 컨텍스트로도&lt;/em&gt; 정확한
+코드를 뽑는다. &lt;em&gt;백엔드를 손수 설계&lt;/em&gt; 하는 것보다, &lt;strong&gt;검증된 패턴&lt;/strong&gt; 을 AI가 엮어주는 게 훨씬 빠르고 안정적이다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;Supabase를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;정체&lt;/strong&gt; → 백엔드 기능을 &lt;em&gt;미리 만들어 빌려주는&lt;/em&gt; &lt;strong&gt;BaaS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;5대 기능&lt;/strong&gt; → &lt;em&gt;DB (PostgreSQL) · 인증 (+RLS) · 실시간 · 스토리지 · Edge Functions&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;RLS&lt;/strong&gt; → &lt;em&gt;각자 제 데이터만&lt;/em&gt; 접근 → &lt;strong&gt;보안 자동 처리&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;선택 이유&lt;/strong&gt; → &lt;em&gt;개발 속도 · 비용 효율 · 확장성 · 개발자 경험&lt;/em&gt; (+커뮤니티)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI 궁합&lt;/strong&gt; → &lt;em&gt;표준화·문서화&lt;/em&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;가 적은 컨텍스트로 정확히&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;강사의 한마디가 Supabase의 본질을 요약한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supabase는 단순히 도구가 아니라, 우리의 &lt;em&gt;아이디어를 빠르게 현실로&lt;/em&gt; 만들어주는 &lt;strong&gt;강력한 파트너&lt;/strong&gt; 예요. &lt;em&gt;복잡한 백엔드 설정&lt;/em&gt; 에 시간을 쓰지 않고, 정말 중요한 것 — **사용자에게 가치를 전달하는&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;것** 에 집중할 수 있게 해주죠.&lt;/p&gt;
+&lt;p&gt;개념을 잡았으니, 다음 챕터에서는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;와 함께 &lt;strong&gt;Supabase 프로젝트를 직접 생성&lt;/strong&gt; 해 우리 앱에 연결해보자.&lt;/p&gt;
+&lt;h2&gt;Supabase 프로젝트 생성하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;Supabase가 무엇인지&lt;/em&gt; 개념을 잡았다. 이제 &lt;strong&gt;직접 프로젝트를 만들어&lt;/strong&gt; Next.js와 연결할 차례다. &lt;em&gt;데이터베이스 + 로그인·회원가입&lt;/em&gt; 이
+얽힌 — 이 시리즈에서 가장 &lt;em&gt;복잡한&lt;/em&gt; 세팅이지만, 강사가 천천히 짚어준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;경험이 적으신 분들도 &lt;em&gt;잘 따라오실 수 있도록&lt;/em&gt; 요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;왜 &apos;AI&apos;가 아니라 &apos;공식 문서&apos;로 시작하나&lt;/h3&gt;
+&lt;p&gt;여기서 강사가 &lt;em&gt;의외의 선택&lt;/em&gt; 을 한다. &lt;em&gt;&quot;Claude한테 Supabase 세팅해줘&quot;&lt;/em&gt; 라고 시키지 않는다. &lt;strong&gt;공식 문서를 그대로 따라간다.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;초기 프로젝트를 구성할 때 &lt;em&gt;AI를 통해서&lt;/em&gt; 할 수도 있지만, &lt;em&gt;공식 문서로 구성&lt;/em&gt; 하는 건 &lt;strong&gt;다양한 이점&lt;/strong&gt; 이 있다고 했죠?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이유는 둘이다. &lt;em&gt;세팅은 한 번뿐이고 정확도가 생명&lt;/em&gt; 이라 — &lt;strong&gt;검증된 공식 절차&lt;/strong&gt; 가 안전하고, 매번 &lt;em&gt;방대한 세팅을 AI에 설명&lt;/em&gt; 하면 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰만 낭비&lt;/a&gt;된다. &lt;em&gt;AI를
+안 쓰는 게&lt;/em&gt; 아니라, &lt;strong&gt;쓸 곳에 쓴다&lt;/strong&gt; 는 분별이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;첫 단추가 &lt;em&gt;정말 중요&lt;/em&gt; 하거든요. (…) &lt;strong&gt;아는 만큼 더 보이기&lt;/strong&gt; 때문이죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;① 프로젝트 생성&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://supabase.com/docs&quot;&gt;Supabase 공식 문서&lt;/a&gt;의 &lt;code&gt;Docs → Start&lt;/code&gt; 에서 &lt;strong&gt;Next.js&lt;/strong&gt; 를 고르면 연동 가이드가 나온다. &lt;code&gt;database.new&lt;/code&gt; 로 새 프로젝트를
+만든다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;프로젝트 명&lt;/strong&gt; → &lt;code&gt;nextjs-supabase-app&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DB 패스워드&lt;/strong&gt; → &lt;em&gt;직접 지정&lt;/em&gt; (꼭 기억해둘 것)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Region&lt;/strong&gt; → &lt;strong&gt;서울 (Seoul)&lt;/strong&gt; — &lt;em&gt;사용자와 가까울수록&lt;/em&gt; 응답이 빠르다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Region은 &apos;데이터가 물리적으로 사는 곳&apos;.&lt;/strong&gt; 데이터센터가 &lt;em&gt;멀수록&lt;/em&gt; 왕복 시간이 길어진다. 국내 서비스라면 &lt;em&gt;서울 리전&lt;/em&gt; 이 정답.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;② 테이블 생성 + RLS — 문서 그대로 복붙&lt;/h3&gt;
+&lt;p&gt;프로젝트가 생기면, 공식 문서의 &lt;em&gt;SQL을 그대로 복사&lt;/em&gt; 해 대시보드의 &lt;strong&gt;&lt;code&gt;SQL Editor&lt;/code&gt;&lt;/strong&gt; 에 붙여 실행한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;instruments&lt;/code&gt; 테이블&lt;/strong&gt; 생성 + 샘플 데이터 삽입 (문서 제공 SQL)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;RLS 정책&lt;/a&gt;&lt;/strong&gt; 설정 — &lt;em&gt;익명 사용자 (&lt;code&gt;anon&lt;/code&gt;)&lt;/em&gt; 에게 &lt;strong&gt;&lt;code&gt;SELECT&lt;/code&gt; 만 허용&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어렵지 않죠? &lt;strong&gt;공식 문서 그대로&lt;/strong&gt; 따라 하고 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2번이 &lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;앞 챕터에서 강조한 RLS&lt;/a&gt;의 실물이다. &lt;em&gt;로그인 안 한 방문자&lt;/em&gt; 도 이 테이블은 &lt;strong&gt;읽을 수 있게&lt;/strong&gt; 여는 정책이다.&lt;/p&gt;
+&lt;h3&gt;③ Next.js 프로젝트 — &lt;code&gt;with-supabase&lt;/code&gt; 템플릿&lt;/h3&gt;
+&lt;p&gt;프론트는 &lt;em&gt;맨바닥부터&lt;/em&gt; 깔지 않는다. &lt;strong&gt;&lt;code&gt;with-supabase&lt;/code&gt; 템플릿&lt;/strong&gt; 으로 시작한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;npx create-next-app &lt;span class=&quot;token parameter variable&quot;&gt;-e&lt;/span&gt; with-supabase nextjs-supabase-app&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 템플릿엔 &lt;strong&gt;쿠키 기반 인증 · TypeScript · Tailwind CSS&lt;/strong&gt; 가 &lt;em&gt;미리 세팅&lt;/em&gt; 돼 있다. 개발 서버를 띄우면 — &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;지난 프로젝트&lt;/a&gt;와 달리
+&lt;em&gt;Supabase가 통합된 UI&lt;/em&gt; 가 바로 뜬다.&lt;/p&gt;
+&lt;h3&gt;④ 환경 변수 + 클라이언트 연결&lt;/h3&gt;
+&lt;p&gt;이제 &lt;em&gt;내 프로젝트&lt;/em&gt; 와 &lt;em&gt;Supabase&lt;/em&gt; 를 잇는다. &lt;code&gt;.env.example&lt;/code&gt; 을 &lt;strong&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/strong&gt; 로 바꾸고 두 값을 채운다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;환경 변수&lt;/th&gt;
+&lt;th&gt;의미&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;NEXT_PUBLIC_SUPABASE_URL&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Supabase 프로젝트 &lt;strong&gt;API 주소&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;NEXT_PUBLIC_SUPABASE_ANON_KEY&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;클라이언트용 &lt;strong&gt;공개(anon) 키&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;값은 &lt;em&gt;Supabase 프로젝트 설정&lt;/em&gt; 에서 복사해 붙인다. 그다음 &lt;strong&gt;&lt;code&gt;utils/supabase/server.ts&lt;/code&gt;&lt;/strong&gt; 에 &lt;em&gt;클라이언트 생성 함수&lt;/em&gt; 를, &lt;strong&gt;&lt;code&gt;app/instruments/page.tsx&lt;/code&gt;&lt;/strong&gt; 에
+&lt;em&gt;데이터 조회 코드&lt;/em&gt; 를 (역시 문서대로) 넣는다.&lt;/p&gt;
+&lt;h3&gt;⑤ 동작 확인 — 그리고 흔한 함정 둘&lt;/h3&gt;
+&lt;p&gt;환경 변수가 잡히면 &lt;em&gt;회원가입·로그인 버튼&lt;/em&gt; 이 &lt;strong&gt;활성화&lt;/strong&gt; 된다. 여기서 강사가 &lt;em&gt;실제로 부딪힌&lt;/em&gt; 두 함정을 보여준다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[함정 1] 로그인 오류  → 서버 재실행 + 브라우저 쿠키 삭제 → 해결
+[함정 2] 키명 불일치  → ANON_KEY 키명이 가이드와 다름 → 올바른 이름으로 수정&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;로그인이 안 될 때&lt;/strong&gt; → &lt;em&gt;쿠키가 쌓여서&lt;/em&gt; 그런 경우가 많다. &lt;strong&gt;서버 재실행 + 쿠키 삭제&lt;/strong&gt; 면 풀린다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Instruments 페이지 오류&lt;/strong&gt; → 오류 로그를 보니 &lt;em&gt;키 이름&lt;/em&gt; 이 가이드와 달랐다. &lt;code&gt;.env.local&lt;/code&gt; 의 &lt;strong&gt;&lt;code&gt;ANON_KEY&lt;/code&gt; 키명을 수정&lt;/strong&gt; 하면 오류는 사라진다. (&lt;em&gt;목록이 아직 안 뜨는
+건&lt;/em&gt; 다음 챕터에서 다룬다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;오류는 자연스러운 것&lt;/a&gt; — 중요한 건 &lt;em&gt;로그를 읽고 고치는&lt;/em&gt; 흐름이다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;Supabase 프로젝트 생성을 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;시작점&lt;/strong&gt; → &lt;em&gt;AI 말고&lt;/em&gt; &lt;strong&gt;공식 문서&lt;/strong&gt; → 정확도 ↑·&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰&lt;/a&gt; 절약 (쓸 곳에만 AI)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;① 프로젝트&lt;/strong&gt; → &lt;code&gt;database.new&lt;/code&gt; → 이름·DB 패스워드· &lt;strong&gt;서울 리전&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;② 테이블·RLS&lt;/strong&gt; → &lt;code&gt;SQL Editor&lt;/code&gt;에 &lt;em&gt;문서 SQL 복붙&lt;/em&gt; → &lt;code&gt;anon&lt;/code&gt;에 &lt;strong&gt;&lt;code&gt;SELECT&lt;/code&gt; 허용&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;③ Next.js&lt;/strong&gt; → &lt;code&gt;create-next-app -e with-supabase&lt;/code&gt; (&lt;em&gt;인증·TS·Tailwind 내장&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;④ 연결&lt;/strong&gt; → &lt;code&gt;.env.local&lt;/code&gt;에 &lt;strong&gt;URL·ANON_KEY&lt;/strong&gt; → &lt;code&gt;utils/supabase&lt;/code&gt; 클라이언트&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;⑤ 함정&lt;/strong&gt; → &lt;em&gt;로그인 오류=쿠키 삭제&lt;/em&gt; · &lt;em&gt;오류=키명 수정&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;세팅은 &lt;em&gt;지루하지만&lt;/em&gt; &lt;strong&gt;첫 단추&lt;/strong&gt; 다. 공식 문서는 처음엔 어려워도, &lt;em&gt;자주 보면 익숙&lt;/em&gt; 해지고 &lt;strong&gt;아는 만큼 더 보인다.&lt;/strong&gt; 백엔드 토대가 깔렸으니 — 다음
+챕터에서는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;와 함께 이 Supabase 위에 &lt;strong&gt;실제 기능&lt;/strong&gt; 을 올려보자.&lt;/p&gt;
+&lt;h2&gt;Supabase RLS 정책 이슈 해결&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt; 끝에 &lt;em&gt;떡밥&lt;/em&gt; 을 하나 남겼다. &lt;strong&gt;오류는 사라졌는데 목록이 안 뜬다&lt;/strong&gt; 는 것. 분명 &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;공식 문서대로&lt;/a&gt; &lt;em&gt;테이블 생성 → 더미
+데이터 → RLS 정책&lt;/em&gt; 까지 다 했는데 — &lt;em&gt;데이터가 조회되지 않는다.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이번 시간에는 우리가 해당 페이지로 진입을 했을 때, (왜 데이터가 안 나오는지) &lt;strong&gt;말씀드리도록 하겠습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;증상 — 분명 다 했는데 비어 있다&lt;/h3&gt;
+&lt;p&gt;상황을 정리하면 이렇다. &lt;code&gt;instruments&lt;/code&gt; 테이블에 &lt;strong&gt;&lt;code&gt;public can read instruments&lt;/code&gt;&lt;/strong&gt; 라는 &lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;RLS 정책&lt;/a&gt;을 걸어뒀다. 이 정책은 &lt;em&gt;익명
+사용자 (&lt;code&gt;anon&lt;/code&gt;)&lt;/em&gt; 에게 읽기를 허용한다. &lt;em&gt;에러도 없고&lt;/em&gt; 정책도 &lt;em&gt;분명 있는데&lt;/em&gt; — 화면은 &lt;strong&gt;텅&lt;/strong&gt; 비어 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그런데 &lt;strong&gt;보세요.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;원인 — 지금 나는 &lt;code&gt;anon&lt;/code&gt;이 아니다&lt;/h3&gt;
+&lt;p&gt;범인은 &lt;strong&gt;롤 (role)의 불일치&lt;/strong&gt; 다. &lt;code&gt;protected&lt;/code&gt; 페이지는 &lt;em&gt;로그인을 해야&lt;/em&gt; 들어간다. 즉 지금 나는 &lt;strong&gt;로그인한 사용자&lt;/strong&gt; — 롤이 &lt;code&gt;anon&lt;/code&gt;이 아니라 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;&lt;/strong&gt; 다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;정책 허용 대상:  anon (익명)            ← 읽기 OK
+실제 내 롤:      authenticated (로그인됨) ← 정책에 해당 안 됨 → 조회 0건&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;RLS는 정확히 일을 한 것&lt;/em&gt; 이다. &lt;strong&gt;&lt;code&gt;anon&lt;/code&gt;에게만&lt;/strong&gt; 열어줬으니, &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;인 나는&lt;/strong&gt; &lt;em&gt;대상이 아니라&lt;/em&gt; 막힌 것. &lt;em&gt;에러가 아니라&lt;/em&gt; — &lt;strong&gt;정책상 보여줄 게 없다&lt;/strong&gt; 가 정답이었다.&lt;/p&gt;
+&lt;h3&gt;해결 — 정책을 &lt;code&gt;authenticated&lt;/code&gt;까지 열기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어떻게 수정을 해야 되죠?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;답은 간단하다. &lt;code&gt;instruments&lt;/code&gt; 테이블의 RLS 정책을 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt; 사용자도 조회 가능&lt;/strong&gt; 하도록 고친다. 저장하고 &lt;em&gt;페이지를 새로고침&lt;/em&gt; 하면 — &lt;strong&gt;데이터가 정상적으로&lt;/strong&gt; 뜬다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[수정 전] anon 만 SELECT 허용
+[수정 후] anon + authenticated SELECT 허용  → 목록 출력 ✅&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;핵심 교훈 — 데이터가 안 보이면 RLS부터 의심하라&lt;/h3&gt;
+&lt;p&gt;이게 &lt;em&gt;Supabase 입문자가 가장 많이&lt;/em&gt; 걸리는 함정이다. 강사가 &lt;strong&gt;꼭 기억하라&lt;/strong&gt; 고 못 박는다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;개발 중 &lt;em&gt;데이터 조회가 안 될&lt;/em&gt; 경우, 가장 먼저 &lt;strong&gt;해당 테이블의 RLS 정책을 확인&lt;/strong&gt; 하는 것이 중요하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;특히 이건 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI에게 맡기기 까다로운&lt;/a&gt; 종류의 문제다. &lt;em&gt;에러 로그가 안 뜨니&lt;/em&gt; — 클로드도 &lt;em&gt;&quot;코드는 멀쩡한데?&quot;&lt;/em&gt; 하며 헤맬 수 있다. **사람이 RLS를 짚어줘야
+** 빨리 풀린다. &lt;em&gt;AI가 만능은 아니라는&lt;/em&gt; 좋은 예다.&lt;/p&gt;
+&lt;h3&gt;마무리 — 코드 정리와 커밋&lt;/h3&gt;
+&lt;p&gt;문제를 잡았으니 &lt;em&gt;실습용 군더더기&lt;/em&gt; 를 치운다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;중복 제거&lt;/strong&gt; → &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;템플릿에 이미 있는&lt;/a&gt; &lt;em&gt;서버 클라이언트 함수&lt;/em&gt; 를 쓰고, &lt;code&gt;utils&lt;/code&gt;에 따로 만든 코드는 &lt;strong&gt;삭제&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;테스트 잔재 정리&lt;/strong&gt; → &lt;em&gt;샘플 조회 페이지&lt;/em&gt; 와 &lt;code&gt;instruments&lt;/code&gt; &lt;em&gt;테이블&lt;/em&gt; 도 제거&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;커밋&lt;/strong&gt; → 소스 제어에서 &lt;em&gt;환경 변수 키 변경&lt;/em&gt; 외 이상 없음 확인 → 스테이징 → &lt;strong&gt;커밋&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;RLS 정책 이슈 해결을 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;증상&lt;/strong&gt; → 테이블·데이터·정책 다 있는데 &lt;em&gt;목록이 빈다&lt;/em&gt; (에러 없음)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;원인&lt;/strong&gt; → 정책은 &lt;strong&gt;&lt;code&gt;anon&lt;/code&gt;&lt;/strong&gt; 허용 / 로그인한 나는 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;대상 불일치&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;해결&lt;/strong&gt; → RLS 정책을 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;까지&lt;/strong&gt; 열기 → 새로고침 → 출력&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;교훈&lt;/strong&gt; → &lt;em&gt;데이터 안 보이면&lt;/em&gt; → &lt;strong&gt;RLS 정책부터 확인&lt;/strong&gt; (&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI도 잡기 어려운&lt;/a&gt; 영역)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;마무리&lt;/strong&gt; → &lt;em&gt;중복·테스트 잔재&lt;/em&gt; 제거 → &lt;strong&gt;커밋&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RLS는 &lt;em&gt;강력한 보안&lt;/em&gt; 이지만, 그만큼 &lt;strong&gt;롤을 정확히&lt;/strong&gt; 다뤄야 한다. 이 &lt;em&gt;함정 하나&lt;/em&gt; 를 알고 나면, 앞으로 &lt;em&gt;데이터가 안 보일 때&lt;/em&gt; 헤매는 시간이 확 줄어든다. Supabase 토대와 &lt;em&gt;대표적 함정&lt;/em&gt; 까지
+익혔으니 — 다음 시리즈에서는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;와 &lt;strong&gt;Supabase MCP&lt;/strong&gt; 로 &lt;em&gt;진짜 인증·기능&lt;/em&gt; 을 본격적으로 붙여보자.&lt;/p&gt;
+&lt;h2&gt;Supabase MCP 사용하기: 로그인 구현하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;RLS 함정&lt;/em&gt; 까지 넘으며 Supabase 토대를 다졌다. 그런데 지금까지는 &lt;em&gt;대시보드를 손으로&lt;/em&gt; 오가며 SQL을 복붙했다. 이제 &lt;strong&gt;클로드가 직접 DB를
+만지게&lt;/strong&gt; 할 차례다 — 그 다리가 &lt;strong&gt;Supabase MCP&lt;/strong&gt; 다.&lt;/p&gt;
+&lt;h3&gt;LLM의 한계 — DB에 직접 손이 안 닿는다&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;ChatGPT·Claude&lt;/a&gt; 같은 LLM은 &lt;em&gt;똑똑하지만&lt;/em&gt; — &lt;strong&gt;내 데이터베이스를 직접 들여다볼 수는 없다.&lt;/strong&gt; 그래서 매번 &lt;em&gt;&quot;테이블 구조가 이렇고…&quot;&lt;/em&gt; 라고 사람이
+설명해줘야 했다. &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP&lt;/a&gt;가 이 벽을 허문다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;쉽게 말씀드리면, &lt;strong&gt;Supabase MCP&lt;/strong&gt; 는 Claude와 같은 LLM과 &lt;em&gt;Supabase 프로젝트를 연결&lt;/em&gt; 해 주는 &lt;strong&gt;다리 역할&lt;/strong&gt; 이라고 보시면 돼요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[기존]  Claude  →  ❓  →  Supabase DB   (직접 못 봄, 사람이 설명)
+[MCP]   Claude  ←→ MCP ←→ Supabase DB   (직접 조회·생성·수정)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;⚠️ 먼저 — 보안부터&lt;/h3&gt;
+&lt;p&gt;MCP는 &lt;em&gt;DB에 직접 손&lt;/em&gt; 을 댄다. 강력한 만큼 &lt;strong&gt;위험&lt;/strong&gt; 도 따른다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supabase MCP를 활용해서 &lt;em&gt;우리 데이터베이스에 직접 접근&lt;/em&gt; 할 수 있기 때문에, 아무래도 &lt;strong&gt;보안이 중요&lt;/strong&gt; 하겠죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;강사가 못 박는 &lt;strong&gt;수칙&lt;/strong&gt; 은 이렇다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;개발 환경에서만&lt;/strong&gt; — &lt;em&gt;운영 (production)&lt;/em&gt; DB엔 절대 연결하지 않는다&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;고객에게 미제공&lt;/strong&gt; — &lt;em&gt;순수 개발 도구&lt;/em&gt; 로만&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;read-only&lt;/code&gt; 모드&lt;/strong&gt; — 데이터 &lt;em&gt;수정이 불필요&lt;/em&gt; 하면 읽기 전용으로&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;프로젝트 스코프 · Feature Group&lt;/strong&gt; — &lt;em&gt;최소 권한 원칙&lt;/em&gt; (필요한 기능에만 접근 허용)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;설치 — &lt;code&gt;.mcp.json&lt;/code&gt;까지&lt;/h3&gt;
+&lt;p&gt;Supabase Docs의 &lt;strong&gt;MCP 메뉴&lt;/strong&gt; 에서 설정을 만든다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;플랫폼&lt;/strong&gt; → Hosting 버전 선택 → &lt;em&gt;연결할 프로젝트&lt;/em&gt; 지정&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;권한&lt;/strong&gt; → 필요 시 &lt;strong&gt;&lt;code&gt;read-only&lt;/code&gt;&lt;/strong&gt; 활성화, &lt;strong&gt;Feature Group&lt;/strong&gt;(DB·Auth·Storage 등)으로 &lt;em&gt;접근 범위&lt;/em&gt; 제어&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;클라이언트&lt;/strong&gt; → &lt;strong&gt;Claude Code&lt;/strong&gt; 선택 → &lt;em&gt;CLI 명령어 복사&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;프로젝트 &lt;strong&gt;루트에서 실행&lt;/strong&gt; → &lt;strong&gt;&lt;code&gt;.mcp.json&lt;/code&gt;&lt;/strong&gt; 설정 파일 생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;연결 — &lt;code&gt;/mcp&lt;/code&gt;로 인증&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;에서 &lt;strong&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/strong&gt; 를 입력하면 Supabase MCP 서버가 보인다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/mcp → [Supabase: disconnected]
+     → Enter → Authenticate (API 접근 권한 부여)
+     → [Supabase: connected] ✅
+     → View tools (제공 기능 확인)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;disconnected&lt;/code&gt; 상태에서 &lt;strong&gt;&lt;code&gt;Authenticate&lt;/code&gt;&lt;/strong&gt; 로 권한을 주면 &lt;strong&gt;&lt;code&gt;connected&lt;/code&gt;&lt;/strong&gt; 로 바뀐다. &lt;code&gt;View tools&lt;/code&gt; 로 &lt;em&gt;어떤 기능&lt;/em&gt; 을 쓸 수 있는지 훑어볼 수 있다.&lt;/p&gt;
+&lt;h3&gt;실전 — &lt;code&gt;profiles&lt;/code&gt; 테이블을 말로 만든다&lt;/h3&gt;
+&lt;p&gt;이제 &lt;em&gt;진짜&lt;/em&gt; 다. 회원가입 사용자 정보를 담을 &lt;strong&gt;&lt;code&gt;profiles&lt;/code&gt; 테이블&lt;/strong&gt; 을 — &lt;em&gt;SQL을 짜지 않고&lt;/em&gt; &lt;strong&gt;요청만&lt;/strong&gt; 한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;클로드가 &lt;strong&gt;&lt;code&gt;list_tables&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;현재 DB 상태&lt;/em&gt; 를 직접 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;profiles&lt;/code&gt; 테이블 &lt;strong&gt;생성 계획&lt;/strong&gt; 수립 (⭐ &lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;&lt;strong&gt;RLS 설정도 계획에 포함&lt;/strong&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;민감한 이메일·비밀번호&lt;/em&gt; 는 일단 제외하고 최종안 작성&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass permissions&lt;/code&gt;&lt;/a&gt; 모드로 실행 → &lt;strong&gt;대시보드에 테이블 생성 확인&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;지난 챕터에서 사람이 손수 짚어야 했던 RLS&lt;/a&gt;를, 이번엔 &lt;strong&gt;MCP가 계획 단계부터&lt;/strong&gt; 챙긴다는 게 포인트다.&lt;/p&gt;
+&lt;h3&gt;자동 프로필 생성 트리거&lt;/h3&gt;
+&lt;p&gt;더 놀라운 건 그다음이다. 회원가입을 해보면 — &lt;code&gt;profiles&lt;/code&gt; 테이블에 사용자 정보가 &lt;strong&gt;자동으로 등록&lt;/strong&gt; 돼 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supabase MCP 서버에 의해서 생성된 &lt;strong&gt;자동 프로필 생성 트리거&lt;/strong&gt; 가 동작을 한 거죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;MCP가 &lt;em&gt;테이블만 만든 게 아니라&lt;/em&gt;, &lt;strong&gt;가입 시 프로필이 자동으로 꽂히는 트리거&lt;/strong&gt; 까지 깔아준 것이다. &lt;em&gt;SQL·트리거 지식이 부족해도&lt;/em&gt; — &lt;strong&gt;말로 요청&lt;/strong&gt; 하니 알아서 처리됐다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;Supabase MCP 로그인 구현을 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;왜&lt;/strong&gt; → LLM은 &lt;em&gt;DB에 직접 접근 불가&lt;/em&gt; → &lt;strong&gt;MCP가 다리&lt;/strong&gt; 역할&lt;/li&gt;
+&lt;li&gt;⚠️ &lt;strong&gt;보안&lt;/strong&gt; → &lt;em&gt;개발 환경만 · 고객 미제공 · &lt;code&gt;read-only&lt;/code&gt; · 최소 권한&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;설치&lt;/strong&gt; → Docs에서 설정 → CLI 실행 → &lt;strong&gt;&lt;code&gt;.mcp.json&lt;/code&gt;&lt;/strong&gt; 생성&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;연결&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/a&gt; → &lt;strong&gt;Authenticate&lt;/strong&gt; → &lt;code&gt;connected&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;실전&lt;/strong&gt; → &lt;code&gt;list_tables&lt;/code&gt;로 상태 확인 → &lt;code&gt;profiles&lt;/code&gt; 생성 (&lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;RLS 포함&lt;/a&gt;) → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;자동화&lt;/strong&gt; → &lt;em&gt;가입 시&lt;/em&gt; &lt;strong&gt;프로필 자동 등록 트리거&lt;/strong&gt; 까지 MCP가 구성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;강사의 마무리가 이 기능의 의미를 압축한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supabase MCP 서버와 프롬프트를 잘 활용하면, &lt;strong&gt;데이터베이스나 SQL 지식이 부족하더라도&lt;/strong&gt; Supabase의 다양한 서비스들을 &lt;em&gt;효과적으로 활용&lt;/em&gt; 할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이제 &lt;em&gt;대시보드를 손으로&lt;/em&gt; 오갈 필요가 줄었다. &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;클로드가 DB를 직접 보고 만지니&lt;/a&gt; — &lt;em&gt;테이블 설계·RLS·트리거&lt;/em&gt; 까지 &lt;strong&gt;대화로&lt;/strong&gt; 풀린다. 이 다리를 놓았으니,
+앞으로의 기능 구현은 &lt;em&gt;훨씬 빠르고 정확&lt;/em&gt; 해질 것이다.&lt;/p&gt;
+&lt;h2&gt;Supabase 프로젝트 Claude 초기화&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;Supabase MCP&lt;/em&gt; 라는 다리를 놓았다. 이제 &lt;strong&gt;본격 개발에 앞서&lt;/strong&gt; — 새 Supabase 프로젝트에 &lt;em&gt;그동안 갈고닦은 무기&lt;/em&gt; 를
+한꺼번에 장착할 차례다. &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;지난 견적서 StarterKit&lt;/a&gt;에 깔아둔 &lt;em&gt;MCP·서브 에이전트·커맨드·훅&lt;/em&gt; 을 &lt;strong&gt;그대로 이식&lt;/strong&gt; 하는 작업이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이전 시간에 했던 내용이기 때문에 &lt;em&gt;조금 빠르게&lt;/em&gt; 진행하도록 할게요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;왜 &apos;이식&apos;인가 — 매번 새로 만들지 않는다&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;StarterKit의 진가&lt;/a&gt;가 여기서 드러난다. &lt;em&gt;프로젝트마다&lt;/em&gt; MCP를 새로 붙이고 에이전트를 다시 짜면 — &lt;strong&gt;시간 낭비&lt;/strong&gt; 다. 한 번 잘 만들어둔 &lt;em&gt;세팅 묶음&lt;/em&gt;
+을 &lt;strong&gt;복사해 가져오면&lt;/strong&gt;, 새 프로젝트도 &lt;em&gt;곧장 풀무장&lt;/em&gt; 상태로 출발한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[견적서 StarterKit]              [Supabase 앱]
+ .mcp.json (Playwright~shrimp) ──복사──▶ 그대로 적용
+ agents/ · commands/ · hooks/  ──복사──▶ 그대로 적용
+ docs/guides/                  ──복사──▶ 그대로 적용&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;① MCP 서버 이식&lt;/h3&gt;
+&lt;p&gt;먼저 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP 설정&lt;/a&gt;부터다. &lt;code&gt;.mcp.json&lt;/code&gt; 의 &lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt;
+부터 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;shrimp-task-manager&lt;/a&gt; 까지&lt;/strong&gt; 전부 복사해 Supabase 앱에 붙인다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;&lt;code&gt;shrimp&lt;/code&gt; 경로 주의.&lt;/strong&gt; 설정 하단 &lt;code&gt;shrimp&lt;/code&gt; 부분에 &lt;em&gt;예전 &lt;code&gt;invoice-web&lt;/code&gt;&lt;/em&gt; 경로가 박혀 있다. 이걸 &lt;strong&gt;현재 디렉터리&lt;/strong&gt; 로 바꿔줘야 한다. &lt;em&gt;경로를 안 고치면&lt;/em&gt; 엉뚱한 프로젝트의
+작업을 바라본다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;붙였으면 터미널에서 확인한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;claude mcp list   &lt;span class=&quot;token comment&quot;&gt;# 설치된 MCP 목록 확인&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;Supabase 인증&lt;/a&gt;이 필요하면 &lt;strong&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;Authenticate&lt;/em&gt; 를 거친다. 모든 서버가 &lt;strong&gt;&lt;code&gt;connected&lt;/code&gt;&lt;/strong&gt; 면 이식 성공이다.&lt;/p&gt;
+&lt;h3&gt;② 컨텍스트·에이전트·커맨드·훅 이식&lt;/h3&gt;
+&lt;p&gt;다음은 &lt;em&gt;개발에 쓸 자산&lt;/em&gt; 들이다. StarterKit에서 &lt;strong&gt;통째로 복사&lt;/strong&gt; 해 온다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;docs/guides/&lt;/code&gt;&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;Claude Code 컨텍스트 추가&lt;/a&gt; 관련 &lt;em&gt;개발 가이드 문서&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;agents/&lt;/code&gt;&lt;/strong&gt; → 그동안 만든 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;들&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;커스텀 커맨드 · &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;훅&lt;/a&gt;&lt;/strong&gt; → 자주 쓰는 &lt;em&gt;자동화 세트&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;루트 &lt;code&gt;docs&lt;/code&gt; 아래 &lt;code&gt;guides&lt;/code&gt;에 가이드를 넣고, 나머지도 &lt;em&gt;제자리&lt;/em&gt; 에 붙이면 — &lt;em&gt;새 프로젝트인데도&lt;/em&gt; &lt;strong&gt;익숙한 작업 환경&lt;/strong&gt; 이 통째로 따라온다.&lt;/p&gt;
+&lt;h3&gt;③ &lt;code&gt;/init&lt;/code&gt; — &lt;code&gt;CLAUDE.md&lt;/code&gt; 생성&lt;/h3&gt;
+&lt;p&gt;세팅이 끝났으면 &lt;strong&gt;프로젝트 초기화&lt;/strong&gt; 다. 터미널에서 Claude Code를 열고 &lt;strong&gt;&lt;code&gt;/init&lt;/code&gt;&lt;/strong&gt; 을 실행한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그러면 Claude Code가 &lt;strong&gt;프로젝트의 전체 코드베이스를 스캔&lt;/strong&gt; 해서 이를 참조할 수 있는 &lt;strong&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/strong&gt; 파일을 만들죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;는 &lt;em&gt;클로드가 늘 참조하는&lt;/em&gt; &lt;strong&gt;프로젝트 설명서&lt;/strong&gt; 다. 생성된 파일을 보면 — &lt;em&gt;Next.js + Supabase 스타터 킷&lt;/em&gt; 임을 소개하고
+&lt;strong&gt;주요 기술 스택&lt;/strong&gt; 을 정리해둔 게 보인다. 이걸 깔아두면, 이후 모든 작업에서 클로드가 &lt;em&gt;프로젝트 맥락을&lt;/em&gt; 자동으로 안고 간다.&lt;/p&gt;
+&lt;h3&gt;④ 커밋&lt;/h3&gt;
+&lt;p&gt;끝으로 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Git 커밋&lt;/a&gt;으로 &lt;em&gt;세팅 완료 시점&lt;/em&gt; 을 박아둔다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이러한 것들도 &lt;em&gt;커밋을 하시겠습니까?&lt;/em&gt; 라고 묻고 있는데요, &lt;strong&gt;모두 커밋&lt;/strong&gt; 해주세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;Supabase 프로젝트 Claude 초기화를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;컨셉&lt;/strong&gt; → &lt;em&gt;매번 새로 X&lt;/em&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;StarterKit&lt;/a&gt; 세팅을 &lt;strong&gt;복사·이식&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;① MCP&lt;/strong&gt; → &lt;code&gt;.mcp.json&lt;/code&gt; 전체 복사 → ⚠️ &lt;strong&gt;&lt;code&gt;shrimp&lt;/code&gt; 경로 수정&lt;/strong&gt; → &lt;code&gt;claude mcp list&lt;/code&gt;·&lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/a&gt; →
+&lt;code&gt;connected&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;② 자산&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;docs/guides&lt;/code&gt;&lt;/a&gt;·&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;&lt;code&gt;agents&lt;/code&gt;&lt;/a&gt;
+·커맨드·&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;훅&lt;/a&gt; 통째 이식&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;③ 초기화&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;/init&lt;/code&gt;&lt;/a&gt; → 코드베이스 스캔 → &lt;strong&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/strong&gt; 생성&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;④ 커밋&lt;/strong&gt; → &lt;em&gt;모두&lt;/em&gt; 커밋&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;좋은 도구는 &lt;em&gt;한 번 만들어 계속 재사용&lt;/em&gt; 한다. 이렇게 &lt;strong&gt;무장한 프로젝트&lt;/strong&gt; 위에서라야 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI 워크플로우&lt;/a&gt;가 제 속도를 낸다. 토대와 장비를 모두 갖췄으니 — 다음
+시간엔 AI 개발의 &lt;em&gt;오류를 줄여줄&lt;/em&gt; &lt;strong&gt;린트 체크·타입 체크&lt;/strong&gt; 를 더해, 더 단단한 개발 환경을 만들어보자.&lt;/p&gt;
+&lt;h2&gt;개발도구 설정: Linter, TypeCheck&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-claude-%EC%B4%88%EA%B8%B0%ED%99%94&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;세팅을 이식&lt;/em&gt; 하고 &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;까지 깔며 &lt;strong&gt;무장한 프로젝트&lt;/strong&gt; 를 만들었다. 마지막
+한 겹이 남았다 — &lt;strong&gt;개발 도구&lt;/strong&gt; 다. &lt;em&gt;ESLint·Prettier·타입 체크&lt;/em&gt; 를 붙여, &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI 개발의 오류를 입구에서&lt;/a&gt; 막는다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이번에는 &lt;em&gt;ESLint나 프리티어 타입 체크&lt;/em&gt; 와 같은 &lt;strong&gt;개발 도구를 설정&lt;/strong&gt; 하도록 할게요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;왜 깔까 — AI가 짠 코드일수록 더&lt;/h3&gt;
+&lt;p&gt;이 도구들은 &lt;em&gt;코드 품질의 그물망&lt;/em&gt; 이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ESLint&lt;/strong&gt; → &lt;em&gt;문법·스타일 오류&lt;/em&gt; 를 사전에 잡는 &lt;strong&gt;린터&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prettier&lt;/strong&gt; → &lt;em&gt;코드 포맷&lt;/em&gt; 을 자동 정렬 (협업 시 통일성)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;타입 체크&lt;/strong&gt; → &lt;em&gt;타입 불일치&lt;/em&gt; 를 컴파일 전에 검출&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI는 코드를 한꺼번에 많이 쏟아낸다&lt;/a&gt;. 그만큼 &lt;em&gt;사소한 실수&lt;/em&gt; 가 끼어들 틈도 많다. 이 그물망이 깔려 있으면 — &lt;strong&gt;클로드가 제 코드를 스스로 검증&lt;/strong&gt; 하며
+&lt;em&gt;오류를 줄인다.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;핵심 — 프롬프트를 &apos;전문가&apos;로 시작한다&lt;/h3&gt;
+&lt;p&gt;설정도 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;클로드에게 맡긴다&lt;/a&gt;. 다만 &lt;em&gt;던지듯&lt;/em&gt; 시키지 않는다. 강사의 프롬프트 작법이 핵심이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;당신은 웹 애플리케이션 개발 도구 설정 전문가입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이렇게 &lt;em&gt;역할 (롤)을 부여&lt;/em&gt; 하고 — &lt;em&gt;원하는 도구를 간략히&lt;/em&gt; 적되, &lt;strong&gt;추천할 게 있으면 추천해달라&lt;/strong&gt; 고 여지를 둔다. 그리고 &lt;em&gt;두 가지 사고 기법&lt;/em&gt; 을 얹는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;COT (Chain-of-Thought)&lt;/strong&gt; → &lt;em&gt;단계별로 생각&lt;/em&gt; 하며 진행&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt; → &lt;strong&gt;현재 프로젝트 구조를 깊이 분석&lt;/strong&gt; 해 &lt;em&gt;최적화된 설정&lt;/em&gt; 도출&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;핵심은 &lt;strong&gt;&quot;우리 프로젝트에 맞게&quot;&lt;/strong&gt; 다. &lt;em&gt;일반론적 설정&lt;/em&gt; 이 아니라, &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-claude-%EC%B4%88%EA%B8%B0%ED%99%94&quot;&gt;지금 이 코드베이스&lt;/a&gt;를 분석한 &lt;strong&gt;맞춤 설정&lt;/strong&gt; 을 받아낸다.&lt;/p&gt;
+&lt;h3&gt;그리고 — 오류를 줄이는 두 무기&lt;/h3&gt;
+&lt;p&gt;여기서 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;MVP 때 배운 그 원칙&lt;/a&gt;이 다시 등장한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;오류를 &lt;em&gt;크게 줄일 수 있는&lt;/em&gt; 방법이 &lt;strong&gt;두 가지&lt;/strong&gt; 가 있다고요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;① Playwright MCP   → 클로드가 스스로 화면 테스트·버그 수정
+② 작업 완료 체크리스트 → 구현 후 lint·type·build 통과해야 &apos;완료&apos;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이번 설정의 목적이 바로 &lt;em&gt;②번 체크리스트&lt;/em&gt; 를 &lt;strong&gt;실제로 굴러가게&lt;/strong&gt; 만드는 것이다. 린트·타입 체크가 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/a&gt;에 박혀야, &lt;em&gt;&quot;구현 → 자가
+검증&quot;&lt;/em&gt; 루프가 완성된다.&lt;/p&gt;
+&lt;h3&gt;작업 계획 — 그리고 실행&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;plan&lt;/code&gt;&lt;/a&gt;으로 잡힌 단계는 대략 이렇다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;패키지 설치&lt;/strong&gt; — ESLint·Prettier·타입 관련 의존성&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prettier 설정 파일&lt;/strong&gt; 생성&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ESLint 설정&lt;/strong&gt; 업데이트&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript 설정&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;package.json&lt;/code&gt; 스크립트&lt;/strong&gt; 추가 (&lt;code&gt;check-all&lt;/code&gt; 류)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;strong&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt; 업데이트&lt;/strong&gt;&lt;/a&gt; — &lt;em&gt;개발 도구 사용법&lt;/em&gt; 을 컨텍스트에 명시&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;계획을 확인했으면 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass permissions&lt;/code&gt;&lt;/a&gt; 모드로 &lt;em&gt;쭉&lt;/em&gt; 진행한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이대로 &lt;strong&gt;바이패스 모드&lt;/strong&gt; 로 진행하도록 할게요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;5번이 &lt;em&gt;은근히 중요&lt;/em&gt; 하다. &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;에 &quot;구현 후 &lt;code&gt;check-all&lt;/code&gt;을 돌려라&quot;&lt;/a&gt;고 적어두면 — &lt;em&gt;이후 모든 작업&lt;/em&gt; 에서 클로드가 &lt;strong&gt;자동으로 자가
+검증&lt;/strong&gt; 한다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;개발 도구 설정을 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;무엇&lt;/strong&gt; → &lt;strong&gt;ESLint&lt;/strong&gt;(린트) · &lt;strong&gt;Prettier&lt;/strong&gt;(포맷) · &lt;strong&gt;타입 체크&lt;/strong&gt; → 코드 품질 그물망&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;왜&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI가 쏟아낸 코드&lt;/a&gt;의 &lt;em&gt;틈&lt;/em&gt; 을 자동으로 메움&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;프롬프트&lt;/strong&gt; → &lt;em&gt;&quot;개발 도구 설정 전문가&quot;&lt;/em&gt; 롤 + &lt;strong&gt;COT·&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt; → 맞춤 설정&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;오류 감소 2무기&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt; + &lt;strong&gt;작업 완료 체크리스트&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;계획&lt;/strong&gt; → &lt;em&gt;설치 → 설정 파일 → 스크립트 → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;&lt;/em&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이로써 &lt;strong&gt;Supabase 어플리케이션의 토대&lt;/strong&gt; 가 완성됐다. &lt;em&gt;백엔드 (Supabase)&lt;/em&gt; · &lt;em&gt;MCP 다리&lt;/em&gt; · &lt;em&gt;이식한 무기&lt;/em&gt; · &lt;em&gt;코드 품질 그물망&lt;/em&gt; 까지 — &lt;strong&gt;개발을 시작할 모든 준비&lt;/strong&gt; 가 끝났다.
+돌아보면 이 시리즈는 &lt;em&gt;기능 하나&lt;/em&gt; 가 아니라, &lt;strong&gt;단단한 출발선&lt;/strong&gt; 을 만드는 과정이었다. 잘 깔린 기반 위에서라면 — 앞으로의 &lt;em&gt;진짜 기능 개발&lt;/em&gt;
+은 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;그 익숙한 워크플로우&lt;/a&gt;로 &lt;em&gt;거침없이&lt;/em&gt; 나아갈 수 있다.&lt;/p&gt;
+&lt;h2&gt;서브에이전트활용: 구글 로그인 기능 추가하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C%EB%8F%84%EA%B5%AC-%EC%84%A4%EC%A0%95-linter-typecheck&quot;&gt;앞 챕터&lt;/a&gt;까지 &lt;em&gt;토대&lt;/em&gt; 를 모두 깔았다. 이제 &lt;strong&gt;첫 실전 기능&lt;/strong&gt; 을 붙인다 — 거의 모든 서비스에 들어가는 &lt;strong&gt;구글 로그인 (OAuth)&lt;/strong&gt; 이다. 그런데 강사는
+&lt;em&gt;기능부터 짜지&lt;/em&gt; 않는다. &lt;strong&gt;전문가 서브 에이전트&lt;/strong&gt; 를 먼저 세운다.&lt;/p&gt;
+&lt;h3&gt;1단계 — &lt;code&gt;Next.js + Supabase 풀스택&lt;/code&gt; 에이전트&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;제 생각에는 &lt;em&gt;이러한 Sub-agent가 있으면&lt;/em&gt; 정말 좋을 것 같거든요. 그렇기 때문에…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;는 &lt;em&gt;기술 영역을 전문화&lt;/em&gt; 한 AI다. 이번엔 &lt;strong&gt;Next.js + Supabase 풀스택 개발자&lt;/strong&gt; 를 만든다. 단순히 이름만 붙이는 게
+아니라 — &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;컨텍스트를 두툼하게&lt;/a&gt; 채운다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;참고 자료&lt;/strong&gt; → &lt;em&gt;Next.js 최신 가이드&lt;/em&gt; · &lt;em&gt;Supabase MCP 개발 가이드&lt;/em&gt; → &lt;strong&gt;모범 사례&lt;/strong&gt; 적용&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;사고 예산&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;더 깊이&lt;/em&gt; 분석&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;룰&lt;/strong&gt; → &lt;strong&gt;보안 · 성능 최적화 · 에러 처리&lt;/strong&gt; 등 전문성 강화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;첫 단추가 중요&lt;/strong&gt; 하기 때문에 &lt;em&gt;토큰에 대한 예산&lt;/em&gt; 을 더 사용했고요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;에이전트를 잘 만드는 데 &lt;em&gt;토큰을 아끼지 않는&lt;/em&gt; 이유다 — 여기에 쓴 토큰이 &lt;em&gt;이후 모든 작업의 품질&lt;/em&gt; 을 끌어올린다.&lt;/p&gt;
+&lt;h3&gt;2단계 — 계획, 그리고 환각 줄이기&lt;/h3&gt;
+&lt;p&gt;만든 에이전트에게 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;구글 로그인 추가 계획&lt;/em&gt; 을 세우게 한다. 여기서 강사의 &lt;strong&gt;프롬프트 팁&lt;/strong&gt; 이 빛난다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;궁금한 사항은 &lt;strong&gt;질문해줘.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;왜 이게 중요할까? &lt;strong&gt;AI 환각 (Hallucination)&lt;/strong&gt; 때문이다. LLM은 &lt;em&gt;모르는 것도 아는 척&lt;/em&gt; 지어낼 수 있다. 그래서 &lt;em&gt;&quot;모르면 모른다고 말해줘&quot;&lt;/em&gt;, &lt;em&gt;&quot;궁금하면 물어봐&quot;&lt;/em&gt; 라고 **여지를 열어주면
+** — 환각이 줄어든다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이건 마치 &lt;em&gt;시험에서 빈칸으로 두는 것&lt;/em&gt; 보다 &lt;strong&gt;찍어서라도 답을 내는 것&lt;/strong&gt; 과 마찬가지예요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉 AI는 &lt;em&gt;공백을 못 견디고&lt;/em&gt; 뭐든 채우려 든다. &lt;strong&gt;질문을 허용&lt;/strong&gt; 하는 것만으로, &lt;em&gt;억지 추측&lt;/em&gt; 대신 &lt;strong&gt;확인&lt;/strong&gt; 을 택하게 만드는 &lt;em&gt;영리한 안전장치&lt;/em&gt; 다.&lt;/p&gt;
+&lt;h3&gt;3단계 — 구현 (코드 + 콘솔 양쪽)&lt;/h3&gt;
+&lt;p&gt;구글 로그인은 &lt;em&gt;코드만으로&lt;/em&gt; 끝나지 않는다. &lt;strong&gt;외부 설정&lt;/strong&gt; 이 함께 가야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[코드 쪽]                          [설정 쪽]
+OAuth 콜백 핸들러 작성        ┌─ Google Cloud Console
+소셜 로그인 버튼 컴포넌트      │   프로젝트 생성 → OAuth 클라이언트 ID
+로그인/회원가입 페이지 적용    └─ Supabase Authentication
+                              Providers → Google 활성화 + Client ID·Secret&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;코드&lt;/strong&gt; → &lt;em&gt;OAuth 콜백 핸들러&lt;/em&gt; + &lt;em&gt;소셜 로그인 버튼&lt;/em&gt; → 로그인·회원가입 페이지에 적용 (에이전트가 처리)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Cloud Console&lt;/strong&gt; → &lt;em&gt;프로젝트 생성 → API 설정 → OAuth 클라이언트 ID&lt;/em&gt; 발급&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Supabase&lt;/strong&gt; → &lt;code&gt;Authentication → Providers&lt;/code&gt; 에서 &lt;strong&gt;Google 활성화&lt;/strong&gt; + &lt;em&gt;Client ID·Secret Key&lt;/em&gt; 입력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;콘솔 설정&lt;/em&gt; 은 사람이 해줘야 하는 영역이다 — &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;Supabase 세팅을 공식 문서로 했던 것&lt;/a&gt;과 같은 맥락이다.&lt;/p&gt;
+&lt;h3&gt;4단계 — 테스트 + DB 검증&lt;/h3&gt;
+&lt;p&gt;구현했으면 &lt;em&gt;실제로 돌려본다.&lt;/em&gt; 로그인·회원가입 페이지의 &lt;strong&gt;구글 버튼&lt;/strong&gt; 으로 로그인 → &lt;strong&gt;Protected 페이지로 리다이렉트&lt;/strong&gt; 되는지 확인한다.
+그리고 &lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;앞서 만든 트리거&lt;/a&gt; 덕에 — &lt;code&gt;profiles&lt;/code&gt; 테이블·&lt;code&gt;Users&lt;/code&gt; 에 &lt;strong&gt;사용자 정보가 자동 등록&lt;/strong&gt; 됐는지 검증한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Provider 표시 차이.&lt;/strong&gt; &lt;em&gt;기존 이메일 가입 기록&lt;/em&gt; 이 있는 계정과 &lt;em&gt;구글로만 로그인&lt;/em&gt; 한 계정은, DB에 찍히는 &lt;strong&gt;Provider 값&lt;/strong&gt; 이 다르다. 이런 디테일까지 확인하면 &lt;em&gt;인증 흐름&lt;/em&gt; 이
+더 또렷이 보인다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;정리하며 — 그리고 워크플로우 공식&lt;/h3&gt;
+&lt;p&gt;구글 로그인 추가를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;① 에이전트&lt;/strong&gt; → &lt;code&gt;Next.js+Supabase 풀스택&lt;/code&gt; → &lt;em&gt;최신 가이드·MCP&lt;/em&gt; 참고 + &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt; (첫 단추에 토큰 투자)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;② 계획&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt; + &lt;em&gt;&quot;질문해줘&quot;&lt;/em&gt; → &lt;strong&gt;환각 감소&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;③ 구현&lt;/strong&gt; → &lt;em&gt;코드 (콜백·버튼)&lt;/em&gt; + &lt;em&gt;&lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;Google Console&lt;/a&gt; OAuth&lt;/em&gt; + &lt;em&gt;Supabase Provider&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;④ 검증&lt;/strong&gt; → 로그인 → 리다이렉트 → &lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;&lt;code&gt;profiles&lt;/code&gt; 자동 등록&lt;/a&gt; 확인 (+Provider 차이)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;강사가 &lt;em&gt;시리즈 내내&lt;/em&gt; 반복한 &lt;strong&gt;개발 워크플로우 공식&lt;/strong&gt; 이 여기서 또 한 번 확인된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;정보 수집 → 서브 에이전트 생성 → 작업 계획 → 계획 기반 구현&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;기능이 &lt;em&gt;구글 로그인&lt;/em&gt; 이든 무엇이든 — &lt;strong&gt;이 순서는 변하지 않는다.&lt;/strong&gt; 토대를 깔고 (이 시리즈), 전문가를 세우고, 계획하고, 구현한다. 앞으로는 이
+위에서 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;PRD·로드맵·Shrimp&lt;/a&gt;로 &lt;em&gt;본격적인 기능&lt;/em&gt; 들을 쌓아 올리면 된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Claude Code] 관리자 기능 확장]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  ROADMAP 버전관리: MVP 이후 이어나가기 지난 시리즈에서 Notion 기반 견적서 웹 의 MVP…]]></description><link>https://sungbin.kr/claude-code-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B8%B0%EB%8A%A5-%ED%99%95%EC%9E%A5/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-관리자-기능-확장/</guid><pubDate>Sat, 25 Jul 2026 16:11:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;해당 포스팅은 &lt;a href=&quot;https://inf.run/vN55k&quot;&gt;클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지&lt;/a&gt;를 참조하여 작성하였습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -21677,497 +22167,7 @@ E2E 테스트 코드를 꼭 짜야 할까?&quot;&lt;/strong&gt; 라는, 1인 개
 &lt;li&gt;&lt;strong&gt;크리티컬은 코드 / 가변적인 곳은 자동화&lt;/strong&gt;라는 테스트 전략을 정리했습니다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;핵심 메시지는 &lt;strong&gt;&quot;도구를 상황에 맞게 쓰라&quot;&lt;/strong&gt; 입니다. AI 브라우저 자동화는 강력하지만 만능은 아닙니다. 무엇을 견고하게 지키고 무엇을 유연하게 검증할지 — 그 균형을 아는 것이 좋은 테스트 전략의 시작입니다.
-이로써 이벤트 관리 앱의 구현과 테스트가 모두 마무리되었습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Claude Code] Supabase 어플리케이션 시작하기]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  Supabase…]]></description><link>https://sungbin.kr/claude-code-supabase-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-supabase-어플리케이션-시작하기/</guid><pubDate>Wed, 24 Jun 2026 16:12:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;해당 포스팅은 &lt;a href=&quot;https://inf.run/vN55k&quot;&gt;클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지&lt;/a&gt;를 참조하여 작성하였습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABM0lEQVR42mO4meb6HytOd4PgNDckcZiYK07MgEviRpIDENv/v5Hs9P9GitP/m0B8IxEolmgP4RNvoBtQg/P/B82Z/x91Ff6/Wxbx/3au7/9b2d7/79cl/X/QmPb/Vo4vCQYCvXQj1fn/q1XT/z+b3fr//f6N/98f3Pz//d71/z8e2wXEu/+/WDIR7FJs3sfqZZAL75ZFgl0HctX92sT/96rj/t+rigXiuP93SsL+3wRaSnwYglyZYAc28E5h0P/riXb/7xSH/L9TFAw26EaSI4mRkg4Jx5crpgK93fb//b4N/z8c2vL/45Ed/58v6Pl/HWjZzXR3EmMZaCDImw+aM4CRU/D/UWfB/4ftuWBXQ2LZjTQDwRiUZJIdIUkFhIFJ6WaqC3npEDlx3wJ6D4TB3iSQsAEfowVVIr8OEAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;&quot;
-        src=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png&quot;
-        srcset=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/6f3f2/banner.png 256w,
-/static/0c1c2e37eb2d69a94839e0f64e5c9d39/01e7c/banner.png 512w,
-/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png 700w&quot;
-        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Supabase란 무엇인가? 사용하는 이유!&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B8%B0%EB%8A%A5-%ED%99%95%EC%9E%A5&quot;&gt;지난 시리즈&lt;/a&gt;에서 관리자 인증을 &lt;em&gt;환경 변수 패스워드&lt;/em&gt; 로 임시 처리하며, &lt;strong&gt;제대로 된 인증은 추후 Supabase로&lt;/strong&gt; 가겠다고 미뤄뒀다. 이제 그 약속을 지킬
-차례다. 그런데 코드를 짜기 전에 — &lt;em&gt;Supabase가 대체 뭐길래&lt;/em&gt; 다들 쓰는지부터 짚고 가자.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;쉽게 말해서 Supabase를 사용하면 웹이나 모바일 애플리케이션을 만들 때 필요한 &lt;strong&gt;백엔드 기능들&lt;/strong&gt; 을 &lt;em&gt;정말 쉽게&lt;/em&gt; 구현할 수 있도록 도와줘요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;한 줄 정의 — 백엔드를 &apos;빌려 쓴다&apos;&lt;/h3&gt;
-&lt;p&gt;웹앱을 만들려면 &lt;em&gt;프론트엔드(화면)&lt;/em&gt; 만으론 부족하다. &lt;strong&gt;회원가입·로그인&lt;/strong&gt; 을 처리하고, &lt;em&gt;데이터를 저장&lt;/em&gt; 하고, &lt;em&gt;파일을 보관&lt;/em&gt; 할 &lt;strong&gt;백엔드&lt;/strong&gt; 가 필요하다. 문제는 — 이걸 &lt;em&gt;직접 다 만들면&lt;/em&gt; &lt;strong&gt;시간이
-어마어마하게&lt;/strong&gt; 든다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[직접 구축]  서버 세팅 + DB 설치 + 인증 구현 + 파일 저장소 + …  → 며칠~몇 주
-[Supabase]   이미 다 준비됨 → 가져다 연결만                      → 몇 시간&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Supabase&lt;/strong&gt; 는 이 &lt;em&gt;백엔드 기능 세트&lt;/em&gt; 를 &lt;strong&gt;미리 만들어 빌려주는&lt;/strong&gt; 서비스다. 흔히 &lt;strong&gt;BaaS(Backend as a Service)&lt;/strong&gt; 라 부른다.&lt;/p&gt;
-&lt;h3&gt;무엇을 주나 — 5가지 핵심 기능&lt;/h3&gt;
-&lt;p&gt;강사가 &lt;em&gt;일상 서비스에 빗대&lt;/em&gt; 하나씩 풀어준다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;기능&lt;/th&gt;
-&lt;th&gt;무엇을&lt;/th&gt;
-&lt;th&gt;비유&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;데이터베이스&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;상품·주문·고객&lt;/em&gt; 데이터를 &lt;strong&gt;PostgreSQL&lt;/strong&gt; 에 저장&lt;/td&gt;
-&lt;td&gt;온라인 쇼핑몰의 상품/주문 정보&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;인증(Auth)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;이메일·소셜(구글/카카오)&lt;/em&gt; 로그인 + &lt;strong&gt;RLS&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;로그인한 사람만 &lt;em&gt;제 데이터&lt;/em&gt; 접근&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;실시간(Realtime)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;변경이 즉시&lt;/em&gt; 다른 사용자에게 동기화&lt;/td&gt;
-&lt;td&gt;채팅 메시지가 바로 뜨는 것&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;스토리지(Storage)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;사진·동영상&lt;/em&gt; 대용량 파일 저장&lt;/td&gt;
-&lt;td&gt;인스타그램 업로드&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Edge Functions&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;서버 없이&lt;/em&gt; 커스텀 로직 실행&lt;/td&gt;
-&lt;td&gt;결제 후 영수증 메일·썸네일 생성&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;여기서 특히 강조되는 게 &lt;strong&gt;Row Level Security(RLS)&lt;/strong&gt; 다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이것이 바로 Supabase의 &lt;strong&gt;핵심 기능&lt;/strong&gt; 이라고 할 수 있죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;RLS는 &lt;em&gt;각 사용자가 자신의 데이터에만&lt;/em&gt; 접근하도록 &lt;strong&gt;보안을 자동 처리&lt;/strong&gt; 한다. &lt;em&gt;남의 주문 내역&lt;/em&gt; 이 보이는 사고를 — DB 레벨에서
-막아준다. &lt;a href=&quot;/claude-code-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B8%B0%EB%8A%A5-%ED%99%95%EC%9E%A5&quot;&gt;지난 시리즈의 환경 변수 패스워드&lt;/a&gt;와는 차원이 다른 &lt;em&gt;진짜 인증&lt;/em&gt; 이다.&lt;/p&gt;
-&lt;h3&gt;왜 쓰나 — 네 가지 이유&lt;/h3&gt;
-&lt;p&gt;기능이 많다고 다 쓰는 건 아니다. &lt;em&gt;선택받는 이유&lt;/em&gt; 는 따로 있다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;개발 속도&lt;/strong&gt; → 백엔드가 &lt;em&gt;이미 준비&lt;/em&gt; 돼 있어 &lt;strong&gt;비즈니스 로직·프론트&lt;/strong&gt; 에 집중. &lt;em&gt;MVP를 몇 시간 만에&lt;/em&gt; 만들었다는 후기까지&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;비용 효율성&lt;/strong&gt; → &lt;em&gt;작은 프로젝트는 무료&lt;/em&gt;, 성장하면 &lt;strong&gt;쓴 만큼만&lt;/strong&gt; 지불 (직접 서버 운영보다 경제적)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;높은 확장성&lt;/strong&gt; → 사용자가 &lt;em&gt;갑자기 100배&lt;/em&gt; 늘어도 &lt;strong&gt;스케일링을 알아서&lt;/strong&gt; 처리&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;뛰어난 개발자 경험(DX)&lt;/strong&gt; → &lt;em&gt;잘 정리된 문서&lt;/em&gt; · 직관적 API · 쉬운 대시보드&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;여기에 &lt;em&gt;전 세계 개발자&lt;/em&gt; 들이 정보를 나누는 &lt;strong&gt;강력한 커뮤니티&lt;/strong&gt; 까지 더해진다. &lt;em&gt;막혔을 때&lt;/em&gt; 검색하면 &lt;strong&gt;답이 이미 있는&lt;/strong&gt; 경우가 많다는 뜻이다.&lt;/p&gt;
-&lt;h3&gt;Claude Code와 왜 잘 맞나&lt;/h3&gt;
-&lt;p&gt;한 가지 덧붙이면 — Supabase는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI 워크플로우&lt;/a&gt;와 &lt;em&gt;궁합이 좋다.&lt;/em&gt; &lt;em&gt;기능이 표준화&lt;/em&gt; 돼 있고 &lt;strong&gt;문서가 탄탄&lt;/strong&gt; 하니, 클로드가 &lt;em&gt;적은 컨텍스트로도&lt;/em&gt; 정확한
-코드를 뽑는다. &lt;em&gt;백엔드를 손수 설계&lt;/em&gt; 하는 것보다, &lt;strong&gt;검증된 패턴&lt;/strong&gt; 을 AI가 엮어주는 게 훨씬 빠르고 안정적이다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;Supabase를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;정체&lt;/strong&gt; → 백엔드 기능을 &lt;em&gt;미리 만들어 빌려주는&lt;/em&gt; &lt;strong&gt;BaaS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;5대 기능&lt;/strong&gt; → &lt;em&gt;DB(PostgreSQL) · 인증(+RLS) · 실시간 · 스토리지 · Edge Functions&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;RLS&lt;/strong&gt; → &lt;em&gt;각자 제 데이터만&lt;/em&gt; 접근 → &lt;strong&gt;보안 자동 처리&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;선택 이유&lt;/strong&gt; → &lt;em&gt;개발 속도 · 비용 효율 · 확장성 · 개발자 경험&lt;/em&gt; (+커뮤니티)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI 궁합&lt;/strong&gt; → &lt;em&gt;표준화·문서화&lt;/em&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;가 적은 컨텍스트로 정확히&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;강사의 한마디가 Supabase의 본질을 요약한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Supabase는 단순히 도구가 아니라, 우리의 &lt;em&gt;아이디어를 빠르게 현실로&lt;/em&gt; 만들어주는 &lt;strong&gt;강력한 파트너&lt;/strong&gt; 예요. &lt;em&gt;복잡한 백엔드 설정&lt;/em&gt; 에 시간을 쓰지 않고, 정말 중요한 것 — **사용자에게 가치를 전달하는&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;것** 에 집중할 수 있게 해주죠.&lt;/p&gt;
-&lt;p&gt;개념을 잡았으니, 다음 챕터에서는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;와 함께 &lt;strong&gt;Supabase 프로젝트를 직접 생성&lt;/strong&gt; 해 우리 앱에 연결해보자.&lt;/p&gt;
-&lt;h2&gt;Supabase 프로젝트 생성하기&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;Supabase가 무엇인지&lt;/em&gt; 개념을 잡았다. 이제 &lt;strong&gt;직접 프로젝트를 만들어&lt;/strong&gt; Next.js와 연결할 차례다. &lt;em&gt;데이터베이스 + 로그인·회원가입&lt;/em&gt; 이
-얽힌 — 이 시리즈에서 가장 &lt;em&gt;복잡한&lt;/em&gt; 세팅이지만, 강사가 천천히 짚어준다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;경험이 적으신 분들도 &lt;em&gt;잘 따라오실 수 있도록&lt;/em&gt; 요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;왜 &apos;AI&apos;가 아니라 &apos;공식 문서&apos;로 시작하나&lt;/h3&gt;
-&lt;p&gt;여기서 강사가 &lt;em&gt;의외의 선택&lt;/em&gt; 을 한다. &lt;em&gt;&quot;Claude한테 Supabase 세팅해줘&quot;&lt;/em&gt; 라고 시키지 않는다. &lt;strong&gt;공식 문서를 그대로 따라간다.&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;초기 프로젝트를 구성할 때 &lt;em&gt;AI를 통해서&lt;/em&gt; 할 수도 있지만, &lt;em&gt;공식 문서로 구성&lt;/em&gt; 하는 건 &lt;strong&gt;다양한 이점&lt;/strong&gt; 이 있다고 했죠?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이유는 둘이다. &lt;em&gt;세팅은 한 번뿐이고 정확도가 생명&lt;/em&gt; 이라 — &lt;strong&gt;검증된 공식 절차&lt;/strong&gt; 가 안전하고, 매번 &lt;em&gt;방대한 세팅을 AI에 설명&lt;/em&gt; 하면 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰만 낭비&lt;/a&gt;된다. &lt;em&gt;AI를
-안 쓰는 게&lt;/em&gt; 아니라, &lt;strong&gt;쓸 곳에 쓴다&lt;/strong&gt; 는 분별이다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;첫 단추가 &lt;em&gt;정말 중요&lt;/em&gt; 하거든요. (…) &lt;strong&gt;아는 만큼 더 보이기&lt;/strong&gt; 때문이죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;① 프로젝트 생성&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://supabase.com/docs&quot;&gt;Supabase 공식 문서&lt;/a&gt;의 &lt;code&gt;Docs → Start&lt;/code&gt; 에서 &lt;strong&gt;Next.js&lt;/strong&gt; 를 고르면 연동 가이드가 나온다. &lt;code&gt;database.new&lt;/code&gt; 로 새 프로젝트를
-만든다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;프로젝트 명&lt;/strong&gt; → &lt;code&gt;nextjs-supabase-app&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DB 패스워드&lt;/strong&gt; → &lt;em&gt;직접 지정&lt;/em&gt; (꼭 기억해둘 것)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Region&lt;/strong&gt; → &lt;strong&gt;서울(Seoul)&lt;/strong&gt; — &lt;em&gt;사용자와 가까울수록&lt;/em&gt; 응답이 빠르다&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 &lt;strong&gt;Region은 &apos;데이터가 물리적으로 사는 곳&apos;.&lt;/strong&gt; 데이터센터가 &lt;em&gt;멀수록&lt;/em&gt; 왕복 시간이 길어진다. 국내 서비스라면 &lt;em&gt;서울 리전&lt;/em&gt; 이 정답.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;② 테이블 생성 + RLS — 문서 그대로 복붙&lt;/h3&gt;
-&lt;p&gt;프로젝트가 생기면, 공식 문서의 &lt;em&gt;SQL을 그대로 복사&lt;/em&gt; 해 대시보드의 &lt;strong&gt;&lt;code&gt;SQL Editor&lt;/code&gt;&lt;/strong&gt; 에 붙여 실행한다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;instruments&lt;/code&gt; 테이블&lt;/strong&gt; 생성 + 샘플 데이터 삽입 (문서 제공 SQL)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;RLS 정책&lt;/a&gt;&lt;/strong&gt; 설정 — &lt;em&gt;익명 사용자(&lt;code&gt;anon&lt;/code&gt;)&lt;/em&gt; 에게 &lt;strong&gt;&lt;code&gt;SELECT&lt;/code&gt; 만 허용&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;어렵지 않죠? &lt;strong&gt;공식 문서 그대로&lt;/strong&gt; 따라 하고 있습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;2번이 &lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;앞 챕터에서 강조한 RLS&lt;/a&gt;의 실물이다. &lt;em&gt;로그인 안 한 방문자&lt;/em&gt; 도 이 테이블은 &lt;strong&gt;읽을 수 있게&lt;/strong&gt; 여는 정책이다.&lt;/p&gt;
-&lt;h3&gt;③ Next.js 프로젝트 — &lt;code&gt;with-supabase&lt;/code&gt; 템플릿&lt;/h3&gt;
-&lt;p&gt;프론트는 &lt;em&gt;맨바닥부터&lt;/em&gt; 깔지 않는다. &lt;strong&gt;&lt;code&gt;with-supabase&lt;/code&gt; 템플릿&lt;/strong&gt; 으로 시작한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;npx create-next-app &lt;span class=&quot;token parameter variable&quot;&gt;-e&lt;/span&gt; with-supabase nextjs-supabase-app&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이 템플릿엔 &lt;strong&gt;쿠키 기반 인증 · TypeScript · Tailwind CSS&lt;/strong&gt; 가 &lt;em&gt;미리 세팅&lt;/em&gt; 돼 있다. 개발 서버를 띄우면 — &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;지난 프로젝트&lt;/a&gt;와 달리
-&lt;em&gt;Supabase가 통합된 UI&lt;/em&gt; 가 바로 뜬다.&lt;/p&gt;
-&lt;h3&gt;④ 환경 변수 + 클라이언트 연결&lt;/h3&gt;
-&lt;p&gt;이제 &lt;em&gt;내 프로젝트&lt;/em&gt; 와 &lt;em&gt;Supabase&lt;/em&gt; 를 잇는다. &lt;code&gt;.env.example&lt;/code&gt; 을 &lt;strong&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/strong&gt; 로 바꾸고 두 값을 채운다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;환경 변수&lt;/th&gt;
-&lt;th&gt;의미&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;NEXT_PUBLIC_SUPABASE_URL&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Supabase 프로젝트 &lt;strong&gt;API 주소&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;NEXT_PUBLIC_SUPABASE_ANON_KEY&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;클라이언트용 &lt;strong&gt;공개(anon) 키&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;값은 &lt;em&gt;Supabase 프로젝트 설정&lt;/em&gt; 에서 복사해 붙인다. 그다음 &lt;strong&gt;&lt;code&gt;utils/supabase/server.ts&lt;/code&gt;&lt;/strong&gt; 에 &lt;em&gt;클라이언트 생성 함수&lt;/em&gt; 를, &lt;strong&gt;&lt;code&gt;app/instruments/page.tsx&lt;/code&gt;&lt;/strong&gt; 에
-&lt;em&gt;데이터 조회 코드&lt;/em&gt; 를 (역시 문서대로) 넣는다.&lt;/p&gt;
-&lt;h3&gt;⑤ 동작 확인 — 그리고 흔한 함정 둘&lt;/h3&gt;
-&lt;p&gt;환경 변수가 잡히면 &lt;em&gt;회원가입·로그인 버튼&lt;/em&gt; 이 &lt;strong&gt;활성화&lt;/strong&gt; 된다. 여기서 강사가 &lt;em&gt;실제로 부딪힌&lt;/em&gt; 두 함정을 보여준다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[함정 1] 로그인 오류  → 서버 재실행 + 브라우저 쿠키 삭제 → 해결
-[함정 2] 키명 불일치  → ANON_KEY 키명이 가이드와 다름 → 올바른 이름으로 수정&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;로그인이 안 될 때&lt;/strong&gt; → &lt;em&gt;쿠키가 쌓여서&lt;/em&gt; 그런 경우가 많다. &lt;strong&gt;서버 재실행 + 쿠키 삭제&lt;/strong&gt; 면 풀린다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Instruments 페이지 오류&lt;/strong&gt; → 오류 로그를 보니 &lt;em&gt;키 이름&lt;/em&gt; 이 가이드와 달랐다. &lt;code&gt;.env.local&lt;/code&gt; 의 &lt;strong&gt;&lt;code&gt;ANON_KEY&lt;/code&gt; 키명을 수정&lt;/strong&gt; 하면 오류는 사라진다. (&lt;em&gt;목록이 아직 안 뜨는
-건&lt;/em&gt; 다음 챕터에서 다룬다.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;오류는 자연스러운 것&lt;/a&gt; — 중요한 건 &lt;em&gt;로그를 읽고 고치는&lt;/em&gt; 흐름이다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;Supabase 프로젝트 생성을 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;시작점&lt;/strong&gt; → &lt;em&gt;AI 말고&lt;/em&gt; &lt;strong&gt;공식 문서&lt;/strong&gt; → 정확도 ↑·&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰&lt;/a&gt; 절약 (쓸 곳에만 AI)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;① 프로젝트&lt;/strong&gt; → &lt;code&gt;database.new&lt;/code&gt; → 이름·DB 패스워드·&lt;strong&gt;서울 리전&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;② 테이블·RLS&lt;/strong&gt; → &lt;code&gt;SQL Editor&lt;/code&gt;에 &lt;em&gt;문서 SQL 복붙&lt;/em&gt; → &lt;code&gt;anon&lt;/code&gt;에 &lt;strong&gt;&lt;code&gt;SELECT&lt;/code&gt; 허용&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;③ Next.js&lt;/strong&gt; → &lt;code&gt;create-next-app -e with-supabase&lt;/code&gt; (&lt;em&gt;인증·TS·Tailwind 내장&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;④ 연결&lt;/strong&gt; → &lt;code&gt;.env.local&lt;/code&gt;에 &lt;strong&gt;URL·ANON_KEY&lt;/strong&gt; → &lt;code&gt;utils/supabase&lt;/code&gt; 클라이언트&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;⑤ 함정&lt;/strong&gt; → &lt;em&gt;로그인 오류=쿠키 삭제&lt;/em&gt; · &lt;em&gt;오류=키명 수정&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;세팅은 &lt;em&gt;지루하지만&lt;/em&gt; &lt;strong&gt;첫 단추&lt;/strong&gt; 다. 공식 문서는 처음엔 어려워도, &lt;em&gt;자주 보면 익숙&lt;/em&gt; 해지고 &lt;strong&gt;아는 만큼 더 보인다.&lt;/strong&gt; 백엔드 토대가 깔렸으니 — 다음
-챕터에서는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;와 함께 이 Supabase 위에 &lt;strong&gt;실제 기능&lt;/strong&gt; 을 올려보자.&lt;/p&gt;
-&lt;h2&gt;Supabase RLS 정책 이슈 해결&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt; 끝에 &lt;em&gt;떡밥&lt;/em&gt; 을 하나 남겼다. &lt;strong&gt;오류는 사라졌는데 목록이 안 뜬다&lt;/strong&gt; 는 것. 분명 &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;공식 문서대로&lt;/a&gt; &lt;em&gt;테이블 생성 → 더미
-데이터 → RLS 정책&lt;/em&gt; 까지 다 했는데 — &lt;em&gt;데이터가 조회되지 않는다.&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이번 시간에는 우리가 해당 페이지로 진입을 했을 때, (왜 데이터가 안 나오는지) &lt;strong&gt;말씀드리도록 하겠습니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;증상 — 분명 다 했는데 비어 있다&lt;/h3&gt;
-&lt;p&gt;상황을 정리하면 이렇다. &lt;code&gt;instruments&lt;/code&gt; 테이블에 &lt;strong&gt;&lt;code&gt;public can read instruments&lt;/code&gt;&lt;/strong&gt; 라는 &lt;a href=&quot;#supabase%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt;RLS 정책&lt;/a&gt;을 걸어뒀다. 이 정책은 &lt;em&gt;익명
-사용자(&lt;code&gt;anon&lt;/code&gt;)&lt;/em&gt; 에게 읽기를 허용한다. &lt;em&gt;에러도 없고&lt;/em&gt; 정책도 &lt;em&gt;분명 있는데&lt;/em&gt; — 화면은 &lt;strong&gt;텅&lt;/strong&gt; 비어 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그런데 &lt;strong&gt;보세요.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;원인 — 지금 나는 &lt;code&gt;anon&lt;/code&gt;이 아니다&lt;/h3&gt;
-&lt;p&gt;범인은 &lt;strong&gt;롤(role)의 불일치&lt;/strong&gt; 다. &lt;code&gt;protected&lt;/code&gt; 페이지는 &lt;em&gt;로그인을 해야&lt;/em&gt; 들어간다. 즉 지금 나는 &lt;strong&gt;로그인한 사용자&lt;/strong&gt; — 롤이 &lt;code&gt;anon&lt;/code&gt;이 아니라 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;&lt;/strong&gt; 다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;정책 허용 대상:  anon (익명)            ← 읽기 OK
-실제 내 롤:      authenticated (로그인됨) ← 정책에 해당 안 됨 → 조회 0건&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;RLS는 정확히 일을 한 것&lt;/em&gt; 이다. &lt;strong&gt;&lt;code&gt;anon&lt;/code&gt;에게만&lt;/strong&gt; 열어줬으니, &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;인 나는&lt;/strong&gt; &lt;em&gt;대상이 아니라&lt;/em&gt; 막힌 것. &lt;em&gt;에러가 아니라&lt;/em&gt; — &lt;strong&gt;정책상 보여줄 게 없다&lt;/strong&gt; 가 정답이었다.&lt;/p&gt;
-&lt;h3&gt;해결 — 정책을 &lt;code&gt;authenticated&lt;/code&gt;까지 열기&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;어떻게 수정을 해야 되죠?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;답은 간단하다. &lt;code&gt;instruments&lt;/code&gt; 테이블의 RLS 정책을 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt; 사용자도 조회 가능&lt;/strong&gt; 하도록 고친다. 저장하고 &lt;em&gt;페이지를 새로고침&lt;/em&gt; 하면 — &lt;strong&gt;데이터가 정상적으로&lt;/strong&gt; 뜬다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[수정 전] anon 만 SELECT 허용
-[수정 후] anon + authenticated SELECT 허용  → 목록 출력 ✅&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;핵심 교훈 — 데이터가 안 보이면 RLS부터 의심하라&lt;/h3&gt;
-&lt;p&gt;이게 &lt;em&gt;Supabase 입문자가 가장 많이&lt;/em&gt; 걸리는 함정이다. 강사가 &lt;strong&gt;꼭 기억하라&lt;/strong&gt; 고 못 박는다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;개발 중 &lt;em&gt;데이터 조회가 안 될&lt;/em&gt; 경우, 가장 먼저 &lt;strong&gt;해당 테이블의 RLS 정책을 확인&lt;/strong&gt; 하는 것이 중요하다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;특히 이건 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI에게 맡기기 까다로운&lt;/a&gt; 종류의 문제다. &lt;em&gt;에러 로그가 안 뜨니&lt;/em&gt; — 클로드도 &lt;em&gt;&quot;코드는 멀쩡한데?&quot;&lt;/em&gt; 하며 헤맬 수 있다. **사람이 RLS를 짚어줘야
-** 빨리 풀린다. &lt;em&gt;AI가 만능은 아니라는&lt;/em&gt; 좋은 예다.&lt;/p&gt;
-&lt;h3&gt;마무리 — 코드 정리와 커밋&lt;/h3&gt;
-&lt;p&gt;문제를 잡았으니 &lt;em&gt;실습용 군더더기&lt;/em&gt; 를 치운다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;중복 제거&lt;/strong&gt; → &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;템플릿에 이미 있는&lt;/a&gt; &lt;em&gt;서버 클라이언트 함수&lt;/em&gt; 를 쓰고, &lt;code&gt;utils&lt;/code&gt;에 따로 만든 코드는 &lt;strong&gt;삭제&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;테스트 잔재 정리&lt;/strong&gt; → &lt;em&gt;샘플 조회 페이지&lt;/em&gt; 와 &lt;code&gt;instruments&lt;/code&gt; &lt;em&gt;테이블&lt;/em&gt; 도 제거&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;커밋&lt;/strong&gt; → 소스 제어에서 &lt;em&gt;환경 변수 키 변경&lt;/em&gt; 외 이상 없음 확인 → 스테이징 → &lt;strong&gt;커밋&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;RLS 정책 이슈 해결을 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;증상&lt;/strong&gt; → 테이블·데이터·정책 다 있는데 &lt;em&gt;목록이 빈다&lt;/em&gt; (에러 없음)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;원인&lt;/strong&gt; → 정책은 &lt;strong&gt;&lt;code&gt;anon&lt;/code&gt;&lt;/strong&gt; 허용 / 로그인한 나는 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;대상 불일치&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;해결&lt;/strong&gt; → RLS 정책을 &lt;strong&gt;&lt;code&gt;authenticated&lt;/code&gt;까지&lt;/strong&gt; 열기 → 새로고침 → 출력&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;교훈&lt;/strong&gt; → &lt;em&gt;데이터 안 보이면&lt;/em&gt; → &lt;strong&gt;RLS 정책부터 확인&lt;/strong&gt; (&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI도 잡기 어려운&lt;/a&gt; 영역)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;마무리&lt;/strong&gt; → &lt;em&gt;중복·테스트 잔재&lt;/em&gt; 제거 → &lt;strong&gt;커밋&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;RLS는 &lt;em&gt;강력한 보안&lt;/em&gt; 이지만, 그만큼 &lt;strong&gt;롤을 정확히&lt;/strong&gt; 다뤄야 한다. 이 &lt;em&gt;함정 하나&lt;/em&gt; 를 알고 나면, 앞으로 &lt;em&gt;데이터가 안 보일 때&lt;/em&gt; 헤매는 시간이 확 줄어든다. Supabase 토대와 &lt;em&gt;대표적 함정&lt;/em&gt; 까지
-익혔으니 — 다음 시리즈에서는 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;와 &lt;strong&gt;Supabase MCP&lt;/strong&gt; 로 &lt;em&gt;진짜 인증·기능&lt;/em&gt; 을 본격적으로 붙여보자.&lt;/p&gt;
-&lt;h2&gt;Supabase MCP 사용하기: 로그인 구현하기&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;RLS 함정&lt;/em&gt; 까지 넘으며 Supabase 토대를 다졌다. 그런데 지금까지는 &lt;em&gt;대시보드를 손으로&lt;/em&gt; 오가며 SQL을 복붙했다. 이제 &lt;strong&gt;클로드가 직접 DB를
-만지게&lt;/strong&gt; 할 차례다 — 그 다리가 &lt;strong&gt;Supabase MCP&lt;/strong&gt; 다.&lt;/p&gt;
-&lt;h3&gt;LLM의 한계 — DB에 직접 손이 안 닿는다&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;ChatGPT·Claude&lt;/a&gt; 같은 LLM은 &lt;em&gt;똑똑하지만&lt;/em&gt; — &lt;strong&gt;내 데이터베이스를 직접 들여다볼 수는 없다.&lt;/strong&gt; 그래서 매번 &lt;em&gt;&quot;테이블 구조가 이렇고…&quot;&lt;/em&gt; 라고 사람이
-설명해줘야 했다. &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP&lt;/a&gt;가 이 벽을 허문다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;쉽게 말씀드리면, &lt;strong&gt;Supabase MCP&lt;/strong&gt; 는 Claude와 같은 LLM과 &lt;em&gt;Supabase 프로젝트를 연결&lt;/em&gt; 해 주는 &lt;strong&gt;다리 역할&lt;/strong&gt; 이라고 보시면 돼요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[기존]  Claude  →  ❓  →  Supabase DB   (직접 못 봄, 사람이 설명)
-[MCP]   Claude  ←→ MCP ←→ Supabase DB   (직접 조회·생성·수정)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;⚠️ 먼저 — 보안부터&lt;/h3&gt;
-&lt;p&gt;MCP는 &lt;em&gt;DB에 직접 손&lt;/em&gt; 을 댄다. 강력한 만큼 &lt;strong&gt;위험&lt;/strong&gt; 도 따른다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Supabase MCP를 활용해서 &lt;em&gt;우리 데이터베이스에 직접 접근&lt;/em&gt; 할 수 있기 때문에, 아무래도 &lt;strong&gt;보안이 중요&lt;/strong&gt; 하겠죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;강사가 못 박는 &lt;strong&gt;수칙&lt;/strong&gt; 은 이렇다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;개발 환경에서만&lt;/strong&gt; — &lt;em&gt;운영(production)&lt;/em&gt; DB엔 절대 연결하지 않는다&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;고객에게 미제공&lt;/strong&gt; — &lt;em&gt;순수 개발 도구&lt;/em&gt; 로만&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;read-only&lt;/code&gt; 모드&lt;/strong&gt; — 데이터 &lt;em&gt;수정이 불필요&lt;/em&gt; 하면 읽기 전용으로&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;프로젝트 스코프 · Feature Group&lt;/strong&gt; — &lt;em&gt;최소 권한 원칙&lt;/em&gt; (필요한 기능에만 접근 허용)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;설치 — &lt;code&gt;.mcp.json&lt;/code&gt;까지&lt;/h3&gt;
-&lt;p&gt;Supabase Docs의 &lt;strong&gt;MCP 메뉴&lt;/strong&gt; 에서 설정을 만든다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;플랫폼&lt;/strong&gt; → Hosting 버전 선택 → &lt;em&gt;연결할 프로젝트&lt;/em&gt; 지정&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;권한&lt;/strong&gt; → 필요 시 &lt;strong&gt;&lt;code&gt;read-only&lt;/code&gt;&lt;/strong&gt; 활성화, &lt;strong&gt;Feature Group&lt;/strong&gt;(DB·Auth·Storage 등)으로 &lt;em&gt;접근 범위&lt;/em&gt; 제어&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;클라이언트&lt;/strong&gt; → &lt;strong&gt;Claude Code&lt;/strong&gt; 선택 → &lt;em&gt;CLI 명령어 복사&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;프로젝트 &lt;strong&gt;루트에서 실행&lt;/strong&gt; → &lt;strong&gt;&lt;code&gt;.mcp.json&lt;/code&gt;&lt;/strong&gt; 설정 파일 생성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;연결 — &lt;code&gt;/mcp&lt;/code&gt;로 인증&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Claude Code&lt;/a&gt;에서 &lt;strong&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/strong&gt; 를 입력하면 Supabase MCP 서버가 보인다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/mcp → [Supabase: disconnected]
-     → Enter → Authenticate (API 접근 권한 부여)
-     → [Supabase: connected] ✅
-     → View tools (제공 기능 확인)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;disconnected&lt;/code&gt; 상태에서 &lt;strong&gt;&lt;code&gt;Authenticate&lt;/code&gt;&lt;/strong&gt; 로 권한을 주면 &lt;strong&gt;&lt;code&gt;connected&lt;/code&gt;&lt;/strong&gt; 로 바뀐다. &lt;code&gt;View tools&lt;/code&gt; 로 &lt;em&gt;어떤 기능&lt;/em&gt; 을 쓸 수 있는지 훑어볼 수 있다.&lt;/p&gt;
-&lt;h3&gt;실전 — &lt;code&gt;profiles&lt;/code&gt; 테이블을 말로 만든다&lt;/h3&gt;
-&lt;p&gt;이제 &lt;em&gt;진짜&lt;/em&gt; 다. 회원가입 사용자 정보를 담을 &lt;strong&gt;&lt;code&gt;profiles&lt;/code&gt; 테이블&lt;/strong&gt; 을 — &lt;em&gt;SQL을 짜지 않고&lt;/em&gt; &lt;strong&gt;요청만&lt;/strong&gt; 한다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;클로드가 &lt;strong&gt;&lt;code&gt;list_tables&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;현재 DB 상태&lt;/em&gt; 를 직접 확인&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;profiles&lt;/code&gt; 테이블 &lt;strong&gt;생성 계획&lt;/strong&gt; 수립 (⭐ &lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;&lt;strong&gt;RLS 설정도 계획에 포함&lt;/strong&gt;&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;민감한 이메일·비밀번호&lt;/em&gt; 는 일단 제외하고 최종안 작성&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass permissions&lt;/code&gt;&lt;/a&gt; 모드로 실행 → &lt;strong&gt;대시보드에 테이블 생성 확인&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;지난 챕터에서 사람이 손수 짚어야 했던 RLS&lt;/a&gt;를, 이번엔 &lt;strong&gt;MCP가 계획 단계부터&lt;/strong&gt; 챙긴다는 게 포인트다.&lt;/p&gt;
-&lt;h3&gt;자동 프로필 생성 트리거&lt;/h3&gt;
-&lt;p&gt;더 놀라운 건 그다음이다. 회원가입을 해보면 — &lt;code&gt;profiles&lt;/code&gt; 테이블에 사용자 정보가 &lt;strong&gt;자동으로 등록&lt;/strong&gt; 돼 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Supabase MCP 서버에 의해서 생성된 &lt;strong&gt;자동 프로필 생성 트리거&lt;/strong&gt; 가 동작을 한 거죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;MCP가 &lt;em&gt;테이블만 만든 게 아니라&lt;/em&gt;, &lt;strong&gt;가입 시 프로필이 자동으로 꽂히는 트리거&lt;/strong&gt; 까지 깔아준 것이다. &lt;em&gt;SQL·트리거 지식이 부족해도&lt;/em&gt; — &lt;strong&gt;말로 요청&lt;/strong&gt; 하니 알아서 처리됐다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;Supabase MCP 로그인 구현을 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;왜&lt;/strong&gt; → LLM은 &lt;em&gt;DB에 직접 접근 불가&lt;/em&gt; → &lt;strong&gt;MCP가 다리&lt;/strong&gt; 역할&lt;/li&gt;
-&lt;li&gt;⚠️ &lt;strong&gt;보안&lt;/strong&gt; → &lt;em&gt;개발 환경만 · 고객 미제공 · &lt;code&gt;read-only&lt;/code&gt; · 최소 권한&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;설치&lt;/strong&gt; → Docs에서 설정 → CLI 실행 → &lt;strong&gt;&lt;code&gt;.mcp.json&lt;/code&gt;&lt;/strong&gt; 생성&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;연결&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/a&gt; → &lt;strong&gt;Authenticate&lt;/strong&gt; → &lt;code&gt;connected&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;실전&lt;/strong&gt; → &lt;code&gt;list_tables&lt;/code&gt;로 상태 확인 → &lt;code&gt;profiles&lt;/code&gt; 생성(&lt;a href=&quot;#supabase-rls-%EC%A0%95%EC%B1%85-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0&quot;&gt;RLS 포함&lt;/a&gt;) → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;자동화&lt;/strong&gt; → &lt;em&gt;가입 시&lt;/em&gt; &lt;strong&gt;프로필 자동 등록 트리거&lt;/strong&gt; 까지 MCP가 구성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;강사의 마무리가 이 기능의 의미를 압축한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Supabase MCP 서버와 프롬프트를 잘 활용하면, &lt;strong&gt;데이터베이스나 SQL 지식이 부족하더라도&lt;/strong&gt; Supabase의 다양한 서비스들을 &lt;em&gt;효과적으로 활용&lt;/em&gt; 할 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이제 &lt;em&gt;대시보드를 손으로&lt;/em&gt; 오갈 필요가 줄었다. &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;클로드가 DB를 직접 보고 만지니&lt;/a&gt; — &lt;em&gt;테이블 설계·RLS·트리거&lt;/em&gt; 까지 &lt;strong&gt;대화로&lt;/strong&gt; 풀린다. 이 다리를 놓았으니,
-앞으로의 기능 구현은 &lt;em&gt;훨씬 빠르고 정확&lt;/em&gt; 해질 것이다.&lt;/p&gt;
-&lt;h2&gt;Supabase 프로젝트 Claude 초기화&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;Supabase MCP&lt;/em&gt; 라는 다리를 놓았다. 이제 &lt;strong&gt;본격 개발에 앞서&lt;/strong&gt; — 새 Supabase 프로젝트에 &lt;em&gt;그동안 갈고닦은 무기&lt;/em&gt; 를
-한꺼번에 장착할 차례다. &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;지난 견적서 StarterKit&lt;/a&gt;에 깔아둔 &lt;em&gt;MCP·서브 에이전트·커맨드·훅&lt;/em&gt; 을 &lt;strong&gt;그대로 이식&lt;/strong&gt; 하는 작업이다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이전 시간에 했던 내용이기 때문에 &lt;em&gt;조금 빠르게&lt;/em&gt; 진행하도록 할게요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;왜 &apos;이식&apos;인가 — 매번 새로 만들지 않는다&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;StarterKit의 진가&lt;/a&gt;가 여기서 드러난다. &lt;em&gt;프로젝트마다&lt;/em&gt; MCP를 새로 붙이고 에이전트를 다시 짜면 — &lt;strong&gt;시간 낭비&lt;/strong&gt; 다. 한 번 잘 만들어둔 &lt;em&gt;세팅 묶음&lt;/em&gt;
-을 &lt;strong&gt;복사해 가져오면&lt;/strong&gt;, 새 프로젝트도 &lt;em&gt;곧장 풀무장&lt;/em&gt; 상태로 출발한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[견적서 StarterKit]              [Supabase 앱]
- .mcp.json (Playwright~shrimp) ──복사──▶ 그대로 적용
- agents/ · commands/ · hooks/  ──복사──▶ 그대로 적용
- docs/guides/                  ──복사──▶ 그대로 적용&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;① MCP 서버 이식&lt;/h3&gt;
-&lt;p&gt;먼저 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP 설정&lt;/a&gt;부터다. &lt;code&gt;.mcp.json&lt;/code&gt; 의 &lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt;
-부터 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;shrimp-task-manager&lt;/a&gt; 까지&lt;/strong&gt; 전부 복사해 Supabase 앱에 붙인다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 &lt;strong&gt;&lt;code&gt;shrimp&lt;/code&gt; 경로 주의.&lt;/strong&gt; 설정 하단 &lt;code&gt;shrimp&lt;/code&gt; 부분에 &lt;em&gt;예전 &lt;code&gt;invoice-web&lt;/code&gt;&lt;/em&gt; 경로가 박혀 있다. 이걸 &lt;strong&gt;현재 디렉터리&lt;/strong&gt; 로 바꿔줘야 한다. &lt;em&gt;경로를 안 고치면&lt;/em&gt; 엉뚱한 프로젝트의
-작업을 바라본다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;붙였으면 터미널에서 확인한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;claude mcp list   &lt;span class=&quot;token comment&quot;&gt;# 설치된 MCP 목록 확인&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;Supabase 인증&lt;/a&gt;이 필요하면 &lt;strong&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;Authenticate&lt;/em&gt; 를 거친다. 모든 서버가 &lt;strong&gt;&lt;code&gt;connected&lt;/code&gt;&lt;/strong&gt; 면 이식 성공이다.&lt;/p&gt;
-&lt;h3&gt;② 컨텍스트·에이전트·커맨드·훅 이식&lt;/h3&gt;
-&lt;p&gt;다음은 &lt;em&gt;개발에 쓸 자산&lt;/em&gt; 들이다. StarterKit에서 &lt;strong&gt;통째로 복사&lt;/strong&gt; 해 온다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;docs/guides/&lt;/code&gt;&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;Claude Code 컨텍스트 추가&lt;/a&gt; 관련 &lt;em&gt;개발 가이드 문서&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;agents/&lt;/code&gt;&lt;/strong&gt; → 그동안 만든 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;들&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;커스텀 커맨드 · &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;훅&lt;/a&gt;&lt;/strong&gt; → 자주 쓰는 &lt;em&gt;자동화 세트&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;루트 &lt;code&gt;docs&lt;/code&gt; 아래 &lt;code&gt;guides&lt;/code&gt;에 가이드를 넣고, 나머지도 &lt;em&gt;제자리&lt;/em&gt; 에 붙이면 — &lt;em&gt;새 프로젝트인데도&lt;/em&gt; &lt;strong&gt;익숙한 작업 환경&lt;/strong&gt; 이 통째로 따라온다.&lt;/p&gt;
-&lt;h3&gt;③ &lt;code&gt;/init&lt;/code&gt; — &lt;code&gt;CLAUDE.md&lt;/code&gt; 생성&lt;/h3&gt;
-&lt;p&gt;세팅이 끝났으면 &lt;strong&gt;프로젝트 초기화&lt;/strong&gt; 다. 터미널에서 Claude Code를 열고 &lt;strong&gt;&lt;code&gt;/init&lt;/code&gt;&lt;/strong&gt; 을 실행한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그러면 Claude Code가 &lt;strong&gt;프로젝트의 전체 코드베이스를 스캔&lt;/strong&gt; 해서 이를 참조할 수 있는 &lt;strong&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/strong&gt; 파일을 만들죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;는 &lt;em&gt;클로드가 늘 참조하는&lt;/em&gt; &lt;strong&gt;프로젝트 설명서&lt;/strong&gt; 다. 생성된 파일을 보면 — &lt;em&gt;Next.js + Supabase 스타터 킷&lt;/em&gt; 임을 소개하고
-&lt;strong&gt;주요 기술 스택&lt;/strong&gt; 을 정리해둔 게 보인다. 이걸 깔아두면, 이후 모든 작업에서 클로드가 &lt;em&gt;프로젝트 맥락을&lt;/em&gt; 자동으로 안고 간다.&lt;/p&gt;
-&lt;h3&gt;④ 커밋&lt;/h3&gt;
-&lt;p&gt;끝으로 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;Git 커밋&lt;/a&gt;으로 &lt;em&gt;세팅 완료 시점&lt;/em&gt; 을 박아둔다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이러한 것들도 &lt;em&gt;커밋을 하시겠습니까?&lt;/em&gt; 라고 묻고 있는데요, &lt;strong&gt;모두 커밋&lt;/strong&gt; 해주세요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;Supabase 프로젝트 Claude 초기화를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;컨셉&lt;/strong&gt; → &lt;em&gt;매번 새로 X&lt;/em&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;StarterKit&lt;/a&gt; 세팅을 &lt;strong&gt;복사·이식&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;① MCP&lt;/strong&gt; → &lt;code&gt;.mcp.json&lt;/code&gt; 전체 복사 → ⚠️ &lt;strong&gt;&lt;code&gt;shrimp&lt;/code&gt; 경로 수정&lt;/strong&gt; → &lt;code&gt;claude mcp list&lt;/code&gt;·&lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;&lt;code&gt;/mcp&lt;/code&gt;&lt;/a&gt; →
-&lt;code&gt;connected&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;② 자산&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;docs/guides&lt;/code&gt;&lt;/a&gt;·&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;&lt;code&gt;agents&lt;/code&gt;&lt;/a&gt;
-·커맨드·&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;훅&lt;/a&gt; 통째 이식&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;③ 초기화&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;/init&lt;/code&gt;&lt;/a&gt; → 코드베이스 스캔 → &lt;strong&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/strong&gt; 생성&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;④ 커밋&lt;/strong&gt; → &lt;em&gt;모두&lt;/em&gt; 커밋&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;좋은 도구는 &lt;em&gt;한 번 만들어 계속 재사용&lt;/em&gt; 한다. 이렇게 &lt;strong&gt;무장한 프로젝트&lt;/strong&gt; 위에서라야 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI 워크플로우&lt;/a&gt;가 제 속도를 낸다. 토대와 장비를 모두 갖췄으니 — 다음
-시간엔 AI 개발의 &lt;em&gt;오류를 줄여줄&lt;/em&gt; &lt;strong&gt;린트 체크·타입 체크&lt;/strong&gt; 를 더해, 더 단단한 개발 환경을 만들어보자.&lt;/p&gt;
-&lt;h2&gt;개발도구 설정: Linter, TypeCheck&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-claude-%EC%B4%88%EA%B8%B0%ED%99%94&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;세팅을 이식&lt;/em&gt; 하고 &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;까지 깔며 &lt;strong&gt;무장한 프로젝트&lt;/strong&gt; 를 만들었다. 마지막
-한 겹이 남았다 — &lt;strong&gt;개발 도구&lt;/strong&gt; 다. &lt;em&gt;ESLint·Prettier·타입 체크&lt;/em&gt; 를 붙여, &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI 개발의 오류를 입구에서&lt;/a&gt; 막는다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이번에는 &lt;em&gt;ESLint나 프리티어 타입 체크&lt;/em&gt; 와 같은 &lt;strong&gt;개발 도구를 설정&lt;/strong&gt; 하도록 할게요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;왜 깔까 — AI가 짠 코드일수록 더&lt;/h3&gt;
-&lt;p&gt;이 도구들은 &lt;em&gt;코드 품질의 그물망&lt;/em&gt; 이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ESLint&lt;/strong&gt; → &lt;em&gt;문법·스타일 오류&lt;/em&gt; 를 사전에 잡는 &lt;strong&gt;린터&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Prettier&lt;/strong&gt; → &lt;em&gt;코드 포맷&lt;/em&gt; 을 자동 정렬 (협업 시 통일성)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;타입 체크&lt;/strong&gt; → &lt;em&gt;타입 불일치&lt;/em&gt; 를 컴파일 전에 검출&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI는 코드를 한꺼번에 많이 쏟아낸다&lt;/a&gt;. 그만큼 &lt;em&gt;사소한 실수&lt;/em&gt; 가 끼어들 틈도 많다. 이 그물망이 깔려 있으면 — &lt;strong&gt;클로드가 제 코드를 스스로 검증&lt;/strong&gt; 하며
-&lt;em&gt;오류를 줄인다.&lt;/em&gt;&lt;/p&gt;
-&lt;h3&gt;핵심 — 프롬프트를 &apos;전문가&apos;로 시작한다&lt;/h3&gt;
-&lt;p&gt;설정도 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;클로드에게 맡긴다&lt;/a&gt;. 다만 &lt;em&gt;던지듯&lt;/em&gt; 시키지 않는다. 강사의 프롬프트 작법이 핵심이다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;당신은 웹 애플리케이션 개발 도구 설정 전문가입니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이렇게 &lt;em&gt;역할(롤)을 부여&lt;/em&gt; 하고 — &lt;em&gt;원하는 도구를 간략히&lt;/em&gt; 적되, &lt;strong&gt;추천할 게 있으면 추천해달라&lt;/strong&gt; 고 여지를 둔다. 그리고 &lt;em&gt;두 가지 사고 기법&lt;/em&gt; 을 얹는다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;COT(Chain-of-Thought)&lt;/strong&gt; → &lt;em&gt;단계별로 생각&lt;/em&gt; 하며 진행&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt; → &lt;strong&gt;현재 프로젝트 구조를 깊이 분석&lt;/strong&gt; 해 &lt;em&gt;최적화된 설정&lt;/em&gt; 도출&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;핵심은 &lt;strong&gt;&quot;우리 프로젝트에 맞게&quot;&lt;/strong&gt; 다. &lt;em&gt;일반론적 설정&lt;/em&gt; 이 아니라, &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-claude-%EC%B4%88%EA%B8%B0%ED%99%94&quot;&gt;지금 이 코드베이스&lt;/a&gt;를 분석한 &lt;strong&gt;맞춤 설정&lt;/strong&gt; 을 받아낸다.&lt;/p&gt;
-&lt;h3&gt;그리고 — 오류를 줄이는 두 무기&lt;/h3&gt;
-&lt;p&gt;여기서 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;MVP 때 배운 그 원칙&lt;/a&gt;이 다시 등장한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;오류를 &lt;em&gt;크게 줄일 수 있는&lt;/em&gt; 방법이 &lt;strong&gt;두 가지&lt;/strong&gt; 가 있다고요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;① Playwright MCP   → 클로드가 스스로 화면 테스트·버그 수정
-② 작업 완료 체크리스트 → 구현 후 lint·type·build 통과해야 &apos;완료&apos;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이번 설정의 목적이 바로 &lt;em&gt;②번 체크리스트&lt;/em&gt; 를 &lt;strong&gt;실제로 굴러가게&lt;/strong&gt; 만드는 것이다. 린트·타입 체크가 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/a&gt;에 박혀야, &lt;em&gt;&quot;구현 → 자가
-검증&quot;&lt;/em&gt; 루프가 완성된다.&lt;/p&gt;
-&lt;h3&gt;작업 계획 — 그리고 실행&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;plan&lt;/code&gt;&lt;/a&gt;으로 잡힌 단계는 대략 이렇다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;패키지 설치&lt;/strong&gt; — ESLint·Prettier·타입 관련 의존성&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Prettier 설정 파일&lt;/strong&gt; 생성&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ESLint 설정&lt;/strong&gt; 업데이트&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TypeScript 설정&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;package.json&lt;/code&gt; 스크립트&lt;/strong&gt; 추가 (&lt;code&gt;check-all&lt;/code&gt; 류)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;strong&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt; 업데이트&lt;/strong&gt;&lt;/a&gt; — &lt;em&gt;개발 도구 사용법&lt;/em&gt; 을 컨텍스트에 명시&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;계획을 확인했으면 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass permissions&lt;/code&gt;&lt;/a&gt; 모드로 &lt;em&gt;쭉&lt;/em&gt; 진행한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이대로 &lt;strong&gt;바이패스 모드&lt;/strong&gt; 로 진행하도록 할게요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;5번이 &lt;em&gt;은근히 중요&lt;/em&gt; 하다. &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;에 &quot;구현 후 &lt;code&gt;check-all&lt;/code&gt;을 돌려라&quot;&lt;/a&gt;고 적어두면 — &lt;em&gt;이후 모든 작업&lt;/em&gt; 에서 클로드가 &lt;strong&gt;자동으로 자가
-검증&lt;/strong&gt; 한다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;개발 도구 설정을 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;무엇&lt;/strong&gt; → &lt;strong&gt;ESLint&lt;/strong&gt;(린트) · &lt;strong&gt;Prettier&lt;/strong&gt;(포맷) · &lt;strong&gt;타입 체크&lt;/strong&gt; → 코드 품질 그물망&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;왜&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;AI가 쏟아낸 코드&lt;/a&gt;의 &lt;em&gt;틈&lt;/em&gt; 을 자동으로 메움&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;프롬프트&lt;/strong&gt; → &lt;em&gt;&quot;개발 도구 설정 전문가&quot;&lt;/em&gt; 롤 + &lt;strong&gt;COT·&lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt; → 맞춤 설정&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;오류 감소 2무기&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt; + &lt;strong&gt;작업 완료 체크리스트&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;계획&lt;/strong&gt; → &lt;em&gt;설치 → 설정 파일 → 스크립트 → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;&lt;/em&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이로써 &lt;strong&gt;Supabase 어플리케이션의 토대&lt;/strong&gt; 가 완성됐다. &lt;em&gt;백엔드(Supabase)&lt;/em&gt; · &lt;em&gt;MCP 다리&lt;/em&gt; · &lt;em&gt;이식한 무기&lt;/em&gt; · &lt;em&gt;코드 품질 그물망&lt;/em&gt; 까지 — &lt;strong&gt;개발을 시작할 모든 준비&lt;/strong&gt; 가 끝났다.
-돌아보면 이 시리즈는 &lt;em&gt;기능 하나&lt;/em&gt; 가 아니라, &lt;strong&gt;단단한 출발선&lt;/strong&gt; 을 만드는 과정이었다. 잘 깔린 기반 위에서라면 — 앞으로의 &lt;em&gt;진짜 기능 개발&lt;/em&gt;
-은 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;그 익숙한 워크플로우&lt;/a&gt;로 &lt;em&gt;거침없이&lt;/em&gt; 나아갈 수 있다.&lt;/p&gt;
-&lt;h2&gt;서브에이전트활용: 구글 로그인 기능 추가하기&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C%EB%8F%84%EA%B5%AC-%EC%84%A4%EC%A0%95-linter-typecheck&quot;&gt;앞 챕터&lt;/a&gt;까지 &lt;em&gt;토대&lt;/em&gt; 를 모두 깔았다. 이제 &lt;strong&gt;첫 실전 기능&lt;/strong&gt; 을 붙인다 — 거의 모든 서비스에 들어가는 &lt;strong&gt;구글 로그인(OAuth)&lt;/strong&gt; 이다. 그런데 강사는
-&lt;em&gt;기능부터 짜지&lt;/em&gt; 않는다. &lt;strong&gt;전문가 서브 에이전트&lt;/strong&gt; 를 먼저 세운다.&lt;/p&gt;
-&lt;h3&gt;1단계 — &lt;code&gt;Next.js + Supabase 풀스택&lt;/code&gt; 에이전트&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;제 생각에는 &lt;em&gt;이러한 Sub-agent가 있으면&lt;/em&gt; 정말 좋을 것 같거든요. 그렇기 때문에…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;는 &lt;em&gt;기술 영역을 전문화&lt;/em&gt; 한 AI다. 이번엔 &lt;strong&gt;Next.js + Supabase 풀스택 개발자&lt;/strong&gt; 를 만든다. 단순히 이름만 붙이는 게
-아니라 — &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;컨텍스트를 두툼하게&lt;/a&gt; 채운다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;참고 자료&lt;/strong&gt; → &lt;em&gt;Next.js 최신 가이드&lt;/em&gt; · &lt;em&gt;Supabase MCP 개발 가이드&lt;/em&gt; → &lt;strong&gt;모범 사례&lt;/strong&gt; 적용&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;사고 예산&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;더 깊이&lt;/em&gt; 분석&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;룰&lt;/strong&gt; → &lt;strong&gt;보안 · 성능 최적화 · 에러 처리&lt;/strong&gt; 등 전문성 강화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;첫 단추가 중요&lt;/strong&gt; 하기 때문에 &lt;em&gt;토큰에 대한 예산&lt;/em&gt; 을 더 사용했고요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;에이전트를 잘 만드는 데 &lt;em&gt;토큰을 아끼지 않는&lt;/em&gt; 이유다 — 여기에 쓴 토큰이 &lt;em&gt;이후 모든 작업의 품질&lt;/em&gt; 을 끌어올린다.&lt;/p&gt;
-&lt;h3&gt;2단계 — 계획, 그리고 환각 줄이기&lt;/h3&gt;
-&lt;p&gt;만든 에이전트에게 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;구글 로그인 추가 계획&lt;/em&gt; 을 세우게 한다. 여기서 강사의 &lt;strong&gt;프롬프트 팁&lt;/strong&gt; 이 빛난다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;궁금한 사항은 &lt;strong&gt;질문해줘.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;왜 이게 중요할까? &lt;strong&gt;AI 환각(Hallucination)&lt;/strong&gt; 때문이다. LLM은 &lt;em&gt;모르는 것도 아는 척&lt;/em&gt; 지어낼 수 있다. 그래서 &lt;em&gt;&quot;모르면 모른다고 말해줘&quot;&lt;/em&gt;, &lt;em&gt;&quot;궁금하면 물어봐&quot;&lt;/em&gt; 라고 **여지를 열어주면
-** — 환각이 줄어든다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이건 마치 &lt;em&gt;시험에서 빈칸으로 두는 것&lt;/em&gt; 보다 &lt;strong&gt;찍어서라도 답을 내는 것&lt;/strong&gt; 과 마찬가지예요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;즉 AI는 &lt;em&gt;공백을 못 견디고&lt;/em&gt; 뭐든 채우려 든다. &lt;strong&gt;질문을 허용&lt;/strong&gt; 하는 것만으로, &lt;em&gt;억지 추측&lt;/em&gt; 대신 &lt;strong&gt;확인&lt;/strong&gt; 을 택하게 만드는 &lt;em&gt;영리한 안전장치&lt;/em&gt; 다.&lt;/p&gt;
-&lt;h3&gt;3단계 — 구현 (코드 + 콘솔 양쪽)&lt;/h3&gt;
-&lt;p&gt;구글 로그인은 &lt;em&gt;코드만으로&lt;/em&gt; 끝나지 않는다. &lt;strong&gt;외부 설정&lt;/strong&gt; 이 함께 가야 한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[코드 쪽]                          [설정 쪽]
-OAuth 콜백 핸들러 작성        ┌─ Google Cloud Console
-소셜 로그인 버튼 컴포넌트      │   프로젝트 생성 → OAuth 클라이언트 ID
-로그인/회원가입 페이지 적용    └─ Supabase Authentication
-                              Providers → Google 활성화 + Client ID·Secret&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;코드&lt;/strong&gt; → &lt;em&gt;OAuth 콜백 핸들러&lt;/em&gt; + &lt;em&gt;소셜 로그인 버튼&lt;/em&gt; → 로그인·회원가입 페이지에 적용 (에이전트가 처리)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Cloud Console&lt;/strong&gt; → &lt;em&gt;프로젝트 생성 → API 설정 → OAuth 클라이언트 ID&lt;/em&gt; 발급&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Supabase&lt;/strong&gt; → &lt;code&gt;Authentication → Providers&lt;/code&gt; 에서 &lt;strong&gt;Google 활성화&lt;/strong&gt; + &lt;em&gt;Client ID·Secret Key&lt;/em&gt; 입력&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;콘솔 설정&lt;/em&gt; 은 사람이 해줘야 하는 영역이다 — &lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;Supabase 세팅을 공식 문서로 했던 것&lt;/a&gt;과 같은 맥락이다.&lt;/p&gt;
-&lt;h3&gt;4단계 — 테스트 + DB 검증&lt;/h3&gt;
-&lt;p&gt;구현했으면 &lt;em&gt;실제로 돌려본다.&lt;/em&gt; 로그인·회원가입 페이지의 &lt;strong&gt;구글 버튼&lt;/strong&gt; 으로 로그인 → &lt;strong&gt;Protected 페이지로 리다이렉트&lt;/strong&gt; 되는지 확인한다.
-그리고 &lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;앞서 만든 트리거&lt;/a&gt; 덕에 — &lt;code&gt;profiles&lt;/code&gt; 테이블·&lt;code&gt;Users&lt;/code&gt; 에 &lt;strong&gt;사용자 정보가 자동 등록&lt;/strong&gt; 됐는지 검증한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 &lt;strong&gt;Provider 표시 차이.&lt;/strong&gt; &lt;em&gt;기존 이메일 가입 기록&lt;/em&gt; 이 있는 계정과 &lt;em&gt;구글로만 로그인&lt;/em&gt; 한 계정은, DB에 찍히는 &lt;strong&gt;Provider 값&lt;/strong&gt; 이 다르다. 이런 디테일까지 확인하면 &lt;em&gt;인증 흐름&lt;/em&gt; 이
-더 또렷이 보인다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;정리하며 — 그리고 워크플로우 공식&lt;/h3&gt;
-&lt;p&gt;구글 로그인 추가를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;① 에이전트&lt;/strong&gt; → &lt;code&gt;Next.js+Supabase 풀스택&lt;/code&gt; → &lt;em&gt;최신 가이드·MCP&lt;/em&gt; 참고 + &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/a&gt; (첫 단추에 토큰 투자)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;② 계획&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt; + &lt;em&gt;&quot;질문해줘&quot;&lt;/em&gt; → &lt;strong&gt;환각 감소&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;③ 구현&lt;/strong&gt; → &lt;em&gt;코드(콜백·버튼)&lt;/em&gt; + &lt;em&gt;&lt;a href=&quot;#supabase-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot;&gt;Google Console&lt;/a&gt; OAuth&lt;/em&gt; + &lt;em&gt;Supabase Provider&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;④ 검증&lt;/strong&gt; → 로그인 → 리다이렉트 → &lt;a href=&quot;#supabase-mcp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;&lt;code&gt;profiles&lt;/code&gt; 자동 등록&lt;/a&gt; 확인 (+Provider 차이)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;강사가 &lt;em&gt;시리즈 내내&lt;/em&gt; 반복한 &lt;strong&gt;개발 워크플로우 공식&lt;/strong&gt; 이 여기서 또 한 번 확인된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;정보 수집 → 서브 에이전트 생성 → 작업 계획 → 계획 기반 구현&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;기능이 &lt;em&gt;구글 로그인&lt;/em&gt; 이든 무엇이든 — &lt;strong&gt;이 순서는 변하지 않는다.&lt;/strong&gt; 토대를 깔고(이 시리즈), 전문가를 세우고, 계획하고, 구현한다. 앞으로는 이
-위에서 &lt;a href=&quot;/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC&quot;&gt;PRD·로드맵·Shrimp&lt;/a&gt;로 &lt;em&gt;본격적인 기능&lt;/em&gt; 들을 쌓아 올리면 된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 변수와 타입, 연산자를 다루는 방법]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%B0%A9%EB%B2%95/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-변수와-타입-연산자를-다루는-방법/</guid><pubDate>Sat, 11 Apr 2026 16:42:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+이로써 이벤트 관리 앱의 구현과 테스트가 모두 마무리되었습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 변수와 타입, 연산자를 다루는 방법]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%B0%A9%EB%B2%95/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-변수와-타입-연산자를-다루는-방법/</guid><pubDate>Sat, 11 Apr 2026 16:42:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
