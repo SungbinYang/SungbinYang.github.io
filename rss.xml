@@ -1,4 +1,479 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Jul 2026 12:08:00 GMT</lastBuildDate><item><title><![CDATA[[Claude Code] Shrimp Task Manager 도입]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  Shrimp Task Manager…]]></description><link>https://sungbin.kr/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-shrimp-task-manager-도입/</guid><pubDate>Fri, 24 Jul 2026 21:06:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Jul 2026 06:40:59 GMT</lastBuildDate><item><title><![CDATA[[Claude Code] MVP 개발 및 배포]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  Notion API 키 및 Database ID 설정 앞선 챕터에서 무엇을 만들지 정하고 PRD…]]></description><link>https://sungbin.kr/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-mvp-개발-및-배포/</guid><pubDate>Sat, 25 Jul 2026 15:39:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;해당 포스팅은 &lt;a href=&quot;https://inf.run/vN55k&quot;&gt;클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지&lt;/a&gt;를 참조하여 작성하였습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABM0lEQVR42mO4meb6HytOd4PgNDckcZiYK07MgEviRpIDENv/v5Hs9P9GitP/m0B8IxEolmgP4RNvoBtQg/P/B82Z/x91Ff6/Wxbx/3au7/9b2d7/79cl/X/QmPb/Vo4vCQYCvXQj1fn/q1XT/z+b3fr//f6N/98f3Pz//d71/z8e2wXEu/+/WDIR7FJs3sfqZZAL75ZFgl0HctX92sT/96rj/t+rigXiuP93SsL+3wRaSnwYglyZYAc28E5h0P/riXb/7xSH/L9TFAw26EaSI4mRkg4Jx5crpgK93fb//b4N/z8c2vL/45Ed/58v6Pl/HWjZzXR3EmMZaCDImw+aM4CRU/D/UWfB/4ftuWBXQ2LZjTQDwRiUZJIdIUkFhIFJ6WaqC3npEDlx3wJ6D4TB3iSQsAEfowVVIr8OEAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png&quot;
+        srcset=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/6f3f2/banner.png 256w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/01e7c/banner.png 512w,
+/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Notion API 키 및 Database ID 설정&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;앞선 챕터&lt;/a&gt;에서 &lt;em&gt;무엇을 만들지&lt;/em&gt; 정하고 &lt;strong&gt;PRD&lt;/strong&gt; 까지 다듬었다. 이제 &lt;em&gt;코드를 짜기 전&lt;/em&gt; 에 빠뜨리면 안 되는 &lt;strong&gt;밑작업&lt;/strong&gt; 이 있다 —
+견적서를 담을 &lt;strong&gt;Notion 데이터베이스&lt;/strong&gt; 를
+만들고, 웹이 그 데이터에 접근할 &lt;strong&gt;열쇠&lt;/strong&gt; 를 준비하는 일이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[웹 애플리케이션]
+      │  API 키(열쇠) + Database ID(주소)
+      ▼
+[Notion 데이터베이스 = 견적서·품목]&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;순서는 이렇다. &lt;strong&gt;① API 키 발급 → ② 데이터베이스 생성 → ③ 통합 연결 → ④ 속성 설정 → ⑤ 샘플 데이터 → ⑥ Database ID 추출&lt;/strong&gt;. 하나씩 따라가 보자.&lt;/p&gt;
+&lt;h3&gt;① API 키 발급 — Notion이라는 금고의 열쇠&lt;/h3&gt;
+&lt;p&gt;먼저 웹이 Notion에 &lt;em&gt;접근할 권한&lt;/em&gt; 이 필요하다. 강사의 비유가 명쾌하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이러한 API Key는 우리 견적서 데이터베이스를 만들 거거든요. Notion에 이러한 데이터베이스의 애플리케이션이 접근할 수 있게 하는 &lt;strong&gt;Key&lt;/strong&gt; 라고 보시면 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;키를 발급받는 곳은 &lt;strong&gt;My Integrations&lt;/strong&gt; 다. &lt;em&gt;사이트를 모르겠다면&lt;/em&gt; &lt;code&gt;Notion API 키&lt;/code&gt; 로 검색해도 된다. 다만 &lt;strong&gt;Notion 홈페이지가 자주 바뀌어&lt;/strong&gt; 화면이 헷갈릴 수 있는데, 강사가
+&lt;em&gt;최신 절차&lt;/em&gt; 를 따로 안내한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://app.notion.com/developers/connections&quot;&gt;&lt;code&gt;app.notion.com/developers/connections&lt;/code&gt;&lt;/a&gt; 로 접속&lt;/li&gt;
+&lt;li&gt;우측 상단 &lt;strong&gt;[신규 연결]&lt;/strong&gt; 클릭&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;연결 이름&lt;/em&gt; 은 자유롭게, 인증 방법은 &lt;strong&gt;[액세스 토큰]&lt;/strong&gt; 선택 → &lt;strong&gt;[연결 생성하기]&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[기능]&lt;/strong&gt; 에서 필요한 권한 체크 → 발급된 &lt;strong&gt;액세스 토큰&lt;/strong&gt; 확보&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;만약에 이러한 키를 통해서 노션 데이터베이스의 값을 &lt;em&gt;추가한다든가 수정&lt;/em&gt; 을 원하시는 분들은 &lt;strong&gt;모두 체크&lt;/strong&gt; 하면 될 거예요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;발급받은 키는 &lt;em&gt;코드에 직접 박지 말고&lt;/em&gt; — 프로젝트의 &lt;strong&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/strong&gt; 파일에 넣어둔다. &lt;em&gt;비밀 키&lt;/em&gt; 는 절대 깃에 올라가면 안
+되니, &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;환경 변수로 분리&lt;/a&gt;하는 게 기본이다.&lt;/p&gt;
+&lt;h3&gt;② 데이터베이스 생성 — &lt;code&gt;Invoice&lt;/code&gt; 와 &lt;code&gt;Items&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;키를 손에 쥐었으니, 이제 &lt;em&gt;데이터를 담을 그릇&lt;/em&gt; 을 만든다. 견적서 시스템에는 &lt;strong&gt;두 개&lt;/strong&gt; 의 데이터베이스가 필요하다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;데이터베이스&lt;/th&gt;
+&lt;th&gt;역할&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;견적서 &lt;em&gt;한 건&lt;/em&gt; 의 정보&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;Items&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;견적서에 들어가는 &lt;em&gt;품목들&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notion 페이지에서 슬래시(&lt;code&gt;/&lt;/code&gt;) 명령어로 &lt;strong&gt;데이터베이스&lt;/strong&gt; 를 두 개 만들면 된다. &lt;em&gt;왜 둘로 나누나?&lt;/em&gt; — 견적서 하나에 &lt;strong&gt;여러 품목&lt;/strong&gt; 이 붙기 때문이다. 견적서와 품목을 &lt;em&gt;한 테이블에&lt;/em&gt; 욱여넣으면
+관리가
+지저분해진다. 그래서 &lt;strong&gt;견적서 / 품목&lt;/strong&gt; 을 나누고, 나중에 &lt;em&gt;관계&lt;/em&gt; 로 묶는다.&lt;/p&gt;
+&lt;h3&gt;③ 통합 연결 — 많은 분들이 실수하는 지점&lt;/h3&gt;
+&lt;p&gt;데이터베이스를 만들었다고 &lt;em&gt;바로 접근&lt;/em&gt; 되는 게 아니다. ①에서 만든 &lt;strong&gt;API 통합&lt;/strong&gt; 을 &lt;em&gt;각 데이터베이스에&lt;/em&gt; 연결해줘야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터베이스 우측 상단 &lt;strong&gt;더보기(&lt;code&gt;···&lt;/code&gt;)&lt;/strong&gt; → &lt;strong&gt;[연결]&lt;/strong&gt; → 만들어둔 통합 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;여기서 강사가 &lt;em&gt;못을 박는다.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;많은 분들이 실수를 하세요.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;무슨 실수냐 — &lt;strong&gt;페이지가 아니라 데이터베이스&lt;/strong&gt; 에서 연결을 걸어야 한다는 점이다. &lt;em&gt;겉보기엔 비슷한&lt;/em&gt; 화면이라, 페이지에 연결해두고 &lt;em&gt;&quot;왜 접근이 안 되지?&quot;&lt;/em&gt; 하며 헤매기 쉽다. &lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;
+와 &lt;code&gt;Items&lt;/code&gt; 둘 다&lt;/strong&gt;
+잊지 말고 연결하자.&lt;/p&gt;
+&lt;h3&gt;④ 속성 설정 — Claude Code에게 물어본다&lt;/h3&gt;
+&lt;p&gt;각 데이터베이스에 &lt;em&gt;어떤 컬럼(속성)&lt;/em&gt; 을 둘지 정할 차례다. 그런데 &lt;em&gt;혼자 고민할 필요 없다.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이러한 것도 &lt;strong&gt;Claude Code에게 물어보도록&lt;/strong&gt; 할게요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;프로젝트 맥락(PRD·&lt;code&gt;CLAUDE.md&lt;/code&gt;)&lt;/a&gt;을 이미 파악한 클로드에게 &lt;em&gt;&quot;이 견적서 프로젝트에 맞는 Notion 속성을 설계해줘&quot;&lt;/em&gt; 라고 하면 *
+&lt;em&gt;가이드&lt;/em&gt;* 를 받을 수 있다.
+대략 이런 모양이 나온다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;견적서 번호·클라이언트 명·발행일·유효기간·상태·총금액·항목&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;Items&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;항목명·수량·단가·금액·견적서(연결)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;설정에서 &lt;em&gt;두 가지 포인트&lt;/em&gt; 가 핵심이다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;수식(Formula)&lt;/strong&gt; — &lt;code&gt;Items&lt;/code&gt; 의 &lt;strong&gt;금액&lt;/strong&gt; 은 직접 입력하지 않고 &lt;em&gt;&lt;code&gt;수량 × 단가&lt;/code&gt;&lt;/em&gt; 로 &lt;strong&gt;자동 계산&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그러면 AI 기능으로 인해서 &lt;em&gt;자동으로 수량 곱하기 단가&lt;/em&gt; 가 설정되었고요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;관계형(Relation)&lt;/strong&gt; — &lt;code&gt;Invoice&lt;/code&gt; 의 &lt;strong&gt;항목&lt;/strong&gt; 속성을 &lt;code&gt;Items&lt;/code&gt; 와 &lt;strong&gt;관계형으로 연결&lt;/strong&gt; → &lt;em&gt;양방향 관계&lt;/em&gt; 설정&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;양방향&lt;/em&gt; 이 중요하다. 견적서에서 &lt;em&gt;&quot;이 견적서에 딸린 품목들&quot;&lt;/em&gt; 을 보고, 품목에서도 &lt;em&gt;&quot;내가 속한 견적서&quot;&lt;/em&gt; 를 거꾸로 볼 수 있게 된다. &lt;strong&gt;속성은 정답이 없다&lt;/strong&gt; — 강사 말처럼 &lt;em&gt;우리 입맛에 맞게&lt;/em&gt; 더하고
+빼면 된다.&lt;/p&gt;
+&lt;h3&gt;⑤ 샘플 데이터 삽입 — 빈 그릇은 테스트가 안 된다&lt;/h3&gt;
+&lt;p&gt;구조를 잡았으면, &lt;em&gt;실제로 잘 도나&lt;/em&gt; 확인하려고 &lt;strong&gt;샘플 데이터&lt;/strong&gt; 를 넣는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;&lt;/strong&gt; → 견적서 번호·발행일·유효기간·총금액 등 한 건 입력&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;Items&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;웹사이트 디자인·로고 제작·명함 디자인&lt;/em&gt; 같은 품목을 추가하고, 각 항목을 &lt;strong&gt;해당 견적서에 연결&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이때 금액이 &lt;em&gt;수량 × 단가&lt;/em&gt; 로 알아서 채워지고, 견적서와 품목이 &lt;em&gt;관계로 묶이는지&lt;/em&gt; 눈으로 확인하면 — 4단계 설정이 &lt;strong&gt;제대로 됐다는 증거&lt;/strong&gt; 다.&lt;/p&gt;
+&lt;h3&gt;⑥ Database ID 추출 — 쿼리 스트링을 떼라&lt;/h3&gt;
+&lt;p&gt;마지막. 웹이 &lt;em&gt;&quot;어느 데이터베이스를 읽어야 하는지&quot;&lt;/em&gt; 알려줄 &lt;strong&gt;주소(Database ID)&lt;/strong&gt; 가 필요하다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Invoice&lt;/code&gt; 데이터베이스의 &lt;strong&gt;공유 링크 복사&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;URL에서 &lt;strong&gt;쿼리 스트링&lt;/strong&gt; (물음표 &lt;code&gt;?&lt;/code&gt; 뒤 전부)을 &lt;strong&gt;제거&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;남은 부분의 &lt;strong&gt;ID&lt;/strong&gt; 를 &lt;code&gt;.env.local&lt;/code&gt; 에 설정&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;https://www.notion.so/{여기가-Database-ID}?v=abcd1234...
+                       └──────┬──────┘ └──────┬──────┘
+                         이게 ID         쿼리 스트링 (제거)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;많은 분들이 깜빡하시더라고요.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;쿼리 스트링까지&lt;/em&gt; 그대로 붙여넣으면 ID가 어긋나 &lt;strong&gt;접근이 안 된다.&lt;/strong&gt; &lt;code&gt;?&lt;/code&gt; 뒤를 깔끔히 잘라내는 걸 잊지 말자. 참고로 &lt;strong&gt;&lt;code&gt;Items&lt;/code&gt; 는 따로 ID가 필요 없다&lt;/strong&gt; — &lt;code&gt;Invoice&lt;/code&gt; 와 &lt;em&gt;관계형으로
+연결&lt;/em&gt; 돼 있어,
+견적서를 읽으면 &lt;em&gt;딸린 품목&lt;/em&gt; 까지 함께 따라오기 때문이다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;Notion 연동 준비를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;① API 키&lt;/strong&gt; → &lt;code&gt;app.notion.com/developers/connections&lt;/code&gt; → [신규 연결]·[액세스 토큰] → &lt;strong&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/strong&gt; 에 저장&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;② 데이터베이스&lt;/strong&gt; → &lt;code&gt;Invoice&lt;/code&gt;(견적서) + &lt;code&gt;Items&lt;/code&gt;(품목) &lt;strong&gt;두 개&lt;/strong&gt; 로 분리&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;③ 연결&lt;/strong&gt; → 통합을 &lt;em&gt;각 DB에&lt;/em&gt; 연결 → ⚠️ &lt;strong&gt;페이지 말고 데이터베이스&lt;/strong&gt; 에서&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;④ 속성&lt;/strong&gt; → &lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;Claude Code&lt;/a&gt;에게 설계 요청 → &lt;em&gt;금액=수식&lt;/em&gt;, &lt;em&gt;항목=관계형(양방향)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;⑤ 샘플&lt;/strong&gt; → 견적서·품목 한 세트 넣어 &lt;strong&gt;연결·계산 동작 확인&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;⑥ Database ID&lt;/strong&gt; → 공유 링크에서 &lt;strong&gt;쿼리 스트링 제거&lt;/strong&gt; → &lt;code&gt;.env.local&lt;/code&gt; (&lt;code&gt;Items&lt;/code&gt; 는 불필요)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;여기까지가 &lt;em&gt;코드 한 줄 없이&lt;/em&gt; 끝내는 &lt;strong&gt;연동의 토대&lt;/strong&gt; 다. 키(권한)와 ID(주소), 그리고 &lt;em&gt;관계로 묶인 두 데이터베이스&lt;/em&gt; 가 준비됐으니 — 다음 챕터부터는 이 위에 &lt;strong&gt;실제 웹 애플리케이션&lt;/strong&gt; 을 올려보자.&lt;/p&gt;
+&lt;h2&gt;서브에이전트: 개발 전문가&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#notion-api-%ED%82%A4-%EB%B0%8F-database-id-%EC%84%A4%EC%A0%95&quot;&gt;Notion 연동&lt;/a&gt;이라는 &lt;em&gt;토대&lt;/em&gt; 가 깔렸다. 이제 &lt;strong&gt;진짜 코드&lt;/strong&gt; 를 짤 차례다. 그런데 강의는 &lt;em&gt;코딩 자세&lt;/em&gt; 부터 바꾸라고 한다 — 당신은 &lt;em&gt;직접
+키보드를 두드리는 개발자&lt;/em&gt; 가 아니라,
+&lt;strong&gt;개발 팀장&lt;/strong&gt; 이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;우리가 AI 활용을 해서 개발을 한다라고 생각을 하지 말고, &lt;em&gt;&apos;다음 작업을 해야 한다&apos;&lt;/em&gt; 라고 생각을 해보세요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그리고 우리는 현재 &lt;strong&gt;개발 팀장의 위치&lt;/strong&gt; 에 있다라고 가정을 해보도록 하겠습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;팀장은 &lt;em&gt;코드를 짜지 않는다.&lt;/em&gt; &lt;strong&gt;무엇을 할지 정하고&lt;/strong&gt; → &lt;em&gt;적임자에게 맡기고&lt;/em&gt; → &lt;strong&gt;결과를 검수&lt;/strong&gt; 한다. 이번 챕터의 흐름이 정확히 그렇다.&lt;/p&gt;
+&lt;h3&gt;일감 꺼내기 — &lt;code&gt;list-tasks&lt;/code&gt; 와 &lt;code&gt;execute-task&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;먼저 &lt;em&gt;지금 할 일&lt;/em&gt; 을 확인한다. &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;로 쪼개둔 작업을 &lt;strong&gt;&lt;code&gt;list-tasks&lt;/code&gt;&lt;/strong&gt; 로 꺼내고,
+&lt;strong&gt;&lt;code&gt;execute-task&lt;/code&gt;&lt;/strong&gt; 로 실행한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;list-tasks   → 할 일 목록 확인 (팀장이 보드를 본다)
+execute-task → 작업 실행      (담당자에게 맡긴다)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;물론 &lt;em&gt;모든 작업&lt;/em&gt; 에 전문가가 필요한 건 아니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;물론 이러한 작업 같은 경우에는 &lt;em&gt;크게 복잡한 작업은 아니에요.&lt;/em&gt; 그래서 &lt;code&gt;execute-task&lt;/code&gt; 기능을 통해서 &lt;strong&gt;바로 작업을 수행해도 좋지만&lt;/strong&gt;, 만약에 &lt;em&gt;효과적으로 작업을 수행하지 못한다면&lt;/em&gt; 서브
+에이전트를
+이용해서 이러한 작업을 수행하는 건 &lt;strong&gt;매우 효과적&lt;/strong&gt; 이죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉 &lt;em&gt;간단한 일&lt;/em&gt; 은 메인에게 바로 시키고, &lt;strong&gt;막히거나 까다로운 일&lt;/strong&gt; 이 나오면 — &lt;strong&gt;전문가&lt;/strong&gt; 를 부른다.&lt;/p&gt;
+&lt;h3&gt;전문가 투입 — &lt;code&gt;Next.js App Router 개발자&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;이 프로젝트의 기술 스택은 &lt;strong&gt;Next.js(App Router)&lt;/strong&gt; 다. 그래서 &lt;em&gt;그 분야만 파는&lt;/em&gt; &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;를 하나 만든다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;역할&lt;/strong&gt; — &lt;em&gt;Next.js App Router 전문 개발자&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;컨텍스트&lt;/strong&gt; — &lt;em&gt;Next.js 프로젝트 구조&lt;/em&gt; 같은 &lt;strong&gt;문서를 복사·붙여넣어&lt;/strong&gt; 전문성을 끌어올림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;여기서 핵심은 &lt;strong&gt;컨텍스트를 얼마나 잘 먹이느냐&lt;/strong&gt; 다. 역할 이름만 &lt;em&gt;&quot;전문가&quot;&lt;/em&gt; 라고 붙인다고 전문가가 되진 않는다. &lt;em&gt;공식 문서·구조 규칙&lt;/em&gt; 을 직접 넣어줘야 &lt;strong&gt;진짜 전문가&lt;/strong&gt; 가 된다. 그리고 이 방식은
+&lt;em&gt;기술 스택을 가리지 않는다.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;수강생분들이 &lt;em&gt;어떠한 기술 스택&lt;/em&gt; 으로 개발을 하시더라도, 메인 컨텍스트에서 진행을 했을 때 &lt;em&gt;결과가 만족스럽지 않다면&lt;/em&gt;, 해당 컨텍스트를 추가하여 &lt;strong&gt;전문가 서브 에이전트&lt;/strong&gt; 를 추가한 다음에, 이러한 서브
+에이전트로
+&lt;strong&gt;다시 작업을 수행&lt;/strong&gt; 한다면, 좀 더 &lt;strong&gt;만족한 결과물&lt;/strong&gt; 을 얻을 수 있을 거예요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이게 &lt;em&gt;서브 에이전트의 진짜 쓸모&lt;/em&gt; 다. &lt;strong&gt;&quot;메인이 못 하면 → 컨텍스트 붙인 전문가로 재시도&quot;&lt;/strong&gt; — 이 한 줄이 핵심 패턴이다.&lt;/p&gt;
+&lt;h3&gt;토큰 관리 — &lt;code&gt;compact&lt;/code&gt; 로 숨 고르기&lt;/h3&gt;
+&lt;p&gt;개발이 길어지면 &lt;em&gt;컨텍스트가 불어나&lt;/em&gt; &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰&lt;/a&gt;을 잡아먹는다. 이때 &lt;strong&gt;&lt;code&gt;compact&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;대화를 요약&lt;/em&gt; 해 &lt;em&gt;토큰을 줄이고&lt;/em&gt;, 필요하면 **세션을 닫았다 다시 열어
+**
+이어서 진행한다. 다시 들어와도 &lt;em&gt;&lt;code&gt;Next.js 앱 디벨로퍼&lt;/code&gt; 에이전트&lt;/em&gt; 를 부르면 &lt;strong&gt;전문성은 그대로&lt;/strong&gt; 살아 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;작업 순서&lt;/a&gt;는 &lt;em&gt;바뀔 수 있다.&lt;/em&gt; 다만 &lt;strong&gt;의존 관계&lt;/strong&gt; 는 GUI로 확인한 것과 동일하니, 순서가 좀 달라져도 &lt;em&gt;놀랄 필요 없다.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;전문가가 &lt;strong&gt;라우팅 구조와 페이지 골격&lt;/strong&gt; 을 만들어내면 — &lt;em&gt;견적서·로딩·Not Found·에러&lt;/em&gt; 페이지가 한꺼번에 생긴다. &lt;strong&gt;검수&lt;/strong&gt; 는 팀장의 몫이니, 생성된 코드와 페이지를 눈으로 확인한다.&lt;/p&gt;
+&lt;h3&gt;타입 정의 — Notion 속성을 데이터 모델로&lt;/h3&gt;
+&lt;p&gt;다음은 &lt;strong&gt;타입 정의&lt;/strong&gt; 다. 그런데 &lt;em&gt;맨손&lt;/em&gt; 으로 시키지 않는다. 앞서 만든 &lt;strong&gt;Notion 데이터베이스의 속성&lt;/strong&gt; 을 &lt;em&gt;컨텍스트로&lt;/em&gt; 넣어준다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Notion DB 속성 정보를 &lt;strong&gt;컨텍스트에 추가&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSV로 내보낸 데이터&lt;/strong&gt; 를 압축 해제해 &lt;em&gt;실제 형태&lt;/em&gt; 파악에 활용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass permissions&lt;/code&gt; 모드&lt;/a&gt;로 &lt;strong&gt;타입 생성&lt;/strong&gt; 완료&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;추상적인 타입&lt;/em&gt; 이 아니라, &lt;strong&gt;실제 Notion 스키마에 들어맞는&lt;/strong&gt; 타입이 나온다는 게 포인트다. 굵직한 작업 전엔 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;strong&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;로 &lt;em&gt;무엇을 할지
+미리&lt;/em&gt; 확인하면
+&lt;strong&gt;삽질을 줄일&lt;/strong&gt; 수 있다.&lt;/p&gt;
+&lt;h3&gt;마무리 — 로드맵 체크, 그리고 다음&lt;/h3&gt;
+&lt;p&gt;한 단계가 끝나면 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;strong&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;에 &lt;em&gt;완료 체크&lt;/em&gt; 를 남긴다. &lt;em&gt;번거로운 완료 내역 기록&lt;/em&gt; 은 덜어내고, 핵심만 깔끔하게 관리한다.
+그리고 &lt;strong&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;두 번째 단계&lt;/em&gt; 를 계획한다 — 이때도 원칙은 하나다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;계획 수립 시 &lt;strong&gt;컨텍스트를 최대한 추가&lt;/strong&gt; 하는 것이 좋다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;로드맵의 다음 칸은 &lt;strong&gt;UI/UX 완성&lt;/strong&gt; 이다. 골격은 섰으니, 이제 &lt;em&gt;보기 좋게&lt;/em&gt; 입힐 차례 — 그건 &lt;strong&gt;UI/UX 전문 서브 에이전트&lt;/strong&gt; 의 일이다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;개발 전문가 서브 에이전트를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;관점&lt;/strong&gt; → &lt;em&gt;내가 코딩&lt;/em&gt; 이 아니라 → &lt;strong&gt;개발 팀장&lt;/strong&gt; 으로 &lt;em&gt;&quot;다음 작업&quot;&lt;/em&gt; 을 지휘&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;흐름&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;list-tasks&lt;/code&gt;&lt;/a&gt; → &lt;code&gt;execute-task&lt;/code&gt; → &lt;em&gt;간단하면 메인&lt;/em&gt;, &lt;strong&gt;막히면 전문가&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;전문가&lt;/strong&gt; → &lt;code&gt;Next.js App Router 개발자&lt;/code&gt; → &lt;strong&gt;공식 문서·구조를 컨텍스트로&lt;/strong&gt; 먹여야 진짜 전문가&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;핵심 패턴&lt;/strong&gt; → &lt;em&gt;메인이 못 하면&lt;/em&gt; → &lt;strong&gt;컨텍스트 붙인 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;로 재시도&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;효율&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;compact&lt;/code&gt;&lt;/a&gt;로 토큰 절약 · &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 사전 확인&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;타입&lt;/strong&gt; → &lt;em&gt;Notion 속성·CSV&lt;/em&gt; 를 컨텍스트로 → &lt;strong&gt;실제 스키마에 맞는&lt;/strong&gt; 타입&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;관리&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt; 완료 체크 → 다음은 &lt;strong&gt;UI/UX&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;좋은 팀장은 &lt;em&gt;직접 다 하지 않는다.&lt;/em&gt; &lt;strong&gt;적임자를 세우고&lt;/strong&gt;, &lt;em&gt;맥락을 충분히 쥐여준 뒤&lt;/em&gt;, &lt;strong&gt;결과를 검수&lt;/strong&gt; 한다. 골격이 섰으니 — 다음 챕터에서는 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;**UI/UX 전문가
+**&lt;/a&gt;를 불러 &lt;em&gt;화면에 살을&lt;/em&gt; 붙여보자.&lt;/p&gt;
+&lt;h2&gt;서브에이전트: UI/UX 전문가&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;라우팅과 페이지 골격&lt;/em&gt; 을 세웠다. 뼈대는 섰지만 — 아직 &lt;em&gt;밋밋한 회색 화면&lt;/em&gt; 이다. 이제 &lt;strong&gt;보기 좋게 살을&lt;/strong&gt; 붙일 차례다. 그리고 그 일엔 &lt;em&gt;또 다른 전문가&lt;/em&gt; 가
+붙는다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그리고 이번 단계에서는 &lt;strong&gt;동적인 기능 없이 UI를 개발&lt;/strong&gt; 하는 작업이기 때문에&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;핵심은 &lt;em&gt;이번엔 기능을 안 건드린다&lt;/em&gt; 는 점이다. &lt;strong&gt;마크업과 스타일링&lt;/strong&gt; 에만 집중한다 — 즉 &lt;strong&gt;정적인 화면&lt;/strong&gt; 부터 깔끔하게 완성하는 단계다.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;ui-markup-specialist&lt;/code&gt; — 마크업만 파는 전문가&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;개발 전문가&lt;/a&gt;와 똑같은 방식으로, &lt;em&gt;UI/UX 전용&lt;/em&gt; &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;를 만든다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;역할&lt;/strong&gt; — &lt;em&gt;UI/UX 마크업 전문가&lt;/em&gt; (&lt;code&gt;ui-markup-specialist&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;스택&lt;/strong&gt; — &lt;strong&gt;Next.js · TypeScript · Tailwind CSS · shadcn/ui&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;범위&lt;/strong&gt; — &lt;em&gt;동적 기능은 제외&lt;/em&gt;, &lt;strong&gt;마크업·스타일링&lt;/strong&gt; 에만 집중&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;프롬프트는 &apos;한 번에&apos; 안 끝난다 — 계속 고친다&lt;/h3&gt;
+&lt;p&gt;여기서 강사가 &lt;em&gt;반복해서 강조&lt;/em&gt; 하는 습관이 나온다. 처음 만든 에이전트를 &lt;strong&gt;그대로 두지 않는다.&lt;/strong&gt; &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP 서버&lt;/a&gt;를 &lt;em&gt;최대한 활용&lt;/em&gt; 하도록
+&lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Context7&lt;/a&gt;·&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Sequential Thinking&lt;/a&gt;&lt;/strong&gt; 을 붙여 &lt;em&gt;에이전트를 수정&lt;/em&gt; 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이처럼 제가 계속 강조드리는 거지만, 이러한 서브 에이전트나 사용하는 프롬프트는 &lt;strong&gt;지속적으로 수정해 나간다면&lt;/strong&gt; 우리가 원하는 결과를 얻는 데 &lt;em&gt;정말 큰 도움&lt;/em&gt; 이 되죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉 &lt;em&gt;완벽한 한 방&lt;/em&gt; 을 노리지 말고 — &lt;strong&gt;돌려보고 → 부족하면 프롬프트를 고치고 → 다시&lt;/strong&gt; 가 정석이다. 이게 &lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;프롬프트 엔지니어링&lt;/a&gt;의
+본질이다.&lt;/p&gt;
+&lt;h3&gt;Continuous Mode — 8개 작업을 연달아&lt;/h3&gt;
+&lt;p&gt;이제 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;의 &lt;strong&gt;Continuous Mode&lt;/strong&gt; 를 켠다. &lt;em&gt;작업 목록(8개)&lt;/em&gt; 을 &lt;strong&gt;순차적으로 자동 실행&lt;/strong&gt;
+하는 모드다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[Continuous Mode]
+작업1 → 작업2 → 작업3 → … → 작업8   (멈추지 않고 연달아)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;UI 마크업은 &lt;em&gt;크게 복잡하지 않은&lt;/em&gt; 반복 작업이라, &lt;code&gt;ui-markup-specialist&lt;/code&gt; 에게 &lt;strong&gt;연속으로 맡기기&lt;/strong&gt; 딱 좋다. 다 돌면 &lt;em&gt;테스트 URL&lt;/em&gt; 로 들어가 &lt;strong&gt;견적서 UI가 제대로 뜨는지&lt;/strong&gt; 눈으로
+확인한다.&lt;/p&gt;
+&lt;h3&gt;안 끝난 것처럼 보일 때 — 당황 금지&lt;/h3&gt;
+&lt;p&gt;자동으로 길게 돌리다 보면 &lt;em&gt;작업이 끝났는데 대기 중&lt;/em&gt; 처럼 보일 때가 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;간혹가다 이럴 경우가 있습니다. 그럴 때는 &lt;strong&gt;당황하지 마시고요&lt;/strong&gt;, &lt;em&gt;하나씩 확인&lt;/em&gt; 하시면 돼요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이럴 땐 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;strong&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;로 전환해 &lt;em&gt;각 작업이 실제로 구현됐는지&lt;/em&gt; 하나씩 점검한다. 전부 &lt;strong&gt;100% 완료&lt;/strong&gt; 되고 요구사항이 충족됐으면, Shrimp의
+작업을 &lt;em&gt;모두 완료&lt;/em&gt; 로 체크한다. 그래도 &lt;em&gt;빠진 부분(에러·로딩 상태 UI)&lt;/em&gt; 이 있으면 — &lt;strong&gt;메인 컨텍스트에서 직접&lt;/strong&gt; 마저 개발한다.&lt;/p&gt;
+&lt;h3&gt;반복은 커맨드로 — &lt;code&gt;update-roadmap&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;작업이 끝날 때마다 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt;에 &lt;em&gt;완료 체크&lt;/em&gt; 를 남기는데, 이걸 &lt;strong&gt;매번 손으로&lt;/strong&gt; 하면 번거롭다. &lt;em&gt;자주 쓰는 프롬프트&lt;/em&gt; 는 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;*
+&lt;em&gt;커스텀 커맨드&lt;/em&gt;*&lt;/a&gt;로 묶는다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docs&lt;/code&gt; 디렉터리에 &lt;strong&gt;&lt;code&gt;update-roadmap.md&lt;/code&gt;&lt;/strong&gt; 생성 → &lt;em&gt;완료 작업 체크&lt;/em&gt; 커맨드 작성&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt; 를 컨텍스트로 추가 → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 요청&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;bypass permissions&lt;/code&gt;&lt;/a&gt; 모드로 커맨드 실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이렇게 해두면 &lt;em&gt;&quot;로드맵 갱신해줘&quot;&lt;/em&gt; 한마디로 &lt;strong&gt;자동 정리&lt;/strong&gt; 된다.&lt;/p&gt;
+&lt;h3&gt;⭐ 꼭 — Git 커밋&lt;/h3&gt;
+&lt;p&gt;마지막으로 강사가 &lt;em&gt;가장 힘주어&lt;/em&gt; 당부하는 게 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Git으로 커밋을 하는 건 정말 중요해요.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이유는 분명하다. &lt;strong&gt;AI는 코드를 한꺼번에 많이 고친다.&lt;/strong&gt; 무엇이 어떻게 바뀌었는지 &lt;em&gt;사람이 일일이 따라잡기 어렵고&lt;/em&gt;, 그러다 &lt;em&gt;치명적인 상황&lt;/em&gt; 이 터질 수 있다. 그래서 &lt;strong&gt;기능 하나 완성 → 즉시 커밋&lt;/strong&gt; 을
+원칙으로
+삼는다. &lt;em&gt;되돌릴 지점&lt;/em&gt; 을 촘촘히 박아두는 것 — 이게 &lt;strong&gt;AI 시대의 안전벨트&lt;/strong&gt; 다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;UI/UX 전문가 서브 에이전트를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;단계&lt;/strong&gt; → &lt;em&gt;동적 기능 제외&lt;/em&gt; → &lt;strong&gt;마크업·스타일링&lt;/strong&gt; 만 (정적 화면 완성)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ui-markup-specialist&lt;/code&gt;&lt;/strong&gt; → &lt;strong&gt;Next.js·TS·Tailwind·shadcn/ui&lt;/strong&gt; 전용 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;개선&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP&lt;/a&gt;(Context7·Sequential Thinking) 추가 → &lt;strong&gt;프롬프트는 계속 고친다&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;자동화&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp&lt;/a&gt; &lt;strong&gt;Continuous Mode&lt;/strong&gt; 로 &lt;em&gt;8개 작업 연달아&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;점검&lt;/strong&gt; → 멈춘 듯 보이면 &lt;em&gt;당황 말고&lt;/em&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 하나씩 확인 → &lt;em&gt;빠진 건 메인에서&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;커맨드&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;&lt;code&gt;update-roadmap&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;로드맵 갱신&lt;/em&gt; 자동화&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;Git 커밋&lt;/strong&gt; → 기능 완성마다 &lt;em&gt;즉시 커밋&lt;/em&gt; → &lt;strong&gt;AI 시대의 안전벨트&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;뼈대에 &lt;em&gt;살이 붙어&lt;/em&gt; 화면이 제 모습을 갖췄다. &lt;em&gt;전문가에게 맡기고&lt;/em&gt; → &lt;strong&gt;반복은 커맨드로&lt;/strong&gt; → &lt;em&gt;지점마다 커밋&lt;/em&gt; — 이 리듬이 몸에 배면 개발 속도가 확 붙는다. 다음 챕터에서는 이 정적 화면에 &lt;strong&gt;실제
+데이터와 동적 기능&lt;/strong&gt; 을 불어넣어 보자.&lt;/p&gt;
+&lt;h2&gt;개발 워크플로우: UI/UX 개선하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-uiux-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;정적 화면&lt;/em&gt; 을 한 번에 찍어냈다. 그런데 &lt;em&gt;처음부터 완벽한 화면&lt;/em&gt; 이 나올 리 없다. 강사의 한마디가 모든 걸 요약한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;하지만 우리가 개발을 진행하다 보면 &lt;strong&gt;계획대로 되는 게 있나요?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이번 챕터는 &lt;em&gt;예상 못 한 수정 요구&lt;/em&gt; 가 튀어나왔을 때, 그걸 &lt;strong&gt;워크플로우 안에서&lt;/strong&gt; 깔끔히 처리하는 법이다.&lt;/p&gt;
+&lt;h3&gt;왜 더미 데이터로 먼저 만드나&lt;/h3&gt;
+&lt;p&gt;가장 먼저 짚는 원칙. &lt;strong&gt;실제 데이터를 붙이기 전에&lt;/strong&gt;, &lt;em&gt;더미 데이터&lt;/em&gt; 로 UI/UX를 &lt;strong&gt;먼저 완성&lt;/strong&gt; 한다. 이유가 분명하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[더미 데이터로 UI 완성]  → 디자인 수정이 쉽다 (마크업만 손보면 끝)
+        ↓ 그 다음
+[실제 DB 연동]           → 이제 수정은 코드 전체를 건드린다&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;데이터를 연동한 뒤&lt;/em&gt; 디자인을 고치면, &lt;strong&gt;단순 UI 수정&lt;/strong&gt; 이 아니라 &lt;em&gt;비즈니스 로직까지 얽힌&lt;/em&gt; 복잡한 코드 변경이 된다. 그러니 &lt;strong&gt;모양부터 확정&lt;/strong&gt; 하고, &lt;em&gt;데이터는 나중에&lt;/em&gt; 붙이는 게 영리하다.&lt;/p&gt;
+&lt;h3&gt;핵심 기법 — 스크린샷을 첨부하라&lt;/h3&gt;
+&lt;p&gt;UI를 고칠 때 &lt;em&gt;말로만&lt;/em&gt; 설명하면 잘 안 먹힌다. &lt;strong&gt;스크린샷을 붙여서&lt;/strong&gt; 요청하는 게 훨씬 효과적이다. 이건 &lt;em&gt;사람이 디자인하는 방식&lt;/em&gt; 그대로다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;맨 처음에 &lt;strong&gt;초안&lt;/strong&gt; 을 작성하고, &lt;em&gt;마음에 들지 않는 부분&lt;/em&gt; 은 개선을 하고 &lt;em&gt;마음에 드는 부분&lt;/em&gt; 은 &lt;strong&gt;점진적으로 발전&lt;/strong&gt; 해가면서 지속적으로 디자인을 발전해가죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0&quot;&gt;Anthropic 공식 문서&lt;/a&gt;에서도 &lt;strong&gt;권장하는 방법&lt;/strong&gt; 이다. &lt;em&gt;현재 화면을 캡처&lt;/em&gt; → &lt;em&gt;&quot;이 부분을 이렇게 고쳐줘&quot;&lt;/em&gt; → &lt;strong&gt;반복&lt;/strong&gt;. 이 시각적 피드백
+루프를 돌릴수록 클로드의 출력은 &lt;strong&gt;눈에 띄게 좋아진다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[스크린샷 첨부] → [수정 요청] → [결과 확인] → 다시 [스크린샷]
+        ↑________________________________________│&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;갑작스러운 요구는 — &lt;code&gt;plan_task&lt;/code&gt; 로&lt;/h3&gt;
+&lt;p&gt;로드맵을 따라가던 중 &lt;em&gt;&quot;컨테이너 폭을 맞춰줘&quot;&lt;/em&gt;, &lt;em&gt;&quot;간격을 조절해줘&quot;&lt;/em&gt; 같은 &lt;strong&gt;예상 못 한 요구&lt;/strong&gt; 가 생긴다. 그럴 땐 &lt;em&gt;즉흥적으로&lt;/em&gt; 손대지
+말고, &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;의 &lt;strong&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;새 작업 계획&lt;/em&gt; 을 세운다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/strong&gt; → 요구사항을 &lt;strong&gt;세부 작업으로 분리&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;strong&gt;&lt;code&gt;list_tasks&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; → &lt;em&gt;진행 중·대기 중&lt;/em&gt; 작업 상태 확인&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;순차 진행&lt;/em&gt; 요청 → UI 개선 완료&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;갑자기 끼어든 일&lt;/em&gt; 도 &lt;strong&gt;계획 → 분리 → 순차 실행&lt;/strong&gt; 이라는 &lt;em&gt;같은 리듬&lt;/em&gt; 으로 처리한다는 게 핵심이다.&lt;/p&gt;
+&lt;h3&gt;Playwright MCP — 클로드가 스스로 화면을 본다&lt;/h3&gt;
+&lt;p&gt;구체적인 수정도 보여준다. &lt;em&gt;견적서 상세 페이지&lt;/em&gt; 의 &lt;strong&gt;섹션 너비를 일관되게&lt;/strong&gt; 맞추는 작업이다. 물론 직접 고쳐도 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;개발 경험이 있으신 분들은 이러한 걸 &lt;em&gt;굳이 AI에게 요청을 하지 않고&lt;/em&gt; 바로 이런 &lt;strong&gt;코드를 수정&lt;/strong&gt; 할 수 있겠죠.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;하지만 여기선 &lt;em&gt;클로드를 최대한 활용&lt;/em&gt; 한다. &lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP 서버&lt;/a&gt;&lt;/strong&gt; 를 붙이면 — 클로드가 &lt;em&gt;직접 화면을 띄워 확인&lt;/em&gt; 하고, &lt;strong&gt;스스로 수정 계획&lt;/strong&gt;
+을 세운다. &lt;em&gt;사람이 일일이 스크린샷을 찍어 주지 않아도&lt;/em&gt;, 클로드가 &lt;strong&gt;눈을 갖는&lt;/strong&gt; 셈이다. &lt;code&gt;plan_task&lt;/code&gt; 와 함께 돌리면 &lt;em&gt;일관된 UI&lt;/em&gt; 가 나온다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;UI/UX 개선 워크플로우를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;순서&lt;/strong&gt; → &lt;strong&gt;더미 데이터로 UI 먼저&lt;/strong&gt; → &lt;em&gt;그다음&lt;/em&gt; 실제 DB 연동 (수정 비용 ↓)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;핵심 기법&lt;/strong&gt; → &lt;strong&gt;스크린샷 첨부&lt;/strong&gt; → &lt;em&gt;초안 → 개선 → 반복&lt;/em&gt; (&lt;a href=&quot;/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0&quot;&gt;Anthropic 권장&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;갑작스러운 요구&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;세부 작업 분리&lt;/em&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;
+&lt;code&gt;list_tasks&lt;/code&gt;&lt;/a&gt; → 순차 진행&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;자동 확인&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;strong&gt;Playwright MCP&lt;/strong&gt;&lt;/a&gt; → 클로드가 &lt;em&gt;스스로 화면 보고&lt;/em&gt; 수정 계획&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;마인드셋&lt;/strong&gt; → &lt;em&gt;계획대로 안 되는 게 정상&lt;/em&gt; → &lt;strong&gt;워크플로우로&lt;/strong&gt; 흡수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;디자인은 &lt;em&gt;한 방&lt;/em&gt; 이 아니라 &lt;strong&gt;반복&lt;/strong&gt; 이다. &lt;em&gt;더미로 먼저 모양을 잡고&lt;/em&gt; → &lt;em&gt;스크린샷으로 다듬고&lt;/em&gt; → &lt;em&gt;갑작스러운 요구는 &lt;code&gt;plan_task&lt;/code&gt; 로&lt;/em&gt; — 이 흐름이면 &lt;strong&gt;계획이 흔들려도&lt;/strong&gt; 개발은 흔들리지
+않는다. 다음 챕터에서는 이 완성된 화면에 &lt;strong&gt;실제 Notion 데이터&lt;/strong&gt; 를 흘려보내 보자.&lt;/p&gt;
+&lt;h2&gt;핵심 기능 구현하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0-uiux-%EA%B0%9C%EC%84%A0%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt;까지 &lt;em&gt;화면&lt;/em&gt; 은 다 만들었다. 하지만 아직 &lt;strong&gt;더미 데이터&lt;/strong&gt; 가 박혀 있는 &lt;em&gt;껍데기&lt;/em&gt; 다. 이제 &lt;strong&gt;진짜 알맹이&lt;/strong&gt; 를 채울 차례다 — &lt;em&gt;실제 Notion 데이터를
+흘려보내고&lt;/em&gt;,
+&lt;strong&gt;PDF로 내려받는&lt;/strong&gt; 핵심 기능이다.&lt;/p&gt;
+&lt;h3&gt;작게 쪼개라 — AI에겐 낮은 복잡도를&lt;/h3&gt;
+&lt;p&gt;기능 구현도 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;계획부터&lt;/em&gt; 세운다. 그룹 단위로 묶어도 되고, 개별 태스크로 잘게 나눠도 된다. 강사의 원칙은 &lt;em&gt;일관&lt;/em&gt; 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI에게 &lt;strong&gt;최대한 낮은 복잡도&lt;/strong&gt; 를 위임하는 편이에요. 그래야 &lt;em&gt;오류 없이 정확히&lt;/em&gt; 구현을 하더라고요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;큰 덩어리&lt;/em&gt; 를 한 번에 던지면 클로드가 &lt;em&gt;헤맨다.&lt;/em&gt; &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt;를 참조해 &lt;strong&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/strong&gt; 로 작업을 &lt;em&gt;작게 쪼개&lt;/em&gt;
+두면 — 오류가 확 줄어든다. 이번 단계는 &lt;em&gt;두 갈래&lt;/em&gt; 로 나뉜다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[트랙 A] Notion API 연동 → 실제 견적서 표시
+[트랙 B] PDF 생성        → 다운로드 기능&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;트랙 A — Notion 데이터를 화면에&lt;/h3&gt;
+&lt;p&gt;첫 번째 갈래는 &lt;em&gt;더미 대신 진짜 데이터&lt;/em&gt; 를 붙이는 일이다. 여기서 &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;앞서 만든 &lt;strong&gt;Notion 연동 전문 서브 에이전트&lt;/strong&gt;&lt;/a&gt;가 다시 등판한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Notion 데이터베이스 정보&lt;/strong&gt; + &lt;strong&gt;CSV 파일&lt;/strong&gt; 을 컨텍스트로 추가&lt;/li&gt;
+&lt;li&gt;에이전트가 &lt;em&gt;CSV를 분석&lt;/em&gt; → &lt;strong&gt;Notion API 통합&lt;/strong&gt; 구현&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;브라우저 테스트&lt;/strong&gt; 로 결과 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결과물은 두 가지다. &lt;em&gt;Notion 데이터를 웹 데이터로&lt;/em&gt; &lt;strong&gt;변환하는 유틸리티&lt;/strong&gt;, 그리고 그걸 &lt;em&gt;페이지에 뿌리는&lt;/em&gt; 코드. &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;전문가에게 컨텍스트를 충분히 먹이는&lt;/a&gt; 그 패턴 그대로다.&lt;/p&gt;
+&lt;h3&gt;트랙 B — PDF 다운로드&lt;/h3&gt;
+&lt;p&gt;두 번째 갈래는 &lt;em&gt;PDF 생성 패키지&lt;/em&gt; 를 깔아 &lt;strong&gt;다운로드 기능&lt;/strong&gt; 을 붙이는 일이다. 진행하다 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰&lt;/a&gt;이 꽉 차면 &lt;strong&gt;&lt;code&gt;/clear&lt;/code&gt;&lt;/strong&gt; 로 컨텍스트를 비우고, *
+&lt;em&gt;&lt;code&gt;execute_task&lt;/code&gt;&lt;/em&gt;* 로 이어간다.&lt;/p&gt;
+&lt;p&gt;그런데 이 챕터의 &lt;em&gt;진짜 알맹이&lt;/em&gt; 는 따로 있다. 강사가 &lt;em&gt;수없이 데인 끝에&lt;/em&gt; 찾은 &lt;strong&gt;오류를 줄이는 두 가지 룰&lt;/strong&gt; 이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이전에 제가 AI를 활용했을 때는 &lt;em&gt;&quot;어떠어떠한 걸 구현해줘&quot;&lt;/em&gt; 한 다음에 테스트를 했을 때 &lt;strong&gt;오류가 정말 많았거든요.&lt;/strong&gt; 그런데 &lt;em&gt;두 가지를 추가&lt;/em&gt; 하고 나서 &lt;strong&gt;오류가 정말 줄어들었어요.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;⭐ 룰 ① — Playwright로 스스로 테스트하게&lt;/h3&gt;
+&lt;p&gt;첫 번째. 비즈니스 로직을 구현한 뒤, &lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt; 통합 테스트&lt;/strong&gt; 프롬프트를 &lt;em&gt;붙인다.&lt;/em&gt; 그러면 클로드가 &lt;em&gt;직접 화면을 띄워&lt;/em&gt; 테스트하고, *
+&lt;em&gt;버그까지 스스로 잡는다.&lt;/em&gt;* 사람이 &lt;em&gt;일일이 눌러보며&lt;/em&gt; 확인할 필요가 없어진다.&lt;/p&gt;
+&lt;h3&gt;⭐ 룰 ② — 린트·타입·빌드 체크리스트&lt;/h3&gt;
+&lt;p&gt;두 번째. &lt;strong&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/strong&gt; 의 &lt;em&gt;린트 체크 + 타입 체크&lt;/em&gt; 를 구현 직후 돌리게 한다 — 심지어 &lt;strong&gt;빌드까지.&lt;/strong&gt; 자주 쓰는 명령어는 &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;
+&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;에 적어두고, &lt;strong&gt;&lt;code&gt;check-all&lt;/code&gt;&lt;/strong&gt; 과 &lt;strong&gt;&lt;code&gt;npm run build&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;클로드가 제 손으로&lt;/em&gt; 오류를 검출하게 만든다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그리고 저는 이러한 룰이 &lt;strong&gt;Playwright MCP보다 더 강력&lt;/strong&gt; 하다고 느꼈어요. 특히 &lt;strong&gt;작업 완료 체크리스트&lt;/strong&gt;, 이걸 추가하고 나서 &lt;em&gt;정말 많이 오류가 줄었습니다.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;핵심은 &lt;strong&gt;&quot;구현 → 자가 검증&quot;을 한 묶음으로&lt;/strong&gt; 만드는 것이다. &lt;em&gt;코드를 짜고 끝&lt;/em&gt; 이 아니라, &lt;strong&gt;테스트·린트·타입·빌드를 통과해야 완료&lt;/strong&gt; — 이 체크리스트가 &lt;em&gt;버그를 입구에서&lt;/em&gt; 막는다.&lt;/p&gt;
+&lt;h3&gt;마무리 — 통합 테스트 · 로드맵 · 커밋&lt;/h3&gt;
+&lt;p&gt;두 트랙이 끝나면 &lt;strong&gt;통합 테스트&lt;/strong&gt; 로 마무리한다. &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;list-task&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;남은 작업&lt;/em&gt; 을 확인하고, 마지막 통합 태스크를
+&lt;code&gt;execute-task&lt;/code&gt; 로 처리한다. 그다음 &lt;em&gt;루틴&lt;/em&gt; 대로다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;/compact&lt;/code&gt;&lt;/strong&gt; 로 컨텍스트 정리&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;&lt;strong&gt;&lt;code&gt;update-roadmap&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;으로 &lt;em&gt;완료 반영&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git 커밋&lt;/strong&gt; 으로 &lt;em&gt;지점 저장&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;로드맵을 보면 &lt;strong&gt;핵심 기능까지 완료&lt;/strong&gt; — 이제 &lt;em&gt;성능 최적화·보안·에러 처리·테스트·배포&lt;/em&gt; 만 남았다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;핵심 기능 구현을 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;계획&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;·&lt;code&gt;ultrathink&lt;/code&gt;로 &lt;strong&gt;잘게 쪼개기&lt;/strong&gt; → &lt;em&gt;AI엔 낮은 복잡도&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;트랙 A&lt;/strong&gt; → &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;Notion 연동 서브 에이전트&lt;/a&gt; + &lt;em&gt;DB 정보·CSV&lt;/em&gt; → &lt;strong&gt;실제 견적서 표시&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;트랙 B&lt;/strong&gt; → PDF 패키지 → &lt;strong&gt;다운로드 기능&lt;/strong&gt; (토큰 차면 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;/clear&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;룰 ①&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt; → &lt;em&gt;스스로 테스트·버그 수정&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;룰 ②&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;에 &lt;code&gt;check-all&lt;/code&gt;·&lt;code&gt;npm run build&lt;/code&gt; → &lt;strong&gt;린트·타입·빌드 자가 검증&lt;/strong&gt; (강사 왈,
+&lt;em&gt;Playwright보다 강력&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;마무리&lt;/strong&gt; → 통합 테스트 → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;/compact&lt;/code&gt;&lt;/a&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;&lt;code&gt;update-roadmap&lt;/code&gt;&lt;/a&gt; → &lt;strong&gt;커밋&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AI에게 &lt;em&gt;코드를 맡길 때&lt;/em&gt; 가장 무서운 건 &lt;strong&gt;소리 없는 버그&lt;/strong&gt; 다. 그래서 &lt;em&gt;작게 쪼개&lt;/em&gt; 시키고, &lt;strong&gt;테스트·체크리스트로 스스로 검증&lt;/strong&gt; 하게 만드는 것 — 이 두 룰이 &lt;em&gt;MVP의 완성도&lt;/em&gt; 를 가른다. 다음
+챕터에서는 &lt;strong&gt;관리자 기능&lt;/strong&gt; 을 붙이고 &lt;em&gt;실제 배포&lt;/em&gt; 까지 달려보자.&lt;/p&gt;
+&lt;h2&gt;핵심 기능 구현 및 배포하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;Notion 데이터&lt;/em&gt; 와 &lt;em&gt;PDF&lt;/em&gt; 라는 알맹이를 채웠다. 드디어 로드맵의 &lt;strong&gt;마지막 칸&lt;/strong&gt; — &lt;em&gt;최적화&lt;/em&gt; 와 &lt;strong&gt;배포&lt;/strong&gt; 다. 만든 걸 &lt;em&gt;내 컴퓨터 안&lt;/em&gt; 에만 두면 의미가
+없다. 이제 &lt;strong&gt;세상에 내보낼&lt;/strong&gt; 차례다.&lt;/p&gt;
+&lt;h3&gt;마지막도 — 계획부터&lt;/h3&gt;
+&lt;p&gt;흐름은 &lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;지금까지&lt;/a&gt;와 똑같다. &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt;를 컨텍스트로
+넣고 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;의 &lt;strong&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;최적화·배포&lt;/em&gt; 작업을 잡는다. 그리고 &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;
+&lt;code&gt;nextjs-app-developer&lt;/code&gt; 서브 에이전트&lt;/a&gt;로 &lt;strong&gt;&lt;code&gt;execute_task&lt;/code&gt;&lt;/strong&gt; 를 돌린다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그러면 &lt;em&gt;권장되는 실행 순서&lt;/em&gt; 대로 &lt;strong&gt;Task 1, 4, 5번&lt;/strong&gt; 을 먼저 구현하도록 할게요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;번호 순서대로&lt;/em&gt; 가 아니라 — &lt;strong&gt;의존 관계가 권장하는 순서&lt;/strong&gt; 대로 따라가는 게 포인트다.&lt;/p&gt;
+&lt;h3&gt;핵심 최적화 — 서비스를 &apos;운영&apos; 가능하게&lt;/h3&gt;
+&lt;p&gt;연습용 화면과 &lt;em&gt;진짜 서비스&lt;/em&gt; 의 차이는 여기서 갈린다. 강사가 붙이는 &lt;strong&gt;최적화 항목&lt;/strong&gt; 들을 보자.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;항목&lt;/th&gt;
+&lt;th&gt;왜 필요한가&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;캐싱(Caching)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;60초간 데이터 재사용&lt;/em&gt; → &lt;strong&gt;Notion API 호출&lt;/strong&gt; 을 줄여 성능 ↑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Rate Limiting&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;1분당 호출 제한&lt;/em&gt; → &lt;strong&gt;서버 과부하·DDoS&lt;/strong&gt; 방어, 공평한 서비스&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;로깅(Logging)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;모든 활동·에러 기록&lt;/em&gt; → &lt;strong&gt;문제 터졌을 때&lt;/strong&gt; 원인 추적&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;폰트 최적화&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;불필요한 로딩&lt;/em&gt; 제거 → 초기 화면 빠르게&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Suspense 점진 렌더링&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;비동기 로딩 중&lt;/em&gt; UI 표시 → &lt;strong&gt;체감 속도&lt;/strong&gt; 개선&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;기능이 도는 것&lt;/em&gt; 과 &lt;em&gt;서비스로 버티는 것&lt;/em&gt; 은 다르다. 이 항목들이 &lt;strong&gt;MVP를 운영 가능한 제품&lt;/strong&gt; 으로 끌어올린다.&lt;/p&gt;
+&lt;h3&gt;통합 테스트 — 배포 전 마지막 관문&lt;/h3&gt;
+&lt;p&gt;배포 직전, &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;strong&gt;Playwright MCP&lt;/strong&gt;&lt;/a&gt;로 &lt;em&gt;통합 테스트&lt;/em&gt; 를 돌린다. &lt;em&gt;견적서 조회 시나리오&lt;/em&gt; 를 짜서 &lt;strong&gt;브라우저에서 직접&lt;/strong&gt; 테스트하고, &lt;strong&gt;PDF
+다운로드·오류 페이지&lt;/strong&gt; 까지 점검한다. &lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;클로드가 제 손으로 화면을 눌러보며 검증&lt;/a&gt;하니, 사람은 &lt;em&gt;결과만&lt;/em&gt; 확인하면 된다.&lt;/p&gt;
+&lt;h3&gt;Vercel 배포 — 세상에 내보내기&lt;/h3&gt;
+&lt;p&gt;이제 &lt;strong&gt;Vercel&lt;/strong&gt; 에 올린다. 흐름은 이렇다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;GitHub에 소스 푸시&lt;/strong&gt; (&lt;code&gt;execute_task&lt;/code&gt; 가 처리)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vercel.com&quot;&gt;vercel.com&lt;/a&gt; 로그인 → &lt;strong&gt;[Add New]&lt;/strong&gt; → &lt;em&gt;현재 프로젝트&lt;/em&gt; 임포트&lt;/li&gt;
+&lt;li&gt;⭐ &lt;strong&gt;환경 변수 설정&lt;/strong&gt; — &lt;code&gt;.env.local&lt;/code&gt; 의 &lt;em&gt;API 통합 키·Database ID&lt;/em&gt; 를 그대로 등록 + &lt;strong&gt;&lt;code&gt;NODE_ENV=production&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Deploy]&lt;/strong&gt; 클릭 → 빌드·배포&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;환경 변수를 잊지 말 것.&lt;/strong&gt; &lt;a href=&quot;#notion-api-%ED%82%A4-%EB%B0%8F-database-id-%EC%84%A4%EC%A0%95&quot;&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/a&gt;은 &lt;em&gt;내 컴퓨터에만&lt;/em&gt; 있는 파일이라, &lt;strong&gt;깃에 올라가지 않는다.&lt;/strong&gt; Vercel에 *따로&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;등록* 하지 않으면 — 배포본은 &lt;em&gt;키도 ID도 없이&lt;/em&gt; 텅 빈 채 돌아 &lt;strong&gt;접근 오류&lt;/strong&gt; 가 난다. (&lt;em&gt;많은 분들이 여기서 막힌다.&lt;/em&gt;)&lt;/p&gt;
+&lt;h3&gt;빌드가 실패하면 — 로그를 클로드에게&lt;/h3&gt;
+&lt;p&gt;배포가 &lt;em&gt;한 번에&lt;/em&gt; 될 거란 보장은 없다. 빌드가 &lt;strong&gt;fail&lt;/strong&gt; 나도 당황할 필요 없다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;빌드가 fail이 발생한다면 &lt;strong&gt;에러 로그를 복사&lt;/strong&gt; 해서 &lt;em&gt;Claude Code에게&lt;/em&gt; 해결해 달라고 하면 될 거예요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;LLM은 확률적&lt;/a&gt;이라 &lt;em&gt;이슈는 자연스러운 현상&lt;/em&gt; 이다. 중요한 건 &lt;em&gt;해결하는 방식&lt;/em&gt; — &lt;strong&gt;에러 로그라는 컨텍스트&lt;/strong&gt; 를 그대로 던지면, 클로드가 &lt;em&gt;원인을 짚어&lt;/em&gt;
+고쳐준다. 이게 이 강의가 처음부터 강조해온 &lt;strong&gt;컨텍스트 기반 디버깅&lt;/strong&gt; 이다.&lt;/p&gt;
+&lt;h3&gt;정리하며&lt;/h3&gt;
+&lt;p&gt;핵심 기능 구현과 배포를 정리하면 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;계획&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt; + &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/a&gt; →
+&lt;em&gt;권장 순서&lt;/em&gt; 대로 &lt;code&gt;execute_task&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;최적화&lt;/strong&gt; → &lt;strong&gt;캐싱·Rate Limiting·로깅·폰트·Suspense&lt;/strong&gt; → &lt;em&gt;운영 가능한&lt;/em&gt; 제품으로&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;통합 테스트&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt;로 &lt;em&gt;조회·PDF·오류&lt;/em&gt; 까지 점검&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vercel&lt;/strong&gt; → GitHub 푸시 → 임포트 → ⭐ &lt;strong&gt;환경 변수&lt;/strong&gt;(+&lt;code&gt;NODE_ENV&lt;/code&gt;) → Deploy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;빌드 실패&lt;/strong&gt; → &lt;em&gt;당황 말고&lt;/em&gt; → &lt;strong&gt;에러 로그를 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;클로드에게&lt;/a&gt;&lt;/strong&gt; → 컨텍스트 기반 해결&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;배포된 링크로 들어가 &lt;em&gt;견적서가 뜨고&lt;/em&gt; &lt;strong&gt;PDF가 내려받아지면&lt;/strong&gt; — &lt;strong&gt;Notion 기반 견적서 웹&lt;/strong&gt; 이 완성된 것이다. 마지막으로 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;로드맵 갱신&lt;/a&gt;과 *
+&lt;em&gt;Git 커밋&lt;/em&gt;* 까지 마치면 끝. 돌이켜보면 이 프로젝트의 진짜 수확은 &lt;em&gt;견적서 웹&lt;/em&gt; 이 아니라 — &lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;**계획 → 전문가 위임 → 자가 검증 → 배포
+**&lt;/a&gt;로 이어지는 &lt;strong&gt;Claude Code AI 워크플로우&lt;/strong&gt; 그 자체다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Claude Code] Shrimp Task Manager 도입]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  Shrimp Task Manager…]]></description><link>https://sungbin.kr/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-shrimp-task-manager-도입/</guid><pubDate>Fri, 24 Jul 2026 21:06:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;해당 포스팅은 &lt;a href=&quot;https://inf.run/vN55k&quot;&gt;클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지&lt;/a&gt;를 참조하여 작성하였습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -21697,482 +22172,7 @@ OAuth 콜백 핸들러 작성        ┌─ Google Cloud Console
 **&lt;/a&gt;는 &lt;em&gt;서로 다른 무기&lt;/em&gt; 다. &lt;strong&gt;상황에 맞게 골라 쓰는 것&lt;/strong&gt; 이 핵심이며, &lt;em&gt;계획·구현 전&lt;/em&gt; 에 &lt;strong&gt;파일·이미지·웹사이트 링크&lt;/strong&gt; 등 &lt;em&gt;컨텍스트를
 충분히&lt;/em&gt; 더할수록 — AI의 &lt;strong&gt;정확도&lt;/strong&gt; 가 올라간다.&lt;/p&gt;
 &lt;p&gt;결국 이 시리즈가 남긴 건 &lt;em&gt;견적서 웹&lt;/em&gt; 이 아니다. &lt;strong&gt;무엇이 주어져도&lt;/strong&gt; &lt;em&gt;수집 → 계획 → 구현 → 커밋&lt;/em&gt; 으로 풀어내는 — &lt;strong&gt;Claude Code AI 개발 워크플로우&lt;/strong&gt; 그 자체다. 이 &lt;em&gt;리듬&lt;/em&gt; 하나면,
-다음 프로젝트가 무엇이든 &lt;em&gt;같은 손놀림&lt;/em&gt; 으로 만들어낼 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Claude Code] MVP 개발 및 배포]]></title><description><![CDATA[해당 포스팅은 클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지를 참조하여 작성하였습니다.  Notion API 키 및 Database ID 설정 앞선 챕터에서 무엇을 만들지 정하고 PRD…]]></description><link>https://sungbin.kr/claude-code-mvp-%EA%B0%9C%EB%B0%9C-%EB%B0%8F-%EB%B0%B0%ED%8F%AC/</link><guid isPermaLink="false">https://sungbin.kr/claude-code-mvp-개발-및-배포/</guid><pubDate>Wed, 24 Jun 2026 13:31:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;해당 포스팅은 &lt;a href=&quot;https://inf.run/vN55k&quot;&gt;클로드 코드 완벽 마스터: AI 개발 워크플로우 기초부터 실전까지&lt;/a&gt;를 참조하여 작성하였습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABM0lEQVR42mO4meb6HytOd4PgNDckcZiYK07MgEviRpIDENv/v5Hs9P9GitP/m0B8IxEolmgP4RNvoBtQg/P/B82Z/x91Ff6/Wxbx/3au7/9b2d7/79cl/X/QmPb/Vo4vCQYCvXQj1fn/q1XT/z+b3fr//f6N/98f3Pz//d71/z8e2wXEu/+/WDIR7FJs3sfqZZAL75ZFgl0HctX92sT/96rj/t+rigXiuP93SsL+3wRaSnwYglyZYAc28E5h0P/riXb/7xSH/L9TFAw26EaSI4mRkg4Jx5crpgK93fb//b4N/z8c2vL/45Ed/58v6Pl/HWjZzXR3EmMZaCDImw+aM4CRU/D/UWfB/4ftuWBXQ2LZjTQDwRiUZJIdIUkFhIFJ6WaqC3npEDlx3wJ6D4TB3iSQsAEfowVVIr8OEAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;&quot;
-        src=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png&quot;
-        srcset=&quot;/static/0c1c2e37eb2d69a94839e0f64e5c9d39/6f3f2/banner.png 256w,
-/static/0c1c2e37eb2d69a94839e0f64e5c9d39/01e7c/banner.png 512w,
-/static/0c1c2e37eb2d69a94839e0f64e5c9d39/8c557/banner.png 700w&quot;
-        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Notion API 키 및 Database ID 설정&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;앞선 챕터&lt;/a&gt;에서 &lt;em&gt;무엇을 만들지&lt;/em&gt; 정하고 &lt;strong&gt;PRD&lt;/strong&gt; 까지 다듬었다. 이제 &lt;em&gt;코드를 짜기 전&lt;/em&gt; 에 빠뜨리면 안 되는 &lt;strong&gt;밑작업&lt;/strong&gt; 이 있다 —
-견적서를 담을 &lt;strong&gt;Notion 데이터베이스&lt;/strong&gt; 를
-만들고, 웹이 그 데이터에 접근할 &lt;strong&gt;열쇠&lt;/strong&gt; 를 준비하는 일이다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[웹 애플리케이션]
-      │  API 키(열쇠) + Database ID(주소)
-      ▼
-[Notion 데이터베이스 = 견적서·품목]&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;순서는 이렇다. &lt;strong&gt;① API 키 발급 → ② 데이터베이스 생성 → ③ 통합 연결 → ④ 속성 설정 → ⑤ 샘플 데이터 → ⑥ Database ID 추출&lt;/strong&gt;. 하나씩 따라가 보자.&lt;/p&gt;
-&lt;h3&gt;① API 키 발급 — Notion이라는 금고의 열쇠&lt;/h3&gt;
-&lt;p&gt;먼저 웹이 Notion에 &lt;em&gt;접근할 권한&lt;/em&gt; 이 필요하다. 강사의 비유가 명쾌하다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이러한 API Key는 우리 견적서 데이터베이스를 만들 거거든요. Notion에 이러한 데이터베이스의 애플리케이션이 접근할 수 있게 하는 &lt;strong&gt;Key&lt;/strong&gt; 라고 보시면 됩니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;키를 발급받는 곳은 &lt;strong&gt;My Integrations&lt;/strong&gt; 다. &lt;em&gt;사이트를 모르겠다면&lt;/em&gt; &lt;code&gt;Notion API 키&lt;/code&gt; 로 검색해도 된다. 다만 &lt;strong&gt;Notion 홈페이지가 자주 바뀌어&lt;/strong&gt; 화면이 헷갈릴 수 있는데, 강사가
-&lt;em&gt;최신 절차&lt;/em&gt; 를 따로 안내한다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://app.notion.com/developers/connections&quot;&gt;&lt;code&gt;app.notion.com/developers/connections&lt;/code&gt;&lt;/a&gt; 로 접속&lt;/li&gt;
-&lt;li&gt;우측 상단 &lt;strong&gt;[신규 연결]&lt;/strong&gt; 클릭&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;연결 이름&lt;/em&gt; 은 자유롭게, 인증 방법은 &lt;strong&gt;[액세스 토큰]&lt;/strong&gt; 선택 → &lt;strong&gt;[연결 생성하기]&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[기능]&lt;/strong&gt; 에서 필요한 권한 체크 → 발급된 &lt;strong&gt;액세스 토큰&lt;/strong&gt; 확보&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;만약에 이러한 키를 통해서 노션 데이터베이스의 값을 &lt;em&gt;추가한다든가 수정&lt;/em&gt; 을 원하시는 분들은 &lt;strong&gt;모두 체크&lt;/strong&gt; 하면 될 거예요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;발급받은 키는 &lt;em&gt;코드에 직접 박지 말고&lt;/em&gt; — 프로젝트의 &lt;strong&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/strong&gt; 파일에 넣어둔다. &lt;em&gt;비밀 키&lt;/em&gt; 는 절대 깃에 올라가면 안
-되니, &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;환경 변수로 분리&lt;/a&gt;하는 게 기본이다.&lt;/p&gt;
-&lt;h3&gt;② 데이터베이스 생성 — &lt;code&gt;Invoice&lt;/code&gt; 와 &lt;code&gt;Items&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;키를 손에 쥐었으니, 이제 &lt;em&gt;데이터를 담을 그릇&lt;/em&gt; 을 만든다. 견적서 시스템에는 &lt;strong&gt;두 개&lt;/strong&gt; 의 데이터베이스가 필요하다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;데이터베이스&lt;/th&gt;
-&lt;th&gt;역할&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;견적서 &lt;em&gt;한 건&lt;/em&gt; 의 정보&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;Items&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;견적서에 들어가는 &lt;em&gt;품목들&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Notion 페이지에서 슬래시(&lt;code&gt;/&lt;/code&gt;) 명령어로 &lt;strong&gt;데이터베이스&lt;/strong&gt; 를 두 개 만들면 된다. &lt;em&gt;왜 둘로 나누나?&lt;/em&gt; — 견적서 하나에 &lt;strong&gt;여러 품목&lt;/strong&gt; 이 붙기 때문이다. 견적서와 품목을 &lt;em&gt;한 테이블에&lt;/em&gt; 욱여넣으면
-관리가
-지저분해진다. 그래서 &lt;strong&gt;견적서 / 품목&lt;/strong&gt; 을 나누고, 나중에 &lt;em&gt;관계&lt;/em&gt; 로 묶는다.&lt;/p&gt;
-&lt;h3&gt;③ 통합 연결 — 많은 분들이 실수하는 지점&lt;/h3&gt;
-&lt;p&gt;데이터베이스를 만들었다고 &lt;em&gt;바로 접근&lt;/em&gt; 되는 게 아니다. ①에서 만든 &lt;strong&gt;API 통합&lt;/strong&gt; 을 &lt;em&gt;각 데이터베이스에&lt;/em&gt; 연결해줘야 한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터베이스 우측 상단 &lt;strong&gt;더보기(&lt;code&gt;···&lt;/code&gt;)&lt;/strong&gt; → &lt;strong&gt;[연결]&lt;/strong&gt; → 만들어둔 통합 선택&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;여기서 강사가 &lt;em&gt;못을 박는다.&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;많은 분들이 실수를 하세요.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;무슨 실수냐 — &lt;strong&gt;페이지가 아니라 데이터베이스&lt;/strong&gt; 에서 연결을 걸어야 한다는 점이다. &lt;em&gt;겉보기엔 비슷한&lt;/em&gt; 화면이라, 페이지에 연결해두고 &lt;em&gt;&quot;왜 접근이 안 되지?&quot;&lt;/em&gt; 하며 헤매기 쉽다. &lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;
-와 &lt;code&gt;Items&lt;/code&gt; 둘 다&lt;/strong&gt;
-잊지 말고 연결하자.&lt;/p&gt;
-&lt;h3&gt;④ 속성 설정 — Claude Code에게 물어본다&lt;/h3&gt;
-&lt;p&gt;각 데이터베이스에 &lt;em&gt;어떤 컬럼(속성)&lt;/em&gt; 을 둘지 정할 차례다. 그런데 &lt;em&gt;혼자 고민할 필요 없다.&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이러한 것도 &lt;strong&gt;Claude Code에게 물어보도록&lt;/strong&gt; 할게요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;프로젝트 맥락(PRD·&lt;code&gt;CLAUDE.md&lt;/code&gt;)&lt;/a&gt;을 이미 파악한 클로드에게 &lt;em&gt;&quot;이 견적서 프로젝트에 맞는 Notion 속성을 설계해줘&quot;&lt;/em&gt; 라고 하면 *
-&lt;em&gt;가이드&lt;/em&gt;* 를 받을 수 있다.
-대략 이런 모양이 나온다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;견적서 번호·클라이언트 명·발행일·유효기간·상태·총금액·항목&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;Items&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;항목명·수량·단가·금액·견적서(연결)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;설정에서 &lt;em&gt;두 가지 포인트&lt;/em&gt; 가 핵심이다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;수식(Formula)&lt;/strong&gt; — &lt;code&gt;Items&lt;/code&gt; 의 &lt;strong&gt;금액&lt;/strong&gt; 은 직접 입력하지 않고 &lt;em&gt;&lt;code&gt;수량 × 단가&lt;/code&gt;&lt;/em&gt; 로 &lt;strong&gt;자동 계산&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그러면 AI 기능으로 인해서 &lt;em&gt;자동으로 수량 곱하기 단가&lt;/em&gt; 가 설정되었고요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;관계형(Relation)&lt;/strong&gt; — &lt;code&gt;Invoice&lt;/code&gt; 의 &lt;strong&gt;항목&lt;/strong&gt; 속성을 &lt;code&gt;Items&lt;/code&gt; 와 &lt;strong&gt;관계형으로 연결&lt;/strong&gt; → &lt;em&gt;양방향 관계&lt;/em&gt; 설정&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;양방향&lt;/em&gt; 이 중요하다. 견적서에서 &lt;em&gt;&quot;이 견적서에 딸린 품목들&quot;&lt;/em&gt; 을 보고, 품목에서도 &lt;em&gt;&quot;내가 속한 견적서&quot;&lt;/em&gt; 를 거꾸로 볼 수 있게 된다. &lt;strong&gt;속성은 정답이 없다&lt;/strong&gt; — 강사 말처럼 &lt;em&gt;우리 입맛에 맞게&lt;/em&gt; 더하고
-빼면 된다.&lt;/p&gt;
-&lt;h3&gt;⑤ 샘플 데이터 삽입 — 빈 그릇은 테스트가 안 된다&lt;/h3&gt;
-&lt;p&gt;구조를 잡았으면, &lt;em&gt;실제로 잘 도나&lt;/em&gt; 확인하려고 &lt;strong&gt;샘플 데이터&lt;/strong&gt; 를 넣는다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;Invoice&lt;/code&gt;&lt;/strong&gt; → 견적서 번호·발행일·유효기간·총금액 등 한 건 입력&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;Items&lt;/code&gt;&lt;/strong&gt; → &lt;em&gt;웹사이트 디자인·로고 제작·명함 디자인&lt;/em&gt; 같은 품목을 추가하고, 각 항목을 &lt;strong&gt;해당 견적서에 연결&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이때 금액이 &lt;em&gt;수량 × 단가&lt;/em&gt; 로 알아서 채워지고, 견적서와 품목이 &lt;em&gt;관계로 묶이는지&lt;/em&gt; 눈으로 확인하면 — 4단계 설정이 &lt;strong&gt;제대로 됐다는 증거&lt;/strong&gt; 다.&lt;/p&gt;
-&lt;h3&gt;⑥ Database ID 추출 — 쿼리 스트링을 떼라&lt;/h3&gt;
-&lt;p&gt;마지막. 웹이 &lt;em&gt;&quot;어느 데이터베이스를 읽어야 하는지&quot;&lt;/em&gt; 알려줄 &lt;strong&gt;주소(Database ID)&lt;/strong&gt; 가 필요하다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Invoice&lt;/code&gt; 데이터베이스의 &lt;strong&gt;공유 링크 복사&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;URL에서 &lt;strong&gt;쿼리 스트링&lt;/strong&gt; (물음표 &lt;code&gt;?&lt;/code&gt; 뒤 전부)을 &lt;strong&gt;제거&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;남은 부분의 &lt;strong&gt;ID&lt;/strong&gt; 를 &lt;code&gt;.env.local&lt;/code&gt; 에 설정&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;https://www.notion.so/{여기가-Database-ID}?v=abcd1234...
-                       └──────┬──────┘ └──────┬──────┘
-                         이게 ID         쿼리 스트링 (제거)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;많은 분들이 깜빡하시더라고요.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;쿼리 스트링까지&lt;/em&gt; 그대로 붙여넣으면 ID가 어긋나 &lt;strong&gt;접근이 안 된다.&lt;/strong&gt; &lt;code&gt;?&lt;/code&gt; 뒤를 깔끔히 잘라내는 걸 잊지 말자. 참고로 &lt;strong&gt;&lt;code&gt;Items&lt;/code&gt; 는 따로 ID가 필요 없다&lt;/strong&gt; — &lt;code&gt;Invoice&lt;/code&gt; 와 &lt;em&gt;관계형으로
-연결&lt;/em&gt; 돼 있어,
-견적서를 읽으면 &lt;em&gt;딸린 품목&lt;/em&gt; 까지 함께 따라오기 때문이다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;Notion 연동 준비를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;① API 키&lt;/strong&gt; → &lt;code&gt;app.notion.com/developers/connections&lt;/code&gt; → [신규 연결]·[액세스 토큰] → &lt;strong&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/strong&gt; 에 저장&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;② 데이터베이스&lt;/strong&gt; → &lt;code&gt;Invoice&lt;/code&gt;(견적서) + &lt;code&gt;Items&lt;/code&gt;(품목) &lt;strong&gt;두 개&lt;/strong&gt; 로 분리&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;③ 연결&lt;/strong&gt; → 통합을 &lt;em&gt;각 DB에&lt;/em&gt; 연결 → ⚠️ &lt;strong&gt;페이지 말고 데이터베이스&lt;/strong&gt; 에서&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;④ 속성&lt;/strong&gt; → &lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;Claude Code&lt;/a&gt;에게 설계 요청 → &lt;em&gt;금액=수식&lt;/em&gt;, &lt;em&gt;항목=관계형(양방향)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;⑤ 샘플&lt;/strong&gt; → 견적서·품목 한 세트 넣어 &lt;strong&gt;연결·계산 동작 확인&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;⑥ Database ID&lt;/strong&gt; → 공유 링크에서 &lt;strong&gt;쿼리 스트링 제거&lt;/strong&gt; → &lt;code&gt;.env.local&lt;/code&gt; (&lt;code&gt;Items&lt;/code&gt; 는 불필요)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;여기까지가 &lt;em&gt;코드 한 줄 없이&lt;/em&gt; 끝내는 &lt;strong&gt;연동의 토대&lt;/strong&gt; 다. 키(권한)와 ID(주소), 그리고 &lt;em&gt;관계로 묶인 두 데이터베이스&lt;/em&gt; 가 준비됐으니 — 다음 챕터부터는 이 위에 &lt;strong&gt;실제 웹 애플리케이션&lt;/strong&gt; 을 올려보자.&lt;/p&gt;
-&lt;h2&gt;서브에이전트: 개발 전문가&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#notion-api-%ED%82%A4-%EB%B0%8F-database-id-%EC%84%A4%EC%A0%95&quot;&gt;Notion 연동&lt;/a&gt;이라는 &lt;em&gt;토대&lt;/em&gt; 가 깔렸다. 이제 &lt;strong&gt;진짜 코드&lt;/strong&gt; 를 짤 차례다. 그런데 강의는 &lt;em&gt;코딩 자세&lt;/em&gt; 부터 바꾸라고 한다 — 당신은 &lt;em&gt;직접
-키보드를 두드리는 개발자&lt;/em&gt; 가 아니라,
-&lt;strong&gt;개발 팀장&lt;/strong&gt; 이다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;우리가 AI 활용을 해서 개발을 한다라고 생각을 하지 말고, &lt;em&gt;&apos;다음 작업을 해야 한다&apos;&lt;/em&gt; 라고 생각을 해보세요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그리고 우리는 현재 &lt;strong&gt;개발 팀장의 위치&lt;/strong&gt; 에 있다라고 가정을 해보도록 하겠습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;팀장은 &lt;em&gt;코드를 짜지 않는다.&lt;/em&gt; &lt;strong&gt;무엇을 할지 정하고&lt;/strong&gt; → &lt;em&gt;적임자에게 맡기고&lt;/em&gt; → &lt;strong&gt;결과를 검수&lt;/strong&gt; 한다. 이번 챕터의 흐름이 정확히 그렇다.&lt;/p&gt;
-&lt;h3&gt;일감 꺼내기 — &lt;code&gt;list-tasks&lt;/code&gt; 와 &lt;code&gt;execute-task&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;먼저 &lt;em&gt;지금 할 일&lt;/em&gt; 을 확인한다. &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;로 쪼개둔 작업을 &lt;strong&gt;&lt;code&gt;list-tasks&lt;/code&gt;&lt;/strong&gt; 로 꺼내고,
-&lt;strong&gt;&lt;code&gt;execute-task&lt;/code&gt;&lt;/strong&gt; 로 실행한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;list-tasks   → 할 일 목록 확인 (팀장이 보드를 본다)
-execute-task → 작업 실행      (담당자에게 맡긴다)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;물론 &lt;em&gt;모든 작업&lt;/em&gt; 에 전문가가 필요한 건 아니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;물론 이러한 작업 같은 경우에는 &lt;em&gt;크게 복잡한 작업은 아니에요.&lt;/em&gt; 그래서 &lt;code&gt;execute-task&lt;/code&gt; 기능을 통해서 &lt;strong&gt;바로 작업을 수행해도 좋지만&lt;/strong&gt;, 만약에 &lt;em&gt;효과적으로 작업을 수행하지 못한다면&lt;/em&gt; 서브
-에이전트를
-이용해서 이러한 작업을 수행하는 건 &lt;strong&gt;매우 효과적&lt;/strong&gt; 이죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;즉 &lt;em&gt;간단한 일&lt;/em&gt; 은 메인에게 바로 시키고, &lt;strong&gt;막히거나 까다로운 일&lt;/strong&gt; 이 나오면 — &lt;strong&gt;전문가&lt;/strong&gt; 를 부른다.&lt;/p&gt;
-&lt;h3&gt;전문가 투입 — &lt;code&gt;Next.js App Router 개발자&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;이 프로젝트의 기술 스택은 &lt;strong&gt;Next.js(App Router)&lt;/strong&gt; 다. 그래서 &lt;em&gt;그 분야만 파는&lt;/em&gt; &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;를 하나 만든다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;역할&lt;/strong&gt; — &lt;em&gt;Next.js App Router 전문 개발자&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;컨텍스트&lt;/strong&gt; — &lt;em&gt;Next.js 프로젝트 구조&lt;/em&gt; 같은 &lt;strong&gt;문서를 복사·붙여넣어&lt;/strong&gt; 전문성을 끌어올림&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;여기서 핵심은 &lt;strong&gt;컨텍스트를 얼마나 잘 먹이느냐&lt;/strong&gt; 다. 역할 이름만 &lt;em&gt;&quot;전문가&quot;&lt;/em&gt; 라고 붙인다고 전문가가 되진 않는다. &lt;em&gt;공식 문서·구조 규칙&lt;/em&gt; 을 직접 넣어줘야 &lt;strong&gt;진짜 전문가&lt;/strong&gt; 가 된다. 그리고 이 방식은
-&lt;em&gt;기술 스택을 가리지 않는다.&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;수강생분들이 &lt;em&gt;어떠한 기술 스택&lt;/em&gt; 으로 개발을 하시더라도, 메인 컨텍스트에서 진행을 했을 때 &lt;em&gt;결과가 만족스럽지 않다면&lt;/em&gt;, 해당 컨텍스트를 추가하여 &lt;strong&gt;전문가 서브 에이전트&lt;/strong&gt; 를 추가한 다음에, 이러한 서브
-에이전트로
-&lt;strong&gt;다시 작업을 수행&lt;/strong&gt; 한다면, 좀 더 &lt;strong&gt;만족한 결과물&lt;/strong&gt; 을 얻을 수 있을 거예요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이게 &lt;em&gt;서브 에이전트의 진짜 쓸모&lt;/em&gt; 다. &lt;strong&gt;&quot;메인이 못 하면 → 컨텍스트 붙인 전문가로 재시도&quot;&lt;/strong&gt; — 이 한 줄이 핵심 패턴이다.&lt;/p&gt;
-&lt;h3&gt;토큰 관리 — &lt;code&gt;compact&lt;/code&gt; 로 숨 고르기&lt;/h3&gt;
-&lt;p&gt;개발이 길어지면 &lt;em&gt;컨텍스트가 불어나&lt;/em&gt; &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰&lt;/a&gt;을 잡아먹는다. 이때 &lt;strong&gt;&lt;code&gt;compact&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;대화를 요약&lt;/em&gt; 해 &lt;em&gt;토큰을 줄이고&lt;/em&gt;, 필요하면 **세션을 닫았다 다시 열어
-**
-이어서 진행한다. 다시 들어와도 &lt;em&gt;&lt;code&gt;Next.js 앱 디벨로퍼&lt;/code&gt; 에이전트&lt;/em&gt; 를 부르면 &lt;strong&gt;전문성은 그대로&lt;/strong&gt; 살아 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;작업 순서&lt;/a&gt;는 &lt;em&gt;바뀔 수 있다.&lt;/em&gt; 다만 &lt;strong&gt;의존 관계&lt;/strong&gt; 는 GUI로 확인한 것과 동일하니, 순서가 좀 달라져도 &lt;em&gt;놀랄 필요 없다.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;전문가가 &lt;strong&gt;라우팅 구조와 페이지 골격&lt;/strong&gt; 을 만들어내면 — &lt;em&gt;견적서·로딩·Not Found·에러&lt;/em&gt; 페이지가 한꺼번에 생긴다. &lt;strong&gt;검수&lt;/strong&gt; 는 팀장의 몫이니, 생성된 코드와 페이지를 눈으로 확인한다.&lt;/p&gt;
-&lt;h3&gt;타입 정의 — Notion 속성을 데이터 모델로&lt;/h3&gt;
-&lt;p&gt;다음은 &lt;strong&gt;타입 정의&lt;/strong&gt; 다. 그런데 &lt;em&gt;맨손&lt;/em&gt; 으로 시키지 않는다. 앞서 만든 &lt;strong&gt;Notion 데이터베이스의 속성&lt;/strong&gt; 을 &lt;em&gt;컨텍스트로&lt;/em&gt; 넣어준다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Notion DB 속성 정보를 &lt;strong&gt;컨텍스트에 추가&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CSV로 내보낸 데이터&lt;/strong&gt; 를 압축 해제해 &lt;em&gt;실제 형태&lt;/em&gt; 파악에 활용&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Bypass permissions&lt;/code&gt; 모드&lt;/a&gt;로 &lt;strong&gt;타입 생성&lt;/strong&gt; 완료&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;추상적인 타입&lt;/em&gt; 이 아니라, &lt;strong&gt;실제 Notion 스키마에 들어맞는&lt;/strong&gt; 타입이 나온다는 게 포인트다. 굵직한 작업 전엔 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;strong&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;로 &lt;em&gt;무엇을 할지
-미리&lt;/em&gt; 확인하면
-&lt;strong&gt;삽질을 줄일&lt;/strong&gt; 수 있다.&lt;/p&gt;
-&lt;h3&gt;마무리 — 로드맵 체크, 그리고 다음&lt;/h3&gt;
-&lt;p&gt;한 단계가 끝나면 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;strong&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;에 &lt;em&gt;완료 체크&lt;/em&gt; 를 남긴다. &lt;em&gt;번거로운 완료 내역 기록&lt;/em&gt; 은 덜어내고, 핵심만 깔끔하게 관리한다.
-그리고 &lt;strong&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;두 번째 단계&lt;/em&gt; 를 계획한다 — 이때도 원칙은 하나다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;계획 수립 시 &lt;strong&gt;컨텍스트를 최대한 추가&lt;/strong&gt; 하는 것이 좋다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;로드맵의 다음 칸은 &lt;strong&gt;UI/UX 완성&lt;/strong&gt; 이다. 골격은 섰으니, 이제 &lt;em&gt;보기 좋게&lt;/em&gt; 입힐 차례 — 그건 &lt;strong&gt;UI/UX 전문 서브 에이전트&lt;/strong&gt; 의 일이다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;개발 전문가 서브 에이전트를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;관점&lt;/strong&gt; → &lt;em&gt;내가 코딩&lt;/em&gt; 이 아니라 → &lt;strong&gt;개발 팀장&lt;/strong&gt; 으로 &lt;em&gt;&quot;다음 작업&quot;&lt;/em&gt; 을 지휘&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;흐름&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;list-tasks&lt;/code&gt;&lt;/a&gt; → &lt;code&gt;execute-task&lt;/code&gt; → &lt;em&gt;간단하면 메인&lt;/em&gt;, &lt;strong&gt;막히면 전문가&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;전문가&lt;/strong&gt; → &lt;code&gt;Next.js App Router 개발자&lt;/code&gt; → &lt;strong&gt;공식 문서·구조를 컨텍스트로&lt;/strong&gt; 먹여야 진짜 전문가&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;핵심 패턴&lt;/strong&gt; → &lt;em&gt;메인이 못 하면&lt;/em&gt; → &lt;strong&gt;컨텍스트 붙인 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;로 재시도&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;효율&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;compact&lt;/code&gt;&lt;/a&gt;로 토큰 절약 · &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 사전 확인&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;타입&lt;/strong&gt; → &lt;em&gt;Notion 속성·CSV&lt;/em&gt; 를 컨텍스트로 → &lt;strong&gt;실제 스키마에 맞는&lt;/strong&gt; 타입&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;관리&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt; 완료 체크 → 다음은 &lt;strong&gt;UI/UX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;좋은 팀장은 &lt;em&gt;직접 다 하지 않는다.&lt;/em&gt; &lt;strong&gt;적임자를 세우고&lt;/strong&gt;, &lt;em&gt;맥락을 충분히 쥐여준 뒤&lt;/em&gt;, &lt;strong&gt;결과를 검수&lt;/strong&gt; 한다. 골격이 섰으니 — 다음 챕터에서는 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;**UI/UX 전문가
-**&lt;/a&gt;를 불러 &lt;em&gt;화면에 살을&lt;/em&gt; 붙여보자.&lt;/p&gt;
-&lt;h2&gt;서브에이전트: UI/UX 전문가&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;라우팅과 페이지 골격&lt;/em&gt; 을 세웠다. 뼈대는 섰지만 — 아직 &lt;em&gt;밋밋한 회색 화면&lt;/em&gt; 이다. 이제 &lt;strong&gt;보기 좋게 살을&lt;/strong&gt; 붙일 차례다. 그리고 그 일엔 &lt;em&gt;또 다른 전문가&lt;/em&gt; 가
-붙는다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그리고 이번 단계에서는 &lt;strong&gt;동적인 기능 없이 UI를 개발&lt;/strong&gt; 하는 작업이기 때문에&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;핵심은 &lt;em&gt;이번엔 기능을 안 건드린다&lt;/em&gt; 는 점이다. &lt;strong&gt;마크업과 스타일링&lt;/strong&gt; 에만 집중한다 — 즉 &lt;strong&gt;정적인 화면&lt;/strong&gt; 부터 깔끔하게 완성하는 단계다.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;ui-markup-specialist&lt;/code&gt; — 마크업만 파는 전문가&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;개발 전문가&lt;/a&gt;와 똑같은 방식으로, &lt;em&gt;UI/UX 전용&lt;/em&gt; &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;를 만든다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;역할&lt;/strong&gt; — &lt;em&gt;UI/UX 마크업 전문가&lt;/em&gt; (&lt;code&gt;ui-markup-specialist&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;스택&lt;/strong&gt; — &lt;strong&gt;Next.js · TypeScript · Tailwind CSS · shadcn/ui&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;범위&lt;/strong&gt; — &lt;em&gt;동적 기능은 제외&lt;/em&gt;, &lt;strong&gt;마크업·스타일링&lt;/strong&gt; 에만 집중&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;프롬프트는 &apos;한 번에&apos; 안 끝난다 — 계속 고친다&lt;/h3&gt;
-&lt;p&gt;여기서 강사가 &lt;em&gt;반복해서 강조&lt;/em&gt; 하는 습관이 나온다. 처음 만든 에이전트를 &lt;strong&gt;그대로 두지 않는다.&lt;/strong&gt; &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP 서버&lt;/a&gt;를 &lt;em&gt;최대한 활용&lt;/em&gt; 하도록
-&lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Context7&lt;/a&gt;·&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Sequential Thinking&lt;/a&gt;&lt;/strong&gt; 을 붙여 &lt;em&gt;에이전트를 수정&lt;/em&gt; 한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이처럼 제가 계속 강조드리는 거지만, 이러한 서브 에이전트나 사용하는 프롬프트는 &lt;strong&gt;지속적으로 수정해 나간다면&lt;/strong&gt; 우리가 원하는 결과를 얻는 데 &lt;em&gt;정말 큰 도움&lt;/em&gt; 이 되죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;즉 &lt;em&gt;완벽한 한 방&lt;/em&gt; 을 노리지 말고 — &lt;strong&gt;돌려보고 → 부족하면 프롬프트를 고치고 → 다시&lt;/strong&gt; 가 정석이다. 이게 &lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;프롬프트 엔지니어링&lt;/a&gt;의
-본질이다.&lt;/p&gt;
-&lt;h3&gt;Continuous Mode — 8개 작업을 연달아&lt;/h3&gt;
-&lt;p&gt;이제 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;의 &lt;strong&gt;Continuous Mode&lt;/strong&gt; 를 켠다. &lt;em&gt;작업 목록(8개)&lt;/em&gt; 을 &lt;strong&gt;순차적으로 자동 실행&lt;/strong&gt;
-하는 모드다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[Continuous Mode]
-작업1 → 작업2 → 작업3 → … → 작업8   (멈추지 않고 연달아)&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;UI 마크업은 &lt;em&gt;크게 복잡하지 않은&lt;/em&gt; 반복 작업이라, &lt;code&gt;ui-markup-specialist&lt;/code&gt; 에게 &lt;strong&gt;연속으로 맡기기&lt;/strong&gt; 딱 좋다. 다 돌면 &lt;em&gt;테스트 URL&lt;/em&gt; 로 들어가 &lt;strong&gt;견적서 UI가 제대로 뜨는지&lt;/strong&gt; 눈으로
-확인한다.&lt;/p&gt;
-&lt;h3&gt;안 끝난 것처럼 보일 때 — 당황 금지&lt;/h3&gt;
-&lt;p&gt;자동으로 길게 돌리다 보면 &lt;em&gt;작업이 끝났는데 대기 중&lt;/em&gt; 처럼 보일 때가 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;간혹가다 이럴 경우가 있습니다. 그럴 때는 &lt;strong&gt;당황하지 마시고요&lt;/strong&gt;, &lt;em&gt;하나씩 확인&lt;/em&gt; 하시면 돼요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이럴 땐 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;strong&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;로 전환해 &lt;em&gt;각 작업이 실제로 구현됐는지&lt;/em&gt; 하나씩 점검한다. 전부 &lt;strong&gt;100% 완료&lt;/strong&gt; 되고 요구사항이 충족됐으면, Shrimp의
-작업을 &lt;em&gt;모두 완료&lt;/em&gt; 로 체크한다. 그래도 &lt;em&gt;빠진 부분(에러·로딩 상태 UI)&lt;/em&gt; 이 있으면 — &lt;strong&gt;메인 컨텍스트에서 직접&lt;/strong&gt; 마저 개발한다.&lt;/p&gt;
-&lt;h3&gt;반복은 커맨드로 — &lt;code&gt;update-roadmap&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;작업이 끝날 때마다 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt;에 &lt;em&gt;완료 체크&lt;/em&gt; 를 남기는데, 이걸 &lt;strong&gt;매번 손으로&lt;/strong&gt; 하면 번거롭다. &lt;em&gt;자주 쓰는 프롬프트&lt;/em&gt; 는 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;*
-&lt;em&gt;커스텀 커맨드&lt;/em&gt;*&lt;/a&gt;로 묶는다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;docs&lt;/code&gt; 디렉터리에 &lt;strong&gt;&lt;code&gt;update-roadmap.md&lt;/code&gt;&lt;/strong&gt; 생성 → &lt;em&gt;완료 작업 체크&lt;/em&gt; 커맨드 작성&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt; 를 컨텍스트로 추가 → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 요청&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;bypass permissions&lt;/code&gt;&lt;/a&gt; 모드로 커맨드 실행&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;이렇게 해두면 &lt;em&gt;&quot;로드맵 갱신해줘&quot;&lt;/em&gt; 한마디로 &lt;strong&gt;자동 정리&lt;/strong&gt; 된다.&lt;/p&gt;
-&lt;h3&gt;⭐ 꼭 — Git 커밋&lt;/h3&gt;
-&lt;p&gt;마지막으로 강사가 &lt;em&gt;가장 힘주어&lt;/em&gt; 당부하는 게 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Git으로 커밋을 하는 건 정말 중요해요.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이유는 분명하다. &lt;strong&gt;AI는 코드를 한꺼번에 많이 고친다.&lt;/strong&gt; 무엇이 어떻게 바뀌었는지 &lt;em&gt;사람이 일일이 따라잡기 어렵고&lt;/em&gt;, 그러다 &lt;em&gt;치명적인 상황&lt;/em&gt; 이 터질 수 있다. 그래서 &lt;strong&gt;기능 하나 완성 → 즉시 커밋&lt;/strong&gt; 을
-원칙으로
-삼는다. &lt;em&gt;되돌릴 지점&lt;/em&gt; 을 촘촘히 박아두는 것 — 이게 &lt;strong&gt;AI 시대의 안전벨트&lt;/strong&gt; 다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;UI/UX 전문가 서브 에이전트를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;단계&lt;/strong&gt; → &lt;em&gt;동적 기능 제외&lt;/em&gt; → &lt;strong&gt;마크업·스타일링&lt;/strong&gt; 만 (정적 화면 완성)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;ui-markup-specialist&lt;/code&gt;&lt;/strong&gt; → &lt;strong&gt;Next.js·TS·Tailwind·shadcn/ui&lt;/strong&gt; 전용 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%84%9C%EB%B8%8C-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8&quot;&gt;서브 에이전트&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;개선&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;MCP&lt;/a&gt;(Context7·Sequential Thinking) 추가 → &lt;strong&gt;프롬프트는 계속 고친다&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;자동화&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp&lt;/a&gt; &lt;strong&gt;Continuous Mode&lt;/strong&gt; 로 &lt;em&gt;8개 작업 연달아&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;점검&lt;/strong&gt; → 멈춘 듯 보이면 &lt;em&gt;당황 말고&lt;/em&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 하나씩 확인 → &lt;em&gt;빠진 건 메인에서&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;커맨드&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;&lt;code&gt;update-roadmap&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;로드맵 갱신&lt;/em&gt; 자동화&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;Git 커밋&lt;/strong&gt; → 기능 완성마다 &lt;em&gt;즉시 커밋&lt;/em&gt; → &lt;strong&gt;AI 시대의 안전벨트&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;뼈대에 &lt;em&gt;살이 붙어&lt;/em&gt; 화면이 제 모습을 갖췄다. &lt;em&gt;전문가에게 맡기고&lt;/em&gt; → &lt;strong&gt;반복은 커맨드로&lt;/strong&gt; → &lt;em&gt;지점마다 커밋&lt;/em&gt; — 이 리듬이 몸에 배면 개발 속도가 확 붙는다. 다음 챕터에서는 이 정적 화면에 &lt;strong&gt;실제
-데이터와 동적 기능&lt;/strong&gt; 을 불어넣어 보자.&lt;/p&gt;
-&lt;h2&gt;개발 워크플로우: UI/UX 개선하기&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-uiux-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;정적 화면&lt;/em&gt; 을 한 번에 찍어냈다. 그런데 &lt;em&gt;처음부터 완벽한 화면&lt;/em&gt; 이 나올 리 없다. 강사의 한마디가 모든 걸 요약한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;하지만 우리가 개발을 진행하다 보면 &lt;strong&gt;계획대로 되는 게 있나요?&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이번 챕터는 &lt;em&gt;예상 못 한 수정 요구&lt;/em&gt; 가 튀어나왔을 때, 그걸 &lt;strong&gt;워크플로우 안에서&lt;/strong&gt; 깔끔히 처리하는 법이다.&lt;/p&gt;
-&lt;h3&gt;왜 더미 데이터로 먼저 만드나&lt;/h3&gt;
-&lt;p&gt;가장 먼저 짚는 원칙. &lt;strong&gt;실제 데이터를 붙이기 전에&lt;/strong&gt;, &lt;em&gt;더미 데이터&lt;/em&gt; 로 UI/UX를 &lt;strong&gt;먼저 완성&lt;/strong&gt; 한다. 이유가 분명하다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[더미 데이터로 UI 완성]  → 디자인 수정이 쉽다 (마크업만 손보면 끝)
-        ↓ 그 다음
-[실제 DB 연동]           → 이제 수정은 코드 전체를 건드린다&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;데이터를 연동한 뒤&lt;/em&gt; 디자인을 고치면, &lt;strong&gt;단순 UI 수정&lt;/strong&gt; 이 아니라 &lt;em&gt;비즈니스 로직까지 얽힌&lt;/em&gt; 복잡한 코드 변경이 된다. 그러니 &lt;strong&gt;모양부터 확정&lt;/strong&gt; 하고, &lt;em&gt;데이터는 나중에&lt;/em&gt; 붙이는 게 영리하다.&lt;/p&gt;
-&lt;h3&gt;핵심 기법 — 스크린샷을 첨부하라&lt;/h3&gt;
-&lt;p&gt;UI를 고칠 때 &lt;em&gt;말로만&lt;/em&gt; 설명하면 잘 안 먹힌다. &lt;strong&gt;스크린샷을 붙여서&lt;/strong&gt; 요청하는 게 훨씬 효과적이다. 이건 &lt;em&gt;사람이 디자인하는 방식&lt;/em&gt; 그대로다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;맨 처음에 &lt;strong&gt;초안&lt;/strong&gt; 을 작성하고, &lt;em&gt;마음에 들지 않는 부분&lt;/em&gt; 은 개선을 하고 &lt;em&gt;마음에 드는 부분&lt;/em&gt; 은 &lt;strong&gt;점진적으로 발전&lt;/strong&gt; 해가면서 지속적으로 디자인을 발전해가죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0&quot;&gt;Anthropic 공식 문서&lt;/a&gt;에서도 &lt;strong&gt;권장하는 방법&lt;/strong&gt; 이다. &lt;em&gt;현재 화면을 캡처&lt;/em&gt; → &lt;em&gt;&quot;이 부분을 이렇게 고쳐줘&quot;&lt;/em&gt; → &lt;strong&gt;반복&lt;/strong&gt;. 이 시각적 피드백
-루프를 돌릴수록 클로드의 출력은 &lt;strong&gt;눈에 띄게 좋아진다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[스크린샷 첨부] → [수정 요청] → [결과 확인] → 다시 [스크린샷]
-        ↑________________________________________│&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;갑작스러운 요구는 — &lt;code&gt;plan_task&lt;/code&gt; 로&lt;/h3&gt;
-&lt;p&gt;로드맵을 따라가던 중 &lt;em&gt;&quot;컨테이너 폭을 맞춰줘&quot;&lt;/em&gt;, &lt;em&gt;&quot;간격을 조절해줘&quot;&lt;/em&gt; 같은 &lt;strong&gt;예상 못 한 요구&lt;/strong&gt; 가 생긴다. 그럴 땐 &lt;em&gt;즉흥적으로&lt;/em&gt; 손대지
-말고, &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;의 &lt;strong&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;새 작업 계획&lt;/em&gt; 을 세운다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/strong&gt; → 요구사항을 &lt;strong&gt;세부 작업으로 분리&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;strong&gt;&lt;code&gt;list_tasks&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; → &lt;em&gt;진행 중·대기 중&lt;/em&gt; 작업 상태 확인&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;순차 진행&lt;/em&gt; 요청 → UI 개선 완료&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;갑자기 끼어든 일&lt;/em&gt; 도 &lt;strong&gt;계획 → 분리 → 순차 실행&lt;/strong&gt; 이라는 &lt;em&gt;같은 리듬&lt;/em&gt; 으로 처리한다는 게 핵심이다.&lt;/p&gt;
-&lt;h3&gt;Playwright MCP — 클로드가 스스로 화면을 본다&lt;/h3&gt;
-&lt;p&gt;구체적인 수정도 보여준다. &lt;em&gt;견적서 상세 페이지&lt;/em&gt; 의 &lt;strong&gt;섹션 너비를 일관되게&lt;/strong&gt; 맞추는 작업이다. 물론 직접 고쳐도 된다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;개발 경험이 있으신 분들은 이러한 걸 &lt;em&gt;굳이 AI에게 요청을 하지 않고&lt;/em&gt; 바로 이런 &lt;strong&gt;코드를 수정&lt;/strong&gt; 할 수 있겠죠.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;하지만 여기선 &lt;em&gt;클로드를 최대한 활용&lt;/em&gt; 한다. &lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP 서버&lt;/a&gt;&lt;/strong&gt; 를 붙이면 — 클로드가 &lt;em&gt;직접 화면을 띄워 확인&lt;/em&gt; 하고, &lt;strong&gt;스스로 수정 계획&lt;/strong&gt;
-을 세운다. &lt;em&gt;사람이 일일이 스크린샷을 찍어 주지 않아도&lt;/em&gt;, 클로드가 &lt;strong&gt;눈을 갖는&lt;/strong&gt; 셈이다. &lt;code&gt;plan_task&lt;/code&gt; 와 함께 돌리면 &lt;em&gt;일관된 UI&lt;/em&gt; 가 나온다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;UI/UX 개선 워크플로우를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;순서&lt;/strong&gt; → &lt;strong&gt;더미 데이터로 UI 먼저&lt;/strong&gt; → &lt;em&gt;그다음&lt;/em&gt; 실제 DB 연동 (수정 비용 ↓)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;핵심 기법&lt;/strong&gt; → &lt;strong&gt;스크린샷 첨부&lt;/strong&gt; → &lt;em&gt;초안 → 개선 → 반복&lt;/em&gt; (&lt;a href=&quot;/claude-code-%EB%AA%A8%EB%8D%98-%EA%B8%B0%EC%88%A0%EC%8A%A4%ED%83%9D%EA%B3%BC-%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0&quot;&gt;Anthropic 권장&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;갑작스러운 요구&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;세부 작업 분리&lt;/em&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;
-&lt;code&gt;list_tasks&lt;/code&gt;&lt;/a&gt; → 순차 진행&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;자동 확인&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;strong&gt;Playwright MCP&lt;/strong&gt;&lt;/a&gt; → 클로드가 &lt;em&gt;스스로 화면 보고&lt;/em&gt; 수정 계획&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;마인드셋&lt;/strong&gt; → &lt;em&gt;계획대로 안 되는 게 정상&lt;/em&gt; → &lt;strong&gt;워크플로우로&lt;/strong&gt; 흡수&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;디자인은 &lt;em&gt;한 방&lt;/em&gt; 이 아니라 &lt;strong&gt;반복&lt;/strong&gt; 이다. &lt;em&gt;더미로 먼저 모양을 잡고&lt;/em&gt; → &lt;em&gt;스크린샷으로 다듬고&lt;/em&gt; → &lt;em&gt;갑작스러운 요구는 &lt;code&gt;plan_task&lt;/code&gt; 로&lt;/em&gt; — 이 흐름이면 &lt;strong&gt;계획이 흔들려도&lt;/strong&gt; 개발은 흔들리지
-않는다. 다음 챕터에서는 이 완성된 화면에 &lt;strong&gt;실제 Notion 데이터&lt;/strong&gt; 를 흘려보내 보자.&lt;/p&gt;
-&lt;h2&gt;핵심 기능 구현하기&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0-uiux-%EA%B0%9C%EC%84%A0%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt;까지 &lt;em&gt;화면&lt;/em&gt; 은 다 만들었다. 하지만 아직 &lt;strong&gt;더미 데이터&lt;/strong&gt; 가 박혀 있는 &lt;em&gt;껍데기&lt;/em&gt; 다. 이제 &lt;strong&gt;진짜 알맹이&lt;/strong&gt; 를 채울 차례다 — &lt;em&gt;실제 Notion 데이터를
-흘려보내고&lt;/em&gt;,
-&lt;strong&gt;PDF로 내려받는&lt;/strong&gt; 핵심 기능이다.&lt;/p&gt;
-&lt;h3&gt;작게 쪼개라 — AI에겐 낮은 복잡도를&lt;/h3&gt;
-&lt;p&gt;기능 구현도 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;계획부터&lt;/em&gt; 세운다. 그룹 단위로 묶어도 되고, 개별 태스크로 잘게 나눠도 된다. 강사의 원칙은 &lt;em&gt;일관&lt;/em&gt; 된다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;AI에게 &lt;strong&gt;최대한 낮은 복잡도&lt;/strong&gt; 를 위임하는 편이에요. 그래야 &lt;em&gt;오류 없이 정확히&lt;/em&gt; 구현을 하더라고요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;큰 덩어리&lt;/em&gt; 를 한 번에 던지면 클로드가 &lt;em&gt;헤맨다.&lt;/em&gt; &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt;를 참조해 &lt;strong&gt;&lt;code&gt;ultrathink&lt;/code&gt;&lt;/strong&gt; 로 작업을 &lt;em&gt;작게 쪼개&lt;/em&gt;
-두면 — 오류가 확 줄어든다. 이번 단계는 &lt;em&gt;두 갈래&lt;/em&gt; 로 나뉜다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[트랙 A] Notion API 연동 → 실제 견적서 표시
-[트랙 B] PDF 생성        → 다운로드 기능&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;트랙 A — Notion 데이터를 화면에&lt;/h3&gt;
-&lt;p&gt;첫 번째 갈래는 &lt;em&gt;더미 대신 진짜 데이터&lt;/em&gt; 를 붙이는 일이다. 여기서 &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;앞서 만든 &lt;strong&gt;Notion 연동 전문 서브 에이전트&lt;/strong&gt;&lt;/a&gt;가 다시 등판한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Notion 데이터베이스 정보&lt;/strong&gt; + &lt;strong&gt;CSV 파일&lt;/strong&gt; 을 컨텍스트로 추가&lt;/li&gt;
-&lt;li&gt;에이전트가 &lt;em&gt;CSV를 분석&lt;/em&gt; → &lt;strong&gt;Notion API 통합&lt;/strong&gt; 구현&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;브라우저 테스트&lt;/strong&gt; 로 결과 확인&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;결과물은 두 가지다. &lt;em&gt;Notion 데이터를 웹 데이터로&lt;/em&gt; &lt;strong&gt;변환하는 유틸리티&lt;/strong&gt;, 그리고 그걸 &lt;em&gt;페이지에 뿌리는&lt;/em&gt; 코드. &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;전문가에게 컨텍스트를 충분히 먹이는&lt;/a&gt; 그 패턴 그대로다.&lt;/p&gt;
-&lt;h3&gt;트랙 B — PDF 다운로드&lt;/h3&gt;
-&lt;p&gt;두 번째 갈래는 &lt;em&gt;PDF 생성 패키지&lt;/em&gt; 를 깔아 &lt;strong&gt;다운로드 기능&lt;/strong&gt; 을 붙이는 일이다. 진행하다 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;토큰&lt;/a&gt;이 꽉 차면 &lt;strong&gt;&lt;code&gt;/clear&lt;/code&gt;&lt;/strong&gt; 로 컨텍스트를 비우고, *
-&lt;em&gt;&lt;code&gt;execute_task&lt;/code&gt;&lt;/em&gt;* 로 이어간다.&lt;/p&gt;
-&lt;p&gt;그런데 이 챕터의 &lt;em&gt;진짜 알맹이&lt;/em&gt; 는 따로 있다. 강사가 &lt;em&gt;수없이 데인 끝에&lt;/em&gt; 찾은 &lt;strong&gt;오류를 줄이는 두 가지 룰&lt;/strong&gt; 이다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이전에 제가 AI를 활용했을 때는 &lt;em&gt;&quot;어떠어떠한 걸 구현해줘&quot;&lt;/em&gt; 한 다음에 테스트를 했을 때 &lt;strong&gt;오류가 정말 많았거든요.&lt;/strong&gt; 그런데 &lt;em&gt;두 가지를 추가&lt;/em&gt; 하고 나서 &lt;strong&gt;오류가 정말 줄어들었어요.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;⭐ 룰 ① — Playwright로 스스로 테스트하게&lt;/h3&gt;
-&lt;p&gt;첫 번째. 비즈니스 로직을 구현한 뒤, &lt;strong&gt;&lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt; 통합 테스트&lt;/strong&gt; 프롬프트를 &lt;em&gt;붙인다.&lt;/em&gt; 그러면 클로드가 &lt;em&gt;직접 화면을 띄워&lt;/em&gt; 테스트하고, *
-&lt;em&gt;버그까지 스스로 잡는다.&lt;/em&gt;* 사람이 &lt;em&gt;일일이 눌러보며&lt;/em&gt; 확인할 필요가 없어진다.&lt;/p&gt;
-&lt;h3&gt;⭐ 룰 ② — 린트·타입·빌드 체크리스트&lt;/h3&gt;
-&lt;p&gt;두 번째. &lt;strong&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/strong&gt; 의 &lt;em&gt;린트 체크 + 타입 체크&lt;/em&gt; 를 구현 직후 돌리게 한다 — 심지어 &lt;strong&gt;빌드까지.&lt;/strong&gt; 자주 쓰는 명령어는 &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;
-&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;에 적어두고, &lt;strong&gt;&lt;code&gt;check-all&lt;/code&gt;&lt;/strong&gt; 과 &lt;strong&gt;&lt;code&gt;npm run build&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;클로드가 제 손으로&lt;/em&gt; 오류를 검출하게 만든다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그리고 저는 이러한 룰이 &lt;strong&gt;Playwright MCP보다 더 강력&lt;/strong&gt; 하다고 느꼈어요. 특히 &lt;strong&gt;작업 완료 체크리스트&lt;/strong&gt;, 이걸 추가하고 나서 &lt;em&gt;정말 많이 오류가 줄었습니다.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;핵심은 &lt;strong&gt;&quot;구현 → 자가 검증&quot;을 한 묶음으로&lt;/strong&gt; 만드는 것이다. &lt;em&gt;코드를 짜고 끝&lt;/em&gt; 이 아니라, &lt;strong&gt;테스트·린트·타입·빌드를 통과해야 완료&lt;/strong&gt; — 이 체크리스트가 &lt;em&gt;버그를 입구에서&lt;/em&gt; 막는다.&lt;/p&gt;
-&lt;h3&gt;마무리 — 통합 테스트 · 로드맵 · 커밋&lt;/h3&gt;
-&lt;p&gt;두 트랙이 끝나면 &lt;strong&gt;통합 테스트&lt;/strong&gt; 로 마무리한다. &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;list-task&lt;/code&gt;&lt;/a&gt;로 &lt;em&gt;남은 작업&lt;/em&gt; 을 확인하고, 마지막 통합 태스크를
-&lt;code&gt;execute-task&lt;/code&gt; 로 처리한다. 그다음 &lt;em&gt;루틴&lt;/em&gt; 대로다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;/compact&lt;/code&gt;&lt;/strong&gt; 로 컨텍스트 정리&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;&lt;strong&gt;&lt;code&gt;update-roadmap&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;으로 &lt;em&gt;완료 반영&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git 커밋&lt;/strong&gt; 으로 &lt;em&gt;지점 저장&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;로드맵을 보면 &lt;strong&gt;핵심 기능까지 완료&lt;/strong&gt; — 이제 &lt;em&gt;성능 최적화·보안·에러 처리·테스트·배포&lt;/em&gt; 만 남았다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;핵심 기능 구현을 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;계획&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B6%8C%ED%95%9C&quot;&gt;&lt;code&gt;Plan mode&lt;/code&gt;&lt;/a&gt;·&lt;code&gt;ultrathink&lt;/code&gt;로 &lt;strong&gt;잘게 쪼개기&lt;/strong&gt; → &lt;em&gt;AI엔 낮은 복잡도&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;트랙 A&lt;/strong&gt; → &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;Notion 연동 서브 에이전트&lt;/a&gt; + &lt;em&gt;DB 정보·CSV&lt;/em&gt; → &lt;strong&gt;실제 견적서 표시&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;트랙 B&lt;/strong&gt; → PDF 패키지 → &lt;strong&gt;다운로드 기능&lt;/strong&gt; (토큰 차면 &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;/clear&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;룰 ①&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt; → &lt;em&gt;스스로 테스트·버그 수정&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;룰 ②&lt;/strong&gt; → &lt;a href=&quot;/claude-code-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC&quot;&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/a&gt;에 &lt;code&gt;check-all&lt;/code&gt;·&lt;code&gt;npm run build&lt;/code&gt; → &lt;strong&gt;린트·타입·빌드 자가 검증&lt;/strong&gt; (강사 왈,
-&lt;em&gt;Playwright보다 강력&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;마무리&lt;/strong&gt; → 통합 테스트 → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;code&gt;/compact&lt;/code&gt;&lt;/a&gt; → &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;&lt;code&gt;update-roadmap&lt;/code&gt;&lt;/a&gt; → &lt;strong&gt;커밋&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;AI에게 &lt;em&gt;코드를 맡길 때&lt;/em&gt; 가장 무서운 건 &lt;strong&gt;소리 없는 버그&lt;/strong&gt; 다. 그래서 &lt;em&gt;작게 쪼개&lt;/em&gt; 시키고, &lt;strong&gt;테스트·체크리스트로 스스로 검증&lt;/strong&gt; 하게 만드는 것 — 이 두 룰이 &lt;em&gt;MVP의 완성도&lt;/em&gt; 를 가른다. 다음
-챕터에서는 &lt;strong&gt;관리자 기능&lt;/strong&gt; 을 붙이고 &lt;em&gt;실제 배포&lt;/em&gt; 까지 달려보자.&lt;/p&gt;
-&lt;h2&gt;핵심 기능 구현 및 배포하기&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;앞 챕터&lt;/a&gt;에서 &lt;em&gt;Notion 데이터&lt;/em&gt; 와 &lt;em&gt;PDF&lt;/em&gt; 라는 알맹이를 채웠다. 드디어 로드맵의 &lt;strong&gt;마지막 칸&lt;/strong&gt; — &lt;em&gt;최적화&lt;/em&gt; 와 &lt;strong&gt;배포&lt;/strong&gt; 다. 만든 걸 &lt;em&gt;내 컴퓨터 안&lt;/em&gt; 에만 두면 의미가
-없다. 이제 &lt;strong&gt;세상에 내보낼&lt;/strong&gt; 차례다.&lt;/p&gt;
-&lt;h3&gt;마지막도 — 계획부터&lt;/h3&gt;
-&lt;p&gt;흐름은 &lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;지금까지&lt;/a&gt;와 똑같다. &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt;를 컨텍스트로
-넣고 &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;Shrimp Task Manager&lt;/a&gt;의 &lt;strong&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/strong&gt; 로 &lt;em&gt;최적화·배포&lt;/em&gt; 작업을 잡는다. 그리고 &lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EA%B0%9C%EB%B0%9C-%EC%A0%84%EB%AC%B8%EA%B0%80&quot;&gt;
-&lt;code&gt;nextjs-app-developer&lt;/code&gt; 서브 에이전트&lt;/a&gt;로 &lt;strong&gt;&lt;code&gt;execute_task&lt;/code&gt;&lt;/strong&gt; 를 돌린다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그러면 &lt;em&gt;권장되는 실행 순서&lt;/em&gt; 대로 &lt;strong&gt;Task 1, 4, 5번&lt;/strong&gt; 을 먼저 구현하도록 할게요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;번호 순서대로&lt;/em&gt; 가 아니라 — &lt;strong&gt;의존 관계가 권장하는 순서&lt;/strong&gt; 대로 따라가는 게 포인트다.&lt;/p&gt;
-&lt;h3&gt;핵심 최적화 — 서비스를 &apos;운영&apos; 가능하게&lt;/h3&gt;
-&lt;p&gt;연습용 화면과 &lt;em&gt;진짜 서비스&lt;/em&gt; 의 차이는 여기서 갈린다. 강사가 붙이는 &lt;strong&gt;최적화 항목&lt;/strong&gt; 들을 보자.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;항목&lt;/th&gt;
-&lt;th&gt;왜 필요한가&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;캐싱(Caching)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;60초간 데이터 재사용&lt;/em&gt; → &lt;strong&gt;Notion API 호출&lt;/strong&gt; 을 줄여 성능 ↑&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Rate Limiting&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;1분당 호출 제한&lt;/em&gt; → &lt;strong&gt;서버 과부하·DDoS&lt;/strong&gt; 방어, 공평한 서비스&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;로깅(Logging)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;모든 활동·에러 기록&lt;/em&gt; → &lt;strong&gt;문제 터졌을 때&lt;/strong&gt; 원인 추적&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;폰트 최적화&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;불필요한 로딩&lt;/em&gt; 제거 → 초기 화면 빠르게&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Suspense 점진 렌더링&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;비동기 로딩 중&lt;/em&gt; UI 표시 → &lt;strong&gt;체감 속도&lt;/strong&gt; 개선&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;em&gt;기능이 도는 것&lt;/em&gt; 과 &lt;em&gt;서비스로 버티는 것&lt;/em&gt; 은 다르다. 이 항목들이 &lt;strong&gt;MVP를 운영 가능한 제품&lt;/strong&gt; 으로 끌어올린다.&lt;/p&gt;
-&lt;h3&gt;통합 테스트 — 배포 전 마지막 관문&lt;/h3&gt;
-&lt;p&gt;배포 직전, &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;&lt;strong&gt;Playwright MCP&lt;/strong&gt;&lt;/a&gt;로 &lt;em&gt;통합 테스트&lt;/em&gt; 를 돌린다. &lt;em&gt;견적서 조회 시나리오&lt;/em&gt; 를 짜서 &lt;strong&gt;브라우저에서 직접&lt;/strong&gt; 테스트하고, &lt;strong&gt;PDF
-다운로드·오류 페이지&lt;/strong&gt; 까지 점검한다. &lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot;&gt;클로드가 제 손으로 화면을 눌러보며 검증&lt;/a&gt;하니, 사람은 &lt;em&gt;결과만&lt;/em&gt; 확인하면 된다.&lt;/p&gt;
-&lt;h3&gt;Vercel 배포 — 세상에 내보내기&lt;/h3&gt;
-&lt;p&gt;이제 &lt;strong&gt;Vercel&lt;/strong&gt; 에 올린다. 흐름은 이렇다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;GitHub에 소스 푸시&lt;/strong&gt; (&lt;code&gt;execute_task&lt;/code&gt; 가 처리)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vercel.com&quot;&gt;vercel.com&lt;/a&gt; 로그인 → &lt;strong&gt;[Add New]&lt;/strong&gt; → &lt;em&gt;현재 프로젝트&lt;/em&gt; 임포트&lt;/li&gt;
-&lt;li&gt;⭐ &lt;strong&gt;환경 변수 설정&lt;/strong&gt; — &lt;code&gt;.env.local&lt;/code&gt; 의 &lt;em&gt;API 통합 키·Database ID&lt;/em&gt; 를 그대로 등록 + &lt;strong&gt;&lt;code&gt;NODE_ENV=production&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Deploy]&lt;/strong&gt; 클릭 → 빌드·배포&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 &lt;strong&gt;환경 변수를 잊지 말 것.&lt;/strong&gt; &lt;a href=&quot;#notion-api-%ED%82%A4-%EB%B0%8F-database-id-%EC%84%A4%EC%A0%95&quot;&gt;&lt;code&gt;.env.local&lt;/code&gt;&lt;/a&gt;은 &lt;em&gt;내 컴퓨터에만&lt;/em&gt; 있는 파일이라, &lt;strong&gt;깃에 올라가지 않는다.&lt;/strong&gt; Vercel에 *따로&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;등록* 하지 않으면 — 배포본은 &lt;em&gt;키도 ID도 없이&lt;/em&gt; 텅 빈 채 돌아 &lt;strong&gt;접근 오류&lt;/strong&gt; 가 난다. (&lt;em&gt;많은 분들이 여기서 막힌다.&lt;/em&gt;)&lt;/p&gt;
-&lt;h3&gt;빌드가 실패하면 — 로그를 클로드에게&lt;/h3&gt;
-&lt;p&gt;배포가 &lt;em&gt;한 번에&lt;/em&gt; 될 거란 보장은 없다. 빌드가 &lt;strong&gt;fail&lt;/strong&gt; 나도 당황할 필요 없다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;빌드가 fail이 발생한다면 &lt;strong&gt;에러 로그를 복사&lt;/strong&gt; 해서 &lt;em&gt;Claude Code에게&lt;/em&gt; 해결해 달라고 하면 될 거예요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;LLM은 확률적&lt;/a&gt;이라 &lt;em&gt;이슈는 자연스러운 현상&lt;/em&gt; 이다. 중요한 건 &lt;em&gt;해결하는 방식&lt;/em&gt; — &lt;strong&gt;에러 로그라는 컨텍스트&lt;/strong&gt; 를 그대로 던지면, 클로드가 &lt;em&gt;원인을 짚어&lt;/em&gt;
-고쳐준다. 이게 이 강의가 처음부터 강조해온 &lt;strong&gt;컨텍스트 기반 디버깅&lt;/strong&gt; 이다.&lt;/p&gt;
-&lt;h3&gt;정리하며&lt;/h3&gt;
-&lt;p&gt;핵심 기능 구현과 배포를 정리하면 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;계획&lt;/strong&gt; → &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt; + &lt;a href=&quot;/claude-code-shrimp-task-manager-%EB%8F%84%EC%9E%85&quot;&gt;&lt;code&gt;plan_task&lt;/code&gt;&lt;/a&gt; →
-&lt;em&gt;권장 순서&lt;/em&gt; 대로 &lt;code&gt;execute_task&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;최적화&lt;/strong&gt; → &lt;strong&gt;캐싱·Rate Limiting·로깅·폰트·Suspense&lt;/strong&gt; → &lt;em&gt;운영 가능한&lt;/em&gt; 제품으로&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;통합 테스트&lt;/strong&gt; → &lt;a href=&quot;/claude-code-mcp-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98&quot;&gt;Playwright MCP&lt;/a&gt;로 &lt;em&gt;조회·PDF·오류&lt;/em&gt; 까지 점검&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vercel&lt;/strong&gt; → GitHub 푸시 → 임포트 → ⭐ &lt;strong&gt;환경 변수&lt;/strong&gt;(+&lt;code&gt;NODE_ENV&lt;/code&gt;) → Deploy&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;빌드 실패&lt;/strong&gt; → &lt;em&gt;당황 말고&lt;/em&gt; → &lt;strong&gt;에러 로그를 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%ED%9B%85&quot;&gt;클로드에게&lt;/a&gt;&lt;/strong&gt; → 컨텍스트 기반 해결&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;배포된 링크로 들어가 &lt;em&gt;견적서가 뜨고&lt;/em&gt; &lt;strong&gt;PDF가 내려받아지면&lt;/strong&gt; — &lt;strong&gt;Notion 기반 견적서 웹&lt;/strong&gt; 이 완성된 것이다. 마지막으로 &lt;a href=&quot;/claude-code-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%A0%EA%B8%89-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%BB%A4%EB%A7%A8%EB%93%9C&quot;&gt;로드맵 갱신&lt;/a&gt;과 *
-&lt;em&gt;Git 커밋&lt;/em&gt;* 까지 마치면 끝. 돌이켜보면 이 프로젝트의 진짜 수확은 &lt;em&gt;견적서 웹&lt;/em&gt; 이 아니라 — &lt;a href=&quot;/claude-code-notion-%EA%B8%B0%EB%B0%98-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B2%AC%EC%A0%81%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;**계획 → 전문가 위임 → 자가 검증 → 배포
-**&lt;/a&gt;로 이어지는 &lt;strong&gt;Claude Code AI 워크플로우&lt;/strong&gt; 그 자체다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 변수와 타입, 연산자를 다루는 방법]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%B0%A9%EB%B2%95/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-변수와-타입-연산자를-다루는-방법/</guid><pubDate>Sat, 11 Apr 2026 16:42:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+다음 프로젝트가 무엇이든 &lt;em&gt;같은 손놀림&lt;/em&gt; 으로 만들어낼 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 변수와 타입, 연산자를 다루는 방법]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%B0%A9%EB%B2%95/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-변수와-타입-연산자를-다루는-방법/</guid><pubDate>Sat, 11 Apr 2026 16:42:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
