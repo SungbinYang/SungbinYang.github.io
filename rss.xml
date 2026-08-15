@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 15 Aug 2026 06:11:16 GMT</lastBuildDate><item><title><![CDATA[Claws Layer 경험하기]]></title><description><![CDATA[해당 포스팅은
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sungbin's Blog RSS Feed]]></title><description><![CDATA[양성빈의 블로그]]></description><link>https://sungbin.kr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 15 Aug 2026 06:56:38 GMT</lastBuildDate><item><title><![CDATA[마치며]]></title><description><![CDATA[해당 포스팅은
+인프런의 맥북 처음 샀을 때 꼭 해야 할 세팅 A to Z (Claude Code · Homebrew · Agentic Coding 포함 | macOS 올인원)를
+참조하여
+만들었습니다.  ⛏️ AI…]]></description><link>https://sungbin.kr/%EA%B0%95%EC%9D%98%EB%A5%BC-%EB%A7%88%EC%B9%98%EB%A9%B0/</link><guid isPermaLink="false">https://sungbin.kr/강의를-마치며/</guid><pubDate>Sat, 15 Aug 2026 15:55:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;해당 포스팅은
+인프런의 &lt;a href=&quot;https://inf.run/ijAW9&quot;&gt;맥북 처음 샀을 때 꼭 해야 할 세팅 A to Z (Claude Code · Homebrew · Agentic Coding 포함 | macOS 올인원)&lt;/a&gt;를
+참조하여
+만들었습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR42o1S3ytDcRTfizIbw/X715NWS9Ii5MfMXDbZ0ooJoRAPpORBUR55EEpJLUkSSS1aeeDBgyf/yf21qzX3ztvHufcuKzP28Ol8z/nW55zz+RwTz5YgA4OlBrLl7M88DVNGcaAYXG8+wQzeUwS+n+Ayg+uhWr+VUAiur4BgyYGQyARfBeT1EchrXggj1RACdZBXPHjfDEIYbYDgr0VsoROx+U5qaPuDUFuBJhIC9VAjp0g+30K5PYZ6H0bidBvJlwjUx0sodyf4fI1CeTgDT821IXQJ/pqQ99VADDZCmu+AONkEaboF4lQzpNRbmnVSvRm8tzxFmG1lbUrSRgw5IM21QxiuothKTSr1RuKY3dD0eyPbPxoOlYHrzkPiYhefb0943wohvrcE5foQH1f7FA+g3BxBjZ4jEd4B5yrIcPtXl6W5NjJlCOKEA+K4HfKGH9KME7HFLt2w+N4y5FXWcPpfQgLnthrd6UR41jgjzTCjbtb/OLclxzvU9WFofSZ90CSFERnjrefMr4RfN4TasyQgUvoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;banner&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2af117e1e6f792cc0a8dd76b39ef0da4/8c557/banner.png&quot;
+        srcset=&quot;/static/2af117e1e6f792cc0a8dd76b39ef0da4/6f3f2/banner.png 256w,
+/static/2af117e1e6f792cc0a8dd76b39ef0da4/01e7c/banner.png 512w,
+/static/2af117e1e6f792cc0a8dd76b39ef0da4/8c557/banner.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;⛏️ AI 시대, 도구보다 원리를 파세요.&lt;/h2&gt;
+&lt;p&gt;드디어 강의의 마지막 섹션이다. 이번 챕터는 강사님이 &lt;em&gt;후배나 자녀에게도 꼭 해주고 싶은 이야기&lt;/em&gt; 라며 꺼낸 주제이다. 화려한 도구나 최신 모델을 따라가기보다, &lt;strong&gt;작동 원리와 권한 경계를 파고드는 습관&lt;/strong&gt; 이 왜
+중요한지에 대한 이야기다.&lt;/p&gt;
+&lt;h3&gt;유행어보다 원리, 그리고 권한 경계&lt;/h3&gt;
+&lt;p&gt;LLM이 등장한 이후로 JSON, Function Calling, MCP, Agent, Claude… 새로운 개념들이 쉴 새 없이 쏟아졌다. 강사님은 이 흐름을 &lt;em&gt;&quot;응용의 응용의 응용, 메모리가 늘어나는 수준의
+진화&quot;&lt;/em&gt; 라고 표현한다.&lt;/p&gt;
+&lt;p&gt;우리는 유튜브 등에서 &quot;이게 좋다더라&quot;, &quot;저 모델이 최고라더라&quot; 하는 말에 쉽게 현혹된다. 하지만 정말 중요한 것은 따로 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;유행어를 외우는 것보다, &lt;strong&gt;어떻게 동작하는지 원리를 생각해보고, 권한 경계를 읽는 습관&lt;/strong&gt; 을 들이는 것이 훨씬 중요하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;프로그래밍은 운영체제, 웹 서버, 데이터베이스 등 수많은 프로그램과 부딪히며 돌아간다. 그 사이에는 늘 &lt;em&gt;경계&lt;/em&gt; 가 존재한다. 특히 AI 시대에는 보안, AI의 환각 (Hallucination), 잘못된 리턴 값으로
+인한 서비스 사고 같은 새로운 리스크와 싸워야 한다. 이걸 읽어내려면 결국 원리를 알아야 한다.&lt;/p&gt;
+&lt;h3&gt;기술은 어떻게 발전해왔나&lt;/h3&gt;
+&lt;p&gt;강사님은 LLM 이후의 발전 과정을 단계별로 짚어준다. 각 단계가 사실은 &lt;em&gt;앞 단계의 확장&lt;/em&gt; 이라는 점이 핵심이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JSON&lt;/strong&gt; — LLM에게 구조화된 답변을 받기 위한 출발점이다. JSON (JavaScript Object Notation)은 문자열 덩어리를 객체로 다룰 수 있게 해주는 규격이다. &quot;예제를 하나 주면
+그만큼 돌려받는&quot; One-shot, Multi-shot prompting이 여기서 시작됐다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Function Calling&lt;/strong&gt; — LLM이 특정 함수 (툴)를 호출하게 만드는 기능이다. 코드 자동화의 신호탄이었다. 여기서 중요한 건 &lt;em&gt;함수 이름&lt;/em&gt; 이 아니라 &lt;strong&gt;입력과 출력의 계약 (프로토콜)&lt;/strong&gt;
+이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP (Model Context Protocol)&lt;/strong&gt; — Function Calling의 확장으로, 모델과 외부 도구·리소스를 연결한다. 핵심은 스키마, 실행 가능 범위, 그리고 &lt;em&gt;제한된 실행 (
+bounded execution)&lt;/em&gt; 이다. 사실 이것도 결국은 JSON 덩어리이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent&lt;/strong&gt; — LLM을 &lt;em&gt;현실 세계에 녹여내는&lt;/em&gt; 단계이다. 목표를 받으면 도구를 골라 실행하고, 실패하면 오류 메시지를 보고 고쳐가며, &lt;strong&gt;될 때까지 끈질기게 반복&lt;/strong&gt; 한다. 이 반복 (루프)이 에이전트의
+본질이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent Orchestration&lt;/strong&gt; — 여러 에이전트를 조율하는 단계로, CloudBot → OpenClaw 등으로 이름을 바꿔온 그 계층이다. 목표, 상태, 액션 레지스트리, Executor, State
+Manager, 환경 어댑터 (Environmental Adapter) 같은 부품으로 조립된 &lt;em&gt;런타임&lt;/em&gt; 이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;핵심은 이것이다. MCP나 Function Calling 시절에 이미 에이전트 자동화는 가능했고, 그것을 IDE에 넣은 것이 Agentic Coding, Claude Code일 뿐이다. &lt;strong&gt;원리를 아는
+사람은 새로운 도구가 나와도 &quot;아, 이건 그거의 확장이구나&quot; 하고 금방 흡수한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;용어에 겁먹지 말자: Skills, Memory, Context Window&lt;/h3&gt;
+&lt;p&gt;Skills, Memory, Context Window 같은 용어들도 어렵게 느껴지지만, 본질을 알면 무섭지 않다. 이 모든 것은 결국 &lt;em&gt;확률적으로 정답에 가까운 문자를 뱉는 앵무새 (LLM)&lt;/em&gt; 위에 올라간 장치일
+뿐이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Context Window&lt;/strong&gt; : LLM이 한 번에 처리할 수 있는 입력·출력 토큰의 양이다. 정해져 있고 한정적이라, 결국 &lt;em&gt;덧붙여 보내는 것&lt;/em&gt; 밖에 안 된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory&lt;/strong&gt; : 이 Context Window의 한계를 보완하려는 장치다. 기억이 넘치면 파일로 남겨두고 참고하게 만드는 식이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skills&lt;/strong&gt; : 반복 가능한 워크플로우, 재사용 가능한 프롬프트 계층을 만들어주는 구체적인 지시이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;즉, 이 용어들은 전부 &lt;strong&gt;LLM의 제약을 우회하거나 보완하려는 장치&lt;/strong&gt; 이다. 이걸 이해하면 토큰 비용을 줄일지, 출력 품질을 높일지, 보안을 챙길지 같은 &lt;em&gt;트레이드오프&lt;/em&gt; 를 스스로 판단할 수 있게 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;근본을 모르는 자동화는 위험하다&lt;/h3&gt;
+&lt;p&gt;원리를 모른 채 자동화를 덜컥 설치하면 정말 위험하다. 강사님이 경고하는 대표적인 AI 리스크들이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;과도한 권한 부여&lt;/li&gt;
+&lt;li&gt;비밀번호, 토큰, SSH 키 노출&lt;/li&gt;
+&lt;li&gt;의도치 않은 실행 (잘못된 메시지 발송, DB 삭제 등)&lt;/li&gt;
+&lt;li&gt;검토 없는 자동 커밋&lt;/li&gt;
+&lt;li&gt;샌드박스 없는 로컬 실행으로 인한 파일 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이것은 단순히 윤리적인 문제가 아니라, &lt;strong&gt;실행 구조를 모르면 실제로 서비스에 사고가 날 수 있다&lt;/strong&gt; 는 현실적인 경고이다.&lt;/p&gt;
+&lt;p&gt;그리고 한 가지 더. 강사님은 &lt;em&gt;&quot;LLM 전문가는 없다&quot;&lt;/em&gt; 고 단언한다. 모두가 공통의 출발선에서 시작했기 때문이다. 그러니 권위에 맹목적으로 휘둘리지 말고, &lt;strong&gt;구조를 설명할 수 있는 사람, 실패 사례를 공유하는
+사람, 재현 가능한 결과를 보여주는 사람&lt;/strong&gt; 의 말에 귀를 기울이자.&lt;/p&gt;
+&lt;h3&gt;마치며&lt;/h3&gt;
+&lt;p&gt;이 강의를 관통하는 마지막 메시지는 분명하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AI 시대의 경쟁력은 유행어를 따라가는 것이 아니라, 작동 원리와 리스크를 잘 파고드는 습관이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;도구 이름을 외우는 대신, 스키마는 무엇인지, 권한 경계는 어디까지인지, 샌드박스는 있는지, 실행 범위는 어디까지인지, 실패하면 어떻게 되는지를 늘 살펴보자. 그리고 이 회사가 무엇을 어떻게 감쌌는지
+(Wrapper) 들여다보는 습관을 들이자.&lt;/p&gt;
+&lt;p&gt;화려한 도구는 매 시간 새로 쏟아진다. 하지만 그 아래에 흐르는 &lt;strong&gt;원리&lt;/strong&gt; 는 쉽게 변하지 않는다. 결국 근본을 이해하는 사람이 가장 빠르게, 가장 안전하게 좋은 것을 만들어낸다. 이 습관 하나만 챙겨도 이 강의는
+충분히 값어치를 했다고 생각한다.&lt;/p&gt;
+&lt;h2&gt;🚀 새로운 시대, 새로운 방식으로&lt;/h2&gt;
+&lt;p&gt;드디어 강의의 진짜 마지막 챕터이다. 이번에는 &lt;em&gt;&quot;새로운 시대, 새로운 방식&quot;&lt;/em&gt; 이라는 주제로, 우리가 지금 어디에 서 있는지를 한번 짚어보려 한다.&lt;/p&gt;
+&lt;h3&gt;ChatGPT가 진짜로 한 일&lt;/h3&gt;
+&lt;p&gt;LLM의 시작점을 흔히 ChatGPT라고 말한다. 하지만 그 이전에도 기계학습과 딥러닝은 꾸준히 발전해오고 있었다. 그렇다면 우리는 대체 무엇에 그렇게 열광했던 걸까?&lt;/p&gt;
+&lt;p&gt;핵심은 &lt;strong&gt;거대한 언어 모델 (LLM)에 웹 인터페이스를 붙여 &apos;서비스화&apos; 했다&lt;/strong&gt; 는 데 있다. 즉, ChatGPT는 LLM 그 자체라기보다 &lt;em&gt;LLM + 누구나 쓸 수 있는 웹 화면&lt;/em&gt; 인 셈이다.&lt;/p&gt;
+&lt;p&gt;이 대목에서 앞서 다뤘던 이야기가 다시 등장한다. 바로 &lt;strong&gt;Git과 GitHub&lt;/strong&gt; 이다. 리누스 토발즈의 Git도 훌륭했지만, 정작 더 큰 가치를 만들어낸 것은 그것을 웹 호스팅으로 누구나 쓸 수 있게 만든
+GitHub였다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;결국 &lt;strong&gt;누구나 쉽게 접근할 수 있는 도구를 만들고, 거기에 효용을 부여하는 것&lt;/strong&gt; 이 세상에 가치를 더하는 길이다. 기술 그 자체보다, 그 기술을 사람들이 쓰게 만드는 것이 중요하다는 의미이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;LLM에서 Claws까지, 다시 한번&lt;/h3&gt;
+&lt;p&gt;그 뒤의 흐름은 이 시리즈에서 쭉 다뤄온 그대로이다. LLM이 도구를 실행하게 되면서 &lt;strong&gt;에이전트&lt;/strong&gt; 가 생겼고, 여러 도구와 에이전트를 엮는 &lt;strong&gt;오케스트레이션&lt;/strong&gt; 과 반복 (loop) 개념이 더해지면서
+&lt;strong&gt;Claws&lt;/strong&gt; 라는 새로운 레이어가 만들어졌다.&lt;/p&gt;
+&lt;p&gt;그래서 지금 우리는 OpenClaw, NanoClaw, ZeroClaw 같은 것들을 &lt;em&gt;내 개인 컴퓨터에 설치&lt;/em&gt; 하고, 심지어 텔레그램으로 AI에게 명령을 내릴 수 있는 시대에 살고 있다. 불과 얼마 전까지만 해도
+상상하기 어려웠던 일이다.&lt;/p&gt;
+&lt;h3&gt;생산성 10배가 아니라 1,000배&lt;/h3&gt;
+&lt;p&gt;요즘은 모든 도구가 &lt;strong&gt;CLI (커맨드 라인)&lt;/strong&gt; 중심으로 통합되며 또 한 번 새로운 국면을 맞고 있다. 예전에는 &quot;AI로 생산성이 10배 (10X) 오른다&quot;는 이야기를 했다. 그런데 강사님은 이제 그 수준을 훌쩍
+넘어 &lt;strong&gt;1,000배, 심지어 10,000배&lt;/strong&gt; 의 생산성을 체감한다고 말한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실제로 예전에는 테스트 코드를 작성하고 클래스를 설계하는 데 &lt;em&gt;열흘&lt;/em&gt; 이 걸리던 작업이, 이제는 &lt;em&gt;1시간 내외&lt;/em&gt; 로 끝나기도 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그리고 이건 비단 소프트웨어 개발만의 이야기가 아니다. 기획, 문서 작성, 이미지 생성 등 정말 다양한 분야에 똑같이 적용된다.&lt;/p&gt;
+&lt;h3&gt;당신은 늦지 않았다, 너무 빨리 왔을 뿐&lt;/h3&gt;
+&lt;p&gt;여기서 강사님이 던지는 통찰이 인상적이다. 사실 &lt;strong&gt;AI를 한 번도 써보지 않은 사람이 여전히 대다수&lt;/strong&gt; 라는 것이다. 무료 챗봇 사용자나 유료 AI 구독자의 비율은 생각보다 훨씬 적고, &quot;AI 분야가 이제 너무
+복잡하고 포화됐다&quot;고 느끼는 사람은 전체의 1%도 채 되지 않는다.&lt;/p&gt;
+&lt;p&gt;이 말은 곧, &lt;strong&gt;아직 AI 시대는 본격적으로 시작되지도 않았다&lt;/strong&gt; 는 뜻이다. 강사님은 이 시점을 이렇게 표현한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;당신은 늦지 않았습니다. 다만 너무 터무니없게 빨리 온 것입니다.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 강의를 끝까지 본 당신은, 이미 그 &lt;em&gt;터무니없이 빨리 온&lt;/em&gt; 소수에 속한다는 의미이다.&lt;/p&gt;
+&lt;h3&gt;속도가 곧 무기다&lt;/h3&gt;
+&lt;p&gt;그렇다면 이 새로운 시대에 무엇을 준비해야 할까. 샘 알트먼 (Sam Altman)의 조언이 힌트가 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;빠르게 움직여라 (Move fast). 속도는 거대한 대기업에 맞서는 당신의 가장 큰 장점 중 하나다.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;거대한 조직은 느리다. 반면 개인은 빠르게 움직일 수 있다. 바로 그 &lt;strong&gt;속도&lt;/strong&gt; 가 개인의 가장 큰 경쟁력이 되는 시대이다. 게다가 AI는 소프트웨어를 넘어 음악, 그림, 영화까지 거의 모든 분야에 영향을 미치고
+있다.&lt;/p&gt;
+&lt;h3&gt;마치며&lt;/h3&gt;
+&lt;p&gt;이로써 맥북 세팅부터 시작해 유닉스 명령어, Agentic Coding, Agent Skills, Claws, 그리고 AI 시대를 살아가는 마음가짐까지 긴 여정을 함께 달려왔다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;툴 세팅은 여기까지이다. 이제는 &lt;strong&gt;각자의 자리에서 실제 작업에 AI를 적용할 시간&lt;/strong&gt; 이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;도구를 갖추는 단계는 끝났다. 중요한 것은 이 도구들을 &lt;em&gt;무엇을 만드는 데&lt;/em&gt; 쓰느냐이다. 화려한 도구에 휘둘리지 말고, 원리를 이해하며, 빠르게 움직여 나만의 무언가를 만들어보자. 새로운 시대는 이미 시작되었고,
+우리는 충분히 일찍 도착했다.&lt;/p&gt;
+&lt;p&gt;긴 글 끝까지 읽어주셔서 감사하다. 🚀&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Claws Layer 경험하기]]></title><description><![CDATA[해당 포스팅은
 인프런의 맥북 처음 샀을 때 꼭 해야 할 세팅 A to Z (Claude Code · Homebrew · Agentic Coding 포함 | macOS 올인원)를
 참조하여
 만들었습니다.  🗂️ Claws 소개 (Open, Nano…]]></description><link>https://sungbin.kr/Claws-Layer-%EA%B2%BD%ED%97%98%ED%95%98%EA%B8%B0/</link><guid isPermaLink="false">https://sungbin.kr/Claws-Layer-경험하기/</guid><pubDate>Sat, 15 Aug 2026 15:09:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
@@ -32493,143 +32630,7 @@ HTML 문서와 데이터를 서버에서 조합하여 클라이언트에게 제�
 프론트엔드 관점에서 HTTP 흐름을 한 번 훑어본 개발자는 이런 문제들을 훨씬 빠르게 진단할 수 있다. 또한 &lt;code&gt;Content-Type&lt;/code&gt;, &lt;code&gt;Authorization&lt;/code&gt;, &lt;code&gt;Cache-Control&lt;/code&gt; 같은 헤더들이
 실제로 어떤 식으로 쓰이는지, 상태 코드(&lt;code&gt;4xx&lt;/code&gt;, &lt;code&gt;5xx&lt;/code&gt;)가 클라이언트 입장에서 어떻게 해석되고 사용자 경험에 어떤 영향을 주는지도 체감할 수 있다.&lt;/p&gt;
 &lt;p&gt;결국 프론트엔드 지식은 백엔드 개발자에게 있어 &quot;다른 영역의 기술&quot;이라기보다, 자신이 이미 다루고 있는 HTTP라는 규약을 반대편에서 바라보게 해주는 창문에 가깝다. 그 창문을 한 번 열어본 개발자는, 이후에
-API를 설계할 때도 이전과는 다른 감각으로 접근하게 될 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[마치며]]></title><description><![CDATA[해당 포스팅은
-인프런의 맥북 처음 샀을 때 꼭 해야 할 세팅 A to Z (Claude Code · Homebrew · Agentic Coding 포함 | macOS 올인원)를
-참조하여
-만들었습니다.  ⛏️ AI…]]></description><link>https://sungbin.kr/%EA%B0%95%EC%9D%98%EB%A5%BC-%EB%A7%88%EC%B9%98%EB%A9%B0/</link><guid isPermaLink="false">https://sungbin.kr/강의를-마치며/</guid><pubDate>Wed, 08 Jul 2026 17:59:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;해당 포스팅은
-인프런의 &lt;a href=&quot;https://inf.run/ijAW9&quot;&gt;맥북 처음 샀을 때 꼭 해야 할 세팅 A to Z (Claude Code · Homebrew · Agentic Coding 포함 | macOS 올인원)&lt;/a&gt;를
-참조하여
-만들었습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR42o1S3ytDcRTfizIbw/X715NWS9Ii5MfMXDbZ0ooJoRAPpORBUR55EEpJLUkSSS1aeeDBgyf/yf21qzX3ztvHufcuKzP28Ol8z/nW55zz+RwTz5YgA4OlBrLl7M88DVNGcaAYXG8+wQzeUwS+n+Ayg+uhWr+VUAiur4BgyYGQyARfBeT1EchrXggj1RACdZBXPHjfDEIYbYDgr0VsoROx+U5qaPuDUFuBJhIC9VAjp0g+30K5PYZ6H0bidBvJlwjUx0sodyf4fI1CeTgDT821IXQJ/pqQ99VADDZCmu+AONkEaboF4lQzpNRbmnVSvRm8tzxFmG1lbUrSRgw5IM21QxiuothKTSr1RuKY3dD0eyPbPxoOlYHrzkPiYhefb0943wohvrcE5foQH1f7FA+g3BxBjZ4jEd4B5yrIcPtXl6W5NjJlCOKEA+K4HfKGH9KME7HFLt2w+N4y5FXWcPpfQgLnthrd6UR41jgjzTCjbtb/OLclxzvU9WFofSZ90CSFERnjrefMr4RfN4TasyQgUvoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;banner&quot;
-        title=&quot;&quot;
-        src=&quot;/static/2af117e1e6f792cc0a8dd76b39ef0da4/8c557/banner.png&quot;
-        srcset=&quot;/static/2af117e1e6f792cc0a8dd76b39ef0da4/6f3f2/banner.png 256w,
-/static/2af117e1e6f792cc0a8dd76b39ef0da4/01e7c/banner.png 512w,
-/static/2af117e1e6f792cc0a8dd76b39ef0da4/8c557/banner.png 700w&quot;
-        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;⛏️ AI 시대, 도구보다 원리를 파세요.&lt;/h2&gt;
-&lt;p&gt;드디어 강의의 마지막 섹션이다. 이번 챕터는 강사님이 &lt;em&gt;후배나 자녀에게도 꼭 해주고 싶은 이야기&lt;/em&gt; 라며 꺼낸 주제이다. 화려한 도구나 최신 모델을 따라가기보다, &lt;strong&gt;작동 원리와 권한 경계를 파고드는
-습관&lt;/strong&gt; 이 왜 중요한지에 대한 이야기다.&lt;/p&gt;
-&lt;h3&gt;유행어보다 원리, 그리고 권한 경계&lt;/h3&gt;
-&lt;p&gt;LLM이 등장한 이후로 JSON, Function Calling, MCP, Agent, Claude… 새로운 개념들이 쉴 새 없이 쏟아졌다. 강사님은 이 흐름을 &lt;em&gt;&quot;응용의 응용의 응용, 메모리가 늘어나는
-수준의 진화&quot;&lt;/em&gt; 라고 표현한다.&lt;/p&gt;
-&lt;p&gt;우리는 유튜브 등에서 &quot;이게 좋다더라&quot;, &quot;저 모델이 최고라더라&quot; 하는 말에 쉽게 현혹된다. 하지만 정말 중요한 것은 따로 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;유행어를 외우는 것보다, &lt;strong&gt;어떻게 동작하는지 원리를 생각해보고, 권한 경계를 읽는 습관&lt;/strong&gt; 을 들이는 것이 훨씬 중요하다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;프로그래밍은 운영체제, 웹 서버, 데이터베이스 등 수많은 프로그램과 부딪히며 돌아간다. 그 사이에는 늘 &lt;em&gt;경계&lt;/em&gt; 가 존재한다. 특히 AI 시대에는 보안, AI의 환각(Hallucination), 잘못된 리턴
-값으로 인한 서비스 사고 같은 새로운 리스크와 싸워야 한다. 이걸 읽어내려면 결국 원리를 알아야 한다.&lt;/p&gt;
-&lt;h3&gt;기술은 어떻게 발전해왔나&lt;/h3&gt;
-&lt;p&gt;강사님은 LLM 이후의 발전 과정을 단계별로 짚어준다. 각 단계가 사실은 &lt;em&gt;앞 단계의 확장&lt;/em&gt; 이라는 점이 핵심이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;JSON&lt;/strong&gt; — LLM에게 구조화된 답변을 받기 위한 출발점이다. JSON(JavaScript Object Notation)은 문자열 덩어리를 객체로 다룰 수 있게 해주는 규격이다. &quot;예제를 하나 주면 그만큼
-돌려받는&quot; One-shot, Multi-shot prompting이 여기서 시작됐다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Function Calling&lt;/strong&gt; — LLM이 특정 함수(툴)를 호출하게 만드는 기능이다. 코드 자동화의 신호탄이었다. 여기서 중요한 건 &lt;em&gt;함수 이름&lt;/em&gt; 이 아니라 &lt;strong&gt;입력과 출력의 계약(프로토콜)&lt;/strong&gt; 이다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MCP (Model Context Protocol)&lt;/strong&gt; — Function Calling의 확장으로, 모델과 외부 도구·리소스를 연결한다. 핵심은 스키마, 실행 가능 범위, 그리고 &lt;em&gt;제한된 실행
-(bounded execution)&lt;/em&gt; 이다. 사실 이것도 결국은 JSON 덩어리이다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Agent&lt;/strong&gt; — LLM을 &lt;em&gt;현실 세계에 녹여내는&lt;/em&gt; 단계이다. 목표를 받으면 도구를 골라 실행하고, 실패하면 오류 메시지를 보고 고쳐가며, &lt;strong&gt;될 때까지 끈질기게 반복&lt;/strong&gt; 한다. 이 반복(루프)이
-에이전트의 본질이다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Agent Orchestration&lt;/strong&gt; — 여러 에이전트를 조율하는 단계로, CloudBot → OpenClaw 등으로 이름을 바꿔온 그 계층이다. 목표, 상태, 액션 레지스트리, Executor,
-State Manager, 환경 어댑터(Environmental Adapter) 같은 부품으로 조립된 &lt;em&gt;런타임&lt;/em&gt; 이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;핵심은 이것이다. MCP나 Function Calling 시절에 이미 에이전트 자동화는 가능했고, 그것을 IDE에 넣은 것이 Agentic Coding, Claude Code일 뿐이다. &lt;strong&gt;원리를 아는
-사람은 새로운 도구가 나와도 &quot;아, 이건 그거의 확장이구나&quot; 하고 금방 흡수한다.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;용어에 겁먹지 말자: Skills, Memory, Context Window&lt;/h3&gt;
-&lt;p&gt;Skills, Memory, Context Window 같은 용어들도 어렵게 느껴지지만, 본질을 알면 무섭지 않다. 이 모든 것은 결국 &lt;em&gt;확률적으로 정답에 가까운 문자를 뱉는 앵무새(LLM)&lt;/em&gt; 위에 올라간 장치일
-뿐이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Context Window&lt;/strong&gt; : LLM이 한 번에 처리할 수 있는 입력·출력 토큰의 양이다. 정해져 있고 한정적이라, 결국 &lt;em&gt;덧붙여 보내는 것&lt;/em&gt; 밖에 안 된다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Memory&lt;/strong&gt; : 이 Context Window의 한계를 보완하려는 장치다. 기억이 넘치면 파일로 남겨두고 참고하게 만드는 식이다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Skills&lt;/strong&gt; : 반복 가능한 워크플로우, 재사용 가능한 프롬프트 계층을 만들어주는 구체적인 지시이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;즉, 이 용어들은 전부 &lt;strong&gt;LLM의 제약을 우회하거나 보완하려는 장치&lt;/strong&gt; 이다. 이걸 이해하면 토큰 비용을 줄일지, 출력 품질을 높일지, 보안을 챙길지 같은 &lt;em&gt;트레이드오프&lt;/em&gt; 를 스스로 판단할 수 있게 된다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;근본을 모르는 자동화는 위험하다&lt;/h3&gt;
-&lt;p&gt;원리를 모른 채 자동화를 덜컥 설치하면 정말 위험하다. 강사님이 경고하는 대표적인 AI 리스크들이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;과도한 권한 부여&lt;/li&gt;
-&lt;li&gt;비밀번호, 토큰, SSH 키 노출&lt;/li&gt;
-&lt;li&gt;의도치 않은 실행 (잘못된 메시지 발송, DB 삭제 등)&lt;/li&gt;
-&lt;li&gt;검토 없는 자동 커밋&lt;/li&gt;
-&lt;li&gt;샌드박스 없는 로컬 실행으로 인한 파일 삭제&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이것은 단순히 윤리적인 문제가 아니라, &lt;strong&gt;실행 구조를 모르면 실제로 서비스에 사고가 날 수 있다&lt;/strong&gt; 는 현실적인 경고이다.&lt;/p&gt;
-&lt;p&gt;그리고 한 가지 더. 강사님은 &lt;em&gt;&quot;LLM 전문가는 없다&quot;&lt;/em&gt; 고 단언한다. 모두가 공통의 출발선에서 시작했기 때문이다. 그러니 권위에 맹목적으로 휘둘리지 말고, &lt;strong&gt;구조를 설명할 수 있는 사람, 실패 사례를
-공유하는 사람, 재현 가능한 결과를 보여주는 사람&lt;/strong&gt; 의 말에 귀를 기울이자.&lt;/p&gt;
-&lt;h3&gt;마치며&lt;/h3&gt;
-&lt;p&gt;이 강의를 관통하는 마지막 메시지는 분명하다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;AI 시대의 경쟁력은 유행어를 따라가는 것이 아니라, 작동 원리와 리스크를 잘 파고드는 습관이다.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;도구 이름을 외우는 대신, 스키마는 무엇인지, 권한 경계는 어디까지인지, 샌드박스는 있는지, 실행 범위는 어디까지인지, 실패하면 어떻게 되는지를 늘 살펴보자. 그리고 이 회사가 무엇을 어떻게 감쌌는지
-(Wrapper) 들여다보는 습관을 들이자.&lt;/p&gt;
-&lt;p&gt;화려한 도구는 매 시간 새로 쏟아진다. 하지만 그 아래에 흐르는 &lt;strong&gt;원리&lt;/strong&gt; 는 쉽게 변하지 않는다. 결국 근본을 이해하는 사람이 가장 빠르게, 가장 안전하게 좋은 것을 만들어낸다. 이 습관 하나만 챙겨도 이
-강의는 충분히 값어치를 했다고 생각한다.&lt;/p&gt;
-&lt;h2&gt;🚀 새로운 시대, 새로운 방식으로&lt;/h2&gt;
-&lt;p&gt;드디어 강의의 진짜 마지막 챕터이다. 이번에는 &lt;em&gt;&quot;새로운 시대, 새로운 방식&quot;&lt;/em&gt; 이라는 주제로, 우리가 지금 어디에 서 있는지를 한번 짚어보려 한다.&lt;/p&gt;
-&lt;h3&gt;ChatGPT가 진짜로 한 일&lt;/h3&gt;
-&lt;p&gt;LLM의 시작점을 흔히 ChatGPT라고 말한다. 하지만 그 이전에도 기계학습과 딥러닝은 꾸준히 발전해오고 있었다. 그렇다면 우리는 대체 무엇에 그렇게 열광했던 걸까?&lt;/p&gt;
-&lt;p&gt;핵심은 &lt;strong&gt;거대한 언어 모델(LLM)에 웹 인터페이스를 붙여 &apos;서비스화&apos; 했다&lt;/strong&gt; 는 데 있다. 즉, ChatGPT는 LLM 그 자체라기보다 &lt;em&gt;LLM + 누구나 쓸 수 있는 웹 화면&lt;/em&gt; 인 셈이다.&lt;/p&gt;
-&lt;p&gt;이 대목에서 앞서 다뤘던 이야기가 다시 등장한다. 바로 &lt;strong&gt;Git과 GitHub&lt;/strong&gt; 이다. 리누스 토발즈의 Git도 훌륭했지만, 정작 더 큰 가치를 만들어낸 것은 그것을 웹 호스팅으로 누구나 쓸 수 있게 만든
-GitHub였다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;결국 &lt;strong&gt;누구나 쉽게 접근할 수 있는 도구를 만들고, 거기에 효용을 부여하는 것&lt;/strong&gt; 이 세상에 가치를 더하는 길이다. 기술 그 자체보다, 그 기술을 사람들이 쓰게 만드는 것이 중요하다는 의미이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;LLM에서 Claws까지, 다시 한번&lt;/h3&gt;
-&lt;p&gt;그 뒤의 흐름은 이 시리즈에서 쭉 다뤄온 그대로이다. LLM이 도구를 실행하게 되면서 &lt;strong&gt;에이전트&lt;/strong&gt; 가 생겼고, 여러 도구와 에이전트를 엮는 &lt;strong&gt;오케스트레이션&lt;/strong&gt; 과 반복(loop) 개념이 더해지면서
-&lt;strong&gt;Claws&lt;/strong&gt; 라는 새로운 레이어가 만들어졌다.&lt;/p&gt;
-&lt;p&gt;그래서 지금 우리는 OpenClaw, NanoClaw, ZeroClaw 같은 것들을 &lt;em&gt;내 개인 컴퓨터에 설치&lt;/em&gt; 하고, 심지어 텔레그램으로 AI에게 명령을 내릴 수 있는 시대에 살고 있다. 불과 얼마 전까지만
-해도 상상하기 어려웠던 일이다.&lt;/p&gt;
-&lt;h3&gt;생산성 10배가 아니라 1,000배&lt;/h3&gt;
-&lt;p&gt;요즘은 모든 도구가 &lt;strong&gt;CLI(커맨드 라인)&lt;/strong&gt; 중심으로 통합되며 또 한 번 새로운 국면을 맞고 있다. 예전에는 &quot;AI로 생산성이 10배(10X) 오른다&quot;는 이야기를 했다. 그런데 강사님은 이제 그 수준을
-훌쩍 넘어 &lt;strong&gt;1,000배, 심지어 10,000배&lt;/strong&gt; 의 생산성을 체감한다고 말한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;실제로 예전에는 테스트 코드를 작성하고 클래스를 설계하는 데 &lt;em&gt;열흘&lt;/em&gt; 이 걸리던 작업이, 이제는 &lt;em&gt;1시간 내외&lt;/em&gt; 로 끝나기도 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;그리고 이건 비단 소프트웨어 개발만의 이야기가 아니다. 기획, 문서 작성, 이미지 생성 등 정말 다양한 분야에 똑같이 적용된다.&lt;/p&gt;
-&lt;h3&gt;당신은 늦지 않았다, 너무 빨리 왔을 뿐&lt;/h3&gt;
-&lt;p&gt;여기서 강사님이 던지는 통찰이 인상적이다. 사실 &lt;strong&gt;AI를 한 번도 써보지 않은 사람이 여전히 대다수&lt;/strong&gt; 라는 것이다. 무료 챗봇 사용자나 유료 AI 구독자의 비율은 생각보다 훨씬 적고, &quot;AI 분야가
-이제 너무 복잡하고 포화됐다&quot;고 느끼는 사람은 전체의 1%도 채 되지 않는다.&lt;/p&gt;
-&lt;p&gt;이 말은 곧, &lt;strong&gt;아직 AI 시대는 본격적으로 시작되지도 않았다&lt;/strong&gt; 는 뜻이다. 강사님은 이 시점을 이렇게 표현한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;당신은 늦지 않았습니다. 다만 너무 터무니없게 빨리 온 것입니다.&quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이 강의를 끝까지 본 당신은, 이미 그 &lt;em&gt;터무니없이 빨리 온&lt;/em&gt; 소수에 속한다는 의미이다.&lt;/p&gt;
-&lt;h3&gt;속도가 곧 무기다&lt;/h3&gt;
-&lt;p&gt;그렇다면 이 새로운 시대에 무엇을 준비해야 할까. 샘 알트먼(Sam Altman)의 조언이 힌트가 된다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;빠르게 움직여라(Move fast). 속도는 거대한 대기업에 맞서는 당신의 가장 큰 장점 중 하나다.&quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;거대한 조직은 느리다. 반면 개인은 빠르게 움직일 수 있다. 바로 그 &lt;strong&gt;속도&lt;/strong&gt; 가 개인의 가장 큰 경쟁력이 되는 시대이다. 게다가 AI는 소프트웨어를 넘어 음악, 그림, 영화까지 거의 모든 분야에 영향을
-미치고 있다.&lt;/p&gt;
-&lt;h3&gt;마치며&lt;/h3&gt;
-&lt;p&gt;이로써 맥북 세팅부터 시작해 유닉스 명령어, Agentic Coding, Agent Skills, Claws, 그리고 AI 시대를 살아가는 마음가짐까지 긴 여정을 함께 달려왔다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;툴 세팅은 여기까지이다. 이제는 &lt;strong&gt;각자의 자리에서 실제 작업에 AI를 적용할 시간&lt;/strong&gt; 이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;도구를 갖추는 단계는 끝났다. 중요한 것은 이 도구들을 &lt;em&gt;무엇을 만드는 데&lt;/em&gt; 쓰느냐이다. 화려한 도구에 휘둘리지 말고, 원리를 이해하며, 빠르게 움직여 나만의 무언가를 만들어보자. 새로운 시대는 이미 시작되었고,
-우리는 충분히 일찍 도착했다.&lt;/p&gt;
-&lt;p&gt;긴 글 끝까지 읽어주셔서 감사하다. 🚀&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 변수와 타입, 연산자를 다루는 방법]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%B0%A9%EB%B2%95/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-변수와-타입-연산자를-다루는-방법/</guid><pubDate>Sat, 11 Apr 2026 16:42:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+API를 설계할 때도 이전과는 다른 감각으로 접근하게 될 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[코틀린 입문] 코틀린에서 변수와 타입, 연산자를 다루는 방법]]></title><description><![CDATA[해당 포스팅은 인프런의 자바 개발자를 위한 코틀린 입문(Java to Kotlin Starter Guide…]]></description><link>https://sungbin.kr/java-to-kotlin-starter-guide-%EC%BD%94%ED%8B%80%EB%A6%B0%EC%97%90%EC%84%9C-%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85-%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%B0%A9%EB%B2%95/</link><guid isPermaLink="false">https://sungbin.kr/java-to-kotlin-starter-guide-코틀린에서-변수와-타입-연산자를-다루는-방법/</guid><pubDate>Sat, 11 Apr 2026 16:42:27 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1024px; &quot;
     &gt;
